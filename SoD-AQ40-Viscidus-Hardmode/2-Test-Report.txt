@@ -5,8 +5,6 @@ Mod:  DBM-Raids-Vanilla/Viscidus
 
 Findings:
 	Unused event registration: SPELL_CAST_SUCCESS 25896 (Rejoin Viscidus)
-	Timer Poison Bolt Volley (%s), time=11.00, type=cdcount, spellId=25991 (time=12.90, variance=0.00) got refreshed early with 1.87s remaining
-		Refreshed by: [ 11.00] SPELL_CAST_SUCCESS: [Viscidus: Poison Bolt Volley] Creature-0-1-531-1-15299-0000000001, Viscidus, 0xa48, "", nil, 0x0, 25991, Poison Bolt Volley, 0, 0
 
 Unused objects:
 	None
@@ -74,7 +72,7 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 713, Viscidus, 186, 40, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_SUCCESS 25991 25896, SPELL_AURA_APPLIED 25989, CHAT_MSG_MONSTER_EMOTE
-		StartTimer: 12.9, Poison Bolt Volley (1)
+		StartTimer: 11.0, Poison Bolt Volley (1)
 	[ 11.00] SPELL_CAST_SUCCESS: [Viscidus: Poison Bolt Volley] Creature-0-1-531-1-15299-0000000001, Viscidus, 0xa48, "", nil, 0x0, 25991, Poison Bolt Volley, 0, 0
 		ShowAnnounce: Poison Bolt Volley (1)
 		StartTimer: 11.0, Poison Bolt Volley (2)
