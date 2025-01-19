@@ -25,11 +25,11 @@ Findings:
 	Timer for spell ID 1215218 (Bleeding Edge) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
 	Timer for spell ID 1216508 (Screw Up) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 1217231 (Foot-Blasters) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
-	Timer for spell ID 1218418 (Wire Transfer) is triggered by event SPELL_CAST_START 466765 (Beta Launch)
+	Timer for spell ID 1218418 (Wire Transfer) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
 
 Unused objects:
+	[Announce] Screw Up faded, type=fades, spellId=1216508
 	[Announce] Screw Up on >%s<, type=target, spellId=1216508
-	[Announce] Screw Up faded, type=fades, spellId=1216509
 	[Announce] Polarization Generator incoming debuff (%s), type=incomingcount, spellId=1216802
 	[Announce] Posi-Polarization faded, type=fades, spellId=1216911
 	[Announce] Nega-Polarization faded, type=fades, spellId=1216934
@@ -82,11 +82,11 @@ Timers:
 			 Triggered 6x, delta times: 12.01, 62.02, 83.72, 62.00, 83.02, 62.02
 		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 			 Triggered 2x, delta times: 145.69, 145.04
-	Wire Transfer (%s), time=97.30, type=nextcount, spellId=1218418, triggerDeltas = 0.05, 40.92, 28.00, 52.59, 24.21, 40.95, 28.02, 51.90, 24.17, 40.96, 27.99
+	Wire Transfer (%s), time=97.30, type=nextcount, spellId=1218418, triggerDeltas = 0.05, 40.92, 28.00, 56.71, 20.09, 40.95, 28.02, 55.97, 20.10, 40.96, 27.99
 		[  0.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
 			 Triggered 9x, delta times: 0.05, 40.92, 28.00, 76.80, 40.95, 28.02, 76.07, 40.96, 27.99
-		[121.56] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
-			 Triggered 2x, delta times: 121.56, 145.08
+		[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
+			 Triggered 2x, delta times: 125.68, 145.03
 
 Announces:
 	Sonic Ba-Boom (%s), type=count, spellId=465232, triggerDeltas = 6.02, 27.95, 29.00, 30.02, 58.76, 27.94, 29.04, 29.96, 58.06, 28.01, 28.98, 30.05
@@ -288,9 +288,9 @@ Event trace:
 	[121.56] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
 		ShowAnnounce: Beta Launch
 		PlaySound: VoicePack/phasechange
-		StartTimer: 20.0, Wire Transfer (1)
 	[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
 		StartTimer: 20.0, Bleeding Edge ends
+		StartTimer: 20.0, Wire Transfer (1)
 	[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 		StartTimer: 6.0, Sonic Ba-Boom (1)
 		StartTimer: 12.0, Foot-Blasters (1)
@@ -416,12 +416,12 @@ Event trace:
 	[266.64] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
 		ShowAnnounce: Beta Launch
 		PlaySound: VoicePack/phasechange
-		StartTimer: 20.0, Wire Transfer (1)
 	[269.13] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		ScheduleTask: announce1217261target:CombinedShow("Healer1") at 270.13 (+1.00)
 			ShowAnnounce: Screwed! on Dps10, Healer4, Healer1
 	[270.71] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
 		StartTimer: 20.0, Bleeding Edge ends
+		StartTimer: 20.0, Wire Transfer (1)
 	[290.73] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-000000010C, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 		StartTimer: 6.0, Sonic Ba-Boom (1)
 		StartTimer: 12.0, Foot-Blasters (1)
