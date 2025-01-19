@@ -1,4 +1,4 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/ST/JammalanAndOgom/Ogom-First/Kill
 Mod:  DBM-Raids-Vanilla/JammalanAndOgomSoD
@@ -12,6 +12,10 @@ Findings:
 	Unused event registration: SPELL_CAST_SUCCESS 437920 (Divine Storm)
 	Unused event registration: SPELL_DAMAGE 437887 (Consecration)
 	Unused event registration: SPELL_MISSED 437887 (Consecration)
+	Timer Mortal Lash, time=25.40, type=cd, spellId=437847 (time=25.40, variance=0.00) got refreshed early with 0.20s remaining
+		Refreshed by: [ 31.58] SPELL_CAST_SUCCESS: [Ogom the Wretched->Schamuhne: Mortal Lash] Creature-0-5250-109-10825-218718-0000201317, Ogom the Wretched, 0xa48, Player-5826-023E0641, Schamuhne, 0x512, 437847, Mortal Lash, 0, 0
+	Timer Mortal Lash, time=25.40, type=cd, spellId=437847 (time=25.40, variance=0.00) got refreshed early with 0.27s remaining
+		Refreshed by: [ 56.70] SPELL_CAST_SUCCESS: [Ogom the Wretched->Schamuhne: Mortal Lash] Creature-0-5250-109-10825-218718-0000201317, Ogom the Wretched, 0xa48, Player-5826-023E0641, Schamuhne, 0x512, 437847, Mortal Lash, 0, 0
 
 Unused objects:
 	[Announce] Consecration, type=spell, spellId=437884
