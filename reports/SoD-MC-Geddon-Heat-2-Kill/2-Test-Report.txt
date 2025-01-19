@@ -37,6 +37,10 @@ Findings:
 	Yell for spell ID 20475 (Living Bomb) is triggered by event SPELL_AURA_APPLIED 461090 (Living Bomb)
 	SpecialWarning for spell ID 20478 (Armageddon) is triggered by event SPELL_CAST_SUCCESS 461121 (Armageddon)
 	Timer for spell ID 20478 (Armageddon) is triggered by event SPELL_CAST_SUCCESS 461121 (Armageddon)
+	Timer Living Bomb, time=21.00, type=var, spellId=20475 (time=21.00, variance=7.70) got refreshed early with 8.40s remaining
+		Refreshed by: [153.80] SPELL_CAST_SUCCESS: [Baron Geddon: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461090, Living Bomb, 0, 0
+	Timer Living Bomb, time=21.00, type=var, spellId=20475 (time=21.00, variance=7.70) got refreshed early with 9.30s remaining
+		Refreshed by: [110.46] SPELL_CAST_SUCCESS: [Baron Geddon: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461090, Living Bomb, 0, 0
 
 Unused objects:
 	[Announce] Inferno, type=spell, spellId=19695
@@ -358,6 +362,7 @@ Event trace:
 		ScheduleTask: announce20475target:CombinedShow("Dps7") at 98.84 (+0.10)
 			ShowAnnounce: Living Bomb on Dps8, Dps7
 	[110.46] SPELL_CAST_SUCCESS: [Baron Geddon: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461090, Living Bomb, 0, 0
+		EarlyTimerRefresh: 9.3000000001703, 21, 7.7
 		StartTimer: 21.0, Living Bomb
 	[110.46] SPELL_AURA_APPLIED: [Baron Geddon->Dps11: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000015, Dps11, 0x512, 461090, Living Bomb, 0, DEBUFF, 0
 		StartTimer: 8.0, Living Bomb: Dps11
@@ -419,6 +424,7 @@ Event trace:
 		ShowSpecialWarning: Inferno damage - move away
 		PlaySound: VoicePack/watchfeet
 	[153.80] SPELL_CAST_SUCCESS: [Baron Geddon: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461090, Living Bomb, 0, 0
+		EarlyTimerRefresh: 8.4000000001834, 21, 7.7
 		StartTimer: 21.0, Living Bomb
 	[153.80] SPELL_AURA_APPLIED: [Baron Geddon->Dps9: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000012, Dps9, 0x512, 461090, Living Bomb, 0, DEBUFF, 0
 		StartTimer: 8.0, Living Bomb: Dps9

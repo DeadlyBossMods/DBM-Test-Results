@@ -1,10 +1,29 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/ST/AvatarOfHakkar/1
 Mod:  DBM-Raids-Vanilla/AvatarofHakkarSoD
 
 Findings:
-	None
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.07s remaining
+		Refreshed by: [123.50] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.23s remaining
+		Refreshed by: [196.38] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.40s remaining
+		Refreshed by: [ 83.22] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.47s remaining
+		Refreshed by: [ 76.61] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Bubbling Blood, time=9.70, type=cd, spellId=443940 (time=20.60, variance=0.00) got refreshed early with 3.87s remaining
+		Refreshed by: [ 16.73] SPELL_CAST_START: [Hakkari Bloodkeeper: Bubbling Blood] Creature-0-5208-109-4570-221396-00003BDC57, Hakkari Bloodkeeper, 0xa48, "", nil, 0x0, 443940, Bubbling Blood, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 0.23s remaining
+		Refreshed by: [136.18] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 0.67s remaining
+		Refreshed by: [230.26] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 0.90s remaining
+		Refreshed by: [198.61] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 1.27s remaining
+		Refreshed by: [167.20] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Spirit Chains, time=16.20, type=cd, spellId=443975 (time=25.50, variance=0.00) got refreshed early with 3.90s remaining
+		Refreshed by: [ 21.58] SPELL_CAST_SUCCESS: [Hakkari Bloodkeeper: Spirit Chains] Creature-0-5208-109-4570-221396-00003BDC57, Hakkari Bloodkeeper, 0xa48, "", nil, 0x0, 443964, Spirit Chains, 0, 0
 
 Unused objects:
 	[Special Warning] Spirit Chains - move away from others, type=moveaway, spellId=443975
@@ -131,8 +150,10 @@ Event trace:
 		StartTimer: 31.9, Frightsome Howl
 	[ 16.73] SPELL_CAST_START: [Hakkari Bloodkeeper: Bubbling Blood] Creature-0-5208-109-4570-221396-00003BDC57, Hakkari Bloodkeeper, 0xa48, "", nil, 0x0, 443940, Bubbling Blood, 0, 0
 		ShowAnnounce: Bubbling Blood
+		EarlyTimerRefresh: 3.8666666669102, 20.6, 0
 		StartTimer: 9.7, Bubbling Blood
 	[ 21.58] SPELL_CAST_SUCCESS: [Hakkari Bloodkeeper: Spirit Chains] Creature-0-5208-109-4570-221396-00003BDC57, Hakkari Bloodkeeper, 0xa48, "", nil, 0x0, 443964, Spirit Chains, 0, 0
+		EarlyTimerRefresh: 3.9000000003143, 25.5, 0
 		StartTimer: 16.2, Spirit Chains
 	[ 21.58] SPELL_AURA_APPLIED: [Hakkari Bloodkeeper->Simplyorc: Spirit Chains] Creature-0-5208-109-4570-221396-00003BDC57, Hakkari Bloodkeeper, 0xa48, Player-5826-0201D763, Simplyorc, 0x512, 443964, Spirit Chains, 0, DEBUFF, 0
 		ShowAnnounce: Spirit Chains on Simplyorc
@@ -187,12 +208,14 @@ Event trace:
 		StartTimer: 32.3, Curse of Tongues (2)
 	[ 76.61] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
 		ShowAnnounce: Blood Nova (3)
+		EarlyTimerRefresh: 1.4666666667617, 8, 0
 		StartTimer: 8.0, Blood Nova (4)
 	[ 78.11] SPELL_CAST_START: [Avatar of Hakkar: Drain Blood] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444132, Drain Blood, 0, 0
 		ShowAnnounce: Drain Blood (1)
 		StartTimer: 34.0, Drain Blood (2)
 	[ 83.22] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
 		ShowAnnounce: Blood Nova (4)
+		EarlyTimerRefresh: 1.400000000096, 8, 0
 		StartTimer: 8.0, Blood Nova (5)
 	[ 83.25] SPELL_AURA_APPLIED: [Avatar of Hakkar->Vivix: Skeletal] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, Player-5826-021B5C9D, Vivix, 0x512, 444165, Skeletal, 0, DEBUFF, 0
 		ScheduleTask: announce444165target:CombinedShow("Vivix") at 83.95 (+0.70)
@@ -244,6 +267,7 @@ Event trace:
 		ShowAnnounce: Insanity on Mafakacoil
 	[123.50] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
 		ShowAnnounce: Blood Nova (9)
+		EarlyTimerRefresh: 1.0666666667676, 8, 0
 		StartTimer: 8.0, Blood Nova (10)
 	[131.61] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
 		ShowAnnounce: Blood Nova (10)
@@ -253,6 +277,7 @@ Event trace:
 	[136.09] SPELL_AURA_APPLIED: [Avatar of Hakkar->Bruzo: Corrupted Blood] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, Player-5826-02004B73, Bruzo, 0x512, 444255, Corrupted Blood, 0, DEBUFF, 0
 		ShowAnnounce: Corrupted Blood on Snuqz, Bruzo
 	[136.18] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+		EarlyTimerRefresh: 0.23333333379996, 32.3, 0
 		StartTimer: 32.3, Curse of Tongues (4)
 	[137.18] SPELL_AURA_APPLIED: [Avatar of Hakkar->Simplyorc: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, Player-5826-0201D763, Simplyorc, 0x512, 444046, Curse of Tongues, 0, DEBUFF, 0
 		ScheduleTask: announce444046target:CombinedShow("Simplyorc") at 137.48 (+0.30)
@@ -281,6 +306,7 @@ Event trace:
 		ShowAnnounce: Blood Nova (13)
 		StartTimer: 8.0, Blood Nova (14)
 	[167.20] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+		EarlyTimerRefresh: 1.2666666671183, 32.3, 0
 		StartTimer: 32.3, Curse of Tongues (5)
 	[168.20] SPELL_AURA_APPLIED: [Avatar of Hakkar->Shelisea: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, Player-5826-0222D437, Shelisea, 0x512, 444046, Curse of Tongues, 0, DEBUFF, 0
 		ScheduleTask: announce444046target:CombinedShow("Shelisea") at 168.50 (+0.30)
@@ -319,8 +345,10 @@ Event trace:
 		ShowAnnounce: Corrupted Blood on Stolzenburg, Arthritîs
 	[196.38] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
 		ShowAnnounce: Blood Nova (17)
+		EarlyTimerRefresh: 1.2333333334318, 8, 0
 		StartTimer: 8.0, Blood Nova (18)
 	[198.61] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+		EarlyTimerRefresh: 0.90000000045693, 32.3, 0
 		StartTimer: 32.3, Curse of Tongues (6)
 	[199.63] SPELL_AURA_APPLIED: [Avatar of Hakkar->Shabbyx: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, Player-5826-02751148, Shabbyx, 0x512, 444046, Curse of Tongues, 0, DEBUFF, 0
 		ScheduleTask: announce444046target:CombinedShow("Shabbyx") at 199.93 (+0.30)
@@ -353,6 +381,7 @@ Event trace:
 	[224.30] SPELL_AURA_APPLIED: [Avatar of Hakkar->Arthritîs: Corrupted Blood] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, Player-5826-02233DFA, Arthritîs, 0x512, 444255, Corrupted Blood, 0, DEBUFF, 0
 		ShowAnnounce: Corrupted Blood on Discokeks, Arthritîs
 	[230.26] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+		EarlyTimerRefresh: 0.66666666712699, 32.3, 0
 		StartTimer: 32.3, Curse of Tongues (7)
 	[230.31] SPELL_AURA_APPLIED: [Discokeks->Arthritîs: Corrupted Blood] Player-5826-0239D943, Discokeks, 0x512, Player-5826-02233DFA, Arthritîs, 0x512, 444255, Corrupted Blood, 0, DEBUFF, 0
 		ScheduleTask: announce444253target:CombinedShow("Arthritîs") at 230.61 (+0.30)

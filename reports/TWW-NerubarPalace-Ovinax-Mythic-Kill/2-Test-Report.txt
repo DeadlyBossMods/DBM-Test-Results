@@ -22,6 +22,8 @@ Findings:
 	Announce for spell ID 442526 (Experimental Dosage) is triggered by event SPELL_AURA_APPLIED 440421 (Experimental Dosage)
 	Timer for spell ID 442526 (Experimental Dosage) is triggered by event SPELL_CAST_START 442432 (Ingest Black Blood)
 	Timer for spell ID 446349 (Sticky Web) is triggered by event SPELL_CAST_START 442432 (Ingest Black Blood)
+	Timer Container Breach (%s), time=166.40, type=cdcount, spellId=442432 (time=15.40, variance=0.00) got refreshed early with 0.37s remaining
+		Refreshed by: [ 15.03] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2657-2-442430-0000000745, 442430, Broodtwister Ovi'nax, 97, 0, Dps4, 0
 
 Unused objects:
 	[Special Warning] Volatile Concoction - defensive, type=defensive, spellId=441362
@@ -140,6 +142,7 @@ Event trace:
 	[ 15.03] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2657-2-442430-0000000745, 442430, Broodtwister Ovi'nax, 97, 0, Dps4, 0
 		ShowSpecialWarning: Container Breach! (1)
 		PlaySound: VoicePack/specialsoon
+		EarlyTimerRefresh: 0.36666666668034, 15.4, 0
 		StartTimer: 166.4, Container Breach (2)
 		StopTimer: Timer446349cdcount\t2
 		StopTimer: Timer441362cdcount\t2

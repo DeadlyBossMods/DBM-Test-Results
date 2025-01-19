@@ -1,4 +1,4 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/ST/JammalanAndOgom/Ogom-First/Wipe
 Mod:  DBM-Raids-Vanilla/JammalanAndOgomSoD
@@ -12,6 +12,22 @@ Findings:
 	Unused event registration: SPELL_CAST_SUCCESS 437920 (Divine Storm)
 	Unused event registration: SPELL_DAMAGE 437887 (Consecration)
 	Unused event registration: SPELL_MISSED 437887 (Consecration)
+	Timer Holy Fire, time=13.40, type=cd, spellId=437809 (time=13.40, variance=0.00) got refreshed early with 0.10s remaining
+		Refreshed by: [ 21.13] SPELL_CAST_START: [Jammal'an the Prophet: Holy Fire] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437809, Holy Fire, 0, 0
+	Timer Holy Fire, time=13.40, type=cd, spellId=437809 (time=13.40, variance=0.00) got refreshed early with 0.10s remaining
+		Refreshed by: [ 79.43] SPELL_CAST_START: [Jammal'an the Prophet: Holy Fire] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437809, Holy Fire, 0, 0
+	Timer Holy Nova, time=17.30, type=cd, spellId=437817 (time=17.70, variance=0.00) got refreshed early with 1.50s remaining
+		Refreshed by: [106.97] SPELL_CAST_START: [Jammal'an the Prophet: Holy Nova] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437817, Holy Nova, 0, 0
+	Timer Mass Penance, time=21.00, type=cd, spellId=437921 (time=28.70, variance=0.00) got refreshed early with 1.17s remaining
+		Refreshed by: [118.30] SPELL_CAST_START: [Jammal'an the Prophet: Mass Penance] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437921, Mass Penance, 0, 0
+	Timer Power Word: Shield, time=15.80, type=cd, spellId=437930 (time=25.40, variance=0.00) got refreshed early with 1.10s remaining
+		Refreshed by: [115.08] SPELL_CAST_SUCCESS: [Jammal'an the Prophet: Power Word: Shield] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437930, Power Word: Shield, 0, 0
+	Timer Psychic Scream, time=43.70, type=cd, spellId=437928 (time=22.60, variance=0.00) got refreshed early with 1.57s remaining
+		Refreshed by: [111.83] SPELL_CAST_START: [Jammal'an the Prophet: Psychic Scream] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437928, Psychic Scream, 0, 0
+	Timer Psychic Scream, time=43.70, type=cd, spellId=437928 (time=43.70, variance=0.00) got refreshed early with 0.40s remaining
+		Refreshed by: [198.83] SPELL_CAST_START: [Jammal'an the Prophet: Psychic Scream] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437928, Psychic Scream, 0, 0
+	Timer Shadow Sermon: Pain, time=22.20, type=cd, spellId=437927 (time=15.70, variance=0.00) got refreshed early with 1.50s remaining
+		Refreshed by: [104.97] SPELL_CAST_START: [Jammal'an the Prophet: Shadow Sermon: Pain] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437927, Shadow Sermon: Pain, 0, 0
 
 Unused objects:
 	[Announce] Consecration, type=spell, spellId=437884
@@ -158,6 +174,7 @@ Event trace:
 		ShowSpecialWarning: Smite - interrupt Jammal'an the Prophet!
 		PlaySound: VoicePack/kickcast
 	[ 21.13] SPELL_CAST_START: [Jammal'an the Prophet: Holy Fire] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437809, Holy Fire, 0, 0
+		EarlyTimerRefresh: 0.10000000019354, 13.4, 0
 		StartTimer: 13.4, Holy Fire
 	[ 22.15] SPELL_AURA_APPLIED: [Jammal'an the Prophet->Snui: Holy Fire] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, Player-5826-024EEB02, Snui, 0x512, 437809, Holy Fire, 0, DEBUFF, 0
 		ShowAnnounce: Holy Fire on Camie, Obile, Beppoo, Schamuhne, Snui
@@ -225,6 +242,7 @@ Event trace:
 		ShowSpecialWarning: Smite - interrupt Jammal'an the Prophet!
 		PlaySound: VoicePack/kickcast
 	[ 79.43] SPELL_CAST_START: [Jammal'an the Prophet: Holy Fire] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437809, Holy Fire, 0, 0
+		EarlyTimerRefresh: 0.10000000019354, 13.4, 0
 		StartTimer: 13.4, Holy Fire
 	[ 80.45] SPELL_AURA_APPLIED: [Jammal'an the Prophet->Rajkan: Holy Fire] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, Player-5826-022B87C7, Rajkan, 0x512, 437809, Holy Fire, 0, DEBUFF, 0
 		ShowAnnounce: Holy Fire on Camie, Hantha, Beppoo, Muhnshine, Rajkan
@@ -253,6 +271,7 @@ Event trace:
 		StartTimer: 25.4, Power Word: Shield
 		StartTimer: 28.7, Mass Penance
 	[104.97] SPELL_CAST_START: [Jammal'an the Prophet: Shadow Sermon: Pain] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437927, Shadow Sermon: Pain, 0, 0
+		EarlyTimerRefresh: 1.5000000002066, 15.7, 0
 		StartTimer: 22.2, Shadow Sermon: Pain
 	[106.97] SPELL_AURA_APPLIED: [Jammal'an the Prophet->Abdizz: Shadow Sermon: Pain] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, Player-5826-024C3FC3, Abdizz, 0x512, 437927, Shadow Sermon: Pain, 0, DEBUFF, 0
 		ScheduleTask: announce437927target:PreciseShow(10.0, "Abdizz") at 108.17 (+1.20)
@@ -260,19 +279,23 @@ Event trace:
 	[106.97] SPELL_CAST_START: [Jammal'an the Prophet: Holy Nova] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437817, Holy Nova, 0, 0
 		ShowSpecialWarning: Holy Nova - dodge attack
 		PlaySound: VoicePack/watchstep
+		EarlyTimerRefresh: 1.5000000002357, 17.7, 0
 		StartTimer: 17.3, Holy Nova
 	[111.83] SPELL_CAST_START: [Jammal'an the Prophet: Psychic Scream] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437928, Psychic Scream, 0, 0
 		ShowSpecialWarning: Psychic Scream!
 		PlaySound: VoicePack/fearsoon
+		EarlyTimerRefresh: 1.5666666669727, 22.6, 0
 		StartTimer: 43.7, Psychic Scream
 	[115.08] SPELL_AURA_APPLIED: [Jammal'an the Prophet->Jammal'an the Prophet: Power Word: Shield] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, 437930, Power Word: Shield, 0, BUFF, 0
 		ShowSpecialWarning: Power Word: Shield on Jammal'an the Prophet - dispel now
 		PlaySound: VoicePack/dispelboss
 	[115.08] SPELL_CAST_SUCCESS: [Jammal'an the Prophet: Power Word: Shield] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437930, Power Word: Shield, 0, 0
+		EarlyTimerRefresh: 1.1000000003536, 25.4, 0
 		StartTimer: 15.8, Power Word: Shield
 	[118.30] SPELL_CAST_START: [Jammal'an the Prophet: Mass Penance] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437921, Mass Penance, 0, 0
 		ShowSpecialWarning: Mass Penance - dodge attack
 		PlaySound: VoicePack/watchstep
+		EarlyTimerRefresh: 1.1666666670673, 28.7, 0
 		StartTimer: 21.0, Mass Penance
 	[124.39] SPELL_CAST_START: [Jammal'an the Prophet: Holy Nova] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437817, Holy Nova, 0, 0
 		ShowSpecialWarning: Holy Nova - dodge attack
@@ -347,6 +370,7 @@ Event trace:
 	[198.83] SPELL_CAST_START: [Jammal'an the Prophet: Psychic Scream] Creature-0-5250-109-10825-218721-000020105B, Jammal'an the Prophet, 0xa48, "", nil, 0x0, 437928, Psychic Scream, 0, 0
 		ShowSpecialWarning: Psychic Scream!
 		PlaySound: VoicePack/fearsoon
+		EarlyTimerRefresh: 0.4000000006301, 43.7, 0
 		StartTimer: 43.7, Psychic Scream
 	[200.47] ENCOUNTER_END: 2957, Jammal'an and Ogom, 215, 20, 0, 0
 		EndCombat: ENCOUNTER_END

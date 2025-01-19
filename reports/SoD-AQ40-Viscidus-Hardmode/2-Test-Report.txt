@@ -1,10 +1,12 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/AQ40/Viscidus/Hardmode
 Mod:  DBM-Raids-Vanilla/Viscidus
 
 Findings:
 	Unused event registration: SPELL_CAST_SUCCESS 25896 (Rejoin Viscidus)
+	Timer Poison Bolt Volley (%s), time=11.00, type=cdcount, spellId=25991 (time=12.90, variance=0.00) got refreshed early with 1.87s remaining
+		Refreshed by: [ 11.00] SPELL_CAST_SUCCESS: [Viscidus: Poison Bolt Volley] Creature-0-1-531-1-15299-0000000001, Viscidus, 0xa48, "", nil, 0x0, 25991, Poison Bolt Volley, 0, 0
 
 Unused objects:
 	None
@@ -75,6 +77,7 @@ Event trace:
 		StartTimer: 12.9, Poison Bolt Volley (1)
 	[ 11.00] SPELL_CAST_SUCCESS: [Viscidus: Poison Bolt Volley] Creature-0-1-531-1-15299-0000000001, Viscidus, 0xa48, "", nil, 0x0, 25991, Poison Bolt Volley, 0, 0
 		ShowAnnounce: Poison Bolt Volley (1)
+		EarlyTimerRefresh: 1.8666666666767, 12.9, 0
 		StartTimer: 11.0, Poison Bolt Volley (2)
 	[ 16.92] CHAT_MSG_MONSTER_EMOTE: %s begins to slow!, Viscidus, "", "", Viscidus, "", 0, 0, "", 0, 5474, nil, 0, false, false, false, false, 0
 		ShowAnnounce: Freeze: 1/3

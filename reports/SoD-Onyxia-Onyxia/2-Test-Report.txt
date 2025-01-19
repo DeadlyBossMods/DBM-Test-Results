@@ -16,6 +16,10 @@ Findings:
 	Unused event registration: SPELL_DAMAGE 15847 (Tail Sweep)
 	SpecialWarning for spell ID 18584 (Breath) is triggered by event SPELL_CAST_START 17086 (Breath)
 	Timer for spell ID 18584 (Breath) is triggered by event SPELL_CAST_START 17086 (Breath)
+	Timer Breath, time=5.00, type=cast, spellId=18584 (time=34.10, variance=0.00) got refreshed early with 5.17s remaining
+		Refreshed by: [124.62] SPELL_CAST_START: [Onyxia: Breath] Creature-0-5209-249-24472-10184-000022AEFA, Onyxia, 0xa48, "", nil, 0x0, 17086, Breath, 0, 0
+	Timer Flame Breath, time=20.00, type=var, spellId=18435 (time=20.00, variance=6.70) got refreshed early with 10.37s remaining
+		Refreshed by: [391.65] SPELL_CAST_START: [Onyxia: Flame Breath] Creature-0-5209-249-24472-10184-000022AEFA, Onyxia, 0xa48, "", nil, 0x0, 18435, Flame Breath, 0, 0
 
 Unused objects:
 	None
@@ -128,6 +132,7 @@ Event trace:
 			Filtered: 1x CHAT_MSG_MONSTER_EMOTE at 124.8
 		ShowSpecialWarning: Breath!
 		PlaySound: VoicePack/breathsoon
+		EarlyTimerRefresh: 5.1666666670877, 34.1, 0
 		StartTimer: 5.0, Breath
 	[135.93] SPELL_CAST_START: [Onyxia: Fireball] Creature-0-5209-249-24472-10184-000022AEFA, Onyxia, 0xa48, "", nil, 0x0, 18392, Fireball, 0, 0
 		AntiSpam: 2
@@ -436,6 +441,7 @@ Event trace:
 		ShowSpecialWarning: Bellowing Roar!
 		PlaySound: VoicePack/fearsoon
 	[391.65] SPELL_CAST_START: [Onyxia: Flame Breath] Creature-0-5209-249-24472-10184-000022AEFA, Onyxia, 0xa48, "", nil, 0x0, 18435, Flame Breath, 0, 0
+		EarlyTimerRefresh: 10.366666666807, 20, 6.7
 		StartTimer: 20.0, Flame Breath
 	[393.68] UNIT_DIED: [->Tandanu] "", nil, 0x0, Player-5826-020CBDBB, Tandanu, 0x511, 3, false, 0, 0
 		PlaySound: Interface\AddOns\DBM-Raids-Vanilla\VanillaOnyxia\sounds\thats-a-fucking-fifty-dkp-minus.ogg

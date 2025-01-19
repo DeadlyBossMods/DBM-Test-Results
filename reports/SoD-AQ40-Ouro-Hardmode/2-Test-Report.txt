@@ -1,4 +1,4 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/AQ40/Ouro/Hardmode
 Mod:  DBM-Raids-Vanilla/Ouro
@@ -6,6 +6,12 @@ Mod:  DBM-Raids-Vanilla/Ouro
 Findings:
 	Unused event registration: SPELL_CAST_SUCCESS 26058 (Summon Ouro Mounds)
 	Timer for spell ID 1215744 (Blinding Admiration) is triggered by event SPELL_DAMAGE 1215745 (Blinding Admiration)
+	Timer Sand Blast, time=23.00, type=next, spellId=26102 (time=23.00, variance=0.00) got refreshed early with 0.30s remaining
+		Refreshed by: [ 92.20] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
+	Timer Sand Blast, time=23.00, type=next, spellId=26102 (time=23.00, variance=0.00) got refreshed early with 0.33s remaining
+		Refreshed by: [ 69.53] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
+	Timer Sand Blast, time=23.00, type=next, spellId=26102 (time=23.00, variance=0.00) got refreshed early with 0.40s remaining
+		Refreshed by: [ 46.86] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
 
 Unused objects:
 	[Announce] Emerge, type=nil, spellId=<none>
@@ -98,6 +104,7 @@ Event trace:
 	[ 46.86] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
 		ShowSpecialWarning: Sand Blast!
 		PlaySound: VoicePack/stunsoon
+		EarlyTimerRefresh: 0.40000000002055, 23, 0
 		StartTimer: 23.0, Sand Blast
 	[ 53.34] SPELL_CAST_START: [Ouro: Sweep] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26103, Sweep, 0, 0
 		ShowAnnounce: Sweep
@@ -114,6 +121,7 @@ Event trace:
 	[ 69.53] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
 		ShowSpecialWarning: Sand Blast!
 		PlaySound: VoicePack/stunsoon
+		EarlyTimerRefresh: 0.33333333335395, 23, 0
 		StartTimer: 23.0, Sand Blast
 	[ 84.11] SPELL_CAST_START: [Ouro: Sweep] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26103, Sweep, 0, 0
 		ShowAnnounce: Sweep
@@ -130,6 +138,7 @@ Event trace:
 	[ 92.20] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
 		ShowSpecialWarning: Sand Blast!
 		PlaySound: VoicePack/stunsoon
+		EarlyTimerRefresh: 0.30000000002065, 23, 0
 		StartTimer: 23.0, Sand Blast
 	[114.82] SPELL_CAST_START: [Ouro: Sweep] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26103, Sweep, 0, 0
 		ShowAnnounce: Sweep

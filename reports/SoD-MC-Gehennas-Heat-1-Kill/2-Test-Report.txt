@@ -9,6 +9,16 @@ Findings:
 	Unused event registration: SPELL_PERIODIC_MISSED 19717 (Rain of Fire)
 	Announce for spell ID 19717 (Rain of Fire) is triggered by event SPELL_SUMMON 365100 (Rain of Fire)
 	Timer for spell ID 19717 (Rain of Fire) is triggered by event SPELL_SUMMON 365100 (Rain of Fire)
+	Timer Rain of Fire, time=6.00, type=cd, spellId=19717 (time=6.00, variance=0.00) got refreshed early with 1.13s remaining
+		Refreshed by: [ 45.31] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-000000002D, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
+	Timer Rain of Fire, time=6.00, type=cd, spellId=19717 (time=6.00, variance=0.00) got refreshed early with 1.13s remaining
+		Refreshed by: [ 56.66] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-0000000036, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
+	Timer Rain of Fire, time=6.00, type=cd, spellId=19717 (time=6.00, variance=0.00) got refreshed early with 1.13s remaining
+		Refreshed by: [ 85.75] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-000000004D, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
+	Timer Rain of Fire, time=6.00, type=cd, spellId=19717 (time=6.00, variance=0.00) got refreshed early with 1.17s remaining
+		Refreshed by: [ 35.61] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-0000000023, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
+	Timer Rain of Fire, time=6.00, type=cd, spellId=19717 (time=6.00, variance=0.00) got refreshed early with 1.17s remaining
+		Refreshed by: [ 40.44] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-0000000028, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 
 Unused objects:
 	None
@@ -88,18 +98,21 @@ Event trace:
 		StartTimer: 6.0, Rain of Fire
 	[ 35.61] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-0000000023, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 		ShowAnnounce: Rain of Fire
+		EarlyTimerRefresh: 1.1666666666051, 6, 0
 		StartTimer: 6.0, Rain of Fire
 	[ 35.61] SPELL_AURA_APPLIED: [Flamewaker->Dps1: Fist of Ragnaros] Creature-0-1-409-1-228833-0000000068, Flamewaker, 0xa48, Player-1-00000001, Dps1, 0x512, 20277, Fist of Ragnaros, 0, DEBUFF, 0
 		ScheduleTask: announce20277target:CombinedShow("Dps1") at 35.91 (+0.30)
 			ShowAnnounce: Fist of Ragnaros on Dps1
 	[ 40.44] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-0000000028, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 		ShowAnnounce: Rain of Fire
+		EarlyTimerRefresh: 1.1666666666051, 6, 0
 		StartTimer: 6.0, Rain of Fire
 	[ 40.45] SPELL_AURA_APPLIED: [Flamewaker->Dps14: Fist of Ragnaros] Creature-0-1-409-1-228833-00000000BB, Flamewaker, 0xa48, Player-1-00000019, Dps14, 0x512, 20277, Fist of Ragnaros, 0, DEBUFF, 0
 		ScheduleTask: announce20277target:CombinedShow("Dps14") at 40.75 (+0.30)
 			ShowAnnounce: Fist of Ragnaros on Dps5, Dps6, Dps7, PlayerName, Dps14
 	[ 45.31] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-000000002D, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 		ShowAnnounce: Rain of Fire
+		EarlyTimerRefresh: 1.1333333332714, 6, 0
 		StartTimer: 6.0, Rain of Fire
 	[ 46.93] SPELL_CAST_SUCCESS: [Gehennas: Gehennas' Curse] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, "", nil, 0x0, 19716, Gehennas' Curse, 0, 0
 		ShowAnnounce: Gehennas' Curse
@@ -112,6 +125,7 @@ Event trace:
 		StartTimer: 6.0, Rain of Fire
 	[ 56.66] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-0000000036, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 		ShowAnnounce: Rain of Fire
+		EarlyTimerRefresh: 1.1333333332714, 6, 0
 		StartTimer: 6.0, Rain of Fire
 	[ 64.75] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-000000003C, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 		ShowAnnounce: Rain of Fire
@@ -132,6 +146,7 @@ Event trace:
 		StartTimer: 6.0, Rain of Fire
 	[ 85.75] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-000000004D, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 		ShowAnnounce: Rain of Fire
+		EarlyTimerRefresh: 1.1333333334042, 6, 0
 		StartTimer: 6.0, Rain of Fire
 	[ 95.46] SPELL_SUMMON: [Gehennas->Rain of Fire Stalker: Rain of Fire] Creature-0-1-409-1-228431-0000000002, Gehennas, 0xa48, Creature-0-1-409-1-184480-0000000051, Rain of Fire Stalker, 0xa48, 365100, Rain of Fire, 0, 0
 		ShowAnnounce: Rain of Fire

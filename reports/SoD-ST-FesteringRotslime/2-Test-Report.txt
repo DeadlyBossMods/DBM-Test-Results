@@ -1,4 +1,4 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/ST/FesteringRotslime
 Mod:  DBM-Raids-Vanilla/FesteringRotslimeSoD
@@ -6,6 +6,8 @@ Mod:  DBM-Raids-Vanilla/FesteringRotslimeSoD
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 448824 (Devour)
 	Unused event registration: SPELL_MISSED 438136 (Nauseous Gas)
+	Timer Gunk (%s), time=17.80, type=cdcount, spellId=438142 (time=12.80, variance=0.00) got refreshed early with 0.27s remaining
+		Refreshed by: [12.52] SPELL_CAST_START: [Festering Rotslime: Gunk] Vehicle-0-5208-109-4570-218819-00003BC782, Festering Rotslime, 0xa48, "", nil, 0x0, 438142, Gunk, 0, 0
 
 Unused objects:
 	[Yell] Devour on PlayerName, type=yell, spellId=448824
@@ -63,6 +65,7 @@ Event trace:
 		ShowSpecialWarning: Slime Time faded
 	[12.52] SPELL_CAST_START: [Festering Rotslime: Gunk] Vehicle-0-5208-109-4570-218819-00003BC782, Festering Rotslime, 0xa48, "", nil, 0x0, 438142, Gunk, 0, 0
 		ShowAnnounce: Gunk (1)
+		EarlyTimerRefresh: 0.26666566684905, 12.799999, 0
 		StartTimer: 17.8, Gunk (2)
 	[16.65] SPELL_DAMAGE: [Festering Rotslime->Tandanu: Nauseous Gas] Vehicle-0-5208-109-4570-218819-00003BC782, Festering Rotslime, 0xa48, Player-5826-020CBDBB, Tandanu, 0x511, 438136, Nauseous Gas, 0, 0
 		AntiSpam: 2

@@ -1,4 +1,4 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/AQ40/Huhuran/Hardmode
 Mod:  DBM-Raids-Vanilla/Huhuran
@@ -25,6 +25,8 @@ Findings:
 	Announce for spell ID 26053 (Noxious Poison) is triggered by event SPELL_CAST_SUCCESS 1215752 (Noxious Poison)
 	Timer for spell ID 26053 (Noxious Poison) is triggered by event SPELL_CAST_SUCCESS 1215752 (Noxious Poison)
 	Announce for spell ID 26068 (Berserk) is triggered by event SPELL_AURA_APPLIED 1215885 (Berserk)
+	Timer Frenzy, time=11.80, type=cd, spellId=26051 (time=9.60, variance=0.00) got refreshed early with 1.50s remaining
+		Refreshed by: [  8.07] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
 
 Unused objects:
 	[Announce] Frenzy, type=spell, spellId=26051
@@ -136,6 +138,7 @@ Event trace:
 		ShowAnnounce: Acid Spit on Dps6 (1)
 	[  8.07] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
 		StartTimer: 8.0, Frenzy ends
+		EarlyTimerRefresh: 1.4999990000074, 9.599999, 0
 		StartTimer: 11.8, Frenzy
 		ShowSpecialWarning: Frenzy on Princess Huhuran - dispel now
 		PlaySound: VoicePack/trannow

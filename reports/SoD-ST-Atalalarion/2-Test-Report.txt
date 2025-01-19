@@ -1,10 +1,11 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/ST/Atalalarion
 Mod:  DBM-Raids-Vanilla/AtalalarionSoD
 
 Findings:
-	None
+	Timer Pillars of Might (%s), time=12.20, type=cdcount, spellId=437503 (time=12.20, variance=0.00) got refreshed early with 0.20s remaining
+		Refreshed by: [31.66] SPELL_CAST_START: [Atal'alarion: Pillars of Might] Creature-0-5208-109-4570-218624-00003BC782, Atal'alarion, 0xa48, "", nil, 0x0, 437503, Pillars of Might, 0, 0
 
 Unused objects:
 	None
@@ -59,6 +60,7 @@ Event trace:
 		StartTimer: 27.1, Demolishing Smash (2)
 	[31.66] SPELL_CAST_START: [Atal'alarion: Pillars of Might] Creature-0-5208-109-4570-218624-00003BC782, Atal'alarion, 0xa48, "", nil, 0x0, 437503, Pillars of Might, 0, 0
 		ShowAnnounce: Pillars of Might (3)
+		EarlyTimerRefresh: 0.20000000017462, 12.2, 0
 		StartTimer: 12.2, Pillars of Might (4)
 	[45.19] SPELL_CAST_START: [Atal'alarion: Pillars of Might] Creature-0-5208-109-4570-218624-00003BC782, Atal'alarion, 0xa48, "", nil, 0x0, 437503, Pillars of Might, 0, 0
 		ShowAnnounce: Pillars of Might (4)
