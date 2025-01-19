@@ -13,7 +13,6 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 471927 (Withering Flames)
 	Unused event registration: SPELL_AURA_REMOVED 473278 (Withering Flames)
 	Unused event registration: SPELL_CAST_START 460472 (The Big Hit)
-	Unused event registration: SPELL_CAST_START 460847 (Electric Blast)
 	Unused event registration: SPELL_CAST_START 471930 (Withering Flames)
 	Unused event registration: SPELL_CAST_START 472197 (Withering Flames)
 	Unused event registration: UNIT_DIED
@@ -29,7 +28,6 @@ Unused objects:
 	[Special Warning] Coin Magnet!, type=spell, spellId=474665
 	[Timer] Pay-Line AI, time=97.30, type=ai, spellId=460181
 	[Timer] The Big Hit AI, time=97.30, type=ai, spellId=460472
-	[Timer] Spin To Win! AI, time=97.30, type=ai, spellId=461060
 	[Timer] Cheat to Win! AI, time=97.30, type=ai, spellId=465309
 	[Timer] Foul Exhaust AI, time=97.30, type=ai, spellId=469993
 	[Yell] %d, type=shortfade, spellId=471930
@@ -44,12 +42,17 @@ Timers:
 		[ 33.06] SPELL_AURA_REMOVED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000D4, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000D4, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
 			 Triggered 6x, delta times: 33.06, 62.79, 59.92, 63.15, 63.04, 63.93
 		[392.56] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+	Spin To Win! (%s), time=60.90, type=cdcount, spellId=461060, triggerDeltas = 0.00, 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
+		[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+			 Triggered 7x, delta times: 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
 	Explosive Jackpot, time=30.00, type=cast, spellId=465587, triggerDeltas = 482.58
 		[482.58] SPELL_CAST_START: [One-Armed Bandit: Explosive Jackpot] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465587, Explosive Jackpot, 0, 0
 
 Announces:
-	Stage 2, type=stage, spellId=<none>, triggerDeltas = 404.91
-		[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 399.33
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
 	Crushed! on >%s<, type=target, spellId=460430, triggerDeltas = 55.90, 69.69, 32.90, 32.60, 38.03, 30.38, 37.95, 120.82, 58.43
 		[ 55.90] Scheduled at 54.90 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer2: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000005, Healer2, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[125.59] Scheduled at 124.59 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
@@ -149,6 +152,9 @@ Special warnings:
 	Spin To Win!! (%s), type=count, spellId=461060, triggerDeltas = 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
 		[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 			 Triggered 7x, delta times: 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+	Cheat to Win!! (%s), type=count, spellId=465309, triggerDeltas = 404.91, 25.50, 26.76, 25.15
+		[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+			 Triggered 4x, delta times: 404.91, 25.50, 26.76, 25.15
 	Scattered Payout - switch targets, type=switch, spellId=465580, triggerDeltas = 457.43
 		[457.43] SPELL_CAST_START: [One-Armed Bandit: Scattered Payout] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465580, Scattered Payout, 0, 0
 	Burning Blast - dodge attack, type=dodge, spellId=472178, triggerDeltas = 386.90, 2.77, 2.11
@@ -170,8 +176,10 @@ Voice pack sounds:
 	VoicePack/phasechange
 		[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 			 Triggered 7x, delta times: 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
-	VoicePack/ptwo
 		[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+			 Triggered 4x, delta times: 404.91, 25.50, 26.76, 25.15
+	VoicePack/ptwo
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
 	VoicePack/specialsoon
 		[  4.52] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 			 Triggered 15x, delta times: 4.52, 42.75, 31.56, 40.20, 34.07, 31.64, 36.54, 31.60, 36.54, 32.82, 31.63, 31.59, 24.29, 31.59, 29.21
@@ -192,7 +200,8 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460847 460181 469993 460472 465432 465322 465580 465587, SPELL_CAST_SUCCESS 465309, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED_UNFILTERED
+		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761, SPELL_CAST_SUCCESS 465309, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED_UNFILTERED
+		StartTimer: 1.0, Spin To Win! (Unknown)
 	[  4.52] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (1)
 		PlaySound: VoicePack/specialsoon
@@ -205,6 +214,7 @@ Event trace:
 	[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (1)
 		PlaySound: VoicePack/phasechange
+		StartTimer: 60.9, Spin To Win! (Unknown)
 	[ 22.43] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[ 22.44] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
@@ -253,6 +263,7 @@ Event trace:
 	[ 81.27] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (2)
 		PlaySound: VoicePack/phasechange
+		StartTimer: 60.9, Spin To Win! (Unknown)
 	[ 83.28] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[ 83.32] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000025, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000025, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
@@ -305,6 +316,7 @@ Event trace:
 	[143.32] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (3)
 		PlaySound: VoicePack/phasechange
+		StartTimer: 60.9, Spin To Win! (Unknown)
 	[145.33] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[145.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000039, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000039, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
@@ -353,6 +365,7 @@ Event trace:
 	[205.43] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (4)
 		PlaySound: VoicePack/phasechange
+		StartTimer: 60.9, Spin To Win! (Unknown)
 	[207.45] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[207.49] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000053, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000053, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
@@ -423,6 +436,7 @@ Event trace:
 	[266.25] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (5)
 		PlaySound: VoicePack/phasechange
+		StartTimer: 60.9, Spin To Win! (Unknown)
 	[268.28] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[268.29] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
@@ -506,6 +520,7 @@ Event trace:
 	[328.31] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (6)
 		PlaySound: VoicePack/phasechange
+		StartTimer: 60.9, Spin To Win! (Unknown)
 	[330.33] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[330.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
@@ -608,6 +623,7 @@ Event trace:
 	[390.31] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (7)
 		PlaySound: VoicePack/phasechange
+		StartTimer: 60.9, Spin To Win! (Unknown)
 	[391.78] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-0000000112, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
 		ShowSpecialWarning: Burning Blast - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -615,11 +631,15 @@ Event trace:
 		StartTimer: 30.0, Spin To Win! ends
 	[392.56] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StopTimer: Timer461060active
-	[403.68] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
-		ShowAnnounce: Foul Exhaust (13)
-	[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+	[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
 		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
+		StopTimer: Timer461060cdcount
+	[403.68] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (1)
+	[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (1)
+		PlaySound: VoicePack/phasechange
 	[405.16] SPELL_CAST_START: [One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465432, Linked Machines, 0, 0
 		ShowAnnounce: Linked Machines (1)
 	[409.75] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
@@ -634,14 +654,20 @@ Event trace:
 		ShowSpecialWarning: Shocking Field damage - move away
 		PlaySound: VoicePack/watchfeet
 	[429.20] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
-		ShowAnnounce: Foul Exhaust (1)
+		ShowAnnounce: Foul Exhaust (2)
+	[430.41] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (2)
+		PlaySound: VoicePack/phasechange
 	[430.70] SPELL_CAST_START: [One-Armed Bandit: Hot Hot Heat] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465322, Hot Hot Heat, 0, 0
 		ShowAnnounce: Hot Hot Heat incoming debuff (1)
 	[441.34] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (2)
 		PlaySound: VoicePack/specialsoon
 	[455.95] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
-		ShowAnnounce: Foul Exhaust (2)
+		ShowAnnounce: Foul Exhaust (3)
+	[457.17] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (3)
+		PlaySound: VoicePack/phasechange
 	[457.43] SPELL_CAST_START: [One-Armed Bandit: Scattered Payout] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465580, Scattered Payout, 0, 0
 		ShowSpecialWarning: Scattered Payout - switch targets
 		PlaySound: VoicePack/targetchange
@@ -651,6 +677,9 @@ Event trace:
 	[475.70] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		ScheduleTask: announce460430target:CombinedShow("Dps7") at 476.70 (+1.00)
 			ShowAnnounce: Crushed! on Dps7
+	[482.32] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (4)
+		PlaySound: VoicePack/phasechange
 	[482.58] SPELL_CAST_START: [One-Armed Bandit: Explosive Jackpot] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465587, Explosive Jackpot, 0, 0
 		ShowAnnounce: Casting Explosive Jackpot: -nan sec
 		StartTimer: 30.0, Explosive Jackpot
