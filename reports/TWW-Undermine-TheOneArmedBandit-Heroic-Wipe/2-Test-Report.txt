@@ -13,7 +13,6 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 471720 (Spin To Win!)
 	Unused event registration: SPELL_AURA_REMOVED 471927 (Withering Flames)
 	Unused event registration: SPELL_AURA_REMOVED 473278 (Withering Flames)
-	Unused event registration: SPELL_CAST_START 465432 (Linked Machines)
 	Unused event registration: SPELL_CAST_START 472197 (Withering Flames)
 	Unused event registration: UNIT_DIED
 	Timer for spell ID 460181 (Pay-Line) is triggered by event SPELL_CAST_START 465761 (Rig the Game!)
@@ -25,7 +24,6 @@ Findings:
 
 Unused objects:
 	[Announce] Fraud Detected! on >%s<, type=target, spellId=461068
-	[Announce] Linked Machines (%s), type=count, spellId=465432
 	[Special Warning] The Big Hit - defensive, type=defensive, spellId=460472
 	[Special Warning] The Big Hit on >%s< - taunt now, type=taunt, spellId=460472
 	[Special Warning] Explosive Gaze - run away, type=run, spellId=465009
@@ -127,6 +125,8 @@ Announces:
 		[387.32] Scheduled at 387.02 by SPELL_AURA_APPLIED: [Fiery Dynamite Booty->Healer5: Explosive Gaze] Creature-0-1-2769-1-231028-0000000112, Fiery Dynamite Booty, 0xa48, Player-1-00000018, Healer5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
 	Hot Hot Heat incoming debuff, type=incoming, spellId=465322, triggerDeltas = 430.70
 		[430.70] SPELL_CAST_START: [One-Armed Bandit: Hot Hot Heat] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465322, Hot Hot Heat, 0, 0
+	Linked Machines, type=spell, spellId=465432, triggerDeltas = 405.16
+		[405.16] SPELL_CAST_START: [One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465432, Linked Machines, 0, 0
 	Casting Explosive Jackpot: -nan sec, type=cast, spellId=465587, triggerDeltas = 482.58
 		[482.58] SPELL_CAST_START: [One-Armed Bandit: Explosive Jackpot] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465587, Explosive Jackpot, 0, 0
 	Foul Exhaust (%s), type=count, spellId=469993, triggerDeltas = 9.38, 31.75, 31.63, 31.68, 31.58, 42.62, 36.54, 31.63, 36.55, 32.82, 31.60, 31.60, 24.30, 25.52, 26.75
@@ -749,6 +749,8 @@ Event trace:
 		ShowSpecialWarning: Cheat to Win!! (1)
 		PlaySound: VoicePack/phasechange
 		StartTimer: 26.7, Cheat to Win! (2)
+	[405.16] SPELL_CAST_START: [One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465432, Linked Machines, 0, 0
+		ShowAnnounce: Linked Machines
 	[409.75] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (1)
 		PlaySound: VoicePack/specialsoon
