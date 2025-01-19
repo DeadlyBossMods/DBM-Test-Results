@@ -23,12 +23,6 @@ Findings:
 	Timer for spell ID 471930 (Withering Flames) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
 	Timer Pay-Line (%s), time=36.50, type=varcount, spellId=460181 (time=11.00, variance=0.00) got refreshed early with 0.57s remaining
 		Refreshed by: [409.75] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
-	Timer The Big Hit (%s), time=40.50, type=varcount, spellId=460472 (time=40.50, variance=21.10) got refreshed early with 25.87s remaining
-		Refreshed by: [479.08] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-	Timer The Big Hit (%s), time=40.50, type=varcount, spellId=460472 (time=40.50, variance=21.10) got refreshed early with 25.90s remaining
-		Refreshed by: [464.46] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-	Timer The Big Hit (%s), time=40.50, type=varcount, spellId=460472 (time=40.50, variance=21.10) got refreshed early with 25.97s remaining
-		Refreshed by: [449.84] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 
 Unused objects:
 	[Announce] Fraud Detected! on >%s<, type=target, spellId=461068
@@ -752,7 +746,7 @@ Event trace:
 		StartTimer: 15.2, The Big Hit (1)
 	[403.68] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (1)
-		StartTimer: 29.1, Foul Exhaust (2)
+		StartTimer: 32.8, Foul Exhaust (2)
 	[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
 		ShowSpecialWarning: Cheat to Win!! (1)
 		PlaySound: VoicePack/phasechange
@@ -762,9 +756,9 @@ Event trace:
 	[409.75] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (1)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 29.1, Pay-Line (2)
+		StartTimer: 32.8, Pay-Line (2)
 	[414.60] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 40.5, The Big Hit (2)
+		StartTimer: 20.6, The Big Hit (2)
 	[417.27] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps13: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000020, Dps13, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		ScheduleTask: announce460430target:CombinedShow("Dps13") at 418.27 (+1.00)
 			ShowAnnounce: Crushed! on Dps4, Dps1, Dps13
@@ -775,7 +769,7 @@ Event trace:
 		PlaySound: VoicePack/watchfeet
 	[429.20] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (2)
-		StartTimer: 29.1, Foul Exhaust (3)
+		StartTimer: 32.8, Foul Exhaust (3)
 	[430.41] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
 		ShowSpecialWarning: Cheat to Win!! (2)
 		PlaySound: VoicePack/phasechange
@@ -783,16 +777,16 @@ Event trace:
 	[430.70] SPELL_CAST_START: [One-Armed Bandit: Hot Hot Heat] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465322, Hot Hot Heat, 0, 0
 		ShowAnnounce: Hot Hot Heat incoming debuff
 	[435.33] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 40.5, The Big Hit (3)
+		StartTimer: 20.6, The Big Hit (3)
 	[441.34] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (2)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 29.1, Pay-Line (3)
+		StartTimer: 32.8, Pay-Line (3)
 	[449.84] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 40.5, The Big Hit (4)
+		StartTimer: 20.6, The Big Hit (4)
 	[455.95] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (3)
-		StartTimer: 29.1, Foul Exhaust (4)
+		StartTimer: 32.8, Foul Exhaust (4)
 	[457.17] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
 		ShowSpecialWarning: Cheat to Win!! (3)
 		PlaySound: VoicePack/phasechange
@@ -801,16 +795,16 @@ Event trace:
 		ShowSpecialWarning: Scattered Payout - switch targets
 		PlaySound: VoicePack/targetchange
 	[464.46] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 40.5, The Big Hit (5)
+		StartTimer: 20.6, The Big Hit (5)
 	[470.55] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (3)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 29.1, Pay-Line (4)
+		StartTimer: 32.8, Pay-Line (4)
 	[475.70] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		ScheduleTask: announce460430target:CombinedShow("Dps7") at 476.70 (+1.00)
 			ShowAnnounce: Crushed! on Dps7
 	[479.08] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 40.5, The Big Hit (6)
+		StartTimer: 20.6, The Big Hit (6)
 	[482.32] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
 		ShowSpecialWarning: Cheat to Win!! (4)
 		PlaySound: VoicePack/phasechange
