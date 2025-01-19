@@ -1,0 +1,818 @@
+Test report differs from test report stored in the DBM test mod.
+
+Test: TWW/Undermine/TheOneArmedBandit/Heroic/Wipe
+Mod:  DBM-Raids-WarWithin/2644
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 460472 (The Big Hit)
+	Unused event registration: SPELL_AURA_APPLIED 460973 (Dark Lined Cuirass)
+	Unused event registration: SPELL_AURA_APPLIED 461068 (Fraud Detected!)
+	Unused event registration: SPELL_AURA_APPLIED 473278 (Withering Flames)
+	Unused event registration: SPELL_AURA_REMOVED 460973 (Dark Lined Cuirass)
+	Unused event registration: SPELL_AURA_REMOVED 465009 (Explosive Gaze)
+	Unused event registration: SPELL_AURA_REMOVED 471720 (Spin To Win!)
+	Unused event registration: SPELL_AURA_REMOVED 471927 (Withering Flames)
+	Unused event registration: SPELL_AURA_REMOVED 473278 (Withering Flames)
+	Unused event registration: SPELL_CAST_START 465432 (Linked Machines)
+	Unused event registration: SPELL_CAST_START 472197 (Withering Flames)
+	Unused event registration: UNIT_DIED
+	Timer for spell ID 460181 (Pay-Line) is triggered by event SPELL_CAST_START 465761 (Rig the Game!)
+	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_START 465761 (Rig the Game!)
+	Timer for spell ID 460582 (Overload!) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
+	Timer for spell ID 465309 (Cheat to Win!) is triggered by event SPELL_CAST_START 465761 (Rig the Game!)
+	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 465761 (Rig the Game!)
+	Timer for spell ID 471930 (Withering Flames) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
+
+Unused objects:
+	[Announce] Fraud Detected! on >%s<, type=target, spellId=461068
+	[Announce] Linked Machines (%s), type=count, spellId=465432
+	[Special Warning] The Big Hit - defensive, type=defensive, spellId=460472
+	[Special Warning] The Big Hit on >%s< - taunt now, type=taunt, spellId=460472
+	[Special Warning] Explosive Gaze - run away, type=run, spellId=465009
+	[Special Warning] Withering Flames - move away from others, type=moveaway, spellId=471930
+	[Yell] %d, type=shortfade, spellId=471930
+	[Yell] Withering Flames, type=shortyell, spellId=471930
+
+Timers:
+	Pay-Line (%s), time=36.50, type=varcount, spellId=460181, triggerDeltas = 0.00, 4.52, 42.75, 31.56, 40.20, 34.07, 31.64, 36.54, 31.60, 36.54, 32.82, 31.63, 31.59, 13.87, 10.42, 31.59, 29.21
+		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
+		[  4.52] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+			 Triggered 15x, delta times: 4.52, 42.75, 31.56, 40.20, 34.07, 31.64, 36.54, 31.60, 36.54, 32.82, 31.63, 31.59, 24.29, 31.59, 29.21
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+	The Big Hit (%s), time=40.50, type=varcount, spellId=460472, triggerDeltas = 0.00, 15.51, 19.56, 29.16, 20.70, 40.15, 21.90, 19.49, 23.14, 19.50, 19.43, 29.22, 19.48, 32.87, 21.84, 40.11, 27.27, 15.27, 20.73, 14.51, 14.62, 14.62
+		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
+		[ 15.51] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+			 Triggered 20x, delta times: 15.51, 19.56, 29.16, 20.70, 40.15, 21.90, 19.49, 23.14, 19.50, 19.43, 29.22, 19.48, 32.87, 21.84, 40.11, 42.54, 20.73, 14.51, 14.62, 14.62
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+	Overload!, time=18.20, type=cdnp, spellId=460582, triggerDeltas = 22.44, 0.00, 0.01, 16.25, 44.62, 0.00, 0.00, 15.02, 1.22, 45.78, 0.00, 0.00, 16.25, 0.00, 45.90, 0.00, 0.00, 15.00, 1.25, 44.55, 0.00, 0.00, 16.23, 0.00, 21.90, 23.92, 0.00, 0.00, 15.01, 1.22, 18.23
+		[ 22.44] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+			 Triggered 18x, delta times: 22.44, 0.00, 0.01, 60.87, 0.00, 0.00, 62.02, 0.00, 0.00, 62.15, 0.00, 0.00, 60.80, 0.00, 0.00, 62.05, 0.00, 0.00
+		[ 38.70] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+			 Triggered 13x, delta times: 38.70, 59.64, 1.22, 62.03, 0.00, 60.90, 1.25, 60.78, 0.00, 21.90, 38.93, 1.22, 18.23
+	Spin To Win! ends, time=30.00, type=active, spellId=461060, triggerDeltas = 22.43, 60.85, 62.05, 62.12, 60.83, 62.05, 62.00
+		[ 22.43] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+			 Triggered 7x, delta times: 22.43, 60.85, 62.05, 62.12, 60.83, 62.05, 62.00
+		[ 51.67] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+			 Triggered 7x, delta times: 51.67, 60.59, 61.76, 62.39, 60.84, 62.23, 33.08
+	Spin To Win! (%s), time=62.10, type=varcount, spellId=461060, triggerDeltas = 0.00, 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
+		[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+			 Triggered 7x, delta times: 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+	Cheat to Win! (%s), time=26.70, type=varcount, spellId=465309, triggerDeltas = 399.33, 5.58, 25.50, 26.76, 25.15
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+		[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+			 Triggered 4x, delta times: 404.91, 25.50, 26.76, 25.15
+	Explosive Jackpot, time=30.00, type=cast, spellId=465587, triggerDeltas = 482.58
+		[482.58] SPELL_CAST_START: [One-Armed Bandit: Explosive Jackpot] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465587, Explosive Jackpot, 0, 0
+	Foul Exhaust (%s), time=36.50, type=varcount, spellId=469993, triggerDeltas = 0.00, 9.38, 31.75, 31.63, 31.68, 31.58, 42.62, 36.54, 31.63, 36.55, 32.82, 31.60, 31.60, 19.95, 4.35, 25.52, 26.75
+		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
+		[  9.38] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+			 Triggered 15x, delta times: 9.38, 31.75, 31.63, 31.68, 31.58, 42.62, 36.54, 31.63, 36.55, 32.82, 31.60, 31.60, 24.30, 25.52, 26.75
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+	Withering Flames, time=18.20, type=cdnp, spellId=471930, triggerDeltas = 22.44, 0.00, 0.01, 19.92, 40.95, 0.00, 0.00, 16.24, 2.47, 43.31, 0.00, 0.00, 21.12, 41.03, 0.00, 0.00, 16.25, 6.02, 38.53, 0.00, 0.00, 16.72, 5.60, 18.25, 21.48, 0.00, 0.00, 14.58, 2.86, 15.80
+		[ 22.44] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+			 Triggered 18x, delta times: 22.44, 0.00, 0.01, 60.87, 0.00, 0.00, 62.02, 0.00, 0.00, 62.15, 0.00, 0.00, 60.80, 0.00, 0.00, 62.05, 0.00, 0.00
+		[ 42.37] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+			 Triggered 12x, delta times: 42.37, 57.19, 2.47, 64.43, 57.28, 6.02, 55.25, 5.60, 18.25, 36.06, 2.86, 15.80
+
+Announces:
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 399.33
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+	Crushed! on >%s<, type=target, spellId=460430, triggerDeltas = 55.90, 69.69, 32.90, 32.60, 38.03, 30.38, 37.95, 120.82, 58.43
+		[ 55.90] Scheduled at 54.90 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer2: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000005, Healer2, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[125.59] Scheduled at 124.59 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[158.49] Scheduled at 157.49 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer6: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000019, Healer6, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[191.09] Scheduled at 190.09 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps11: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000015, Dps11, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[229.12] Scheduled at 228.12 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps3: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000003, Dps3, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[259.50] Scheduled at 258.50 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer3: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000007, Healer3, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[297.45] Scheduled at 296.45 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps8: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000012, Dps8, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[418.27] Scheduled at 417.27 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps13: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000020, Dps13, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[476.70] Scheduled at 475.70 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+	Reward: Shock and Flame (%s), type=count, spellId=464772, triggerDeltas = 174.02
+		[174.02] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
+	Reward: Shock and Bomb (%s), type=count, spellId=464801, triggerDeltas = 236.41
+		[236.41] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464801, Reward: Shock and Bomb, 0, 0
+	Reward: Flame and Bomb (%s), type=count, spellId=464804, triggerDeltas = 359.48
+		[359.48] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464804, Reward: Flame and Bomb, 0, 0
+	Reward: Flame and Coin (%s), type=count, spellId=464806, triggerDeltas = 51.67
+		[ 51.67] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
+	Reward: Coin and Shock (%s), type=count, spellId=464809, triggerDeltas = 112.26
+		[112.26] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Shock] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464809, Reward: Coin and Shock, 0, 0
+	Reward: Coin and Bomb (%s), type=count, spellId=464810, triggerDeltas = 297.25
+		[297.25] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
+	Explosive Gaze on >%s<, type=target, spellId=465009, triggerDeltas = 245.68, 4.04, 9.34, 4.86, 8.52, 1.21, 11.93, 1.10, 0.40, 11.39, 1.62, 3.99, 13.03, 17.39, 13.06, 7.17, 0.63, 1.62, 3.58, 1.85, 3.70, 13.00, 8.21
+		[245.68] Scheduled at 245.38 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps5: Explosive Gaze] Creature-0-1-2769-1-228502-000000010A, Dynamite Booty, 0xa48, Player-1-00000008, Dps5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[249.72] Scheduled at 249.42 by SPELL_AURA_APPLIED: [Dynamite Booty->Healer5: Explosive Gaze] Creature-0-1-2769-1-228502-0000000064, Dynamite Booty, 0xa48, Player-1-00000018, Healer5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[259.06] Scheduled at 258.76 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps8: Explosive Gaze] Creature-0-1-2769-1-228502-000000011E, Dynamite Booty, 0xa48, Player-1-00000012, Dps8, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[263.92] Scheduled at 263.62 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps9: Explosive Gaze] Creature-0-1-2769-1-228502-000000011E, Dynamite Booty, 0xa48, Player-1-00000013, Dps9, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[272.44] Scheduled at 272.14 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps2: Explosive Gaze] Creature-0-1-2769-1-228502-0000000120, Dynamite Booty, 0xa48, Player-1-00000002, Dps2, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[273.65] Scheduled at 273.35 by SPELL_AURA_APPLIED: [Dynamite Booty->Healer1: Explosive Gaze] Creature-0-1-2769-1-228502-000000010D, Dynamite Booty, 0xa48, Player-1-00000004, Healer1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[285.58] Scheduled at 285.28 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps6: Explosive Gaze] Creature-0-1-2769-1-228502-000000006F, Dynamite Booty, 0xa48, Player-1-00000009, Dps6, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[286.68] Scheduled at 286.38 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps4: Explosive Gaze] Creature-0-1-2769-1-228502-0000000120, Dynamite Booty, 0xa48, Player-1-00000006, Dps4, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[287.08] Scheduled at 286.78 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps13: Explosive Gaze] Creature-0-1-2769-1-228502-000000010D, Dynamite Booty, 0xa48, Player-1-00000020, Dps13, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[298.47] Scheduled at 298.17 by SPELL_AURA_APPLIED: [Dynamite Booty->Healer6: Explosive Gaze] Creature-0-1-2769-1-228502-00000000E9, Dynamite Booty, 0xa48, Player-1-00000019, Healer6, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[300.09] Scheduled at 299.79 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps13: Explosive Gaze] Creature-0-1-2769-1-228502-000000010D, Dynamite Booty, 0xa48, Player-1-00000020, Dps13, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[304.08] Scheduled at 303.78 by SPELL_AURA_APPLIED: [Premium Currency Booty->Healer3: Explosive Gaze] Creature-0-1-2769-1-231027-0000000082, Premium Currency Booty, 0xa48, Player-1-00000007, Healer3, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[317.11] Scheduled at 316.81 by SPELL_AURA_APPLIED: [Premium Currency Booty->Dps1: Explosive Gaze] Creature-0-1-2769-1-231027-0000000082, Premium Currency Booty, 0xa48, Player-1-00000001, Dps1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[334.50] Scheduled at 334.20 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps1: Explosive Gaze] Creature-0-1-2769-1-228502-0000000110, Dynamite Booty, 0xa48, Player-1-00000001, Dps1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[347.56] Scheduled at 347.26 by SPELL_AURA_APPLIED: [Dynamite Booty->Healer1: Explosive Gaze] Creature-0-1-2769-1-228502-0000000110, Dynamite Booty, 0xa48, Player-1-00000004, Healer1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[354.73] Scheduled at 354.43 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps4: Explosive Gaze] Creature-0-1-2769-1-228502-00000000EF, Dynamite Booty, 0xa48, Player-1-00000006, Dps4, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[355.36] Scheduled at 355.06 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps6: Explosive Gaze] Creature-0-1-2769-1-228502-0000000122, Dynamite Booty, 0xa48, Player-1-00000009, Dps6, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[356.98] Scheduled at 356.68 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps11: Explosive Gaze] Creature-0-1-2769-1-228502-000000008B, Dynamite Booty, 0xa48, Player-1-00000015, Dps11, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[360.56] Scheduled at 360.26 by SPELL_AURA_APPLIED: [Dynamite Booty->Healer2: Explosive Gaze] Creature-0-1-2769-1-228502-0000000110, Dynamite Booty, 0xa48, Player-1-00000005, Healer2, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[362.41] Scheduled at 362.11 by SPELL_AURA_APPLIED: [Dynamite Booty->Dps10: Explosive Gaze] Creature-0-1-2769-1-228502-00000000EF, Dynamite Booty, 0xa48, Player-1-00000014, Dps10, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[366.11] Scheduled at 365.81 by SPELL_AURA_APPLIED: [Fiery Dynamite Booty->Healer3: Explosive Gaze] Creature-0-1-2769-1-231028-0000000099, Fiery Dynamite Booty, 0xa48, Player-1-00000007, Healer3, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[379.11] Scheduled at 378.81 by SPELL_AURA_APPLIED: [Fiery Dynamite Booty->Dps4: Explosive Gaze] Creature-0-1-2769-1-231028-0000000112, Fiery Dynamite Booty, 0xa48, Player-1-00000006, Dps4, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		[387.32] Scheduled at 387.02 by SPELL_AURA_APPLIED: [Fiery Dynamite Booty->Healer5: Explosive Gaze] Creature-0-1-2769-1-231028-0000000112, Fiery Dynamite Booty, 0xa48, Player-1-00000018, Healer5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+	Hot Hot Heat incoming debuff, type=incoming, spellId=465322, triggerDeltas = 430.70
+		[430.70] SPELL_CAST_START: [One-Armed Bandit: Hot Hot Heat] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465322, Hot Hot Heat, 0, 0
+	Casting Explosive Jackpot: -nan sec, type=cast, spellId=465587, triggerDeltas = 482.58
+		[482.58] SPELL_CAST_START: [One-Armed Bandit: Explosive Jackpot] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465587, Explosive Jackpot, 0, 0
+	Foul Exhaust (%s), type=count, spellId=469993, triggerDeltas = 9.38, 31.75, 31.63, 31.68, 31.58, 42.62, 36.54, 31.63, 36.55, 32.82, 31.60, 31.60, 24.30, 25.52, 26.75
+		[  9.38] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+			 Triggered 15x, delta times: 9.38, 31.75, 31.63, 31.68, 31.58, 42.62, 36.54, 31.63, 36.55, 32.82, 31.60, 31.60, 24.30, 25.52, 26.75
+	Withering Flames on >%s<, type=target, spellId=471930, triggerDeltas = 44.88, 57.39, 66.59, 57.14, 7.04, 54.56, 6.28, 17.28, 36.61, 2.29, 16.63
+		[ 44.88] Scheduled at 44.58 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[102.27] Scheduled at 101.97 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps8: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000012, Dps8, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[168.86] Scheduled at 168.56 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer6: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000019, Healer6, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[226.00] Scheduled at 225.70 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[233.04] Scheduled at 232.74 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000005, Healer2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[287.60] Scheduled at 287.30 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps5: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000008, Dps5, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[293.88] Scheduled at 293.58 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer5: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000018, Healer5, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[311.16] Scheduled at 310.86 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps10: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000014, Dps10, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[347.77] Scheduled at 347.47 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer5: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000018, Healer5, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[350.06] Scheduled at 349.76 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		[366.69] Scheduled at 366.39 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+	Token: Shock on >%s<, type=target, spellId=472783, triggerDeltas = 103.80, 59.16, 62.84
+		[103.80] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Shock] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472783, Token: Shock, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 103.80, 59.16
+		[225.80] SPELL_AURA_APPLIED: [Dps1->Dps1: Token: Shock] Player-1-00000001, Dps1, 0x512, Player-1-00000001, Dps1, 0x512, 472783, Token: Shock, 0, DEBUFF, 0
+	Token: Flame on >%s<, type=target, spellId=472828, triggerDeltas = 38.14, 118.51, 190.12
+		[ 38.14] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Flame] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472828, Token: Flame, 0, DEBUFF, 0
+		[156.65] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Flame] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472828, Token: Flame, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 156.65, 190.12
+	Token: Coin on >%s<, type=target, spellId=472832, triggerDeltas = 33.85, 62.83, 186.08
+		[ 33.85] SPELL_AURA_APPLIED: [Dps6->Dps6: Token: Coin] Player-1-00000009, Dps6, 0x512, Player-1-00000009, Dps6, 0x512, 472832, Token: Coin, 0, DEBUFF, 0
+		[ 96.68] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Coin] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472832, Token: Coin, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 96.68, 186.08
+	Token: Bomb on >%s<, type=target, spellId=472837, triggerDeltas = 219.88, 70.97, 62.84
+		[219.88] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Bomb] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472837, Token: Bomb, 0, DEBUFF, 0
+		[290.85] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Bomb] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472837, Token: Bomb, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 290.85, 62.84
+
+Special warnings:
+	Pay-Line! (%s), type=count, spellId=460181, triggerDeltas = 4.52, 42.75, 31.56, 40.20, 34.07, 31.64, 36.54, 31.60, 36.54, 32.82, 31.63, 31.59, 24.29, 31.59, 29.21
+		[  4.52] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+			 Triggered 15x, delta times: 4.52, 42.75, 31.56, 40.20, 34.07, 31.64, 36.54, 31.60, 36.54, 32.82, 31.63, 31.59, 24.29, 31.59, 29.21
+	%s damage - move away, type=gtfo, spellId=460576, triggerDeltas = 19.18, 48.62, 46.39, 14.45, 99.74, 110.15, 37.15, 13.69, 28.83, 64.44
+		[ 19.18] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+			 Triggered 7x, delta times: 19.18, 48.62, 160.58, 110.15, 37.15, 13.69, 28.83
+		[114.19] SPELL_PERIODIC_MISSED: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+			 Triggered 3x, delta times: 114.19, 14.45, 354.00
+	Overload! - interrupt >%s<! (%d), type=interruptcount, spellId=460582, triggerDeltas = 38.70, 59.64, 1.22, 62.03, 0.00, 60.90, 1.25, 60.78, 0.00, 21.90, 38.93, 1.22, 18.23
+		[ 38.70] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+			 Triggered 13x, delta times: 38.70, 59.64, 1.22, 62.03, 0.00, 60.90, 1.25, 60.78, 0.00, 21.90, 38.93, 1.22, 18.23
+	Spin To Win!! (%s), type=count, spellId=461060, triggerDeltas = 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+		[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+			 Triggered 7x, delta times: 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+	Cheat to Win!! (%s), type=count, spellId=465309, triggerDeltas = 404.91, 25.50, 26.76, 25.15
+		[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+			 Triggered 4x, delta times: 404.91, 25.50, 26.76, 25.15
+	Scattered Payout - switch targets, type=switch, spellId=465580, triggerDeltas = 457.43
+		[457.43] SPELL_CAST_START: [One-Armed Bandit: Scattered Payout] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465580, Scattered Payout, 0, 0
+	Burning Blast - dodge attack, type=dodge, spellId=472178, triggerDeltas = 386.90, 2.77, 2.11
+		[386.90] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-00000000F1, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
+			 Triggered 3x, delta times: 386.90, 2.77, 2.11
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/kick1r
+		[ 38.70] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+			 Triggered 11x, delta times: 38.70, 59.64, 1.22, 62.03, 0.00, 60.90, 1.25, 60.78, 0.00, 60.83, 1.22
+	VoicePack/kick2r
+		[306.42] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+			 Triggered 2x, delta times: 306.42, 58.38
+	VoicePack/killmob
+		[236.41] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464801, Reward: Shock and Bomb, 0, 0
+	VoicePack/phasechange
+		[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+			 Triggered 7x, delta times: 20.41, 60.86, 62.05, 62.11, 60.82, 62.06, 62.00
+		[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+			 Triggered 4x, delta times: 404.91, 25.50, 26.76, 25.15
+	VoicePack/ptwo
+		[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+	VoicePack/specialsoon
+		[  4.52] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+			 Triggered 15x, delta times: 4.52, 42.75, 31.56, 40.20, 34.07, 31.64, 36.54, 31.60, 36.54, 32.82, 31.63, 31.59, 24.29, 31.59, 29.21
+	VoicePack/targetchange
+		[457.43] SPELL_CAST_START: [One-Armed Bandit: Scattered Payout] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465580, Scattered Payout, 0, 0
+	VoicePack/watchfeet
+		[ 19.18] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+			 Triggered 7x, delta times: 19.18, 48.62, 160.58, 110.15, 37.15, 13.69, 28.83
+		[114.19] SPELL_PERIODIC_MISSED: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+			 Triggered 3x, delta times: 114.19, 14.45, 354.00
+	VoicePack/watchstep
+		[386.90] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-00000000F1, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
+			 Triggered 3x, delta times: 386.90, 2.77, 2.11
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761, SPELL_CAST_SUCCESS 465309, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
+		StartTimer: 4.1, Pay-Line (1)
+		StartTimer: 10.0, Foul Exhaust (1)
+		StartTimer: 15.3, The Big Hit (1)
+		StartTimer: 20.6, Spin To Win! (1)
+	[  4.52] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (1)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (2)
+	[  9.38] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (1)
+		StartTimer: 36.5, Foul Exhaust (2)
+	[ 15.51] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (2)
+	[ 19.18] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[ 20.41] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+		ShowSpecialWarning: Spin To Win!! (1)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 62.1, Spin To Win! (2)
+	[ 22.43] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StartTimer: 30.0, Spin To Win! ends
+	[ 22.44] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[ 22.44] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000D4, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000D4, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[ 22.45] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000F9, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000F9, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[ 33.85] SPELL_AURA_APPLIED: [Dps6->Dps6: Token: Coin] Player-1-00000009, Dps6, 0x512, Player-1-00000009, Dps6, 0x512, 472832, Token: Coin, 0, DEBUFF, 0
+		ShowAnnounce: Token: Coin on Dps6
+	[ 35.07] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (3)
+	[ 38.14] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Flame] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472828, Token: Flame, 0, DEBUFF, 0
+		ShowAnnounce: Token: Flame on Dps11
+	[ 38.70] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[ 41.13] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (2)
+		StartTimer: 36.5, Foul Exhaust (3)
+	[ 42.37] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000010, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[ 44.58] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Dps2") at 44.88 (+0.30)
+			ShowAnnounce: Withering Flames on Dps2
+	[ 47.27] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (2)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (3)
+	[ 51.67] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
+		ShowAnnounce: Reward: Flame and Coin (1)
+	[ 51.67] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StopTimer: Timer461060active
+	[ 54.90] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer2: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000005, Healer2, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Healer2") at 55.90 (+1.00)
+			ShowAnnounce: Crushed! on Healer2
+	[ 64.23] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (4)
+	[ 67.80] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[ 72.76] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (3)
+		StartTimer: 36.5, Foul Exhaust (4)
+	[ 78.83] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (3)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (4)
+	[ 81.27] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+		ShowSpecialWarning: Spin To Win!! (2)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 62.1, Spin To Win! (3)
+	[ 83.28] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StartTimer: 30.0, Spin To Win! ends
+	[ 83.32] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000025, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000025, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[ 83.32] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000D8, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000D8, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[ 83.32] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000FE, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000FE, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[ 84.93] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (5)
+	[ 96.68] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Coin] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472832, Token: Coin, 0, DEBUFF, 0
+		ShowAnnounce: Token: Coin on Dps4
+	[ 98.34] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-00000000FE, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[ 99.56] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-00000000FE, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[ 99.56] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000025, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[101.97] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps8: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000012, Dps8, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Dps8") at 102.27 (+0.30)
+			ShowAnnounce: Withering Flames on Dps8
+	[102.03] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000025, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[103.80] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Shock] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472783, Token: Shock, 0, DEBUFF, 0
+		ShowAnnounce: Token: Shock on Dps11
+	[104.44] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (4)
+		StartTimer: 36.5, Foul Exhaust (5)
+	[112.26] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Shock] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464809, Reward: Coin and Shock, 0, 0
+		ShowAnnounce: Reward: Coin and Shock (2)
+	[112.26] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StopTimer: Timer461060active
+	[114.19] SPELL_PERIODIC_MISSED: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[119.03] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (4)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (5)
+	[124.59] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Dps7") at 125.59 (+1.00)
+			ShowAnnounce: Crushed! on Dps7
+	[125.08] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (6)
+	[128.64] SPELL_PERIODIC_MISSED: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[136.02] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (5)
+		StartTimer: 36.5, Foul Exhaust (6)
+	[143.32] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+		ShowSpecialWarning: Spin To Win!! (3)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 62.1, Spin To Win! (4)
+	[145.33] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StartTimer: 30.0, Spin To Win! ends
+	[145.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000039, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000039, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[145.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000DC, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000DC, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[145.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000101, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000101, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[146.98] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (7)
+	[153.10] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (5)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (6)
+	[156.65] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Flame] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472828, Token: Flame, 0, DEBUFF, 0
+		ShowAnnounce: Token: Flame on Dps4
+	[157.49] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer6: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000019, Healer6, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Healer6") at 158.49 (+1.00)
+			ShowAnnounce: Crushed! on Healer6
+	[161.59] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000101, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[161.59] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000039, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[162.96] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Shock] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472783, Token: Shock, 0, DEBUFF, 0
+		ShowAnnounce: Token: Shock on Dps11
+	[166.46] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000039, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[166.47] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (8)
+	[168.56] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer6: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000019, Healer6, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Healer6") at 168.86 (+0.30)
+			ShowAnnounce: Withering Flames on Healer6
+	[174.02] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
+		ShowAnnounce: Reward: Shock and Flame (3)
+	[174.02] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StopTimer: Timer461060active
+	[178.64] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (6)
+		StartTimer: 36.5, Foul Exhaust (7)
+	[184.74] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (6)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (7)
+	[189.61] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (9)
+	[190.09] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps11: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000015, Dps11, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Dps11") at 191.09 (+1.00)
+			ShowAnnounce: Crushed! on Dps11
+	[205.43] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+		ShowSpecialWarning: Spin To Win!! (4)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 62.1, Spin To Win! (5)
+	[207.45] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StartTimer: 30.0, Spin To Win! ends
+	[207.49] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000053, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000053, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[207.49] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000E2, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000E2, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[207.49] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000104, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000104, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[209.11] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (10)
+	[215.18] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (7)
+		StartTimer: 36.5, Foul Exhaust (8)
+	[219.88] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Bomb] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472837, Token: Bomb, 0, DEBUFF, 0
+		ShowAnnounce: Token: Bomb on Dps4
+	[221.28] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (7)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (8)
+	[222.49] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000104, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[223.74] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000104, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[223.74] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000053, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[225.70] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Dps2") at 226.00 (+0.30)
+			ShowAnnounce: Withering Flames on Dps2
+	[225.80] SPELL_AURA_APPLIED: [Dps1->Dps1: Token: Shock] Player-1-00000001, Dps1, 0x512, Player-1-00000001, Dps1, 0x512, 472783, Token: Shock, 0, DEBUFF, 0
+		ShowAnnounce: Token: Shock on Dps1
+	[228.12] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps3: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000003, Dps3, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Dps3") at 229.12 (+1.00)
+			ShowAnnounce: Crushed! on Dps3
+	[228.38] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[228.54] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (11)
+	[229.76] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000053, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[232.74] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000005, Healer2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Healer2") at 233.04 (+0.30)
+			ShowAnnounce: Withering Flames on Healer2
+	[236.41] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464801, Reward: Shock and Bomb, 0, 0
+		ShowAnnounce: Reward: Shock and Bomb (4)
+		PlaySound: VoicePack/killmob
+	[236.41] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StopTimer: Timer461060active
+	[245.38] SPELL_AURA_APPLIED: [Dynamite Booty->Dps5: Explosive Gaze] Creature-0-1-2769-1-228502-000000010A, Dynamite Booty, 0xa48, Player-1-00000008, Dps5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps5") at 245.68 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps2, Dps7, Dps4, Dps5
+	[246.81] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (8)
+		StartTimer: 36.5, Foul Exhaust (9)
+	[249.42] SPELL_AURA_APPLIED: [Dynamite Booty->Healer5: Explosive Gaze] Creature-0-1-2769-1-228502-0000000064, Dynamite Booty, 0xa48, Player-1-00000018, Healer5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer5") at 249.72 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer5
+	[252.88] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (8)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (9)
+	[257.76] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (12)
+	[258.50] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer3: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000007, Healer3, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Healer3") at 259.50 (+1.00)
+			ShowAnnounce: Crushed! on Healer1, Healer3
+	[258.76] SPELL_AURA_APPLIED: [Dynamite Booty->Dps8: Explosive Gaze] Creature-0-1-2769-1-228502-000000011E, Dynamite Booty, 0xa48, Player-1-00000012, Dps8, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps8") at 259.06 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer3, Dps5, Dps7, Dps8
+	[263.62] SPELL_AURA_APPLIED: [Dynamite Booty->Dps9: Explosive Gaze] Creature-0-1-2769-1-228502-000000011E, Dynamite Booty, 0xa48, Player-1-00000013, Dps9, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps9") at 263.92 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps9
+	[266.25] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+		ShowSpecialWarning: Spin To Win!! (5)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 62.1, Spin To Win! (6)
+	[268.28] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StartTimer: 30.0, Spin To Win! ends
+	[268.29] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[268.29] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000E8, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000E8, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[268.29] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000010C, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000010C, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[272.14] SPELL_AURA_APPLIED: [Dynamite Booty->Dps2: Explosive Gaze] Creature-0-1-2769-1-228502-0000000120, Dynamite Booty, 0xa48, Player-1-00000002, Dps2, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps2") at 272.44 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps11, Dps8, Dps2
+	[273.35] SPELL_AURA_APPLIED: [Dynamite Booty->Healer1: Explosive Gaze] Creature-0-1-2769-1-228502-000000010D, Dynamite Booty, 0xa48, Player-1-00000004, Healer1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer1") at 273.65 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer1
+	[277.24] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (13)
+	[282.76] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Coin] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472832, Token: Coin, 0, DEBUFF, 0
+		ShowAnnounce: Token: Coin on Dps4
+	[283.36] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (9)
+		StartTimer: 36.5, Foul Exhaust (10)
+	[284.52] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-000000010C, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[284.52] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[285.01] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000010C, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[285.28] SPELL_AURA_APPLIED: [Dynamite Booty->Dps6: Explosive Gaze] Creature-0-1-2769-1-228502-000000006F, Dynamite Booty, 0xa48, Player-1-00000009, Dps6, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps6") at 285.58 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer5, Dps6
+	[286.38] SPELL_AURA_APPLIED: [Dynamite Booty->Dps4: Explosive Gaze] Creature-0-1-2769-1-228502-0000000120, Dynamite Booty, 0xa48, Player-1-00000006, Dps4, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps4") at 286.68 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps4
+	[286.78] SPELL_AURA_APPLIED: [Dynamite Booty->Dps13: Explosive Gaze] Creature-0-1-2769-1-228502-000000010D, Dynamite Booty, 0xa48, Player-1-00000020, Dps13, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps13") at 287.08 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps13
+	[287.30] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps5: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000008, Dps5, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Dps5") at 287.60 (+0.30)
+			ShowAnnounce: Withering Flames on Dps5
+	[289.42] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (9)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (10)
+	[290.61] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[290.85] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Bomb] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472837, Token: Bomb, 0, DEBUFF, 0
+		ShowAnnounce: Token: Bomb on Dps11
+	[293.58] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer5: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000018, Healer5, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Healer5") at 293.88 (+0.30)
+			ShowAnnounce: Withering Flames on Healer5
+	[296.45] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps8: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000012, Dps8, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Dps8") at 297.45 (+1.00)
+			ShowAnnounce: Crushed! on PlayerName, Dps13, Dps4, Dps10, Dps8
+	[297.25] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
+		ShowAnnounce: Reward: Coin and Bomb (5)
+	[297.25] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StopTimer: Timer461060active
+	[298.17] SPELL_AURA_APPLIED: [Dynamite Booty->Healer6: Explosive Gaze] Creature-0-1-2769-1-228502-00000000E9, Dynamite Booty, 0xa48, Player-1-00000019, Healer6, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer6") at 298.47 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer6
+	[299.79] SPELL_AURA_APPLIED: [Dynamite Booty->Dps13: Explosive Gaze] Creature-0-1-2769-1-228502-000000010D, Dynamite Booty, 0xa48, Player-1-00000020, Dps13, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps13") at 300.09 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps13
+	[303.78] SPELL_AURA_APPLIED: [Premium Currency Booty->Healer3: Explosive Gaze] Creature-0-1-2769-1-231027-0000000082, Premium Currency Booty, 0xa48, Player-1-00000007, Healer3, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer3") at 304.08 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer5, Dps2, Dps1, Dps8, Healer3
+	[306.42] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (2)
+		PlaySound: VoicePack/kick2r
+	[308.86] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000006E, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[310.11] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (14)
+	[310.86] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps10: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000014, Dps10, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Dps10") at 311.16 (+0.30)
+			ShowAnnounce: Withering Flames on Dps10
+	[316.18] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (10)
+		StartTimer: 36.5, Foul Exhaust (11)
+	[316.81] SPELL_AURA_APPLIED: [Premium Currency Booty->Dps1: Explosive Gaze] Creature-0-1-2769-1-231027-0000000082, Premium Currency Booty, 0xa48, Player-1-00000001, Dps1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps1") at 317.11 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps1
+	[322.24] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (10)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (11)
+	[328.31] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+		ShowSpecialWarning: Spin To Win!! (6)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 62.1, Spin To Win! (7)
+	[330.33] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StartTimer: 30.0, Spin To Win! ends
+	[330.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[330.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-00000000EE, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-00000000EE, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[330.34] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000010F, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000010F, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
+		StartTimer: 13.8, Withering Flames
+		StartTimer: 15.0, Overload!
+	[331.95] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (15)
+	[334.20] SPELL_AURA_APPLIED: [Dynamite Booty->Dps1: Explosive Gaze] Creature-0-1-2769-1-228502-0000000110, Dynamite Booty, 0xa48, Player-1-00000001, Dps1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps1") at 334.50 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer5, Healer6, Dps7, Dps1
+	[338.53] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[344.92] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[345.35] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-000000010F, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[346.57] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
+		PlaySound: VoicePack/kick1r
+	[346.77] SPELL_AURA_APPLIED: [Dps4->Dps4: Token: Flame] Player-1-00000006, Dps4, 0x512, Player-1-00000006, Dps4, 0x512, 472828, Token: Flame, 0, DEBUFF, 0
+		ShowAnnounce: Token: Flame on Dps4
+	[347.26] SPELL_AURA_APPLIED: [Dynamite Booty->Healer1: Explosive Gaze] Creature-0-1-2769-1-228502-0000000110, Dynamite Booty, 0xa48, Player-1-00000004, Healer1, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer1") at 347.56 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps9, Healer1
+	[347.47] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer5: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000018, Healer5, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Healer5") at 347.77 (+0.30)
+			ShowAnnounce: Withering Flames on Healer5
+	[347.78] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000010F, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[347.78] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (11)
+		StartTimer: 36.5, Foul Exhaust (12)
+	[349.76] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Dps2") at 350.06 (+0.30)
+			ShowAnnounce: Withering Flames on Dps2
+	[353.69] SPELL_AURA_APPLIED: [Dps11->Dps11: Token: Bomb] Player-1-00000015, Dps11, 0x512, Player-1-00000015, Dps11, 0x512, 472837, Token: Bomb, 0, DEBUFF, 0
+		ShowAnnounce: Token: Bomb on Dps11
+	[353.87] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (11)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (12)
+	[354.43] SPELL_AURA_APPLIED: [Dynamite Booty->Dps4: Explosive Gaze] Creature-0-1-2769-1-228502-00000000EF, Dynamite Booty, 0xa48, Player-1-00000006, Dps4, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps4") at 354.73 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps4
+	[355.06] SPELL_AURA_APPLIED: [Dynamite Booty->Dps6: Explosive Gaze] Creature-0-1-2769-1-228502-0000000122, Dynamite Booty, 0xa48, Player-1-00000009, Dps6, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps6") at 355.36 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps6
+	[356.68] SPELL_AURA_APPLIED: [Dynamite Booty->Dps11: Explosive Gaze] Creature-0-1-2769-1-228502-000000008B, Dynamite Booty, 0xa48, Player-1-00000015, Dps11, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps11") at 356.98 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps11
+	[359.48] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464804, Reward: Flame and Bomb, 0, 0
+		ShowAnnounce: Reward: Flame and Bomb (6)
+	[359.48] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StopTimer: Timer461060active
+	[360.26] SPELL_AURA_APPLIED: [Dynamite Booty->Healer2: Explosive Gaze] Creature-0-1-2769-1-228502-0000000110, Dynamite Booty, 0xa48, Player-1-00000005, Healer2, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer2") at 360.56 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer2
+	[362.11] SPELL_AURA_APPLIED: [Dynamite Booty->Dps10: Explosive Gaze] Creature-0-1-2769-1-228502-00000000EF, Dynamite Booty, 0xa48, Player-1-00000014, Dps10, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps10") at 362.41 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps10
+	[363.58] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
+		StartTimer: 18.2, Withering Flames
+	[364.80] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-000000008A, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
+		StartTimer: 18.2, Overload!
+		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (2)
+		PlaySound: VoicePack/kick2r
+	[365.81] SPELL_AURA_APPLIED: [Fiery Dynamite Booty->Healer3: Explosive Gaze] Creature-0-1-2769-1-231028-0000000099, Fiery Dynamite Booty, 0xa48, Player-1-00000007, Healer3, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer3") at 366.11 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps11, Dps2, Healer3
+	[366.39] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps2: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000002, Dps2, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
+		ScheduleTask: announce471930target:CombinedShow("Dps2") at 366.69 (+0.30)
+			ShowAnnounce: Withering Flames on Dps2
+	[372.06] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (16)
+	[375.68] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[378.81] SPELL_AURA_APPLIED: [Fiery Dynamite Booty->Dps4: Explosive Gaze] Creature-0-1-2769-1-231028-0000000112, Fiery Dynamite Booty, 0xa48, Player-1-00000006, Dps4, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Dps4") at 379.11 (+0.30)
+			ShowAnnounce: Explosive Gaze on Dps7, Dps4
+	[379.38] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (12)
+		StartTimer: 36.5, Foul Exhaust (13)
+	[385.46] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (12)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 36.5, Pay-Line (13)
+	[386.90] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-00000000F1, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
+		ShowSpecialWarning: Burning Blast - dodge attack
+		PlaySound: VoicePack/watchstep
+	[387.02] SPELL_AURA_APPLIED: [Fiery Dynamite Booty->Healer5: Explosive Gaze] Creature-0-1-2769-1-231028-0000000112, Fiery Dynamite Booty, 0xa48, Player-1-00000018, Healer5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
+		ScheduleTask: announce465009target:CombinedShow("Healer5") at 387.32 (+0.30)
+			ShowAnnounce: Explosive Gaze on Healer5
+	[389.37] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_DAMAGE at 390.37
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[389.67] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-0000000099, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
+		ShowSpecialWarning: Burning Blast - dodge attack
+		PlaySound: VoicePack/watchstep
+	[390.31] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
+		ShowSpecialWarning: Spin To Win!! (7)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 62.1, Spin To Win! (8)
+	[391.78] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-0000000112, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
+		ShowSpecialWarning: Burning Blast - dodge attack
+		PlaySound: VoicePack/watchstep
+	[392.33] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StartTimer: 30.0, Spin To Win! ends
+	[392.56] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
+		StopTimer: Timer461060active
+	[399.33] SPELL_CAST_START: [One-Armed Bandit: Rig the Game!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465761, Rig the Game!, 0, 0
+		ShowAnnounce: Stage 2
+		PlaySound: VoicePack/ptwo
+		StopTimer: Timer461060varcount\t8
+		StopTimer: Timer460181varcount\t13
+		StopTimer: Timer469993varcount\t13
+		StopTimer: Timer460472varcount\t16
+		StartTimer: 4.2, Foul Exhaust (1)
+		StartTimer: 5.5, Cheat to Win! (1)
+		StartTimer: 11.0, Pay-Line (1)
+		StartTimer: 15.2, The Big Hit (1)
+	[403.68] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (1)
+		StartTimer: 29.1, Foul Exhaust (2)
+	[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (1)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 26.7, Cheat to Win! (2)
+	[409.75] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (1)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 29.1, Pay-Line (2)
+	[414.60] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (2)
+	[417.27] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps13: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000020, Dps13, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Dps13") at 418.27 (+1.00)
+			ShowAnnounce: Crushed! on Dps4, Dps1, Dps13
+	[418.20] SPELL_PERIODIC_DAMAGE: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_DAMAGE at 419.19
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[429.20] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (2)
+		StartTimer: 29.1, Foul Exhaust (3)
+	[430.41] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (2)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 26.7, Cheat to Win! (3)
+	[430.70] SPELL_CAST_START: [One-Armed Bandit: Hot Hot Heat] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465322, Hot Hot Heat, 0, 0
+		ShowAnnounce: Hot Hot Heat incoming debuff
+	[435.33] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (3)
+	[441.34] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (2)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 29.1, Pay-Line (3)
+	[449.84] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (4)
+	[455.95] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
+		ShowAnnounce: Foul Exhaust (3)
+		StartTimer: 29.1, Foul Exhaust (4)
+	[457.17] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (3)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 26.7, Cheat to Win! (4)
+	[457.43] SPELL_CAST_START: [One-Armed Bandit: Scattered Payout] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465580, Scattered Payout, 0, 0
+		ShowSpecialWarning: Scattered Payout - switch targets
+		PlaySound: VoicePack/targetchange
+	[464.46] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (5)
+	[470.55] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
+		ShowSpecialWarning: Pay-Line! (3)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 29.1, Pay-Line (4)
+	[475.70] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("Dps7") at 476.70 (+1.00)
+			ShowAnnounce: Crushed! on Dps7
+	[479.08] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
+		StartTimer: 40.5, The Big Hit (6)
+	[482.32] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
+		ShowSpecialWarning: Cheat to Win!! (4)
+		PlaySound: VoicePack/phasechange
+		StartTimer: 26.7, Cheat to Win! (5)
+	[482.58] SPELL_CAST_START: [One-Armed Bandit: Explosive Jackpot] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465587, Explosive Jackpot, 0, 0
+		ShowAnnounce: Casting Explosive Jackpot: -nan sec
+		StartTimer: 30.0, Explosive Jackpot
+	[482.64] SPELL_PERIODIC_MISSED: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460576, Shocking Field, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Shocking Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[492.72] ENCOUNTER_END: 3014, One-Armed Bandit, 15, 20, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927
