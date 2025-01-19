@@ -1,0 +1,327 @@
+Test report differs from test report stored in the DBM test mod.
+
+Test: TWW/Undermine/MugZeeHeadsofSecurity/Heroic/Wipe
+Mod:  DBM-Raids-WarWithin/2645
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1214623 (Enraged)
+	Unused event registration: SPELL_AURA_APPLIED 1215898 (Static Charge)
+	Unused event registration: SPELL_AURA_APPLIED 1222408 (Head Honcho: Mug'Zee)
+	Unused event registration: SPELL_AURA_APPLIED 1222948 (Electro-Charged Shield)
+	Unused event registration: SPELL_AURA_APPLIED 466476 (Frostshatter Boots)
+	Unused event registration: SPELL_AURA_APPLIED 469369 (Spray and Pray)
+	Unused event registration: SPELL_AURA_APPLIED 469391 (Perforating Wound)
+	Unused event registration: SPELL_AURA_APPLIED 469490 (Double Whammy Shot)
+	Unused event registration: SPELL_AURA_APPLIED 471419 (Bulletstorm)
+	Unused event registration: SPELL_AURA_APPLIED 472631 (Earthshaker Gaol)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 469391 (Perforating Wound)
+	Unused event registration: SPELL_AURA_REMOVED 1215898 (Static Charge)
+	Unused event registration: SPELL_AURA_REMOVED 1222408 (Head Honcho: Mug'Zee)
+	Unused event registration: SPELL_AURA_REMOVED 1222948 (Electro-Charged Shield)
+	Unused event registration: SPELL_AURA_REMOVED 466459 (Head Honcho: Mug)
+	Unused event registration: SPELL_AURA_REMOVED 466460 (Head Honcho: Zee)
+	Unused event registration: SPELL_AURA_REMOVED 467202 (Golden Drip)
+	Unused event registration: SPELL_AURA_REMOVED 467380 (Goblin-guided Rocket)
+	Unused event registration: SPELL_AURA_REMOVED 469369 (Spray and Pray)
+	Unused event registration: SPELL_AURA_REMOVED 469490 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_START 1215953 (Static Charge)
+	Unused event registration: SPELL_CAST_START 1216142 (Double-Minded Fury)
+	Unused event registration: SPELL_CAST_START 1217791 (Electrocution Matrix)
+	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
+	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
+	Unused event registration: SPELL_CAST_START 466470 (Frostshatter Boots)
+	Unused event registration: SPELL_CAST_START 466518 (Molten Gold Knuckles)
+	Unused event registration: SPELL_CAST_START 466545 (Spray and Pray)
+	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_START 474461 (Earthshaker Gaol)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 470089 (Molten Gold Pool)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 472057 (Hot Mess)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 474554 (Shaken Earth)
+	Unused event registration: SPELL_PERIODIC_MISSED 470089 (Molten Gold Pool)
+	Unused event registration: SPELL_PERIODIC_MISSED 472057 (Hot Mess)
+	Unused event registration: SPELL_PERIODIC_MISSED 474554 (Shaken Earth)
+	Unused event registration: UNIT_DIED
+	Announce for spell ID 466539 (Unstable Crawler Mines) is triggered by event SPELL_CAST_START 472458 (Unstable Crawler Mines)
+	Announce for spell ID 1215591 (Faulty Wiring) is triggered by event SPELL_AURA_APPLIED 1215595 (Faulty Wiring)
+
+Unused objects:
+	[Announce] Stage 2, type=stage, spellId=<none>
+	[Announce] Spray and Pray on >%s<, type=target, spellId=466545
+	[Announce] Enraged on >%s<, type=target, spellId=1214623
+	[Announce] Head Honcho: Mug'Zee on >%s<, type=target, spellId=1222408
+	[Announce] Electro-Charged Shield on >%s<, type=target, spellId=1222948
+	[Special Warning] Frostshatter Boots on you, type=you, spellId=466476
+	[Special Warning] Molten Gold Knuckles - defensive, type=defensive, spellId=466518
+	[Special Warning] Spray and Pray - move away from others, type=moveaway, spellId=466545
+	[Special Warning] Golden Drip on >%s< - taunt now, type=taunt, spellId=467202
+	[Special Warning] Goblin-guided Rocket - move to >%s<, type=moveto, spellId=467380
+	[Special Warning] Double Whammy Shot on >%s< - taunt now, type=taunt, spellId=469490
+	[Special Warning] Double Whammy Shot - defensive, type=defensive, spellId=469491
+	[Special Warning] Double Whammy Shot on you, type=you, spellId=469491
+	[Special Warning] Bulletstorm (%s) - dodge attack, type=dodgecount, spellId=471419
+	[Special Warning] Earthshaker Gaol on you, type=you, spellId=474461
+	[Special Warning] %s damage - move away, type=gtfo, spellId=474554
+	[Special Warning] Static Charge - move to >%s<, type=moveto, spellId=1215953
+	[Special Warning] Static Charge on you, type=you, spellId=1215953
+	[Special Warning] Double-Minded Fury!, type=spell, spellId=1216142
+	[Special Warning] Electrocution Matrix - dodge attack, type=dodge, spellId=1216495
+	[Timer] Frostshatter Boots AI, time=20.50, type=ai, spellId=466476
+	[Timer] Stormfury Finger Gun AI, time=20.50, type=ai, spellId=466509
+	[Timer] Molten Gold Knuckles AI, time=20.50, type=ai, spellId=466518
+	[Timer] Unstable Crawler Mines AI, time=20.50, type=ai, spellId=466539
+	[Timer] Spray and Pray AI, time=20.50, type=ai, spellId=466545
+	[Timer] Goblin-guided Rocket AI, time=20.50, type=ai, spellId=467380
+	[Timer] Double Whammy Shot AI, time=20.50, type=ai, spellId=469491
+	[Timer] Bulletstorm AI, time=20.50, type=ai, spellId=471419
+	[Timer] Earthshaker Gaol AI, time=20.50, type=ai, spellId=474461
+	[Timer] Static Charge AI, time=20.50, type=ai, spellId=1215953
+	[Yell] %d, type=shortfade, spellId=466545
+	[Yell] Spray and Pray on PlayerName, type=yell, spellId=466545
+	[Yell] %d, type=shortfade, spellId=467380
+	[Yell] Goblin-guided Rocket on PlayerName, type=yell, spellId=467380
+	[Yell] %d, type=shortfade, spellId=469491
+	[Yell] Double Whammy Shot on PlayerName, type=yell, spellId=469491
+	[Yell] %d, type=shortfade, spellId=1215953
+	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
+
+Timers:
+	None
+
+Announces:
+	Moxie on >%s< (%d), type=stack, spellId=466385, triggerDeltas = 50.05, 49.97
+		[ 50.05] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
+			 Triggered 2x, delta times: 50.05, 49.97
+	Head Honcho: Mug on >%s<, type=target, spellId=466459, triggerDeltas = 120.64
+		[120.64] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Head Honcho: Mug] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466459, Head Honcho: Mug, 0, BUFF, 0
+	Head Honcho: Zee on >%s<, type=target, spellId=466460, triggerDeltas = 73.17
+		[ 73.17] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Head Honcho: Zee] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466460, Head Honcho: Zee, 0, BUFF, 0
+	Unstable Crawler Mines (%s), type=count, spellId=466539, triggerDeltas = 86.15
+		[ 86.15] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
+	Solid Gold on >%s<, type=target, spellId=467225, triggerDeltas = 32.58
+		[ 32.58] SPELL_AURA_APPLIED: [Mug'Zee->Tank1: Solid Gold] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Tank1, 0x511, 467225, Solid Gold, 0, DEBUFF, 0
+	Casting Surging Arc: -nan sec, type=cast, spellId=1214991, triggerDeltas = 78.27, 0.81, 1.85, 1.41, 1.19, 1.62, 2.03, 3.20, 4.06, 3.26, 3.22, 10.85, 3.08
+		[ 78.27] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+			 Triggered 13x, delta times: 78.27, 0.81, 1.85, 1.41, 1.19, 1.62, 2.03, 3.20, 4.06, 3.26, 3.22, 10.85, 3.08
+	Faulty Wiring on >%s<, type=target, spellId=1215591, triggerDeltas = 87.57, 16.17
+		[ 87.57] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, 1215595, Faulty Wiring, 0, BUFF, 0
+			 Triggered 2x, delta times: 87.57, 16.17
+
+Special warnings:
+	Stormfury Finger Gun (%s) - dodge attack, type=dodgecount, spellId=466509, triggerDeltas = 36.05, 28.99
+		[ 36.05] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
+			 Triggered 2x, delta times: 36.05, 28.99
+	Golden Drip - keep moving, type=keepmove, spellId=467202, triggerDeltas = 22.56
+		[ 22.56] SPELL_AURA_APPLIED: [Mug'Zee->Tank1: Golden Drip] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Tank1, 0x511, 467202, Golden Drip, 0, DEBUFF, 0
+	Elemental Carnage!, type=spell, spellId=468658, triggerDeltas = 0.05
+		[  0.05] SPELL_CAST_SUCCESS: [Mug'Zee: Elemental Carnage] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468658, Elemental Carnage, 0, 0
+	Uncontrolled Destruction!, type=spell, spellId=468694, triggerDeltas = 73.18
+		[ 73.18] SPELL_CAST_SUCCESS: [Mug'Zee: Uncontrolled Destruction] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468694, Uncontrolled Destruction, 0, 0
+	Gaol Break!, type=spell, spellId=470910, triggerDeltas = 28.01, 4.85, 30.79
+		[ 28.01] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+			 Triggered 3x, delta times: 28.01, 4.85, 30.79
+	Shakedown - dodge attack, type=dodge, spellId=472659, triggerDeltas = 17.33, 0.00, 3.02, 0.00, 3.01, 0.00, 3.05, 0.01, 2.97, 3.03, 19.94, 0.00, 3.01, 0.03, 2.99, 0.02, 2.99, 0.03, 3.01, 3.04, 3.02, 3.03, 3.01, 3.02, 3.00, 3.02, 3.03, 16.01, 3.03
+		[ 17.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+			 Triggered 29x, delta times: 17.33, 0.00, 3.02, 0.00, 3.01, 0.00, 3.05, 0.01, 2.97, 3.03, 19.94, 0.00, 3.01, 0.03, 2.99, 0.02, 2.99, 0.03, 3.01, 3.04, 3.02, 3.03, 3.01, 3.02, 3.00, 3.02, 3.03, 16.01, 3.03
+	Pay Respects - interrupt >%s<! (%d), type=interruptcount, spellId=472782, triggerDeltas = 91.62, 17.16, 13.35
+		[ 91.62] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
+			 Triggered 3x, delta times: 91.62, 17.16, 13.35
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/aesoon
+		[  0.05] SPELL_CAST_SUCCESS: [Mug'Zee: Elemental Carnage] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468658, Elemental Carnage, 0, 0
+		[ 73.18] SPELL_CAST_SUCCESS: [Mug'Zee: Uncontrolled Destruction] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468694, Uncontrolled Destruction, 0, 0
+	VoicePack/carefly
+		[ 28.01] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+			 Triggered 3x, delta times: 28.01, 4.85, 30.79
+	VoicePack/keepmove
+		[ 22.56] SPELL_AURA_APPLIED: [Mug'Zee->Tank1: Golden Drip] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Tank1, 0x511, 467202, Golden Drip, 0, DEBUFF, 0
+	VoicePack/kick1r
+		[ 91.62] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
+	VoicePack/kick2r
+		[108.78] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
+	VoicePack/kick3r
+		[122.13] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
+	VoicePack/shareone
+		[100.20] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps3: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-000000002E, Goblin Guided Rocket, 0xa48, Player-1-00000003, Dps3, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 15, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 467379 466545 1221299 1214991 469491 1217791 1215953 1216142, SPELL_CAST_SUCCESS 468658 468694 467380, SPELL_AURA_APPLIED 466459 466460 1222408 472631 1214623 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 1222408 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
+	[  0.05] SPELL_CAST_SUCCESS: [Mug'Zee: Elemental Carnage] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468658, Elemental Carnage, 0, 0
+		ShowSpecialWarning: Elemental Carnage!
+		PlaySound: VoicePack/aesoon
+	[ 17.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 17.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 20.35] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 20.35] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 22.56] SPELL_AURA_APPLIED: [Mug'Zee->Tank1: Golden Drip] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Tank1, 0x511, 467202, Golden Drip, 0, DEBUFF, 0
+		ShowSpecialWarning: Golden Drip - keep moving
+		PlaySound: VoicePack/keepmove
+	[ 23.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 23.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 26.41] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 26.42] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 28.01] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		ShowSpecialWarning: Gaol Break!
+		PlaySound: VoicePack/carefly
+	[ 29.39] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 32.42] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 32.58] SPELL_AURA_APPLIED: [Mug'Zee->Tank1: Solid Gold] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Tank1, 0x511, 467225, Solid Gold, 0, DEBUFF, 0
+		ShowAnnounce: Solid Gold on PlayerName
+	[ 32.86] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		ShowSpecialWarning: Gaol Break!
+		PlaySound: VoicePack/carefly
+	[ 36.05] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
+		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 50.05] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
+		ShowAnnounce: Moxie on Mug'Zee (10)
+	[ 52.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000019, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 52.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 55.37] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000019, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 55.40] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 58.39] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000019, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 58.41] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 61.40] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000019, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 61.43] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 63.65] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-0000000019, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		ShowSpecialWarning: Gaol Break!
+		PlaySound: VoicePack/carefly
+	[ 64.44] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 65.04] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
+		ShowSpecialWarning: Stormfury Finger Gun (2) - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 67.48] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 70.50] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 73.17] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Head Honcho: Zee] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466460, Head Honcho: Zee, 0, BUFF, 0
+		ShowAnnounce: Head Honcho: Zee on Mug'Zee
+	[ 73.18] SPELL_CAST_SUCCESS: [Mug'Zee: Uncontrolled Destruction] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468694, Uncontrolled Destruction, 0, 0
+		ShowSpecialWarning: Uncontrolled Destruction!
+		PlaySound: VoicePack/aesoon
+	[ 73.53] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 76.54] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 78.27] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 79.08] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 79.56] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 80.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 82.34] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 82.56] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 83.53] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 85.15] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 85.58] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 86.15] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
+		ShowAnnounce: Unstable Crawler Mines (1)
+	[ 87.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 87.57] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, 1215595, Faulty Wiring, 0, BUFF, 0
+		ShowAnnounce: Faulty Wiring on Mk II Electro Shocker
+	[ 88.61] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[ 90.38] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 91.62] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
+		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
+		PlaySound: VoicePack/kick1r
+	[ 94.44] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 97.70] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[ 98.18] SPELL_CAST_START: [Mug'Zee: Goblin-guided Rocket] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 467379, Goblin-guided Rocket, 0, 0
+		AntiSpam: 1
+			Filtered: 1x SPELL_CAST_SUCCESS at 100.19
+	[100.02] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
+		ShowAnnounce: Moxie on Mug'Zee (10)
+	[100.20] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps3: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-000000002E, Goblin Guided Rocket, 0xa48, Player-1-00000003, Dps3, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
+		PlaySound: VoicePack/shareone
+	[100.92] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[103.74] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, 1215595, Faulty Wiring, 0, BUFF, 0
+		ShowAnnounce: Faulty Wiring on Mk II Electro Shocker
+	[104.62] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[107.65] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		ShowSpecialWarning: Shakedown - dodge attack
+		PlaySound: DBM/SpecialWarningSound2
+	[108.78] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
+		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (2)
+		PlaySound: VoicePack/kick2r
+	[111.77] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[114.85] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
+		ShowAnnounce: Casting Surging Arc: -nan sec
+	[120.64] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Head Honcho: Mug] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466459, Head Honcho: Mug, 0, BUFF, 0
+		ShowAnnounce: Head Honcho: Mug on Mug'Zee
+	[122.13] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
+		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (3)
+		PlaySound: VoicePack/kick3r
+	[127.92] ENCOUNTER_END: 3015, Mug'Zee, Heads of Security, 15, 20, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 466459 466460 1222408 467202 467380 469369 1222948 469490 1215898
