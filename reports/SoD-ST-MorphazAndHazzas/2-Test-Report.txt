@@ -6,8 +6,6 @@ Mod:  DBM-Raids-Vanilla/MorphazandHazzasSoD
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 446487 (Corrupted Breath)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 446487 (Corrupted Breath)
-	Timer Corrupted Breath, time=11.30, type=cd, spellId=446487 (time=10.60, variance=0.00) got refreshed early with 0.87s remaining
-		Refreshed by: [  9.70] SPELL_CAST_SUCCESS: [Hazzas: Corrupted Breath] Creature-0-5208-109-4570-221943-00003BC782, Hazzas, 0xa48, "", nil, 0x0, 446487, Corrupted Breath, 0, 0
 
 Unused objects:
 	[Announce] Corrupted Breath on >%s< (%d), type=stack, spellId=446487
@@ -53,7 +51,7 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 2958, Morphaz and Hazzas, 215, 20, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 446489 446468 446661 445235 449422 446144, SPELL_CAST_SUCCESS 446487, SPELL_AURA_APPLIED 446487, SPELL_AURA_APPLIED_DOSE 446487
-		StartTimer: 10.6, Corrupted Breath
+		StartTimer: 9.7, Corrupted Breath
 	[  8.09] SPELL_CAST_START: [Hazzas: Backfire] Creature-0-5208-109-4570-221943-00003BC782, Hazzas, 0xa48, "", nil, 0x0, 446489, Backfire, 0, 0
 		ShowSpecialWarning: Backfire! (1)
 		PlaySound: VoicePack/carefly
