@@ -1,10 +1,30 @@
-Test report exactly matches test report stored in the DBM test mod.
+Test report differs from test report stored in the DBM test mod.
 
 Test: SoD/ST/AvatarOfHakkar/2
 Mod:  DBM-Raids-Vanilla/AvatarofHakkarSoD
 
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 443953 (Bubbling Blood)
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.07s remaining
+		Refreshed by: [123.50] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.23s remaining
+		Refreshed by: [196.38] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.40s remaining
+		Refreshed by: [ 83.22] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Blood Nova (%s), time=8.00, type=cdcount, spellId=444050 (time=8.00, variance=0.00) got refreshed early with 1.47s remaining
+		Refreshed by: [ 76.61] SPELL_CAST_START: [Avatar of Hakkar: Blood Nova] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444050, Blood Nova, 0, 0
+	Timer Bubbling Blood, time=9.70, type=cd, spellId=443940 (time=20.60, variance=0.00) got refreshed early with 3.87s remaining
+		Refreshed by: [ 16.73] SPELL_CAST_START: [Hakkari Bloodkeeper: Bubbling Blood] Creature-0-5208-109-4570-221396-00003BDC57, Hakkari Bloodkeeper, 0xa48, "", nil, 0x0, 443940, Bubbling Blood, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 0.23s remaining
+		Refreshed by: [136.18] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 0.67s remaining
+		Refreshed by: [230.26] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 0.90s remaining
+		Refreshed by: [198.61] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Curse of Tongues (%s), time=32.30, type=cdcount, spellId=444046 (time=32.30, variance=0.00) got refreshed early with 1.27s remaining
+		Refreshed by: [167.20] SPELL_CAST_START: [Avatar of Hakkar: Curse of Tongues] Vehicle-0-5208-109-4570-221394-00003BDC8E, Avatar of Hakkar, 0xa48, "", nil, 0x0, 444046, Curse of Tongues, 0, 0
+	Timer Spirit Chains, time=16.20, type=cd, spellId=443975 (time=25.50, variance=0.00) got refreshed early with 3.90s remaining
+		Refreshed by: [ 21.58] SPELL_CAST_SUCCESS: [Hakkari Bloodkeeper: Spirit Chains] Creature-0-5208-109-4570-221396-00003BDC57, Hakkari Bloodkeeper, 0xa48, "", nil, 0x0, 443964, Spirit Chains, 0, 0
 
 Unused objects:
 	[Special Warning] %s damage - move away, type=gtfo, spellId=443953
