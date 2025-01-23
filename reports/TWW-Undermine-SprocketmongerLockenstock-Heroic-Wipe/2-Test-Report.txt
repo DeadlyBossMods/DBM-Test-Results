@@ -1,0 +1,546 @@
+Test report differs from test report stored in the DBM test mod.
+
+Test: TWW/Undermine/SprocketmongerLockenstock/Heroic/Wipe
+Mod:  DBM-Raids-WarWithin/2653
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1216509 (Screw Up)
+	Unused event registration: SPELL_AURA_APPLIED 1216911 (Posi-Polarization)
+	Unused event registration: SPELL_AURA_APPLIED 1216934 (Nega-Polarization)
+	Unused event registration: SPELL_AURA_APPLIED 465917 (Gravi-Gunk)
+	Unused event registration: SPELL_AURA_REMOVED 1214878 (Pyro Party Pack)
+	Unused event registration: SPELL_AURA_REMOVED 1216509 (Screw Up)
+	Unused event registration: SPELL_AURA_REMOVED 1216911 (Posi-Polarization)
+	Unused event registration: SPELL_AURA_REMOVED 1216934 (Nega-Polarization)
+	Unused event registration: SPELL_AURA_REMOVED 465917 (Gravi-Gunk)
+	Unused event registration: SPELL_CAST_START 1215858 (Mega Magnetize)
+	Unused event registration: SPELL_CAST_SUCCESS 1216802 (Polarization Generator)
+	Unused event registration: SPELL_CAST_SUCCESS 1216887 (Polarization Generator)
+	Timer for spell ID 465232 (Sonic Ba-Boom) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 466765 (Beta Launch) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 473276 (Activate Inventions!) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	SpecialWarning for spell ID 1214872 (Pyro Party Pack) is triggered by event SPELL_AURA_APPLIED 1214878 (Pyro Party Pack)
+	Timer for spell ID 1214872 (Pyro Party Pack) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Yell for spell ID 1214872 (Pyro Party Pack) is triggered by event SPELL_AURA_APPLIED 1214878 (Pyro Party Pack)
+	Timer for spell ID 1215218 (Bleeding Edge) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
+	Timer for spell ID 1216508 (Screw Up) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 1217231 (Foot-Blasters) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 1218418 (Wire Transfer) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
+
+Unused objects:
+	[Announce] Screw Up faded, type=fades, spellId=1216508
+	[Announce] Screw Up on >%s<, type=target, spellId=1216508
+	[Announce] Polarization Generator incoming debuff (%s), type=incomingcount, spellId=1216802
+	[Announce] Posi-Polarization faded, type=fades, spellId=1216911
+	[Announce] Nega-Polarization faded, type=fades, spellId=1216934
+	[Special Warning] Pyro Party Pack - defensive, type=defensive, spellId=1214872
+	[Special Warning] Pyro Party Pack on >%s< - taunt now, type=taunt, spellId=1214872
+	[Special Warning] Mega Magnetize - dodge attack, type=dodge, spellId=1215858
+	[Special Warning] Screw Up - run away, type=run, spellId=1216508
+	[Special Warning] Posi-Polarization on you, type=you, spellId=1216911
+	[Special Warning] Nega-Polarization on you, type=you, spellId=1216934
+	[Timer] Polarization Generator AI, time=97.30, type=ai, spellId=1216802
+	[Yell] %d, type=shortfade, spellId=1214872
+	[Yell] Screw Up on PlayerName, type=yell, spellId=1216508
+	[Yell] {rt%%1$d}, type=icontarget, spellId=1216802
+
+Timers:
+	Sonic Ba-Boom (%s), time=97.30, type=nextcount, spellId=465232, triggerDeltas = 0.00, 6.02, 27.95, 111.72, 6.06, 27.94, 111.04, 6.02, 28.01
+		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
+		[  6.02] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+			 Triggered 6x, delta times: 6.02, 27.95, 117.78, 27.94, 117.06, 28.01
+		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+			 Triggered 2x, delta times: 145.69, 145.04
+	Beta Launch (%s), time=97.30, type=nextcount, spellId=466765, triggerDeltas = 0.00, 145.69, 145.04
+		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
+		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+			 Triggered 2x, delta times: 145.69, 145.04
+	Activate Inventions! (%s), time=30.00, type=nextcount, spellId=473276, triggerDeltas = 0.00, 30.00, 30.00, 85.69, 30.02, 30.01, 85.01, 30.05, 29.97
+		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
+		[ 30.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+			 Triggered 6x, delta times: 30.00, 30.00, 115.71, 30.01, 115.06, 29.97
+		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+			 Triggered 2x, delta times: 145.69, 145.04
+	Pyro Party Pack (%s), time=97.30, type=nextcount, spellId=1214872, triggerDeltas = 0.00, 20.00, 33.99, 91.70, 20.05, 33.99, 91.00, 20.01, 34.03
+		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
+		[ 20.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
+			 Triggered 6x, delta times: 20.00, 33.99, 111.75, 33.99, 111.01, 34.03
+		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+			 Triggered 2x, delta times: 145.69, 145.04
+	Bleeding Edge ends, time=20.00, type=active, spellId=1215218, triggerDeltas = 125.68, 145.03
+		[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
+			 Triggered 2x, delta times: 125.68, 145.03
+	Screw Up (%s), time=97.30, type=nextcount, spellId=1216508, triggerDeltas = 0.00, 46.99, 33.00, 65.70, 47.02, 32.99, 65.03, 47.02, 33.01
+		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
+		[ 46.99] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
+			 Triggered 6x, delta times: 46.99, 33.00, 112.72, 32.99, 112.05, 33.01
+		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+			 Triggered 2x, delta times: 145.69, 145.04
+	Foot-Blasters (%s), time=97.30, type=nextcount, spellId=1217231, triggerDeltas = 0.00, 12.01, 62.02, 71.66, 12.06, 62.00, 70.98, 12.04, 62.02
+		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
+		[ 12.01] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+			 Triggered 6x, delta times: 12.01, 62.02, 83.72, 62.00, 83.02, 62.02
+		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+			 Triggered 2x, delta times: 145.69, 145.04
+	Wire Transfer (%s), time=97.30, type=nextcount, spellId=1218418, triggerDeltas = 0.05, 40.92, 28.00, 56.71, 20.09, 40.95, 28.02, 55.97, 20.10, 40.96, 27.99
+		[  0.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+			 Triggered 9x, delta times: 0.05, 40.92, 28.00, 76.80, 40.95, 28.02, 76.07, 40.96, 27.99
+		[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
+			 Triggered 2x, delta times: 125.68, 145.03
+
+Announces:
+	Sonic Ba-Boom (%s), type=count, spellId=465232, triggerDeltas = 6.02, 27.95, 29.00, 30.02, 58.76, 27.94, 29.04, 29.96, 58.06, 28.01, 28.98, 30.05
+		[  6.02] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+			 Triggered 12x, delta times: 6.02, 27.95, 29.00, 30.02, 58.76, 27.94, 29.04, 29.96, 58.06, 28.01, 28.98, 30.05
+	Gravi-Gunk on >%s< (%d), type=stack, spellId=465917, triggerDeltas = 15.95, 11.86, 10.60, 12.98, 16.00, 36.00, 7.92, 7.49, 42.89, 11.86, 10.59, 12.98, 16.03, 35.99, 7.93, 7.47, 36.61, 7.94, 9.44, 10.64, 12.99, 16.01, 35.98, 7.95, 7.48
+		[ 15.95] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+			 Triggered 8x, delta times: 15.95, 51.44, 94.30, 51.46, 51.39, 36.61, 7.94, 49.08
+		[ 27.81] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+			 Triggered 17x, delta times: 27.81, 10.60, 12.98, 52.00, 7.92, 7.49, 54.75, 10.59, 12.98, 52.02, 7.93, 61.46, 10.64, 12.99, 51.99, 7.95, 7.48
+	Beta Launch, type=spell, spellId=466765, triggerDeltas = 121.56, 145.08
+		[121.56] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
+			 Triggered 2x, delta times: 121.56, 145.08
+	Activate Inventions! (%s), type=count, spellId=473276, triggerDeltas = 30.00, 30.00, 29.96, 85.75, 30.01, 30.01, 85.05, 29.97, 30.00
+		[ 30.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+			 Triggered 9x, delta times: 30.00, 30.00, 29.96, 85.75, 30.01, 30.01, 85.05, 29.97, 30.00
+	Screwed! on >%s<, type=target, spellId=1217261, triggerDeltas = 53.02, 7.14, 25.95, 2.54, 30.45, 2.50, 110.17, 2.01, 8.00, 21.98, 1.35, 2.38, 2.64, 108.15, 6.07, 25.49
+		[ 53.02] Scheduled at 52.02 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank3: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000003, Tank3, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[ 60.16] Scheduled at 59.16 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank3: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000003, Tank3, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[ 86.11] Scheduled at 85.11 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[ 88.65] Scheduled at 87.65 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1217261, Screwed!, 0, DEBUFF, 0
+		[119.10] Scheduled at 118.10 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000009, Tank4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[121.60] Scheduled at 120.60 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[231.77] Scheduled at 230.77 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[233.78] Scheduled at 232.78 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[241.78] Scheduled at 240.78 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000019, Healer5, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[263.76] Scheduled at 262.76 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000007, Healer2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[265.11] Scheduled at 264.11 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[267.49] Scheduled at 266.49 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000011, Dps4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[270.13] Scheduled at 269.13 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[378.28] Scheduled at 377.28 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[384.35] Scheduled at 383.35 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000002, Tank2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[409.84] Scheduled at 408.84 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps8: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000015, Dps8, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+	Upgraded Bloodtech on >%s< (%d), type=stack, spellId=1218344, triggerDeltas = 145.69, 145.05
+		[145.69] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Sprocketmonger Lockenstock: Upgraded Bloodtech] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, 1218344, Upgraded Bloodtech, 0, BUFF, 0
+		[290.74] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Sprocketmonger Lockenstock: Upgraded Bloodtech] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, 1218344, Upgraded Bloodtech, 0, BUFF, 2, 0
+
+Special warnings:
+	Pyro Party Pack - move away from others, type=moveaway, spellId=1214872, triggerDeltas = 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
+		[ 23.09] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
+	Blazing Beam - dodge attack, type=dodge, spellId=1216414, triggerDeltas = 32.56
+		[ 32.56] SPELL_CAST_START: [Beam Turret: Blazing Beam] Creature-0-1-2769-1-230358-000000000E, Beam Turret, 0xa48, "", nil, 0x0, 1216414, Blazing Beam, 0, 0
+	Rocket Barrage - dodge attack, type=dodge, spellId=1216525, triggerDeltas = 208.44
+		[208.44] SPELL_CAST_START: [Rocket Launcher: Rocket Barrage] Creature-0-1-2769-1-230360-000000005A, Rocket Launcher, 0xa48, "", nil, 0x0, 1216525, Rocket Barrage, 0, 0
+	Jumbo Void Beam - dodge attack, type=dodge, spellId=1216674, triggerDeltas = 177.73, 30.30, 30.12, 84.92, 29.71, 29.95
+		[177.73] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-0000000046, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+			 Triggered 6x, delta times: 177.73, 30.30, 30.12, 84.92, 29.71, 29.95
+	Void Barrage - dodge attack, type=dodge, spellId=1216699, triggerDeltas = 353.03
+		[353.03] SPELL_CAST_START: [Void Cannon: Void Barrage] Creature-0-1-2769-1-231903-000000008A, Void Cannon, 0xa48, "", nil, 0x0, 1216699, Void Barrage, 0, 0
+	Foot-Blasters! (%s), type=count, spellId=1217231, triggerDeltas = 12.01, 62.02, 30.96, 52.76, 62.00, 31.03, 51.99, 62.02, 30.99
+		[ 12.01] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+			 Triggered 9x, delta times: 12.01, 62.02, 30.96, 52.76, 62.00, 31.03, 51.99, 62.02, 30.99
+	Wire Transfer (%s) - dodge attack, type=dodgecount, spellId=1218418, triggerDeltas = 0.05, 40.92, 28.00, 28.00, 48.80, 40.95, 28.02, 27.97, 48.10, 40.96, 27.99, 27.98
+		[  0.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+			 Triggered 12x, delta times: 0.05, 40.92, 28.00, 28.00, 48.80, 40.95, 28.02, 27.97, 48.10, 40.96, 27.99, 27.98
+
+Yells:
+	Pyro Party Pack on PlayerName, type=yell, spellId=1214872
+		[ 23.09] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
+
+Voice pack sounds:
+	VoicePack/bombsoon
+		[ 12.01] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+			 Triggered 9x, delta times: 12.01, 62.02, 30.96, 52.76, 62.00, 31.03, 51.99, 62.02, 30.99
+	VoicePack/farfromline
+		[ 32.56] SPELL_CAST_START: [Beam Turret: Blazing Beam] Creature-0-1-2769-1-230358-000000000E, Beam Turret, 0xa48, "", nil, 0x0, 1216414, Blazing Beam, 0, 0
+		[177.73] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-0000000046, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+			 Triggered 6x, delta times: 177.73, 30.30, 30.12, 84.92, 29.71, 29.95
+	VoicePack/phasechange
+		[121.56] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
+			 Triggered 2x, delta times: 121.56, 145.08
+	VoicePack/runout
+		[ 23.09] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
+	VoicePack/screwup
+		[ 87.65] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1217261, Screwed!, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 87.65, 288.15
+	VoicePack/watchstep
+		[  0.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+			 Triggered 12x, delta times: 0.05, 40.92, 28.00, 28.00, 48.80, 40.95, 28.02, 27.97, 48.10, 40.96, 27.99, 27.98
+		[208.44] SPELL_CAST_START: [Rocket Launcher: Rocket Barrage] Creature-0-1-2769-1-230360-000000005A, Rocket Launcher, 0xa48, "", nil, 0x0, 1216525, Rocket Barrage, 0, 0
+		[353.03] SPELL_CAST_START: [Void Cannon: Void Barrage] Creature-0-1-2769-1-231903-000000008A, Void Cannon, 0xa48, "", nil, 0x0, 1216699, Void Barrage, 0, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699, SPELL_CAST_SUCCESS 1216802 1216887 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344, SPELL_AURA_APPLIED_DOSE 465917 1218344, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
+		StartTimer: 6.0, Sonic Ba-Boom (1)
+		StartTimer: 12.0, Foot-Blasters (1)
+		StartTimer: 20.0, Pyro Party Pack (1)
+		StartTimer: 30.0, Activate Inventions! (1)
+		StartTimer: 47.0, Screw Up (1)
+		StartTimer: 120.0, Beta Launch (1)
+	[  0.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 40.9, Wire Transfer (2)
+	[  6.02] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (1)
+		StartTimer: 28.0, Sonic Ba-Boom (2)
+	[ 12.01] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (1)
+		PlaySound: VoicePack/bombsoon
+		StartTimer: 62.0, Foot-Blasters (2)
+	[ 15.95] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (2)
+	[ 20.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
+		StartTimer: 34.0, Pyro Party Pack (2)
+	[ 23.09] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+		ShowSpecialWarning: Pyro Party Pack - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Pyro Party Pack on PlayerName
+	[ 27.81] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (2)
+	[ 30.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (1)
+		StartTimer: 30.0, Activate Inventions! (2)
+	[ 32.56] SPELL_CAST_START: [Beam Turret: Blazing Beam] Creature-0-1-2769-1-230358-000000000E, Beam Turret, 0xa48, "", nil, 0x0, 1216414, Blazing Beam, 0, 0
+		AntiSpam: 2
+			Filtered: 2x SPELL_CAST_START at 32.72, 32.86
+		ShowSpecialWarning: Blazing Beam - dodge attack
+		PlaySound: VoicePack/farfromline
+	[ 33.97] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (2)
+		StartTimer: 29.0, Sonic Ba-Boom (3)
+	[ 38.41] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (4)
+	[ 40.97] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (2) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 28.0, Wire Transfer (3)
+	[ 46.99] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
+		StartTimer: 33.0, Screw Up (2)
+	[ 51.39] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 6, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (6)
+	[ 52.02] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank3: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000003, Tank3, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Tank3") at 53.02 (+1.00)
+			ShowAnnounce: Screwed! on Tank3
+	[ 53.99] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
+		StartTimer: 30.0, Pyro Party Pack (3)
+	[ 59.16] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank3: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000003, Tank3, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Tank3") at 60.16 (+1.00)
+			ShowAnnounce: Screwed! on Tank3
+	[ 60.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (2)
+		StartTimer: 30.0, Activate Inventions! (3)
+	[ 62.97] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (3)
+	[ 67.39] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (2)
+	[ 68.97] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (3) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 28.0, Wire Transfer (3)
+	[ 74.03] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (2)
+		PlaySound: VoicePack/bombsoon
+		StartTimer: 31.0, Foot-Blasters (3)
+	[ 79.99] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
+		StartTimer: 32.0, Screw Up (3)
+	[ 85.11] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer4") at 86.11 (+1.00)
+			ShowAnnounce: Screwed! on Healer4
+	[ 87.12] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+		ShowSpecialWarning: Pyro Party Pack - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Pyro Party Pack on PlayerName
+	[ 87.65] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("PlayerName") at 88.65 (+1.00)
+			ShowAnnounce: Screwed! on PlayerName
+		PlaySound: VoicePack/screwup
+	[ 89.96] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (3)
+	[ 92.99] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (4)
+	[ 96.97] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (4) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[103.39] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (2)
+	[104.99] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (3)
+		PlaySound: VoicePack/bombsoon
+	[111.31] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (4)
+	[118.10] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000009, Tank4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Tank4") at 119.10 (+1.00)
+			ShowAnnounce: Screwed! on Dps6, Healer2, Tank4
+	[118.80] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 6, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (6)
+	[120.60] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer4") at 121.60 (+1.00)
+			ShowAnnounce: Screwed! on Healer4
+	[121.56] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
+		ShowAnnounce: Beta Launch
+		PlaySound: VoicePack/phasechange
+	[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
+		StartTimer: 20.0, Bleeding Edge ends
+		StartTimer: 20.0, Wire Transfer (1)
+	[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+		StartTimer: 6.0, Sonic Ba-Boom (1)
+		StartTimer: 12.0, Foot-Blasters (1)
+		StartTimer: 20.0, Pyro Party Pack (1)
+		StartTimer: 30.0, Activate Inventions! (1)
+		StartTimer: 47.0, Screw Up (1)
+		StartTimer: 120.0, Beta Launch (2)
+	[145.69] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Sprocketmonger Lockenstock: Upgraded Bloodtech] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, 1218344, Upgraded Bloodtech, 0, BUFF, 0
+		ShowAnnounce: Upgraded Bloodtech on Sprocketmonger Lockenstock (1)
+	[145.77] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 40.9, Wire Transfer (2)
+	[151.75] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (1)
+		StartTimer: 28.0, Sonic Ba-Boom (2)
+	[157.75] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (1)
+		PlaySound: VoicePack/bombsoon
+		StartTimer: 62.0, Foot-Blasters (2)
+	[161.69] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (2)
+	[165.74] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
+		StartTimer: 34.0, Pyro Party Pack (2)
+	[168.82] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+		ShowSpecialWarning: Pyro Party Pack - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Pyro Party Pack on PlayerName
+	[173.55] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (2)
+	[175.71] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (1)
+		StartTimer: 30.0, Activate Inventions! (2)
+	[177.73] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-0000000046, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_CAST_START at 177.87
+		ShowSpecialWarning: Jumbo Void Beam - dodge attack
+		PlaySound: VoicePack/farfromline
+	[179.69] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (2)
+		StartTimer: 29.0, Sonic Ba-Boom (3)
+	[184.14] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (4)
+	[186.72] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (2) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 28.0, Wire Transfer (3)
+	[192.71] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
+		StartTimer: 33.0, Screw Up (2)
+	[197.12] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 6, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (6)
+	[199.73] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
+		StartTimer: 30.0, Pyro Party Pack (3)
+	[205.72] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (2)
+		StartTimer: 30.0, Activate Inventions! (3)
+	[208.03] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-000000005A, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_CAST_START at 208.19
+		ShowSpecialWarning: Jumbo Void Beam - dodge attack
+		PlaySound: VoicePack/farfromline
+	[208.44] SPELL_CAST_START: [Rocket Launcher: Rocket Barrage] Creature-0-1-2769-1-230360-000000005A, Rocket Launcher, 0xa48, "", nil, 0x0, 1216525, Rocket Barrage, 0, 0
+		AntiSpam: 1
+			Filtered: 2x SPELL_CAST_START at 208.58, 208.73
+		ShowSpecialWarning: Rocket Barrage - dodge attack
+		PlaySound: VoicePack/watchstep
+	[208.73] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (3)
+	[213.15] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (2)
+	[214.74] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (3) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 28.0, Wire Transfer (3)
+	[219.75] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (2)
+		PlaySound: VoicePack/bombsoon
+		StartTimer: 31.0, Foot-Blasters (3)
+	[225.70] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
+		StartTimer: 32.0, Screw Up (3)
+	[230.77] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer4") at 231.77 (+1.00)
+			ShowAnnounce: Screwed! on Healer4
+	[232.77] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+		ShowSpecialWarning: Pyro Party Pack - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Pyro Party Pack on PlayerName
+	[232.78] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer1") at 233.78 (+1.00)
+			ShowAnnounce: Screwed! on Healer1
+	[235.73] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (3)
+	[238.15] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-000000006D, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+		AntiSpam: 2
+		ShowSpecialWarning: Jumbo Void Beam - dodge attack
+		PlaySound: VoicePack/farfromline
+	[238.69] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (4)
+	[240.78] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000019, Healer5, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer5") at 241.78 (+1.00)
+			ShowAnnounce: Screwed! on Healer5
+	[242.71] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (4) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[249.14] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (2)
+	[250.78] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (3)
+		PlaySound: VoicePack/bombsoon
+	[257.07] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (4)
+	[262.76] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000007, Healer2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer2") at 263.76 (+1.00)
+			ShowAnnounce: Screwed! on Healer2
+	[264.11] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Dps6") at 265.11 (+1.00)
+			ShowAnnounce: Screwed! on Dps6
+	[264.54] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (2)
+	[266.49] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000011, Dps4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Dps4") at 267.49 (+1.00)
+			ShowAnnounce: Screwed! on Healer3, Dps4
+	[266.64] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
+		ShowAnnounce: Beta Launch
+		PlaySound: VoicePack/phasechange
+	[269.13] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer1") at 270.13 (+1.00)
+			ShowAnnounce: Screwed! on Dps10, Healer4, Healer1
+	[270.71] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
+		StartTimer: 20.0, Bleeding Edge ends
+		StartTimer: 20.0, Wire Transfer (1)
+	[290.73] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-000000010C, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
+		StartTimer: 6.0, Sonic Ba-Boom (1)
+		StartTimer: 12.0, Foot-Blasters (1)
+		StartTimer: 20.0, Pyro Party Pack (1)
+		StartTimer: 30.0, Activate Inventions! (1)
+		StartTimer: 47.0, Screw Up (1)
+		StartTimer: 120.0, Beta Launch (3)
+	[290.74] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Sprocketmonger Lockenstock: Upgraded Bloodtech] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, 1218344, Upgraded Bloodtech, 0, BUFF, 2, 0
+		ShowAnnounce: Upgraded Bloodtech on Sprocketmonger Lockenstock (2)
+	[290.81] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 40.9, Wire Transfer (2)
+	[296.75] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (1)
+		StartTimer: 28.0, Sonic Ba-Boom (2)
+	[301.15] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (4)
+	[302.77] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (1)
+		PlaySound: VoicePack/bombsoon
+		StartTimer: 62.0, Foot-Blasters (2)
+	[309.09] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 6, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (6)
+	[310.74] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
+		StartTimer: 34.0, Pyro Party Pack (2)
+	[313.79] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+		ShowSpecialWarning: Pyro Party Pack - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Pyro Party Pack on PlayerName
+	[318.53] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (2)
+	[320.78] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (1)
+		StartTimer: 30.0, Activate Inventions! (2)
+	[323.07] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-0000000086, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_CAST_START at 323.21
+		ShowSpecialWarning: Jumbo Void Beam - dodge attack
+		PlaySound: VoicePack/farfromline
+	[324.76] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (2)
+		StartTimer: 29.0, Sonic Ba-Boom (3)
+	[329.17] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (4)
+	[331.77] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (2) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 28.0, Wire Transfer (3)
+	[337.75] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
+		StartTimer: 33.0, Screw Up (2)
+	[342.16] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 6, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (6)
+	[344.77] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
+		StartTimer: 30.0, Pyro Party Pack (3)
+	[350.75] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (2)
+		StartTimer: 30.0, Activate Inventions! (3)
+	[352.78] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-0000000088, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+		AntiSpam: 2
+			Filtered: 3x SPELL_CAST_START at 352.93, 353.08, 353.23
+		ShowSpecialWarning: Jumbo Void Beam - dodge attack
+		PlaySound: VoicePack/farfromline
+	[353.03] SPELL_CAST_START: [Void Cannon: Void Barrage] Creature-0-1-2769-1-231903-000000008A, Void Cannon, 0xa48, "", nil, 0x0, 1216699, Void Barrage, 0, 0
+		AntiSpam: 1
+			Filtered: 5x SPELL_CAST_START at 353.19, 353.34, 353.49, 353.63, 353.79
+		ShowSpecialWarning: Void Barrage - dodge attack
+		PlaySound: VoicePack/watchstep
+	[353.74] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (3)
+	[358.17] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on PlayerName (2)
+	[359.76] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (3) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 28.0, Wire Transfer (3)
+	[364.79] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (2)
+		PlaySound: VoicePack/bombsoon
+		StartTimer: 31.0, Foot-Blasters (3)
+	[370.76] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
+		StartTimer: 32.0, Screw Up (3)
+	[375.80] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1217261, Screwed!, 0, DEBUFF, 0
+		PlaySound: VoicePack/screwup
+	[377.28] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Healer1") at 378.28 (+1.00)
+			ShowAnnounce: Screwed! on PlayerName, Healer2, Healer1
+	[377.87] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
+		ShowSpecialWarning: Pyro Party Pack - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Pyro Party Pack on PlayerName
+	[380.75] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
+		ShowAnnounce: Activate Inventions! (3)
+	[382.73] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-000000008F, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+		AntiSpam: 2
+			Filtered: 3x SPELL_CAST_START at 382.9, 383.05, 383.18
+		ShowSpecialWarning: Jumbo Void Beam - dodge attack
+		PlaySound: VoicePack/farfromline
+	[383.35] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000002, Tank2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Tank2") at 384.35 (+1.00)
+			ShowAnnounce: Screwed! on Tank2
+	[383.79] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
+		ShowAnnounce: Sonic Ba-Boom (4)
+	[387.74] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
+		ShowSpecialWarning: Wire Transfer (4) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[394.15] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (2)
+	[395.78] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
+		ShowSpecialWarning: Foot-Blasters! (3)
+		PlaySound: VoicePack/bombsoon
+	[402.10] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (4)
+	[408.84] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps8: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000015, Dps8, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Dps8") at 409.84 (+1.00)
+			ShowAnnounce: Screwed! on Dps8
+	[409.58] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Healer3: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 465917, Gravi-Gunk, 0, DEBUFF, 6, 0
+		ShowAnnounce: Gravi-Gunk on Healer3 (6)
+	[415.74] ENCOUNTER_END: 3013, Sprocketmonger Lockenstock, 15, 20, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
