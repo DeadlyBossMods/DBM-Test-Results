@@ -14,7 +14,6 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1216934 (Nega-Polarization)
 	Unused event registration: SPELL_AURA_REMOVED 465917 (Gravi-Gunk)
 	Unused event registration: SPELL_CAST_START 1215858 (Mega Magnetize)
-	Unused event registration: SPELL_CAST_SUCCESS 1216802 (Polarization Generator)
 	Unused event registration: SPELL_CAST_SUCCESS 1216887 (Polarization Generator)
 	Timer for spell ID 465232 (Sonic Ba-Boom) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 466765 (Beta Launch) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
@@ -40,7 +39,7 @@ Unused objects:
 	[Special Warning] Posi-Polarization on you, type=you, spellId=1216911
 	[Special Warning] Nega-Polarization on you, type=you, spellId=1216934
 	[Timer] Gigadeath, time=97.30, type=next, spellId=468791
-	[Timer] Polarization Generator AI, time=97.30, type=ai, spellId=1216802
+	[Timer] Polarization Generator (%s), time=97.30, type=nextcount, spellId=1216802
 	[Yell] %d, type=shortfade, spellId=1214872
 	[Yell] Screw Up on PlayerName, type=yell, spellId=1216508
 	[Yell] {rt%%1$d}, type=icontarget, spellId=1216802
@@ -183,7 +182,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1216802 1216887 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344, SPELL_AURA_APPLIED_DOSE 465917 1218344, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
+		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1216887 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344, SPELL_AURA_APPLIED_DOSE 465917 1218344, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
 		StartTimer: 6.0, Sonic Ba-Boom (1)
 		StartTimer: 12.1, Foot-Blasters (1)
 		StartTimer: 20.1, Pyro Party Pack (1)
