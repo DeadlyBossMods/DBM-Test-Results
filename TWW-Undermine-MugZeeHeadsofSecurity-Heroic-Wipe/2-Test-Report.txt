@@ -25,8 +25,10 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1217791 (Electrocution Matrix)
 	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
+	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_START 466545 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_SUCCESS 467379 (Goblin-guided Rocket)
 	Unused event registration: SPELL_CAST_SUCCESS 467380 (Goblin-guided Rocket)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 470089 (Molten Gold Pool)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 472057 (Hot Mess)
@@ -190,7 +192,7 @@ Voice pack sounds:
 		[108.78] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 	VoicePack/kick3r
 		[122.13] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
-	VoicePack/shareone
+	VoicePack/sharetwo
 		[100.20] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps3: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-000000002E, Goblin Guided Rocket, 0xa48, Player-1-00000003, Dps3, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
 
 Icons:
@@ -199,7 +201,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481, SPELL_CAST_SUCCESS 468658 468694 467380 468728 468794, SPELL_AURA_APPLIED 1222408 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085, SPELL_CAST_SUCCESS 468658 468694 467380 468728 468794 467379, SPELL_AURA_APPLIED 1222408 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
 	[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug on Mug'Zee
 		StartTimer: 13.5, Earthshaker Gaol (1)
@@ -315,7 +317,7 @@ Event trace:
 		StopTimer: Timer466518varcount\t3
 	[ 73.17] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee on Mug'Zee
-		StartTimer: 13.0, Unstable Crawler Mines (1)
+		StartTimer: 12.5, Unstable Crawler Mines (1)
 		StartTimer: 27.0, Goblin-guided Rocket (1)
 		StartTimer: 45.0, Spray and Pray (1)
 		StartTimer: 38.5, Double Whammy Shot (1)
@@ -357,7 +359,7 @@ Event trace:
 		PlaySound: DBM/SpecialWarningSound2
 	[ 86.15] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (1)
-		StartTimer: 44.0, Unstable Crawler Mines (2)
+		StartTimer: 43.7, Unstable Crawler Mines (2)
 	[ 87.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003A", "ArcTarget", 0.1, 8.0) at 87.28 (+0.10)
 			ShowAnnounce: Surging Arc on Dps9
@@ -382,7 +384,7 @@ Event trace:
 	[100.02] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[100.20] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps3: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-000000002E, Goblin Guided Rocket, 0xa48, Player-1-00000003, Dps3, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
-		PlaySound: VoicePack/shareone
+		PlaySound: VoicePack/sharetwo
 	[100.92] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003A", "ArcTarget", 0.1, 8.0) at 101.02 (+0.10)
 			ShowAnnounce: Surging Arc on Dps14
