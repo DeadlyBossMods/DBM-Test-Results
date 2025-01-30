@@ -1,0 +1,125 @@
+Test report differs from test report stored in the DBM test mod.
+
+Test: SoD/Party/KarazhanCrypts/Kharon
+Mod:  DBM-Party-Vanilla/Kharon
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1217844 (Charred Skin)
+	Timer The Red Death, time=30.70, type=next, spellId=1217694 (time=30.70, variance=0.00) got refreshed early with 0.40s remaining
+		Refreshed by: [ 82.10] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+	Timer The Red Death, time=30.70, type=next, spellId=1217694 (time=30.70, variance=0.00) got refreshed early with 1.17s remaining
+		Refreshed by: [111.63] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+
+Unused objects:
+	[Announce] Charred Skin on >%s< (%d), type=stack, spellId=1217844
+	[Special Warning] %d stacks - drop torch!, type=nil, spellId=<none>
+
+Timers:
+	The Red Death, time=30.70, type=next, spellId=1217694, triggerDeltas = 0.00, 21.05, 30.73, 30.32, 29.53, 30.74, 34.03, 30.79, 30.78
+		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+			 Triggered 8x, delta times: 21.05, 30.73, 30.32, 29.53, 30.74, 34.03, 30.79, 30.78
+	Inhume, time=73.30, type=var, spellId=1218038, triggerDeltas = 0.00, 35.76, 67.76, 71.41, 76.13
+		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		[ 35.76] SPELL_AURA_APPLIED: [Kharon->Healer1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		[103.52] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		[174.93] SPELL_AURA_APPLIED: [Kharon->Tank1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000001, Tank1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		[251.06] SPELL_AURA_APPLIED: [Kharon->Dps1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000004, Dps1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+
+Announces:
+	None
+
+Special warnings:
+	The Red Death - move away from others, type=moveaway, spellId=1217694, triggerDeltas = 21.05, 30.73, 30.32, 29.53, 30.74, 34.03, 30.79, 30.78
+		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+			 Triggered 8x, delta times: 21.05, 30.73, 30.32, 29.53, 30.74, 34.03, 30.79, 30.78
+	Target Change - switch to %s, type=targetchange, spellId=1218038, triggerDeltas = 103.52, 71.41, 76.13
+		[103.52] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		[174.93] SPELL_AURA_APPLIED: [Kharon->Tank1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000001, Tank1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		[251.06] SPELL_AURA_APPLIED: [Kharon->Dps1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000004, Dps1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+
+Yells:
+	{rt%1$d}, type=repeaticon, spellId=1218038
+		[ 35.76] SPELL_AURA_APPLIED: [Kharon->Healer1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		[ 37.76] Scheduled at 35.76 by SPELL_AURA_APPLIED: [Kharon->Healer1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 37.76, 2.00, 2.00
+
+Voice pack sounds:
+	VoicePack/runout
+		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+			 Triggered 8x, delta times: 21.05, 30.73, 30.32, 29.53, 30.74, 34.03, 30.79, 30.78
+	VoicePack/targetchange
+		[103.52] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		[174.93] SPELL_AURA_APPLIED: [Kharon->Tank1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000001, Tank1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		[251.06] SPELL_AURA_APPLIED: [Kharon->Dps1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000004, Dps1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1217694, SPELL_AURA_APPLIED 1218038, SPELL_AURA_REMOVED 1218038, SPELL_AURA_APPLIED_DOSE 1217844
+		StartTimer: 21.1, The Red Death
+		StartTimer: 35.8, Inhume
+	[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[ 35.76] SPELL_AURA_APPLIED: [Kharon->Healer1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		ShowYell: {rtUnknown
+		ScheduleTask: mod:YellLoop(7.0) at 37.76 (+2.00)
+			ShowYell: {rtUnknown
+			ScheduleTask: mod:YellLoop(6.0) at 39.76 (+2.00)
+				ShowYell: {rtUnknown
+				ScheduleTask: mod:YellLoop(5.0) at 41.76 (+2.00)
+					ShowYell: {rtUnknown
+					ScheduleTask: mod:YellLoop(4.0) at 43.76 (+2.00)
+						Unscheduled by SPELL_AURA_REMOVED at 42.89
+		StartTimer: 73.3, Inhume
+	[ 42.89] SPELL_AURA_REMOVED: [Kharon->Healer1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		UnscheduleTask: mod:YellLoop(4.0) scheduled by ScheduleTask at 41.76
+	[ 51.78] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[ 82.10] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[103.52] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Dps2
+		PlaySound: VoicePack/targetchange
+		StartTimer: 73.3, Inhume
+	[111.63] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[142.37] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[174.93] SPELL_AURA_APPLIED: [Kharon->Tank1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000001, Tank1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Tank1
+		PlaySound: VoicePack/targetchange
+		StartTimer: 73.3, Inhume
+	[176.40] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[207.19] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[237.97] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away from others
+		PlaySound: VoicePack/runout
+	[251.06] SPELL_AURA_APPLIED: [Kharon->Dps1: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000004, Dps1, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Dps1
+		PlaySound: VoicePack/targetchange
+		StartTimer: 73.3, Inhume
+	[260.66] ENCOUNTER_END: 3143, Kharon, 1, 5, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1218038
