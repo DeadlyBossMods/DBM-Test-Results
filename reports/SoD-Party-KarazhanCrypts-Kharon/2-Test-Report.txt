@@ -1,0 +1,193 @@
+Test report differs from test report stored in the DBM test mod.
+
+Test: SoD/Party/KarazhanCrypts/Kharon
+Mod:  DBM-Party-Vanilla/Kharon
+
+Findings:
+	Unused event registration: SPELL_AURA_REMOVED 1218089 (Illimitable Dominion)
+
+Unused objects:
+	[Announce] Charred Skin on >%s< (%d), type=stack, spellId=1217844
+	[Yell] {rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1218089
+
+Timers:
+	The Red Death, time=30.70, type=next, spellId=1217694, triggerDeltas = 0.00, 21.05, 30.76, 30.74, 30.78, 30.74, 30.76, 30.83
+		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+			 Triggered 7x, delta times: 21.05, 30.76, 30.74, 30.78, 30.74, 30.76, 30.83
+	Charred Skin (%2$s): %1$s, time=5.00, type=targetcount, spellId=1217844, triggerDeltas = 18.87, 4.98, 5.01, 5.00, 5.01, 5.00, 5.00, 4.99, 5.01, 4.98, 5.01, 5.00, 5.01, 5.00, 4.99, 5.02, 4.98, 4.99, 5.01, 5.00, 5.01, 5.00, 4.99, 5.00, 5.01, 5.00, 4.99
+		[ 18.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 2, 0
+			 Triggered 27x, delta times: 18.87, 4.98, 5.01, 5.00, 5.01, 5.00, 5.00, 4.99, 5.01, 4.98, 5.01, 5.00, 5.01, 5.00, 4.99, 5.02, 4.98, 4.99, 5.01, 5.00, 5.01, 5.00, 4.99, 5.00, 5.01, 5.00, 4.99
+	Inhume, time=73.30, type=var, spellId=1218038, triggerDeltas = 0.00, 35.78, 64.75, 72.83
+		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		[ 35.78] SPELL_AURA_APPLIED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		[100.53] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 100.53, 72.83
+	Illimitable Dominion, time=86.20, type=var, spellId=1218089, triggerDeltas = 0.00, 42.48, 84.18, 77.76
+		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		[ 42.48] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 42.48, 84.18
+		[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+
+Announces:
+	Illimitable Dominion on >%s<, type=target, spellId=1218089, triggerDeltas = 42.48, 84.18, 77.76
+		[ 42.48] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 42.48, 84.18
+		[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+
+Special warnings:
+	%d stacks - drop torch!, type=nil, spellId=<none>, triggerDeltas = 58.87, 25.00, 24.99
+		[ 58.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 10, 0
+			 Triggered 3x, delta times: 58.87, 25.00, 24.99
+	The Red Death - move away, type=move, spellId=1217694, triggerDeltas = 21.05, 30.76, 30.74, 30.78, 30.74, 30.76, 30.83
+		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+			 Triggered 7x, delta times: 21.05, 30.76, 30.74, 30.78, 30.74, 30.76, 30.83
+	Target Change - switch to %s, type=targetchange, spellId=1218038, triggerDeltas = 100.53, 72.83
+		[100.53] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 100.53, 72.83
+
+Yells:
+	{rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1218038
+		[ 35.78] SPELL_AURA_APPLIED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		[ 38.78] Scheduled at 35.78 by SPELL_AURA_APPLIED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+
+Voice pack sounds:
+	VoicePack/runout
+		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+			 Triggered 7x, delta times: 21.05, 30.76, 30.74, 30.78, 30.74, 30.76, 30.83
+	VoicePack/targetchange
+		[100.53] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 100.53, 72.83
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1217694, SPELL_AURA_APPLIED 1218038 1218089, SPELL_AURA_REMOVED 1218038 1218089, SPELL_AURA_APPLIED_DOSE 1217844
+		StartTimer: 21.1, The Red Death
+		StartTimer: 35.8, Inhume
+		StartTimer: 45.0, Illimitable Dominion
+	[ 18.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 2, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away
+		PlaySound: VoicePack/runout
+	[ 23.85] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 3, 0
+		StopTimer: Timer1217844targetcount\t3\tFakePlayer
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 28.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 4, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 33.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 5, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 35.78] SPELL_AURA_APPLIED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		ShowYell: {rtUnknownUnknownUnknown
+		ScheduleTask: mod:YellLoop(yell1218038icontarget, 7.0, 5.0) at 38.78 (+3.00)
+			ShowYell: {rtUnknownUnknownUnknown
+			ScheduleTask: mod:YellLoop(yell1218038icontarget, 7.0, 4.0) at 41.78 (+3.00)
+				Unscheduled by SPELL_AURA_REMOVED at 41.53
+		StartTimer: 73.3, Inhume
+	[ 38.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 6, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 41.53] SPELL_AURA_REMOVED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
+		UnscheduleTask: mod:YellLoop(yell1218038icontarget, 7.0, 4.0) scheduled by ScheduleTask at 38.78
+	[ 42.48] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+		StartTimer: 86.2, Illimitable Dominion
+		ShowAnnounce: Illimitable Dominion on Dps2
+	[ 43.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 7, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 48.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 8, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 51.81] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away
+		PlaySound: VoicePack/runout
+	[ 53.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 9, 0
+		StopTimer: Timer1217844targetcount\t9\tFakePlayer
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 58.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 10, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+		ShowSpecialWarning: 10 stacks - drop torch!
+	[ 63.85] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 11, 0
+		StopTimer: Timer1217844targetcount\t11\tFakePlayer
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 68.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 12, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 73.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 13, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 78.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 14, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 82.55] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away
+		PlaySound: VoicePack/runout
+	[ 83.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 15, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+		ShowSpecialWarning: 15 stacks - drop torch!
+	[ 88.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 16, 0
+		StopTimer: Timer1217844targetcount\t16\tFakePlayer
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 93.88] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 17, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 98.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 18, 0
+		StopTimer: Timer1217844targetcount\t18\tFakePlayer
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[100.53] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Dps2
+		PlaySound: VoicePack/targetchange
+		StartTimer: 73.3, Inhume
+	[103.85] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 19, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[108.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 20, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+		ShowSpecialWarning: 20 stacks - drop torch!
+	[113.33] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away
+		PlaySound: VoicePack/runout
+	[113.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 21, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[118.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 22, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[123.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 23, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[126.66] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+		StartTimer: 86.2, Illimitable Dominion
+		ShowAnnounce: Illimitable Dominion on Dps2
+	[128.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 24, 0
+		StopTimer: Timer1217844targetcount\t24\tFakePlayer
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[133.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 25, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[138.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 26, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[143.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 27, 0
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[144.07] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away
+		PlaySound: VoicePack/runout
+	[148.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 28, 0
+		StopTimer: Timer1217844targetcount\t28\tFakePlayer
+		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[173.36] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Dps2
+		PlaySound: VoicePack/targetchange
+		StartTimer: 73.3, Inhume
+	[174.83] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away
+		PlaySound: VoicePack/runout
+	[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+		StartTimer: 86.2, Illimitable Dominion
+		ShowAnnounce: Illimitable Dominion on Healer1
+	[205.66] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
+		StartTimer: 30.7, The Red Death
+		ShowSpecialWarning: The Red Death - move away
+		PlaySound: VoicePack/runout
+	[213.75] ENCOUNTER_END: 3143, Kharon, 1, 5, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1218038 1218089
