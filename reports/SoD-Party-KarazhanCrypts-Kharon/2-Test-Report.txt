@@ -7,10 +7,13 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1218089 (Illimitable Dominion)
 
 Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Charred Skin on >%s< (%d), type=stack, spellId=1217844
 	[Yell] {rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1218089
 
 Timers:
+	Berserk, time=300.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
 	The Red Death, time=30.70, type=next, spellId=1217694, triggerDeltas = 0.00, 21.05, 30.76, 30.74, 30.78, 30.74, 30.76, 30.83
 		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
 		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
@@ -30,10 +33,8 @@ Timers:
 		[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
 
 Announces:
-	Illimitable Dominion on >%s<, type=target, spellId=1218089, triggerDeltas = 42.48, 84.18, 77.76
-		[ 42.48] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 42.48, 84.18
-		[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 120.00
+		[120.00] Scheduled at 0.00 by ENCOUNTER_START: 3143, Kharon, 1, 5, 0
 
 Special warnings:
 	%d stacks - drop torch!, type=nil, spellId=<none>, triggerDeltas = 58.87, 25.00, 24.99
@@ -45,6 +46,10 @@ Special warnings:
 	Target Change - switch to %s, type=targetchange, spellId=1218038, triggerDeltas = 100.53, 72.83
 		[100.53] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 100.53, 72.83
+	Target Change - switch to %s, type=targetchange, spellId=1218089, triggerDeltas = 42.48, 84.18, 77.76
+		[ 42.48] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 42.48, 84.18
+		[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
 
 Yells:
 	{rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1218038
@@ -56,8 +61,11 @@ Voice pack sounds:
 		[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
 			 Triggered 7x, delta times: 21.05, 30.76, 30.74, 30.78, 30.74, 30.76, 30.83
 	VoicePack/targetchange
+		[ 42.48] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 42.48, 84.18
 		[100.53] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 100.53, 72.83
+		[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
 
 Icons:
 	None
@@ -69,6 +77,15 @@ Event trace:
 		StartTimer: 21.1, The Red Death
 		StartTimer: 35.8, Inhume
 		StartTimer: 45.0, Illimitable Dominion
+		StartTimer: 300.0, Berserk
+		ScheduleTask: announce:Schedule(3.0, "min") at 120.00 (+120.00)
+			ShowAnnounce: Berserk in 3 min
+		ScheduleTask: announce:Schedule(1.0, "min") at 240.00 (+240.00)
+			Unscheduled by ENCOUNTER_END at 213.75
+		ScheduleTask: announce:Schedule(30.0, "sec") at 270.00 (+270.00)
+			Unscheduled by ENCOUNTER_END at 213.75
+		ScheduleTask: announce:Schedule(10.0, "sec") at 290.00 (+290.00)
+			Unscheduled by ENCOUNTER_END at 213.75
 	[ 18.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 2, 0
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
 	[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
@@ -94,8 +111,9 @@ Event trace:
 	[ 41.53] SPELL_AURA_REMOVED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
 		UnscheduleTask: mod:YellLoop(yell1218038icontarget, 7.0, 4.0) scheduled by ScheduleTask at 38.78
 	[ 42.48] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Dps2
+		PlaySound: VoicePack/targetchange
 		StartTimer: 86.2, Illimitable Dominion
-		ShowAnnounce: Illimitable Dominion on Dps2
 	[ 43.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 7, 0
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
 	[ 48.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 8, 0
@@ -154,8 +172,9 @@ Event trace:
 	[123.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 23, 0
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
 	[126.66] SPELL_AURA_APPLIED: [Kharon->Dps2: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Dps2
+		PlaySound: VoicePack/targetchange
 		StartTimer: 86.2, Illimitable Dominion
-		ShowAnnounce: Illimitable Dominion on Dps2
 	[128.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 24, 0
 		StopTimer: Timer1217844targetcount\t24\tFakePlayer
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
@@ -181,13 +200,17 @@ Event trace:
 		ShowSpecialWarning: The Red Death - move away
 		PlaySound: VoicePack/runout
 	[204.42] SPELL_AURA_APPLIED: [Kharon->Healer1: Illimitable Dominion] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000003, Healer1, 0x512, 1218089, Illimitable Dominion, 0, DEBUFF, 0
+		ShowSpecialWarning: Target Change - switch to Healer1
+		PlaySound: VoicePack/targetchange
 		StartTimer: 86.2, Illimitable Dominion
-		ShowAnnounce: Illimitable Dominion on Healer1
 	[205.66] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
 		StartTimer: 30.7, The Red Death
 		ShowSpecialWarning: The Red Death - move away
 		PlaySound: VoicePack/runout
 	[213.75] ENCOUNTER_END: 3143, Kharon, 1, 5, 0, 0
 		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1218038 1218089
