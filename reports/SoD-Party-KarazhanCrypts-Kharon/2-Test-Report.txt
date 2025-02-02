@@ -21,6 +21,13 @@ Timers:
 	Charred Skin (%2$s): %1$s, time=5.00, type=targetcount, spellId=1217844, triggerDeltas = 18.87, 4.98, 5.01, 5.00, 5.01, 5.00, 5.00, 4.99, 5.01, 4.98, 5.01, 5.00, 5.01, 5.00, 4.99, 5.02, 4.98, 4.99, 5.01, 5.00, 5.01, 5.00, 4.99, 5.00, 5.01, 5.00, 4.99
 		[ 18.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 2, 0
 			 Triggered 27x, delta times: 18.87, 4.98, 5.01, 5.00, 5.01, 5.00, 5.00, 4.99, 5.01, 4.98, 5.01, 5.00, 5.01, 5.00, 4.99, 5.02, 4.98, 4.99, 5.01, 5.00, 5.01, 5.00, 4.99, 5.00, 5.01, 5.00, 4.99
+	Fear, time=76.00, type=var, spellId=1217952, triggerDeltas = 0.00, 30.76, 2.00, 62.75, 2.00, 70.83, 2.00
+		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+		[ 30.76] SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
+			 Triggered 3x, delta times: 30.76, 64.75, 72.83
+		[ 32.76] Scheduled at 30.76 by SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
+		[ 97.51] Scheduled at 95.51 by SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
+		[170.34] Scheduled at 168.34 by SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
 	Inhume, time=73.30, type=var, spellId=1218038, triggerDeltas = 0.00, 35.78, 64.75, 72.83
 		[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
 		[ 35.78] SPELL_AURA_APPLIED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
@@ -35,6 +42,9 @@ Timers:
 Announces:
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 120.00
 		[120.00] Scheduled at 0.00 by ENCOUNTER_START: 3143, Kharon, 1, 5, 0
+	Casting Dreadful Visage: -nan sec, type=cast, spellId=1217952, triggerDeltas = 30.76, 64.75, 72.83
+		[ 30.76] SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
+			 Triggered 3x, delta times: 30.76, 64.75, 72.83
 
 Special warnings:
 	%d stacks - drop torch!, type=nil, spellId=<none>, triggerDeltas = 58.87, 25.00, 24.99
@@ -73,7 +83,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3143, Kharon, 1, 5, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1217694, SPELL_AURA_APPLIED 1218038 1218089, SPELL_AURA_REMOVED 1218038 1218089, SPELL_AURA_APPLIED_DOSE 1217844
+		RegisterEvents: Regular, SPELL_CAST_START 1217694 1217952, SPELL_AURA_APPLIED 1218038 1218089, SPELL_AURA_REMOVED 1218038 1218089, SPELL_AURA_APPLIED_DOSE 1217844
 		StartTimer: 21.1, The Red Death
 		StartTimer: 35.8, Inhume
 		StartTimer: 45.0, Illimitable Dominion
@@ -86,6 +96,7 @@ Event trace:
 			Unscheduled by ENCOUNTER_END at 213.75
 		ScheduleTask: announce:Schedule(10.0, "sec") at 290.00 (+290.00)
 			Unscheduled by ENCOUNTER_END at 213.75
+		StartTimer: 32.7, Fear
 	[ 18.87] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 2, 0
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
 	[ 21.05] SPELL_CAST_START: [Kharon: The Red Death] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217694, The Red Death, 0, 0
@@ -97,6 +108,13 @@ Event trace:
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
 	[ 28.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 4, 0
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 30.76] SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
+		ShowAnnounce: Casting Dreadful Visage: -nan sec
+		StopTimer: Timer1217952var
+		StartTimer: 32.7, Fear
+		UpdateTimer: Timer1217952var, 30.7, 32.7
+		ScheduleTask: timer1217952var:DelayedStart() at 32.76 (+2.00)
+			StartTimer: 76.0, Fear
 	[ 33.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 5, 0
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
 	[ 35.78] SPELL_AURA_APPLIED: [Kharon->Tank2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000002, Tank2, 0x511, 1218038, Inhume, 0, DEBUFF, 0
@@ -149,6 +167,13 @@ Event trace:
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
 	[ 93.88] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 17, 0
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[ 95.51] SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
+		ShowAnnounce: Casting Dreadful Visage: -nan sec
+		StopTimer: Timer1217952var
+		StartTimer: 76.0, Fear
+		UpdateTimer: Timer1217952var, 74, 76
+		ScheduleTask: timer1217952var:DelayedStart() at 97.51 (+2.00)
+			StartTimer: 76.0, Fear
 	[ 98.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 18, 0
 		StopTimer: Timer1217844targetcount\t18\tFakePlayer
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
@@ -191,6 +216,13 @@ Event trace:
 	[148.86] SPELL_AURA_APPLIED_DOSE: [Tank2->Tank2: Charred Skin] Player-1-00000002, Tank2, 0x511, Player-1-00000002, Tank2, 0x511, 1217844, Charred Skin, 0, DEBUFF, 28, 0
 		StopTimer: Timer1217844targetcount\t28\tFakePlayer
 		StartTimer: 5.0, Charred Skin (Unknown): Unknown
+	[168.34] SPELL_CAST_START: [Kharon: Dreadful Visage] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, "", nil, 0x0, 1217952, Dreadful Visage, 0, 0
+		ShowAnnounce: Casting Dreadful Visage: -nan sec
+		StopTimer: Timer1217952var
+		StartTimer: 76.0, Fear
+		UpdateTimer: Timer1217952var, 74, 76
+		ScheduleTask: timer1217952var:DelayedStart() at 170.34 (+2.00)
+			StartTimer: 76.0, Fear
 	[173.36] SPELL_AURA_APPLIED: [Kharon->Dps2: Inhume] Creature-0-1-2875-1-237439-0000000002, Kharon, 0xa48, Player-1-00000005, Dps2, 0x512, 1218038, Inhume, 0, DEBUFF, 0
 		ShowSpecialWarning: Target Change - switch to Dps2
 		PlaySound: VoicePack/targetchange
@@ -209,8 +241,8 @@ Event trace:
 		PlaySound: VoicePack/runout
 	[213.75] ENCOUNTER_END: 3143, Kharon, 1, 5, 0, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1218038 1218089
