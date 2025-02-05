@@ -4,7 +4,9 @@ Mod:  DBM-Raids-WarWithin/2644
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 460472 (The Big Hit)
 	Unused event registration: SPELL_AURA_APPLIED 460973 (Dark Lined Cuirass)
+	Unused event registration: SPELL_AURA_APPLIED 473195 (Linked Machines)
 	Unused event registration: SPELL_AURA_APPLIED 473278 (Withering Flames)
+	Unused event registration: SPELL_AURA_REFRESH 473195 (Linked Machines)
 	Unused event registration: SPELL_AURA_REMOVED 460973 (Dark Lined Cuirass)
 	Unused event registration: SPELL_AURA_REMOVED 465009 (Explosive Gaze)
 	Unused event registration: SPELL_AURA_REMOVED 471720 (Spin To Win!)
@@ -49,6 +51,7 @@ Unused objects:
 	[Special Warning] Scattered Payout - switch targets, type=switch, spellId=465580
 	[Special Warning] Withering Flames - move away from others, type=moveaway, spellId=471930
 	[Timer] Cheat to Win! (%s), time=26.70, type=varcount, spellId=465309
+	[Timer] Knockback, time=7.50, type=cast, spellId=465432
 	[Timer] Explosive Jackpot, time=30.00, type=cast, spellId=465587
 	[Yell] %d, type=shortfade, spellId=471930
 	[Yell] Withering Flames, type=shortyell, spellId=471930
@@ -190,7 +193,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761, SPELL_CAST_SUCCESS 465309 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761, SPELL_CAST_SUCCESS 465309 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472 473195, SPELL_AURA_REFRESH 473195, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
 		StartTimer: 4.1, Pay-Line (1)
 		StartTimer: 10.0, Foul Exhaust (1)
 		StartTimer: 15.3, Spin To Win! (1)
