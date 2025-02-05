@@ -18,6 +18,8 @@ Findings:
 	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_SUCCESS 465765 (Maintenance Cycle)
 	Timer for spell ID 460582 (Overload!) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
 	Timer for spell ID 465309 (Cheat to Win!) is triggered by event SPELL_CAST_SUCCESS 465765 (Maintenance Cycle)
+	Timer for spell ID 465432 (Linked Machines) is triggered by event SPELL_AURA_APPLIED 473195 (Linked Machines)
+	Timer for spell ID 465432 (Linked Machines) is triggered by event SPELL_AURA_REFRESH 473195 (Linked Machines)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_SUCCESS 465765 (Maintenance Cycle)
 	Timer for spell ID 471930 (Withering Flames) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
 
@@ -60,6 +62,11 @@ Timers:
 		[392.33] SPELL_CAST_SUCCESS: [One-Armed Bandit: Maintenance Cycle] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465765, Maintenance Cycle, 0, 0
 		[404.91] SPELL_CAST_SUCCESS: [One-Armed Bandit: Cheat to Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465309, Cheat to Win!, 0, 0
 			 Triggered 4x, delta times: 404.91, 25.50, 26.76, 25.15
+	Knockback, time=7.50, type=cast, spellId=465432, triggerDeltas = 405.16, 7.53, 18.01, 17.97, 18.01, 18.01
+		[405.16] SPELL_CAST_START: [One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465432, Linked Machines, 0, 0
+		[412.69] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 473195, Linked Machines, 0, BUFF, 0
+		[430.70] SPELL_AURA_REFRESH: [One-Armed Bandit->One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 473195, Linked Machines, 0, BUFF, 0
+			 Triggered 4x, delta times: 430.70, 17.97, 18.01, 18.01
 	Explosive Jackpot, time=30.00, type=cast, spellId=465587, triggerDeltas = 482.58
 		[482.58] SPELL_CAST_START: [One-Armed Bandit: Explosive Jackpot] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465587, Explosive Jackpot, 0, 0
 	Foul Exhaust (%s), time=36.50, type=varcount, spellId=469993, triggerDeltas = 0.00, 9.38, 31.75, 31.63, 31.68, 31.58, 42.62, 36.54, 31.63, 36.55, 32.82, 31.60, 31.60, 12.95, 11.35, 25.52, 26.75
@@ -224,7 +231,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761, SPELL_CAST_SUCCESS 465309 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761, SPELL_CAST_SUCCESS 465309 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472 473195, SPELL_AURA_REFRESH 473195, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
 		StartTimer: 4.1, Pay-Line (1)
 		StartTimer: 10.0, Foul Exhaust (1)
 		StartTimer: 15.3, The Big Hit (1)
@@ -754,10 +761,13 @@ Event trace:
 		StartTimer: 26.7, Cheat to Win! (2)
 	[405.16] SPELL_CAST_START: [One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465432, Linked Machines, 0, 0
 		ShowAnnounce: Linked Machines
+		StartTimer: 7.5, Knockback
 	[409.75] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (1)
 		PlaySound: VoicePack/specialsoon
 		StartTimer: 32.8, Pay-Line (2)
+	[412.69] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 473195, Linked Machines, 0, BUFF, 0
+		StartTimer: 10.0, Knockback
 	[414.60] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 20.6, The Big Hit (2)
 	[417.27] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps13: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000020, Dps13, 0x512, 460430, Crushed!, 0, DEBUFF, 0
@@ -777,12 +787,16 @@ Event trace:
 		StartTimer: 26.7, Cheat to Win! (3)
 	[430.70] SPELL_CAST_START: [One-Armed Bandit: Hot Hot Heat] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465322, Hot Hot Heat, 0, 0
 		ShowAnnounce: Hot Hot Heat incoming debuff
+	[430.70] SPELL_AURA_REFRESH: [One-Armed Bandit->One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 473195, Linked Machines, 0, BUFF, 0
+		StartTimer: 10.0, Knockback
 	[435.33] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 20.6, The Big Hit (3)
 	[441.34] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (2)
 		PlaySound: VoicePack/specialsoon
 		StartTimer: 32.8, Pay-Line (3)
+	[448.67] SPELL_AURA_REFRESH: [One-Armed Bandit->One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 473195, Linked Machines, 0, BUFF, 0
+		StartTimer: 10.0, Knockback
 	[449.84] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 20.6, The Big Hit (4)
 	[455.95] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
@@ -797,6 +811,8 @@ Event trace:
 		PlaySound: VoicePack/targetchange
 	[464.46] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 20.6, The Big Hit (5)
+	[466.68] SPELL_AURA_REFRESH: [One-Armed Bandit->One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 473195, Linked Machines, 0, BUFF, 0
+		StartTimer: 10.0, Knockback
 	[470.55] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (3)
 		PlaySound: VoicePack/specialsoon
@@ -817,6 +833,8 @@ Event trace:
 		AntiSpam: 3
 		ShowSpecialWarning: Shocking Field damage - move away
 		PlaySound: VoicePack/watchfeet
+	[484.69] SPELL_AURA_REFRESH: [One-Armed Bandit->One-Armed Bandit: Linked Machines] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 473195, Linked Machines, 0, BUFF, 0
+		StartTimer: 10.0, Knockback
 	[492.72] ENCOUNTER_END: 3014, One-Armed Bandit, 15, 20, 0, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
