@@ -101,7 +101,7 @@ Announces:
 	Activate Inventions! (%s), type=count, spellId=473276, triggerDeltas = 30.00, 30.00, 29.96, 85.75, 30.01, 30.01, 85.05, 29.97, 30.00
 		[ 30.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
 			 Triggered 9x, delta times: 30.00, 30.00, 29.96, 85.75, 30.01, 30.01, 85.05, 29.97, 30.00
-	Screwed! on >%s<, type=target, spellId=1217261, triggerDeltas = 53.02, 7.14, 25.95, 2.54, 30.45, 2.50, 110.17, 2.01, 8.00, 21.98, 1.35, 2.38, 2.64, 108.15, 6.07, 25.49
+	Screwed! on >%s<, type=target, spellId=1217261, triggerDeltas = 53.02, 7.14, 25.95, 2.54, 30.45, 2.50, 110.17, 2.01, 8.00, 21.98, 1.35, 2.38, 1.62, 1.02, 106.67, 1.48, 6.07, 25.49
 		[ 53.02] Scheduled at 52.02 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank3: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000003, Tank3, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[ 60.16] Scheduled at 59.16 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank3: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000003, Tank3, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[ 86.11] Scheduled at 85.11 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
@@ -114,7 +114,9 @@ Announces:
 		[263.76] Scheduled at 262.76 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000007, Healer2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[265.11] Scheduled at 264.11 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[267.49] Scheduled at 266.49 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps4: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000011, Dps4, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[269.11] Scheduled at 268.11 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps10: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000020, Dps10, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[270.13] Scheduled at 269.13 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		[376.80] Scheduled at 375.80 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1217261, Screwed!, 0, DEBUFF, 0
 		[378.28] Scheduled at 377.28 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[384.35] Scheduled at 383.35 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000002, Tank2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[409.84] Scheduled at 408.84 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps8: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000015, Dps8, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
@@ -420,9 +422,12 @@ Event trace:
 	[266.64] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
 		ShowAnnounce: Beta Launch
 		PlaySound: VoicePack/phasechange
+	[268.11] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps10: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000020, Dps10, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("Dps10") at 269.11 (+1.00)
+			ShowAnnounce: Screwed! on Dps10
 	[269.13] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		ScheduleTask: announce1217261target:CombinedShow("Healer1") at 270.13 (+1.00)
-			ShowAnnounce: Screwed! on Dps10, Healer4, Healer1
+			ShowAnnounce: Screwed! on Healer4, Healer1
 	[270.71] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
 		StartTimer: 20.0, Bleeding Edge ends
 		StartTimer: 20.0, Wire Transfer (1)
@@ -510,10 +515,12 @@ Event trace:
 	[370.76] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
 		StartTimer: 32.0, Screw Up (3)
 	[375.80] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1217261, Screwed!, 0, DEBUFF, 0
+		ScheduleTask: announce1217261target:CombinedShow("PlayerName") at 376.80 (+1.00)
+			ShowAnnounce: Screwed! on PlayerName
 		PlaySound: VoicePack/screwup
 	[377.28] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		ScheduleTask: announce1217261target:CombinedShow("Healer1") at 378.28 (+1.00)
-			ShowAnnounce: Screwed! on PlayerName, Healer2, Healer1
+			ShowAnnounce: Screwed! on Healer2, Healer1
 	[377.87] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
 		ShowSpecialWarning: Pyro Party Pack - move away from others
 		PlaySound: VoicePack/runout

@@ -48,7 +48,7 @@ Findings:
 	Timer for spell ID 447456 (Paralyzing Venom) is triggered by event SPELL_CAST_START 447076 (Predation)
 	Timer Blades (%s), time=49.00, type=cdcount, spellId=439299 (time=19.00, variance=0.00) got refreshed early with 3.03s remaining
 		Refreshed by: [114.38] SPELL_CAST_SUCCESS: [Queen Ansurek->Dps11: Web Blades] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000011, Dps11, 0x512, 439299, Web Blades, 0, 0
-	Timer Blades (%s), time=49.00, type=cdcount, spellId=439299 (time=21.00, variance=0.00) got refreshed early with 5.00s remaining
+	Timer Blades (%s), time=49.00, type=cdcount, spellId=439299 (time=21.00, variance=0.00) got refreshed early with 5.03s remaining
 		Refreshed by: [455.68] SPELL_CAST_SUCCESS: [Queen Ansurek->Dps13: Web Blades] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000013, Dps13, 0x512, 439299, Web Blades, 0, 0
 	Timer Blades (%s), time=49.00, type=cdcount, spellId=439299 (time=37.00, variance=0.00) got refreshed early with 26.00s remaining
 		Refreshed by: [375.67] SPELL_CAST_SUCCESS: [Queen Ansurek->Dps18: Web Blades] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000019, Dps18, 0x512, 439299, Web Blades, 0, 0
@@ -225,12 +225,10 @@ Announces:
 			 Triggered 2x, delta times: 222.94, 86.33
 	Casting Cosmic Apocalypse: -nan sec, type=cast, spellId=448458, triggerDeltas = 202.57
 		[202.57] SPELL_CAST_START: [Devoted Worshipper: Cosmic Apocalypse] Creature-0-1-2657-1-223318-000000002F, Devoted Worshipper, 0xa48, "", nil, 0x0, 448458, Cosmic Apocalypse, 0, 0
-	Frothy Toxin (%s), type=count, spellId=464638, triggerDeltas = 34.67, 1.50, 57.15, 55.00, 1.61, 1.48
-		[ 34.67] Scheduled at 33.17 by SPELL_AURA_APPLIED: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 0
+	Frothy Toxin (%s), type=count, spellId=464638, triggerDeltas = 36.17, 57.15, 55.00, 3.09
 		[ 36.17] Scheduled at 34.67 by SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 2, 0
 		[ 93.32] Scheduled at 91.82 by SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 3, 0
 		[148.32] Scheduled at 146.82 by SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 2, 0
-		[149.93] Scheduled at 148.43 by SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 3, 0
 		[151.41] Scheduled at 149.91 by SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 4, 0
 
 Special warnings:
@@ -436,8 +434,9 @@ Event trace:
 		StartTimer: 56.0, Nova (2)
 	[ 33.17] SPELL_AURA_APPLIED: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 0
 		ScheduleTask: announce464638count:Schedule(1.0) at 34.67 (+1.50)
-			ShowAnnounce: Frothy Toxin (1)
+			Unscheduled by SPELL_AURA_APPLIED_DOSE at 34.67
 	[ 34.67] SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 2, 0
+		UnscheduleTask: announce464638count:Schedule(1.0) scheduled by ScheduleTask at 33.17
 		ScheduleTask: announce464638count:Schedule(2.0) at 36.17 (+1.50)
 			ShowAnnounce: Frothy Toxin (2)
 	[ 46.37] SPELL_CAST_START: [Queen Ansurek: Liquefy] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 440899, Liquefy, 0, 0
@@ -545,8 +544,9 @@ Event trace:
 			ShowAnnounce: Frothy Toxin (2)
 	[148.43] SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 3, 0
 		ScheduleTask: announce464638count:Schedule(3.0) at 149.93 (+1.50)
-			ShowAnnounce: Frothy Toxin (3)
+			Unscheduled by SPELL_AURA_APPLIED_DOSE at 149.91
 	[149.91] SPELL_AURA_APPLIED_DOSE: [Queen Ansurek->Tank1: Frothy Toxin] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Player-1-00000018, Tank1, 0x511, 464638, Frothy Toxin, 0, DEBUFF, 4, 0
+		UnscheduleTask: announce464638count:Schedule(3.0) scheduled by ScheduleTask at 148.43
 		ScheduleTask: announce464638count:Schedule(4.0) at 151.41 (+1.50)
 			ShowAnnounce: Frothy Toxin (4)
 	[153.83] SPELL_CAST_START: [Queen Ansurek: Predation] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 447076, Predation, 0, 0

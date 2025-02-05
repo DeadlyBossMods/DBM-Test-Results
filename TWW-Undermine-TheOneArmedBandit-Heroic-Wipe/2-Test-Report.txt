@@ -76,13 +76,14 @@ Timers:
 Announces:
 	Stage 2, type=stage, spellId=<none>, triggerDeltas = 392.33
 		[392.33] SPELL_CAST_SUCCESS: [One-Armed Bandit: Maintenance Cycle] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465765, Maintenance Cycle, 0, 0
-	Crushed! on >%s<, type=target, spellId=460430, triggerDeltas = 55.90, 69.69, 32.90, 32.60, 38.03, 30.38, 37.95, 120.82, 58.43
+	Crushed! on >%s<, type=target, spellId=460430, triggerDeltas = 55.90, 69.69, 32.90, 32.60, 38.03, 30.38, 35.45, 2.50, 120.82, 58.43
 		[ 55.90] Scheduled at 54.90 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer2: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000005, Healer2, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[125.59] Scheduled at 124.59 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[158.49] Scheduled at 157.49 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer6: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000019, Healer6, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[191.09] Scheduled at 190.09 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps11: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000015, Dps11, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[229.12] Scheduled at 228.12 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps3: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000003, Dps3, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[259.50] Scheduled at 258.50 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer3: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000007, Healer3, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+		[294.95] Scheduled at 293.95 by SPELL_AURA_APPLIED: [One-Armed Bandit->Tank1: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460430, Crushed!, 0, DEBUFF, 0
 		[297.45] Scheduled at 296.45 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps8: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000012, Dps8, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[418.27] Scheduled at 417.27 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps13: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000020, Dps13, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		[476.70] Scheduled at 475.70 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps7: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000011, Dps7, 0x512, 460430, Crushed!, 0, DEBUFF, 0
@@ -565,9 +566,12 @@ Event trace:
 	[293.58] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer5: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000018, Healer5, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
 		ScheduleTask: announce471930target:CombinedShow("Healer5") at 293.88 (+0.30)
 			ShowAnnounce: Withering Flames on Healer5
+	[293.95] SPELL_AURA_APPLIED: [One-Armed Bandit->Tank1: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000017, Tank1, 0x511, 460430, Crushed!, 0, DEBUFF, 0
+		ScheduleTask: announce460430target:CombinedShow("PlayerName") at 294.95 (+1.00)
+			ShowAnnounce: Crushed! on PlayerName
 	[296.45] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps8: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000012, Dps8, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		ScheduleTask: announce460430target:CombinedShow("Dps8") at 297.45 (+1.00)
-			ShowAnnounce: Crushed! on PlayerName, Dps13, Dps4, Dps10, Dps8
+			ShowAnnounce: Crushed! on Dps13, Dps4, Dps10, Dps8
 	[297.25] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
 		ShowAnnounce: Reward: Coin and Bomb (5)
 	[297.25] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
