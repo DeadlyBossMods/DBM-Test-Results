@@ -26,28 +26,19 @@ Findings:
 	Unused event registration: SPELL_PERIODIC_MISSED 460576 (Shocking Field)
 	Unused event registration: UNIT_DIED
 	Timer for spell ID 460181 (Pay-Line) is triggered by event SPELL_CAST_START 464772 (Reward: Shock and Flame)
+	Timer for spell ID 460181 (Pay-Line) is triggered by event SPELL_CAST_START 464776 (Fraud Detected!)
 	Timer for spell ID 460181 (Pay-Line) is triggered by event SPELL_CAST_START 464806 (Reward: Flame and Coin)
 	Timer for spell ID 460181 (Pay-Line) is triggered by event SPELL_CAST_START 464810 (Reward: Coin and Bomb)
 	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_START 464772 (Reward: Shock and Flame)
+	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_START 464776 (Fraud Detected!)
 	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_START 464806 (Reward: Flame and Coin)
 	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_START 464810 (Reward: Coin and Bomb)
 	Timer for spell ID 460582 (Overload!) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464772 (Reward: Shock and Flame)
+	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464776 (Fraud Detected!)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464806 (Reward: Flame and Coin)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464810 (Reward: Coin and Bomb)
 	Timer for spell ID 471930 (Withering Flames) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
-	Timer Foul Exhaust (%s), time=36.50, type=varcount, spellId=469993 (time=10.00, variance=1.60) got refreshed early with 1.83s remaining
-		Refreshed by: [  8.14] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
-	Timer Foul Exhaust (%s), time=36.50, type=varcount, spellId=469993 (time=12.20, variance=0.40) got refreshed early with 0.80s remaining
-		Refreshed by: [167.70] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
-	Timer Foul Exhaust (%s), time=36.50, type=varcount, spellId=469993 (time=36.10, variance=3.30) got refreshed early with 21.57s remaining
-		Refreshed by: [218.69] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
-	Timer Pay-Line (%s), time=36.50, type=varcount, spellId=460181 (time=24.00, variance=6.10) got refreshed early with 6.53s remaining
-		Refreshed by: [173.76] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
-	Timer Pay-Line (%s), time=36.50, type=varcount, spellId=460181 (time=4.10, variance=0.40) got refreshed early with 0.77s remaining
-		Refreshed by: [  3.31] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
-	Timer The Big Hit (%s), time=40.50, type=varcount, spellId=460472 (time=28.90, variance=4.60) got refreshed early with 5.33s remaining
-		Refreshed by: [179.85] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 
 Unused objects:
 	[Announce] Stage 2, type=stage, spellId=<none>
@@ -73,20 +64,22 @@ Unused objects:
 	[Yell] Withering Flames, type=shortyell, spellId=471930
 
 Timers:
-	Pay-Line (%s), time=36.50, type=varcount, spellId=460181, triggerDeltas = 0.00, 3.31, 26.87, 18.00, 5.12, 26.76, 22.64, 5.35, 26.82, 21.40, 17.49, 40.08
+	Pay-Line (%s), time=36.50, type=varcount, spellId=460181, triggerDeltas = 0.00, 3.31, 26.87, 18.00, 5.12, 26.76, 22.64, 5.35, 26.82, 21.40, 17.49, 34.44, 5.64
 		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 16, 20, 0
 		[  3.31] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 			 Triggered 8x, delta times: 3.31, 26.87, 23.12, 26.76, 27.99, 26.82, 38.89, 40.08
 		[ 48.18] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
 		[102.70] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
 		[156.27] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
-	The Big Hit (%s), time=40.50, type=varcount, spellId=460472, triggerDeltas = 0.00, 20.39, 18.27, 9.52, 16.08, 20.70, 17.74, 16.34, 20.77, 16.46, 23.58, 18.21
+		[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
+	The Big Hit (%s), time=40.50, type=varcount, spellId=460472, triggerDeltas = 0.00, 20.39, 18.27, 9.52, 16.08, 20.70, 17.74, 16.34, 20.77, 16.46, 23.58, 18.21, 10.14
 		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 16, 20, 0
 		[ 20.39] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 			 Triggered 8x, delta times: 20.39, 18.27, 25.60, 20.70, 34.08, 20.77, 40.04, 18.21
 		[ 48.18] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
 		[102.70] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
 		[156.27] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
+		[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
 	Overload!, time=18.20, type=cdnp, spellId=460582, triggerDeltas = 15.48, 3.32, 0.01, 0.00, 15.02, 39.74, 0.00, 0.00, 16.62, 2.08, 34.88, 0.01, 0.00, 15.66, 1.82, 33.58, 0.01, 0.00, 16.17, 1.09, 1.20, 19.59
 		[ 15.48] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-232599-0000000001, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
 		[ 18.80] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
@@ -102,13 +95,14 @@ Timers:
 		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 16, 20, 0
 		[ 16.72] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 			 Triggered 4x, delta times: 16.72, 54.81, 53.59, 51.08
-	Foul Exhaust (%s), time=36.50, type=varcount, spellId=469993, triggerDeltas = 0.00, 8.14, 36.60, 3.44, 9.98, 32.87, 11.67, 10.25, 32.88, 10.44, 11.43, 36.43, 14.56
+	Foul Exhaust (%s), time=36.50, type=varcount, spellId=469993, triggerDeltas = 0.00, 8.14, 36.60, 3.44, 9.98, 32.87, 11.67, 10.25, 32.88, 10.44, 11.43, 36.43, 4.07, 10.49
 		[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 16, 20, 0
 		[  8.14] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 			 Triggered 9x, delta times: 8.14, 36.60, 13.42, 32.87, 21.92, 32.88, 21.87, 36.43, 14.56
 		[ 48.18] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
 		[102.70] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
 		[156.27] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
+		[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
 	Withering Flames, time=18.20, type=cdnp, spellId=471930, triggerDeltas = 18.80, 0.01, 0.00, 13.89, 19.72, 21.15, 0.00, 0.00, 12.59, 19.46, 21.53, 0.01, 0.00, 12.58, 8.21, 30.27, 0.01, 0.00, 14.98, 6.05, 2.44, 19.42
 		[ 18.80] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
 			 Triggered 12x, delta times: 18.80, 0.01, 0.00, 54.76, 0.00, 0.00, 53.58, 0.01, 0.00, 51.06, 0.01, 0.00
@@ -118,10 +112,10 @@ Timers:
 Announces:
 	Crushed! on >%s<, type=target, spellId=460430, triggerDeltas = 80.61
 		[ 80.61] Scheduled at 79.61 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps4: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000006, Dps4, 0x512, 460430, Crushed!, 0, DEBUFF, 0
-	Fraud Detected! on >%s<, type=target, spellId=461068, triggerDeltas = 211.19
-		[211.19] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461068, Fraud Detected!, 0, BUFF, 0
 	Reward: Shock and Flame (%s), type=count, spellId=464772, triggerDeltas = 48.18
 		[ 48.18] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
+	Casting Fraud Detected!: -nan sec, type=cast, spellId=464776, triggerDeltas = 208.20
+		[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
 	Reward: Flame and Coin (%s), type=count, spellId=464806, triggerDeltas = 156.27
 		[156.27] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
 	Reward: Coin and Bomb (%s), type=count, spellId=464810, triggerDeltas = 102.70
@@ -191,10 +185,10 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761, SPELL_CAST_SUCCESS 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 461068 465009 460973 473278 471927 460430 460472 473195, SPELL_AURA_REFRESH 473195, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761 464776, SPELL_CAST_SUCCESS 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 465009 460973 473278 471927 460430 460472 473195, SPELL_AURA_REFRESH 473195, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
 		StartTimer: 4.1, Pay-Line (1)
 		StartTimer: 10.0, Foul Exhaust (1)
-		StartTimer: 15.3, Spin To Win! (1)
+		StartTimer: 16.7, Spin To Win! (1)
 		StartTimer: 20.6, The Big Hit (1)
 	[  3.31] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (1)
@@ -202,7 +196,7 @@ Event trace:
 		StartTimer: 27.1, Pay-Line (2)
 	[  8.14] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (1)
-		StartTimer: 36.1, Foul Exhaust (2)
+		StartTimer: 36.6, Foul Exhaust (2)
 	[ 15.48] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-232599-0000000001, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
 		StartTimer: 18.2, Overload!
 		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
@@ -210,17 +204,17 @@ Event trace:
 	[ 16.72] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (1)
 		PlaySound: VoicePack/phasechange
-		StartTimer: 53.5, Spin To Win! (2)
+		StartTimer: 54.8, Spin To Win! (2)
 	[ 18.75] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[ 18.80] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[ 18.81] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000062, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000062, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[ 18.81] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000006F, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000006F, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[ 20.39] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 21.5, The Big Hit (2)
@@ -249,7 +243,7 @@ Event trace:
 		StartTimer: 21.5, The Big Hit (3)
 	[ 44.74] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (2)
-		StartTimer: 36.1, Foul Exhaust (3)
+		StartTimer: 36.6, Foul Exhaust (3)
 	[ 48.17] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StopTimer: Timer461060active
 	[ 48.18] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
@@ -258,7 +252,7 @@ Event trace:
 		StopTimer: Timer469993varcount\t3
 		StopTimer: Timer460472varcount\t3
 		StartTimer: 5.2, Pay-Line (3)
-		StartTimer: 9.7, Foul Exhaust (3)
+		StartTimer: 10.2, Foul Exhaust (3)
 		StartTimer: 16.3, The Big Hit (3)
 	[ 52.42] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
@@ -268,23 +262,23 @@ Event trace:
 		StartTimer: 27.1, Pay-Line (4)
 	[ 58.16] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (3)
-		StartTimer: 36.1, Foul Exhaust (4)
+		StartTimer: 36.6, Foul Exhaust (4)
 	[ 64.26] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 21.5, The Big Hit (4)
 	[ 71.53] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (2)
 		PlaySound: VoicePack/phasechange
-		StartTimer: 53.5, Spin To Win! (3)
+		StartTimer: 54.8, Spin To Win! (3)
 	[ 73.56] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[ 73.57] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000022, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000022, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[ 73.57] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000065, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000065, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[ 73.57] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000073, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000073, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[ 79.61] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps4: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000006, Dps4, 0x512, 460430, Crushed!, 0, DEBUFF, 0
 		ScheduleTask: announce460430target:CombinedShow("Dps4") at 80.61 (+1.00)
@@ -308,7 +302,7 @@ Event trace:
 		PlaySound: VoicePack/kick1r
 	[ 91.03] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (4)
-		StartTimer: 36.1, Foul Exhaust (5)
+		StartTimer: 36.6, Foul Exhaust (5)
 	[ 92.27] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000073, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
 		StartTimer: 18.2, Overload!
 		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
@@ -323,7 +317,7 @@ Event trace:
 		StopTimer: Timer469993varcount\t5
 		StopTimer: Timer460472varcount\t5
 		StartTimer: 5.2, Pay-Line (5)
-		StartTimer: 9.7, Foul Exhaust (5)
+		StartTimer: 10.2, Foul Exhaust (5)
 		StartTimer: 16.3, The Big Hit (5)
 	[105.62] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000073, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
@@ -336,7 +330,7 @@ Event trace:
 			ShowAnnounce: Explosive Gaze on Dps12, Healer3, Healer2, Dps8
 	[112.95] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (5)
-		StartTimer: 36.1, Foul Exhaust (6)
+		StartTimer: 36.6, Foul Exhaust (6)
 	[119.04] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 21.5, The Big Hit (6)
 	[122.10] SPELL_AURA_APPLIED: [Premium Dynamite Booty->Healer5: Explosive Gaze] Creature-0-1-2769-1-231027-0000000076, Premium Dynamite Booty, 0xa48, Player-1-00000017, Healer5, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
@@ -345,17 +339,17 @@ Event trace:
 	[125.12] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (3)
 		PlaySound: VoicePack/phasechange
-		StartTimer: 53.5, Spin To Win! (4)
+		StartTimer: 54.8, Spin To Win! (4)
 	[127.15] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[127.15] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000003D, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000003D, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[127.16] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000006A, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000006A, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[127.16] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000077, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000077, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[134.87] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (6)
@@ -379,7 +373,7 @@ Event trace:
 		PlaySound: VoicePack/kick1r
 	[145.83] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (6)
-		StartTimer: 36.1, Foul Exhaust (7)
+		StartTimer: 36.6, Foul Exhaust (7)
 	[147.95] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000077, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
 	[149.94] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer4: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000015, Healer4, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
@@ -397,7 +391,7 @@ Event trace:
 		StartTimer: 28.9, The Big Hit (7)
 	[167.70] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (7)
-		StartTimer: 36.1, Foul Exhaust (8)
+		StartTimer: 36.6, Foul Exhaust (8)
 	[173.76] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (7)
 		PlaySound: VoicePack/specialsoon
@@ -405,17 +399,17 @@ Event trace:
 	[176.20] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (4)
 		PlaySound: VoicePack/phasechange
-		StartTimer: 53.5, Spin To Win! (5)
+		StartTimer: 54.8, Spin To Win! (5)
 	[178.22] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StartTimer: 30.0, Spin To Win! ends
 	[178.22] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-0000000054, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-0000000054, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[178.23] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000006B, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000006B, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[178.23] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000007A, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000007A, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
-		StartTimer: 13.3, Withering Flames
+		StartTimer: 12.6, Withering Flames
 		StartTimer: 15.0, Overload!
 	[179.85] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 21.5, The Big Hit (8)
@@ -449,11 +443,16 @@ Event trace:
 			ShowAnnounce: Withering Flames on Healer4
 	[204.13] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (8)
-		StartTimer: 36.1, Foul Exhaust (9)
+		StartTimer: 36.6, Foul Exhaust (9)
 	[207.29] SPELL_AURA_APPLIED: [Dps9->Dps9: Token: Bomb] Player-1-00000014, Dps9, 0x512, Player-1-00000014, Dps9, 0x512, 472837, Token: Bomb, 0, DEBUFF, 0
 		ShowAnnounce: Token: Bomb on Dps9
-	[211.19] SPELL_AURA_APPLIED: [One-Armed Bandit->One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461068, Fraud Detected!, 0, BUFF, 0
-		ShowAnnounce: Fraud Detected! on One-Armed Bandit
+	[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
+		ShowAnnounce: Casting Fraud Detected!: -nan sec
+		StopTimer: Timer469993varcount\t9
+		StopTimer: Timer460472varcount\t9
+		StartTimer: 5.7, Pay-Line (8)
+		StartTimer: 10.6, Foul Exhaust (9)
+		StartTimer: 16.6, The Big Hit (9)
 	[213.84] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (8)
 		PlaySound: VoicePack/specialsoon
@@ -464,7 +463,7 @@ Event trace:
 		PlaySound: VoicePack/kick2r
 	[218.69] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (9)
-		StartTimer: 36.1, Foul Exhaust (10)
+		StartTimer: 36.6, Foul Exhaust (10)
 	[221.12] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000006B, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
 	[223.26] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps10: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000016, Dps10, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
