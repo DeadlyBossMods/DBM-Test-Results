@@ -3,7 +3,6 @@ Mod:  DBM-Raids-WarWithin/2645
 
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1215898 (Static Charge)
-	Unused event registration: SPELL_AURA_APPLIED 1222408 (Head Honcho: Mug'Zee)
 	Unused event registration: SPELL_AURA_APPLIED 1222948 (Electro-Charged Shield)
 	Unused event registration: SPELL_AURA_APPLIED 466476 (Frostshatter Boots)
 	Unused event registration: SPELL_AURA_APPLIED 469369 (Spray and Pray)
@@ -24,6 +23,7 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
 	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_START 463967 (Bloodlust)
 	Unused event registration: SPELL_CAST_START 466545 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_SUCCESS 467379 (Goblin-guided Rocket)
@@ -74,6 +74,7 @@ Unused objects:
 	[Timer] Intermission, time=20.50, type=intermission, spellId=471419
 	[Timer] Shakedown, time=3.00, type=cdnp, spellId=472659
 	[Timer] Static Charge (%s), time=16.00, type=cdcount, spellId=1215953
+	[Timer] Double-Minded Fury, time=97.30, type=next, spellId=1216142
 	[Yell] %d, type=shortfade, spellId=466545
 	[Yell] Spray and Pray on PlayerName, type=yell, spellId=466545
 	[Yell] %d, type=shortfade, spellId=467380
@@ -184,7 +185,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085, SPELL_CAST_SUCCESS 468658 468694 467380 468728 468794 467379, SPELL_AURA_APPLIED 1222408 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 468658 468694 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
 	[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug on Mug'Zee
 		StartTimer: 13.5, Earthshaker Gaol (1)

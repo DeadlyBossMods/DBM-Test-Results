@@ -3,7 +3,6 @@ Mod:  DBM-Raids-WarWithin/2645
 
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1215898 (Static Charge)
-	Unused event registration: SPELL_AURA_APPLIED 1222408 (Head Honcho: Mug'Zee)
 	Unused event registration: SPELL_AURA_APPLIED 1222948 (Electro-Charged Shield)
 	Unused event registration: SPELL_AURA_APPLIED 466476 (Frostshatter Boots)
 	Unused event registration: SPELL_AURA_APPLIED 467225 (Solid Gold)
@@ -26,6 +25,7 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
 	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_START 463967 (Bloodlust)
 	Unused event registration: SPELL_CAST_START 466545 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_SUCCESS 467379 (Goblin-guided Rocket)
@@ -76,6 +76,7 @@ Unused objects:
 	[Timer] Intermission, time=20.50, type=intermission, spellId=471419
 	[Timer] Shakedown, time=3.00, type=cdnp, spellId=472659
 	[Timer] Static Charge (%s), time=16.00, type=cdcount, spellId=1215953
+	[Timer] Double-Minded Fury, time=97.30, type=next, spellId=1216142
 	[Yell] %d, type=shortfade, spellId=466545
 	[Yell] Spray and Pray on PlayerName, type=yell, spellId=466545
 	[Yell] %d, type=shortfade, spellId=467380
@@ -215,7 +216,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085, SPELL_CAST_SUCCESS 468658 468694 467380 468728 468794 467379, SPELL_AURA_APPLIED 1222408 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 468658 468694 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
 	[  0.11] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee on Mug'Zee
 		StartTimer: 13.7, Unstable Crawler Mines (1)
@@ -442,10 +443,10 @@ Event trace:
 		StopTimer: Timer466518varcount\t2
 	[118.52] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee on Mug'Zee
-		StartTimer: 13.7, Unstable Crawler Mines (2)
-		StartTimer: 29.8, Goblin-guided Rocket (3)
-		StartTimer: 42.4, Double Whammy Shot (2)
-		StartTimer: 50.0, Spray and Pray (2)
+		StartTimer: 13.7, Unstable Crawler Mines (1)
+		StartTimer: 29.8, Goblin-guided Rocket (1)
+		StartTimer: 42.4, Double Whammy Shot (1)
+		StartTimer: 50.0, Spray and Pray (1)
 	[118.53] SPELL_CAST_SUCCESS: [Mug'Zee: Uncontrolled Destruction] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468694, Uncontrolled Destruction, 0, 0
 		ShowSpecialWarning: Uncontrolled Destruction!
 		PlaySound: VoicePack/aesoon
@@ -476,8 +477,8 @@ Event trace:
 	[131.49] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 131.59 (+0.10)
 	[132.38] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
-		ShowAnnounce: Unstable Crawler Mines (2)
-		StartTimer: 43.7, Unstable Crawler Mines (3)
+		ShowAnnounce: Unstable Crawler Mines (1)
+		StartTimer: 43.7, Unstable Crawler Mines (2)
 	[133.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000002A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000002A", "ArcTarget", 0.1, 8.0) at 134.03 (+0.10)
 	[134.34] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000004B, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
@@ -552,10 +553,10 @@ Event trace:
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000002A", "ArcTarget", 0.1, 8.0) at 177.98 (+0.10)
 	[177.97] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug on Mug'Zee
-		StartTimer: 16.0, Earthshaker Gaol (2)
-		StartTimer: 25.0, Molten Gold Knuckles (2)
-		StartTimer: 31.2, Frostshatter Boots (2)
-		StartTimer: 45.0, Stormfury Finger Gun (2)
+		StartTimer: 16.0, Earthshaker Gaol (1)
+		StartTimer: 25.0, Molten Gold Knuckles (1)
+		StartTimer: 31.2, Frostshatter Boots (1)
+		StartTimer: 45.0, Stormfury Finger Gun (1)
 	[178.01] SPELL_CAST_SUCCESS: [Mug'Zee: Elemental Carnage] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468658, Elemental Carnage, 0, 0
 		ShowSpecialWarning: Elemental Carnage!
 		PlaySound: VoicePack/aesoon
@@ -581,7 +582,7 @@ Event trace:
 	[193.37] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000053, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000053", "ArcTarget", 0.1, 8.0) at 193.47 (+0.10)
 	[195.35] SPELL_CAST_START: [Mug'Zee: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 474461, Earthshaker Gaol, 0, 0
-		StartTimer: 43.7, Earthshaker Gaol (3)
+		StartTimer: 43.7, Earthshaker Gaol (2)
 	[196.23] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000002A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000002A", "ArcTarget", 0.1, 8.0) at 196.33 (+0.10)
 	[197.06] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000053, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
@@ -614,7 +615,7 @@ Event trace:
 	[204.34] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000053, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000053", "ArcTarget", 0.1, 8.0) at 204.44 (+0.10)
 	[205.78] SPELL_CAST_START: [Mug'Zee: Molten Gold Knuckles] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466518, Molten Gold Knuckles, 0, 0
-		StartTimer: 50.0, Molten Gold Knuckles (3)
+		StartTimer: 50.0, Molten Gold Knuckles (2)
 	[206.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000058, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
@@ -639,7 +640,7 @@ Event trace:
 	[211.68] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000053, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000053", "ArcTarget", 0.1, 8.0) at 211.78 (+0.10)
 	[212.70] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
-		StartTimer: 37.4, Frostshatter Boots (3)
+		StartTimer: 37.4, Frostshatter Boots (2)
 	[213.31] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000002A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000002A", "ArcTarget", 0.1, 8.0) at 213.41 (+0.10)
 	[213.73] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000058, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
@@ -672,9 +673,9 @@ Event trace:
 	[227.51] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000002A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000002A", "ArcTarget", 0.1, 8.0) at 227.61 (+0.10)
 	[227.99] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
-		ShowSpecialWarning: Stormfury Finger Gun (2) - dodge attack
+		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-		StartTimer: 36.2, Stormfury Finger Gun (3)
+		StartTimer: 36.2, Stormfury Finger Gun (2)
 	[228.35] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000058, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
@@ -692,16 +693,16 @@ Event trace:
 	[234.84] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-000000002A, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-000000002A, Mk II Electro Shocker, 0xa48, 1215595, Faulty Wiring, 0, BUFF, 0
 		ShowAnnounce: Faulty Wiring on Mk II Electro Shocker
 	[237.96] SPELL_AURA_REMOVED: [Mug'Zee->Mug'Zee: Head Honcho: Mug] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466459, Head Honcho: Mug, 0, BUFF, 0
-		StopTimer: Timer474461cdcount\t3
-		StopTimer: Timer466476cdcount\t3
-		StopTimer: Timer466509cdcount\t3
-		StopTimer: Timer466518varcount\t3
+		StopTimer: Timer474461cdcount\t2
+		StopTimer: Timer466476cdcount\t2
+		StopTimer: Timer466509cdcount\t2
+		StopTimer: Timer466518varcount\t2
 	[237.96] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee on Mug'Zee
-		StartTimer: 13.7, Unstable Crawler Mines (3)
-		StartTimer: 29.8, Goblin-guided Rocket (5)
-		StartTimer: 42.4, Double Whammy Shot (3)
-		StartTimer: 50.0, Spray and Pray (3)
+		StartTimer: 13.7, Unstable Crawler Mines (1)
+		StartTimer: 29.8, Goblin-guided Rocket (1)
+		StartTimer: 42.4, Double Whammy Shot (1)
+		StartTimer: 50.0, Spray and Pray (1)
 	[237.97] SPELL_CAST_SUCCESS: [Mug'Zee: Uncontrolled Destruction] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468694, Uncontrolled Destruction, 0, 0
 		ShowSpecialWarning: Uncontrolled Destruction!
 		PlaySound: VoicePack/aesoon
@@ -734,8 +735,8 @@ Event trace:
 	[251.50] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000053, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000053", "ArcTarget", 0.1, 8.0) at 251.60 (+0.10)
 	[251.86] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
-		ShowAnnounce: Unstable Crawler Mines (3)
-		StartTimer: 43.7, Unstable Crawler Mines (4)
+		ShowAnnounce: Unstable Crawler Mines (1)
+		StartTimer: 43.7, Unstable Crawler Mines (2)
 	[252.70] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000044, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000044", "ArcTarget", 0.1, 8.0) at 252.80 (+0.10)
 	[253.92] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000005C, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
