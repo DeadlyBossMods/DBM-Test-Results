@@ -19,6 +19,8 @@ Findings:
 	Timer for spell ID 24687 (Aspect of Jeklik) is triggered by event SPELL_AURA_APPLIED 468491 (Aspect of Arlokk)
 	SpecialWarning for spell ID 24689 (Aspect of Thekal) is triggered by event SPELL_AURA_APPLIED 468408 (Bloodlust)
 	Timer for spell ID 24689 (Aspect of Thekal) is triggered by event SPELL_AURA_APPLIED 468408 (Bloodlust)
+	Timer Special, time=20.00, type=nextspecial, spellId=24687 (time=18.00, variance=0.00) got refreshed early with 0.10s remaining
+		Refreshed by: [139.99] SPELL_AURA_APPLIED: [Hakkar->Hakkar: Bloodlust] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, 468408, Bloodlust, 0, BUFF, 0
 
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
@@ -196,12 +198,12 @@ Event trace:
 		StartTimer: 20.0, Cause Insanity
 	[202.76] ENCOUNTER_END: 793, Hakkar, 226, 20, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: mod:AspectTimer(2.0) scheduled by ScheduleTask at 201.99
-		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: mod:AspectTimer(2.0) scheduled by ScheduleTask at 201.99
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce24324soon:Schedule() scheduled by ScheduleTask at 181.03
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 24328 24689
