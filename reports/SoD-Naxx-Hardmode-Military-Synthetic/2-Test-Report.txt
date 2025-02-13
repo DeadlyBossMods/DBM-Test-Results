@@ -119,10 +119,10 @@ Event trace:
 	[70.10] RAID_BOSS_EMOTE: %s blabla ROAR, Something, 0, true, 0
 		ScheduleTask: mod:TryHandleOrders("%s blabla ROAR", "RAID_BOSS_EMOTE") at 70.30 (+0.20)
 			AntiSpam: TryHandleOrders
+				Filtered: 1x ExecuteScheduledTask at 70.5
 			AntiSpam: MarchingOrders
-				Filtered: 2x ExecuteScheduledTask at 70.5, 72
+				Filtered: 1x ExecuteScheduledTask at 72
 			ShowSpecialWarning: Marching Order: %s blabla ROAR
 			PlaySound: VoicePack/targetyou
 	[70.30] CHAT_MSG_RAID_WARNING: ROAR for me!, Tandanu, nil, nil, Tandanu, nil, 0, 0, nil, 0, 2602, Player-1-00000001, 0, false, false, false, false, 0
 		ScheduleTask: mod:TryHandleOrders("ROAR for me!", "CHAT_MSG_RAID_WARNING") at 70.50 (+0.20)
-			AntiSpam: TryHandleOrders
