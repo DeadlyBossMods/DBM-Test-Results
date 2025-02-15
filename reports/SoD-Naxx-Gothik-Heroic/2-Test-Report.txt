@@ -14,6 +14,10 @@ Timers:
 		[  0.00] ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
 		[ 27.00] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
 			 Triggered 17x, delta times: 27.00, 20.00, 20.00, 10.00, 10.00, 15.00, 5.00, 20.00, 10.00, 10.00, 5.00, 15.00, 10.00, 10.00, 10.00, 5.00, 5.00
+	Twin Teleport, time=20.00, type=next, spellId=800, triggerDeltas = 270.70, 20.00, 20.00, 20.00, 20.00
+		[270.70] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+			 Triggered 5x, delta times: 270.70, 20.00, 20.00, 20.00, 20.00
+		[370.43] UNIT_HEALTH: target, 0
 
 Announces:
 	Knight down, type=nil, spellId=<none>, triggerDeltas = 92.79, 1.35, 25.81, 3.52, 22.81, 3.10, 25.17, 1.60, 22.62, 12.40, 27.09, 15.99, 25.61, 2.46
@@ -46,7 +50,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, UNIT_DIED
+		RegisterEvents: Regular, UNIT_DIED, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus
 		StartTimer: 270.0, Phase 2
 		ScheduleTask: announce2stage:Schedule() at 270.00 (+270.00)
 			ShowAnnounce: Stage 2
@@ -140,6 +144,18 @@ Event trace:
 																				ShowAnnounce: Wave 18: 1 Riders, 2 Knights and 3 Trainees in 3 sec
 																			ScheduleTask: mod:NextWave() at 227.00 (+20.00)
 																				ShowAnnounce: Wave 18: 1 Riders, 2 Knights and 3 Trainees spawned
+		ScheduleTask: mod:Teleport() at 270.70 (+270.70)
+			StartTimer: 20.0, Twin Teleport
+			ScheduleTask: mod:Teleport() at 290.70 (+20.00)
+				StartTimer: 20.0, Twin Teleport
+				ScheduleTask: mod:Teleport() at 310.70 (+20.00)
+					StartTimer: 20.0, Twin Teleport
+					ScheduleTask: mod:Teleport() at 330.70 (+20.00)
+						StartTimer: 20.0, Twin Teleport
+						ScheduleTask: mod:Teleport() at 350.70 (+20.00)
+							StartTimer: 20.0, Twin Teleport
+							ScheduleTask: mod:Teleport() at 370.70 (+20.00)
+								Unscheduled by UNIT_HEALTH at 370.43
 	[ 92.79] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000031, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
 		ShowAnnounce: Knight down
 	[ 94.14] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000125, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
@@ -176,5 +192,8 @@ Event trace:
 		ShowAnnounce: Knight down
 	[282.32] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000174, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
 		ShowAnnounce: Knight down
+	[370.43] UNIT_HEALTH: target, 0
+		UnscheduleTask: mod:Teleport() scheduled by ScheduleTask at 350.70
+		StopTimer: Timer800next
 	[388.84] UNIT_DIED: [->Gothik the Harvester] "", nil, 0x0, Creature-0-1-533-1-16060-0000000001, Gothik the Harvester, 0xa48, -1, false, 0, 0
 		EndCombat: Main CID Down
