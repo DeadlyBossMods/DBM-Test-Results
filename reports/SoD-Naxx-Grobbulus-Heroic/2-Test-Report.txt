@@ -1,0 +1,125 @@
+Test: SoD/Naxx/Grobbulus/Heroic
+Mod:  DBM-Raids-Vanilla/GrobbulusVanilla
+
+Findings:
+	None
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Special Warning] Mutating Injection on you, type=you, spellId=28169
+	[Yell] Mutating Injection on PlayerName, type=yell, spellId=28169
+
+Timers:
+	Berserk, time=720.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[ 0.00] ENCOUNTER_START: 1111, Grobbulus, 186, 40, 0
+	Mutating Injection: %s, time=10.00, type=target, spellId=28169, triggerDeltas = 14.39, 11.31, 8.11, 16.16, 8.09, 10.14
+		[14.39] SPELL_AURA_APPLIED: [Grobbulus->Dps14: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000016, Dps14, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[18.51] SPELL_AURA_REMOVED: [Grobbulus->Dps14: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000016, Dps14, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[25.70] SPELL_AURA_APPLIED: [Grobbulus->Dps11: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000013, Dps11, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[29.40] SPELL_AURA_REMOVED: [Grobbulus->Dps11: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000013, Dps11, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[33.81] SPELL_AURA_APPLIED: [Grobbulus->Dps2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000002, Dps2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[49.97] SPELL_AURA_APPLIED: [Grobbulus->Healer2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000017, Healer2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[53.52] SPELL_AURA_REMOVED: [Grobbulus->Healer2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000017, Healer2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[58.06] SPELL_AURA_APPLIED: [Grobbulus->Dps6: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000007, Dps6, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[63.30] SPELL_AURA_REMOVED: [Grobbulus->Dps6: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000007, Dps6, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[68.20] SPELL_AURA_APPLIED: [Grobbulus->Dps15: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000020, Dps15, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[72.36] SPELL_AURA_REMOVED: [Grobbulus->Dps15: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000020, Dps15, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+	Poison Cloud, time=15.00, type=cd, spellId=28240, triggerDeltas = 9.53, 16.17, 16.20, 16.16, 16.60
+		[ 9.53] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
+			 Triggered 5x, delta times: 9.53, 16.17, 16.20, 16.16, 16.60
+
+Announces:
+	Mutating Injection on >%s<, type=target, spellId=28169, triggerDeltas = 14.39, 11.31, 8.11, 16.16, 8.09, 10.14
+		[14.39] SPELL_AURA_APPLIED: [Grobbulus->Dps14: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000016, Dps14, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[25.70] SPELL_AURA_APPLIED: [Grobbulus->Dps11: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000013, Dps11, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[33.81] SPELL_AURA_APPLIED: [Grobbulus->Dps2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000002, Dps2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[49.97] SPELL_AURA_APPLIED: [Grobbulus->Healer2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000017, Healer2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[58.06] SPELL_AURA_APPLIED: [Grobbulus->Dps6: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000007, Dps6, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		[68.20] SPELL_AURA_APPLIED: [Grobbulus->Dps15: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000020, Dps15, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+	Poison Cloud, type=spell, spellId=28240, triggerDeltas = 9.53, 16.17, 16.20, 16.16, 16.60
+		[ 9.53] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
+			 Triggered 5x, delta times: 9.53, 16.17, 16.20, 16.16, 16.60
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[ 0.00] ENCOUNTER_START: 1111, Grobbulus, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 28169, SPELL_AURA_REMOVED 28169, SPELL_CAST_SUCCESS 28240
+		StartTimer: 720.0, Berserk
+		ScheduleTask: announce:Schedule(10.0, "min") at 120.00 (+120.00)
+			Unscheduled by ENCOUNTER_END at 75.26
+		ScheduleTask: announce:Schedule(5.0, "min") at 420.00 (+420.00)
+			Unscheduled by ENCOUNTER_END at 75.26
+		ScheduleTask: announce:Schedule(3.0, "min") at 540.00 (+540.00)
+			Unscheduled by ENCOUNTER_END at 75.26
+		ScheduleTask: announce:Schedule(1.0, "min") at 660.00 (+660.00)
+			Unscheduled by ENCOUNTER_END at 75.26
+		ScheduleTask: announce:Schedule(30.0, "sec") at 690.00 (+690.00)
+			Unscheduled by ENCOUNTER_END at 75.26
+		ScheduleTask: announce:Schedule(10.0, "sec") at 710.00 (+710.00)
+			Unscheduled by ENCOUNTER_END at 75.26
+	[ 9.53] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
+		ShowAnnounce: Poison Cloud
+		StartTimer: 15.0, Poison Cloud
+	[14.39] SPELL_AURA_APPLIED: [Grobbulus->Dps14: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000016, Dps14, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StartTimer: 10.0, Mutating Injection: Dps14
+		ShowAnnounce: Mutating Injection on Dps14
+	[18.51] SPELL_AURA_REMOVED: [Grobbulus->Dps14: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000016, Dps14, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StopTimer: Timer28169target\tDps14
+	[25.70] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
+		ShowAnnounce: Poison Cloud
+		StartTimer: 15.0, Poison Cloud
+	[25.70] SPELL_AURA_APPLIED: [Grobbulus->Dps11: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000013, Dps11, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StartTimer: 10.0, Mutating Injection: Dps11
+		ShowAnnounce: Mutating Injection on Dps11
+	[29.40] SPELL_AURA_REMOVED: [Grobbulus->Dps11: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000013, Dps11, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StopTimer: Timer28169target\tDps11
+	[33.81] SPELL_AURA_APPLIED: [Grobbulus->Dps2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000002, Dps2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StartTimer: 10.0, Mutating Injection: Dps2
+		ShowAnnounce: Mutating Injection on Dps2
+	[41.90] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
+		ShowAnnounce: Poison Cloud
+		StartTimer: 15.0, Poison Cloud
+	[49.97] SPELL_AURA_APPLIED: [Grobbulus->Healer2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000017, Healer2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StartTimer: 10.0, Mutating Injection: Healer2
+		ShowAnnounce: Mutating Injection on Healer2
+	[53.52] SPELL_AURA_REMOVED: [Grobbulus->Healer2: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000017, Healer2, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StopTimer: Timer28169target\tHealer2
+	[58.06] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
+		ShowAnnounce: Poison Cloud
+		StartTimer: 15.0, Poison Cloud
+	[58.06] SPELL_AURA_APPLIED: [Grobbulus->Dps6: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000007, Dps6, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StartTimer: 10.0, Mutating Injection: Dps6
+		ShowAnnounce: Mutating Injection on Dps6
+	[63.30] SPELL_AURA_REMOVED: [Grobbulus->Dps6: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000007, Dps6, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StopTimer: Timer28169target\tDps6
+	[68.20] SPELL_AURA_APPLIED: [Grobbulus->Dps15: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000020, Dps15, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StartTimer: 10.0, Mutating Injection: Dps15
+		ShowAnnounce: Mutating Injection on Dps15
+	[72.36] SPELL_AURA_REMOVED: [Grobbulus->Dps15: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000020, Dps15, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
+		StopTimer: Timer28169target\tDps15
+	[74.66] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
+		ShowAnnounce: Poison Cloud
+		StartTimer: 15.0, Poison Cloud
+	[75.26] ENCOUNTER_END: 1111, Grobbulus, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 28169
