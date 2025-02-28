@@ -5,8 +5,10 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1217685 (Messed Up)
 	Unused event registration: SPELL_AURA_APPLIED 1218704 (Prototype Powercoil)
 	Unused event registration: SPELL_AURA_APPLIED 1220648 (Marked For ""Recycling"")
+	Unused event registration: SPELL_AURA_APPLIED 466748 (Infected Bite)
 	Unused event registration: SPELL_AURA_APPLIED 473066 (Territorial)
 	Unused event registration: SPELL_AURA_APPLIED 473115 (Short Fuse)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 466748 (Infected Bite)
 	Unused event registration: SPELL_AURA_REMOVED 1217685 (Messed Up)
 	Unused event registration: SPELL_AURA_REMOVED 461536 (Rolling Rubbish)
 	Unused event registration: SPELL_AURA_REMOVED 465346 (Sorted)
@@ -15,11 +17,27 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1220752 (The Recycler)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 464854 (Garbage Pile)
 	Unused event registration: UNIT_DIED
+	SpecialWarning for spell ID 461536 (Rolling Rubbish) is triggered by event SPELL_AURA_APPLIED 465346 (Sorted)
+	Yell for spell ID 461536 (Rolling Rubbish) is triggered by event SPELL_AURA_APPLIED 465346 (Sorted)
 	Timer for spell ID 464112 (Demolish) is triggered by event SPELL_AURA_REMOVED 467117 (Overdrive)
 	Timer for spell ID 464149 (Incinerator) is triggered by event SPELL_AURA_REMOVED 467117 (Overdrive)
 	Timer for spell ID 464399 (Electromagnetic Sorting) is triggered by event SPELL_AURA_REMOVED 467117 (Overdrive)
+	SpecialWarning for spell ID 464854 (Garbage Pile) is triggered by event SPELL_PERIODIC_DAMAGE 464248 (Hot Garbage)
+	SpecialWarning for spell ID 464854 (Garbage Pile) is triggered by event SPELL_PERIODIC_MISSED 464248 (Hot Garbage)
 	SpecialWarning for spell ID 467135 (Trash Compactor) is triggered by event SPELL_CAST_START 467109 (Trash Compactor)
 	Timer for spell ID 1217954 (Meltdown) is triggered by event SPELL_AURA_REMOVED 467117 (Overdrive)
+	Timer Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399 (time=22.30, variance=0.00) got refreshed early with 2.30s remaining
+		Refreshed by: [ 19.99] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+	Timer Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399 (time=24.20, variance=0.00) got refreshed early with 0.77s remaining
+		Refreshed by: [133.43] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+	Timer Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.10s remaining
+		Refreshed by: [ 65.97] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+	Timer Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.10s remaining
+		Refreshed by: [179.42] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+	Timer Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.10s remaining
+		Refreshed by: [225.43] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+	Timer Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.13s remaining
+		Refreshed by: [271.40] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
 	Timer Demolish (%s), time=51.10, type=nextcount, spellId=464112 (time=17.80, variance=0.00) got refreshed early with 1.80s remaining
 		Refreshed by: [ 15.99] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
 	Timer Demolish (%s), time=51.10, type=nextcount, spellId=464112 (time=19.80, variance=0.00) got refreshed early with 0.37s remaining
@@ -32,18 +50,6 @@ Findings:
 		Refreshed by: [221.43] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
 	Timer Demolish (%s), time=51.10, type=nextcount, spellId=464112 (time=51.10, variance=0.00) got refreshed early with 5.13s remaining
 		Refreshed by: [267.39] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
-	Timer Electromagnetic Sorting (%s), time=51.10, type=nextcount, spellId=464399 (time=22.30, variance=0.00) got refreshed early with 2.30s remaining
-		Refreshed by: [ 19.99] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-	Timer Electromagnetic Sorting (%s), time=51.10, type=nextcount, spellId=464399 (time=24.20, variance=0.00) got refreshed early with 0.77s remaining
-		Refreshed by: [133.43] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-	Timer Electromagnetic Sorting (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.10s remaining
-		Refreshed by: [ 65.97] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-	Timer Electromagnetic Sorting (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.10s remaining
-		Refreshed by: [179.42] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-	Timer Electromagnetic Sorting (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.10s remaining
-		Refreshed by: [225.43] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-	Timer Electromagnetic Sorting (%s), time=51.10, type=nextcount, spellId=464399 (time=51.10, variance=0.00) got refreshed early with 5.13s remaining
-		Refreshed by: [271.40] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
 	Timer Incinerator (%s), time=25.50, type=nextcount, spellId=464149 (time=11.10, variance=0.00) got refreshed early with 1.00s remaining
 		Refreshed by: [ 10.09] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
 	Timer Incinerator (%s), time=25.50, type=nextcount, spellId=464149 (time=25.50, variance=0.00) got refreshed early with 2.43s remaining
@@ -80,16 +86,17 @@ Findings:
 		Refreshed by: [199.44] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
 
 Unused objects:
+	[Announce] Infected Bite (%s), type=count, spellId=466748
 	[Announce] Marked For ""Recycling"" on >%s<, type=target, spellId=1220648
+	[Special Warning] Rolling Rubbish on >%s< - taunt now, type=taunt, spellId=461536
 	[Special Warning] Demolish - defensive, type=defensive, spellId=464112
 	[Special Warning] Demolish on >%s< - taunt now, type=taunt, spellId=464112
-	[Special Warning] Sorted on >%s< - taunt now, type=taunt, spellId=465346
 	[Special Warning] Meltdown - defensive, type=defensive, spellId=1217954
 	[Special Warning] Prototype Powercoil on you, type=you, spellId=1218704
 	[Special Warning] Marked For ""Recycling"" on you, type=you, spellId=1220648
 	[Timer] Short Fuse, time=30.00, type=castpnp, spellId=473115
 	[Timer] The Recycler, time=12.00, type=castpnp, spellId=1220752
-	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=465346
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=461536
 
 Timers:
 	Demolish (%s), time=51.10, type=nextcount, spellId=464112, triggerDeltas = 0.00, 15.99, 45.99, 48.02, 19.42, 45.99, 46.02, 45.96
@@ -104,7 +111,7 @@ Timers:
 			 Triggered 12x, delta times: 10.09, 22.88, 23.01, 23.01, 44.43, 23.02, 23.00, 22.98, 22.98, 23.00, 23.04, 22.98
 		[100.01] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
 		[110.00] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
-	Electromagnetic Sorting (%s), time=51.10, type=nextcount, spellId=464399, triggerDeltas = 0.00, 19.99, 45.98, 44.03, 23.43, 45.99, 46.01, 45.97
+	Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399, triggerDeltas = 0.00, 19.99, 45.98, 44.03, 23.43, 45.99, 46.01, 45.97
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 14, 29, 0
 		[ 19.99] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
 			 Triggered 6x, delta times: 19.99, 45.98, 67.46, 45.99, 46.01, 45.97
@@ -137,21 +144,27 @@ Announces:
 			 Triggered 19x, delta times: 39.53, 19.45, 25.20, 0.00, 17.08, 1.22, 15.85, 32.43, 0.83, 21.16, 1.21, 19.91, 3.25, 0.44, 19.87, 15.03, 0.44, 45.54, 0.44
 
 Special warnings:
+	Rolling Rubbish (Position: %s) on you, type=youpos, spellId=461536, triggerDeltas = 21.02, 113.46, 45.96, 46.00, 46.01
+		[ 21.02] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
+			 Triggered 5x, delta times: 21.02, 113.46, 45.96, 46.00, 46.01
 	Incinerator (%s) - move away from others, type=moveawaycount, spellId=464149, triggerDeltas = 10.09, 22.88, 23.01, 23.01, 44.43, 23.02, 23.00, 22.98, 22.98, 23.00, 23.04, 22.98
 		[ 10.09] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
 			 Triggered 12x, delta times: 10.09, 22.88, 23.01, 23.01, 44.43, 23.02, 23.00, 22.98, 22.98, 23.00, 23.04, 22.98
-	Electromagnetic Sorting! (%s), type=count, spellId=464399, triggerDeltas = 19.99, 45.98, 67.46, 45.99, 46.01, 45.97
+	Balls+Adds! (%s), type=count, spellId=464399, triggerDeltas = 19.99, 45.98, 67.46, 45.99, 46.01, 45.97
 		[ 19.99] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
 			 Triggered 6x, delta times: 19.99, 45.98, 67.46, 45.99, 46.01, 45.97
-	%s damage - move away, type=gtfo, spellId=464854, triggerDeltas = 47.07, 17.61, 7.79, 178.30
+	%s damage - move away, type=gtfo, spellId=464854, triggerDeltas = 47.07, 17.61, 7.79, 147.70, 24.35, 2.06, 2.86, 42.32, 1.99, 2.00, 2.04
 		[ 47.07] SPELL_AURA_APPLIED: [[DNT] Trash Pile->Tank2: Garbage Pile] Vehicle-0-1-2769-1-230855-00000000DB, [DNT] Trash Pile, 0xa48, Player-1-00000026, Tank2, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 47.07, 17.61, 7.79
-		[250.77] SPELL_AURA_APPLIED: [[DNT] Trash Pile->Tank2: Garbage Pile] Creature-0-1-2769-1-230350-0000000076, [DNT] Trash Pile, 0xa48, Player-1-00000026, Tank2, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
-	Sorted (Position: %s) on you, type=youpos, spellId=465346, triggerDeltas = 21.02, 113.46, 45.96, 46.00, 46.01
-		[ 21.02] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
-			 Triggered 5x, delta times: 21.02, 113.46, 45.96, 46.00, 46.01
+		[220.17] SPELL_PERIODIC_MISSED: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+			 Triggered 2x, delta times: 220.17, 24.35
+		[246.58] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+			 Triggered 6x, delta times: 246.58, 2.86, 42.32, 1.99, 2.00, 2.04
 	Trash Compactor - dodge attack, type=dodge, spellId=467135, triggerDeltas = 109.41
 		[109.41] SPELL_CAST_START: [Stix Bunkjunker: Trash Compactor] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467109, Trash Compactor, 0, 0
+	Incineration on you, type=you, spellId=472893, triggerDeltas = 58.39, 21.86, 46.02, 71.09, 19.47, 25.09, 21.91
+		[ 58.39] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+			 Triggered 7x, delta times: 58.39, 21.86, 46.02, 71.09, 19.47, 25.09, 21.91
 	Scrap Rockets - interrupt >%s<! (%d), type=interruptcount, spellId=1219384, triggerDeltas = 32.27, 0.00, 6.07, 6.09, 0.07, 3.61, 29.98, 0.04, 11.41, 2.38, 4.88, 9.40, 1.22, 6.07, 24.75, 0.00, 7.33, 0.00, 10.17, 1.20, 3.58, 3.70, 1.25, 13.43, 5.24, 0.00, 2.02, 5.30, 7.36, 3.68, 1.53, 7.35, 18.83, 0.00, 7.34, 0.00, 6.05, 0.00, 9.84, 0.00, 23.08, 0.00, 6.93, 0.05, 8.96, 0.00, 7.47
 		[ 32.27] SPELL_AURA_APPLIED: [Scrapmaster->Dps3: Scrap Rockets] Creature-0-1-2769-1-231839-0000000013, Scrapmaster, 0xa48, Player-1-00000003, Dps3, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		[ 32.27] SPELL_AURA_APPLIED: [Scrapmaster->Dps17: Scrap Rockets] Creature-0-1-2769-1-231839-000000009C, Scrapmaster, 0xa48, Player-1-00000023, Dps17, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
@@ -187,7 +200,7 @@ Special warnings:
 		[283.45] SPELL_AURA_APPLIED: [Scrapmaster->Healer2: Scrap Rockets] Creature-0-1-2769-1-231839-000000008E, Scrapmaster, 0xa48, Player-1-00000009, Healer2, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 
 Yells:
-	{rt%1$d}Sorted, type=shortposition, spellId=465346
+	{rt%1$d}Rolling Rubbish, type=shortposition, spellId=461536
 		[ 21.02] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
 			 Triggered 5x, delta times: 21.02, 113.46, 45.96, 46.00, 46.01
 
@@ -254,7 +267,10 @@ Voice pack sounds:
 	VoicePack/watchfeet
 		[ 47.07] SPELL_AURA_APPLIED: [[DNT] Trash Pile->Tank2: Garbage Pile] Vehicle-0-1-2769-1-230855-00000000DB, [DNT] Trash Pile, 0xa48, Player-1-00000026, Tank2, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 47.07, 17.61, 7.79
-		[250.77] SPELL_AURA_APPLIED: [[DNT] Trash Pile->Tank2: Garbage Pile] Creature-0-1-2769-1-230350-0000000076, [DNT] Trash Pile, 0xa48, Player-1-00000026, Tank2, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
+		[220.17] SPELL_PERIODIC_MISSED: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+			 Triggered 2x, delta times: 220.17, 24.35
+		[246.58] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+			 Triggered 6x, delta times: 246.58, 2.86, 42.32, 1.99, 2.00, 2.04
 	VoicePack/watchstep
 		[109.41] SPELL_CAST_START: [Stix Bunkjunker: Trash Compactor] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467109, Trash Compactor, 0, 0
 
@@ -264,10 +280,10 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 14, 29, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 464399 466742 1220752 464112 1217954 467117 467109, SPELL_CAST_SUCCESS 464149, SPELL_AURA_APPLIED 465346 1217685 464854 473115 473066 1218704 1219384 1220648, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117, SPELL_PERIODIC_DAMAGE 464854, SPELL_PERIODIC_MISSED 464854, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 464399 466742 1220752 464112 1217954 467117 467109, SPELL_CAST_SUCCESS 464149, SPELL_AURA_APPLIED 465346 1217685 464854 473115 473066 1218704 1219384 1220648 466748 472893, SPELL_AURA_APPLIED_DOSE 466748, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117, SPELL_PERIODIC_DAMAGE 464854 464248, SPELL_PERIODIC_MISSED 464854 464248, UNIT_DIED
 		StartTimer: 11.1, Incinerator (1)
 		StartTimer: 17.8, Demolish (1)
-		StartTimer: 22.3, Electromagnetic Sorting (1)
+		StartTimer: 22.3, Balls+Adds (1)
 		StartTimer: 44.5, Meltdown (1)
 		StartTimer: 111.1, Overdrive
 	[ 10.09] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
@@ -278,13 +294,13 @@ Event trace:
 		StartTimer: 51.1, Demolish (2)
 		ScheduleTask: (anonymous function) at 16.29 (+0.30)
 	[ 19.99] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-		ShowSpecialWarning: Electromagnetic Sorting! (1)
+		ShowSpecialWarning: Balls+Adds! (1)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 51.1, Electromagnetic Sorting (2)
+		StartTimer: 51.1, Balls+Adds (2)
 	[ 21.02] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
-		ShowSpecialWarning: Sorted (Position: ) on you
+		ShowSpecialWarning: Rolling Rubbish (Position: ) on you
 		PlaySound: VoicePack/mm1
-		ShowYell: {rtUnknown
+		ShowYell: {rtUnknown Rubbish
 	[ 21.02] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps15: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000021, Dps15, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		ScheduleTask: announce465346target:CombinedShow("Dps15") at 21.52 (+0.50)
 			ShowAnnounce: Sorted on PlayerName, Dps6, Dps8, Healer5, Dps15
@@ -324,6 +340,8 @@ Event trace:
 		ShowSpecialWarning: Incinerator (3) - move away from others
 		PlaySound: VoicePack/scatter
 		StartTimer: 25.5, Incinerator (4)
+	[ 58.39] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+		ShowSpecialWarning: Incineration on you
 	[ 58.98] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000013, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
 		StartTimer: 10.9, Dumpster Dive
@@ -335,9 +353,9 @@ Event trace:
 		ShowSpecialWarning: Garbage Pile damage - move away
 		PlaySound: VoicePack/watchfeet
 	[ 65.97] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-		ShowSpecialWarning: Electromagnetic Sorting! (2)
+		ShowSpecialWarning: Balls+Adds! (2)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 51.1, Electromagnetic Sorting (3)
+		StartTimer: 51.1, Balls+Adds (3)
 	[ 66.98] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps12: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000017, Dps12, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		ScheduleTask: announce465346target:CombinedShow("Dps12") at 67.48 (+0.50)
 			ShowAnnounce: Sorted on Tank1, Dps18, Healer1, Dps10, Dps12
@@ -355,6 +373,8 @@ Event trace:
 		ShowSpecialWarning: Incinerator (4) - move away from others
 		PlaySound: VoicePack/scatter
 		StartTimer: 25.5, Incinerator (5)
+	[ 80.25] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+		ShowSpecialWarning: Incineration on you
 	[ 84.18] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000009E, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
 		StartTimer: 10.9, Dumpster Dive
@@ -396,7 +416,7 @@ Event trace:
 	[110.00] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
 		StartTimer: 13.2, Incinerator (5)
 		StartTimer: 19.8, Demolish (3)
-		StartTimer: 24.2, Electromagnetic Sorting (3)
+		StartTimer: 24.2, Balls+Adds (3)
 		StartTimer: 47.7, Meltdown (3)
 	[113.49] SPELL_AURA_APPLIED: [Scrapmaster->Dps20: Scrap Rockets] Creature-0-1-2769-1-231839-000000009E, Scrapmaster, 0xa48, Player-1-00000030, Dps20, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (4)
@@ -408,17 +428,19 @@ Event trace:
 		ShowSpecialWarning: Incinerator (5) - move away from others
 		PlaySound: VoicePack/scatter
 		StartTimer: 25.5, Incinerator (6)
+	[126.27] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+		ShowSpecialWarning: Incineration on you
 	[129.42] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
 		StartTimer: 51.1, Demolish (4)
 		ScheduleTask: (anonymous function) at 129.72 (+0.30)
 	[133.43] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-		ShowSpecialWarning: Electromagnetic Sorting! (3)
+		ShowSpecialWarning: Balls+Adds! (3)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 51.1, Electromagnetic Sorting (4)
+		StartTimer: 51.1, Balls+Adds (4)
 	[134.48] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
-		ShowSpecialWarning: Sorted (Position: ) on you
+		ShowSpecialWarning: Rolling Rubbish (Position: ) on you
 		PlaySound: VoicePack/mm1
-		ShowYell: {rtUnknown
+		ShowYell: {rtUnknown Rubbish
 	[134.48] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps16: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000022, Dps16, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		ScheduleTask: announce465346target:CombinedShow("Dps16") at 134.98 (+0.50)
 			ShowAnnounce: Sorted on PlayerName, Dps1, Dps14, Healer3, Dps16
@@ -478,13 +500,13 @@ Event trace:
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (6)
 		PlaySound: VoicePack/kickcast
 	[179.42] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-		ShowSpecialWarning: Electromagnetic Sorting! (4)
+		ShowSpecialWarning: Balls+Adds! (4)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 51.1, Electromagnetic Sorting (5)
+		StartTimer: 51.1, Balls+Adds (5)
 	[180.44] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
-		ShowSpecialWarning: Sorted (Position: ) on you
+		ShowSpecialWarning: Rolling Rubbish (Position: ) on you
 		PlaySound: VoicePack/mm1
-		ShowYell: {rtUnknown
+		ShowYell: {rtUnknown Rubbish
 	[180.44] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps11: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000016, Dps11, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		ScheduleTask: announce465346target:CombinedShow("Dps11") at 180.94 (+0.50)
 			ShowAnnounce: Sorted on PlayerName, Healer7, Dps13, Dps4, Dps11
@@ -510,6 +532,8 @@ Event trace:
 	[197.12] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000004A, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
 		StartTimer: 10.9, Dumpster Dive
+	[197.36] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+		ShowSpecialWarning: Incineration on you
 	[197.56] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-00000000A8, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
 		StartTimer: 10.9, Dumpster Dive
@@ -531,20 +555,26 @@ Event trace:
 		ShowSpecialWarning: Incinerator (9) - move away from others
 		PlaySound: VoicePack/scatter
 		StartTimer: 25.5, Incinerator (10)
+	[216.83] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+		ShowSpecialWarning: Incineration on you
 	[217.43] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-00000000A8, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
 		StartTimer: 10.9, Dumpster Dive
+	[220.17] SPELL_PERIODIC_MISSED: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Hot Garbage damage - move away
+		PlaySound: VoicePack/watchfeet
 	[221.43] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
 		StartTimer: 51.1, Demolish (6)
 		ScheduleTask: (anonymous function) at 221.73 (+0.30)
 	[225.43] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-		ShowSpecialWarning: Electromagnetic Sorting! (5)
+		ShowSpecialWarning: Balls+Adds! (5)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 51.1, Electromagnetic Sorting (6)
+		StartTimer: 51.1, Balls+Adds (6)
 	[226.44] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
-		ShowSpecialWarning: Sorted (Position: ) on you
+		ShowSpecialWarning: Rolling Rubbish (Position: ) on you
 		PlaySound: VoicePack/mm1
-		ShowYell: {rtUnknown
+		ShowYell: {rtUnknown Rubbish
 	[226.44] SPELL_AURA_APPLIED: [Stix Bunkjunker->Healer6: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000028, Healer6, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		ScheduleTask: announce465346target:CombinedShow("Healer6") at 226.94 (+0.50)
 			ShowAnnounce: Sorted on PlayerName, Dps5, Dps7, Dps3, Healer6
@@ -570,17 +600,30 @@ Event trace:
 		ShowSpecialWarning: Incinerator (10) - move away from others
 		PlaySound: VoicePack/scatter
 		StartTimer: 25.5, Incinerator (11)
+	[241.92] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+		ShowSpecialWarning: Incineration on you
 	[243.60] SPELL_AURA_APPLIED: [Scrapmaster->Dps10: Scrap Rockets] Creature-0-1-2769-1-231839-00000000AB, Scrapmaster, 0xa48, Player-1-00000015, Dps10, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
 	[243.60] SPELL_AURA_APPLIED: [Scrapmaster->Healer5: Scrap Rockets] Creature-0-1-2769-1-231839-0000000074, Scrapmaster, 0xa48, Player-1-00000024, Healer5, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
+	[244.52] SPELL_PERIODIC_MISSED: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_MISSED at 245.52
+		ShowSpecialWarning: Hot Garbage damage - move away
+		PlaySound: VoicePack/watchfeet
 	[245.42] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
 		StartTimer: 51.1, Meltdown (6)
-	[250.77] SPELL_AURA_APPLIED: [[DNT] Trash Pile->Tank2: Garbage Pile] Creature-0-1-2769-1-230350-0000000076, [DNT] Trash Pile, 0xa48, Player-1-00000026, Tank2, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
+	[246.58] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
 		AntiSpam: 3
-		ShowSpecialWarning: Garbage Pile damage - move away
+			Filtered: 2x SPELL_PERIODIC_DAMAGE at 247.43, 248.45
+		ShowSpecialWarning: Hot Garbage damage - move away
+		PlaySound: VoicePack/watchfeet
+	[249.44] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_AURA_APPLIED at 250.77
+		ShowSpecialWarning: Hot Garbage damage - move away
 		PlaySound: VoicePack/watchfeet
 	[253.44] SPELL_AURA_APPLIED: [Scrapmaster->Dps10: Scrap Rockets] Creature-0-1-2769-1-231839-00000000AB, Scrapmaster, 0xa48, Player-1-00000015, Dps10, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (4)
@@ -592,17 +635,19 @@ Event trace:
 		ShowSpecialWarning: Incinerator (11) - move away from others
 		PlaySound: VoicePack/scatter
 		StartTimer: 25.5, Incinerator (12)
+	[263.83] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 472893, Incineration, 0, DEBUFF, 0
+		ShowSpecialWarning: Incineration on you
 	[267.39] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
 		StartTimer: 51.1, Demolish (7)
 		ScheduleTask: (anonymous function) at 267.69 (+0.30)
 	[271.40] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-		ShowSpecialWarning: Electromagnetic Sorting! (6)
+		ShowSpecialWarning: Balls+Adds! (6)
 		PlaySound: VoicePack/specialsoon
-		StartTimer: 51.1, Electromagnetic Sorting (7)
+		StartTimer: 51.1, Balls+Adds (7)
 	[272.45] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 465346, Sorted, 0, DEBUFF, 0
-		ShowSpecialWarning: Sorted (Position: ) on you
+		ShowSpecialWarning: Rolling Rubbish (Position: ) on you
 		PlaySound: VoicePack/mm1
-		ShowYell: {rtUnknown
+		ShowYell: {rtUnknown Rubbish
 	[272.45] SPELL_AURA_APPLIED: [Stix Bunkjunker->Healer4: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000018, Healer4, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		ScheduleTask: announce465346target:CombinedShow("Healer4") at 272.95 (+0.50)
 			ShowAnnounce: Sorted on PlayerName, Dps9, Dps2, Dps17, Healer4
@@ -630,12 +675,32 @@ Event trace:
 		StartTimer: 25.5, Incinerator (13)
 	[291.40] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
 		StartTimer: 51.1, Meltdown (7)
+	[291.76] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_DAMAGE at 292.76
+		ShowSpecialWarning: Hot Garbage damage - move away
+		PlaySound: VoicePack/watchfeet
 	[292.46] SPELL_AURA_APPLIED: [Scrapmaster->Dps19: Scrap Rockets] Creature-0-1-2769-1-231839-00000000AE, Scrapmaster, 0xa48, Player-1-00000027, Dps19, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
 	[292.46] SPELL_AURA_APPLIED: [Scrapmaster->Dps1: Scrap Rockets] Creature-0-1-2769-1-231839-000000008E, Scrapmaster, 0xa48, Player-1-00000001, Dps1, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
+	[293.75] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_DAMAGE at 294.78
+		ShowSpecialWarning: Hot Garbage damage - move away
+		PlaySound: VoicePack/watchfeet
+	[295.75] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_DAMAGE at 296.77
+		ShowSpecialWarning: Hot Garbage damage - move away
+		PlaySound: VoicePack/watchfeet
+	[297.79] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000026, Tank2, 0x511, 464248, Hot Garbage, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_DAMAGE at 298.84
+		ShowSpecialWarning: Hot Garbage damage - move away
+		PlaySound: VoicePack/watchfeet
 	[299.93] SPELL_AURA_APPLIED: [Scrapmaster->Dps19: Scrap Rockets] Creature-0-1-2769-1-231839-00000000AE, Scrapmaster, 0xa48, Player-1-00000027, Dps19, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (4)
 		PlaySound: VoicePack/kick4r

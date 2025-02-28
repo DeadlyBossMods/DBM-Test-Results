@@ -2,8 +2,10 @@ Test: TWW/Undermine/One-ArmedBandit/Mythic/Wipe
 Mod:  DBM-Raids-WarWithin/2644
 
 Findings:
+	Unused event registration: SPELL_AURA_APPLIED 460444 (High Roller!)
 	Unused event registration: SPELL_AURA_APPLIED 460472 (The Big Hit)
 	Unused event registration: SPELL_AURA_APPLIED 460973 (Dark Lined Cuirass)
+	Unused event registration: SPELL_AURA_APPLIED 461068 (Fraud Detected!)
 	Unused event registration: SPELL_AURA_APPLIED 473195 (Linked Machines)
 	Unused event registration: SPELL_AURA_APPLIED 473278 (Withering Flames)
 	Unused event registration: SPELL_AURA_REFRESH 473195 (Linked Machines)
@@ -34,34 +36,36 @@ Findings:
 	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_START 464806 (Reward: Flame and Coin)
 	Timer for spell ID 460472 (The Big Hit) is triggered by event SPELL_CAST_START 464810 (Reward: Coin and Bomb)
 	Timer for spell ID 460582 (Overload!) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
+	Announce for spell ID 461068 (Fraud Detected!) is triggered by event SPELL_CAST_START 464776 (Fraud Detected!)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464772 (Reward: Shock and Flame)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464776 (Fraud Detected!)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464806 (Reward: Flame and Coin)
 	Timer for spell ID 469993 (Foul Exhaust) is triggered by event SPELL_CAST_START 464810 (Reward: Coin and Bomb)
-	Timer for spell ID 471930 (Withering Flames) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
+	Timer for spell ID 471927 (Withering Flames) is triggered by event SPELL_AURA_APPLIED 471720 (Spin To Win!)
+	Timer for spell ID 471927 (Withering Flames) is triggered by event SPELL_CAST_START 471930 (Withering Flames)
 
 Unused objects:
 	[Announce] Stage 2, type=stage, spellId=<none>
+	[Announce] High Roller! on YOU, type=you, spellId=460444
 	[Announce] Reward: Shock and Bomb (%s), type=count, spellId=464801
 	[Announce] Reward: Flame and Bomb (%s), type=count, spellId=464804
 	[Announce] Reward: Coin and Shock (%s), type=count, spellId=464809
-	[Announce] Linked Machines (%s), type=count, spellId=465432
-	[Announce] Explosive Jackpot (%s), type=count, spellId=465587
+	[Announce] Cheat to Win! (%s), type=count, spellId=465309
 	[Special Warning] The Big Hit - defensive, type=defensive, spellId=460472
 	[Special Warning] The Big Hit on >%s< - taunt now, type=taunt, spellId=460472
 	[Special Warning] Explosive Gaze - run away, type=run, spellId=465009
-	[Special Warning] Hot Hot Heat (%s) - dodge attack, type=dodgecount, spellId=465322
-	[Special Warning] Scattered Payout - switch targets (%s), type=switchcount, spellId=465580
-	[Special Warning] Withering Flames - move away from others, type=moveaway, spellId=471930
+	[Special Warning] Hot Hot Heat - dodge attack, type=dodge, spellId=465322
+	[Special Warning] Scattered Payout - switch targets, type=switch, spellId=465580
+	[Special Warning] Withering Flames - move away from others, type=moveaway, spellId=471927
 	[Special Warning] Burning Blast - dodge attack, type=dodge, spellId=472178
 	[Timer] Hot Hot Heat (%s), time=25.20, type=cdcount, spellId=465322
 	[Timer] Knockback, time=7.50, type=cast, spellId=465432
-	[Timer] Linked Machines (%s), time=25.20, type=cdcount, spellId=465432
 	[Timer] Scattered Payout (%s), time=25.20, type=cdcount, spellId=465580
 	[Timer] Explosive Jackpot, time=10.00, type=cast, spellId=465587
 	[Timer] Explosive Jackpot (%s), time=25.20, type=cdcount, spellId=465587
-	[Yell] %d, type=shortfade, spellId=471930
-	[Yell] Withering Flames, type=shortyell, spellId=471930
+	[Timer] Bait Coil %s), time=25.20, type=cdcount, spellId=473195
+	[Yell] %d, type=shortfade, spellId=471927
+	[Yell] Withering Flames, type=shortyell, spellId=471927
 
 Timers:
 	Pay-Line (%s), time=36.50, type=varcount, spellId=460181, triggerDeltas = 0.00, 3.31, 26.87, 18.00, 5.12, 26.76, 22.64, 5.35, 26.82, 21.40, 17.49, 34.44, 5.64
@@ -103,7 +107,7 @@ Timers:
 		[102.70] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
 		[156.27] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
 		[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
-	Withering Flames, time=18.20, type=cdnp, spellId=471930, triggerDeltas = 18.80, 0.01, 0.00, 13.89, 19.72, 21.15, 0.00, 0.00, 12.59, 19.46, 21.53, 0.01, 0.00, 12.58, 8.21, 30.27, 0.01, 0.00, 14.98, 6.05, 2.44, 19.42
+	Withering Flames, time=18.20, type=cdnp, spellId=471927, triggerDeltas = 18.80, 0.01, 0.00, 13.89, 19.72, 21.15, 0.00, 0.00, 12.59, 19.46, 21.53, 0.01, 0.00, 12.58, 8.21, 30.27, 0.01, 0.00, 14.98, 6.05, 2.44, 19.42
 		[ 18.80] SPELL_AURA_APPLIED: [Reel Assistant->Reel Assistant: Spin To Win!] Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, 471720, Spin To Win!, 0, BUFF, 0
 			 Triggered 12x, delta times: 18.80, 0.01, 0.00, 54.76, 0.00, 0.00, 53.58, 0.01, 0.00, 51.06, 0.01, 0.00
 		[ 32.70] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000000C, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
@@ -112,10 +116,10 @@ Timers:
 Announces:
 	Crushed! on >%s<, type=target, spellId=460430, triggerDeltas = 80.61
 		[ 80.61] Scheduled at 79.61 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps4: Crushed!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000006, Dps4, 0x512, 460430, Crushed!, 0, DEBUFF, 0
+	Casting Fraud Detected!: -nan sec, type=cast, spellId=461068, triggerDeltas = 208.20
+		[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
 	Reward: Shock and Flame (%s), type=count, spellId=464772, triggerDeltas = 48.18
 		[ 48.18] SPELL_CAST_START: [One-Armed Bandit: Reward: Shock and Flame] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464772, Reward: Shock and Flame, 0, 0
-	Casting Fraud Detected!: -nan sec, type=cast, spellId=464776, triggerDeltas = 208.20
-		[208.20] SPELL_CAST_START: [One-Armed Bandit: Fraud Detected!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464776, Fraud Detected!, 0, 0
 	Reward: Flame and Coin (%s), type=count, spellId=464806, triggerDeltas = 156.27
 		[156.27] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
 	Reward: Coin and Bomb (%s), type=count, spellId=464810, triggerDeltas = 102.70
@@ -126,7 +130,7 @@ Announces:
 	Foul Exhaust (%s), type=count, spellId=469993, triggerDeltas = 8.14, 36.60, 13.42, 32.87, 21.92, 32.88, 21.87, 36.43, 14.56
 		[  8.14] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 			 Triggered 9x, delta times: 8.14, 36.60, 13.42, 32.87, 21.92, 32.88, 21.87, 36.43, 14.56
-	Withering Flames on >%s<, type=target, spellId=471930, triggerDeltas = 35.85, 52.39, 62.00, 50.86, 3.02, 19.44
+	Withering Flames on >%s<, type=target, spellId=471927, triggerDeltas = 35.85, 52.39, 62.00, 50.86, 3.02, 19.44
 		[ 35.85] Scheduled at 35.55 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps11: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000018, Dps11, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
 		[ 88.24] Scheduled at 87.94 by SPELL_AURA_APPLIED: [One-Armed Bandit->Dps4: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000006, Dps4, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
 		[150.24] Scheduled at 149.94 by SPELL_AURA_APPLIED: [One-Armed Bandit->Healer4: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000015, Healer4, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
@@ -185,7 +189,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3014, One-Armed Bandit, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761 464776, SPELL_CAST_SUCCESS 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 465009 460973 473278 471927 460430 460472 473195, SPELL_AURA_REFRESH 473195, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761 464776, SPELL_CAST_SUCCESS 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 465009 460973 473278 471927 460430 460472 473195 460444 461068, SPELL_AURA_REFRESH 473195, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
 		StartTimer: 4.1, Pay-Line (1)
 		StartTimer: 10.0, Foul Exhaust (1)
 		StartTimer: 16.7, Spin To Win! (1)
@@ -237,7 +241,7 @@ Event trace:
 		ShowSpecialWarning: Overload! - interrupt Reel Assistant! (1)
 		PlaySound: VoicePack/kick1r
 	[ 35.55] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps11: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000018, Dps11, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
-		ScheduleTask: announce471930target:CombinedShow("Dps11") at 35.85 (+0.30)
+		ScheduleTask: announce471927target:CombinedShow("Dps11") at 35.85 (+0.30)
 			ShowAnnounce: Withering Flames on Dps11
 	[ 38.66] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
 		StartTimer: 21.5, The Big Hit (3)
@@ -294,7 +298,7 @@ Event trace:
 	[ 86.92] SPELL_AURA_APPLIED: [Dps1->Dps1: Token: Coin] Player-1-00000001, Dps1, 0x512, Player-1-00000001, Dps1, 0x512, 472832, Token: Coin, 0, DEBUFF, 0
 		ShowAnnounce: Token: Coin on Dps1
 	[ 87.94] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps4: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000006, Dps4, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
-		ScheduleTask: announce471930target:CombinedShow("Dps4") at 88.24 (+0.30)
+		ScheduleTask: announce471927target:CombinedShow("Dps4") at 88.24 (+0.30)
 			ShowAnnounce: Withering Flames on Dps4
 	[ 90.19] SPELL_CAST_START: [Reel Assistant: Overload!] Creature-0-1-2769-1-228463-0000000022, Reel Assistant, 0xa48, "", nil, 0x0, 460582, Overload!, 0, 0
 		StartTimer: 18.2, Overload!
@@ -377,7 +381,7 @@ Event trace:
 	[147.95] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000077, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
 	[149.94] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer4: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000015, Healer4, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
-		ScheduleTask: announce471930target:CombinedShow("Healer4") at 150.24 (+0.30)
+		ScheduleTask: announce471927target:CombinedShow("Healer4") at 150.24 (+0.30)
 			ShowAnnounce: Withering Flames on Healer4
 	[156.24] SPELL_AURA_REMOVED: [One-Armed Bandit->One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, 461060, Spin To Win!, 0, BUFF, 0
 		StopTimer: Timer461060active
@@ -434,12 +438,12 @@ Event trace:
 	[199.26] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000006B, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
 	[200.80] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps10: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000016, Dps10, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
-		ScheduleTask: announce471930target:CombinedShow("Dps10") at 201.10 (+0.30)
+		ScheduleTask: announce471927target:CombinedShow("Dps10") at 201.10 (+0.30)
 			ShowAnnounce: Withering Flames on Dps10
 	[201.70] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-0000000054, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
 	[203.82] SPELL_AURA_APPLIED: [One-Armed Bandit->Healer4: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000015, Healer4, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
-		ScheduleTask: announce471930target:CombinedShow("Healer4") at 204.12 (+0.30)
+		ScheduleTask: announce471927target:CombinedShow("Healer4") at 204.12 (+0.30)
 			ShowAnnounce: Withering Flames on Healer4
 	[204.13] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (8)
@@ -467,7 +471,7 @@ Event trace:
 	[221.12] SPELL_CAST_START: [Reel Assistant: Withering Flames] Creature-0-1-2769-1-228463-000000006B, Reel Assistant, 0xa48, "", nil, 0x0, 471930, Withering Flames, 0, 0
 		StartTimer: 18.2, Withering Flames
 	[223.26] SPELL_AURA_APPLIED: [One-Armed Bandit->Dps10: Withering Flames] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000016, Dps10, 0x512, 471927, Withering Flames, 0, DEBUFF, 0
-		ScheduleTask: announce471930target:CombinedShow("Dps10") at 223.56 (+0.30)
+		ScheduleTask: announce471927target:CombinedShow("Dps10") at 223.56 (+0.30)
 			ShowAnnounce: Withering Flames on Dps10
 	[224.89] ENCOUNTER_END: 3014, One-Armed Bandit, 16, 20, 0, 0
 		EndCombat: ENCOUNTER_END
