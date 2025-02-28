@@ -6,6 +6,7 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1216911 (Posi-Polarization)
 	Unused event registration: SPELL_AURA_APPLIED 1216934 (Nega-Polarization)
 	Unused event registration: SPELL_AURA_APPLIED 465917 (Gravi-Gunk)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1218319 (Voidsplosion)
 	Unused event registration: SPELL_AURA_REMOVED 1214878 (Pyro Party Pack)
 	Unused event registration: SPELL_AURA_REMOVED 1216509 (Screw Up)
 	Unused event registration: SPELL_AURA_REMOVED 1216911 (Posi-Polarization)
@@ -16,30 +17,30 @@ Findings:
 	Timer for spell ID 465232 (Sonic Ba-Boom) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 466765 (Beta Launch) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 473276 (Activate Inventions!) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
-	SpecialWarning for spell ID 1214872 (Pyro Party Pack) is triggered by event SPELL_AURA_APPLIED 1214878 (Pyro Party Pack)
-	Timer for spell ID 1214872 (Pyro Party Pack) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
-	Yell for spell ID 1214872 (Pyro Party Pack) is triggered by event SPELL_AURA_APPLIED 1214878 (Pyro Party Pack)
-	Timer for spell ID 1215218 (Bleeding Edge) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
-	Timer for spell ID 1216508 (Screw Up) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 1214878 (Pyro Party Pack) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 1214878 (Pyro Party Pack) is triggered by event SPELL_CAST_START 1214872 (Pyro Party Pack)
+	Timer for spell ID 1216509 (Screw Up) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 1216509 (Screw Up) is triggered by event SPELL_CAST_START 1216508 (Screw Up)
 	Timer for spell ID 1217231 (Foot-Blasters) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 1218319 (Voidsplosion) is triggered by event SPELL_CAST_START 466765 (Beta Launch)
 	Timer for spell ID 1218418 (Wire Transfer) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
 
 Unused objects:
-	[Announce] Screw Up faded, type=fades, spellId=1216508
-	[Announce] Screw Up on >%s<, type=target, spellId=1216508
+	[Announce] Screw Up faded, type=fades, spellId=1216509
+	[Announce] Screw Up on >%s<, type=target, spellId=1216509
 	[Announce] Polarization Generator incoming debuff (%s), type=incomingcount, spellId=1216802
 	[Announce] Posi-Polarization faded, type=fades, spellId=1216911
 	[Announce] Nega-Polarization faded, type=fades, spellId=1216934
-	[Special Warning] Pyro Party Pack - defensive, type=defensive, spellId=1214872
-	[Special Warning] Pyro Party Pack on >%s< - taunt now, type=taunt, spellId=1214872
+	[Special Warning] Pyro Party Pack - defensive, type=defensive, spellId=1214878
+	[Special Warning] Pyro Party Pack on >%s< - taunt now, type=taunt, spellId=1214878
 	[Special Warning] Mega Magnetize - dodge attack, type=dodge, spellId=1215858
-	[Special Warning] Screw Up - run away, type=run, spellId=1216508
+	[Special Warning] Screw Up - run away, type=run, spellId=1216509
 	[Special Warning] Posi-Polarization on you, type=you, spellId=1216911
 	[Special Warning] Nega-Polarization on you, type=you, spellId=1216934
 	[Timer] Gigadeath, time=97.30, type=next, spellId=468791
 	[Timer] Polarization Generator (%s), time=97.30, type=nextcount, spellId=1216802
-	[Yell] %d, type=shortfade, spellId=1214872
-	[Yell] Screw Up on PlayerName, type=yell, spellId=1216508
+	[Yell] %d, type=shortfade, spellId=1214878
+	[Yell] Screw Up on PlayerName, type=yell, spellId=1216509
 	[Yell] {rt%%1$d}, type=icontarget, spellId=1216802
 
 Timers:
@@ -53,22 +54,22 @@ Timers:
 		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
 		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 			 Triggered 2x, delta times: 145.69, 145.04
+	Bleeding Edge ends, time=20.00, type=active, spellId=466860, triggerDeltas = 125.68, 145.03
+		[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
+			 Triggered 2x, delta times: 125.68, 145.03
 	Activate Inventions! (%s), time=30.00, type=nextcount, spellId=473276, triggerDeltas = 0.00, 30.00, 30.00, 85.69, 30.02, 30.01, 85.01, 30.05, 29.97
 		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
 		[ 30.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
 			 Triggered 6x, delta times: 30.00, 30.00, 115.71, 30.01, 115.06, 29.97
 		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 			 Triggered 2x, delta times: 145.69, 145.04
-	Pyro Party Pack (%s), time=97.30, type=nextcount, spellId=1214872, triggerDeltas = 0.00, 20.00, 33.99, 91.70, 20.05, 33.99, 91.00, 20.01, 34.03
+	Pyro Party Pack (%s), time=97.30, type=nextcount, spellId=1214878, triggerDeltas = 0.00, 20.00, 33.99, 91.70, 20.05, 33.99, 91.00, 20.01, 34.03
 		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
 		[ 20.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
 			 Triggered 6x, delta times: 20.00, 33.99, 111.75, 33.99, 111.01, 34.03
 		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 			 Triggered 2x, delta times: 145.69, 145.04
-	Bleeding Edge ends, time=20.00, type=active, spellId=1215218, triggerDeltas = 125.68, 145.03
-		[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
-			 Triggered 2x, delta times: 125.68, 145.03
-	Screw Up (%s), time=97.30, type=nextcount, spellId=1216508, triggerDeltas = 0.00, 46.99, 33.00, 65.70, 47.02, 32.99, 65.03, 47.02, 33.01
+	Screw Up (%s), time=97.30, type=nextcount, spellId=1216509, triggerDeltas = 0.00, 46.99, 33.00, 65.70, 47.02, 32.99, 65.03, 47.02, 33.01
 		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
 		[ 46.99] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
 			 Triggered 6x, delta times: 46.99, 33.00, 112.72, 32.99, 112.05, 33.01
@@ -80,6 +81,15 @@ Timers:
 			 Triggered 6x, delta times: 12.01, 62.02, 83.72, 62.00, 83.02, 62.02
 		[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 			 Triggered 2x, delta times: 145.69, 145.04
+	Voidsplosion (%s), time=5.00, type=nextcount, spellId=1218319, triggerDeltas = 121.56, 4.87, 5.03, 4.98, 130.20, 4.84, 5.02, 4.97
+		[121.56] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
+			 Triggered 2x, delta times: 121.56, 145.08
+		[126.43] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps9: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000016, Dps9, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[131.46] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank1: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000001, Tank1, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[136.44] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[271.48] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000007, Healer2, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[276.50] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps8: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000015, Dps8, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[281.47] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer3: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
 	Wire Transfer (%s), time=97.30, type=nextcount, spellId=1218418, triggerDeltas = 0.05, 40.92, 28.00, 56.71, 20.09, 40.95, 28.02, 55.97, 20.10, 40.96, 27.99
 		[  0.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
 			 Triggered 9x, delta times: 0.05, 40.92, 28.00, 76.80, 40.95, 28.02, 76.07, 40.96, 27.99
@@ -120,6 +130,15 @@ Announces:
 		[378.28] Scheduled at 377.28 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000005, Healer1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[384.35] Scheduled at 383.35 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000002, Tank2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[409.84] Scheduled at 408.84 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps8: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000015, Dps8, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
+	Voidsplosion (%s), type=count, spellId=1218319, triggerDeltas = 126.43, 5.03, 4.98, 4.99, 130.05, 5.02, 4.97, 5.02
+		[126.43] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps9: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000016, Dps9, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[131.46] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank1: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000001, Tank1, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[136.44] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[141.43] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank4: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000009, Tank4, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[271.48] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000007, Healer2, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[276.50] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps8: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000015, Dps8, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[281.47] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer3: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		[286.49] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps7: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000014, Dps7, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
 	Upgraded Bloodtech on >%s< (%d), type=stack, spellId=1218344, triggerDeltas = 145.69, 145.05
 		[145.69] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Sprocketmonger Lockenstock: Upgraded Bloodtech] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, 1218344, Upgraded Bloodtech, 0, BUFF, 0
 		[290.74] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Sprocketmonger Lockenstock: Upgraded Bloodtech] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, 1218344, Upgraded Bloodtech, 0, BUFF, 2, 0
@@ -127,7 +146,7 @@ Announces:
 Special warnings:
 	Gigadeath!, type=spell, spellId=468791, triggerDeltas = 411.20
 		[411.20] SPELL_CAST_START: [Sprocketmonger Lockenstock: Gigadeath] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 468791, Gigadeath, 0, 0
-	Pyro Party Pack - move away from others, type=moveaway, spellId=1214872, triggerDeltas = 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
+	Pyro Party Pack - move away from others, type=moveaway, spellId=1214878, triggerDeltas = 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
 		[ 23.09] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
 			 Triggered 6x, delta times: 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
 	Blazing Beam - dodge attack, type=dodge, spellId=1216414, triggerDeltas = 32.56
@@ -142,12 +161,15 @@ Special warnings:
 	Foot-Blasters! (%s), type=count, spellId=1217231, triggerDeltas = 12.01, 62.02, 30.96, 52.76, 62.00, 31.03, 51.99, 62.02, 30.99
 		[ 12.01] SPELL_CAST_START: [Sprocketmonger Lockenstock: Foot-Blasters] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217231, Foot-Blasters, 0, 0
 			 Triggered 9x, delta times: 12.01, 62.02, 30.96, 52.76, 62.00, 31.03, 51.99, 62.02, 30.99
+	Unstable Shrapnel on you, type=you, spellId=1218342, triggerDeltas = 14.87, 146.53, 144.56
+		[ 14.87] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Unstable Shrapnel] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1218342, Unstable Shrapnel, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 14.87, 146.53, 144.56
 	Wire Transfer (%s) - dodge attack, type=dodgecount, spellId=1218418, triggerDeltas = 0.05, 40.92, 28.00, 28.00, 48.80, 40.95, 28.02, 27.97, 48.10, 40.96, 27.99, 27.98
 		[  0.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
 			 Triggered 12x, delta times: 0.05, 40.92, 28.00, 28.00, 48.80, 40.95, 28.02, 27.97, 48.10, 40.96, 27.99, 27.98
 
 Yells:
-	Pyro Party Pack on PlayerName, type=yell, spellId=1214872
+	Pyro Party Pack on PlayerName, type=yell, spellId=1214878
 		[ 23.09] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
 			 Triggered 6x, delta times: 23.09, 64.03, 81.70, 63.95, 81.02, 64.08
 
@@ -182,7 +204,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1216887 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344, SPELL_AURA_APPLIED_DOSE 465917 1218344, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
+		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1216887 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344 1218342 1218319, SPELL_AURA_APPLIED_DOSE 465917 1218344 1218319, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
 		StartTimer: 6.0, Sonic Ba-Boom (1)
 		StartTimer: 12.1, Foot-Blasters (1)
 		StartTimer: 20.1, Pyro Party Pack (1)
@@ -200,6 +222,8 @@ Event trace:
 		ShowSpecialWarning: Foot-Blasters! (1)
 		PlaySound: VoicePack/bombsoon
 		StartTimer: 62.0, Foot-Blasters (2)
+	[ 14.87] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Unstable Shrapnel] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1218342, Unstable Shrapnel, 0, DEBUFF, 0
+		ShowSpecialWarning: Unstable Shrapnel on you
 	[ 15.95] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
 		ShowAnnounce: Gravi-Gunk on PlayerName (2)
 	[ 20.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
@@ -293,9 +317,29 @@ Event trace:
 	[121.56] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
 		ShowAnnounce: Beta Launch
 		PlaySound: VoicePack/phasechange
+		StartTimer: 4.9, Voidsplosion (1)
 	[125.68] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
 		StartTimer: 20.0, Bleeding Edge ends
 		StartTimer: 20.0, Wire Transfer (1)
+	[126.43] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps9: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000016, Dps9, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 19x SPELL_AURA_APPLIED at 126.43, 126.43, 126.43, 126.43, 126.43, 126.43, 126.43, 126.43, 126.43, 126.44, 126.44, 126.44, 126.44, 126.48, 126.48, 126.48, 126.48, 126.48, 126.48
+		ShowAnnounce: Voidsplosion (1)
+		StartTimer: 5.0, Voidsplosion (2)
+	[131.46] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank1: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000001, Tank1, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 4x SPELL_AURA_APPLIED at 131.46, 131.46, 131.46, 131.46
+		ShowAnnounce: Voidsplosion (2)
+		StartTimer: 5.0, Voidsplosion (3)
+	[136.44] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer4: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000018, Healer4, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 13x SPELL_AURA_APPLIED at 136.44, 136.44, 136.44, 136.44, 136.44, 136.44, 136.44, 136.44, 136.44, 136.44, 136.44, 136.49, 136.5
+		ShowAnnounce: Voidsplosion (3)
+		StartTimer: 5.0, Voidsplosion (4)
+	[141.43] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank4: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000009, Tank4, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 17x SPELL_AURA_APPLIED at 141.43, 141.43, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.44, 141.49
+		ShowAnnounce: Voidsplosion (4)
 	[145.69] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-00000000E8, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 		StartTimer: 6.0, Sonic Ba-Boom (1)
 		StartTimer: 12.1, Foot-Blasters (1)
@@ -316,6 +360,8 @@ Event trace:
 		ShowSpecialWarning: Foot-Blasters! (1)
 		PlaySound: VoicePack/bombsoon
 		StartTimer: 62.0, Foot-Blasters (2)
+	[161.40] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Unstable Shrapnel] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1218342, Unstable Shrapnel, 0, DEBUFF, 0
+		ShowSpecialWarning: Unstable Shrapnel on you
 	[161.69] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 2, 0
 		ShowAnnounce: Gravi-Gunk on PlayerName (2)
 	[165.74] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
@@ -422,6 +468,7 @@ Event trace:
 	[266.64] SPELL_CAST_START: [Sprocketmonger Lockenstock: Beta Launch] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466765, Beta Launch, 0, 0
 		ShowAnnounce: Beta Launch
 		PlaySound: VoicePack/phasechange
+		StartTimer: 4.9, Voidsplosion (1)
 	[268.11] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps10: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000020, Dps10, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		ScheduleTask: announce1217261target:CombinedShow("Dps10") at 269.11 (+1.00)
 			ShowAnnounce: Screwed! on Dps10
@@ -431,6 +478,25 @@ Event trace:
 	[270.71] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
 		StartTimer: 20.0, Bleeding Edge ends
 		StartTimer: 20.0, Wire Transfer (1)
+	[271.48] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000007, Healer2, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 18x SPELL_AURA_APPLIED at 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48, 271.48
+		ShowAnnounce: Voidsplosion (1)
+		StartTimer: 5.0, Voidsplosion (2)
+	[276.50] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps8: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000015, Dps8, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 16x SPELL_AURA_APPLIED at 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5, 276.5
+		ShowAnnounce: Voidsplosion (2)
+		StartTimer: 5.0, Voidsplosion (3)
+	[281.47] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer3: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000010, Healer3, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 9x SPELL_AURA_APPLIED at 281.47, 281.48, 281.48, 281.48, 281.48, 281.52, 281.52, 281.52, 281.52
+		ShowAnnounce: Voidsplosion (3)
+		StartTimer: 5.0, Voidsplosion (4)
+	[286.49] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps7: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000014, Dps7, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 1888350, 0
+		AntiSpam: 2
+			Filtered: 5x SPELL_AURA_APPLIED at 286.49, 286.5, 286.5, 286.5, 286.5
+		ShowAnnounce: Voidsplosion (4)
 	[290.73] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-000000010C, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 		StartTimer: 6.0, Sonic Ba-Boom (1)
 		StartTimer: 12.1, Foot-Blasters (1)
@@ -453,6 +519,8 @@ Event trace:
 		ShowSpecialWarning: Foot-Blasters! (1)
 		PlaySound: VoicePack/bombsoon
 		StartTimer: 62.0, Foot-Blasters (2)
+	[305.96] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Tank5: Unstable Shrapnel] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 1218342, Unstable Shrapnel, 0, DEBUFF, 0
+		ShowSpecialWarning: Unstable Shrapnel on you
 	[309.09] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Tank5: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Tank5, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 6, 0
 		ShowAnnounce: Gravi-Gunk on PlayerName (6)
 	[310.74] SPELL_CAST_START: [Sprocketmonger Lockenstock: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1214872, Pyro Party Pack, 0, 0
