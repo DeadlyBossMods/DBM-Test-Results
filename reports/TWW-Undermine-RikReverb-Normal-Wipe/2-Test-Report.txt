@@ -8,6 +8,7 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 464518 (Tinnitus)
 	Unused event registration: SPELL_AURA_APPLIED 466128 (Resonance)
 	Unused event registration: SPELL_AURA_APPLIED 472298 (Entranced!)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 464518 (Tinnitus)
 	Unused event registration: SPELL_AURA_REMOVED 466128 (Resonance)
 	Unused event registration: SPELL_AURA_REMOVED 467542 (Haywire)
 	Unused event registration: SPELL_CAST_START 473655 (Hype Fever!)
@@ -16,13 +17,12 @@ Findings:
 	Timer for spell ID 66911 (Dance) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
 	SpecialWarning for spell ID 464584 (Sound Cloud) is triggered by event SPELL_AURA_APPLIED 1213817 (Sound Cloud)
 	Timer for spell ID 466866 (Echoing Chant) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
-	Announce for spell ID 466979 (Faulty Zap) is triggered by event SPELL_AURA_APPLIED 467108 (Faulty Zap)
 	Timer for spell ID 466979 (Faulty Zap) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
 	Timer for spell ID 467606 (Sound Cannon) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
-	Timer for spell ID 473260 (Blaring Drop) is triggered by event SPELL_AURA_APPLIED 1213817 (Sound Cloud)
 	Timer for spell ID 473748 (Amplification!) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
 
 Unused objects:
+	[Announce] Tinnitus on >%s< (%d), type=stack, spellId=464518
 	[Announce] Entranced on >%s<, type=target, spellId=1214598
 	[Special Warning] Tinnitus on >%s< - taunt now, type=taunt, spellId=464518
 	[Special Warning] Faulty Zap - move away from others, type=moveaway, spellId=466979
@@ -60,13 +60,12 @@ Timers:
 			 Triggered 2x, delta times: 30.05, 152.95
 		[151.98] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
 			 Triggered 2x, delta times: 151.98, 152.01
-	Blaring Drop (%s), time=8.00, type=nextcount, spellId=473260, triggerDeltas = 115.99, 5.25, 8.00, 8.01, 7.98, 122.75, 5.28, 8.00, 7.99, 8.01
-		[115.99] SPELL_AURA_APPLIED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-			 Triggered 2x, delta times: 115.99, 151.99
+	Blaring Drop, time=5.00, type=cast, spellId=473260, triggerDeltas = 121.24, 8.00, 8.01, 7.98, 128.03, 8.00, 7.99, 8.01
 		[121.24] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
 			 Triggered 8x, delta times: 121.24, 8.00, 8.01, 7.98, 128.03, 8.00, 7.99, 8.01
-		[151.98] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-			 Triggered 2x, delta times: 151.98, 152.01
+	Blaring Drop (%s), time=8.00, type=nextcount, spellId=473260, triggerDeltas = 121.24, 8.00, 8.01, 136.01, 8.00, 7.99
+		[121.24] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
+			 Triggered 6x, delta times: 121.24, 8.00, 8.01, 136.01, 8.00, 7.99
 	Amplification! (%s), time=40.00, type=cdcount, spellId=473748, triggerDeltas = 0.00, 10.55, 141.43, 11.69, 140.32, 11.45
 		[  0.00] ENCOUNTER_START: 3011, Rik Reverb, 14, 29, 0
 		[ 10.55] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
@@ -75,23 +74,14 @@ Timers:
 			 Triggered 2x, delta times: 151.98, 152.01
 
 Announces:
-	Tinnitus on >%s< (%d), type=stack, spellId=464518, triggerDeltas = 18.57, 18.89, 31.42, 37.31, 70.25, 14.01, 22.63, 12.01, 31.50, 7.20
-		[ 18.57] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank2: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000025, Tank2, 0x511, 464518, Tinnitus, 0, DEBUFF, 5, 0
-			 Triggered 4x, delta times: 18.57, 157.87, 36.64, 43.51
-		[ 37.46] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank1: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000013, Tank1, 0x512, 464518, Tinnitus, 0, DEBUFF, 5, 0
-			 Triggered 6x, delta times: 37.46, 31.42, 37.31, 84.26, 34.64, 38.70
 	Haywire, type=spell, spellId=466093, triggerDeltas = 122.82, 8.59, 7.14, 7.88, 31.08, 44.88, 52.24, 5.17, 8.29, 3.40, 6.07, 31.69
 		[122.82] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000015, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000015, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 			 Triggered 12x, delta times: 122.82, 8.59, 7.14, 7.88, 31.08, 44.88, 52.24, 5.17, 8.29, 3.40, 6.07, 31.69
-	Faulty Zap on >%s<, type=target, spellId=466979, triggerDeltas = 41.24, 1.96, 32.54, 1.95, 116.57, 1.95, 32.57, 1.91
-		[ 41.24] SPELL_AURA_APPLIED: [->Dps3: Faulty Zap] "", nil, 0x0, Player-1-00000003, Dps3, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-		[ 43.20] Scheduled at 42.00 by SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-		[ 75.74] SPELL_AURA_APPLIED: [->Healer2: Faulty Zap] "", nil, 0x0, Player-1-00000027, Healer2, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-		[ 77.69] Scheduled at 76.49 by SPELL_AURA_APPLIED: [->Dps2: Faulty Zap] "", nil, 0x0, Player-1-00000002, Dps2, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-		[194.26] SPELL_AURA_APPLIED: [->Dps20: Faulty Zap] "", nil, 0x0, Player-1-00000026, Dps20, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-		[196.21] Scheduled at 195.01 by SPELL_AURA_APPLIED: [->Dps13: Faulty Zap] "", nil, 0x0, Player-1-00000017, Dps13, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-		[228.78] SPELL_AURA_APPLIED: [->Tank1: Faulty Zap] "", nil, 0x0, Player-1-00000013, Tank1, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-		[230.69] Scheduled at 229.49 by SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
+	Faulty Zap on >%s<, type=target, spellId=466979, triggerDeltas = 42.50, 34.49, 118.52, 34.48
+		[ 42.50] Scheduled at 42.00 by SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
+		[ 76.99] Scheduled at 76.49 by SPELL_AURA_APPLIED: [->Dps2: Faulty Zap] "", nil, 0x0, Player-1-00000002, Dps2, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
+		[195.51] Scheduled at 195.01 by SPELL_AURA_APPLIED: [->Dps13: Faulty Zap] "", nil, 0x0, Player-1-00000017, Dps13, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
+		[229.99] Scheduled at 229.49 by SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 	Sound Cannon incoming debuff (%s), type=incomingcount, spellId=467606, triggerDeltas = 30.05, 49.45, 103.50, 49.51
 		[ 30.05] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 			 Triggered 4x, delta times: 30.05, 49.45, 103.50, 49.51
@@ -149,8 +139,6 @@ Event trace:
 		ShowSpecialWarning: Amplification! (1) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 40.2, Amplification! (2)
-	[ 18.57] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank2: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000025, Tank2, 0x511, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on PlayerName (5)
 	[ 22.98] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (1) - dodge attack
 		PlaySound: VoicePack/watchwave
@@ -161,8 +149,6 @@ Event trace:
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 30.15 (+0.10)
 	[ 32.10] SPELL_AURA_APPLIED: [Rik Reverb->Tank2: Resonant Echoes] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000025, Tank2, 0x511, 468119, Resonant Echoes, 0, DEBUFF, 0
 		ShowAnnounce: Resonant Echoes on YOU
-	[ 37.46] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank1: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000013, Tank1, 0x512, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on Tank1 (5)
 	[ 40.49] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
 		StartTimer: 34.5, Faulty Zap (2)
 	[ 40.52] SPELL_AURA_APPLIED: [->Dps10: Faulty Zap] "", nil, 0x0, Player-1-00000014, Dps10, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
@@ -177,7 +163,6 @@ Event trace:
 	[ 41.24] SPELL_AURA_APPLIED: [->Dps3: Faulty Zap] "", nil, 0x0, Player-1-00000003, Dps3, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps3
 			Filtered: 1x SPELL_AURA_APPLIED at 44.25
-		ShowAnnounce: Faulty Zap on Dps10, Dps16, Dps13, Dps3
 	[ 41.50] SPELL_AURA_APPLIED: [->Dps7: Faulty Zap] "", nil, 0x0, Player-1-00000010, Dps7, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps7
 			Filtered: 1x SPELL_AURA_APPLIED at 44.5
@@ -187,13 +172,11 @@ Event trace:
 	[ 42.00] SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps11
 			Filtered: 1x SPELL_AURA_APPLIED at 45
-		ScheduleTask: announce466979target:PreciseShow(4.0, "Dps11") at 43.20 (+1.20)
-			ShowAnnounce: Faulty Zap on Dps7, Healer1, Dps11
+		ScheduleTask: announce466979target:CombinedShow("Dps11") at 42.50 (+0.50)
+			ShowAnnounce: Faulty Zap on Dps10, Dps16, Dps13, Dps3, Dps7, Healer1, Dps11
 	[ 50.74] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[ 68.88] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank1: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000013, Tank1, 0x512, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on Tank1 (5)
 	[ 70.99] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (2) - dodge attack
 		PlaySound: VoicePack/watchwave
@@ -210,7 +193,6 @@ Event trace:
 	[ 75.74] SPELL_AURA_APPLIED: [->Healer2: Faulty Zap] "", nil, 0x0, Player-1-00000027, Healer2, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Healer2
 			Filtered: 1x SPELL_AURA_APPLIED at 78.74
-		ShowAnnounce: Faulty Zap on Dps1, Dps6, Dps8, Healer2
 	[ 75.99] SPELL_AURA_APPLIED: [->Dps20: Faulty Zap] "", nil, 0x0, Player-1-00000026, Dps20, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps20
 			Filtered: 1x SPELL_AURA_APPLIED at 79.01
@@ -220,24 +202,22 @@ Event trace:
 	[ 76.49] SPELL_AURA_APPLIED: [->Dps2: Faulty Zap] "", nil, 0x0, Player-1-00000002, Dps2, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps2
 			Filtered: 1x SPELL_AURA_APPLIED at 79.49
-		ScheduleTask: announce466979target:PreciseShow(4.0, "Dps2") at 77.69 (+1.20)
-			ShowAnnounce: Faulty Zap on Dps20, Dps9, Dps2
+		ScheduleTask: announce466979target:CombinedShow("Dps2") at 76.99 (+0.50)
+			ShowAnnounce: Faulty Zap on Dps1, Dps6, Dps8, Healer2, Dps20, Dps9, Dps2
 	[ 79.50] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 		ShowAnnounce: Sound Cannon incoming debuff (2)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 79.60 (+0.10)
 	[102.47] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (3) - dodge attack
 		PlaySound: VoicePack/watchwave
-	[106.19] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank1: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000013, Tank1, 0x512, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on Tank1 (5)
 	[115.99] SPELL_AURA_APPLIED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-		StartTimer: 5.2, Blaring Drop (1)
 		ShowSpecialWarning: Sound Cloud! (1)
 		PlaySound: VoicePack/phasechange
-		StartTimer: 36.0, Stage 1
+		StartTimer: 32.0, Stage 1
 	[121.24] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
 		ShowSpecialWarning: Blaring Drop (1) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+		StartTimer: 5.0, Blaring Drop
 		StartTimer: 8.0, Blaring Drop (2)
 	[122.82] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000015, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000015, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
@@ -247,6 +227,7 @@ Event trace:
 	[129.24] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
 		ShowSpecialWarning: Blaring Drop (2) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+		StartTimer: 5.0, Blaring Drop
 		StartTimer: 8.0, Blaring Drop (3)
 	[131.41] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-000000000B, Amplifier, 0xa48, Creature-0-1-2769-1-230197-000000000B, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
@@ -256,6 +237,7 @@ Event trace:
 	[137.25] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
 		ShowSpecialWarning: Blaring Drop (3) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+		StartTimer: 5.0, Blaring Drop
 		StartTimer: 8.0, Blaring Drop (4)
 	[138.55] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000016, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000016, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
@@ -263,12 +245,11 @@ Event trace:
 	[145.23] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
 		ShowSpecialWarning: Blaring Drop (4) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-		StartTimer: 8.0, Blaring Drop (5)
+		StartTimer: 5.0, Blaring Drop
 	[146.43] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-000000000A, Amplifier, 0xa48, Creature-0-1-2769-1-230197-000000000A, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
 		ShowAnnounce: Haywire
 	[151.98] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-		StopTimer: Timer473260nextcount\t5
 		StartTimer: 10.6, Amplification! (3)
 		StartTimer: 23.0, Echoing Chant (4)
 		StartTimer: 30.1, Sound Cannon (3)
@@ -286,8 +267,6 @@ Event trace:
 		ShowSpecialWarning: Echoing Chant (4) - dodge attack
 		PlaySound: VoicePack/watchwave
 		StartTimer: 48.0, Echoing Chant (5)
-	[176.44] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank2: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000025, Tank2, 0x511, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on PlayerName (5)
 	[177.51] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000024, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000024, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
 		ShowAnnounce: Haywire
@@ -295,8 +274,6 @@ Event trace:
 		ShowAnnounce: Sound Cannon incoming debuff (3)
 		StartTimer: 49.5, Sound Cannon (4)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 183.10 (+0.10)
-	[190.45] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank1: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000013, Tank1, 0x512, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on Tank1 (5)
 	[193.50] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
 		StartTimer: 34.5, Faulty Zap (4)
 	[193.52] SPELL_AURA_APPLIED: [->Healer2: Faulty Zap] "", nil, 0x0, Player-1-00000027, Healer2, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
@@ -311,7 +288,6 @@ Event trace:
 	[194.26] SPELL_AURA_APPLIED: [->Dps20: Faulty Zap] "", nil, 0x0, Player-1-00000026, Dps20, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps20
 			Filtered: 1x SPELL_AURA_APPLIED at 197.27
-		ShowAnnounce: Faulty Zap on Healer2, Dps2, Dps16, Dps20
 	[194.50] SPELL_AURA_APPLIED: [->Dps12: Faulty Zap] "", nil, 0x0, Player-1-00000016, Dps12, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps12
 			Filtered: 1x SPELL_AURA_APPLIED at 197.52
@@ -321,15 +297,13 @@ Event trace:
 	[195.01] SPELL_AURA_APPLIED: [->Dps13: Faulty Zap] "", nil, 0x0, Player-1-00000017, Dps13, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps13
 			Filtered: 1x SPELL_AURA_APPLIED at 198.02
-		ScheduleTask: announce466979target:PreciseShow(4.0, "Dps13") at 196.21 (+1.20)
-			ShowAnnounce: Faulty Zap on Dps12, Dps11, Dps13
+		ScheduleTask: announce466979target:CombinedShow("Dps13") at 195.51 (+0.50)
+			ShowAnnounce: Faulty Zap on Healer2, Dps2, Dps16, Dps20, Dps12, Dps11, Dps13
 	[203.74] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[211.05] SPELL_AURA_REMOVED: [->Tank2: Lingering Voltage] "", nil, 0x0, Player-1-00000025, Tank2, 0x511, 1217122, Lingering Voltage, 0, DEBUFF, 0
 		ShowAnnounce: Lingering Voltage faded
-	[213.08] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank2: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000025, Tank2, 0x511, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on PlayerName (5)
 	[222.39] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000023, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000023, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
 		ShowAnnounce: Haywire
@@ -337,8 +311,6 @@ Event trace:
 		ShowSpecialWarning: Echoing Chant (5) - dodge attack
 		PlaySound: VoicePack/watchwave
 		StartTimer: 31.5, Echoing Chant (6)
-	[225.09] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank1: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000013, Tank1, 0x512, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on Tank1 (5)
 	[228.01] SPELL_AURA_APPLIED: [->Dps18: Faulty Zap] "", nil, 0x0, Player-1-00000023, Dps18, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps18
 			Filtered: 1x SPELL_AURA_APPLIED at 231.01
@@ -351,7 +323,6 @@ Event trace:
 	[228.78] SPELL_AURA_APPLIED: [->Tank1: Faulty Zap] "", nil, 0x0, Player-1-00000013, Tank1, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Tank1
 			Filtered: 1x SPELL_AURA_APPLIED at 231.77
-		ShowAnnounce: Faulty Zap on Dps18, Dps21, Dps15, Tank1
 	[229.01] SPELL_AURA_APPLIED: [->Healer2: Faulty Zap] "", nil, 0x0, Player-1-00000027, Healer2, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Healer2
 			Filtered: 1x SPELL_AURA_APPLIED at 232.01
@@ -361,8 +332,8 @@ Event trace:
 	[229.49] SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps11
 			Filtered: 1x SPELL_AURA_APPLIED at 232.49
-		ScheduleTask: announce466979target:PreciseShow(4.0, "Dps11") at 230.69 (+1.20)
-			ShowAnnounce: Faulty Zap on Healer2, Dps2, Dps11
+		ScheduleTask: announce466979target:CombinedShow("Dps11") at 229.99 (+0.50)
+			ShowAnnounce: Faulty Zap on Dps18, Dps21, Dps15, Tank1, Healer2, Dps2, Dps11
 	[232.51] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 		ShowAnnounce: Sound Cannon incoming debuff (4)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 232.61 (+0.10)
@@ -374,19 +345,15 @@ Event trace:
 	[255.49] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (6) - dodge attack
 		PlaySound: VoicePack/watchwave
-	[256.59] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank2: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000025, Tank2, 0x511, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on PlayerName (5)
-	[263.79] SPELL_AURA_APPLIED_DOSE: [Rik Reverb->Tank1: Tinnitus] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000013, Tank1, 0x512, 464518, Tinnitus, 0, DEBUFF, 5, 0
-		ShowAnnounce: Tinnitus on Tank1 (5)
 	[267.98] SPELL_AURA_APPLIED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-		StartTimer: 5.2, Blaring Drop (1)
 		ShowSpecialWarning: Sound Cloud! (2)
 		PlaySound: VoicePack/phasechange
-		StartTimer: 36.0, Stage 1
+		StartTimer: 32.0, Stage 1
 	[273.26] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
-		ShowSpecialWarning: Blaring Drop (5) - dodge attack
+		ShowSpecialWarning: Blaring Drop (1) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-		StartTimer: 8.0, Blaring Drop (6)
+		StartTimer: 5.0, Blaring Drop
+		StartTimer: 8.0, Blaring Drop (2)
 	[274.63] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-000000002D, Amplifier, 0xa48, Creature-0-1-2769-1-230197-000000002D, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
 		ShowAnnounce: Haywire
@@ -394,25 +361,27 @@ Event trace:
 		AntiSpam: 3
 		ShowAnnounce: Haywire
 	[281.26] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
-		ShowSpecialWarning: Blaring Drop (6) - dodge attack
+		ShowSpecialWarning: Blaring Drop (2) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-		StartTimer: 8.0, Blaring Drop (7)
+		StartTimer: 5.0, Blaring Drop
+		StartTimer: 8.0, Blaring Drop (3)
 	[288.09] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-000000002C, Amplifier, 0xa48, Creature-0-1-2769-1-230197-000000002C, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
 		ShowAnnounce: Haywire
 	[288.76] SPELL_AURA_APPLIED: [Rik Reverb->Tank2: Resonant Echoes] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000025, Tank2, 0x511, 468119, Resonant Echoes, 0, DEBUFF, 0
 		ShowAnnounce: Resonant Echoes on YOU
 	[289.25] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
-		ShowSpecialWarning: Blaring Drop (7) - dodge attack
+		ShowSpecialWarning: Blaring Drop (3) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-		StartTimer: 8.0, Blaring Drop (8)
+		StartTimer: 5.0, Blaring Drop
+		StartTimer: 8.0, Blaring Drop (4)
 	[291.49] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000024, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000024, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
 		ShowAnnounce: Haywire
 	[297.26] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
-		ShowSpecialWarning: Blaring Drop (8) - dodge attack
+		ShowSpecialWarning: Blaring Drop (4) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-		StartTimer: 8.0, Blaring Drop (9)
+		StartTimer: 5.0, Blaring Drop
 	[297.56] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000027, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000027, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_AURA_APPLIED at 300.34
@@ -422,7 +391,6 @@ Event trace:
 	[299.78] SPELL_AURA_APPLIED_DOSE: [->Tank2: Lingering Voltage] "", nil, 0x0, Player-1-00000025, Tank2, 0x511, 1217122, Lingering Voltage, 0, DEBUFF, 5, 0
 		ShowAnnounce: Lingering Voltage (5)
 	[303.99] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-		StopTimer: Timer473260nextcount\t9
 		StartTimer: 10.6, Amplification! (6)
 		StartTimer: 23.0, Echoing Chant (7)
 		StartTimer: 30.1, Sound Cannon (5)
