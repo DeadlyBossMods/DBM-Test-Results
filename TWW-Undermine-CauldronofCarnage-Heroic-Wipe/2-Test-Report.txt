@@ -14,6 +14,7 @@ Findings:
 	Unused event registration: SPELL_CAST_START 473994 (Static Charge)
 	Unused event registration: UNIT_DIED
 	Unused event registration: UNIT_POWER_UPDATE
+	Unused event registration: UNIT_SPELLCAST_SUCCEEDED
 	Timer for spell ID 463900 (Thunderdrum Salvo) is triggered by event SPELL_AURA_REMOVED 465863 (Colossal Clash)
 	Timer for spell ID 463900 (Thunderdrum Salvo) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
 	Timer for spell ID 466178 (Lightning Bash) is triggered by event SPELL_AURA_REMOVED 465863 (Colossal Clash)
@@ -36,417 +37,55 @@ Findings:
 	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.67s remaining
 		Refreshed by: [205.11] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
 	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.77s remaining
-		Refreshed by: [395.10] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.80s remaining
 		Refreshed by: [110.02] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.80s remaining
-		Refreshed by: [585.10] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.83s remaining
+	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.77s remaining
 		Refreshed by: [300.07] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.77s remaining
+		Refreshed by: [395.10] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.77s remaining
+		Refreshed by: [585.10] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.80s remaining
+		Refreshed by: [680.10] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
 	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.83s remaining
 		Refreshed by: [490.09] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 0.83s remaining
-		Refreshed by: [680.10] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.03s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Beam (%s), time=97.30, type=cdcount, spellId=472233 (time=15.10, variance=0.00) got refreshed early with 15.10s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.67s remaining
+		Refreshed by: [104.01] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.67s remaining
 		Refreshed by: [199.01] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.67s remaining
 		Refreshed by: [389.10] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.70s remaining
-		Refreshed by: [104.01] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.70s remaining
+	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.67s remaining
 		Refreshed by: [579.11] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.70s remaining
+		Refreshed by: [294.05] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.73s remaining
 		Refreshed by: [484.09] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.77s remaining
-		Refreshed by: [294.05] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.77s remaining
+	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 0.73s remaining
 		Refreshed by: [674.09] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 8.93s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 8.97s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 8.97s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 8.97s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Bomb (%s), time=97.30, type=cdcount, spellId=473650 (time=9.00, variance=0.00) got refreshed early with 9.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
 	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.73s remaining
 		Refreshed by: [211.05] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.80s remaining
+	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.77s remaining
 		Refreshed by: [116.00] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
+	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.77s remaining
+		Refreshed by: [306.07] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
 	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.80s remaining
 		Refreshed by: [401.07] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.83s remaining
-		Refreshed by: [306.07] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
+	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.80s remaining
+		Refreshed by: [591.08] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
+	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.80s remaining
+		Refreshed by: [686.11] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
 	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.83s remaining
 		Refreshed by: [496.08] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.83s remaining
-		Refreshed by: [591.08] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 0.83s remaining
-		Refreshed by: [686.11] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.03s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178 (time=21.10, variance=0.00) got refreshed early with 21.10s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.53s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690 (time=47.60, variance=0.00) got refreshed early with 47.60s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 5.93s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 5.97s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 5.97s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 5.97s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Static Charge (%s), time=97.30, type=cdcount, spellId=474159 (time=6.00, variance=0.00) got refreshed early with 6.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
 	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.63s remaining
 		Refreshed by: [217.05] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.67s remaining
+		Refreshed by: [312.08] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.70s remaining
+		Refreshed by: [121.97] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.70s remaining
 		Refreshed by: [407.08] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.73s remaining
-		Refreshed by: [121.97] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.73s remaining
-		Refreshed by: [312.08] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.73s remaining
+	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 0.70s remaining
 		Refreshed by: [597.09] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 26.93s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Stomp (%s), time=97.30, type=cdcount, spellId=1214190 (time=27.00, variance=0.00) got refreshed early with 27.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 10.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900 (time=10.00, variance=0.00) got refreshed early with 9.93s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 0.63s remaining
-		Refreshed by: [219.04] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001FC4, 1213994, Torq, 55.1, 41, Tank1, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 0.70s remaining
-		Refreshed by: [124.01] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001A5A, 1213994, Torq, 70.1, 42, Tank2, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 0.70s remaining
-		Refreshed by: [409.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000011DF, 1213994, Torq, 32.6, 42, Tank1, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 0.73s remaining
-		Refreshed by: [314.07] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000010A4, 1213994, Torq, 42.3, 41, Tank2, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 0.73s remaining
-		Refreshed by: [504.08] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000160E, 1213994, Torq, 24.7, 42, Tank2, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 0.73s remaining
-		Refreshed by: [599.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000010F, 1213994, Torq, 17.9, 41, Tank1, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 28.93s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=29.00, variance=0.00) got refreshed early with 29.00s remaining
-		Refreshed by: [665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=65.00, variance=0.00) got refreshed early with 28.27s remaining
-		Refreshed by: [285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=65.00, variance=0.00) got refreshed early with 28.27s remaining
-		Refreshed by: [475.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=65.00, variance=0.00) got refreshed early with 28.27s remaining
-		Refreshed by: [665.81] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=65.00, variance=0.00) got refreshed early with 28.33s remaining
-		Refreshed by: [ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=65.00, variance=0.00) got refreshed early with 28.33s remaining
-		Refreshed by: [190.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=65.00, variance=0.00) got refreshed early with 28.33s remaining
-		Refreshed by: [380.79] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Timer Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994 (time=65.00, variance=0.00) got refreshed early with 28.33s remaining
-		Refreshed by: [570.79] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
 
 Unused objects:
 	[Announce] King of Carnage (%s), type=count, spellId=471557
@@ -463,110 +102,64 @@ Unused objects:
 	[Yell] %d, type=shortfade, spellId=1213690
 
 Timers:
-	Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900, triggerDeltas = 0.00, 95.69, 0.00, 0.01, 0.00, 94.99, 0.00, 0.00, 0.00, 95.07, 0.00, 0.04, 0.00, 94.99, 0.00, 0.00, 0.00, 95.01, 0.00, 0.00, 0.00, 94.99, 0.01, 0.00, 0.00, 95.01, 0.00, 0.03, 0.00
+	Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900, triggerDeltas = 0.00, 95.69, 95.00, 95.07, 95.03, 95.01, 94.99, 95.02
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
 	Colossal Clash (%s), time=95.00, type=nextcount, spellId=465833, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
-	Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178, triggerDeltas = 0.00, 21.05, 74.64, 0.00, 0.01, 0.00, 20.30, 74.69, 0.00, 0.00, 0.00, 20.36, 74.71, 0.00, 0.04, 0.00, 20.27, 74.72, 0.00, 0.00, 0.00, 20.28, 74.73, 0.00, 0.00, 0.00, 20.28, 74.71, 0.01, 0.00, 0.00, 20.28, 74.73, 0.00, 0.03, 0.00, 20.27
+	Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178, triggerDeltas = 0.00, 21.05, 74.64, 20.31, 74.69, 20.36, 74.71, 20.31, 74.72, 20.28, 74.73, 20.28, 74.71, 20.29, 74.73, 20.30
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
 		[ 21.05] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
 			 Triggered 8x, delta times: 21.05, 94.95, 95.05, 95.02, 95.00, 95.01, 95.00, 95.03
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
-	Beam (%s), time=97.30, type=cdcount, spellId=472233, triggerDeltas = 0.00, 15.04, 23.96, 56.69, 0.00, 0.01, 0.00, 14.32, 24.00, 56.67, 0.00, 0.00, 0.00, 14.42, 23.91, 56.74, 0.00, 0.04, 0.00, 14.27, 24.05, 56.67, 0.00, 0.00, 0.00, 14.31, 23.98, 56.72, 0.00, 0.00, 0.00, 14.29, 24.03, 56.67, 0.01, 0.00, 0.00, 14.30, 23.99, 56.72, 0.00, 0.03, 0.00, 14.26
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
+	Beam (%s), time=97.30, type=cdcount, spellId=472233, triggerDeltas = 0.00, 15.04, 23.96, 56.69, 14.33, 24.00, 56.67, 14.42, 23.91, 56.74, 14.31, 24.05, 56.67, 14.31, 23.98, 56.72, 14.29, 24.03, 56.67, 14.31, 23.99, 56.72, 14.29
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
 		[ 15.04] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
 			 Triggered 15x, delta times: 15.04, 23.96, 71.02, 24.00, 71.09, 23.91, 71.05, 24.05, 70.98, 23.98, 71.01, 24.03, 70.98, 23.99, 71.01
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
-	Bomb (%s), time=97.30, type=cdcount, spellId=473650, triggerDeltas = 0.00, 9.00, 24.00, 62.69, 0.00, 0.01, 0.00, 8.31, 24.00, 62.68, 0.00, 0.00, 0.00, 8.32, 24.01, 62.74, 0.00, 0.04, 0.00, 8.25, 24.04, 62.70, 0.00, 0.00, 0.00, 8.31, 23.99, 62.71, 0.00, 0.00, 0.00, 8.29, 23.99, 62.71, 0.01, 0.00, 0.00, 8.31, 24.00, 62.70, 0.00, 0.03, 0.00, 8.25
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
+	Bomb (%s), time=97.30, type=cdcount, spellId=473650, triggerDeltas = 0.00, 9.00, 24.00, 62.69, 8.32, 24.00, 62.68, 8.32, 24.01, 62.74, 8.29, 24.04, 62.70, 8.31, 23.99, 62.71, 8.29, 23.99, 62.71, 8.32, 24.00, 62.70, 8.28
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
 		[  9.00] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 			 Triggered 15x, delta times: 9.00, 24.00, 71.01, 24.00, 71.00, 24.01, 71.03, 24.04, 71.01, 23.99, 71.00, 23.99, 71.03, 24.00, 70.98
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
-	Static Charge (%s), time=97.30, type=cdcount, spellId=474159, triggerDeltas = 0.00, 95.69, 0.00, 0.01, 0.00, 94.99, 0.00, 0.00, 0.00, 95.07, 0.00, 0.04, 0.00, 94.99, 0.00, 0.00, 0.00, 95.01, 0.00, 0.00, 0.00, 94.99, 0.01, 0.00, 0.00, 95.01, 0.00, 0.03, 0.00
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
+	Static Charge (%s), time=97.30, type=cdcount, spellId=474159, triggerDeltas = 0.00, 95.69, 95.00, 95.07, 95.03, 95.01, 94.99, 95.02
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
-	Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690, triggerDeltas = 0.00, 95.69, 0.00, 0.01, 0.00, 94.99, 0.00, 0.00, 0.00, 95.07, 0.00, 0.04, 0.00, 94.99, 0.00, 0.00, 0.00, 95.01, 0.00, 0.00, 0.00, 94.99, 0.01, 0.00, 0.00, 95.01, 0.00, 0.03, 0.00
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
+	Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690, triggerDeltas = 0.00, 95.69, 95.00, 95.07, 95.03, 95.01, 94.99, 95.02
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
-	Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994, triggerDeltas = 0.00, 28.99, 30.01, 36.69, 0.00, 0.01, 0.00, 28.31, 29.98, 36.70, 0.00, 0.00, 0.00, 28.35, 29.97, 36.75, 0.00, 0.04, 0.00, 28.27, 30.00, 36.72, 0.00, 0.00, 0.00, 28.30, 29.97, 36.74, 0.00, 0.00, 0.00, 28.28, 30.02, 36.69, 0.01, 0.00, 0.00, 28.29, 30.00, 36.72, 0.00, 0.03, 0.00
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
+	Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994, triggerDeltas = 0.00, 95.69, 95.00, 95.07, 95.03, 95.01, 94.99, 95.02
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
-		[ 28.99] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001FF1, 1213994, Torq, 89.9, 40, Tank1, 0
-		[ 59.00] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001B3C, 1213994, Torq, 83.3, 82, Tank1, 0
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
-		[124.01] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001A5A, 1213994, Torq, 70.1, 42, Tank2, 0
-		[153.99] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000194B, 1213994, Torq, 64.8, 85, Tank2, 0
-		[219.04] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001FC4, 1213994, Torq, 55.1, 41, Tank1, 0
-		[249.01] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001418, 1213994, Torq, 50.9, 84, Tank1, 0
-		[314.07] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000010A4, 1213994, Torq, 42.3, 41, Tank2, 0
-		[344.07] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000011C1, 1213994, Torq, 39.4, 84, Tank2, 0
-		[409.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000011DF, 1213994, Torq, 32.6, 42, Tank1, 0
-		[439.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001591, 1213994, Torq, 30.1, 85, Tank1, 0
-		[504.08] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000160E, 1213994, Torq, 24.7, 42, Tank2, 0
-		[534.10] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000000F0D, 1213994, Torq, 22, 84, Tank2, 0
-		[599.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000010F, 1213994, Torq, 17.9, 41, Tank1, 0
-		[629.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000000118, 1213994, Torq, 17, 84, Tank1, 0
-	Stomp (%s), time=97.30, type=cdcount, spellId=1214190, triggerDeltas = 0.00, 26.99, 68.70, 0.00, 0.01, 0.00, 26.27, 68.72, 0.00, 0.00, 0.00, 26.36, 68.71, 0.00, 0.04, 0.00, 26.28, 68.71, 0.00, 0.00, 0.00, 26.29, 68.72, 0.00, 0.00, 0.00, 50.30, 44.69, 0.01, 0.00, 0.00, 26.29, 68.72, 0.00, 0.03, 0.00
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
+	Stomp (%s), time=97.30, type=cdcount, spellId=1214190, triggerDeltas = 0.00, 26.99, 68.70, 26.28, 68.72, 26.36, 68.71, 26.32, 68.71, 26.29, 68.72, 50.30, 44.69, 26.30, 68.72
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 15, 30, 0
 		[ 26.99] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 			 Triggered 7x, delta times: 26.99, 94.98, 95.08, 95.03, 95.00, 119.02, 70.99
 		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.01
-		[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.69, 95.00, 95.11, 94.99, 95.01, 95.00, 95.04
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 94.99, 95.02
-		[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 7x, delta times: 95.70, 94.99, 95.07, 95.03, 95.01, 95.00, 95.04
+			 Triggered 4x, delta times: 95.69, 95.00, 285.11, 190.01
+		[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 285.76, 95.03, 190.00
 
 Announces:
 	Blistering Spite (%s), type=count, spellId=472222, triggerDeltas = 15.04, 9.98, 10.03, 9.98, 15.01, 9.98, 9.99, 10.05, 5.64, 94.32, 4.97, 10.00, 10.02, 15.00, 9.98, 9.99, 10.03, 10.07, 9.93, 5.80, 94.18, 5.02, 9.98, 10.02, 9.98, 35.01, 9.98, 10.00, 100.88, 9.12, 10.03, 9.96, 9.99, 10.01
@@ -1001,8 +594,6 @@ Event trace:
 		ShowAnnounce: Blistering Spite (6)
 	[ 26.99] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 		StartTimer: 24.0, Stomp (2)
-	[ 28.99] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001FF1, 1213994, Torq, 89.9, 40, Tank1, 0
-		StartTimer: 30.0, Voltaic Image (2)
 	[ 30.28] SPELL_AURA_APPLIED: [Voltaic Image->Healer5: Voltaic Image] Creature-0-1-2769-1-235187-0000000165, Voltaic Image, 0xa48, Player-1-00000029, Healer5, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
 		ShowAnnounce: Voltaic Image on Healer3, Tank3, Healer5
 	[ 33.00] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
@@ -1021,8 +612,6 @@ Event trace:
 	[ 56.97] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 		ShowSpecialWarning: Bomb - soak (3)
 		PlaySound: VoicePack/helpsoak
-	[ 59.00] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001B3C, 1213994, Torq, 83.3, 82, Tank1, 0
-		StartTimer: 65.0, Voltaic Image (3)
 	[ 60.04] SPELL_AURA_APPLIED_DOSE: [Flarendo->Tank2: Blistering Spite] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 472222, Blistering Spite, 0, DEBUFF, 12, 0
 		ShowAnnounce: Blistering Spite (12)
 	[ 60.36] SPELL_AURA_APPLIED: [Voltaic Image->Dps20: Voltaic Image] Creature-0-1-2769-1-235187-0000000166, Voltaic Image, 0xa48, Player-1-00000025, Dps20, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
@@ -1036,33 +625,8 @@ Event trace:
 	[ 95.03] SPELL_AURA_APPLIED_DOSE: [Torq->Tank2: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000026, Tank2, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 4, 0
 		ShowAnnounce: Galvanized Spite (4)
 	[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (4)
-		StartTimer: 15.1, Beam (4)
-		StartTimer: 27.0, Stomp (3)
-		StartTimer: 6.0, Static Charge (2)
-		StartTimer: 10.0, Thunderdrum Salvo (3)
-		StartTimer: 29.0, Voltaic Image (3)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (3)
-	[ 95.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (4)
-		StartTimer: 15.1, Beam (4)
-		StartTimer: 27.0, Stomp (3)
-		StartTimer: 6.0, Static Charge (2)
-		StartTimer: 10.0, Thunderdrum Salvo (3)
-		StartTimer: 29.0, Voltaic Image (3)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (3)
-	[ 95.70] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (4)
-		StartTimer: 15.1, Beam (4)
-		StartTimer: 27.0, Stomp (3)
-		StartTimer: 6.0, Static Charge (2)
-		StartTimer: 10.0, Thunderdrum Salvo (3)
-		StartTimer: 29.0, Voltaic Image (3)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (3)
-	[ 95.70] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 95.69, 95.7, 95.7
 		StartTimer: 9.0, Bomb (4)
 		StartTimer: 15.1, Beam (4)
 		StartTimer: 27.0, Stomp (3)
@@ -1095,8 +659,6 @@ Event trace:
 		StartTimer: 30.0, Lightning Bash (4)
 	[121.97] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 		StartTimer: 24.0, Stomp (4)
-	[124.01] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001A5A, 1213994, Torq, 70.1, 42, Tank2, 0
-		StartTimer: 30.0, Voltaic Image (4)
 	[125.29] SPELL_AURA_APPLIED: [Voltaic Image->Dps7: Voltaic Image] Creature-0-1-2769-1-235187-0000000169, Voltaic Image, 0xa48, Player-1-00000009, Dps7, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
 		ShowAnnounce: Voltaic Image on Healer2, Dps9, Dps7
 	[127.80] SPELL_PERIODIC_DAMAGE: [Torq->Tank2: Lingering Electricity] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000026, Tank2, 0x511, 463925, Lingering Electricity, 0, 0
@@ -1118,8 +680,6 @@ Event trace:
 	[152.04] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 		ShowSpecialWarning: Bomb - soak (6)
 		PlaySound: VoicePack/helpsoak
-	[153.99] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000194B, 1213994, Torq, 64.8, 85, Tank2, 0
-		StartTimer: 65.0, Voltaic Image (5)
 	[155.06] SPELL_AURA_APPLIED_DOSE: [Torq->Tank2: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000026, Tank2, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 6, 0
 		ShowAnnounce: Galvanized Spite (6)
 	[155.27] SPELL_AURA_APPLIED: [Voltaic Image->Dps8: Voltaic Image] Creature-0-1-2769-1-235187-0000000130, Voltaic Image, 0xa48, Player-1-00000010, Dps8, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
@@ -1138,33 +698,8 @@ Event trace:
 	[190.02] SPELL_AURA_APPLIED_DOSE: [Flarendo->Tank2: Blistering Spite] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 472222, Blistering Spite, 0, DEBUFF, 4, 0
 		ShowAnnounce: Blistering Spite (4)
 	[190.69] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (7)
-		StartTimer: 15.1, Beam (7)
-		StartTimer: 27.0, Stomp (5)
-		StartTimer: 6.0, Static Charge (3)
-		StartTimer: 10.0, Thunderdrum Salvo (5)
-		StartTimer: 29.0, Voltaic Image (5)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (5)
-	[190.69] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (7)
-		StartTimer: 15.1, Beam (7)
-		StartTimer: 27.0, Stomp (5)
-		StartTimer: 6.0, Static Charge (3)
-		StartTimer: 10.0, Thunderdrum Salvo (5)
-		StartTimer: 29.0, Voltaic Image (5)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (5)
-	[190.69] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (7)
-		StartTimer: 15.1, Beam (7)
-		StartTimer: 27.0, Stomp (5)
-		StartTimer: 6.0, Static Charge (3)
-		StartTimer: 10.0, Thunderdrum Salvo (5)
-		StartTimer: 29.0, Voltaic Image (5)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (5)
-	[190.69] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 190.69, 190.69, 190.69
 		StartTimer: 9.0, Bomb (7)
 		StartTimer: 15.1, Beam (7)
 		StartTimer: 27.0, Stomp (5)
@@ -1194,8 +729,6 @@ Event trace:
 		ShowAnnounce: Blistering Spite (10)
 	[217.05] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 		StartTimer: 24.0, Stomp (6)
-	[219.04] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001FC4, 1213994, Torq, 55.1, 41, Tank1, 0
-		StartTimer: 30.0, Voltaic Image (6)
 	[220.29] SPELL_AURA_APPLIED: [Voltaic Image->Tank3: Voltaic Image] Creature-0-1-2769-1-235187-000000016E, Voltaic Image, 0xa48, Player-1-00000030, Tank3, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
 		ShowAnnounce: Voltaic Image on Dps1, Healer5, Tank3
 	[222.35] SPELL_PERIODIC_DAMAGE: [Flarendo->Tank2: Molten Pool] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 1214039, Molten Pool, 0, 0
@@ -1239,8 +772,6 @@ Event trace:
 			Filtered: 2x SPELL_PERIODIC_DAMAGE at 248.43, 249.42
 		ShowSpecialWarning: Molten Pool damage - move away
 		PlaySound: VoicePack/watchfeet
-	[249.01] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001418, 1213994, Torq, 50.9, 84, Tank1, 0
-		StartTimer: 65.0, Voltaic Image (7)
 	[249.98] SPELL_AURA_APPLIED_DOSE: [Flarendo->Tank2: Blistering Spite] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 472222, Blistering Spite, 0, DEBUFF, 16, 0
 		ShowAnnounce: Blistering Spite (16)
 	[250.28] SPELL_AURA_APPLIED: [Voltaic Image->Tank3: Voltaic Image] Creature-0-1-2769-1-235187-000000016F, Voltaic Image, 0xa48, Player-1-00000030, Tank3, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
@@ -1277,33 +808,8 @@ Event trace:
 	[285.01] SPELL_AURA_APPLIED_DOSE: [Torq->Tank2: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000026, Tank2, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 4, 0
 		ShowAnnounce: Galvanized Spite (4)
 	[285.76] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (10)
-		StartTimer: 15.1, Beam (10)
-		StartTimer: 27.0, Stomp (7)
-		StartTimer: 6.0, Static Charge (4)
-		StartTimer: 10.0, Thunderdrum Salvo (7)
-		StartTimer: 29.0, Voltaic Image (7)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (7)
-	[285.76] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (10)
-		StartTimer: 15.1, Beam (10)
-		StartTimer: 27.0, Stomp (7)
-		StartTimer: 6.0, Static Charge (4)
-		StartTimer: 10.0, Thunderdrum Salvo (7)
-		StartTimer: 29.0, Voltaic Image (7)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (7)
-	[285.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (10)
-		StartTimer: 15.1, Beam (10)
-		StartTimer: 27.0, Stomp (7)
-		StartTimer: 6.0, Static Charge (4)
-		StartTimer: 10.0, Thunderdrum Salvo (7)
-		StartTimer: 29.0, Voltaic Image (7)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (7)
-	[285.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 285.76, 285.8, 285.8
 		StartTimer: 9.0, Bomb (10)
 		StartTimer: 15.1, Beam (10)
 		StartTimer: 27.0, Stomp (7)
@@ -1333,8 +839,6 @@ Event trace:
 		ShowAnnounce: Galvanized Spite (10)
 	[312.08] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 		StartTimer: 24.0, Stomp (8)
-	[314.07] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000010A4, 1213994, Torq, 42.3, 41, Tank2, 0
-		StartTimer: 30.0, Voltaic Image (8)
 	[315.33] SPELL_AURA_APPLIED: [Voltaic Image->Dps21: Voltaic Image] Creature-0-1-2769-1-235187-0000000171, Voltaic Image, 0xa48, Player-1-00000028, Dps21, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
 		ShowAnnounce: Voltaic Image on Dps12, Healer1, Dps21
 	[318.09] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
@@ -1353,8 +857,6 @@ Event trace:
 	[342.06] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 		ShowSpecialWarning: Bomb - soak (12)
 		PlaySound: VoicePack/helpsoak
-	[344.07] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000011C1, 1213994, Torq, 39.4, 84, Tank2, 0
-		StartTimer: 65.0, Voltaic Image (9)
 	[345.31] SPELL_AURA_APPLIED: [Voltaic Image->Healer4: Voltaic Image] Creature-0-1-2769-1-235187-0000000173, Voltaic Image, 0xa48, Player-1-00000027, Healer4, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
 		ShowAnnounce: Voltaic Image on Healer1, Dps11, Healer4
 	[364.45] SPELL_PERIODIC_DAMAGE: [Torq->Tank2: Lingering Electricity] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000026, Tank2, 0x511, 463925, Lingering Electricity, 0, 0
@@ -1383,33 +885,8 @@ Event trace:
 	[379.99] SPELL_AURA_APPLIED_DOSE: [Flarendo->Tank2: Blistering Spite] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 472222, Blistering Spite, 0, DEBUFF, 4, 0
 		ShowAnnounce: Blistering Spite (4)
 	[380.79] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (13)
-		StartTimer: 15.1, Beam (13)
-		StartTimer: 27.0, Stomp (9)
-		StartTimer: 6.0, Static Charge (5)
-		StartTimer: 10.0, Thunderdrum Salvo (9)
-		StartTimer: 29.0, Voltaic Image (9)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (9)
-	[380.79] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (13)
-		StartTimer: 15.1, Beam (13)
-		StartTimer: 27.0, Stomp (9)
-		StartTimer: 6.0, Static Charge (5)
-		StartTimer: 10.0, Thunderdrum Salvo (9)
-		StartTimer: 29.0, Voltaic Image (9)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (9)
-	[380.79] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (13)
-		StartTimer: 15.1, Beam (13)
-		StartTimer: 27.0, Stomp (9)
-		StartTimer: 6.0, Static Charge (5)
-		StartTimer: 10.0, Thunderdrum Salvo (9)
-		StartTimer: 29.0, Voltaic Image (9)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (9)
-	[380.79] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 380.79, 380.79, 380.79
 		StartTimer: 9.0, Bomb (13)
 		StartTimer: 15.1, Beam (13)
 		StartTimer: 27.0, Stomp (9)
@@ -1444,8 +921,6 @@ Event trace:
 		ShowAnnounce: Blistering Spite (10)
 	[407.08] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 		StartTimer: 24.0, Stomp (10)
-	[409.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-00000011DF, 1213994, Torq, 32.6, 42, Tank1, 0
-		StartTimer: 30.0, Voltaic Image (10)
 	[410.05] SPELL_PERIODIC_MISSED: [Flarendo->Tank2: Molten Pool] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 1214039, Molten Pool, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_MISSED at 411.04
@@ -1482,8 +957,6 @@ Event trace:
 			Filtered: 2x SPELL_PERIODIC_DAMAGE at 439.53, 440.51
 		ShowSpecialWarning: Molten Pool damage - move away
 		PlaySound: VoicePack/watchfeet
-	[439.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000001591, 1213994, Torq, 30.1, 85, Tank1, 0
-		StartTimer: 65.0, Voltaic Image (11)
 	[440.33] SPELL_AURA_APPLIED: [Voltaic Image->Healer5: Voltaic Image] Creature-0-1-2769-1-235187-0000000177, Voltaic Image, 0xa48, Player-1-00000029, Healer5, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
 		ShowAnnounce: Voltaic Image on Tank1, Dps13, Healer5
 	[441.51] SPELL_PERIODIC_DAMAGE: [Flarendo->Tank2: Molten Pool] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 1214039, Molten Pool, 0, 0
@@ -1533,33 +1006,8 @@ Event trace:
 		ShowSpecialWarning: Lingering Electricity damage - move away
 		PlaySound: VoicePack/watchfeet
 	[475.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (16)
-		StartTimer: 15.1, Beam (16)
-		StartTimer: 27.0, Stomp (11)
-		StartTimer: 6.0, Static Charge (6)
-		StartTimer: 10.0, Thunderdrum Salvo (11)
-		StartTimer: 29.0, Voltaic Image (11)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (11)
-	[475.80] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (16)
-		StartTimer: 15.1, Beam (16)
-		StartTimer: 27.0, Stomp (11)
-		StartTimer: 6.0, Static Charge (6)
-		StartTimer: 10.0, Thunderdrum Salvo (11)
-		StartTimer: 29.0, Voltaic Image (11)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (11)
-	[475.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (16)
-		StartTimer: 15.1, Beam (16)
-		StartTimer: 27.0, Stomp (11)
-		StartTimer: 6.0, Static Charge (6)
-		StartTimer: 10.0, Thunderdrum Salvo (11)
-		StartTimer: 29.0, Voltaic Image (11)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (11)
-	[475.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 475.8, 475.8, 475.8
 		StartTimer: 9.0, Bomb (16)
 		StartTimer: 15.1, Beam (16)
 		StartTimer: 27.0, Stomp (11)
@@ -1585,8 +1033,6 @@ Event trace:
 		ShowAnnounce: Galvanized Spite (10)
 	[496.08] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
 		StartTimer: 30.0, Lightning Bash (12)
-	[504.08] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000160E, 1213994, Torq, 24.7, 42, Tank2, 0
-		StartTimer: 30.0, Voltaic Image (12)
 	[505.34] SPELL_AURA_APPLIED: [Voltaic Image->Dps2: Voltaic Image] Creature-0-1-2769-1-235187-0000000178, Voltaic Image, 0xa48, Player-1-00000002, Dps2, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
 		ShowAnnounce: Voltaic Image on Dps3, Dps13, Dps2
 	[508.08] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
@@ -1605,8 +1051,6 @@ Event trace:
 	[532.09] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 		ShowSpecialWarning: Bomb - soak (18)
 		PlaySound: VoicePack/helpsoak
-	[534.10] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000000F0D, 1213994, Torq, 22, 84, Tank2, 0
-		StartTimer: 65.0, Voltaic Image (13)
 	[535.00] SPELL_AURA_APPLIED_DOSE: [Torq->Tank2: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000026, Tank2, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 6, 0
 		ShowAnnounce: Galvanized Spite (6)
 	[535.36] SPELL_AURA_APPLIED: [Voltaic Image->Tank2: Voltaic Image] Creature-0-1-2769-1-235187-0000000179, Voltaic Image, 0xa48, Player-1-00000026, Tank2, 0x511, 1214009, Voltaic Image, 0, DEBUFF, 0
@@ -1645,33 +1089,8 @@ Event trace:
 	[569.98] SPELL_AURA_APPLIED_DOSE: [Torq->Tank2: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000026, Tank2, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 12, 0
 		ShowAnnounce: Galvanized Spite (12)
 	[570.79] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (19)
-		StartTimer: 15.1, Beam (19)
-		StartTimer: 27.0, Stomp (12)
-		StartTimer: 6.0, Static Charge (7)
-		StartTimer: 10.0, Thunderdrum Salvo (13)
-		StartTimer: 29.0, Voltaic Image (13)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (13)
-	[570.80] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (19)
-		StartTimer: 15.1, Beam (19)
-		StartTimer: 27.0, Stomp (12)
-		StartTimer: 6.0, Static Charge (7)
-		StartTimer: 10.0, Thunderdrum Salvo (13)
-		StartTimer: 29.0, Voltaic Image (13)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (13)
-	[570.80] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (19)
-		StartTimer: 15.1, Beam (19)
-		StartTimer: 27.0, Stomp (12)
-		StartTimer: 6.0, Static Charge (7)
-		StartTimer: 10.0, Thunderdrum Salvo (13)
-		StartTimer: 29.0, Voltaic Image (13)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (13)
-	[570.80] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 570.8, 570.8, 570.8
 		StartTimer: 9.0, Bomb (19)
 		StartTimer: 15.1, Beam (19)
 		StartTimer: 27.0, Stomp (12)
@@ -1709,8 +1128,6 @@ Event trace:
 		StartTimer: 30.0, Lightning Bash (14)
 	[597.09] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 		StartTimer: 24.0, Stomp (13)
-	[599.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-000000010F, 1213994, Torq, 17.9, 41, Tank1, 0
-		StartTimer: 30.0, Voltaic Image (14)
 	[599.97] SPELL_AURA_APPLIED_DOSE: [Flarendo->Tank2: Blistering Spite] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 472222, Blistering Spite, 0, DEBUFF, 10, 0
 		ShowAnnounce: Blistering Spite (10)
 	[600.38] SPELL_AURA_APPLIED: [Voltaic Image->Dps11: Voltaic Image] Creature-0-1-2769-1-235187-000000017D, Voltaic Image, 0xa48, Player-1-00000015, Dps11, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
@@ -1763,8 +1180,6 @@ Event trace:
 	[627.09] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 		ShowSpecialWarning: Bomb - soak (21)
 		PlaySound: VoicePack/helpsoak
-	[629.09] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213994-0000000118, 1213994, Torq, 17, 84, Tank1, 0
-		StartTimer: 65.0, Voltaic Image (15)
 	[629.74] SPELL_PERIODIC_DAMAGE: [Flarendo->Tank2: Molten Pool] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000026, Tank2, 0x511, 1214039, Molten Pool, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_DAMAGE at 631.75
@@ -1789,33 +1204,8 @@ Event trace:
 		ShowSpecialWarning: Molten Pool damage - move away
 		PlaySound: VoicePack/watchfeet
 	[665.81] SPELL_AURA_REMOVED: [Flarendo->Flarendo: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (22)
-		StartTimer: 15.1, Beam (22)
-		StartTimer: 27.0, Stomp (13)
-		StartTimer: 6.0, Static Charge (8)
-		StartTimer: 10.0, Thunderdrum Salvo (15)
-		StartTimer: 29.0, Voltaic Image (15)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (15)
-	[665.81] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (22)
-		StartTimer: 15.1, Beam (22)
-		StartTimer: 27.0, Stomp (13)
-		StartTimer: 6.0, Static Charge (8)
-		StartTimer: 10.0, Thunderdrum Salvo (15)
-		StartTimer: 29.0, Voltaic Image (15)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (15)
-	[665.84] SPELL_AURA_REMOVED: [Flarendo->Torq: Colossal Clash] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465863, Colossal Clash, 0, BUFF, 0
-		StartTimer: 9.0, Bomb (22)
-		StartTimer: 15.1, Beam (22)
-		StartTimer: 27.0, Stomp (13)
-		StartTimer: 6.0, Static Charge (8)
-		StartTimer: 10.0, Thunderdrum Salvo (15)
-		StartTimer: 29.0, Voltaic Image (15)
-		StartTimer: 47.6, Molten Phlegm (1)
-		StartTimer: 21.1, Lightning Bash (15)
-	[665.84] SPELL_AURA_REMOVED: [Torq->Flarendo: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 665.81, 665.84, 665.84
 		StartTimer: 9.0, Bomb (22)
 		StartTimer: 15.1, Beam (22)
 		StartTimer: 27.0, Stomp (13)
