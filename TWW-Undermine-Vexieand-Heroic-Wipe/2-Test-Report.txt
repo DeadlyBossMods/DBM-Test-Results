@@ -5,6 +5,7 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1216788 (Carrying Oil)
 	Unused event registration: SPELL_AURA_APPLIED 465865 (Tank Buster)
 	Unused event registration: SPELL_AURA_APPLIED 466368 (Hot Wheels)
+	Unused event registration: SPELL_AURA_APPLIED 466615 (Protective Plating)
 	Unused event registration: SPELL_AURA_APPLIED 468216 (Incendiary Fire)
 	Unused event registration: SPELL_AURA_APPLIED 471500 (Protective Plating)
 	Unused event registration: SPELL_AURA_REMOVED 468216 (Incendiary Fire)
@@ -16,27 +17,17 @@ Findings:
 	Unused event registration: SPELL_CAST_START 471403 (Unrelenting CAR-nage)
 	Unused event registration: UNIT_DIED
 	Announce for spell ID 459678 (Spew Oil) is triggered by event SPELL_CAST_START 459671 (Spew Oil)
-	Timer for spell ID 459678 (Spew Oil) is triggered by event SPELL_AURA_APPLIED 466615 (Protective Plating)
+	Timer for spell ID 459678 (Spew Oil) is triggered by event SPELL_AURA_REMOVED 460116 (Tune-Up)
 	Timer for spell ID 459678 (Spew Oil) is triggered by event SPELL_CAST_START 459671 (Spew Oil)
-	Timer for spell ID 459943 (Call Bikers) is triggered by event SPELL_AURA_APPLIED 466615 (Protective Plating)
-	Timer for spell ID 459978 (Bomb Voyage!) is triggered by event SPELL_AURA_APPLIED 466615 (Protective Plating)
-	Timer for spell ID 465865 (Tank Buster) is triggered by event SPELL_AURA_APPLIED 466615 (Protective Plating)
+	Timer for spell ID 459943 (Call Bikers) is triggered by event SPELL_AURA_REMOVED 460116 (Tune-Up)
+	Timer for spell ID 459978 (Bomb Voyage!) is triggered by event SPELL_AURA_REMOVED 460116 (Tune-Up)
+	Timer for spell ID 465865 (Tank Buster) is triggered by event SPELL_AURA_REMOVED 460116 (Tune-Up)
 	Timer for spell ID 465865 (Tank Buster) is triggered by event SPELL_CAST_START 459627 (Tank Buster)
 	Announce for spell ID 468207 (Incendiary Fire) is triggered by event SPELL_CAST_START 468487 (Incendiary Fire)
-	Timer for spell ID 468207 (Incendiary Fire) is triggered by event SPELL_AURA_APPLIED 466615 (Protective Plating)
+	Timer for spell ID 468207 (Incendiary Fire) is triggered by event SPELL_AURA_REMOVED 460116 (Tune-Up)
 	Timer for spell ID 468207 (Incendiary Fire) is triggered by event SPELL_CAST_START 468487 (Incendiary Fire)
-	Timer Call Bikers (%s), time=28.10, type=cdcount, spellId=459943 (time=20.70, variance=0.00) got refreshed early with 0.60s remaining
-		Refreshed by: [287.95] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
-	Timer Spew Oil (%s), time=97.30, type=cdcount, spellId=459678 (time=21.10, variance=0.00) got refreshed early with 0.40s remaining
-		Refreshed by: [323.29] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
-	Timer Spew Oil (%s), time=97.30, type=cdcount, spellId=459678 (time=21.10, variance=0.00) got refreshed early with 0.77s remaining
+	Timer Spew Oil (%s), time=97.30, type=cdcount, spellId=459678 (time=23.20, variance=2.60) got refreshed early with 2.87s remaining
 		Refreshed by: [198.41] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
-	Timer Tank Buster (%s), time=97.30, type=cdcount, spellId=465865 (time=17.10, variance=0.00) got refreshed early with 0.40s remaining
-		Refreshed by: [183.79] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-	Timer Tank Buster (%s), time=97.30, type=cdcount, spellId=465865 (time=21.10, variance=0.00) got refreshed early with 0.40s remaining
-		Refreshed by: [329.37] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-	Timer Tank Buster (%s), time=97.30, type=cdcount, spellId=465865 (time=21.10, variance=0.00) got refreshed early with 1.33s remaining
-		Refreshed by: [203.56] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
 
 Unused objects:
 	[Announce] Casting Blaze of Glory: -nan sec, type=cast, spellId=466040
@@ -47,24 +38,28 @@ Unused objects:
 	[Special Warning] Unrelenting CAR-nage!, type=spell, spellId=471403
 	[Special Warning] Oil Canister - soak (%s), type=soakcount, spellId=1216731
 	[Special Warning] Carrying Oil on you, type=you, spellId=1216788
+	[Timer] Unrelenting CAR-nage (%s), time=97.30, type=cdcount, spellId=471403
 	[Yell] Hot Wheels, type=shortyell, spellId=466368
 	[Yell] Incendiary Fire, type=shortyell, spellId=468216
 
 Timers:
-	Spew Oil (%s), time=97.30, type=cdcount, spellId=459678, triggerDeltas = 0.00, 13.10, 37.51, 37.08, 55.16, 12.02, 23.21, 20.33, 69.44, 12.79, 21.96, 20.69
+	Spew Oil (%s), time=97.30, type=cdcount, spellId=459678, triggerDeltas = 0.00, 13.10, 37.51, 37.08, 51.61, 15.57, 23.21, 20.33, 20.81, 45.12, 16.30, 21.96, 20.69, 20.65, 20.62
 		[  0.00] ENCOUNTER_START: 3009, Vexie and the Geargrinders, 15, 30, 0
 		[ 13.10] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
-			 Triggered 9x, delta times: 13.10, 37.51, 37.08, 67.18, 23.21, 20.33, 82.23, 21.96, 20.69
+			 Triggered 12x, delta times: 13.10, 37.51, 37.08, 67.18, 23.21, 20.33, 20.81, 61.42, 21.96, 20.69, 20.65, 20.62
 		[ 89.91] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-		[142.85] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-			 Triggered 2x, delta times: 142.85, 125.00
-	Call Bikers (%s), time=28.10, type=cdcount, spellId=459943, triggerDeltas = 0.00, 20.68, 28.72, 93.45, 20.53, 28.16, 76.31, 20.10, 28.05
+			 Triggered 2x, delta times: 89.91, 140.20
+		[139.30] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
+			 Triggered 2x, delta times: 139.30, 125.04
+	Call Bikers (%s), time=28.10, type=cdcount, spellId=459943, triggerDeltas = 0.00, 20.68, 28.72, 28.15, 61.75, 24.08, 28.16, 36.32, 36.48, 23.61, 28.05, 36.41
 		[  0.00] ENCOUNTER_START: 3009, Vexie and the Geargrinders, 15, 30, 0
 		[ 20.68] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
-			 Triggered 6x, delta times: 20.68, 28.72, 113.98, 28.16, 96.41, 28.05
-		[142.85] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-			 Triggered 2x, delta times: 142.85, 125.00
-	Bomb Voyage! (%s), time=97.30, type=cdcount, spellId=459978, triggerDeltas = 0.00, 7.02, 12.70, 7.77, 8.00, 8.15, 7.89, 7.95, 8.01, 7.97, 67.39, 4.99, 8.01, 7.99, 7.99, 7.98, 8.01, 8.03, 7.97, 8.01, 56.02, 5.02, 7.99, 8.01, 8.01, 7.99, 8.01, 8.00, 7.98, 8.01
+			 Triggered 9x, delta times: 20.68, 28.72, 28.15, 85.83, 28.16, 36.32, 60.09, 28.05, 36.41
+		[ 89.91] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
+			 Triggered 2x, delta times: 89.91, 140.20
+		[139.30] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
+			 Triggered 2x, delta times: 139.30, 125.04
+	Bomb Voyage! (%s), time=8.00, type=cdcount, spellId=459978, triggerDeltas = 0.00, 7.02, 12.70, 7.77, 8.00, 8.15, 7.89, 7.95, 8.01, 7.97, 8.00, 55.84, 8.54, 8.01, 7.99, 7.99, 7.98, 8.01, 8.03, 7.97, 8.01, 8.01, 7.97, 36.53, 8.53, 7.99, 8.01, 8.01, 7.99, 8.01, 8.00, 7.98, 8.01, 7.99, 8.01, 8.00, 7.99, 7.99
 		[  0.00] ENCOUNTER_START: 3009, Vexie and the Geargrinders, 15, 30, 0
 		[  7.02] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000195, 464841, The Geargrinder, 98.2, 5, Tank2, 0
 		[ 19.72] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000546, 464841, The Geargrinder, 92.8, 11, Tank1, 0
@@ -75,8 +70,11 @@ Timers:
 		[ 59.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000040B, 464841, The Geargrinder, 79.1, 45, Tank2, 0
 		[ 67.49] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000427, 464841, The Geargrinder, 76, 51, Tank1, 0
 		[ 75.46] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004D3, 464841, The Geargrinder, 74.6, 58, Tank1, 0
-		[142.85] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-			 Triggered 2x, delta times: 142.85, 125.00
+		[ 83.46] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000003FB, 464841, The Geargrinder, 72.9, 65, Tank1, 0
+		[ 89.91] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
+			 Triggered 2x, delta times: 89.91, 140.20
+		[139.30] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
+			 Triggered 2x, delta times: 139.30, 125.04
 		[147.84] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000048D, 464841, The Geargrinder, 40.9, 4, Tank2, 0
 		[155.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000050A, 464841, The Geargrinder, 38.6, 10, Tank1, 0
 		[163.84] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004E8, 464841, The Geargrinder, 36.5, 17, Tank1, 0
@@ -86,6 +84,8 @@ Timers:
 		[195.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004E7, 464841, The Geargrinder, 29.6, 44, Tank1, 0
 		[203.82] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004B0, 464841, The Geargrinder, 24.5, 50, Tank1, 0
 		[211.83] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000517, 464841, The Geargrinder, 23, 57, Tank1, 0
+		[219.84] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000534, 464841, The Geargrinder, 21.1, 64, Tank1, 0
+		[227.81] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004CB, 464841, The Geargrinder, 17.2, 70, Tank1, 0
 		[272.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000087, 464841, The Geargrinder, 9.9, 3, Tank2, 0
 		[280.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000003DC, 464841, The Geargrinder, 9.6, 10, Tank2, 0
 		[288.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000003F9, 464841, The Geargrinder, 9.3, 16, Tank1, 0
@@ -95,27 +95,31 @@ Timers:
 		[320.88] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000207, 464841, The Geargrinder, 8.7, 43, Dps3, 0
 		[328.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000033D, 464841, The Geargrinder, 8.7, 50, Dps23, 0
 		[336.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000002C7, 464841, The Geargrinder, 8.6, 56, Dps9, 0
+		[344.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000001C5, 464841, The Geargrinder, 8.6, 63, Dps7, 0
+		[352.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000232, 464841, The Geargrinder, 8.6, 70, Dps6, 0
+		[360.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000191, 464841, The Geargrinder, 8.6, 76, Dps10, 0
+		[368.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000000E2, 464841, The Geargrinder, 8.6, 83, Dps8, 0
+		[376.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000096, 464841, The Geargrinder, 8.6, 90, Healer5, 0
 	Tune-Up, time=45.00, type=cast, spellId=460116, triggerDeltas = 94.29, 140.05
 		[ 94.29] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
 			 Triggered 2x, delta times: 94.29, 140.05
 		[264.34] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
-	Tank Buster (%s), time=97.30, type=cdcount, spellId=465865, triggerDeltas = 0.00, 7.18, 22.63, 30.14, 25.76, 57.14, 7.11, 17.11, 16.72, 19.77, 64.29, 6.70, 17.05, 17.07, 20.70
+	Tank Buster (%s), time=97.30, type=cdcount, spellId=465865, triggerDeltas = 0.00, 7.18, 22.63, 30.14, 25.76, 53.59, 10.66, 17.11, 16.72, 19.77, 21.82, 38.96, 10.21, 17.05, 17.07, 20.70, 20.62, 24.28
 		[  0.00] ENCOUNTER_START: 3009, Vexie and the Geargrinders, 15, 30, 0
 		[  7.18] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-			 Triggered 12x, delta times: 7.18, 22.63, 30.14, 25.76, 64.25, 17.11, 16.72, 19.77, 70.99, 17.05, 17.07, 20.70
+			 Triggered 15x, delta times: 7.18, 22.63, 30.14, 25.76, 64.25, 17.11, 16.72, 19.77, 21.82, 49.17, 17.05, 17.07, 20.70, 20.62, 24.28
 		[ 89.91] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-		[142.85] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-			 Triggered 2x, delta times: 142.85, 125.00
-	Incendiary Fire (%s), time=35.30, type=cdcount, spellId=468207, triggerDeltas = 0.00, 25.70, 30.98, 86.17, 31.20, 35.35, 58.45, 31.09, 35.30
+			 Triggered 2x, delta times: 89.91, 140.20
+		[139.30] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
+			 Triggered 2x, delta times: 139.30, 125.04
+	Incendiary Fire (%s), time=35.30, type=cdcount, spellId=468207, triggerDeltas = 0.00, 25.70, 30.98, 25.33, 57.29, 34.75, 35.35, 54.94, 34.60, 35.30, 36.41
 		[  0.00] ENCOUNTER_START: 3009, Vexie and the Geargrinders, 15, 30, 0
 		[ 25.70] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
-			 Triggered 6x, delta times: 25.70, 30.98, 117.37, 35.35, 89.54, 35.30
-		[142.85] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-			 Triggered 2x, delta times: 142.85, 125.00
-		[230.11] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-	Unrelenting CAR-nage (%s), time=97.30, type=cdcount, spellId=471403, triggerDeltas = 0.00
-		[  0.00] ENCOUNTER_START: 3009, Vexie and the Geargrinders, 15, 30, 0
+			 Triggered 8x, delta times: 25.70, 30.98, 25.33, 92.04, 35.35, 89.54, 35.30, 36.41
 		[ 89.91] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
+			 Triggered 2x, delta times: 89.91, 140.20
+		[139.30] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
+			 Triggered 2x, delta times: 139.30, 125.04
 
 Announces:
 	Spew Oil incoming debuff (%s), type=incomingcount, spellId=459678, triggerDeltas = 13.10, 37.51, 37.08, 67.18, 23.21, 20.33, 20.81, 61.42, 21.96, 20.69, 20.65, 20.62
@@ -242,90 +246,94 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 3009, Vexie and the Geargrinders, 15, 30, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 471403 459943 466040 466042 459671 468216 468487 459974 459627 460603 460173, SPELL_AURA_APPLIED 466615 471500 1216788 466368 465865 460116 468216, SPELL_AURA_REMOVED 466615 471500 460116 468216, SPELL_PERIODIC_DAMAGE 459683, SPELL_PERIODIC_MISSED 459683, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1
-		StartTimer: 20.7, Call Bikers (1)
-		StartTimer: 12.2, Spew Oil (1)
-		StartTimer: 25.7, Incendiary Fire (1)
 		StartTimer: 5.0, Bomb Voyage! (1)
-		StartTimer: 6.4, Tank Buster (1)
-		StartTimer: 97.3, Unrelenting CAR-nage (1)
+		StartTimer: 6.0, Tank Buster (1)
+		StartTimer: 12.2, Spew Oil (1)
+		StartTimer: 20.7, Call Bikers (1)
+		StartTimer: 25.7, Incendiary Fire (1)
 	[  7.02] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000195, 464841, The Geargrinder, 98.2, 5, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.1, Bomb Voyage! (2)
+		StartTimer: 7.8, Bomb Voyage! (2)
 	[  7.18] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 16.7, Tank Buster (2)
+		StartTimer: 30.4, Tank Buster (2)
 	[ 13.10] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (1)
-		StartTimer: 21.9, Spew Oil (2)
+		StartTimer: 38.6, Spew Oil (2)
 	[ 19.72] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000546, 464841, The Geargrinder, 92.8, 11, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 7.9, Bomb Voyage! (3)
+		StartTimer: 7.8, Bomb Voyage! (3)
 	[ 20.68] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (1)
 		PlaySound: VoicePack/killmob
-		StartTimer: 28.0, Call Bikers (2)
+		StartTimer: 36.4, Call Bikers (2)
 	[ 25.70] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (1)
-		StartTimer: 31.0, Incendiary Fire (2)
+		StartTimer: 36.5, Incendiary Fire (2)
 	[ 27.49] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004D0, 464841, The Geargrinder, 88.8, 18, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (4)
+		StartTimer: 7.8, Bomb Voyage! (4)
 	[ 29.81] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 17.1, Tank Buster (3)
+		StartTimer: 30.4, Tank Buster (3)
 	[ 35.49] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004F8, 464841, The Geargrinder, 86, 24, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.1, Bomb Voyage! (5)
+		StartTimer: 7.8, Bomb Voyage! (5)
 	[ 43.64] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000426, 464841, The Geargrinder, 83.5, 31, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (5) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (6)
+		StartTimer: 7.8, Bomb Voyage! (6)
 	[ 49.40] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (2)
 		PlaySound: VoicePack/killmob
-		StartTimer: 35.4, Call Bikers (3)
+		StartTimer: 36.4, Call Bikers (3)
 	[ 50.61] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (2)
-		StartTimer: 21.1, Spew Oil (3)
+		StartTimer: 38.6, Spew Oil (3)
 	[ 51.53] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000410, 464841, The Geargrinder, 81.5, 38, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (6) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 7.9, Bomb Voyage! (7)
+		StartTimer: 7.8, Bomb Voyage! (7)
 	[ 56.68] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (2)
-		StartTimer: 25.3, Incendiary Fire (3)
+		StartTimer: 36.5, Incendiary Fire (3)
 	[ 59.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000040B, 464841, The Geargrinder, 79.1, 45, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (7) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (8)
+		StartTimer: 7.8, Bomb Voyage! (8)
 	[ 59.95] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 21.1, Tank Buster (4)
+		StartTimer: 30.4, Tank Buster (4)
 	[ 67.49] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000427, 464841, The Geargrinder, 76, 51, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (8) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (9)
+		StartTimer: 7.8, Bomb Voyage! (9)
 	[ 75.46] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004D3, 464841, The Geargrinder, 74.6, 58, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (9) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (10)
+		StartTimer: 7.8, Bomb Voyage! (10)
 	[ 77.55] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (3)
 		PlaySound: VoicePack/killmob
+		StartTimer: 36.4, Call Bikers (4)
 	[ 82.01] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (3)
+		StartTimer: 36.5, Incendiary Fire (4)
 	[ 83.46] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000003FB, 464841, The Geargrinder, 72.9, 65, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (10) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (11)
 	[ 85.71] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 20.3, Tank Buster (5)
+		StartTimer: 30.4, Tank Buster (5)
 	[ 87.69] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (3)
-		StartTimer: 20.3, Spew Oil (4)
+		StartTimer: 38.6, Spew Oil (4)
 	[ 89.91] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-		StopTimer: Timer471403cdcount\t1
+		StopTimer: Timer459943cdcount\t4
 		StopTimer: Timer459678cdcount\t4
+		StopTimer: Timer468207cdcount\t4
+		StopTimer: Timer459978cdcount\t11
 		StopTimer: Timer465865cdcount\t5
 	[ 89.91] SPELL_CAST_START: [The Geargrinder: Mechanical Breakdown] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 460603, Mechanical Breakdown, 0, 0
 		ShowSpecialWarning: Mechanical Breakdown! (1)
@@ -377,12 +385,12 @@ Event trace:
 	[138.53] SPELL_CAST_START: [Pit Mechanic: Repair] Creature-0-1-2769-1-228514-00000000D3, Pit Mechanic, 0xa48, "", nil, 0x0, 460173, Repair, 0, 0
 		ShowSpecialWarning: Repair - interrupt Pit Mechanic! (1)
 		PlaySound: VoicePack/kick1r
-	[142.85] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-		StartTimer: 20.7, Call Bikers (1)
-		StartTimer: 12.2, Spew Oil (1)
-		StartTimer: 25.7, Incendiary Fire (1)
+	[139.30] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
 		StartTimer: 5.0, Bomb Voyage! (1)
 		StartTimer: 6.4, Tank Buster (1)
+		StartTimer: 12.2, Spew Oil (1)
+		StartTimer: 20.7, Call Bikers (1)
+		StartTimer: 25.7, Incendiary Fire (1)
 	[143.35] SPELL_PERIODIC_MISSED: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_MISSED at 144.34
@@ -400,14 +408,14 @@ Event trace:
 	[147.84] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000048D, 464841, The Geargrinder, 40.9, 4, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.1, Bomb Voyage! (2)
+		StartTimer: 7.8, Bomb Voyage! (2)
 	[149.71] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_MISSED at 150.7
 		ShowSpecialWarning: Oil Slick damage - move away
 		PlaySound: VoicePack/watchfeet
 	[149.96] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 16.7, Tank Buster (2)
+		StartTimer: 24.4, Tank Buster (2)
 	[151.73] SPELL_PERIODIC_MISSED: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_MISSED at 152.72
@@ -420,7 +428,7 @@ Event trace:
 		PlaySound: VoicePack/watchfeet
 	[154.87] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (1)
-		StartTimer: 21.9, Spew Oil (2)
+		StartTimer: 23.2, Spew Oil (2)
 	[155.73] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Oil Slick damage - move away
@@ -428,7 +436,7 @@ Event trace:
 	[155.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000050A, 464841, The Geargrinder, 38.6, 10, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 7.9, Bomb Voyage! (3)
+		StartTimer: 7.8, Bomb Voyage! (3)
 	[157.71] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_DAMAGE at 158.71
@@ -437,70 +445,80 @@ Event trace:
 	[163.38] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (1)
 		PlaySound: VoicePack/killmob
-		StartTimer: 28.0, Call Bikers (2)
+		StartTimer: 36.4, Call Bikers (2)
 	[163.84] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004E8, 464841, The Geargrinder, 36.5, 17, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (4)
+		StartTimer: 7.8, Bomb Voyage! (4)
 	[167.07] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 17.1, Tank Buster (3)
+		StartTimer: 24.4, Tank Buster (3)
 	[171.83] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000051D, 464841, The Geargrinder, 34.6, 24, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.1, Bomb Voyage! (5)
+		StartTimer: 7.8, Bomb Voyage! (5)
 	[174.05] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (1)
-		StartTimer: 31.0, Incendiary Fire (2)
+		StartTimer: 36.7, Incendiary Fire (2)
 	[178.08] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (2)
-		StartTimer: 21.1, Spew Oil (3)
+		StartTimer: 23.2, Spew Oil (3)
 	[179.81] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000509, 464841, The Geargrinder, 33, 30, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (5) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (6)
+		StartTimer: 7.8, Bomb Voyage! (6)
 	[183.79] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 21.1, Tank Buster (4)
+		StartTimer: 24.4, Tank Buster (4)
 	[187.82] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004A2, 464841, The Geargrinder, 31.4, 37, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (6) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 7.9, Bomb Voyage! (7)
+		StartTimer: 7.8, Bomb Voyage! (7)
 	[191.54] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (2)
 		PlaySound: VoicePack/killmob
-		StartTimer: 35.4, Call Bikers (3)
+		StartTimer: 36.4, Call Bikers (3)
 	[195.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004E7, 464841, The Geargrinder, 29.6, 44, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (7) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (8)
+		StartTimer: 7.8, Bomb Voyage! (8)
 	[198.41] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (3)
-		StartTimer: 20.3, Spew Oil (4)
+		StartTimer: 23.2, Spew Oil (4)
 	[203.56] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 20.3, Tank Buster (5)
+		StartTimer: 24.4, Tank Buster (5)
 	[203.82] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004B0, 464841, The Geargrinder, 24.5, 50, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (8) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (9)
+		StartTimer: 7.8, Bomb Voyage! (9)
 	[209.40] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (2)
-		StartTimer: 25.3, Incendiary Fire (3)
+		StartTimer: 36.7, Incendiary Fire (3)
 	[211.83] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000517, 464841, The Geargrinder, 23, 57, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (9) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (10)
+		StartTimer: 7.8, Bomb Voyage! (10)
 	[219.22] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (4)
+		StartTimer: 23.2, Spew Oil (5)
 	[219.84] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000534, 464841, The Geargrinder, 21.1, 64, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (10) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (11)
+	[225.38] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
+		StartTimer: 24.4, Tank Buster (6)
 	[227.81] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000004CB, 464841, The Geargrinder, 17.2, 70, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (11) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (12)
 	[227.86] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (3)
 		PlaySound: VoicePack/killmob
+		StartTimer: 36.4, Call Bikers (4)
 	[230.11] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
+		StopTimer: Timer459943cdcount\t4
+		StopTimer: Timer459678cdcount\t5
 		StopTimer: Timer468207cdcount\t3
+		StopTimer: Timer459978cdcount\t12
+		StopTimer: Timer465865cdcount\t6
 	[230.12] SPELL_CAST_START: [The Geargrinder: Mechanical Breakdown] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 460603, Mechanical Breakdown, 0, 0
 		ShowSpecialWarning: Mechanical Breakdown! (2)
 		PlaySound: VoicePack/phasechange
@@ -526,35 +544,34 @@ Event trace:
 		PlaySound: VoicePack/kick2r
 	[264.34] SPELL_AURA_REMOVED: [The Geargrinder->The Geargrinder: Tune-Up] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 460116, Tune-Up, 0, BUFF, 0
 		StopTimer: Timer460116cast
-	[267.85] SPELL_AURA_APPLIED: [The Geargrinder->The Geargrinder: Protective Plating] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, 466615, Protective Plating, 0, BUFF, 0
-		StartTimer: 20.7, Call Bikers (1)
-		StartTimer: 12.2, Spew Oil (1)
-		StartTimer: 25.7, Incendiary Fire (1)
 		StartTimer: 5.0, Bomb Voyage! (1)
 		StartTimer: 6.4, Tank Buster (1)
+		StartTimer: 12.2, Spew Oil (1)
+		StartTimer: 20.7, Call Bikers (1)
+		StartTimer: 25.7, Incendiary Fire (1)
 	[272.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000087, 464841, The Geargrinder, 9.9, 3, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.1, Bomb Voyage! (2)
+		StartTimer: 7.8, Bomb Voyage! (2)
 	[274.55] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 16.7, Tank Buster (2)
+		StartTimer: 24.4, Tank Buster (2)
 	[280.64] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (1)
-		StartTimer: 21.9, Spew Oil (2)
+		StartTimer: 23.2, Spew Oil (2)
 	[280.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000003DC, 464841, The Geargrinder, 9.6, 10, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 7.9, Bomb Voyage! (3)
+		StartTimer: 7.8, Bomb Voyage! (3)
 	[287.95] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (1)
 		PlaySound: VoicePack/killmob
-		StartTimer: 28.0, Call Bikers (2)
+		StartTimer: 36.4, Call Bikers (2)
 	[288.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000003F9, 464841, The Geargrinder, 9.3, 16, Tank1, 0
 		ShowSpecialWarning: Bomb Voyage! (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (4)
+		StartTimer: 7.8, Bomb Voyage! (4)
 	[291.60] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 17.1, Tank Buster (3)
+		StartTimer: 24.4, Tank Buster (3)
 	[294.90] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Oil Slick damage - move away
@@ -562,7 +579,7 @@ Event trace:
 	[296.88] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000008B, 464841, The Geargrinder, 9.1, 23, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.1, Bomb Voyage! (5)
+		StartTimer: 7.8, Bomb Voyage! (5)
 	[296.91] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_MISSED at 297.9
@@ -575,14 +592,14 @@ Event trace:
 		PlaySound: VoicePack/watchfeet
 	[298.94] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (1)
-		StartTimer: 31.0, Incendiary Fire (2)
+		StartTimer: 36.7, Incendiary Fire (2)
 	[300.88] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Oil Slick damage - move away
 		PlaySound: VoicePack/watchfeet
 	[302.60] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (2)
-		StartTimer: 21.1, Spew Oil (3)
+		StartTimer: 23.2, Spew Oil (3)
 	[302.90] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Oil Slick damage - move away
@@ -590,9 +607,9 @@ Event trace:
 	[304.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000002B9, 464841, The Geargrinder, 9, 30, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (5) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (6)
+		StartTimer: 7.8, Bomb Voyage! (6)
 	[308.67] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 21.1, Tank Buster (4)
+		StartTimer: 24.4, Tank Buster (4)
 	[308.94] SPELL_PERIODIC_DAMAGE: [The Geargrinder->Tank2: Oil Slick] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, Player-1-00000026, Tank2, 0x511, 459683, Oil Slick, 0, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Oil Slick damage - move away
@@ -600,55 +617,68 @@ Event trace:
 	[312.88] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000003C2, 464841, The Geargrinder, 8.9, 36, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (6) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 7.9, Bomb Voyage! (7)
+		StartTimer: 7.8, Bomb Voyage! (7)
 	[316.00] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (2)
 		PlaySound: VoicePack/killmob
-		StartTimer: 35.4, Call Bikers (3)
+		StartTimer: 36.4, Call Bikers (3)
 	[320.88] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000207, 464841, The Geargrinder, 8.7, 43, Dps3, 0
 		ShowSpecialWarning: Bomb Voyage! (7) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (8)
+		StartTimer: 7.8, Bomb Voyage! (8)
 	[323.29] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (3)
-		StartTimer: 20.3, Spew Oil (4)
+		StartTimer: 23.2, Spew Oil (4)
 	[328.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-000000033D, 464841, The Geargrinder, 8.7, 50, Dps23, 0
 		ShowSpecialWarning: Bomb Voyage! (8) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (9)
+		StartTimer: 7.8, Bomb Voyage! (9)
 	[329.37] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
-		StartTimer: 20.3, Tank Buster (5)
+		StartTimer: 24.4, Tank Buster (5)
 	[334.24] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (2)
-		StartTimer: 25.3, Incendiary Fire (3)
+		StartTimer: 36.7, Incendiary Fire (3)
 	[336.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000002C7, 464841, The Geargrinder, 8.6, 56, Dps9, 0
 		ShowSpecialWarning: Bomb Voyage! (9) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 8.0, Bomb Voyage! (10)
+		StartTimer: 7.8, Bomb Voyage! (10)
 	[343.94] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (4)
+		StartTimer: 23.2, Spew Oil (5)
 	[344.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000001C5, 464841, The Geargrinder, 8.6, 63, Dps7, 0
 		ShowSpecialWarning: Bomb Voyage! (10) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (11)
+	[349.99] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
+		StartTimer: 24.4, Tank Buster (6)
 	[352.41] SPELL_CAST_START: [The Geargrinder: Call Bikers] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459943, Call Bikers, 0, 0
 		ShowSpecialWarning: Call Bikers - switch targets (3)
 		PlaySound: VoicePack/killmob
+		StartTimer: 36.4, Call Bikers (4)
 	[352.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000232, 464841, The Geargrinder, 8.6, 70, Dps6, 0
 		ShowSpecialWarning: Bomb Voyage! (11) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (12)
 	[360.87] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000191, 464841, The Geargrinder, 8.6, 76, Dps10, 0
 		ShowSpecialWarning: Bomb Voyage! (12) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (13)
 	[364.56] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (5)
+		StartTimer: 23.2, Spew Oil (6)
 	[368.86] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000000E2, 464841, The Geargrinder, 8.6, 83, Dps8, 0
 		ShowSpecialWarning: Bomb Voyage! (13) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (14)
 	[370.65] SPELL_CAST_START: [The Geargrinder: Incendiary Fire] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 468487, Incendiary Fire, 0, 0
 		ShowAnnounce: Incendiary Fire incoming debuff (3)
+		StartTimer: 36.7, Incendiary Fire (4)
+	[374.27] SPELL_CAST_START: [The Geargrinder: Tank Buster] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459627, Tank Buster, 0, 0
+		StartTimer: 24.4, Tank Buster (7)
 	[376.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000096, 464841, The Geargrinder, 8.6, 90, Healer5, 0
 		ShowSpecialWarning: Bomb Voyage! (14) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 7.8, Bomb Voyage! (15)
 	[378.04] ENCOUNTER_END: 3009, Vexie and the Geargrinders, 15, 30, 0, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
