@@ -11,7 +11,6 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1215858 (Mega Magnetize)
 	Unused event registration: SPELL_CAST_START 1216699 (Void Barrage)
 	Unused event registration: SPELL_CAST_START 468791 (Gigadeath)
-	Unused event registration: SPELL_CAST_SUCCESS 1216887 (Polarization Generator)
 	Timer for spell ID 465232 (Sonic Ba-Boom) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 466765 (Beta Launch) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 473276 (Activate Inventions!) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
@@ -19,16 +18,23 @@ Findings:
 	Timer for spell ID 1214878 (Pyro Party Pack) is triggered by event SPELL_CAST_START 1214872 (Pyro Party Pack)
 	Timer for spell ID 1216509 (Screw Up) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 1216509 (Screw Up) is triggered by event SPELL_CAST_START 1216508 (Screw Up)
+	Announce for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_CAST_SUCCESS 1217355 (Polarization Generator)
+	SpecialWarning for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_AURA_APPLIED 1217357 (Polarization Generator)
+	SpecialWarning for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_AURA_APPLIED 1217358 (Polarization Generator)
 	Timer for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
+	Timer for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_CAST_SUCCESS 1217355 (Polarization Generator)
 	Yell for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_AURA_APPLIED 1216911 (Posi-Polarization)
 	Yell for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_AURA_APPLIED 1216934 (Nega-Polarization)
+	Yell for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_AURA_APPLIED 1217357 (Polarization Generator)
+	Yell for spell ID 1216802 (Polarization Generator) is triggered by event SPELL_AURA_APPLIED 1217358 (Polarization Generator)
 	Timer for spell ID 1217231 (Foot-Blasters) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 1218319 (Voidsplosion) is triggered by event SPELL_CAST_START 466765 (Beta Launch)
 	Timer for spell ID 1218418 (Wire Transfer) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
 	[Announce] Screw Up on >%s<, type=target, spellId=1216509 uses PreciseShow(4) but never gets 4 targets
+	Timer Polarization Generator (%s), time=97.30, type=nextcount, spellId=1216802 (time=12.10, variance=0.00) got refreshed early with 8.00s remaining
+		Refreshed by: [149.83] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217355, Polarization Generator, 0, 0
 
 Unused objects:
-	[Announce] Polarization Generator incoming debuff (%s), type=incomingcount, spellId=1216802
 	[Special Warning] Gigadeath!, type=spell, spellId=468791
 	[Special Warning] Pyro Party Pack - defensive, type=defensive, spellId=1214878
 	[Special Warning] Pyro Party Pack on >%s< - taunt now, type=taunt, spellId=1214878
@@ -64,8 +70,10 @@ Timers:
 		[ 18.05] SPELL_CAST_START: [Sprocketmonger Lockenstock: Screw Up] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1216508, Screw Up, 0, 0
 			 Triggered 5x, delta times: 18.05, 29.98, 32.08, 83.63, 29.97
 		[145.72] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-0000000089, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
-	Polarization Generator (%s), time=97.30, type=nextcount, spellId=1216802, triggerDeltas = 0.00, 145.72
+	Polarization Generator (%s), time=97.30, type=nextcount, spellId=1216802, triggerDeltas = 0.00, 4.10, 66.91, 74.71, 4.11
 		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 16, 20, 0
+		[  4.10] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217355, Polarization Generator, 0, 0
+			 Triggered 3x, delta times: 4.10, 66.91, 78.82
 		[145.72] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->[DNT] Refinery FX Stalker: Bleeding Edge] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Creature-0-1-2769-1-237463-0000000089, [DNT] Refinery FX Stalker, 0xa48, 466860, Bleeding Edge, 0, BUFF, 0
 	Foot-Blasters (%s), time=97.30, type=nextcount, spellId=1217231, triggerDeltas = 0.00, 12.04, 33.09, 30.00, 70.59, 12.05, 33.00
 		[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 16, 20, 0
@@ -100,6 +108,9 @@ Announces:
 		[113.54] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->Dps6: Screw Up] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1216509, Screw Up, 0, DEBUFF, 0
 	Screw Up on >%s<, type=target, spellId=1216509, triggerDeltas = 110.21
 		[110.21] Scheduled at 109.01 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Screw Up] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1216509, Screw Up, 0, DEBUFF, 0
+	Polarization Generator incoming debuff (%s), type=incomingcount, spellId=1216802, triggerDeltas = 4.10, 66.91, 46.00, 32.82
+		[  4.10] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217355, Polarization Generator, 0, 0
+			 Triggered 4x, delta times: 4.10, 66.91, 46.00, 32.82
 	Posi-Polarization faded, type=fades, spellId=1216911, triggerDeltas = 68.11, 48.90
 		[ 68.11] SPELL_AURA_REMOVED: [->Dps6: Posi-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216911, Posi-Polarization, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 68.11, 48.90
@@ -135,6 +146,9 @@ Special warnings:
 		[ 92.51] SPELL_CAST_START: [Rocket Launcher: Rocket Barrage] Creature-0-1-2769-1-230360-0000000023, Rocket Launcher, 0xa48, "", nil, 0x0, 1216525, Rocket Barrage, 0, 0
 	Jumbo Void Beam - dodge attack, type=dodge, spellId=1216674, triggerDeltas = 177.77
 		[177.77] SPELL_CAST_START: [Void Laser: Jumbo Void Beam] Creature-0-1-2769-1-231846-0000000050, Void Laser, 0xa48, "", nil, 0x0, 1216674, Jumbo Void Beam, 0, 0
+	Changing to %s - 3 sec, type=nil, spellId=1216802, triggerDeltas = 117.06, 32.78
+		[117.06] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1217358, Polarization Generator, 0, DEBUFF, 0
+		[149.84] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1217357, Polarization Generator, 0, DEBUFF, 0
 	Posi-Polarization on you, type=you, spellId=1216911, triggerDeltas = 8.09, 66.96, 78.80
 		[  8.09] SPELL_AURA_APPLIED: [->Dps6: Posi-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216911, Posi-Polarization, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 8.09, 66.96, 78.80
@@ -156,7 +170,9 @@ Yells:
 	{rt%%1$d}, type=icontarget, spellId=1216802
 		[  8.09] SPELL_AURA_APPLIED: [->Dps6: Posi-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216911, Posi-Polarization, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 8.09, 66.96, 78.80
+		[117.06] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1217358, Polarization Generator, 0, DEBUFF, 0
 		[121.03] SPELL_AURA_APPLIED: [->Dps6: Nega-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216934, Nega-Polarization, 0, DEBUFF, 0
+		[149.84] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1217357, Polarization Generator, 0, DEBUFF, 0
 
 Voice pack sounds:
 	VoicePack/bombsoon
@@ -188,7 +204,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1216887 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344 1218342 1218319, SPELL_AURA_APPLIED_DOSE 465917 1218344 1218319, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
+		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1217355 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344 1218342 1218319 1217357 1217358, SPELL_AURA_APPLIED_DOSE 465917 1218344 1218319, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
 		StartTimer: 4.0, Polarization Generator (Unknown)
 		StartTimer: 8.9, Sonic Ba-Boom (1)
 		StartTimer: 12.1, Foot-Blasters (1)
@@ -200,6 +216,9 @@ Event trace:
 		ShowSpecialWarning: Wire Transfer (1) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 40.9, Wire Transfer (2)
+	[  4.10] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217355, Polarization Generator, 0, 0
+		ShowAnnounce: Polarization Generator incoming debuff (1)
+		StartTimer: 66.9, Polarization Generator (2)
 	[  8.09] SPELL_AURA_APPLIED: [->Dps6: Posi-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216911, Posi-Polarization, 0, DEBUFF, 0
 		ShowSpecialWarning: Posi-Polarization on you
 		ShowYell: {rt%1$d}
@@ -262,6 +281,9 @@ Event trace:
 		ShowAnnounce: Posi-Polarization faded
 	[ 70.33] SPELL_AURA_APPLIED_DOSE: [Sprocketmonger Lockenstock->Dps6: Gravi-Gunk] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 465917, Gravi-Gunk, 0, DEBUFF, 4, 0
 		ShowAnnounce: Gravi-Gunk on PlayerName (4)
+	[ 71.01] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217355, Polarization Generator, 0, 0
+		ShowAnnounce: Polarization Generator incoming debuff (2)
+		StartTimer: 46.0, Polarization Generator (3)
 	[ 73.99] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer5: Screwed!] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000017, Healer5, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		ScheduleTask: announce1217261target:CombinedShow("Healer5") at 74.99 (+1.00)
 			ShowAnnounce: Screwed! on Healer5
@@ -323,8 +345,13 @@ Event trace:
 	[113.54] SPELL_AURA_REMOVED: [Sprocketmonger Lockenstock->Dps6: Screw Up] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1216509, Screw Up, 0, DEBUFF, 0
 		ShowAnnounce: Screw Up faded
 		PlaySound: VoicePack/safenow
+	[117.01] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217355, Polarization Generator, 0, 0
+		ShowAnnounce: Polarization Generator incoming debuff (3)
 	[117.01] SPELL_AURA_REMOVED: [->Dps6: Posi-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216911, Posi-Polarization, 0, DEBUFF, 0
 		ShowAnnounce: Posi-Polarization faded
+	[117.06] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1217358, Polarization Generator, 0, DEBUFF, 0
+		ShowSpecialWarning: Changing to Negative - 3 sec
+		ShowYell: {rt%1$d}
 	[121.03] SPELL_AURA_APPLIED: [->Dps6: Nega-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216934, Nega-Polarization, 0, DEBUFF, 0
 		ShowSpecialWarning: Nega-Polarization on you
 		ShowYell: {rt%1$d}
@@ -371,8 +398,14 @@ Event trace:
 		ShowSpecialWarning: Wire Transfer (1) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 40.9, Wire Transfer (2)
+	[149.83] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1217355, Polarization Generator, 0, 0
+		ShowAnnounce: Polarization Generator incoming debuff (1)
+		StartTimer: 66.9, Polarization Generator (2)
 	[149.84] SPELL_AURA_REMOVED: [->Dps6: Nega-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216934, Nega-Polarization, 0, DEBUFF, 0
 		ShowAnnounce: Nega-Polarization faded
+	[149.84] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps6: Polarization Generator] Creature-0-1-2769-1-230583-0000000002, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps6, 0x511, 1217357, Polarization Generator, 0, DEBUFF, 0
+		ShowSpecialWarning: Changing to Positive - 3 sec
+		ShowYell: {rt%1$d}
 	[153.85] SPELL_AURA_APPLIED: [->Dps6: Posi-Polarization] "", nil, 0x0, Player-1-00000013, Dps6, 0x511, 1216911, Posi-Polarization, 0, DEBUFF, 0
 		ShowSpecialWarning: Posi-Polarization on you
 		ShowYell: {rt%1$d}
