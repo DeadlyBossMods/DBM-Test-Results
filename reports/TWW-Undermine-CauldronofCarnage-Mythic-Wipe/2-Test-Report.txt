@@ -3,10 +3,12 @@ Mod:  DBM-Raids-WarWithin/2640
 
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1213690 (Molten Phlegm)
+	Unused event registration: SPELL_AURA_APPLIED 1221826 (Tiny Tussle)
 	Unused event registration: SPELL_AURA_APPLIED 471660 (Raised Guard)
 	Unused event registration: SPELL_AURA_APPLIED 472222 (Blistering Spite)
 	Unused event registration: SPELL_AURA_APPLIED 472225 (Galvanized Spite)
 	Unused event registration: SPELL_AURA_APPLIED 472231 (Blastburn Roarcannon)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1221826 (Tiny Tussle)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 472222 (Blistering Spite)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 472225 (Galvanized Spite)
 	Unused event registration: SPELL_AURA_REMOVED 1213690 (Molten Phlegm)
@@ -33,6 +35,7 @@ Unused objects:
 	[Announce] Blistering Spite (%s), type=count, spellId=472222
 	[Announce] Galvanized Spite (%s), type=count, spellId=472225
 	[Announce] Beam on >%s<, type=target, spellId=472233
+	[Announce] Tiny Tussle (%s), type=count, spellId=1221826
 	[Special Warning] Colossal Clash (%s) - dodge attack, type=dodgecount, spellId=465833
 	[Special Warning] Lightning Bash - defensive, type=defensive, spellId=466178
 	[Special Warning] Beam - move away from others, type=moveaway, spellId=472233
@@ -129,7 +132,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 473650 472233 1214190 473994 466178, SPELL_CAST_SUCCESS 463900, SPELL_AURA_APPLIED 472222 472225 471660 471557 1213690 472231 1214009, SPELL_AURA_APPLIED_DOSE 472222 472225 471557, SPELL_AURA_REMOVED 471660 1213690 472231 1214009 465863 465872, SPELL_PERIODIC_DAMAGE 1214039 463925, SPELL_PERIODIC_MISSED 1214039 463925, UNIT_DIED, UNIT_POWER_UPDATE player, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 473650 472233 1214190 473994 466178, SPELL_CAST_SUCCESS 463900, SPELL_AURA_APPLIED 472222 472225 471660 471557 1213690 472231 1214009 1221826, SPELL_AURA_APPLIED_DOSE 472222 472225 471557 1221826, SPELL_AURA_REMOVED 471660 1213690 472231 1214009 465863 465872, SPELL_PERIODIC_DAMAGE 1214039 463925, SPELL_PERIODIC_MISSED 1214039 463925, UNIT_DIED, UNIT_POWER_UPDATE player, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 71.6, Colossal Clash (1)
 		StartTimer: 9.0, Bomb (1)
 		StartTimer: 15.0, Beam (1)

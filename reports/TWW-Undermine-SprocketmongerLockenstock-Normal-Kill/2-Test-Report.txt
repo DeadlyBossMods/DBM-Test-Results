@@ -5,6 +5,8 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1216509 (Screw Up)
 	Unused event registration: SPELL_AURA_APPLIED 1216911 (Posi-Polarization)
 	Unused event registration: SPELL_AURA_APPLIED 1216934 (Nega-Polarization)
+	Unused event registration: SPELL_AURA_APPLIED 1217357 (Polarization Generator)
+	Unused event registration: SPELL_AURA_APPLIED 1217358 (Polarization Generator)
 	Unused event registration: SPELL_AURA_APPLIED 1218342 (Unstable Shrapnel)
 	Unused event registration: SPELL_AURA_APPLIED 465917 (Gravi-Gunk)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1218319 (Voidsplosion)
@@ -18,7 +20,7 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1216699 (Void Barrage)
 	Unused event registration: SPELL_CAST_START 1217231 (Foot-Blasters)
 	Unused event registration: SPELL_CAST_START 468791 (Gigadeath)
-	Unused event registration: SPELL_CAST_SUCCESS 1216887 (Polarization Generator)
+	Unused event registration: SPELL_CAST_SUCCESS 1217355 (Polarization Generator)
 	Timer for spell ID 465232 (Sonic Ba-Boom) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 466765 (Beta Launch) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
 	Timer for spell ID 473276 (Activate Inventions!) is triggered by event SPELL_AURA_REMOVED 466860 (Bleeding Edge)
@@ -41,6 +43,7 @@ Unused objects:
 	[Special Warning] Mega Magnetize - dodge attack, type=dodge, spellId=1215858
 	[Special Warning] Screw Up - run away, type=run, spellId=1216509
 	[Special Warning] Void Barrage - dodge attack, type=dodge, spellId=1216699
+	[Special Warning] Changing to %s - 3 sec, type=nil, spellId=1216802
 	[Special Warning] Posi-Polarization on you, type=you, spellId=1216911
 	[Special Warning] Nega-Polarization on you, type=you, spellId=1216934
 	[Special Warning] Foot-Blasters! (%s), type=count, spellId=1217231
@@ -153,7 +156,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3013, Sprocketmonger Lockenstock, 14, 29, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1216887 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344 1218342 1218319, SPELL_AURA_APPLIED_DOSE 465917 1218344 1218319, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
+		RegisterEvents: Regular, SPELL_CAST_START 473276 1217231 1214872 1216508 465232 1218418 1216525 1216414 1215858 466765 1216674 1216699 468791, SPELL_CAST_SUCCESS 1217355 466860, SPELL_AURA_APPLIED 1216934 1216911 465917 1214878 1216509 1217261 1218344 1218342 1218319 1217357 1217358, SPELL_AURA_APPLIED_DOSE 465917 1218344 1218319, SPELL_AURA_REMOVED 1216934 1216911 465917 1214878 1216509 466860
 		StartTimer: 6.1, Sonic Ba-Boom (1)
 		StartTimer: 23.1, Pyro Party Pack (1)
 		StartTimer: 30.0, Activate Inventions! (1)
