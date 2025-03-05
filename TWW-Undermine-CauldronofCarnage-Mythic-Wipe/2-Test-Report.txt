@@ -50,8 +50,10 @@ Unused objects:
 	[Yell] %d, type=shortfade, spellId=1213690
 
 Timers:
-	Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900, triggerDeltas = 0.00, 94.77, 95.05, 95.10
+	Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900, triggerDeltas = 0.00, 9.98, 84.79, 10.23, 84.82, 10.40, 84.70, 10.25
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[  9.98] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+			 Triggered 4x, delta times: 9.98, 95.02, 95.22, 94.95
 		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
 			 Triggered 3x, delta times: 94.77, 95.05, 95.10
 	Colossal Clash (%s), time=95.00, type=nextcount, spellId=465833, triggerDeltas = 0.00
@@ -310,6 +312,7 @@ Event trace:
 	[  9.98] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 		ShowSpecialWarning: Thunderdrum Salvo (1) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 30.1, Thunderdrum Salvo (2)
 	[ 14.99] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
 		StartTimer: 24.0, Beam (2)
 	[ 20.99] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
@@ -348,6 +351,7 @@ Event trace:
 	[105.00] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 		ShowSpecialWarning: Thunderdrum Salvo (3) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 30.1, Thunderdrum Salvo (4)
 	[110.00] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
 		StartTimer: 24.0, Beam (5)
 	[116.02] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
@@ -386,6 +390,7 @@ Event trace:
 	[200.22] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 		ShowSpecialWarning: Thunderdrum Salvo (5) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 30.1, Thunderdrum Salvo (6)
 	[205.16] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
 		StartTimer: 24.0, Beam (8)
 	[211.20] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
@@ -424,6 +429,7 @@ Event trace:
 	[295.17] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 		ShowSpecialWarning: Thunderdrum Salvo (7) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 30.1, Thunderdrum Salvo (8)
 	[299.03] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, -1, false, 0, 0
 		StopTimer: Timer473650cdcount\t11
 		StopTimer: Timer472233cdcount\t10
