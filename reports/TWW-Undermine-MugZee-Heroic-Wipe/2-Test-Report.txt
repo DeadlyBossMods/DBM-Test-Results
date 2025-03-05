@@ -24,8 +24,11 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
 	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_START 463967 (Bloodlust)
+	Unused event registration: SPELL_CAST_START 466470 (Frostshatter Boots)
+	Unused event registration: SPELL_CAST_START 466518 (Molten Gold Knuckles)
 	Unused event registration: SPELL_CAST_START 466545 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_START 474461 (Earthshaker Gaol)
 	Unused event registration: SPELL_CAST_SUCCESS 467379 (Goblin-guided Rocket)
 	Unused event registration: SPELL_CAST_SUCCESS 467380 (Goblin-guided Rocket)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 470089 (Molten Gold Pool)
@@ -37,13 +40,11 @@ Findings:
 	Unused event registration: UNIT_DIED
 	Announce for spell ID 466459 (Head Honcho: Mug) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Announce for spell ID 466460 (Head Honcho: Zee) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
-	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_START 466470 (Frostshatter Boots)
 	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Timer for spell ID 466480 (Frostshatter Spear) is triggered by event SPELL_AURA_APPLIED 466476 (Frostshatter Boots)
 	Timer for spell ID 466509 (Stormfury Finger Gun) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Timer for spell ID 466518 (Molten Gold Knuckles) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Announce for spell ID 466539 (Unstable Crawler Mines) is triggered by event SPELL_CAST_START 472458 (Unstable Crawler Mines)
-	Timer for spell ID 466539 (Unstable Crawler Mines) is triggered by event SPELL_CAST_START 472458 (Unstable Crawler Mines)
 	Timer for spell ID 466539 (Unstable Crawler Mines) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
 	Timer for spell ID 466545 (Spray and Pray) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
 	Timer for spell ID 467380 (Goblin-guided Rocket) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
@@ -54,7 +55,7 @@ Findings:
 Unused objects:
 	[Announce] %s, type=stagechange, spellId=<none>
 	[Announce] Spray and Pray on >%s<, type=target, spellId=466545
-	[Announce] Head Honcho: Mug'Zee on >%s<, type=target, spellId=1222408
+	[Announce] Head Honcho: Mug'Zee, type=spell, spellId=1222408
 	[Special Warning] Frostshatter Boots on you, type=you, spellId=466476
 	[Special Warning] Molten Gold Knuckles - defensive, type=defensive, spellId=466518
 	[Special Warning] Spray and Pray - move away from others, type=moveaway, spellId=466545
@@ -87,24 +88,20 @@ Unused objects:
 	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
 
 Timers:
-	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 0.02, 25.02
+	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 0.02
 		[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
-		[ 25.04] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
 	Frostshatter Spear, time=8.00, type=cast, spellId=466480, triggerDeltas = 27.08, 30.04
 		[ 27.08] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps9: Frostshatter Boots] Creature-0-1-2769-1-238694-000000000F, Frostshatter Spear, 0xa48, Player-1-00000012, Dps9, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
 		[ 57.12] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps3: Frostshatter Boots] Creature-0-1-2769-1-238694-000000001C, Frostshatter Spear, 0xa48, Player-1-00000003, Dps3, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
-	Stormfury Finger Gun (%s), time=29.00, type=cdcount, spellId=466509, triggerDeltas = 0.02, 36.03
+	Stormfury Finger Gun (%s), time=29.00, type=cdcount, spellId=466509, triggerDeltas = 0.02
 		[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
-		[ 36.05] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
-	Molten Gold Knuckles (%s), time=40.00, type=varcount, spellId=466518, triggerDeltas = 0.02, 20.01
+	Molten Gold Knuckles (%s), time=40.00, type=varcount, spellId=466518, triggerDeltas = 0.02
 		[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
-		[ 20.03] SPELL_CAST_START: [Mug'Zee: Molten Gold Knuckles] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466518, Molten Gold Knuckles, 0, 0
-	Unstable Crawler Mines (%s), time=44.00, type=cdcount, spellId=466539, triggerDeltas = 73.17, 12.98
+	Unstable Crawler Mines (%s), time=44.00, type=cdcount, spellId=466539, triggerDeltas = 73.17
 		[ 73.17] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
-		[ 86.15] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
-		[120.64] SPELL_AURA_REMOVED: [Mug'Zee->Mug'Zee: Head Honcho: Zee] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466460, Head Honcho: Zee, 0, BUFF, 0
 	Spray and Pray (%s), time=70.00, type=cdcount, spellId=466545, triggerDeltas = 73.17
 		[ 73.17] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
+		[120.64] SPELL_AURA_REMOVED: [Mug'Zee->Mug'Zee: Head Honcho: Zee] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466460, Head Honcho: Zee, 0, BUFF, 0
 	Goblin-guided Rocket (%s), time=41.90, type=cdcount, spellId=467380, triggerDeltas = 73.17
 		[ 73.17] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 	Double Whammy Shot (%s), time=70.00, type=cdcount, spellId=469491, triggerDeltas = 73.17
@@ -112,17 +109,16 @@ Timers:
 	Pay Respects, time=9.80, type=cdnp, spellId=472782, triggerDeltas = 91.62, 17.16, 13.35
 		[ 91.62] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 			 Triggered 3x, delta times: 91.62, 17.16, 13.35
-	Earthshaker Gaol (%s), time=35.00, type=cdcount, spellId=474461, triggerDeltas = 0.02, 13.54
+	Earthshaker Gaol (%s), time=35.00, type=cdcount, spellId=474461, triggerDeltas = 0.02
 		[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
-		[ 13.56] SPELL_CAST_START: [Mug'Zee: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 474461, Earthshaker Gaol, 0, 0
 
 Announces:
 	Moxie on >%s< (%d), type=stack, spellId=466385, triggerDeltas = 50.05, 49.97
 		[ 50.05] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 			 Triggered 2x, delta times: 50.05, 49.97
-	Head Honcho: Mug on >%s<, type=target, spellId=466459, triggerDeltas = 0.02
+	Head Honcho: Mug, type=spell, spellId=466459, triggerDeltas = 0.02
 		[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
-	Head Honcho: Zee on >%s<, type=target, spellId=466460, triggerDeltas = 73.17
+	Head Honcho: Zee, type=spell, spellId=466460, triggerDeltas = 73.17
 		[ 73.17] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 	Unstable Crawler Mines (%s), type=count, spellId=466539, triggerDeltas = 86.15
 		[ 86.15] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
@@ -176,21 +172,17 @@ Event trace:
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
 	[  0.02] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
-		ShowAnnounce: Head Honcho: Mug on Mug'Zee
-		StartTimer: 13.5, Earthshaker Gaol (1)
-		StartTimer: 20.0, Molten Gold Knuckles (1)
-		StartTimer: 25.0, Frostshatter Boots (1)
-		StartTimer: 36.0, Stormfury Finger Gun (1)
-	[ 13.56] SPELL_CAST_START: [Mug'Zee: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 474461, Earthshaker Gaol, 0, 0
-		StartTimer: 35.0, Earthshaker Gaol (2)
+		ShowAnnounce: Head Honcho: Mug
+		StartTimer: 17.4, Earthshaker Gaol (1)
+		StartTimer: 46.6, Frostshatter Boots (1)
+		StartTimer: 50.0, Molten Gold Knuckles (1)
+		StartTimer: 60.0, Stormfury Finger Gun (1)
 	[ 17.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 17.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[ 20.03] SPELL_CAST_START: [Mug'Zee: Molten Gold Knuckles] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466518, Molten Gold Knuckles, 0, 0
-		StartTimer: 40.0, Molten Gold Knuckles (2)
 	[ 20.35] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
@@ -206,8 +198,6 @@ Event trace:
 	[ 23.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000036, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[ 25.04] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
-		StartTimer: 30.0, Frostshatter Boots (2)
 	[ 26.41] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000B, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
@@ -235,7 +225,6 @@ Event trace:
 	[ 36.05] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-		StartTimer: 29.0, Stormfury Finger Gun (2)
 	[ 50.05] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[ 52.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000019, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
@@ -282,11 +271,11 @@ Event trace:
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 73.17] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
-		ShowAnnounce: Head Honcho: Zee on Mug'Zee
-		StartTimer: 12.5, Unstable Crawler Mines (1)
-		StartTimer: 27.0, Goblin-guided Rocket (1)
-		StartTimer: 45.0, Spray and Pray (1)
-		StartTimer: 38.5, Double Whammy Shot (1)
+		ShowAnnounce: Head Honcho: Zee
+		StartTimer: 13.9, Unstable Crawler Mines (1)
+		StartTimer: 35.0, Goblin-guided Rocket (1)
+		StartTimer: 46.3, Double Whammy Shot (1)
+		StartTimer: 55.0, Spray and Pray (1)
 	[ 73.53] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
@@ -316,7 +305,6 @@ Event trace:
 		PlaySound: DBM/SpecialWarningSound2
 	[ 86.15] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (1)
-		StartTimer: 43.7, Unstable Crawler Mines (2)
 	[ 87.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003A", "ArcTarget", 0.1, 8.0) at 87.28 (+0.10)
 	[ 87.57] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-0000000022, Mk II Electro Shocker, 0xa48, 1215595, Faulty Wiring, 0, BUFF, 0
@@ -360,7 +348,7 @@ Event trace:
 	[114.85] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003A, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003A", "ArcTarget", 0.1, 8.0) at 114.95 (+0.10)
 	[120.64] SPELL_AURA_REMOVED: [Mug'Zee->Mug'Zee: Head Honcho: Zee] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466460, Head Honcho: Zee, 0, BUFF, 0
-		StopTimer: Timer466539cdcount\t2
+		StopTimer: Timer466545cdcount\t1
 	[122.13] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000038, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (3)
