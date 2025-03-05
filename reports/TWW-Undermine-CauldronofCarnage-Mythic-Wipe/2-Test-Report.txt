@@ -1,0 +1,455 @@
+Test: TWW/Undermine/CauldronofCarnage/Mythic/Wipe
+Mod:  DBM-Raids-WarWithin/2640
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1213690 (Molten Phlegm)
+	Unused event registration: SPELL_AURA_APPLIED 1221826 (Tiny Tussle)
+	Unused event registration: SPELL_AURA_APPLIED 471660 (Raised Guard)
+	Unused event registration: SPELL_AURA_APPLIED 472222 (Blistering Spite)
+	Unused event registration: SPELL_AURA_APPLIED 472225 (Galvanized Spite)
+	Unused event registration: SPELL_AURA_APPLIED 472231 (Blastburn Roarcannon)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1221826 (Tiny Tussle)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 472222 (Blistering Spite)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 472225 (Galvanized Spite)
+	Unused event registration: SPELL_AURA_REMOVED 1213690 (Molten Phlegm)
+	Unused event registration: SPELL_AURA_REMOVED 1214009 (Voltaic Image)
+	Unused event registration: SPELL_AURA_REMOVED 471660 (Raised Guard)
+	Unused event registration: SPELL_AURA_REMOVED 472231 (Blastburn Roarcannon)
+	Unused event registration: SPELL_CAST_START 473994 (Static Charge)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1214039 (Molten Pool)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 463925 (Lingering Electricity)
+	Unused event registration: SPELL_PERIODIC_MISSED 1214039 (Molten Pool)
+	Unused event registration: SPELL_PERIODIC_MISSED 463925 (Lingering Electricity)
+	Unused event registration: UNIT_POWER_UPDATE
+	Timer for spell ID 463900 (Thunderdrum Salvo) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Timer for spell ID 466178 (Lightning Bash) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Timer for spell ID 472233 (Blastburn Roarcannon) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Timer for spell ID 473650 (Scrapbomb) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Timer for spell ID 474159 (Static Charge) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Timer for spell ID 1213690 (Molten Phlegm) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Announce for spell ID 1213994 (Voltaic Image) is triggered by event SPELL_AURA_APPLIED 1214009 (Voltaic Image)
+	Timer for spell ID 1213994 (Voltaic Image) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Timer for spell ID 1214190 (Eruption Stomp) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+
+Unused objects:
+	[Announce] Blistering Spite (%s), type=count, spellId=472222
+	[Announce] Galvanized Spite (%s), type=count, spellId=472225
+	[Announce] Beam on >%s<, type=target, spellId=472233
+	[Announce] Tiny Tussle (%s), type=count, spellId=1221826
+	[Special Warning] Colossal Clash (%s) - dodge attack, type=dodgecount, spellId=465833
+	[Special Warning] Lightning Bash - defensive, type=defensive, spellId=466178
+	[Special Warning] Beam - move away from others, type=moveaway, spellId=472233
+	[Special Warning] %d stacks of Static Charge on you, type=stack, spellId=474159
+	[Special Warning] Molten Phlegm - move away from others, type=moveaway, spellId=1213690
+	[Special Warning] Voltaic Image - run away, type=run, spellId=1213994
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1214039
+	[Special Warning] Stomp (%s) - dodge attack, type=dodgecount, spellId=1214190
+	[Yell] %d, type=shortfade, spellId=472233
+	[Yell] Beam, type=shortyell, spellId=472233
+	[Yell] %s, type=repeaticon, spellId=474159
+	[Yell] %d, type=shortfade, spellId=1213690
+
+Timers:
+	Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900, triggerDeltas = 0.00, 94.77, 95.05, 95.10
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+	Colossal Clash (%s), time=95.00, type=nextcount, spellId=465833, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+	Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178, triggerDeltas = 0.00, 20.99, 73.78, 21.25, 73.80, 21.38, 73.72
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[ 20.99] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
+			 Triggered 3x, delta times: 20.99, 95.03, 95.18
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+	Beam (%s), time=97.30, type=cdcount, spellId=472233, triggerDeltas = 0.00, 14.99, 23.97, 55.81, 15.23, 24.01, 55.81, 15.34, 24.08, 55.68, 15.27
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[ 14.99] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+			 Triggered 7x, delta times: 14.99, 23.97, 71.04, 24.01, 71.15, 24.08, 70.95
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+		[299.03] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, -1, false, 0, 0
+	Bomb (%s), time=97.30, type=cdcount, spellId=473650, triggerDeltas = 0.00, 9.07, 23.91, 61.79, 9.24, 23.99, 61.82, 9.37, 24.01, 61.72, 9.28, 24.20
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[  9.07] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+			 Triggered 8x, delta times: 9.07, 23.91, 71.03, 23.99, 71.19, 24.01, 71.00, 24.20
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+		[299.03] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, -1, false, 0, 0
+	Static Charge (%s), time=97.30, type=cdcount, spellId=474159, triggerDeltas = 0.00, 94.77, 95.05, 95.10
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+	Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690, triggerDeltas = 0.00, 94.77, 95.05, 95.10, 23.83
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+		[308.75] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213688-00000004A7, 1213688, Flarendo, 5, 35, ??, 0
+	Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994, triggerDeltas = 0.00, 94.77, 95.05, 95.10
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+	Stomp (%s), time=97.30, type=cdcount, spellId=1214190, triggerDeltas = 0.00, 26.98, 67.79, 27.21, 67.84, 27.37, 67.73, 27.27
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		[ 26.98] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+			 Triggered 4x, delta times: 26.98, 95.00, 95.21, 95.00
+		[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 3x, delta times: 94.77, 95.05, 95.10
+		[299.03] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, -1, false, 0, 0
+
+Announces:
+	King of Carnage (%s), type=count, spellId=471557, triggerDeltas = 299.55, 5.06, 4.94, 4.99, 5.01
+		[299.55] SPELL_AURA_APPLIED: [Flarendo->Flarendo: King of Carnage] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, 471557, King of Carnage, 0, BUFF, 0
+		[304.61] SPELL_AURA_APPLIED_DOSE: [Flarendo->Flarendo: King of Carnage] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, 471557, King of Carnage, 0, BUFF, 2, 0
+			 Triggered 4x, delta times: 304.61, 4.94, 4.99, 5.01
+	Voltaic Image on >%s<, type=target, spellId=1213994, triggerDeltas = 30.26, 95.03, 95.17
+		[ 30.26] SPELL_AURA_APPLIED: [Voltaic Image->Tank6: Voltaic Image] Creature-0-1-2769-1-235187-00000000AD, Voltaic Image, 0xa48, Player-1-00000016, Tank6, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
+		[125.29] SPELL_AURA_APPLIED: [Voltaic Image->Dps2: Voltaic Image] Creature-0-1-2769-1-235187-00000000B3, Voltaic Image, 0xa48, Player-1-00000003, Dps2, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
+		[220.46] SPELL_AURA_APPLIED: [Voltaic Image->Tank3: Voltaic Image] Creature-0-1-2769-1-235187-00000000B8, Voltaic Image, 0xa48, Player-1-00000010, Tank3, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
+
+Special warnings:
+	Thunderdrum Salvo (%s) - dodge attack, type=dodgecount, spellId=463900, triggerDeltas = 9.98, 30.01, 65.01, 30.06, 65.16, 29.97, 64.98
+		[  9.98] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+			 Triggered 7x, delta times: 9.98, 30.01, 65.01, 30.06, 65.16, 29.97, 64.98
+	Bomb - soak (%s), type=soakcount, spellId=473650, triggerDeltas = 9.07, 23.91, 22.99, 48.04, 23.99, 22.96, 48.23, 24.01, 23.00, 48.00, 24.20
+		[  9.07] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+			 Triggered 11x, delta times: 9.07, 23.91, 22.99, 48.04, 23.99, 22.96, 48.23, 24.01, 23.00, 48.00, 24.20
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/helpsoak
+		[  9.07] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+			 Triggered 11x, delta times: 9.07, 23.91, 22.99, 48.04, 23.99, 22.96, 48.23, 24.01, 23.00, 48.00, 24.20
+	VoicePack/watchstep
+		[  9.98] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+			 Triggered 7x, delta times: 9.98, 30.01, 65.01, 30.06, 65.16, 29.97, 64.98
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 16, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 473650 472233 1214190 473994 466178, SPELL_CAST_SUCCESS 463900, SPELL_AURA_APPLIED 472222 472225 471660 471557 1213690 472231 1214009 1221826, SPELL_AURA_APPLIED_DOSE 472222 472225 471557 1221826, SPELL_AURA_REMOVED 471660 1213690 472231 1214009 465863 465872, SPELL_PERIODIC_DAMAGE 1214039 463925, SPELL_PERIODIC_MISSED 1214039 463925, UNIT_DIED, UNIT_POWER_UPDATE player, UNIT_SPELLCAST_SUCCEEDED boss1
+		StartTimer: 71.6, Colossal Clash (1)
+		StartTimer: 9.0, Bomb (1)
+		StartTimer: 15.0, Beam (1)
+		StartTimer: 27.0, Stomp (1)
+		StartTimer: 6.0, Static Charge (1)
+		StartTimer: 10.0, Thunderdrum Salvo (1)
+		StartTimer: 29.1, Voltaic Image (1)
+		StartTimer: 23.7, Molten Phlegm (1)
+		StartTimer: 21.0, Lightning Bash (1)
+		ScheduleTask: (anonymous function) at 2.00 (+2.00)
+			ScheduleTask: (anonymous function) at 4.00 (+2.00)
+				ScheduleTask: (anonymous function) at 6.00 (+2.00)
+					ScheduleTask: (anonymous function) at 8.00 (+2.00)
+						ScheduleTask: (anonymous function) at 10.00 (+2.00)
+							ScheduleTask: (anonymous function) at 12.00 (+2.00)
+								ScheduleTask: (anonymous function) at 14.00 (+2.00)
+									ScheduleTask: (anonymous function) at 16.00 (+2.00)
+										ScheduleTask: (anonymous function) at 18.00 (+2.00)
+											ScheduleTask: (anonymous function) at 20.00 (+2.00)
+												ScheduleTask: (anonymous function) at 22.00 (+2.00)
+													ScheduleTask: (anonymous function) at 24.00 (+2.00)
+														ScheduleTask: (anonymous function) at 26.00 (+2.00)
+															ScheduleTask: (anonymous function) at 28.00 (+2.00)
+																ScheduleTask: (anonymous function) at 30.00 (+2.00)
+																	ScheduleTask: (anonymous function) at 32.00 (+2.00)
+																		ScheduleTask: (anonymous function) at 34.00 (+2.00)
+																			ScheduleTask: (anonymous function) at 36.00 (+2.00)
+																				ScheduleTask: (anonymous function) at 38.00 (+2.00)
+																					ScheduleTask: (anonymous function) at 40.00 (+2.00)
+																						ScheduleTask: (anonymous function) at 42.00 (+2.00)
+																							ScheduleTask: (anonymous function) at 44.00 (+2.00)
+																								ScheduleTask: (anonymous function) at 46.00 (+2.00)
+																									ScheduleTask: (anonymous function) at 48.00 (+2.00)
+																										ScheduleTask: (anonymous function) at 50.00 (+2.00)
+																											ScheduleTask: (anonymous function) at 52.00 (+2.00)
+																												ScheduleTask: (anonymous function) at 54.00 (+2.00)
+																													ScheduleTask: (anonymous function) at 56.00 (+2.00)
+																														ScheduleTask: (anonymous function) at 58.00 (+2.00)
+																															ScheduleTask: (anonymous function) at 60.00 (+2.00)
+																																ScheduleTask: (anonymous function) at 62.00 (+2.00)
+																																	ScheduleTask: (anonymous function) at 64.00 (+2.00)
+																																		ScheduleTask: (anonymous function) at 66.00 (+2.00)
+																																			ScheduleTask: (anonymous function) at 68.00 (+2.00)
+																																				ScheduleTask: (anonymous function) at 70.00 (+2.00)
+																																					ScheduleTask: (anonymous function) at 72.00 (+2.00)
+																																						ScheduleTask: (anonymous function) at 74.00 (+2.00)
+																																							ScheduleTask: (anonymous function) at 76.00 (+2.00)
+																																								ScheduleTask: (anonymous function) at 78.00 (+2.00)
+																																									ScheduleTask: (anonymous function) at 80.00 (+2.00)
+																																										ScheduleTask: (anonymous function) at 82.00 (+2.00)
+																																											ScheduleTask: (anonymous function) at 84.00 (+2.00)
+																																												ScheduleTask: (anonymous function) at 86.00 (+2.00)
+																																													ScheduleTask: (anonymous function) at 88.00 (+2.00)
+																																														ScheduleTask: (anonymous function) at 90.00 (+2.00)
+																																															ScheduleTask: (anonymous function) at 92.00 (+2.00)
+																																																ScheduleTask: (anonymous function) at 94.00 (+2.00)
+																																																	ScheduleTask: (anonymous function) at 96.00 (+2.00)
+																																																		ScheduleTask: (anonymous function) at 98.00 (+2.00)
+																																																			ScheduleTask: (anonymous function) at 100.00 (+2.00)
+																																																				ScheduleTask: (anonymous function) at 102.00 (+2.00)
+																																																					ScheduleTask: (anonymous function) at 104.00 (+2.00)
+																																																						ScheduleTask: (anonymous function) at 106.00 (+2.00)
+																																																							ScheduleTask: (anonymous function) at 108.00 (+2.00)
+																																																								ScheduleTask: (anonymous function) at 110.00 (+2.00)
+																																																									ScheduleTask: (anonymous function) at 112.00 (+2.00)
+																																																										ScheduleTask: (anonymous function) at 114.00 (+2.00)
+																																																											ScheduleTask: (anonymous function) at 116.00 (+2.00)
+																																																												ScheduleTask: (anonymous function) at 118.00 (+2.00)
+																																																													ScheduleTask: (anonymous function) at 120.00 (+2.00)
+																																																														ScheduleTask: (anonymous function) at 122.00 (+2.00)
+																																																															ScheduleTask: (anonymous function) at 124.00 (+2.00)
+																																																																ScheduleTask: (anonymous function) at 126.00 (+2.00)
+																																																																	ScheduleTask: (anonymous function) at 128.00 (+2.00)
+																																																																		ScheduleTask: (anonymous function) at 130.00 (+2.00)
+																																																																			ScheduleTask: (anonymous function) at 132.00 (+2.00)
+																																																																				ScheduleTask: (anonymous function) at 134.00 (+2.00)
+																																																																					ScheduleTask: (anonymous function) at 136.00 (+2.00)
+																																																																						ScheduleTask: (anonymous function) at 138.00 (+2.00)
+																																																																							ScheduleTask: (anonymous function) at 140.00 (+2.00)
+																																																																								ScheduleTask: (anonymous function) at 142.00 (+2.00)
+																																																																									ScheduleTask: (anonymous function) at 144.00 (+2.00)
+																																																																										ScheduleTask: (anonymous function) at 146.00 (+2.00)
+																																																																											ScheduleTask: (anonymous function) at 148.00 (+2.00)
+																																																																												ScheduleTask: (anonymous function) at 150.00 (+2.00)
+																																																																													ScheduleTask: (anonymous function) at 152.00 (+2.00)
+																																																																														ScheduleTask: (anonymous function) at 154.00 (+2.00)
+																																																																															ScheduleTask: (anonymous function) at 156.00 (+2.00)
+																																																																																ScheduleTask: (anonymous function) at 158.00 (+2.00)
+																																																																																	ScheduleTask: (anonymous function) at 160.00 (+2.00)
+																																																																																		ScheduleTask: (anonymous function) at 162.00 (+2.00)
+																																																																																			ScheduleTask: (anonymous function) at 164.00 (+2.00)
+																																																																																				ScheduleTask: (anonymous function) at 166.00 (+2.00)
+																																																																																					ScheduleTask: (anonymous function) at 168.00 (+2.00)
+																																																																																						ScheduleTask: (anonymous function) at 170.00 (+2.00)
+																																																																																							ScheduleTask: (anonymous function) at 172.00 (+2.00)
+																																																																																								ScheduleTask: (anonymous function) at 174.00 (+2.00)
+																																																																																									ScheduleTask: (anonymous function) at 176.00 (+2.00)
+																																																																																										ScheduleTask: (anonymous function) at 178.00 (+2.00)
+																																																																																											ScheduleTask: (anonymous function) at 180.00 (+2.00)
+																																																																																												ScheduleTask: (anonymous function) at 182.00 (+2.00)
+																																																																																													ScheduleTask: (anonymous function) at 184.00 (+2.00)
+																																																																																														ScheduleTask: (anonymous function) at 186.00 (+2.00)
+																																																																																															ScheduleTask: (anonymous function) at 188.00 (+2.00)
+																																																																																																ScheduleTask: (anonymous function) at 190.00 (+2.00)
+																																																																																																	ScheduleTask: (anonymous function) at 192.00 (+2.00)
+																																																																																																		ScheduleTask: (anonymous function) at 194.00 (+2.00)
+																																																																																																			ScheduleTask: (anonymous function) at 196.00 (+2.00)
+																																																																																																				ScheduleTask: (anonymous function) at 198.00 (+2.00)
+																																																																																																					ScheduleTask: (anonymous function) at 200.00 (+2.00)
+																																																																																																						ScheduleTask: (anonymous function) at 202.00 (+2.00)
+																																																																																																							ScheduleTask: (anonymous function) at 204.00 (+2.00)
+																																																																																																								ScheduleTask: (anonymous function) at 206.00 (+2.00)
+																																																																																																									ScheduleTask: (anonymous function) at 208.00 (+2.00)
+																																																																																																										ScheduleTask: (anonymous function) at 210.00 (+2.00)
+																																																																																																											ScheduleTask: (anonymous function) at 212.00 (+2.00)
+																																																																																																												ScheduleTask: (anonymous function) at 214.00 (+2.00)
+																																																																																																													ScheduleTask: (anonymous function) at 216.00 (+2.00)
+																																																																																																														ScheduleTask: (anonymous function) at 218.00 (+2.00)
+																																																																																																															ScheduleTask: (anonymous function) at 220.00 (+2.00)
+																																																																																																																ScheduleTask: (anonymous function) at 222.00 (+2.00)
+																																																																																																																	ScheduleTask: (anonymous function) at 224.00 (+2.00)
+																																																																																																																		ScheduleTask: (anonymous function) at 226.00 (+2.00)
+																																																																																																																			ScheduleTask: (anonymous function) at 228.00 (+2.00)
+																																																																																																																				ScheduleTask: (anonymous function) at 230.00 (+2.00)
+																																																																																																																					ScheduleTask: (anonymous function) at 232.00 (+2.00)
+																																																																																																																						ScheduleTask: (anonymous function) at 234.00 (+2.00)
+																																																																																																																							ScheduleTask: (anonymous function) at 236.00 (+2.00)
+																																																																																																																								ScheduleTask: (anonymous function) at 238.00 (+2.00)
+																																																																																																																									ScheduleTask: (anonymous function) at 240.00 (+2.00)
+																																																																																																																										ScheduleTask: (anonymous function) at 242.00 (+2.00)
+																																																																																																																											ScheduleTask: (anonymous function) at 244.00 (+2.00)
+																																																																																																																												ScheduleTask: (anonymous function) at 246.00 (+2.00)
+																																																																																																																													ScheduleTask: (anonymous function) at 248.00 (+2.00)
+																																																																																																																														ScheduleTask: (anonymous function) at 250.00 (+2.00)
+																																																																																																																															ScheduleTask: (anonymous function) at 252.00 (+2.00)
+																																																																																																																																ScheduleTask: (anonymous function) at 254.00 (+2.00)
+																																																																																																																																	ScheduleTask: (anonymous function) at 256.00 (+2.00)
+																																																																																																																																		ScheduleTask: (anonymous function) at 258.00 (+2.00)
+																																																																																																																																			ScheduleTask: (anonymous function) at 260.00 (+2.00)
+																																																																																																																																				ScheduleTask: (anonymous function) at 262.00 (+2.00)
+																																																																																																																																					ScheduleTask: (anonymous function) at 264.00 (+2.00)
+																																																																																																																																						ScheduleTask: (anonymous function) at 266.00 (+2.00)
+																																																																																																																																							ScheduleTask: (anonymous function) at 268.00 (+2.00)
+																																																																																																																																								ScheduleTask: (anonymous function) at 270.00 (+2.00)
+																																																																																																																																									ScheduleTask: (anonymous function) at 272.00 (+2.00)
+																																																																																																																																										ScheduleTask: (anonymous function) at 274.00 (+2.00)
+																																																																																																																																											ScheduleTask: (anonymous function) at 276.00 (+2.00)
+																																																																																																																																												ScheduleTask: (anonymous function) at 278.00 (+2.00)
+																																																																																																																																													ScheduleTask: (anonymous function) at 280.00 (+2.00)
+																																																																																																																																														ScheduleTask: (anonymous function) at 282.00 (+2.00)
+																																																																																																																																															ScheduleTask: (anonymous function) at 284.00 (+2.00)
+																																																																																																																																																ScheduleTask: (anonymous function) at 286.00 (+2.00)
+																																																																																																																																																	ScheduleTask: (anonymous function) at 288.00 (+2.00)
+																																																																																																																																																		ScheduleTask: (anonymous function) at 290.00 (+2.00)
+																																																																																																																																																			ScheduleTask: (anonymous function) at 292.00 (+2.00)
+																																																																																																																																																				ScheduleTask: (anonymous function) at 294.00 (+2.00)
+																																																																																																																																																					ScheduleTask: (anonymous function) at 296.00 (+2.00)
+																																																																																																																																																						ScheduleTask: (anonymous function) at 298.00 (+2.00)
+																																																																																																																																																							ScheduleTask: (anonymous function) at 300.00 (+2.00)
+																																																																																																																																																								ScheduleTask: (anonymous function) at 302.00 (+2.00)
+																																																																																																																																																									ScheduleTask: (anonymous function) at 304.00 (+2.00)
+																																																																																																																																																										ScheduleTask: (anonymous function) at 306.00 (+2.00)
+																																																																																																																																																											ScheduleTask: (anonymous function) at 308.00 (+2.00)
+																																																																																																																																																												ScheduleTask: (anonymous function) at 310.00 (+2.00)
+																																																																																																																																																													ScheduleTask: (anonymous function) at 312.00 (+2.00)
+																																																																																																																																																														ScheduleTask: (anonymous function) at 314.00 (+2.00)
+																																																																																																																																																															ScheduleTask: (anonymous function) at 316.00 (+2.00)
+																																																																																																																																																																ScheduleTask: (anonymous function) at 318.00 (+2.00)
+																																																																																																																																																																	ScheduleTask: (anonymous function) at 320.00 (+2.00)
+																																																																																																																																																																		Unscheduled by ENCOUNTER_END at 323.88
+	[  9.07] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (1)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 24.0, Bomb (2)
+	[  9.98] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+		ShowSpecialWarning: Thunderdrum Salvo (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 14.99] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+		StartTimer: 24.0, Beam (2)
+	[ 20.99] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
+		StartTimer: 30.0, Lightning Bash (2)
+	[ 26.98] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+		StartTimer: 24.0, Stomp (2)
+	[ 30.26] SPELL_AURA_APPLIED: [Voltaic Image->Tank6: Voltaic Image] Creature-0-1-2769-1-235187-00000000AD, Voltaic Image, 0xa48, Player-1-00000016, Tank6, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
+		ShowAnnounce: Voltaic Image on Tank3, Tank8, Tank6
+	[ 32.98] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (2)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 23.0, Bomb (3)
+	[ 38.96] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+		StartTimer: 23.0, Beam (3)
+	[ 39.99] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+		ShowSpecialWarning: Thunderdrum Salvo (2) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 55.97] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (3)
+		PlaySound: VoicePack/helpsoak
+	[ 94.77] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 94.77, 94.77, 94.81
+		StartTimer: 9.0, Bomb (4)
+		StartTimer: 15.0, Beam (4)
+		StartTimer: 27.0, Stomp (3)
+		StartTimer: 6.0, Static Charge (2)
+		StartTimer: 10.0, Thunderdrum Salvo (3)
+		StartTimer: 29.1, Voltaic Image (2)
+		StartTimer: 23.7, Molten Phlegm (1)
+		StartTimer: 21.0, Lightning Bash (3)
+	[104.01] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (4)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 24.0, Bomb (5)
+	[105.00] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+		ShowSpecialWarning: Thunderdrum Salvo (3) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[110.00] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+		StartTimer: 24.0, Beam (5)
+	[116.02] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
+		StartTimer: 30.0, Lightning Bash (4)
+	[121.98] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+		StartTimer: 24.0, Stomp (4)
+	[125.29] SPELL_AURA_APPLIED: [Voltaic Image->Dps2: Voltaic Image] Creature-0-1-2769-1-235187-00000000B3, Voltaic Image, 0xa48, Player-1-00000003, Dps2, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
+		ShowAnnounce: Voltaic Image on Healer1, Tank5, Dps2
+	[128.00] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (5)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 23.0, Bomb (6)
+	[134.01] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+		StartTimer: 23.0, Beam (6)
+	[135.06] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+		ShowSpecialWarning: Thunderdrum Salvo (4) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[150.96] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (6)
+		PlaySound: VoicePack/helpsoak
+	[189.82] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 189.83, 189.86, 189.86
+		StartTimer: 9.0, Bomb (7)
+		StartTimer: 15.0, Beam (7)
+		StartTimer: 27.0, Stomp (5)
+		StartTimer: 6.0, Static Charge (3)
+		StartTimer: 10.0, Thunderdrum Salvo (5)
+		StartTimer: 29.1, Voltaic Image (3)
+		StartTimer: 23.7, Molten Phlegm (1)
+		StartTimer: 21.0, Lightning Bash (5)
+	[199.19] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (7)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 24.0, Bomb (8)
+	[200.22] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+		ShowSpecialWarning: Thunderdrum Salvo (5) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[205.16] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+		StartTimer: 24.0, Beam (8)
+	[211.20] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
+		StartTimer: 30.0, Lightning Bash (6)
+	[217.19] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+		StartTimer: 24.0, Stomp (6)
+	[220.46] SPELL_AURA_APPLIED: [Voltaic Image->Tank3: Voltaic Image] Creature-0-1-2769-1-235187-00000000B8, Voltaic Image, 0xa48, Player-1-00000010, Tank3, 0x512, 1214009, Voltaic Image, 0, DEBUFF, 0
+		ShowAnnounce: Voltaic Image on Tank9, Tank8, Tank3
+	[223.20] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (8)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 23.0, Bomb (9)
+	[229.24] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+		StartTimer: 23.0, Beam (9)
+	[230.19] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+		ShowSpecialWarning: Thunderdrum Salvo (6) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.20] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (9)
+		PlaySound: VoicePack/helpsoak
+	[284.92] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_REMOVED at 284.92, 284.92, 284.92
+		StartTimer: 9.0, Bomb (10)
+		StartTimer: 15.0, Beam (10)
+		StartTimer: 27.0, Stomp (7)
+		StartTimer: 6.0, Static Charge (4)
+		StartTimer: 10.0, Thunderdrum Salvo (7)
+		StartTimer: 29.1, Voltaic Image (4)
+		StartTimer: 23.7, Molten Phlegm (1)
+		StartTimer: 21.0, Lightning Bash (7)
+	[294.20] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (10)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 24.0, Bomb (11)
+	[295.17] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
+		ShowSpecialWarning: Thunderdrum Salvo (7) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[299.03] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000002, Torq, 0xa48, -1, false, 0, 0
+		StopTimer: Timer473650cdcount\t11
+		StopTimer: Timer472233cdcount\t10
+		StopTimer: Timer1214190cdcount\t7
+	[299.55] SPELL_AURA_APPLIED: [Flarendo->Flarendo: King of Carnage] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, 471557, King of Carnage, 0, BUFF, 0
+		ShowAnnounce: King of Carnage (1)
+	[300.19] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
+		StartTimer: 30.0, Beam (11)
+	[304.61] SPELL_AURA_APPLIED_DOSE: [Flarendo->Flarendo: King of Carnage] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, 471557, King of Carnage, 0, BUFF, 2, 0
+		ShowAnnounce: King of Carnage (2)
+	[308.75] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-1213688-00000004A7, 1213688, Flarendo, 5, 35, ??, 0
+		StartTimer: 65.0, Molten Phlegm (2)
+	[309.55] SPELL_AURA_APPLIED_DOSE: [Flarendo->Flarendo: King of Carnage] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, 471557, King of Carnage, 0, BUFF, 3, 0
+		ShowAnnounce: King of Carnage (3)
+	[312.19] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+		StartTimer: 30.0, Stomp (8)
+	[314.54] SPELL_AURA_APPLIED_DOSE: [Flarendo->Flarendo: King of Carnage] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, 471557, King of Carnage, 0, BUFF, 4, 0
+		ShowAnnounce: King of Carnage (4)
+	[318.40] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
+		ShowSpecialWarning: Bomb - soak (11)
+		PlaySound: VoicePack/helpsoak
+		StartTimer: 30.0, Bomb (12)
+	[319.55] SPELL_AURA_APPLIED_DOSE: [Flarendo->Flarendo: King of Carnage] Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, Creature-0-1-2769-1-229181-0000000002, Flarendo, 0xa48, 471557, King of Carnage, 0, BUFF, 5, 0
+		ShowAnnounce: King of Carnage (5)
+	[323.88] ENCOUNTER_END: 3010, Cauldron of Carnage, 16, 20, 0, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 318.00
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 471660 1213690 472231 1214009 465863 465872
