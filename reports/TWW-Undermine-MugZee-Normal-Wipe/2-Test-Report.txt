@@ -125,7 +125,7 @@ Timers:
 		[ 72.95] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 			 Triggered 4x, delta times: 72.95, 141.50, 69.97, 84.01
 		[484.92] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-	Bulletstorm (%s), time=16.00, type=cdcount, spellId=471419, triggerDeltas = 436.93, 5.55, 16.00, 15.97
+	Bulletstorm (%s), time=14.00, type=cdcount, spellId=471419, triggerDeltas = 436.93, 5.55, 16.00, 15.97
 		[436.93] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
 		[442.48] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 			 Triggered 3x, delta times: 442.48, 16.00, 15.97
@@ -141,7 +141,7 @@ Timers:
 		[284.42] SPELL_AURA_REMOVED: [Mug'Zee->Mug'Zee: Head Honcho: Mug] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466459, Head Honcho: Mug, 0, BUFF, 0
 			 Triggered 2x, delta times: 284.42, 84.01
 		[484.92] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-	Static Charge (%s), time=16.00, type=cdcount, spellId=1215953, triggerDeltas = 436.93, 16.01, 15.99
+	Static Charge (%s), time=14.00, type=cdcount, spellId=1215953, triggerDeltas = 436.93, 16.01, 15.99
 		[436.93] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
 			 Triggered 3x, delta times: 436.93, 16.01, 15.99
 	Double-Minded Fury, time=97.30, type=next, spellId=1216142, triggerDeltas = 484.92
@@ -765,10 +765,10 @@ Event trace:
 	[435.81] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-00000000D8, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-00000000D8", "ArcTarget", 0.1, 8.0) at 435.91 (+0.10)
 	[436.93] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
-		StartTimer: 16.0, Static Charge (2)
+		StartTimer: 14.0, Static Charge (2)
 		ShowAnnounce: Stage 2.5
 		PlaySound: VoicePack/phasechange
-		StartTimer: 5.5, Bulletstorm (1)
+		StartTimer: 3.4, Bulletstorm (1)
 		StartTimer: 52.9, Intermission
 	[436.94] SPELL_AURA_APPLIED: [Mug'Zee->Dps15: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000020, Dps15, 0x512, 1215898, Static Charge, 0, DEBUFF, 0
 		ShowSpecialWarning: Static Charge - move to Dps15
@@ -779,7 +779,7 @@ Event trace:
 	[442.48] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 		ShowSpecialWarning: Bulletstorm (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 16.0, Bulletstorm (2)
+		StartTimer: 14.0, Bulletstorm (2)
 	[444.73] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 444.83 (+0.10)
 			ShowAnnounce: Disintegration Beam on Dps19
@@ -807,14 +807,14 @@ Event trace:
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-000000008E", "BeamTarget", 0.1, 8.0) at 452.54 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer5
 	[452.94] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
-		StartTimer: 16.0, Static Charge (3)
+		StartTimer: 14.0, Static Charge (3)
 	[452.94] SPELL_AURA_APPLIED: [Mug'Zee->Dps5: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000006, Dps5, 0x512, 1215898, Static Charge, 0, DEBUFF, 0
 		ShowSpecialWarning: Static Charge - move to Dps5
 		PlaySound: VoicePack/helpsoak
 	[458.48] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 		ShowSpecialWarning: Bulletstorm (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 16.0, Bulletstorm (3)
+		StartTimer: 14.0, Bulletstorm (3)
 	[460.90] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 461.00 (+0.10)
 			ShowAnnounce: Disintegration Beam on Dps12
@@ -822,14 +822,14 @@ Event trace:
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-000000008E", "BeamTarget", 0.1, 8.0) at 467.07 (+0.10)
 			ShowAnnounce: Disintegration Beam on Dps5
 	[468.93] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
-		StartTimer: 16.0, Static Charge (4)
+		StartTimer: 14.0, Static Charge (4)
 	[468.93] SPELL_AURA_APPLIED: [Mug'Zee->Dps12: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Dps12, 0x512, 1215898, Static Charge, 0, DEBUFF, 0
 		ShowSpecialWarning: Static Charge - move to Dps12
 		PlaySound: VoicePack/helpsoak
 	[474.45] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 		ShowSpecialWarning: Bulletstorm (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 16.0, Bulletstorm (4)
+		StartTimer: 14.0, Bulletstorm (4)
 	[475.47] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 475.57 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer2
