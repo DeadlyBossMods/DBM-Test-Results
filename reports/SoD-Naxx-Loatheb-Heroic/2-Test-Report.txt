@@ -1,0 +1,177 @@
+Test: SoD/Naxx/Loatheb/Heroic
+Mod:  DBM-Raids-Vanilla/LoathebVanilla
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 29184 (Corrupted Mind)
+	Unused event registration: SPELL_AURA_APPLIED 29195 (Corrupted Mind)
+	Unused event registration: SPELL_AURA_APPLIED 29197 (Corrupted Mind)
+	Unused event registration: SPELL_AURA_APPLIED 29199 (Corrupted Mind)
+	Unused event registration: SPELL_AURA_REMOVED 29184 (Corrupted Mind)
+	Unused event registration: SPELL_AURA_REMOVED 29195 (Corrupted Mind)
+	Unused event registration: SPELL_AURA_REMOVED 29197 (Corrupted Mind)
+	Unused event registration: SPELL_AURA_REMOVED 29199 (Corrupted Mind)
+	Unused event registration: SPELL_CAST_SUCCESS 1225419 (Unknown spell)
+	Unused event registration: UNIT_DIED
+	Timer Summon Spore (%s), time=12.90, type=nextcount, spellId=29234 (time=11.30, variance=0.00) got refreshed early with 1.23s remaining
+		Refreshed by: [ 10.05] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+	Timer Summon Spore (%s), time=12.90, type=nextcount, spellId=29234 (time=12.90, variance=0.00) got refreshed early with 0.33s remaining
+		Refreshed by: [ 61.45] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+	Timer Summon Spore (%s), time=12.90, type=nextcount, spellId=29234 (time=12.90, variance=0.00) got refreshed early with 0.37s remaining
+		Refreshed by: [139.14] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+
+Unused objects:
+	[Announce] Healing possible in 3 seconds, type=nil, spellId=1225419
+	[Special Warning] Heal now, type=nil, spellId=1225419
+	[Timer] Unknown ends, time=17.00, type=active, spellId=1225419
+
+Timers:
+	Inevitable Doom, time=29.00, type=next, spellId=29204, triggerDeltas = 0.00, 120.13, 30.73
+		[  0.00] ENCOUNTER_START: 1115, Loatheb, 186, 40, 0
+		[120.13] SPELL_CAST_SUCCESS: [Loatheb: Inevitable Doom] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29204, Inevitable Doom, 0, 0
+			 Triggered 2x, delta times: 120.13, 30.73
+	Summon Spore (%s), time=12.90, type=nextcount, spellId=29234, triggerDeltas = 0.00, 10.05, 12.93, 12.95, 12.95, 12.57, 12.94, 13.35, 12.94, 12.96, 12.96, 12.54, 13.34
+		[  0.00] ENCOUNTER_START: 1115, Loatheb, 186, 40, 0
+		[ 10.05] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+			 Triggered 12x, delta times: 10.05, 12.93, 12.95, 12.95, 12.57, 12.94, 13.35, 12.94, 12.96, 12.96, 12.54, 13.34
+	Remove Curse, time=30.80, type=next, spellId=30281, triggerDeltas = 0.00, 3.57, 30.76, 30.72, 30.78, 30.78, 30.74
+		[  0.00] ENCOUNTER_START: 1115, Loatheb, 186, 40, 0
+		[  3.57] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+			 Triggered 6x, delta times: 3.57, 30.76, 30.72, 30.78, 30.78, 30.74
+	Unknown, time=21.50, type=var, spellId=1225419, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 1115, Loatheb, 186, 40, 0
+
+Announces:
+	Inevitable Doom (%s), type=count, spellId=29204, triggerDeltas = 120.13, 30.73
+		[120.13] SPELL_CAST_SUCCESS: [Loatheb: Inevitable Doom] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29204, Inevitable Doom, 0, 0
+			 Triggered 2x, delta times: 120.13, 30.73
+	Summon Spore (%s), type=count, spellId=29234, triggerDeltas = 10.05, 12.93, 12.95, 12.95, 12.57, 12.94, 13.35, 12.94, 12.96, 12.96, 12.54, 13.34
+		[ 10.05] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+			 Triggered 12x, delta times: 10.05, 12.93, 12.95, 12.95, 12.57, 12.94, 13.35, 12.94, 12.96, 12.96, 12.54, 13.34
+	Summon Spore soon, type=soon, spellId=29234, triggerDeltas = 7.90, 10.05, 12.93, 12.95, 12.95, 12.57, 12.94, 13.35, 12.94, 12.96, 12.96, 12.54
+		[  7.90] Scheduled at 0.00 by ENCOUNTER_START: 1115, Loatheb, 186, 40, 0
+		[ 17.95] Scheduled at 10.05 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[ 30.88] Scheduled at 22.98 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[ 43.83] Scheduled at 35.93 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[ 56.78] Scheduled at 48.88 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[ 69.35] Scheduled at 61.45 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[ 82.29] Scheduled at 74.39 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[ 95.64] Scheduled at 87.74 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[108.58] Scheduled at 100.68 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[121.54] Scheduled at 113.64 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[134.50] Scheduled at 126.60 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		[147.04] Scheduled at 139.14 by SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+	Remove Curse, type=spell, spellId=30281, triggerDeltas = 3.57, 30.76, 30.72, 30.78, 30.78, 30.74
+		[  3.57] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+			 Triggered 6x, delta times: 3.57, 30.76, 30.72, 30.78, 30.78, 30.74
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 1115, Loatheb, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 29184 29195 29197 29199, SPELL_AURA_REMOVED 29184 29195 29197 29199, SPELL_CAST_SUCCESS 29234 29204 30281 1225419, UNIT_DIED
+		StartTimer: 10.0, Unknown
+		StartTimer: 3.0, Remove Curse
+		StartTimer: 11.3, Summon Spore (1)
+		ScheduleTask: announce29234soon:Schedule() at 7.90 (+7.90)
+			ShowAnnounce: Summon Spore soon
+		StartTimer: 121.4, Inevitable Doom
+	[  3.57] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+		ShowAnnounce: Remove Curse
+		StartTimer: 30.8, Remove Curse
+	[ 10.05] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (2)
+		ShowAnnounce: Summon Spore (1)
+		ScheduleTask: announce29234soon:Schedule() at 17.95 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[ 22.98] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (3)
+		ShowAnnounce: Summon Spore (2)
+		ScheduleTask: announce29234soon:Schedule() at 30.88 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[ 34.33] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+		ShowAnnounce: Remove Curse
+		StartTimer: 30.8, Remove Curse
+	[ 35.93] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (4)
+		ShowAnnounce: Summon Spore (3)
+		ScheduleTask: announce29234soon:Schedule() at 43.83 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[ 48.88] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (5)
+		ShowAnnounce: Summon Spore (4)
+		ScheduleTask: announce29234soon:Schedule() at 56.78 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[ 61.45] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (6)
+		ShowAnnounce: Summon Spore (5)
+		ScheduleTask: announce29234soon:Schedule() at 69.35 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[ 65.05] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+		ShowAnnounce: Remove Curse
+		StartTimer: 30.8, Remove Curse
+	[ 74.39] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (7)
+		ShowAnnounce: Summon Spore (6)
+		ScheduleTask: announce29234soon:Schedule() at 82.29 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[ 87.74] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (8)
+		ShowAnnounce: Summon Spore (7)
+		ScheduleTask: announce29234soon:Schedule() at 95.64 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[ 95.83] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+		ShowAnnounce: Remove Curse
+		StartTimer: 30.8, Remove Curse
+	[100.68] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (9)
+		ShowAnnounce: Summon Spore (8)
+		ScheduleTask: announce29234soon:Schedule() at 108.58 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[113.64] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (10)
+		ShowAnnounce: Summon Spore (9)
+		ScheduleTask: announce29234soon:Schedule() at 121.54 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[120.13] SPELL_CAST_SUCCESS: [Loatheb: Inevitable Doom] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29204, Inevitable Doom, 0, 0
+		ShowAnnounce: Inevitable Doom (1)
+		StartTimer: 29.1, Inevitable Doom
+	[126.60] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (11)
+		ShowAnnounce: Summon Spore (10)
+		ScheduleTask: announce29234soon:Schedule() at 134.50 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[126.61] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+		ShowAnnounce: Remove Curse
+		StartTimer: 30.8, Remove Curse
+	[139.14] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (12)
+		ShowAnnounce: Summon Spore (11)
+		ScheduleTask: announce29234soon:Schedule() at 147.04 (+7.90)
+			ShowAnnounce: Summon Spore soon
+	[150.86] SPELL_CAST_SUCCESS: [Loatheb: Inevitable Doom] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29204, Inevitable Doom, 0, 0
+		ShowAnnounce: Inevitable Doom (2)
+		StartTimer: 32.4, Inevitable Doom
+	[152.48] SPELL_CAST_SUCCESS: [Loatheb: Summon Spore] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 29234, Summon Spore, 0, 0
+		StartTimer: 12.9, Summon Spore (13)
+		ShowAnnounce: Summon Spore (12)
+		ScheduleTask: announce29234soon:Schedule() at 160.38 (+7.90)
+			Unscheduled by ENCOUNTER_END at 158.07
+	[157.35] SPELL_CAST_SUCCESS: [Loatheb: Remove Curse] Creature-0-1-533-1-16011-0000000001, Loatheb, 0xa48, "", nil, 0x0, 30281, Remove Curse, 0, 0
+		ShowAnnounce: Remove Curse
+		StartTimer: 30.8, Remove Curse
+	[158.07] ENCOUNTER_END: 1115, Loatheb, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce29234soon:Schedule() scheduled by ScheduleTask at 152.48
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 29184 29195 29197 29199
