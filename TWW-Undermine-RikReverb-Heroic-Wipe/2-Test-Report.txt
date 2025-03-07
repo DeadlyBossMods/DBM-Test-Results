@@ -19,6 +19,22 @@ Findings:
 	Timer for spell ID 467606 (Sound Cannon) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
 	Timer for spell ID 472306 (Sparkblast Ignition) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
 	Timer for spell ID 473748 (Amplification!) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
+	Timer Echoing Chant (%s), time=97.30, type=cdcount, spellId=466866 (time=58.50, variance=0.00) got refreshed early with 0.50s remaining
+		Refreshed by: [ 79.47] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
+	Timer Echoing Chant (%s), time=97.30, type=cdcount, spellId=466866 (time=58.50, variance=0.00) got refreshed early with 0.50s remaining
+		Refreshed by: [232.52] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
+	Timer Faulty Zap (%s), time=97.30, type=cdcount, spellId=466979 (time=43.50, variance=0.00) got refreshed early with 2.97s remaining
+		Refreshed by: [192.56] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
+	Timer Faulty Zap (%s), time=97.30, type=cdcount, spellId=466979 (time=43.50, variance=0.00) got refreshed early with 4.00s remaining
+		Refreshed by: [ 39.48] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
+	Timer Sound Cannon (%s), time=97.30, type=cdcount, spellId=467606 (time=32.00, variance=0.00) got refreshed early with 3.47s remaining
+		Refreshed by: [180.54] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
+	Timer Sound Cannon (%s), time=97.30, type=cdcount, spellId=467606 (time=32.00, variance=0.00) got refreshed early with 4.50s remaining
+		Refreshed by: [ 27.48] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
+	Timer Sparkblast Ignition (%s), time=97.30, type=cdcount, spellId=472306 (time=20.50, variance=0.00) got refreshed early with 4.47s remaining
+		Refreshed by: [168.04] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-472306-000000030F, 472306, Rik Reverb, 55.5, 13, Tank2, 0
+	Timer Sparkblast Ignition (%s), time=97.30, type=cdcount, spellId=472306 (time=20.50, variance=0.00) got refreshed early with 5.47s remaining
+		Refreshed by: [ 15.00] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-472306-000000035F, 472306, Rik Reverb, 93.5, 13, Tank2, 0
 	Timer Stage %s, time=33.00, type=stagecount, spellId=66911 (time=120.00, variance=0.00) got refreshed early with 4.03s remaining
 		Refreshed by: [267.99] SPELL_AURA_APPLIED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
 	Timer Stage %s, time=33.00, type=stagecount, spellId=66911 (time=121.00, variance=0.00) got refreshed early with 4.97s remaining
@@ -184,26 +200,26 @@ Event trace:
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 473748 466866 467606 466979 473655 473260, SPELL_AURA_APPLIED 1217122 468119 472298 1214598 467108 467044 466128 464518 466093 1213817, SPELL_AURA_APPLIED_DOSE 1217122 464518, SPELL_AURA_REMOVED 1217122 466128 1213817 467542, INSTANCE_ENCOUNTER_ENGAGE_UNIT, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 10.7, Amplification! (1)
-		StartTimer: 15.0, Sparkblast Ignition (1)
-		StartTimer: 21.5, Echoing Chant (1)
-		StartTimer: 27.5, Sound Cannon (1)
-		StartTimer: 39.5, Faulty Zap (1)
+		StartTimer: 20.5, Sparkblast Ignition (1)
+		StartTimer: 21.0, Echoing Chant (1)
+		StartTimer: 32.0, Sound Cannon (1)
+		StartTimer: 43.5, Faulty Zap (1)
 		StartTimer: 121.0, Stage 2
 	[ 10.91] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 40.0, Amplification! (2)
+		StartTimer: 38.9, Amplification! (2)
 	[ 15.00] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-472306-000000035F, 472306, Rik Reverb, 93.5, 13, Tank2, 0
 		ShowSpecialWarning: Sparkblast Ignition - switch targets (1)
 		PlaySound: VoicePack/killmob
-		StartTimer: 43.5, Sparkblast Ignition (2)
+		StartTimer: 39.5, Sparkblast Ignition (2)
 	[ 21.49] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (1) - dodge attack
 		PlaySound: VoicePack/watchwave
-		StartTimer: 58.0, Echoing Chant (2)
+		StartTimer: 58.5, Echoing Chant (2)
 	[ 27.48] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 		ShowAnnounce: Sound Cannon incoming debuff (1)
-		StartTimer: 34.5, Sound Cannon (2)
+		StartTimer: 35.0, Sound Cannon (2)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000002", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 27.58 (+0.10)
 	[ 38.94] SPELL_AURA_APPLIED: [Rik Reverb->Dps21: Entranced] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, Player-1-00000031, Dps21, 0x512, 1214598, Entranced, 0, DEBUFF, 0
 		ScheduleTask: announce1214598target:CombinedShow("Dps21") at 39.94 (+1.00)
@@ -212,7 +228,7 @@ Event trace:
 		ShowSpecialWarning: Entranced - switch targets (Dps21)
 		PlaySound: VoicePack/findmc
 	[ 39.48] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
-		StartTimer: 35.5, Faulty Zap (2)
+		StartTimer: 31.5, Faulty Zap (2)
 	[ 39.48] SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps11
 			Filtered: 1x SPELL_AURA_APPLIED at 42.51
@@ -242,11 +258,11 @@ Event trace:
 	[ 51.14] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 40.0, Amplification! (3)
+		StartTimer: 38.9, Amplification! (3)
 	[ 58.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-472306-00000001EB, 472306, Rik Reverb, 76.1, 50, Tank1, 0
 		ShowSpecialWarning: Sparkblast Ignition - switch targets (2)
 		PlaySound: VoicePack/killmob
-		StartTimer: 44.7, Sparkblast Ignition (3)
+		StartTimer: 43.2, Sparkblast Ignition (3)
 	[ 61.98] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 		ShowAnnounce: Sound Cannon incoming debuff (2)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000002", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 62.08 (+0.10)
@@ -284,7 +300,7 @@ Event trace:
 	[ 79.47] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (2) - dodge attack
 		PlaySound: VoicePack/watchwave
-		StartTimer: 28.6, Echoing Chant (3)
+		StartTimer: 33.5, Echoing Chant (3)
 	[ 91.40] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (3) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -375,10 +391,10 @@ Event trace:
 		ShowAnnounce: Haywire
 	[152.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
 		StartTimer: 10.7, Amplification! (4)
-		StartTimer: 15.0, Sparkblast Ignition (4)
-		StartTimer: 21.5, Echoing Chant (4)
-		StartTimer: 27.5, Sound Cannon (3)
-		StartTimer: 39.5, Faulty Zap (4)
+		StartTimer: 20.5, Sparkblast Ignition (4)
+		StartTimer: 21.0, Echoing Chant (4)
+		StartTimer: 32.0, Sound Cannon (3)
+		StartTimer: 43.5, Faulty Zap (4)
 		StartTimer: 120.0, Stage 2
 	[152.29] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-000000002E, Amplifier, 0xa48, Creature-0-1-2769-1-230197-000000002E, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
@@ -387,25 +403,25 @@ Event trace:
 	[163.26] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 40.0, Amplification! (5)
+		StartTimer: 38.9, Amplification! (5)
 	[167.60] SPELL_AURA_REMOVED: [->Tank2: Lingering Voltage] "", nil, 0x0, Player-1-00000026, Tank2, 0x511, 1217122, Lingering Voltage, 0, DEBUFF, 0
 		ShowAnnounce: Lingering Voltage faded
 	[168.04] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-472306-000000030F, 472306, Rik Reverb, 55.5, 13, Tank2, 0
 		ShowSpecialWarning: Sparkblast Ignition - switch targets (4)
 		PlaySound: VoicePack/killmob
-		StartTimer: 43.5, Sparkblast Ignition (5)
+		StartTimer: 39.5, Sparkblast Ignition (5)
 	[174.50] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (4) - dodge attack
 		PlaySound: VoicePack/watchwave
-		StartTimer: 58.0, Echoing Chant (5)
+		StartTimer: 58.5, Echoing Chant (5)
 	[180.54] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 		ShowAnnounce: Sound Cannon incoming debuff (3)
-		StartTimer: 34.5, Sound Cannon (4)
+		StartTimer: 35.0, Sound Cannon (4)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000002", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 180.64 (+0.10)
 	[188.67] SPELL_AURA_APPLIED: [Rik Reverb->Tank2: Resonant Echoes] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, Player-1-00000026, Tank2, 0x511, 468119, Resonant Echoes, 0, DEBUFF, 0
 		ShowAnnounce: Resonant Echoes on YOU
 	[192.56] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
-		StartTimer: 35.5, Faulty Zap (5)
+		StartTimer: 31.5, Faulty Zap (5)
 	[192.57] SPELL_AURA_APPLIED: [->Dps11: Faulty Zap] "", nil, 0x0, Player-1-00000015, Dps11, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps11
 			Filtered: 1x SPELL_AURA_APPLIED at 195.54
@@ -435,11 +451,11 @@ Event trace:
 	[203.41] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (5) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 40.0, Amplification! (6)
+		StartTimer: 38.9, Amplification! (6)
 	[211.51] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-472306-0000000146, 472306, Rik Reverb, 46.6, 50, Tank1, 0
 		ShowSpecialWarning: Sparkblast Ignition - switch targets (5)
 		PlaySound: VoicePack/killmob
-		StartTimer: 44.7, Sparkblast Ignition (6)
+		StartTimer: 43.2, Sparkblast Ignition (6)
 	[215.01] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 		ShowAnnounce: Sound Cannon incoming debuff (4)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000002", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 215.11 (+0.10)
@@ -474,7 +490,7 @@ Event trace:
 	[232.52] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (5) - dodge attack
 		PlaySound: VoicePack/watchwave
-		StartTimer: 28.6, Echoing Chant (6)
+		StartTimer: 33.5, Echoing Chant (6)
 	[240.06] SPELL_AURA_APPLIED: [Rik Reverb->Dps6: Entranced] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, Player-1-00000008, Dps6, 0x512, 1214598, Entranced, 0, DEBUFF, 0
 		ScheduleTask: announce1214598target:CombinedShow("Dps6") at 241.06 (+1.00)
 			ShowAnnounce: Entranced on Dps6
@@ -607,10 +623,10 @@ Event trace:
 		ShowAnnounce: Haywire
 	[303.97] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000002, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
 		StartTimer: 10.7, Amplification! (7)
-		StartTimer: 15.0, Sparkblast Ignition (7)
-		StartTimer: 21.5, Echoing Chant (7)
-		StartTimer: 27.5, Sound Cannon (5)
-		StartTimer: 39.5, Faulty Zap (7)
+		StartTimer: 20.5, Sparkblast Ignition (7)
+		StartTimer: 21.0, Echoing Chant (7)
+		StartTimer: 32.0, Sound Cannon (5)
+		StartTimer: 43.5, Faulty Zap (7)
 		StartTimer: 120.0, Stage 2
 	[306.03] SPELL_AURA_APPLIED: [Amplifier->Amplifier: Haywire] Creature-0-1-2769-1-230197-0000000053, Amplifier, 0xa48, Creature-0-1-2769-1-230197-0000000053, Amplifier, 0xa48, 466093, Haywire, 0, BUFF, 0
 		AntiSpam: 3
