@@ -13,6 +13,7 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 467380 (Goblin-guided Rocket)
 	Unused event registration: SPELL_AURA_REMOVED 469369 (Spray and Pray)
 	Unused event registration: SPELL_AURA_REMOVED 469490 (Double Whammy Shot)
+	Unused event registration: SPELL_AURA_REMOVED 472631 (Earthshaker Gaol)
 	Unused event registration: SPELL_CAST_START 1217791 (Electrocution Matrix)
 	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
@@ -48,9 +49,11 @@ Findings:
 	Timer for spell ID 469491 (Double Whammy Shot) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
 	Timer for spell ID 469491 (Double Whammy Shot) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
 	Timer for spell ID 471419 (Bulletstorm) is triggered by event SPELL_CAST_START 1215953 (Static Charge)
+	Announce for spell ID 474461 (Earthshaker Gaol) is triggered by event SPELL_AURA_APPLIED 472631 (Earthshaker Gaol)
 	SpecialWarning for spell ID 474461 (Earthshaker Gaol) is triggered by event SPELL_AURA_APPLIED 472631 (Earthshaker Gaol)
 	Timer for spell ID 474461 (Earthshaker Gaol) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
 	Timer for spell ID 474461 (Earthshaker Gaol) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
+	Yell for spell ID 474461 (Earthshaker Gaol) is triggered by event SPELL_AURA_APPLIED 472631 (Earthshaker Gaol)
 	SpecialWarning for spell ID 474554 (Shaken Earth) is triggered by event SPELL_PERIODIC_DAMAGE 472057 (Hot Mess)
 	SpecialWarning for spell ID 474554 (Shaken Earth) is triggered by event SPELL_PERIODIC_MISSED 472057 (Hot Mess)
 	Announce for spell ID 1215591 (Faulty Wiring) is triggered by event SPELL_AURA_APPLIED 1215595 (Faulty Wiring)
@@ -77,6 +80,7 @@ Unused objects:
 	[Yell] Goblin-guided Rocket on PlayerName, type=yell, spellId=467380
 	[Yell] %d, type=shortfade, spellId=469491
 	[Yell] Double Whammy Shot on PlayerName, type=yell, spellId=469491
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=474461
 	[Yell] Surging Arc on PlayerName, type=yell, spellId=1214991
 	[Yell] %d, type=shortfade, spellId=1215953
 	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
@@ -166,6 +170,13 @@ Announces:
 	Solid Gold on >%s<, type=target, spellId=467225, triggerDeltas = 32.59, 139.38
 		[ 32.59] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Solid Gold] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 467225, Solid Gold, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 32.59, 139.38
+	Earthshaker Gaol (%s) on >%s<, type=targetcount, spellId=474461, triggerDeltas = 10.03, 35.06, 104.37, 35.00, 322.54, 72.19
+		[ 10.03] SPELL_AURA_APPLIED: [Mug'Zee->Dps5: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000006, Dps5, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		[ 45.09] SPELL_AURA_APPLIED: [Mug'Zee->Dps2: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000002, Dps2, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		[149.46] SPELL_AURA_APPLIED: [Mug'Zee->Dps16: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000021, Dps16, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		[184.46] SPELL_AURA_APPLIED: [Mug'Zee->Dps3: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000003, Dps3, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		[507.00] SPELL_AURA_APPLIED: [Mug'Zee->Dps12: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Dps12, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Healer4: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000014, Healer4, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 	Disintegration Beam on >%s<, type=target, spellId=1215481, triggerDeltas = 114.40, 141.23, 2.46, 67.63, 43.01, 18.20, 14.16, 8.92, 5.66, 8.95, 5.65, 8.89, 5.67, 7.71, 8.46, 6.07, 8.50, 6.09, 8.50, 14.28, 15.72, 14.56, 14.60, 2.44, 14.95, 1.22, 1.20, 13.35, 1.21, 8.93, 0.00, 13.99, 1.41
 		[114.40] Scheduled at 114.30 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-000000002C, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		[255.63] Scheduled at 255.53 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-000000005B, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
@@ -221,14 +232,14 @@ Special warnings:
 	Bulletstorm (%s) - dodge attack, type=dodgecount, spellId=471419, triggerDeltas = 442.48, 16.00, 15.97
 		[442.48] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 			 Triggered 3x, delta times: 442.48, 16.00, 15.97
-	Shakedown - dodge attack, type=dodge, spellId=472659, triggerDeltas = 17.32, 0.00, 3.06, 0.00, 2.98, 0.00, 3.04, 0.00, 3.02, 3.02, 19.89, 0.00, 3.03, 0.00, 3.03, 0.00, 2.99, 0.00, 3.05, 0.01, 2.98, 3.03, 86.28, 0.00, 3.05, 0.00, 3.03, 0.00, 3.00, 0.00, 3.03, 3.03, 3.01, 16.89, 0.00, 3.01, 0.04, 2.99, 0.00, 2.97, 0.03, 2.99, 0.03, 2.99, 307.45, 0.03, 3.03, 0.10, 2.95, 0.07, 2.95, 0.04, 2.96, 0.07, 2.95, 0.09, 2.94, 0.08, 2.94, 0.08, 2.94, 0.09, 3.13, 5.88, 2.43, 1.39, 1.63, 1.39, 3.00, 3.05, 3.03, 3.00, 2.84, 0.19, 2.90, 0.17, 2.86, 0.32, 2.75, 0.65, 3.03, 3.07, 1.17, 0.01, 1.82, 1.20, 0.00, 2.17, 0.85, 0.00, 2.17, 0.98, 0.00, 2.05, 0.96, 0.23, 1.82, 0.99, 1.37, 0.81, 1.08, 1.62, 0.53, 0.93, 0.06
+	Shakedown - dodge attack, type=dodge, spellId=472659, triggerDeltas = 17.32, 3.06, 2.98, 3.04, 3.02, 3.02, 19.89, 3.03, 3.03, 2.99, 3.05, 2.99, 3.03, 86.28, 3.05, 3.03, 3.00, 3.03, 3.03, 3.01, 16.89, 3.01, 3.03, 2.97, 3.02, 3.02, 307.45, 3.06, 3.05, 3.02, 3.00, 3.02, 3.03, 3.02, 3.02, 3.22, 5.88, 3.82, 3.02, 3.00, 3.05, 3.03, 3.00, 3.03, 2.90, 3.03, 3.07, 3.68, 3.07, 3.00, 3.37, 3.02, 3.03, 3.01, 3.17, 3.23
 		[ 17.32] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000E, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-			 Triggered 105x, delta times: 17.32, 0.00, 3.06, 0.00, 2.98, 0.00, 3.04, 0.00, 3.02, 3.02, 19.89, 0.00, 3.03, 0.00, 3.03, 0.00, 2.99, 0.00, 3.05, 0.01, 2.98, 3.03, 86.28, 0.00, 3.05, 0.00, 3.03, 0.00, 3.00, 0.00, 3.03, 3.03, 3.01, 16.89, 0.00, 3.01, 0.04, 2.99, 0.00, 2.97, 0.03, 2.99, 0.03, 2.99, 307.45, 0.03, 3.03, 0.10, 2.95, 0.07, 2.95, 0.04, 2.96, 0.07, 2.95, 0.09, 2.94, 0.08, 2.94, 0.08, 2.94, 0.09, 3.13, 5.88, 2.43, 1.39, 1.63, 1.39, 3.00, 3.05, 3.03, 3.00, 2.84, 0.19, 2.90, 0.17, 2.86, 0.32, 2.75, 0.65, 3.03, 3.07, 1.17, 0.01, 1.82, 1.20, 0.00, 2.17, 0.85, 0.00, 2.17, 0.98, 0.00, 2.05, 0.96, 0.23, 1.82, 0.99, 1.37, 0.81, 1.08, 1.62, 0.53, 0.93, 0.06
+			 Triggered 56x, delta times: 17.32, 3.06, 2.98, 3.04, 3.02, 3.02, 19.89, 3.03, 3.03, 2.99, 3.05, 2.99, 3.03, 86.28, 3.05, 3.03, 3.00, 3.03, 3.03, 3.01, 16.89, 3.01, 3.03, 2.97, 3.02, 3.02, 307.45, 3.06, 3.05, 3.02, 3.00, 3.02, 3.03, 3.02, 3.02, 3.22, 5.88, 3.82, 3.02, 3.00, 3.05, 3.03, 3.00, 3.03, 2.90, 3.03, 3.07, 3.68, 3.07, 3.00, 3.37, 3.02, 3.03, 3.01, 3.17, 3.23
 	Pay Respects - interrupt >%s<! (%d), type=interruptcount, spellId=472782, triggerDeltas = 541.49, 0.42, 14.18, 25.48, 13.40, 14.17, 1.20, 0.03, 1.60
 		[541.49] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 			 Triggered 9x, delta times: 541.49, 0.42, 14.18, 25.48, 13.40, 14.17, 1.20, 0.03, 1.60
 	Earthshaker Gaol on you, type=you, spellId=474461, triggerDeltas = 579.19
-		[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Healer4: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000014, Healer4, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 	%s damage - move away, type=gtfo, spellId=474554, triggerDeltas = 238.48, 44.02, 2.06, 128.75, 1.99, 4.41, 2.01, 2.00, 21.42, 2.01, 2.00, 2.00, 54.87, 17.37, 47.28, 1.99
 		[238.48] SPELL_PERIODIC_DAMAGE: [Mug'Zee->Dps21: Hot Mess] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 472057, Hot Mess, 0, 0
 			 Triggered 10x, delta times: 238.48, 44.02, 2.06, 135.15, 2.01, 2.00, 21.42, 4.01, 121.52, 1.99
@@ -243,7 +254,8 @@ Special warnings:
 		[610.37] SPELL_CAST_START: [Mug'Zee: Double-Minded Fury] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1216142, Double-Minded Fury, 0, 0
 
 Yells:
-	None
+	Earthshaker Gaol on PlayerName, type=yell, spellId=474461
+		[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Healer4: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000014, Healer4, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 
 Voice pack sounds:
 	VoicePack/carefly
@@ -282,7 +294,7 @@ Voice pack sounds:
 		[610.37] SPELL_CAST_START: [Mug'Zee: Double-Minded Fury] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1216142, Double-Minded Fury, 0, 0
 	VoicePack/targetyou
 		[564.67] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps21: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000116, Frostshatter Spear, 0xa48, Player-1-00000026, Dps21, 0x511, 466476, Frostshatter Boots, 0, DEBUFF, 0
-		[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Healer4: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000014, Healer4, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 	VoicePack/watchfeet
 		[238.48] SPELL_PERIODIC_DAMAGE: [Mug'Zee->Dps21: Hot Mess] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 472057, Hot Mess, 0, 0
 			 Triggered 10x, delta times: 238.48, 44.02, 2.06, 135.15, 2.01, 2.00, 21.42, 4.01, 121.52, 1.99
@@ -299,38 +311,40 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 14, 29, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
 	[  0.03] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug
 		StartTimer: 17.4, Earthshaker Gaol (1)
 		StartTimer: 46.6, Frostshatter Boots (1)
 		StartTimer: 50.0, Molten Gold Knuckles (1)
 		StartTimer: 60.0, Stormfury Finger Gun (1)
+	[ 10.03] SPELL_AURA_APPLIED: [Mug'Zee->Dps9: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000013, Dps9, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 10.53 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 10.03
+	[ 10.03] SPELL_AURA_APPLIED: [Mug'Zee->Dps5: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000006, Dps5, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 10.03
+		ShowAnnounce: Earthshaker Gaol (1) on Dps9, Dps5
 	[ 17.32] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000E, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 17.32] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 17.32
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 20.38] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 20.38] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000E, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 20.38
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 22.58] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Golden Drip] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 467202, Golden Drip, 0, DEBUFF, 0
 		ShowSpecialWarning: Golden Drip - keep moving
 		PlaySound: VoicePack/keepmove
 	[ 23.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 23.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000E, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 23.36
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 26.40] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 26.40] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000000E, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 26.4
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 27.12] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps3: Frostshatter Boots] Creature-0-1-2769-1-238694-00000000B5, Frostshatter Spear, 0xa48, Player-1-00000003, Dps3, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
@@ -338,34 +352,42 @@ Event trace:
 			Filtered: 4x SPELL_AURA_APPLIED at 27.12, 27.12, 27.12, 27.12
 		StartTimer: 8.0, Frostshatter Spear
 	[ 28.22] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-000000000E, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
 	[ 29.42] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 32.44] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 32.59] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Solid Gold] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 467225, Solid Gold, 0, DEBUFF, 0
 		ShowAnnounce: Solid Gold on PlayerName
 	[ 32.67] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-00000000B4, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
 	[ 36.09] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+	[ 45.09] SPELL_AURA_APPLIED: [Mug'Zee->Healer3: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000010, Healer3, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 45.59 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 45.09
+	[ 45.09] SPELL_AURA_APPLIED: [Mug'Zee->Dps2: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000002, Dps2, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 45.09
+		ShowAnnounce: Earthshaker Gaol (2) on Healer3, Dps2
 	[ 50.05] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[ 52.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 52.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B6, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 52.33
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 55.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 55.36] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B6, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 55.36
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 57.11] SPELL_AURA_APPLIED: [Frostshatter Spear->Healer1: Frostshatter Boots] Creature-0-1-2769-1-238694-000000001D, Frostshatter Spear, 0xa48, Player-1-00000008, Healer1, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
@@ -373,36 +395,37 @@ Event trace:
 			Filtered: 4x SPELL_AURA_APPLIED at 57.11, 57.11, 57.11, 57.11
 		StartTimer: 8.0, Frostshatter Spear
 	[ 58.39] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 58.39] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B6, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 58.39
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 61.38] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 61.38] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B6, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 61.38
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 64.43] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[ 64.44] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000B6, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 64.44
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 64.75] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-00000000B6, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
 	[ 65.05] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		ShowSpecialWarning: Stormfury Finger Gun (2) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 67.42] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 70.45] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[ 71.24] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-000000001A, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
 	[ 72.95] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
@@ -446,33 +469,35 @@ Event trace:
 		StartTimer: 46.6, Frostshatter Boots (1)
 		StartTimer: 50.0, Molten Gold Knuckles (1)
 		StartTimer: 60.0, Stormfury Finger Gun (1)
+	[149.46] SPELL_AURA_APPLIED: [Mug'Zee->Tank1: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000027, Tank1, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 149.96 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 149.46
+	[149.46] SPELL_AURA_APPLIED: [Mug'Zee->Dps16: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000021, Dps16, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 149.46
+		ShowAnnounce: Earthshaker Gaol (1) on Tank1, Dps16
 	[150.09] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[156.73] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000003F, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[156.73] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 156.73
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[159.78] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000003F, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[159.78] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 159.78
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[161.96] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Golden Drip] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 467202, Golden Drip, 0, DEBUFF, 0
 		ShowSpecialWarning: Golden Drip - keep moving
 		PlaySound: VoicePack/keepmove
 	[162.81] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000003F, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[162.81] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 162.81
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[165.81] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000003F, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[165.81] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 165.81
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[166.53] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps8: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000041, Frostshatter Spear, 0xa48, Player-1-00000012, Dps8, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
@@ -480,35 +505,44 @@ Event trace:
 			Filtered: 4x SPELL_AURA_APPLIED at 166.53, 166.53, 166.53, 166.53
 		StartTimer: 8.0, Frostshatter Spear
 	[166.75] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-000000003F, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
 	[168.84] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[171.87] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[171.97] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Solid Gold] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 467225, Solid Gold, 0, DEBUFF, 0
 		ShowAnnounce: Solid Gold on PlayerName
 	[174.88] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[175.47] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[176.49] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-00000000C1, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
+	[184.46] SPELL_AURA_APPLIED: [Mug'Zee->Dps18: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000023, Dps18, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 184.96 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 184.46
+	[184.46] SPELL_AURA_APPLIED: [Mug'Zee->Dps3: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000003, Dps3, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 184.46
+		ShowAnnounce: Earthshaker Gaol (2) on Dps18, Dps3
 	[191.77] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000045, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[191.77] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 191.77
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[194.78] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000045, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[194.82] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 194.82
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[196.48] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps16: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000048, Frostshatter Spear, 0xa48, Player-1-00000021, Dps16, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
@@ -516,35 +550,35 @@ Event trace:
 			Filtered: 4x SPELL_AURA_APPLIED at 196.48, 196.48, 196.48, 196.48
 		StartTimer: 8.0, Frostshatter Spear
 	[197.81] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000045, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[197.81] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 197.81
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[200.03] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 20, 0
 		ShowAnnounce: Moxie on Mug'Zee (20)
 	[200.78] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000045, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[200.81] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 200.81
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[203.80] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000045, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[203.83] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000C4, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 203.83
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[204.44] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		ShowSpecialWarning: Stormfury Finger Gun (2) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[205.70] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-00000000C4, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
 	[206.82] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000045, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[209.34] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-0000000045, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
+		AntiSpam: 4
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
 	[214.45] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
@@ -866,28 +900,31 @@ Event trace:
 			Filtered: 1x SPELL_PERIODIC_MISSED at 507.02
 		ShowSpecialWarning: Hot Mess damage - move away
 		PlaySound: VoicePack/watchfeet
+	[507.00] SPELL_AURA_APPLIED: [Mug'Zee->Dps5: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000006, Dps5, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 507.50 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 507.00
+	[507.00] SPELL_AURA_APPLIED: [Mug'Zee->Dps12: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000017, Dps12, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 507.00
+		ShowAnnounce: Earthshaker Gaol (1) on Dps5, Dps12
 	[514.27] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[514.30] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 514.3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[516.95] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Golden Drip] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 467202, Golden Drip, 0, DEBUFF, 0
 		ShowSpecialWarning: Golden Drip - keep moving
 		PlaySound: VoicePack/keepmove
 	[517.33] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[517.43] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 517.43
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[520.06] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 520.16 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer5
 	[520.38] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[520.45] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 520.45
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[523.39] SPELL_PERIODIC_DAMAGE: [Mug'Zee->Dps21: Shaken Earth] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 474554, Shaken Earth, 0, 0
@@ -896,42 +933,36 @@ Event trace:
 		ShowSpecialWarning: Shaken Earth damage - move away
 		PlaySound: VoicePack/watchfeet
 	[523.40] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[523.44] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 523.44
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[526.40] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[526.47] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 526.47
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[529.42] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[529.51] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 529.51
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[532.45] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[532.53] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 532.53
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[534.62] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 534.72 (+0.10)
 			ShowAnnounce: Disintegration Beam on Dps5
 	[535.47] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[535.55] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 535.55
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[538.49] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[538.58] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 538.58
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[541.49] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
@@ -939,6 +970,7 @@ Event trace:
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
 		PlaySound: VoicePack/kick1r
 	[541.71] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[541.91] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
@@ -949,6 +981,8 @@ Event trace:
 		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[547.59] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 550.02
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[549.22] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
@@ -956,19 +990,16 @@ Event trace:
 			ShowAnnounce: Disintegration Beam on Healer5
 	[550.02] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 40, 0
 		ShowAnnounce: Moxie on Mug'Zee (40)
-	[550.02] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[551.41] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 553.04
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[551.66] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 551.76 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer1
-	[553.04] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[554.43] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[554.65] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Healer1: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-00000000A7, Goblin Guided Rocket, 0xa48, Player-1-00000008, Healer1, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
@@ -978,14 +1009,17 @@ Event trace:
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (2)
 		PlaySound: VoicePack/kick2r
 	[557.43] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[560.48] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[563.12] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
 		StartTimer: 86.2, Frostshatter Boots (2)
 	[563.51] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[564.67] SPELL_AURA_APPLIED: [Frostshatter Spear->Healer1: Frostshatter Boots] Creature-0-1-2769-1-238694-00000000A9, Frostshatter Spear, 0xa48, Player-1-00000008, Healer1, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
@@ -996,6 +1030,8 @@ Event trace:
 		ShowSpecialWarning: Frostshatter Boots on you
 		PlaySound: VoicePack/targetyou
 	[566.51] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 569.35
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[566.61] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
@@ -1007,10 +1043,8 @@ Event trace:
 	[569.03] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-00000000A7, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-00000000A7", "BeamTarget", 0.1, 8.0) at 569.13 (+0.10)
 			ShowAnnounce: Disintegration Beam on PlayerName
-	[569.35] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[569.54] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[570.67] SPELL_PERIODIC_DAMAGE: [Mug'Zee->Dps21: Hot Mess] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 472057, Hot Mess, 0, 0
@@ -1019,9 +1053,8 @@ Event trace:
 		ShowSpecialWarning: Hot Mess damage - move away
 		PlaySound: VoicePack/watchfeet
 	[572.44] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[572.61] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 572.61
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[572.66] SPELL_PERIODIC_DAMAGE: [Mug'Zee->Dps21: Hot Mess] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 472057, Hot Mess, 0, 0
@@ -1032,25 +1065,30 @@ Event trace:
 	[573.15] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (2)
 	[575.47] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[575.79] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 575.79
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[578.54] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[579.19] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_CAST_START at 579.19
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 579.69 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 579.19
+	[579.19] SPELL_AURA_APPLIED: [Mug'Zee->Healer4: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000014, Healer4, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 579.19
 		ShowSpecialWarning: Earthshaker Gaol on you
 		PlaySound: VoicePack/targetyou
+		ShowYell: Earthshaker Gaol on PlayerName
+		ShowAnnounce: Earthshaker Gaol (2) on PlayerName, Healer4
 	[581.57] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (3)
 		PlaySound: VoicePack/kick3r
 	[582.22] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[582.38] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
@@ -1060,24 +1098,18 @@ Event trace:
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-00000000A7", "BeamTarget", 0.1, 8.0) at 583.69 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer2
 	[585.29] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[586.46] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000AF, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[586.47] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 586.46, 586.47
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[588.29] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[589.49] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[589.49] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000AF, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 589.49, 589.49
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[591.66] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 592.51, 592.51
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[592.12] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-00000000A7, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
@@ -1094,32 +1126,18 @@ Event trace:
 					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 592.52 (+0.10)
 						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 592.62 (+0.10)
 							ShowAnnounce: Disintegration Beam on PlayerName
-	[592.51] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000AF, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[592.51] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[594.68] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 595.66, 595.66
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[594.97] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (4)
 		PlaySound: VoicePack/kick4r
-	[595.66] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000AF, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[595.66] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[597.71] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[598.67] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[598.90] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000AF, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 598.67, 598.9
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[599.15] SPELL_AURA_APPLIED: [Mug'Zee->Dps21: Golden Drip] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000026, Dps21, 0x511, 467202, Golden Drip, 0, DEBUFF, 0
@@ -1128,18 +1146,13 @@ Event trace:
 	[600.02] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 50, 0
 		ShowAnnounce: Moxie on Mug'Zee (50)
 	[600.72] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[601.71] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[603.08] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000AF, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 601.71, 603.08
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[603.89] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[604.97] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 604.97, 606.59
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[606.31] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
@@ -1147,21 +1160,14 @@ Event trace:
 			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 606.51 (+0.10)
 				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 606.61 (+0.10)
 					ShowAnnounce: Disintegration Beam on PlayerName
-	[606.59] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000AF, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[607.12] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000A0, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
+		AntiSpam: 3
+			Filtered: 2x SPELL_CAST_START at 608.05, 608.11
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[607.92] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-00000000A7, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-00000000A7", "BeamTarget", 0.1, 8.0) at 608.02 (+0.10)
 			ShowAnnounce: Disintegration Beam on PlayerName
-	[608.05] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000EA, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[608.11] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-00000000E2, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
-		ShowSpecialWarning: Shakedown - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[609.14] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000083, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 609.24 (+0.10)
 			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000083", "BeamTarget", 0.1, 8.0) at 609.34 (+0.10)
@@ -1193,4 +1199,4 @@ Event trace:
 	[617.07] ENCOUNTER_END: 3015, Mug'Zee, Heads of Security, 14, 29, 0, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631
