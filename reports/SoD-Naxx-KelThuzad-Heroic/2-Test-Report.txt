@@ -1,0 +1,220 @@
+Test: SoD/Naxx/KelThuzad/Heroic
+Mod:  DBM-Raids-Vanilla/KelThuzadVanilla
+
+Findings:
+	Unused event registration: SPELL_AURA_REMOVED 28410 (Chains of Kel'Thuzad)
+	Unused event registration: UNIT_TARGETABLE_CHANGED
+
+Unused objects:
+	[Announce] Frost Blast on >%s<, type=target, spellId=27808
+	[Special Warning] Shadow Fissure on you, type=you, spellId=27810
+	[Special Warning] Detonate Mana - move away from others, type=moveaway, spellId=27819
+	[Yell] Shadow Fissure on PlayerName, type=yell, spellId=27810
+	[Yell] Detonate Mana, type=shortyell, spellId=27819
+
+Timers:
+	Phase 2, time=237.60, type=cd, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 1114, Kel'Thuzad, 186, 40, 0
+	Frost Blast ends, time=4.00, type=active, spellId=27808, triggerDeltas = 290.51, 30.34, 52.17, 36.39
+		[290.51] Scheduled at 290.01 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps15: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[320.85] Scheduled at 320.35 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps13: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000015, Dps13, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[373.02] Scheduled at 372.52 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps1: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000001, Dps1, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[409.41] Scheduled at 408.91 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps2: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+	Frost Blast, time=58.20, type=var, spellId=27808, triggerDeltas = 290.01, 30.34, 52.17, 36.39
+		[290.01] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps15: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27808, Frost Blast, 0, 0
+		[320.35] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps13: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000015, Dps13, 0x512, 27808, Frost Blast, 0, 0
+		[372.52] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps11: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000013, Dps11, 0x512, 27808, Frost Blast, 0, 0
+		[408.91] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps2: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27808, Frost Blast, 0, 0
+	Detonate Mana, time=20.00, type=cd, spellId=27819, triggerDeltas = 258.45, 21.85, 20.62, 21.86, 21.84, 35.15, 21.85, 20.64
+		[258.45] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps5: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 27819, Detonate Mana, 0, 0
+		[280.30] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps14: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000016, Dps14, 0x512, 27819, Detonate Mana, 0, 0
+		[300.92] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps3: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000003, Dps3, 0x512, 27819, Detonate Mana, 0, 0
+		[322.78] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps10: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000012, Dps10, 0x512, 27819, Detonate Mana, 0, 0
+		[344.62] SPELL_CAST_SUCCESS: [Kel'Thuzad->Pet1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Pet-0-1-533-1-416-0000000001, Pet1, 0x1112, 27819, Detonate Mana, 0, 0
+		[379.77] SPELL_CAST_SUCCESS: [Kel'Thuzad->Healer1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000004, Healer1, 0x512, 27819, Detonate Mana, 0, 0
+		[401.62] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps7: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000008, Dps7, 0x512, 27819, Detonate Mana, 0, 0
+		[422.26] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps12: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000014, Dps12, 0x512, 27819, Detonate Mana, 0, 0
+	Chains of Kel'Thuzad, time=90.00, type=cd, spellId=28410, triggerDeltas = 288.99, 89.80
+		[288.99] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps4: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000005, Dps4, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+		[378.79] SPELL_AURA_APPLIED: [Kel'Thuzad->Tank1: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000009, Tank1, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+
+Announces:
+	Guardians of Icecrown incoming soon, type=nil, spellId=<none>, triggerDeltas = 332.16
+		[332.16] UNIT_HEALTH: target, 0
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 237.60
+		[237.60] Scheduled at 0.00 by ENCOUNTER_START: 1114, Kel'Thuzad, 186, 40, 0
+	Shadow Fissure on >%s<, type=target, spellId=27810, triggerDeltas = 248.75, 14.54, 17.01, 32.74, 14.57, 10.93, 19.43, 33.94, 10.93, 21.85
+		[248.75] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps14: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000016, Dps14, 0x512, 27810, Shadow Fissure, 0, 0
+			 Triggered 2x, delta times: 248.75, 175.94
+		[263.29] SPELL_CAST_SUCCESS: [Kel'Thuzad->Healer1: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000004, Healer1, 0x512, 27810, Shadow Fissure, 0, 0
+			 Triggered 2x, delta times: 263.29, 64.32
+		[280.30] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps10: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000012, Dps10, 0x512, 27810, Shadow Fissure, 0, 0
+		[313.04] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps5: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 27810, Shadow Fissure, 0, 0
+		[338.54] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps2: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27810, Shadow Fissure, 0, 0
+			 Triggered 2x, delta times: 338.54, 64.30
+		[357.97] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps11: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000013, Dps11, 0x512, 27810, Shadow Fissure, 0, 0
+		[391.91] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps15: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27810, Shadow Fissure, 0, 0
+	Detonate Mana on >%s<, type=target, spellId=27819, triggerDeltas = 258.45, 21.87, 20.60, 21.86, 21.84, 35.16, 21.84, 20.64
+		[258.45] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps5: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		[280.32] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps14: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000016, Dps14, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		[300.92] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps3: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000003, Dps3, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		[322.78] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps10: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000012, Dps10, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		[344.62] SPELL_AURA_APPLIED: [Kel'Thuzad->Pet1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Pet-0-1-533-1-416-0000000001, Pet1, 0x1112, 27819, Detonate Mana, 0, DEBUFF, 0
+		[379.78] SPELL_AURA_APPLIED: [Kel'Thuzad->Healer1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000004, Healer1, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		[401.62] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps7: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000008, Dps7, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		[422.26] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps12: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000014, Dps12, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+	Chains of Kel'Thuzad on >%s<, type=target, spellId=28410, triggerDeltas = 290.89, 89.90
+		[290.89] Scheduled at 289.89 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps5: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+		[380.79] Scheduled at 379.79 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps5: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+
+Special warnings:
+	Kel'Thuzad engages in 10 Seconds, type=nil, spellId=<none>, triggerDeltas = 227.60
+		[227.60] Scheduled at 0.00 by ENCOUNTER_START: 1114, Kel'Thuzad, 186, 40, 0
+	Frost Blast on >%s<, type=target, spellId=27808, triggerDeltas = 290.51, 30.34, 52.17, 36.39
+		[290.51] Scheduled at 290.01 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps15: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[320.85] Scheduled at 320.35 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps13: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000015, Dps13, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[373.02] Scheduled at 372.52 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps1: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000001, Dps1, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[409.41] Scheduled at 408.91 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps2: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/healall
+		[290.51] Scheduled at 290.01 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps15: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[320.85] Scheduled at 320.35 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps13: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000015, Dps13, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[373.02] Scheduled at 372.52 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps1: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000001, Dps1, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		[409.41] Scheduled at 408.91 by SPELL_AURA_APPLIED: [Kel'Thuzad->Dps2: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+	VoicePack/ptwo
+		[237.60] Scheduled at 0.00 by ENCOUNTER_START: 1114, Kel'Thuzad, 186, 40, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 1114, Kel'Thuzad, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 27808 27819 28410, SPELL_AURA_REMOVED 28410, SPELL_CAST_SUCCESS 27810 27819 27808, UNIT_HEALTH mouseover target, UNIT_TARGETABLE_CHANGED boss1 boss2 boss3 boss4 boss5 target focus
+		ScheduleTask: specWarn:Schedule() at 227.60 (+227.60)
+			ShowSpecialWarning: Kel'Thuzad engages in 10 Seconds
+		StartTimer: 237.6, Phase 2
+		ScheduleTask: announce2stage:Schedule() at 237.60 (+237.60)
+			ShowAnnounce: Stage 2
+		ScheduleTask: announce2stage:ScheduleVoice("ptwo") at 237.60 (+237.60)
+			PlaySound: VoicePack/ptwo
+		ScheduleTask: (anonymous function) at 237.60 (+237.60)
+	[248.75] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps14: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000016, Dps14, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps14
+	[258.45] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps5: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[258.45] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps5: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Dps5
+	[263.29] SPELL_CAST_SUCCESS: [Kel'Thuzad->Healer1: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000004, Healer1, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Healer1
+	[280.30] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps10: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000012, Dps10, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps10
+	[280.30] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps14: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000016, Dps14, 0x512, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[280.32] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps14: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000016, Dps14, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Dps14
+	[288.99] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps4: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000005, Dps4, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+		AntiSpam: (nil)
+			Filtered: 2x SPELL_AURA_APPLIED at 289.04, 289.89
+		StartTimer: 60.0, Chains of Kel'Thuzad
+	[289.89] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps5: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+		ScheduleTask: announce28410target:CombinedShow("Dps5") at 290.89 (+1.00)
+			ShowAnnounce: Chains of Kel'Thuzad on Dps4, Dps11, Dps5
+	[290.01] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps15: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27808, Frost Blast, 0, 0
+		StartTimer: 58.2, Frost Blast
+	[290.01] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps15: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 290.51 (+0.50)
+			StartTimer: 3.5, Frost Blast ends
+		ScheduleTask: specWarn27808target:CombinedShow("Dps15") at 290.51 (+0.50)
+			ShowSpecialWarning: Frost Blast on Dps15
+		ScheduleTask: specWarn27808target:ScheduleVoice("healall") at 290.51 (+0.50)
+			PlaySound: VoicePack/healall
+	[300.92] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps3: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000003, Dps3, 0x512, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[300.92] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps3: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000003, Dps3, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Dps3
+	[313.04] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps5: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps5
+	[320.35] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps13: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000015, Dps13, 0x512, 27808, Frost Blast, 0, 0
+		StartTimer: 58.2, Frost Blast
+	[320.35] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps13: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000015, Dps13, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 320.85 (+0.50)
+			StartTimer: 3.5, Frost Blast ends
+		ScheduleTask: specWarn27808target:CombinedShow("Dps13") at 320.85 (+0.50)
+			ShowSpecialWarning: Frost Blast on Dps13
+		ScheduleTask: specWarn27808target:ScheduleVoice("healall") at 320.85 (+0.50)
+			PlaySound: VoicePack/healall
+	[322.78] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps10: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000012, Dps10, 0x512, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[322.78] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps10: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000012, Dps10, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Dps10
+	[327.61] SPELL_CAST_SUCCESS: [Kel'Thuzad->Healer1: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000004, Healer1, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Healer1
+	[332.16] UNIT_HEALTH: target, 0
+		ShowAnnounce: Guardians of Icecrown incoming soon
+	[338.54] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps2: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps2
+	[344.62] SPELL_CAST_SUCCESS: [Kel'Thuzad->Pet1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Pet-0-1-533-1-416-0000000001, Pet1, 0x1112, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[344.62] SPELL_AURA_APPLIED: [Kel'Thuzad->Pet1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Pet-0-1-533-1-416-0000000001, Pet1, 0x1112, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Pet1
+	[357.97] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps11: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000013, Dps11, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps11
+	[372.52] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps11: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000013, Dps11, 0x512, 27808, Frost Blast, 0, 0
+		StartTimer: 58.2, Frost Blast
+	[372.52] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps11: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000013, Dps11, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 373.02 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 372.52
+		ScheduleTask: specWarn27808target:ScheduleVoice("healall") at 373.02 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 372.52
+	[372.52] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps1: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000001, Dps1, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 372.52
+		ScheduleTask: (anonymous function) at 373.02 (+0.50)
+			StartTimer: 3.5, Frost Blast ends
+		ScheduleTask: specWarn27808target:CombinedShow("Dps1") at 373.02 (+0.50)
+			ShowSpecialWarning: Frost Blast on Dps11, Dps1
+		UnscheduleTask: specWarn27808target:ScheduleVoice("healall") scheduled by ScheduleTask at 372.52
+		ScheduleTask: specWarn27808target:ScheduleVoice("healall") at 373.02 (+0.50)
+			PlaySound: VoicePack/healall
+	[378.79] SPELL_AURA_APPLIED: [Kel'Thuzad->Tank1: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000009, Tank1, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+		AntiSpam: (nil)
+			Filtered: 2x SPELL_AURA_APPLIED at 379.19, 379.79
+		StartTimer: 60.0, Chains of Kel'Thuzad
+	[379.77] SPELL_CAST_SUCCESS: [Kel'Thuzad->Healer1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000004, Healer1, 0x512, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[379.78] SPELL_AURA_APPLIED: [Kel'Thuzad->Healer1: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000004, Healer1, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Healer1
+	[379.79] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps5: Chains of Kel'Thuzad] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000006, Dps5, 0x512, 28410, Chains of Kel'Thuzad, 0, DEBUFF, 0
+		ScheduleTask: announce28410target:CombinedShow("Dps5") at 380.79 (+1.00)
+			ShowAnnounce: Chains of Kel'Thuzad on Tank1, Dps4, Dps5
+	[391.91] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps15: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000020, Dps15, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps15
+	[401.62] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps7: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000008, Dps7, 0x512, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[401.62] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps7: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000008, Dps7, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Dps7
+	[402.84] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps2: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps2
+	[408.91] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps2: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27808, Frost Blast, 0, 0
+		StartTimer: 58.2, Frost Blast
+	[408.91] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps2: Frost Blast] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000002, Dps2, 0x512, 27808, Frost Blast, 0, DEBUFF, 0
+		ScheduleTask: (anonymous function) at 409.41 (+0.50)
+			StartTimer: 3.5, Frost Blast ends
+		ScheduleTask: specWarn27808target:CombinedShow("Dps2") at 409.41 (+0.50)
+			ShowSpecialWarning: Frost Blast on Dps2
+		ScheduleTask: specWarn27808target:ScheduleVoice("healall") at 409.41 (+0.50)
+			PlaySound: VoicePack/healall
+	[422.26] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps12: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000014, Dps12, 0x512, 27819, Detonate Mana, 0, 0
+		StartTimer: 20.0, Detonate Mana
+	[422.26] SPELL_AURA_APPLIED: [Kel'Thuzad->Dps12: Detonate Mana] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000014, Dps12, 0x512, 27819, Detonate Mana, 0, DEBUFF, 0
+		ShowAnnounce: Detonate Mana on Dps12
+	[424.69] SPELL_CAST_SUCCESS: [Kel'Thuzad->Dps14: Shadow Fissure] Creature-0-1-533-1-15990-0000000001, Kel'Thuzad, 0xa48, Player-1-00000016, Dps14, 0x512, 27810, Shadow Fissure, 0, 0
+		ShowAnnounce: Shadow Fissure on Dps14
+	[427.81] ENCOUNTER_END: 1114, Kel'Thuzad, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 28410
