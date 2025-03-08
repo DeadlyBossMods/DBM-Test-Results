@@ -1,0 +1,86 @@
+Test: SoD/Party/KarazhanCrypts/Unkomon
+Mod:  DBM-Party-Vanilla/Unkomon
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1221576 (Demonic Frenzy)
+
+Unused objects:
+	None
+
+Timers:
+	None
+
+Announces:
+	Doom - Decurse, type=nil, spellId=<none>, triggerDeltas = 20.55, 30.72, 37.22
+		[ 20.55] SPELL_CAST_SUCCESS: [Unk'omon: Doom] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1221577, Doom, 0, 0
+			 Triggered 3x, delta times: 20.55, 30.72, 37.22
+	Demonic Frenzy on >%s< (%d), type=stack, spellId=1221576, triggerDeltas = 14.06, 6.49, 6.44, 8.10, 16.18, 9.68, 16.18, 11.36, 6.45, 8.09
+		[ 14.06] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 4, 0
+			 Triggered 10x, delta times: 14.06, 6.49, 6.44, 8.10, 16.18, 9.68, 16.18, 11.36, 6.45, 8.09
+
+Special warnings:
+	Shadow Bolt Volley - interrupt >%s<!, type=interrupt, spellId=1220515, triggerDeltas = 14.06, 14.56, 27.49, 16.17, 12.97, 11.33
+		[ 14.06] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+			 Triggered 6x, delta times: 14.06, 14.56, 27.49, 16.17, 12.97, 11.33
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/kickcast
+		[ 14.06] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+			 Triggered 6x, delta times: 14.06, 14.56, 27.49, 16.17, 12.97, 11.33
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3152, Unk'omon, 1, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1221576, SPELL_AURA_APPLIED_DOSE 1221576, SPELL_CAST_SUCCESS 1221577, SPELL_CAST_START 1220515
+	[ 14.06] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 4, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (4)
+	[ 14.06] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+		ShowSpecialWarning: Shadow Bolt Volley - interrupt Unk'omon!
+		PlaySound: VoicePack/kickcast
+	[ 20.55] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 5, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (5)
+	[ 20.55] SPELL_CAST_SUCCESS: [Unk'omon: Doom] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1221577, Doom, 0, 0
+		ShowAnnounce: Doom - Decurse
+	[ 26.99] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 6, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (6)
+	[ 28.62] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+		ShowSpecialWarning: Shadow Bolt Volley - interrupt Unk'omon!
+		PlaySound: VoicePack/kickcast
+	[ 35.09] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 7, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (7)
+	[ 51.27] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 8, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (8)
+	[ 51.27] SPELL_CAST_SUCCESS: [Unk'omon: Doom] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1221577, Doom, 0, 0
+		ShowAnnounce: Doom - Decurse
+	[ 56.11] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+		ShowSpecialWarning: Shadow Bolt Volley - interrupt Unk'omon!
+		PlaySound: VoicePack/kickcast
+	[ 60.95] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 9, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (9)
+	[ 72.28] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+		ShowSpecialWarning: Shadow Bolt Volley - interrupt Unk'omon!
+		PlaySound: VoicePack/kickcast
+	[ 77.13] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 10, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (10)
+	[ 85.25] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+		ShowSpecialWarning: Shadow Bolt Volley - interrupt Unk'omon!
+		PlaySound: VoicePack/kickcast
+	[ 88.49] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 11, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (11)
+	[ 88.49] SPELL_CAST_SUCCESS: [Unk'omon: Doom] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1221577, Doom, 0, 0
+		ShowAnnounce: Doom - Decurse
+	[ 94.94] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 12, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (12)
+	[ 96.58] SPELL_CAST_START: [Unk'omon: Shadow Bolt Volley] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, "", nil, 0x0, 1220515, Shadow Bolt Volley, 0, 0
+		ShowSpecialWarning: Shadow Bolt Volley - interrupt Unk'omon!
+		PlaySound: VoicePack/kickcast
+	[103.03] SPELL_AURA_APPLIED_DOSE: [Unk'omon->Unk'omon: Demonic Frenzy] Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, Creature-0-1-2875-1-238678-0000000003, Unk'omon, 0xa48, 1221576, Demonic Frenzy, 0, DEBUFF, 13, 0
+		ShowAnnounce: Demonic Frenzy on Unk'omon (13)
+	[107.61] ENCOUNTER_END: 3152, Unk'omon, 1, 5, 1, 0
+		EndCombat: ENCOUNTER_END
