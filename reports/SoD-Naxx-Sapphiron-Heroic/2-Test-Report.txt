@@ -28,9 +28,9 @@ Timers:
 			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
 
 Announces:
-	Air phase in 10 seconds, type=nil, spellId=<none>, triggerDeltas = 23.24, 95.29
-		[ 23.24] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
-		[118.53] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+	Air phase in 10 seconds, type=nil, spellId=<none>, triggerDeltas = 13.24, 90.29
+		[ 13.24] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[103.53] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 	Sapphiron landed, type=nil, spellId=<none>, triggerDeltas = 68.93, 92.34
 		[ 68.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 		[161.27] Scheduled at 149.07 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
@@ -75,9 +75,9 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_AURA_APPLIED 28522 28547, SPELL_CAST_START 28524, SPELL_CAST_SUCCESS 28542
-		ScheduleTask: announce:Schedule() at 23.24 (+23.24)
+		ScheduleTask: announce:Schedule() at 13.24 (+13.24)
 			ShowAnnounce: Air phase in 10 seconds
-		StartTimer: 33.2, Air phase
+		StartTimer: 23.2, Air phase
 		StartTimer: 900.0, Berserk
 		ScheduleTask: announce:Schedule(10.0, "min") at 300.00 (+300.00)
 			Unscheduled by ENCOUNTER_END at 162.13
@@ -111,10 +111,10 @@ Event trace:
 		StartTimer: 28.5, Landing
 		UpdateTimer: TimerLanding, 16.3, 28.5
 		ScheduleTask: (anonymous function) at 68.93 (+12.20)
-			ScheduleTask: announce:Schedule() at 118.53 (+49.60)
+			ScheduleTask: announce:Schedule() at 103.53 (+34.60)
 				ShowAnnounce: Air phase in 10 seconds
 			ShowAnnounce: Sapphiron landed
-			StartTimer: 59.6, Air phase
+			StartTimer: 44.6, Air phase
 		ShowSpecialWarning: Frost Breath
 		PlaySound: VoicePack/findshelter
 	[ 70.10] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
@@ -148,10 +148,10 @@ Event trace:
 		StartTimer: 28.5, Landing
 		UpdateTimer: TimerLanding, 16.3, 28.5
 		ScheduleTask: (anonymous function) at 161.27 (+12.20)
-			ScheduleTask: announce:Schedule() at 210.87 (+49.60)
+			ScheduleTask: announce:Schedule() at 195.87 (+34.60)
 				Unscheduled by ENCOUNTER_END at 162.13
 			ShowAnnounce: Sapphiron landed
-			StartTimer: 59.6, Air phase
+			StartTimer: 44.6, Air phase
 		ShowSpecialWarning: Frost Breath
 		PlaySound: VoicePack/findshelter
 	[162.13] ENCOUNTER_END: 1119, Sapphiron, 186, 40, 1, 0
