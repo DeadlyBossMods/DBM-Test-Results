@@ -7,19 +7,19 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1219229 (Overcharged)
 	Unused event registration: SPELL_AURA_APPLIED 1219234 (Overcharged)
 	Unused event registration: SPELL_AURA_APPLIED 1219235 (Overcharged)
+	Unused event registration: SPELL_AURA_REMOVED 1219235 (Overcharged)
 	Unused event registration: SPELL_CAST_SUCCESS 1218210 ((DNT) Force Cast Egg Summon)
 	Unused event registration: SPELL_CAST_SUCCESS 1219108 (Marching Orders)
 	Unused event registration: SPELL_CAST_SUCCESS 1219234 (Overcharged)
 
 Unused objects:
 	[Announce] Eggs spawned, type=nil, spellId=<none>
-	[Announce] Overcharged on >%s<, type=target, spellId=1219234
-	[Special Warning] Overcharged on you, type=you, spellId=1219234
+	[Announce] Overcharged on >%s<, type=target, spellId=1219235
 	[Special Warning] Overcharged - dodge attack, type=dodge, spellId=1219235
+	[Special Warning] Overcharged on you, type=you, spellId=1219235
 	[Timer] Affix, time=31.59, type=cd, spellId=<none>
-	[Timer] Overcharged, time=5.00, type=cast, spellId=1219234
-	[Yell] %d, type=shortfade, spellId=1219234
-	[Yell] Overcharged on PlayerName, type=yell, spellId=1219234
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1219235
+	[Yell] Overcharged on PlayerName, type=yell, spellId=1219235
 
 Timers:
 	None
@@ -69,7 +69,7 @@ Icons:
 
 Event trace:
 	[ 0.00] ADDON_LOADED: DBM-Raids-Vanilla, 0
-		RegisterEvents: Regular, CHAT_MSG_RAID_WARNING, CHAT_MSG_RAID_BOSS_EMOTE, RAID_BOSS_EMOTE, CHAT_MSG_RAID_BOSS_WHISPER, SPELL_AURA_APPLIED 1219234 1219235 1219058 1218198 1219229 1219060, SPELL_CAST_SUCCESS 1218210 1219108 1219234
+		RegisterEvents: Regular, CHAT_MSG_RAID_WARNING, CHAT_MSG_RAID_BOSS_EMOTE, RAID_BOSS_EMOTE, CHAT_MSG_RAID_BOSS_WHISPER, SPELL_AURA_APPLIED 1219234 1219235 1219058 1218198 1219229 1219060, SPELL_AURA_REMOVED 1219235, SPELL_CAST_SUCCESS 1218210 1219108 1219234
 	[ 0.00] SPELL_AURA_APPLIED: [Healer1->Healer1: Marching Orders] Player-1-00000001, Healer1, 0x511, Player-1-00000001, Healer1, 0x511, 1219060, Marching Orders, 0, DEBUFF, 0
 		ScheduleTask: mod:OrderFallback() at 2.00 (+2.00)
 			Unscheduled by ExecuteScheduledTask at 0.30
