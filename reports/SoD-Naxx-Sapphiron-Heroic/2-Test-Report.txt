@@ -2,13 +2,20 @@ Test: SoD/Naxx/Sapphiron/Heroic
 Mod:  DBM-Raids-Vanilla/SapphironVanilla
 
 Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1219729 (Glacial Crash)
+	Unused event registration: SPELL_AURA_APPLIED 1219732 (Glacial Crash)
 	Unused event registration: SPELL_AURA_APPLIED 28547 (Chill)
+	Timer for spell ID 1219729 (Glacial Crash) is triggered by event SPELL_CAST_START 28524 (Frost Breath)
 
 Unused objects:
 	[Announce] Air phase, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Special Warning] %s damage - move away, type=gtfo, spellId=28547
+	[Special Warning] Glacial Crash - soak it, type=soak, spellId=1219729
+	[Special Warning] Glacial Crash on you, type=you, spellId=1219729
+	[Yell] %d, type=shortfade, spellId=1219729
+	[Yell] Glacial Crash on PlayerName, type=yell, spellId=1219729
 
 Timers:
 	Air phase, time=66.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 68.93, 92.34
@@ -20,17 +27,21 @@ Timers:
 	Frost Breath, time=7.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
 		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 			 Triggered 2x, delta times: 56.73, 92.34
-	Landing, time=28.50, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
+	Landing, time=36.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
 		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 			 Triggered 2x, delta times: 56.73, 92.34
 	Life Drain, time=22.00, type=cd, spellId=28542, triggerDeltas = 11.35, 58.75, 22.27, 22.68
 		[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
 			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
+	Glacial Crash, time=30.75, type=next, spellId=1219729, triggerDeltas = 0.00, 56.73, 92.34
+		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
 
 Announces:
-	Air phase in 10 seconds, type=nil, spellId=<none>, triggerDeltas = 23.24, 95.29
-		[ 23.24] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
-		[118.53] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+	Air phase in 10 seconds, type=nil, spellId=<none>, triggerDeltas = 21.00, 103.93
+		[ 21.00] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[124.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 	Sapphiron landed, type=nil, spellId=<none>, triggerDeltas = 68.93, 92.34
 		[ 68.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 		[161.27] Scheduled at 149.07 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
@@ -74,10 +85,11 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_AURA_APPLIED 28522 28547, SPELL_CAST_START 28524, SPELL_CAST_SUCCESS 28542
-		ScheduleTask: announce:Schedule() at 23.24 (+23.24)
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 28522 28547 1219729 1219732, SPELL_CAST_START 28524, SPELL_CAST_SUCCESS 28542
+		ScheduleTask: announce:Schedule() at 21.00 (+21.00)
 			ShowAnnounce: Air phase in 10 seconds
-		StartTimer: 33.2, Air phase
+		StartTimer: 31.0, Air phase
+		ScheduleTask: (anonymous function) at 32.00 (+32.00)
 		StartTimer: 900.0, Berserk
 		ScheduleTask: announce:Schedule(10.0, "min") at 300.00 (+300.00)
 			Unscheduled by ENCOUNTER_END at 162.13
@@ -91,6 +103,7 @@ Event trace:
 			Unscheduled by ENCOUNTER_END at 162.13
 		ScheduleTask: announce:Schedule(10.0, "sec") at 890.00 (+890.00)
 			Unscheduled by ENCOUNTER_END at 162.13
+		StartTimer: 30.7, Glacial Crash
 	[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
 		ShowAnnounce: Life Drain
 		ScheduleTask: announce28542soon:Schedule() at 29.85 (+18.50)
@@ -111,12 +124,14 @@ Event trace:
 		StartTimer: 28.5, Landing
 		UpdateTimer: TimerLanding, 16.3, 28.5
 		ScheduleTask: (anonymous function) at 68.93 (+12.20)
-			ScheduleTask: announce:Schedule() at 118.53 (+49.60)
+			ScheduleTask: announce:Schedule() at 124.93 (+56.00)
 				ShowAnnounce: Air phase in 10 seconds
 			ShowAnnounce: Sapphiron landed
-			StartTimer: 59.6, Air phase
+			StartTimer: 66.0, Air phase
+			ScheduleTask: (anonymous function) at 135.93 (+67.00)
 		ShowSpecialWarning: Frost Breath
 		PlaySound: VoicePack/findshelter
+		StartTimer: 14.9, Glacial Crash
 	[ 70.10] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
 		ShowAnnounce: Life Drain
 		ScheduleTask: announce28542soon:Schedule() at 88.60 (+18.50)
@@ -148,18 +163,22 @@ Event trace:
 		StartTimer: 28.5, Landing
 		UpdateTimer: TimerLanding, 16.3, 28.5
 		ScheduleTask: (anonymous function) at 161.27 (+12.20)
-			ScheduleTask: announce:Schedule() at 210.87 (+49.60)
+			ScheduleTask: announce:Schedule() at 217.27 (+56.00)
 				Unscheduled by ENCOUNTER_END at 162.13
 			ShowAnnounce: Sapphiron landed
-			StartTimer: 59.6, Air phase
+			StartTimer: 66.0, Air phase
+			ScheduleTask: (anonymous function) at 228.27 (+67.00)
+				Unscheduled by ENCOUNTER_END at 162.13
 		ShowSpecialWarning: Frost Breath
 		PlaySound: VoicePack/findshelter
+		StartTimer: 14.9, Glacial Crash
 	[162.13] ENCOUNTER_END: 1119, Sapphiron, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule() scheduled by ScheduleTask at 161.27
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 161.27
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule() scheduled by ScheduleTask at 161.27
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
