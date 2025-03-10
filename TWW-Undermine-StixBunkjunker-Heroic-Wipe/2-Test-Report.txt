@@ -2,7 +2,6 @@ Test: TWW/Undermine/StixBunkjunker/Heroic/Wipe
 Mod:  DBM-Raids-WarWithin/2642
 
 Findings:
-	Unused event registration: SPELL_AURA_APPLIED 1217685 (Messed Up)
 	Unused event registration: SPELL_AURA_APPLIED 1218704 (Prototype Powercoil)
 	Unused event registration: SPELL_AURA_APPLIED 1220648 (Marked For ""Recycling"")
 	Unused event registration: SPELL_AURA_APPLIED 466748 (Infected Bite)
@@ -55,9 +54,6 @@ Timers:
 			 Triggered 6x, delta times: 22.25, 51.11, 72.04, 51.16, 51.05, 51.13
 		[111.14] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
 		[121.16] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
-	Dumpster Dive, time=10.90, type=cdnp, spellId=466742, triggerDeltas = 45.26, 15.86, 10.95, 15.86, 8.52, 0.00, 7.30, 8.55, 3.61, 13.39, 32.83, 1.19, 17.05, 4.86, 13.37, 15.82, 4.88, 0.00, 10.92, 4.86, 0.00, 10.99, 6.15, 1.18, 1.25, 0.46, 10.48, 1.21, 1.25, 1.21, 13.40, 7.26, 8.48, 15.81, 2.44, 1.11, 11.04, 3.64
-		[ 45.26] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000065, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-			 Triggered 38x, delta times: 45.26, 15.86, 10.95, 15.86, 8.52, 0.00, 7.30, 8.55, 3.61, 13.39, 32.83, 1.19, 17.05, 4.86, 13.37, 15.82, 4.88, 0.00, 10.92, 4.86, 0.00, 10.99, 6.15, 1.18, 1.25, 0.46, 10.48, 1.21, 1.25, 1.21, 13.40, 7.26, 8.48, 15.81, 2.44, 1.11, 11.04, 3.64
 	Overdrive ends, time=10.00, type=active, spellId=467117, triggerDeltas = 111.14
 		[111.14] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
 	Overdrive, time=111.10, type=next, spellId=467117, triggerDeltas = 0.00
@@ -239,7 +235,12 @@ Voice pack sounds:
 		[119.17] SPELL_CAST_START: [Stix Bunkjunker: Trash Compactor] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467109, Trash Compactor, 0, 0
 
 Icons:
-	None
+	Icon 2, target=Creature-0-1-2769-1-231839-000000000C, scanMethod=nil
+		[ 53.04] SPELL_AURA_APPLIED: [Scrapmaster->Scrapmaster: Messed Up] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, 1217685, Messed Up, 0, BUFF, 0
+	Icon 2, target=Creature-0-1-2769-1-231839-000000007D, scanMethod=nil
+		[314.78] SPELL_AURA_APPLIED: [Scrapmaster->Scrapmaster: Messed Up] Creature-0-1-2769-1-231839-000000007D, Scrapmaster, 0xa48, Creature-0-1-2769-1-231839-000000007D, Scrapmaster, 0xa48, 1217685, Messed Up, 0, BUFF, 0
+	Icon 4, target=Creature-0-1-2769-1-231839-0000000076, scanMethod=nil
+		[328.11] SPELL_AURA_APPLIED: [Scrapmaster->Scrapmaster: Messed Up] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, 1217685, Messed Up, 0, BUFF, 0
 
 Event trace:
 	[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 21, 0
@@ -290,10 +291,11 @@ Event trace:
 	[ 45.26] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000065, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[ 50.19] SPELL_AURA_APPLIED: [Scrapmaster->Healer3: Scrap Rockets] Creature-0-1-2769-1-231839-0000000065, Scrapmaster, 0xa48, Player-1-00000013, Healer3, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
+	[ 53.04] SPELL_AURA_APPLIED: [Scrapmaster->Scrapmaster: Messed Up] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, 1217685, Messed Up, 0, BUFF, 0
+		ScanForMobs: Creature-0-1-2769-1-231839-000000000C, 2, 2, 1
 	[ 55.05] SPELL_AURA_APPLIED: [Scrapmaster->Healer4: Scrap Rockets] Creature-0-1-2769-1-231839-0000000065, Scrapmaster, 0xa48, Player-1-00000015, Healer4, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
@@ -303,7 +305,6 @@ Event trace:
 	[ 61.12] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000065, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[ 61.14] SPELL_AURA_APPLIED: [Scrapmaster->Dps9: Scrap Rockets] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, Player-1-00000012, Dps9, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
@@ -319,7 +320,6 @@ Event trace:
 	[ 72.07] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[ 73.36] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
 		ShowSpecialWarning: Balls+Adds! (2)
 		PlaySound: VoicePack/specialsoon
@@ -349,7 +349,6 @@ Event trace:
 	[ 87.93] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[ 89.25] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps2: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000002, Dps2, 0x511, 472893, Incineration, 0, DEBUFF, 0
 		ShowSpecialWarning: Incineration on you
 	[ 92.89] SPELL_AURA_APPLIED: [Scrapmaster->Dps8: Scrap Rockets] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, Player-1-00000010, Dps8, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
@@ -361,9 +360,6 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 96.45
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
-	[ 96.45] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000001A, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[100.93] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Dps2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000002, Dps2, 0x511, 464248, Hot Garbage, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_DAMAGE at 101.95
@@ -378,7 +374,6 @@ Event trace:
 	[103.75] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[107.41] SPELL_AURA_APPLIED: [Scrapmaster->Dps7: Scrap Rockets] Creature-0-1-2769-1-231839-000000001A, Scrapmaster, 0xa48, Player-1-00000009, Dps7, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
@@ -399,12 +394,9 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 115.91
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[114.73] SPELL_AURA_APPLIED: [Scrapmaster->Dps9: Scrap Rockets] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, Player-1-00000012, Dps9, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (7)
 		PlaySound: VoicePack/kickcast
-	[115.91] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000001A, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[117.21] SPELL_AURA_APPLIED: [Scrapmaster->Healer3: Scrap Rockets] Creature-0-1-2769-1-231839-0000000068, Scrapmaster, 0xa48, Player-1-00000013, Healer3, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
@@ -422,7 +414,6 @@ Event trace:
 	[129.30] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000068, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[134.24] SPELL_AURA_APPLIED: [Scrapmaster->Healer2: Scrap Rockets] Creature-0-1-2769-1-231839-0000000068, Scrapmaster, 0xa48, Player-1-00000011, Healer2, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (5)
 		PlaySound: VoicePack/kick5r
@@ -468,9 +459,6 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 163.32
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
-	[163.32] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[167.05] SPELL_AURA_APPLIED: [Scrapmaster->Dps2: Scrap Rockets] Creature-0-1-2769-1-231839-000000006C, Scrapmaster, 0xa48, Player-1-00000002, Dps2, 0x511, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
@@ -489,11 +477,9 @@ Event trace:
 	[180.37] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[185.23] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000006C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[185.29] SPELL_AURA_APPLIED: [Scrapmaster->Dps8: Scrap Rockets] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, Player-1-00000010, Dps8, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
@@ -528,7 +514,6 @@ Event trace:
 	[198.60] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[199.64] SPELL_AURA_APPLIED: [Territorial Bombshell->Territorial Bombshell: Short Fuse] Creature-0-1-2769-1-231531-000000003F, Territorial Bombshell, 0xa48, Creature-0-1-2769-1-231531-000000003F, Territorial Bombshell, 0xa48, 473115, Short Fuse, 0, BUFF, 0
 		StartTimer: 30.0, Short Fuse
 	[199.73] SPELL_AURA_APPLIED: [Territorial Bombshell->Territorial Bombshell: Short Fuse] Creature-0-1-2769-1-231531-0000000072, Territorial Bombshell, 0xa48, Creature-0-1-2769-1-231531-0000000072, Territorial Bombshell, 0xa48, 473115, Short Fuse, 0, BUFF, 0
@@ -562,16 +547,12 @@ Event trace:
 	[214.42] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[218.75] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
 		StartTimer: 51.1, Meltdown (5)
 	[219.30] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000071, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 219.3
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
-	[219.30] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000003D, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[219.35] SPELL_AURA_APPLIED: [Scrapmaster->Dps2: Scrap Rockets] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, Player-1-00000002, Dps2, 0x511, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (6)
 		PlaySound: VoicePack/kickcast
@@ -584,7 +565,6 @@ Event trace:
 	[230.22] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[233.30] SPELL_AURA_APPLIED: [[DNT] Trash Pile->Dps2: Garbage Pile] Creature-0-1-2769-1-230350-00000000DD, [DNT] Trash Pile, 0xa48, Player-1-00000002, Dps2, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_MISSED at 234.27
@@ -594,9 +574,6 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 235.08
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
-	[235.08] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000003D, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[235.16] SPELL_AURA_APPLIED: [Scrapmaster->Dps14: Scrap Rockets] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, Player-1-00000021, Dps14, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (7)
 		PlaySound: VoicePack/kickcast
@@ -617,7 +594,6 @@ Event trace:
 	[246.07] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000002C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[247.30] SPELL_AURA_APPLIED: [Scrapmaster->Dps1: Scrap Rockets] Creature-0-1-2769-1-231839-0000000071, Scrapmaster, 0xa48, Player-1-00000001, Dps1, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (4)
 		PlaySound: VoicePack/kick4r
@@ -645,13 +621,6 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 3x SPELL_CAST_START at 253.4, 254.65, 255.11
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
-	[253.40] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000003D, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
-	[254.65] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000004C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
-	[255.11] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[256.58] SPELL_AURA_APPLIED: [[DNT] Trash Pile->Dps2: Garbage Pile] Vehicle-0-1-2769-1-230855-00000000AD, [DNT] Trash Pile, 0xa48, Player-1-00000002, Dps2, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Garbage Pile damage - move away
@@ -676,18 +645,11 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 3x SPELL_CAST_START at 266.8, 268.05, 269.26
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
-	[266.80] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
-	[268.05] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000071, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[268.13] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Dps2: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000002, Dps2, 0x511, 464248, Hot Garbage, 0, 0
 		AntiSpam: 3
 			Filtered: 1x SPELL_PERIODIC_DAMAGE at 269.14
 		ShowSpecialWarning: Hot Garbage damage - move away
 		PlaySound: VoicePack/watchfeet
-	[269.26] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000003D, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[269.90] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
 		StartTimer: 51.1, Meltdown (6)
 	[270.54] SPELL_AURA_APPLIED: [Scrapmaster->Dps12: Scrap Rockets] Creature-0-1-2769-1-231839-000000004C, Scrapmaster, 0xa48, Player-1-00000018, Dps12, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
@@ -708,7 +670,6 @@ Event trace:
 	[282.66] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[287.56] SPELL_AURA_APPLIED: [Scrapmaster->Dps6: Scrap Rockets] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, Player-1-00000008, Dps6, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
@@ -719,7 +680,6 @@ Event trace:
 	[289.92] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000004C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[294.30] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
 		StartTimer: 51.1, Demolish (7)
 	[294.82] SPELL_AURA_APPLIED: [Scrapmaster->Dps11: Scrap Rockets] Creature-0-1-2769-1-231839-000000004C, Scrapmaster, 0xa48, Player-1-00000017, Dps11, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
@@ -728,7 +688,6 @@ Event trace:
 	[298.40] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[298.74] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
 		ShowSpecialWarning: Balls+Adds! (6)
 		PlaySound: VoicePack/specialsoon
@@ -778,9 +737,8 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 2x SPELL_CAST_START at 316.65, 317.76
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
-	[316.65] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
+	[314.78] SPELL_AURA_APPLIED: [Scrapmaster->Scrapmaster: Messed Up] Creature-0-1-2769-1-231839-000000007D, Scrapmaster, 0xa48, Creature-0-1-2769-1-231839-000000007D, Scrapmaster, 0xa48, 1217685, Messed Up, 0, BUFF, 0
+		ScanForMobs: Creature-0-1-2769-1-231839-000000007D, 2, 2, 1
 	[316.68] SPELL_AURA_APPLIED: [Scrapmaster->Healer3: Scrap Rockets] Creature-0-1-2769-1-231839-000000007D, Scrapmaster, 0xa48, Player-1-00000013, Healer3, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
@@ -790,8 +748,6 @@ Event trace:
 			Filtered: 2x SPELL_PERIODIC_DAMAGE at 317.49, 317.58
 		ShowSpecialWarning: Hot Garbage damage - move away
 		PlaySound: VoicePack/watchfeet
-	[317.76] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000005F, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[319.10] SPELL_AURA_APPLIED: [Scrapmaster->Dps10: Scrap Rockets] Creature-0-1-2769-1-231839-000000007D, Scrapmaster, 0xa48, Player-1-00000014, Dps10, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
@@ -824,16 +780,15 @@ Event trace:
 	[327.58] SPELL_AURA_APPLIED: [Scrapmaster->Dps12: Scrap Rockets] Creature-0-1-2769-1-231839-000000007D, Scrapmaster, 0xa48, Player-1-00000018, Dps12, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (6)
 		PlaySound: VoicePack/kickcast
+	[328.11] SPELL_AURA_APPLIED: [Scrapmaster->Scrapmaster: Messed Up] Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, Creature-0-1-2769-1-231839-0000000076, Scrapmaster, 0xa48, 1217685, Messed Up, 0, BUFF, 0
+		ScanForMobs: Creature-0-1-2769-1-231839-0000000076, 2, 4, 1
 	[328.80] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000004C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 332.44
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
-		StartTimer: 10.9, Dumpster Dive
 	[328.80] SPELL_AURA_APPLIED: [Scrapmaster->Dps9: Scrap Rockets] Creature-0-1-2769-1-231839-000000005F, Scrapmaster, 0xa48, Player-1-00000012, Dps9, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (3)
 		PlaySound: VoicePack/kick3r
-	[332.44] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000005F, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-		StartTimer: 10.9, Dumpster Dive
 	[334.50] ENCOUNTER_END: 3012, Stix Bunkjunker, 15, 21, 0, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
