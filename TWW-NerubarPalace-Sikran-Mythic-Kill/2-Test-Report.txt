@@ -7,6 +7,7 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 439191 (Decimate)
 	Unused event registration: SPELL_AURA_APPLIED 459785 (Cosmic Residue)
 	Unused event registration: SPELL_AURA_REMOVED 439191 (Decimate)
+	Unused event registration: SPELL_AURA_REMOVED 459273 (Cosmic Shards)
 	Unused event registration: SPELL_CAST_START 435401 (Expose)
 	Unused event registration: SPELL_CAST_START 435403 (Phase Lunge)
 	Unused event registration: SPELL_CAST_START 453258 (Rain of Arrows)
@@ -62,8 +63,6 @@ Timers:
 			 Triggered 9x, delta times: 53.83, 26.76, 38.05, 34.16, 26.94, 62.52, 9.04, 27.99, 34.63
 		[ 53.84] SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 2, 0
 			 Triggered 30x, delta times: 53.84, 0.06, 0.00, 0.10, 0.01, 0.06, 26.61, 0.02, 0.00, 0.19, 37.76, 34.15, 0.01, 0.07, 0.00, 0.07, 0.07, 26.77, 0.07, 0.06, 62.35, 9.13, 0.00, 0.05, 27.84, 0.06, 0.01, 0.11, 0.04, 34.43
-		[ 60.06] SPELL_AURA_REMOVED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
-			 Triggered 5x, delta times: 60.06, 64.57, 34.36, 26.90, 71.54
 
 Announces:
 	Charge incoming debuff (%s), type=incomingcount, spellId=433517, triggerDeltas = 12.37, 28.11, 28.00, 43.61, 27.89, 27.68, 40.29, 27.92, 27.97, 43.77, 27.94
@@ -178,8 +177,6 @@ Event trace:
 		StartTimer: 6.0, Cosmic Shards fades
 	[ 57.51] SPELL_CAST_START: [Sikran: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 432965, Expose, 0, 0
 		StartTimer: 25.1, Tank Combo (4)
-	[ 60.06] SPELL_AURA_REMOVED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
-		StopTimer: Timer459273fades
 	[ 64.39] SPELL_CAST_SUCCESS: [Sikran: Rain of Arrows] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 439559, Rain of Arrows, 0, 0
 		ShowSpecialWarning: Rain of Arrows (2) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -247,8 +244,6 @@ Event trace:
 			ShowAnnounce: Cosmic Shards (2)
 		StopTimer: Timer459273fades
 		StartTimer: 6.0, Cosmic Shards fades
-	[124.63] SPELL_AURA_REMOVED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-00000000A1, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
-		StopTimer: Timer459273fades
 	[129.23] SPELL_CAST_START: [Sikran: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 432965, Expose, 0, 0
 		StartTimer: 26.4, Tank Combo (7)
 	[131.50] SPELL_AURA_APPLIED_DOSE: [Sikran->Tank1: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, Player-1-00000020, Tank1, 0x512, 438845, Expose, 0, DEBUFF, 2, 0
@@ -307,8 +302,6 @@ Event trace:
 		StartTimer: 6.0, Cosmic Shards fades
 	[155.68] SPELL_CAST_START: [Sikran: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 432965, Expose, 0, 0
 		StartTimer: 26.4, Tank Combo (8)
-	[158.99] SPELL_AURA_REMOVED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000049, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
-		StopTimer: Timer459273fades
 	[167.41] SPELL_CAST_SUCCESS: [Sikran: Rain of Arrows] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 439559, Rain of Arrows, 0, 0
 		ShowSpecialWarning: Rain of Arrows (5) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -341,8 +334,6 @@ Event trace:
 		StartTimer: 6.0, Cosmic Shards fades
 	[184.70] SPELL_AURA_APPLIED_DOSE: [Sikran->Tank1: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, Player-1-00000020, Tank1, 0x512, 438845, Expose, 0, DEBUFF, 2, 0
 		AntiSpam: 1
-	[185.89] SPELL_AURA_REMOVED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-00000000AB, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
-		StopTimer: Timer459273fades
 	[188.48] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
 		ShowSpecialWarning: Sweep - run away (2)
 		PlaySound: VoicePack/justrun
@@ -412,8 +403,6 @@ Event trace:
 		StartTimer: 6.0, Cosmic Shards fades
 	[254.10] SPELL_CAST_START: [Sikran: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 432965, Expose, 0, 0
 		StartTimer: 26.4, Tank Combo (12)
-	[257.43] SPELL_AURA_REMOVED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-000000006E, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
-		StopTimer: Timer459273fades
 	[263.84] SPELL_CAST_SUCCESS: [Sikran: Phase Blades] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 433475, Phase Blades, 0, 0
 		AntiSpam: 2
 		ShowAnnounce: Charge incoming debuff (9)
