@@ -32,6 +32,8 @@ Unused objects:
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=461536
 
 Timers:
+	Berserk, time=385.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
 	Demolish (%s), time=51.10, type=nextcount, spellId=464112, triggerDeltas = 0.00, 17.77, 47.81, 20.53, 51.10, 51.10, 51.13, 51.11
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
 		[ 17.77] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
@@ -68,6 +70,10 @@ Timers:
 			 Triggered 18x, delta times: 29.74, 0.14, 68.19, 0.11, 0.09, 0.12, 50.81, 0.07, 0.13, 0.11, 50.83, 0.09, 0.10, 0.12, 50.83, 0.12, 0.09, 0.11
 
 Announces:
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 85.00
+		[ 85.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 205.00
+		[205.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
 	Sorted on >%s<, type=target, spellId=465346, triggerDeltas = 23.74, 68.33, 51.11, 51.12, 51.11
 		[ 23.74] Scheduled at 23.24 by SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps8: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000014, Dps8, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		[ 92.07] Scheduled at 91.57 by SPELL_AURA_APPLIED: [Stix Bunkjunker->Healer1: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000004, Healer1, 0x512, 465346, Sorted, 0, DEBUFF, 0
@@ -268,6 +274,17 @@ Event trace:
 		StartTimer: 22.2, Balls+Adds (1)
 		StartTimer: 44.4, Meltdown (1)
 		StartTimer: 55.6, Overdrive
+		StartTimer: 385.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 85.00 (+85.00)
+			ShowAnnounce: Berserk in 5 min
+		ScheduleTask: announce:Schedule(3.0, "min") at 205.00 (+205.00)
+			ShowAnnounce: Berserk in 3 min
+		ScheduleTask: announce:Schedule(1.0, "min") at 325.00 (+325.00)
+			Unscheduled by ENCOUNTER_END at 293.65
+		ScheduleTask: announce:Schedule(30.0, "sec") at 355.00 (+355.00)
+			Unscheduled by ENCOUNTER_END at 293.65
+		ScheduleTask: announce:Schedule(10.0, "sec") at 375.00 (+375.00)
+			Unscheduled by ENCOUNTER_END at 293.65
 	[ 11.13] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
 		ShowSpecialWarning: Incinerator (1) - move away from others
 		PlaySound: VoicePack/scatter
@@ -797,5 +814,8 @@ Event trace:
 		StartTimer: 51.1, Demolish (7)
 	[293.65] ENCOUNTER_END: 3012, Stix Bunkjunker, 16, 20, 0, 0
 		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117
