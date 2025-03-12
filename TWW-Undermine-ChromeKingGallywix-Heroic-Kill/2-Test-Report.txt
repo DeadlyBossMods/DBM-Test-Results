@@ -105,15 +105,19 @@ Timers:
 			 Triggered 18x, delta times: 24.37, 1.02, 34.32, 0.99, 34.50, 1.02, 86.60, 0.98, 138.43, 0.94, 35.04, 1.02, 60.82, 1.00, 61.67, 1.00, 33.93, 1.00
 		[ 26.44] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000000F, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 			 Triggered 10x, delta times: 26.44, 38.08, 36.80, 84.64, 137.47, 35.94, 61.57, 2.95, 59.43, 2.28
-	Scatterblast Canisters (%s), time=97.30, type=cdcount, spellId=466340, triggerDeltas = 0.00
+	Scatterblast Canisters (%s), time=97.30, type=cdcount, spellId=466340, triggerDeltas = 0.00, 6.33, 17.06, 18.31, 18.86, 16.59
 		[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 15, 30, 0
-	Fused Canisters (%s), time=97.30, type=cdcount, spellId=466341, triggerDeltas = 141.84, 77.72
+		[  6.33] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
+			 Triggered 5x, delta times: 6.33, 17.06, 18.31, 18.86, 16.59
+	Fused Canisters (%s), time=97.30, type=cdcount, spellId=466341, triggerDeltas = 141.84, 10.11, 67.61
 		[141.84] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 2x, delta times: 141.84, 77.72
-	Tick-Tock Canisters (%s), time=97.30, type=cdcount, spellId=466342, triggerDeltas = 307.64, 74.06, 75.83
+		[151.95] SPELL_CAST_START: [Chrome King Gallywix: Fused Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466341, Fused Canisters, 0, 0
+	Tick-Tock Canisters (%s), time=97.30, type=cdcount, spellId=466342, triggerDeltas = 307.64, 74.06, 7.78, 68.05
 		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
 		[381.70] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 2x, delta times: 381.70, 75.83
+		[389.48] SPELL_CAST_START: [Chrome King Gallywix: Tick-Tock Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466342, Tick-Tock Canisters, 0, 0
 	Venting Heat (%s), time=97.30, type=cdcount, spellId=466751, triggerDeltas = 0.00, 12.36, 25.79, 28.44, 75.25, 77.72, 88.08, 74.06, 12.78, 63.05
 		[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 15, 30, 0
 		[ 12.36] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
@@ -299,6 +303,7 @@ Event trace:
 	[  6.33] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (1)
 		PlaySound: VoicePack/shareone
+		StartTimer: 17.0, Scatterblast Canisters (2)
 	[ 12.36] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
 		ShowAnnounce: Venting Heat (1)
 		StartTimer: 25.8, Venting Heat (2)
@@ -309,6 +314,7 @@ Event trace:
 	[ 23.39] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (2)
 		PlaySound: VoicePack/sharetwo
+		StartTimer: 18.3, Scatterblast Canisters (3)
 	[ 24.37] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000000F, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
 	[ 25.39] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000010, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
@@ -331,6 +337,7 @@ Event trace:
 	[ 41.70] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (3)
 		PlaySound: VoicePack/shareone
+		StartTimer: 18.9, Scatterblast Canisters (4)
 	[ 53.32] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 512, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Big Bad Buncha Bombs! (2)
 		PlaySound: VoicePack/bombsoon
@@ -340,6 +347,7 @@ Event trace:
 	[ 60.56] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (4)
 		PlaySound: VoicePack/sharetwo
+		StartTimer: 16.5, Scatterblast Canisters (5)
 	[ 60.70] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000026, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
 	[ 64.52] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000025, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
@@ -360,6 +368,7 @@ Event trace:
 	[ 77.15] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (5)
 		PlaySound: VoicePack/shareone
+		StartTimer: 20.5, Scatterblast Canisters (6)
 	[ 88.87] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 518, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Big Bad Buncha Bombs! (3)
 		PlaySound: VoicePack/bombsoon
@@ -445,6 +454,7 @@ Event trace:
 		StartTimer: 7.3, Wrench
 	[151.95] SPELL_CAST_START: [Chrome King Gallywix: Fused Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466341, Fused Canisters, 0, 0
 		ShowAnnounce: Fused Canisters incoming debuff (1)
+		StartTimer: 32.8, Fused Canisters (2)
 	[156.61] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-0000000053, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
 		StartTimer: 7.3, Wrench
 	[157.20] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-0000000054, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
@@ -627,6 +637,7 @@ Event trace:
 	[389.48] SPELL_CAST_START: [Chrome King Gallywix: Tick-Tock Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466342, Tick-Tock Canisters, 0, 0
 		ShowSpecialWarning: Tick-Tock Canisters - soak (2)
 		PlaySound: VoicePack/helpsoak
+		StartTimer: 35.0, Tick-Tock Canisters (3)
 	[394.48] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
 		ShowAnnounce: Venting Heat (2)
 		StartTimer: 37.0, Venting Heat (3)
