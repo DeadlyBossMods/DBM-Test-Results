@@ -26,12 +26,6 @@ Findings:
 	Announce for spell ID 468207 (Incendiary Fire) is triggered by event SPELL_CAST_START 468487 (Incendiary Fire)
 	Timer for spell ID 468207 (Incendiary Fire) is triggered by event SPELL_AURA_REMOVED 460116 (Tune-Up)
 	Timer for spell ID 468207 (Incendiary Fire) is triggered by event SPELL_CAST_START 468487 (Incendiary Fire)
-	Timer Spew Oil (%s), time=97.30, type=cdcount, spellId=459678 (time=38.60, variance=1.50) got refreshed early with 16.67s remaining
-		Refreshed by: [ 34.21] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
-	Timer Spew Oil (%s), time=97.30, type=cdcount, spellId=459678 (time=38.60, variance=1.50) got refreshed early with 17.87s remaining
-		Refreshed by: [ 54.95] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
-	Timer Spew Oil (%s), time=97.30, type=cdcount, spellId=459678 (time=38.60, variance=1.50) got refreshed early with 17.87s remaining
-		Refreshed by: [ 75.70] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 
 Unused objects:
 	[Announce] Casting Blaze of Glory: -nan sec, type=cast, spellId=466040
@@ -194,9 +188,9 @@ Event trace:
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 471403 459943 466040 466042 459671 468216 468487 459974 459627 460603 460173, SPELL_AURA_APPLIED 466615 471500 1216788 466368 465865 460116 468216, SPELL_AURA_REMOVED 466615 471500 460116 468216, SPELL_PERIODIC_DAMAGE 459683, SPELL_PERIODIC_MISSED 459683, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 6.0, Tank Buster (1)
-		StartTimer: 12.2, Spew Oil (1)
+		StartTimer: 12.0, Spew Oil (1)
 		StartTimer: 20.2, Call Bikers (1)
-		StartTimer: 30.6, Incendiary Fire (1)
+		StartTimer: 30.2, Incendiary Fire (1)
 	[  2.35] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-0000000150, 464841, The Geargrinder, 99.8, 1, Tank3, 0
 		ShowSpecialWarning: Bomb Voyage! (1) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -210,7 +204,7 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 	[ 12.29] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (1)
-		StartTimer: 38.6, Spew Oil (2)
+		StartTimer: 23.2, Spew Oil (2)
 	[ 14.35] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000001F0, 464841, The Geargrinder, 94.5, 11, Tank3, 0
 		ShowSpecialWarning: Bomb Voyage! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -237,7 +231,7 @@ Event trace:
 		StartTimer: 36.5, Incendiary Fire (2)
 	[ 34.21] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (2)
-		StartTimer: 38.6, Spew Oil (3)
+		StartTimer: 23.2, Spew Oil (3)
 	[ 34.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000001AE, 464841, The Geargrinder, 85.5, 28, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (9) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -264,7 +258,7 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 	[ 54.95] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (3)
-		StartTimer: 38.6, Spew Oil (4)
+		StartTimer: 23.2, Spew Oil (4)
 	[ 58.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000001DA, 464841, The Geargrinder, 75.6, 48, Tank3, 0
 		ShowSpecialWarning: Bomb Voyage! (15) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -287,7 +281,7 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 	[ 75.70] SPELL_CAST_START: [The Geargrinder: Spew Oil] Vehicle-0-1-2769-1-225821-0000000001, The Geargrinder, 0xa48, "", nil, 0x0, 459671, Spew Oil, 0, 0
 		ShowAnnounce: Spew Oil incoming debuff (4)
-		StartTimer: 38.6, Spew Oil (5)
+		StartTimer: 23.2, Spew Oil (5)
 	[ 78.35] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-464841-00000001A3, 464841, The Geargrinder, 69.7, 65, Tank2, 0
 		ShowSpecialWarning: Bomb Voyage! (20) - dodge attack
 		PlaySound: VoicePack/watchstep
