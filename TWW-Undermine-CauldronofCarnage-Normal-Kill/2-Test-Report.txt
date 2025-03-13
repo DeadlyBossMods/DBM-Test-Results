@@ -2,6 +2,7 @@ Test: TWW/Undermine/CauldronofCarnage/Normal/Kill
 Mod:  DBM-Raids-WarWithin/2640
 
 Findings:
+	Unused event registration: RAID_BOSS_WHISPER
 	Unused event registration: SPELL_AURA_APPLIED 1213690 (Molten Phlegm)
 	Unused event registration: SPELL_AURA_APPLIED 1214009 (Voltaic Image)
 	Unused event registration: SPELL_AURA_APPLIED 1221826 (Tiny Tussle)
@@ -9,13 +10,11 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 471660 (Raised Guard)
 	Unused event registration: SPELL_AURA_APPLIED 472222 (Blistering Spite)
 	Unused event registration: SPELL_AURA_APPLIED 472225 (Galvanized Spite)
-	Unused event registration: SPELL_AURA_APPLIED 472231 (Blastburn Roarcannon)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1221826 (Tiny Tussle)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 471557 (King of Carnage)
 	Unused event registration: SPELL_AURA_REMOVED 1213690 (Molten Phlegm)
 	Unused event registration: SPELL_AURA_REMOVED 1214009 (Voltaic Image)
 	Unused event registration: SPELL_AURA_REMOVED 471660 (Raised Guard)
-	Unused event registration: SPELL_AURA_REMOVED 472231 (Blastburn Roarcannon)
 	Unused event registration: SPELL_CAST_START 473994 (Static Charge)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1214039 (Molten Pool)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 463925 (Lingering Electricity)
@@ -124,7 +123,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 473650 472233 1214190 473994 466178, SPELL_CAST_SUCCESS 463900, SPELL_AURA_APPLIED 472222 472225 471660 471557 1213690 472231 1214009 1221826, SPELL_AURA_APPLIED_DOSE 472222 472225 471557 1221826, SPELL_AURA_REMOVED 471660 1213690 472231 1214009 465863 465872, SPELL_PERIODIC_DAMAGE 1214039 463925, SPELL_PERIODIC_MISSED 1214039 463925, UNIT_DIED, UNIT_POWER_UPDATE player, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 473650 472233 1214190 473994 466178, SPELL_CAST_SUCCESS 463900, SPELL_AURA_APPLIED 472222 472225 471660 471557 1213690 1214009 1221826, SPELL_AURA_APPLIED_DOSE 472222 472225 471557 1221826, SPELL_AURA_REMOVED 471660 1213690 1214009 465863 465872, SPELL_PERIODIC_DAMAGE 1214039 463925, SPELL_PERIODIC_MISSED 1214039 463925, UNIT_DIED, RAID_BOSS_WHISPER, UNIT_POWER_UPDATE player, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 71.6, Colossal Clash (1)
 		StartTimer: 10.0, Bomb (1)
 		StartTimer: 16.0, Beam (1)
@@ -343,4 +342,4 @@ Event trace:
 		EndCombat: ENCOUNTER_END
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 198.00
 	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 471660 1213690 472231 1214009 465863 465872
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 471660 1213690 1214009 465863 465872
