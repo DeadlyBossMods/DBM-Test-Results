@@ -209,13 +209,13 @@ Event trace:
 		RegisterEvents: Regular, SPELL_CAST_START 461060 464806 464801 464804 472178 464772 464809 464810 460582 471930 472197 460181 469993 460472 465432 465322 465580 465587 465761 464776, SPELL_CAST_SUCCESS 465765, SPELL_AURA_APPLIED 461060 471720 472832 472837 472828 472783 465009 460973 473278 471927 460430 460472 473195 460444 461068, SPELL_AURA_REFRESH 473195, SPELL_AURA_REMOVED 461060 471720 465009 460973 473278 471927, SPELL_PERIODIC_DAMAGE 460576, SPELL_PERIODIC_MISSED 460576, UNIT_DIED
 		StartTimer: 4.1, Pay-Line (1)
 		StartTimer: 10.0, Foul Exhaust (1)
-		StartTimer: 15.3, The Big Hit (1)
+		StartTimer: 15.6, The Big Hit (1)
 		StartTimer: 20.6, Spin To Win! (1)
 	[  8.64] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (1)
-		StartTimer: 31.8, Foul Exhaust (2)
+		StartTimer: 32.9, Foul Exhaust (2)
 	[ 14.34] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 24.4, The Big Hit (2)
+		StartTimer: 32.9, The Big Hit (2)
 	[ 18.03] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (1)
 		PlaySound: VoicePack/phasechange
@@ -252,14 +252,15 @@ Event trace:
 		StopTimer: Timer461060active
 	[ 44.43] SPELL_CAST_START: [One-Armed Bandit: Reward: Flame and Coin] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464806, Reward: Flame and Coin, 0, 0
 		ShowAnnounce: Reward: Flame and Coin (1)
-		StartTimer: 12.7, The Big Hit (2)
+		StopTimer: Timer460472varcount\t2
+		StartTimer: 13.1, The Big Hit (2)
 		StartTimer: 18.9, Foul Exhaust (2)
-		StartTimer: 25.0, Pay-Line (1)
+		StartTimer: 25.2, Pay-Line (1)
 	[ 57.21] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 24.4, The Big Hit (3)
+		StartTimer: 32.9, The Big Hit (3)
 	[ 63.31] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (2)
-		StartTimer: 31.8, Foul Exhaust (3)
+		StartTimer: 32.9, Foul Exhaust (3)
 	[ 69.40] SPELL_CAST_START: [One-Armed Bandit: Pay-Line] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460181, Pay-Line, 0, 0
 		ShowSpecialWarning: Pay-Line! (1)
 		PlaySound: VoicePack/specialsoon
@@ -272,12 +273,12 @@ Event trace:
 		ScheduleTask: announce460430target:CombinedShow("Healer4") at 76.21 (+1.00)
 			ShowAnnounce: Crushed! on Healer4
 	[ 76.72] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 24.4, The Big Hit (4)
+		StartTimer: 32.9, The Big Hit (4)
 	[ 94.99] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (3)
-		StartTimer: 31.8, Foul Exhaust (4)
+		StartTimer: 32.9, Foul Exhaust (4)
 	[101.12] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 24.4, The Big Hit (5)
+		StartTimer: 32.9, The Big Hit (5)
 	[104.76] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
 		ShowSpecialWarning: Spin To Win!! (2)
 		PlaySound: VoicePack/phasechange
@@ -309,6 +310,8 @@ Event trace:
 		StopTimer: Timer461060active
 	[127.25] SPELL_CAST_START: [One-Armed Bandit: Reward: Coin and Bomb] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 464810, Reward: Coin and Bomb, 0, 0
 		ShowAnnounce: Reward: Coin and Bomb (2)
+		StopTimer: Timer469993varcount\t4
+		StopTimer: Timer460472varcount\t5
 		StartTimer: 10.7, Foul Exhaust (4)
 		StartTimer: 16.7, The Big Hit (5)
 		StartTimer: 22.6, Pay-Line (2)
@@ -317,9 +320,9 @@ Event trace:
 			ShowAnnounce: Explosive Gaze on Dps17, Dps1, Dps4, Dps5, Healer2, Healer8
 	[137.70] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (4)
-		StartTimer: 31.8, Foul Exhaust (5)
+		StartTimer: 32.9, Foul Exhaust (5)
 	[143.83] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 24.4, The Big Hit (6)
+		StartTimer: 32.9, The Big Hit (6)
 	[146.84] SPELL_AURA_APPLIED: [Premium Dynamite Booty->Dps13: Explosive Gaze] Creature-0-1-2769-1-231027-0000000086, Premium Dynamite Booty, 0xa48, Player-1-00000022, Dps13, 0x512, 465009, Explosive Gaze, 0, DEBUFF, 0
 		ScheduleTask: announce465009target:CombinedShow("Dps13") at 147.14 (+0.30)
 			ShowAnnounce: Explosive Gaze on Healer7, Dps4, Dps13
@@ -334,12 +337,12 @@ Event trace:
 		ScheduleTask: announce460430target:CombinedShow("Dps7") at 156.21 (+1.00)
 			ShowAnnounce: Crushed! on Dps7
 	[163.28] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 24.4, The Big Hit (7)
+		StartTimer: 32.9, The Big Hit (7)
 	[169.37] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (5)
-		StartTimer: 31.8, Foul Exhaust (6)
+		StartTimer: 32.9, Foul Exhaust (6)
 	[182.78] SPELL_CAST_START: [One-Armed Bandit: The Big Hit] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 460472, The Big Hit, 0, 0
-		StartTimer: 24.4, The Big Hit (8)
+		StartTimer: 32.9, The Big Hit (8)
 	[187.54] SPELL_CAST_SUCCESS: [One-Armed Bandit: Maintenance Cycle] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465765, Maintenance Cycle, 0, 0
 		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
@@ -362,7 +365,7 @@ Event trace:
 		StartTimer: 6.8, Knockback
 		StartTimer: 4.6, Foul Exhaust (1)
 		StartTimer: 10.7, Pay-Line (1)
-		StartTimer: 15.5, The Big Hit (1)
+		StartTimer: 15.6, The Big Hit (1)
 		StartTimer: 29.9, Hot Hot Heat (2)
 	[204.71] SPELL_CAST_START: [One-Armed Bandit: Foul Exhaust] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 469993, Foul Exhaust, 0, 0
 		ShowAnnounce: Foul Exhaust (1)
@@ -383,8 +386,8 @@ Event trace:
 		ShowAnnounce: Cheat to Win! (2/4 Debuffs)
 		ShowSpecialWarning: Hot Hot Heat - dodge attack
 		PlaySound: VoicePack/farfromline
-		StartTimer: 4.4, Foul Exhaust (3)
-		StartTimer: 10.3, The Big Hit (2)
+		StartTimer: 36.5, Foul Exhaust (V3.3-4.4)
+		StartTimer: 10.7, The Big Hit (2)
 		StartTimer: 18.0, Pay-Line (2)
 		StartTimer: 29.9, Scattered Payout (3)
 	[242.56] SPELL_PERIODIC_MISSED: [One-Armed Bandit->Tank1: Shocking Field] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, Player-1-00000016, Tank1, 0x511, 460576, Shocking Field, 0, 0
