@@ -1,0 +1,425 @@
+Test: SoD/Naxx/Horsemen/Heroic
+Mod:  DBM-Raids-Vanilla/HorsemenVanilla
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 28832 (Mark of Korth'azz)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 28833 (Mark of Blaumeux)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 28834 (Mark of Mograine)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 28835 (Mark of Zeliek)
+	Unused event registration: SPELL_CAST_SUCCESS 28832 (Mark of Korth'azz)
+	Unused event registration: SPELL_CAST_SUCCESS 28833 (Mark of Blaumeux)
+	Unused event registration: SPELL_CAST_SUCCESS 28834 (Mark of Mograine)
+	Unused event registration: SPELL_CAST_SUCCESS 28835 (Mark of Zeliek)
+	Timer Meteor, time=14.60, type=var, spellId=28884 (time=14.60, variance=1.70) got refreshed early with 3.30s remaining
+		Refreshed by: [ 45.29] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+	Timer Void Zone, time=16.00, type=var, spellId=28863 (time=16.00, variance=3.10) got refreshed early with 4.67s remaining
+		Refreshed by: [ 56.63] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+	Timer Void Zone, time=16.00, type=var, spellId=28863 (time=16.00, variance=3.10) got refreshed early with 4.67s remaining
+		Refreshed by: [ 67.96] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer2: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000017, Healer2, 0x512, 28863, Void Zone, 0, 0
+
+Unused objects:
+	[Special Warning] %s: %s, type=nil, spellId=<none>
+
+Timers:
+	Mark %d, time=13.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 21.02, 12.95, 12.93, 12.97, 12.95, 12.97, 12.97, 12.94, 13.01, 11.31, 14.58, 12.94, 12.93, 13.00, 12.96, 12.96, 12.96, 12.94, 12.92
+		[  0.00] ENCOUNTER_START: 1121, The Four Horsemen, 186, 40, 0
+		[ 21.02] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+			 Triggered 8x, delta times: 21.02, 12.95, 12.93, 12.97, 12.95, 12.97, 12.97, 12.94
+		[124.71] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+			 Triggered 9x, delta times: 124.71, 25.89, 12.94, 12.93, 13.00, 12.96, 12.96, 12.96, 12.94
+		[136.02] SPELL_CAST_SUCCESS: [Spirit of Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16778-0000000063, Spirit of Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+			 Triggered 2x, delta times: 136.02, 118.19
+	Void Zone, time=16.00, type=var, spellId=28863, triggerDeltas = 0.00, 19.41, 12.95, 12.93, 11.34, 11.33, 14.60, 12.96, 16.18, 13.01, 12.91, 14.60, 14.56, 12.95, 16.22, 12.97, 12.96, 12.94, 14.54
+		[  0.00] ENCOUNTER_START: 1121, The Four Horsemen, 186, 40, 0
+		[ 19.41] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 6x, delta times: 19.41, 12.95, 12.93, 11.34, 55.07, 13.01
+		[ 67.96] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer2: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000017, Healer2, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 3x, delta times: 67.96, 14.60, 12.96
+		[137.62] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps5: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000007, Dps5, 0x512, 28863, Void Zone, 0, 0
+		[152.22] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000004, Healer1, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 2x, delta times: 152.22, 97.14
+		[166.78] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps7: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000010, Dps7, 0x512, 28863, Void Zone, 0, 0
+		[179.73] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer4: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000019, Healer4, 0x512, 28863, Void Zone, 0, 0
+		[195.95] SPELL_CAST_SUCCESS: [Lady Blaumeux->Tank1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000005, Tank1, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 2x, delta times: 195.95, 38.87
+		[208.92] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000001, Dps1, 0x512, 28863, Void Zone, 0, 0
+		[221.88] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer3: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000018, Healer3, 0x511, 28863, Void Zone, 0, 0
+	Holy Wrath, time=14.50, type=var, spellId=28883, triggerDeltas = 0.00, 22.64, 12.95, 12.94, 16.20, 22.69, 16.19, 16.23, 15.20, 12.91, 20.45, 14.57, 16.21, 29.07, 16.27
+		[  0.00] ENCOUNTER_START: 1121, The Four Horsemen, 186, 40, 0
+		[ 22.64] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer2: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000017, Healer2, 0x512, 28883, Holy Wrath, 0, 0
+			 Triggered 5x, delta times: 22.64, 12.95, 12.94, 55.08, 16.23
+		[ 64.73] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps6: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000008, Dps6, 0x512, 28883, Holy Wrath, 0, 0
+			 Triggered 2x, delta times: 64.73, 22.69
+		[135.04] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps9: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000012, Dps9, 0x512, 28883, Holy Wrath, 0, 0
+		[147.95] SPELL_CAST_SUCCESS: [Sir Zeliek->Tank1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000005, Tank1, 0x512, 28883, Holy Wrath, 0, 0
+		[168.40] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000001, Dps1, 0x512, 28883, Holy Wrath, 0, 0
+		[182.97] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps10: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000013, Dps10, 0x512, 28883, Holy Wrath, 0, 0
+		[199.18] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000004, Healer1, 0x512, 28883, Holy Wrath, 0, 0
+		[228.25] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps14: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000020, Dps14, 0x512, 28883, Holy Wrath, 0, 0
+		[244.52] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer4: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000019, Healer4, 0x512, 28883, Holy Wrath, 0, 0
+	Meteor, time=14.60, type=var, spellId=28884, triggerDeltas = 0.00, 21.02, 12.96, 11.31, 12.95, 16.20, 16.23, 12.94, 14.60
+		[  0.00] ENCOUNTER_START: 1121, The Four Horsemen, 186, 40, 0
+		[ 21.02] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+			 Triggered 8x, delta times: 21.02, 12.96, 11.31, 12.95, 16.20, 16.23, 12.94, 14.60
+	Shield Wall: %s, time=20.00, type=target, spellId=29061, triggerDeltas = 37.20, 6.48, 34.01, 8.10, 79.37, 16.19, 35.67, 11.33
+		[ 37.20] SPELL_AURA_APPLIED: [Thane Korth'azz->Thane Korth'azz: Shield Wall] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 37.20, 48.59
+		[ 43.68] SPELL_AURA_APPLIED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 43.68, 34.01
+		[ 63.66] SPELL_AURA_REMOVED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		[165.16] SPELL_AURA_APPLIED: [Sir Zeliek->Sir Zeliek: Shield Wall] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 165.16, 63.19
+		[181.35] SPELL_AURA_APPLIED: [Lady Blaumeux->Lady Blaumeux: Shield Wall] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 181.35, 35.67
+
+Announces:
+	Mark %d in 3 seconds, type=nil, spellId=<none>, triggerDeltas = 16.00, 14.92, 12.95, 12.93, 12.97, 12.95, 12.97, 12.97, 12.94, 13.01, 11.31, 14.58, 12.94, 12.93, 13.00, 12.96, 12.96, 12.96, 12.94
+		[ 16.00] Scheduled at 0.00 by ENCOUNTER_START: 1121, The Four Horsemen, 186, 40, 0
+		[ 30.92] Scheduled at 21.02 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[ 43.87] Scheduled at 33.97 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[ 56.80] Scheduled at 46.90 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[ 69.77] Scheduled at 59.87 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[ 82.72] Scheduled at 72.82 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[ 95.69] Scheduled at 85.79 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[108.66] Scheduled at 98.76 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[121.60] Scheduled at 111.70 by SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[134.61] Scheduled at 124.71 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[145.92] Scheduled at 136.02 by SPELL_CAST_SUCCESS: [Spirit of Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16778-0000000063, Spirit of Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		[160.50] Scheduled at 150.60 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[173.44] Scheduled at 163.54 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[186.37] Scheduled at 176.47 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[199.37] Scheduled at 189.47 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[212.33] Scheduled at 202.43 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[225.29] Scheduled at 215.39 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[238.25] Scheduled at 228.35 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		[251.19] Scheduled at 241.29 by SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+	Void Zone on >%s<, type=target, spellId=28863, triggerDeltas = 19.41, 12.95, 12.93, 11.34, 11.33, 14.60, 12.96, 16.18, 13.01, 12.91, 14.60, 14.56, 12.95, 16.22, 12.97, 25.90, 14.54
+		[ 19.41] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 6x, delta times: 19.41, 12.95, 12.93, 11.34, 55.07, 13.01
+		[ 67.96] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer2: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000017, Healer2, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 3x, delta times: 67.96, 14.60, 12.96
+		[137.62] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps5: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000007, Dps5, 0x512, 28863, Void Zone, 0, 0
+		[152.22] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000004, Healer1, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 2x, delta times: 152.22, 97.14
+		[166.78] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps7: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000010, Dps7, 0x512, 28863, Void Zone, 0, 0
+		[179.73] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer4: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000019, Healer4, 0x512, 28863, Void Zone, 0, 0
+		[195.95] SPELL_CAST_SUCCESS: [Lady Blaumeux->Tank1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000005, Tank1, 0x512, 28863, Void Zone, 0, 0
+			 Triggered 2x, delta times: 195.95, 38.87
+		[208.92] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000001, Dps1, 0x512, 28863, Void Zone, 0, 0
+	Holy Wrath on >%s<, type=target, spellId=28883, triggerDeltas = 22.64, 12.95, 12.94, 16.20, 22.69, 16.19, 16.23, 15.20, 12.91, 20.45, 14.57, 16.21, 29.07, 16.27
+		[ 22.64] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer2: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000017, Healer2, 0x512, 28883, Holy Wrath, 0, 0
+			 Triggered 5x, delta times: 22.64, 12.95, 12.94, 55.08, 16.23
+		[ 64.73] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps6: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000008, Dps6, 0x512, 28883, Holy Wrath, 0, 0
+			 Triggered 2x, delta times: 64.73, 22.69
+		[135.04] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps9: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000012, Dps9, 0x512, 28883, Holy Wrath, 0, 0
+		[147.95] SPELL_CAST_SUCCESS: [Sir Zeliek->Tank1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000005, Tank1, 0x512, 28883, Holy Wrath, 0, 0
+		[168.40] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000001, Dps1, 0x512, 28883, Holy Wrath, 0, 0
+		[182.97] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps10: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000013, Dps10, 0x512, 28883, Holy Wrath, 0, 0
+		[199.18] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000004, Healer1, 0x512, 28883, Holy Wrath, 0, 0
+		[228.25] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps14: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000020, Dps14, 0x512, 28883, Holy Wrath, 0, 0
+		[244.52] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer4: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000019, Healer4, 0x512, 28883, Holy Wrath, 0, 0
+	Meteor, type=spell, spellId=28884, triggerDeltas = 21.02, 12.96, 11.31, 12.95, 16.20, 16.23, 12.94, 14.60
+		[ 21.02] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+			 Triggered 8x, delta times: 21.02, 12.96, 11.31, 12.95, 16.20, 16.23, 12.94, 14.60
+	Shield Wall on >%s<, type=target, spellId=29061, triggerDeltas = 37.20, 6.48, 34.01, 8.10, 79.37, 16.19, 35.67, 11.33
+		[ 37.20] SPELL_AURA_APPLIED: [Thane Korth'azz->Thane Korth'azz: Shield Wall] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 37.20, 48.59
+		[ 43.68] SPELL_AURA_APPLIED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 43.68, 34.01
+		[165.16] SPELL_AURA_APPLIED: [Sir Zeliek->Sir Zeliek: Shield Wall] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 165.16, 63.19
+		[181.35] SPELL_AURA_APPLIED: [Lady Blaumeux->Lady Blaumeux: Shield Wall] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+			 Triggered 2x, delta times: 181.35, 35.67
+
+Special warnings:
+	Void Zone on you, type=you, spellId=28863, triggerDeltas = 221.88
+		[221.88] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer3: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000018, Healer3, 0x511, 28863, Void Zone, 0, 0
+
+Yells:
+	Void Zone on PlayerName, type=yell, spellId=28863
+		[221.88] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer3: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000018, Healer3, 0x511, 28863, Void Zone, 0, 0
+
+Voice pack sounds:
+	VoicePack/targetyou
+		[221.88] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer3: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000018, Healer3, 0x511, 28863, Void Zone, 0, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 1121, The Four Horsemen, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_SUCCESS 28832 28833 28834 28835 28863 28883 28884 1226218 1226219 1226220 1226221, SPELL_AURA_APPLIED 29061, SPELL_AURA_REMOVED 29061, SPELL_AURA_APPLIED_DOSE 28832 28833 28834 28835
+		StartTimer: 16.1, Void Zone
+		StartTimer: 20.9, Mark 1
+		StartTimer: 20.9, Meteor
+		StartTimer: 20.9, Holy Wrath
+		ScheduleTask: announce:Schedule() at 16.00 (+16.00)
+			ShowAnnounce: Mark Unknown in 3 seconds
+	[ 19.41] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps6
+	[ 21.02] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 21.02, 21.02, 22.64
+		StartTimer: 13.0, Mark 2
+		ScheduleTask: announce:Schedule(2.0) at 30.92 (+9.90)
+			ShowAnnounce: Mark 2 in 3 seconds
+	[ 21.02] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[ 22.64] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer2: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000017, Healer2, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Healer2
+		StartTimer: 14.5, Holy Wrath
+	[ 32.36] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps6
+	[ 33.97] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 33.98, 33.98, 35.59
+		StartTimer: 13.0, Mark 3
+		ScheduleTask: announce:Schedule(3.0) at 43.87 (+9.90)
+			ShowAnnounce: Mark 3 in 3 seconds
+	[ 33.98] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[ 35.59] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer2: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000017, Healer2, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Healer2
+		StartTimer: 14.5, Holy Wrath
+	[ 37.20] SPELL_AURA_APPLIED: [Thane Korth'azz->Thane Korth'azz: Shield Wall] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Thane Korth'azz
+		StartTimer: 20.0, Shield Wall: Thane Korth'azz
+	[ 43.68] SPELL_AURA_APPLIED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Highlord Mograine
+		StartTimer: 20.0, Shield Wall: Highlord Mograine
+	[ 45.29] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[ 45.29] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps6
+	[ 46.90] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 46.9, 46.9, 48.53
+		StartTimer: 13.0, Mark 4
+		ScheduleTask: announce:Schedule(4.0) at 56.80 (+9.90)
+			ShowAnnounce: Mark 4 in 3 seconds
+	[ 48.53] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer2: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000017, Healer2, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Healer2
+		StartTimer: 14.5, Holy Wrath
+	[ 56.63] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps6
+	[ 58.24] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[ 59.87] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 59.87, 59.87, 61.49
+		StartTimer: 13.0, Mark 5
+		ScheduleTask: announce:Schedule(5.0) at 69.77 (+9.90)
+			ShowAnnounce: Mark 5 in 3 seconds
+	[ 63.66] SPELL_AURA_REMOVED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		StopTimer: Timer29061target\tHighlord Mograine
+	[ 64.73] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps6: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000008, Dps6, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Dps6
+		StartTimer: 14.5, Holy Wrath
+	[ 67.96] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer2: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000017, Healer2, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Healer2
+	[ 72.82] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 72.82, 72.82, 74.44
+		StartTimer: 13.0, Mark 6
+		ScheduleTask: announce:Schedule(6.0) at 82.72 (+9.90)
+			ShowAnnounce: Mark 6 in 3 seconds
+	[ 74.44] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[ 77.69] SPELL_AURA_APPLIED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Highlord Mograine
+		StartTimer: 20.0, Shield Wall: Highlord Mograine
+	[ 82.56] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer2: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000017, Healer2, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Healer2
+	[ 85.79] SPELL_AURA_APPLIED: [Thane Korth'azz->Thane Korth'azz: Shield Wall] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Thane Korth'azz
+		StartTimer: 20.0, Shield Wall: Thane Korth'azz
+	[ 85.79] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 85.79, 85.81, 87.42
+		StartTimer: 13.0, Mark 7
+		ScheduleTask: announce:Schedule(7.0) at 95.69 (+9.90)
+			ShowAnnounce: Mark 7 in 3 seconds
+	[ 87.42] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps6: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000008, Dps6, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Dps6
+		StartTimer: 14.5, Holy Wrath
+	[ 90.67] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[ 95.52] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer2: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000017, Healer2, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Healer2
+	[ 98.76] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 98.76, 98.76, 100.38
+		StartTimer: 13.0, Mark 8
+		ScheduleTask: announce:Schedule(8.0) at 108.66 (+9.90)
+			ShowAnnounce: Mark 8 in 3 seconds
+	[103.61] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[103.61] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer2: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000017, Healer2, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Healer2
+		StartTimer: 14.5, Holy Wrath
+	[111.70] SPELL_CAST_SUCCESS: [Thane Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 3x SPELL_CAST_SUCCESS at 111.7, 113.33, 116.59
+		StartTimer: 13.0, Mark 9
+		ScheduleTask: announce:Schedule(9.0) at 121.60 (+9.90)
+			ShowAnnounce: Mark 9 in 3 seconds
+	[111.70] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps6
+	[118.21] SPELL_CAST_SUCCESS: [Thane Korth'azz: Meteor] Creature-0-1-533-1-16064-0000000001, Thane Korth'azz, 0xa48, "", nil, 0x0, 28884, Meteor, 0, 0
+		ShowAnnounce: Meteor
+		StartTimer: 14.6, Meteor
+	[119.84] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer2: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000017, Healer2, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Healer2
+		StartTimer: 14.5, Holy Wrath
+	[124.71] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 1x SPELL_CAST_SUCCESS at 126.31
+		StartTimer: 13.0, Mark 10
+		ScheduleTask: announce:Schedule(10.0) at 134.61 (+9.90)
+			ShowAnnounce: Mark 10 in 3 seconds
+	[124.71] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps6: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000008, Dps6, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps6
+	[135.04] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps9: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000012, Dps9, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Dps9
+		StartTimer: 14.5, Holy Wrath
+	[136.02] SPELL_CAST_SUCCESS: [Spirit of Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16778-0000000063, Spirit of Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 2x SPELL_CAST_SUCCESS at 137.62, 139.24
+		StartTimer: 13.0, Mark 11
+		ScheduleTask: announce:Schedule(11.0) at 145.92 (+9.90)
+			ShowAnnounce: Mark 11 in 3 seconds
+	[137.62] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps5: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000007, Dps5, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps5
+	[147.95] SPELL_CAST_SUCCESS: [Sir Zeliek->Tank1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000005, Tank1, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Tank1
+		StartTimer: 14.5, Holy Wrath
+	[150.60] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 1x SPELL_CAST_SUCCESS at 152.23
+		StartTimer: 13.0, Mark 12
+		ScheduleTask: announce:Schedule(12.0) at 160.50 (+9.90)
+			ShowAnnounce: Mark 12 in 3 seconds
+	[152.22] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000004, Healer1, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Healer1
+	[163.54] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 2x SPELL_CAST_SUCCESS at 165.16, 173.25
+		StartTimer: 13.0, Mark 13
+		ScheduleTask: announce:Schedule(13.0) at 173.44 (+9.90)
+			ShowAnnounce: Mark 13 in 3 seconds
+	[165.16] SPELL_AURA_APPLIED: [Sir Zeliek->Sir Zeliek: Shield Wall] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Sir Zeliek
+		StartTimer: 20.0, Shield Wall: Sir Zeliek
+	[166.78] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps7: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000010, Dps7, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps7
+	[168.40] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000001, Dps1, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Dps1
+		StartTimer: 14.5, Holy Wrath
+	[176.47] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 2x SPELL_CAST_SUCCESS at 179.73, 186.22
+		StartTimer: 13.0, Mark 14
+		ScheduleTask: announce:Schedule(14.0) at 186.37 (+9.90)
+			ShowAnnounce: Mark 14 in 3 seconds
+	[179.73] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer4: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000019, Healer4, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Healer4
+	[181.35] SPELL_AURA_APPLIED: [Lady Blaumeux->Lady Blaumeux: Shield Wall] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Lady Blaumeux
+		StartTimer: 20.0, Shield Wall: Lady Blaumeux
+	[182.97] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps10: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000013, Dps10, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Dps10
+		StartTimer: 14.5, Holy Wrath
+	[189.47] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 2x SPELL_CAST_SUCCESS at 192.7, 199.18
+		StartTimer: 13.0, Mark 15
+		ScheduleTask: announce:Schedule(15.0) at 199.37 (+9.90)
+			ShowAnnounce: Mark 15 in 3 seconds
+	[195.95] SPELL_CAST_SUCCESS: [Lady Blaumeux->Tank1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000005, Tank1, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Tank1
+	[199.18] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer1: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000004, Healer1, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Healer1
+		StartTimer: 14.5, Holy Wrath
+	[202.43] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 2x SPELL_CAST_SUCCESS at 205.66, 212.15
+		StartTimer: 13.0, Mark 16
+		ScheduleTask: announce:Schedule(16.0) at 212.33 (+9.90)
+			ShowAnnounce: Mark 16 in 3 seconds
+	[208.92] SPELL_CAST_SUCCESS: [Lady Blaumeux->Dps1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000001, Dps1, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Dps1
+	[215.39] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 1x SPELL_CAST_SUCCESS at 218.63
+		StartTimer: 13.0, Mark 17
+		ScheduleTask: announce:Schedule(17.0) at 225.29 (+9.90)
+			ShowAnnounce: Mark 17 in 3 seconds
+	[217.02] SPELL_AURA_APPLIED: [Lady Blaumeux->Lady Blaumeux: Shield Wall] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Lady Blaumeux
+		StartTimer: 20.0, Shield Wall: Lady Blaumeux
+	[221.88] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer3: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000018, Healer3, 0x511, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowSpecialWarning: Void Zone on you
+		PlaySound: VoicePack/targetyou
+		ShowYell: Void Zone on PlayerName
+	[228.25] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps14: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000020, Dps14, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Dps14
+		StartTimer: 14.5, Holy Wrath
+	[228.35] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 1x SPELL_CAST_SUCCESS at 231.59
+		StartTimer: 13.0, Mark 18
+		ScheduleTask: announce:Schedule(18.0) at 238.25 (+9.90)
+			ShowAnnounce: Mark 18 in 3 seconds
+	[228.35] SPELL_AURA_APPLIED: [Sir Zeliek->Sir Zeliek: Shield Wall] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		ShowAnnounce: Shield Wall on Sir Zeliek
+		StartTimer: 20.0, Shield Wall: Sir Zeliek
+	[234.82] SPELL_CAST_SUCCESS: [Lady Blaumeux->Tank1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000005, Tank1, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Tank1
+	[241.29] SPELL_CAST_SUCCESS: [Lady Blaumeux: Mark of Blaumeux] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, "", nil, 0x0, 1226219, Mark of Blaumeux, 0, 0
+		AntiSpam: (nil)
+			Filtered: 1x SPELL_CAST_SUCCESS at 244.51
+		StartTimer: 13.0, Mark 19
+		ScheduleTask: announce:Schedule(19.0) at 251.19 (+9.90)
+			ShowAnnounce: Mark 19 in 3 seconds
+	[244.52] SPELL_CAST_SUCCESS: [Sir Zeliek->Healer4: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000019, Healer4, 0x512, 28883, Holy Wrath, 0, 0
+		ShowAnnounce: Holy Wrath on Healer4
+		StartTimer: 14.5, Holy Wrath
+	[249.36] SPELL_CAST_SUCCESS: [Lady Blaumeux->Healer1: Void Zone] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Player-1-00000004, Healer1, 0x512, 28863, Void Zone, 0, 0
+		StartTimer: 16.0, Void Zone
+		ShowAnnounce: Void Zone on Healer1
+	[254.21] SPELL_CAST_SUCCESS: [Spirit of Korth'azz: Mark of Korth'azz] Creature-0-1-533-1-16778-0000000063, Spirit of Korth'azz, 0xa48, "", nil, 0x0, 1226221, Mark of Korth'azz, 0, 0
+		AntiSpam: (nil)
+			Filtered: 1x SPELL_CAST_SUCCESS at 254.22
+		StartTimer: 13.0, Mark 20
+		ScheduleTask: announce:Schedule(20.0) at 264.11 (+9.90)
+			Unscheduled by ENCOUNTER_END at 256.91
+	[256.91] ENCOUNTER_END: 1121, The Four Horsemen, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(20.0) scheduled by ScheduleTask at 254.21
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 29061
