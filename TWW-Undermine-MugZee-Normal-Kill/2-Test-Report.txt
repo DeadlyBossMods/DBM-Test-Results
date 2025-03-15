@@ -2,13 +2,14 @@ Test: TWW/Undermine/MugZee/Normal/Kill
 Mod:  DBM-Raids-WarWithin/2645
 
 Findings:
+	Unused event registration: RAID_BOSS_WHISPER
 	Unused event registration: SPELL_AURA_APPLIED 1215898 (Static Charge)
 	Unused event registration: SPELL_AURA_APPLIED 1222948 (Electro-Charged Shield)
 	Unused event registration: SPELL_AURA_APPLIED 467202 (Golden Drip)
 	Unused event registration: SPELL_AURA_APPLIED 469369 (Spray and Pray)
-	Unused event registration: SPELL_AURA_APPLIED 469391 (Perforating Wound)
 	Unused event registration: SPELL_AURA_APPLIED 469490 (Double Whammy Shot)
-	Unused event registration: SPELL_AURA_APPLIED_DOSE 469391 (Perforating Wound)
+	Unused event registration: SPELL_AURA_APPLIED 469601 (Double Whammy Shot)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1219283 (Experimental Plating)
 	Unused event registration: SPELL_AURA_REMOVED 1215898 (Static Charge)
 	Unused event registration: SPELL_AURA_REMOVED 1222948 (Electro-Charged Shield)
 	Unused event registration: SPELL_AURA_REMOVED 466459 (Head Honcho: Mug)
@@ -24,7 +25,6 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
 	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_START 466518 (Molten Gold Knuckles)
-	Unused event registration: SPELL_CAST_START 466545 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_START 474461 (Earthshaker Gaol)
 	Unused event registration: SPELL_CAST_SUCCESS 467379 (Goblin-guided Rocket)
@@ -65,9 +65,10 @@ Findings:
 	Announce for spell ID 1222408 (Head Honcho: Mug'Zee) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
 
 Unused objects:
-	[Announce] Spray and Pray on >%s<, type=target, spellId=466545
+	[Announce] Double Whammy Shot on >%s<, type=target, spellId=469491
 	[Announce] Disintegration Beam on >%s<, type=target, spellId=1215481
 	[Special Warning] Frostshatter Boots on you, type=you, spellId=466476
+	[Special Warning] Stormfury Finger Gun (%s) on you, type=youcount, spellId=466509
 	[Special Warning] Molten Gold Knuckles - defensive, type=defensive, spellId=466518
 	[Special Warning] Spray and Pray - move away from others, type=moveaway, spellId=466545
 	[Special Warning] Golden Drip - keep moving, type=keepmove, spellId=467202
@@ -87,11 +88,11 @@ Unused objects:
 	[Yell] %d, type=shortfade, spellId=466545
 	[Yell] Spray and Pray on PlayerName, type=yell, spellId=466545
 	[Yell] %d, type=shortfade, spellId=467380
-	[Yell] Goblin-guided Rocket on PlayerName, type=yell, spellId=467380
+	[Yell] Soak, type=yell, spellId=467380
 	[Yell] %d, type=shortfade, spellId=469491
 	[Yell] Double Whammy Shot on PlayerName, type=yell, spellId=469491
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=474461
-	[Yell] Earthshaker Gaol on PlayerName, type=yell, spellId=474461
+	[Yell] {rt%1$d}Earthshaker Gaol, type=shortposition, spellId=474461
 	[Yell] Surging Arc on PlayerName, type=yell, spellId=1214991
 	[Yell] %d, type=shortfade, spellId=1215953
 	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
@@ -164,6 +165,8 @@ Announces:
 	Unstable Crawler Mines (%s), type=count, spellId=466539, triggerDeltas = 13.93, 148.20, 65.18
 		[ 13.93] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 			 Triggered 3x, delta times: 13.93, 148.20, 65.18
+	Spray and Pray on >%s<, type=target, spellId=466545, triggerDeltas = 60.13
+		[ 60.13] Scheduled at 60.03 by SPELL_CAST_START: [Mug'Zee: Spray and Pray] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466545, Spray and Pray, 0, 0
 	Solid Gold on >%s<, type=target, spellId=467225, triggerDeltas = 289.52
 		[289.52] SPELL_AURA_APPLIED: [Mug'Zee->Dps15: Solid Gold] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000024, Dps15, 0x512, 467225, Solid Gold, 0, DEBUFF, 0
 	Earthshaker Gaol (%s) on >%s<, type=targetcount, spellId=474461, triggerDeltas = 89.14, 163.19
@@ -176,9 +179,9 @@ Announces:
 		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 
 Special warnings:
-	Stormfury Finger Gun (%s) - dodge attack, type=dodgecount, spellId=466509, triggerDeltas = 135.21, 150.84
-		[135.21] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
-			 Triggered 2x, delta times: 135.21, 150.84
+	Stormfury Finger Gun (%s) - dodge attack, type=dodgecount, spellId=466509, triggerDeltas = 135.31, 150.84
+		[135.31] Scheduled at 135.21 by SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
+		[286.15] Scheduled at 286.05 by SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 	Gaol Break!, type=spell, spellId=470910, triggerDeltas = 104.81, 161.42, 3.24
 		[104.81] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-000000002A, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
 			 Triggered 3x, delta times: 104.81, 161.42, 3.24
@@ -219,7 +222,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 14, 26, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469391 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 469391, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215595 1222948 469490 469601 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 1219283, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, RAID_BOSS_WHISPER, UNIT_DIED
 	[  0.18] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee
 		StartTimer: 13.9, Unstable Crawler Mines (1)
@@ -272,6 +275,9 @@ Event trace:
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[ 53.39] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000003, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000003", "ArcTarget", 0.1, 8.0) at 53.49 (+0.10)
+	[ 60.03] SPELL_CAST_START: [Mug'Zee: Spray and Pray] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466545, Spray and Pray, 0, 0
+		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "SprayTarget", 0.1, 8.0) at 60.13 (+0.10)
+			ShowAnnounce: Spray and Pray on Dps10
 	[ 75.20] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug
 		StartTimer: 17.4, Earthshaker Gaol (1)
@@ -314,8 +320,9 @@ Event trace:
 			Filtered: 4x SPELL_AURA_APPLIED at 124.04, 124.04, 124.04, 124.04
 		StartTimer: 8.0, Frostshatter Spear
 	[135.21] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
-		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
+		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "FingerTarget", 0.1, 8.0) at 135.31 (+0.10)
+			ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
+			PlaySound: DBM/SpecialWarningSound2
 	[148.21] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee
 		StartTimer: 13.9, Unstable Crawler Mines (1)
@@ -387,13 +394,13 @@ Event trace:
 		StopTimer: Timer471419cdcount\t4
 		StartTimer: 3.7, Unstable Crawler Mines (1)
 		StartTimer: 16.2, Frostshatter Boots (1)
-		StartTimer: 32.8, Earthshaker Gaol (1)
-		StartTimer: 33.3, Molten Gold Knuckles (1)
 		StartTimer: 40.0, Goblin-guided Rocket (1)
 		StartTimer: 62.4, Stormfury Finger Gun (1)
-		StartTimer: 75.0, Double Whammy Shot (1)
+		StartTimer: 74.7, Double Whammy Shot (1)
 		StartTimer: 81.2, Spray and Pray (1)
 		StartTimer: 118.0, Double-Minded Fury
+		StartTimer: 32.8, Earthshaker Gaol (1)
+		StartTimer: 33.3, Molten Gold Knuckles (1)
 	[226.48] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000052, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000052", "ArcTarget", 0.1, 8.0) at 226.58 (+0.10)
 	[227.31] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
@@ -445,8 +452,9 @@ Event trace:
 	[284.09] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000006D, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000006D", "ArcTarget", 0.1, 8.0) at 284.19 (+0.10)
 	[286.05] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
-		ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
+		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "FingerTarget", 0.1, 8.0) at 286.15 (+0.10)
+			ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
+			PlaySound: DBM/SpecialWarningSound2
 	[287.73] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000006D, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000006D", "ArcTarget", 0.1, 8.0) at 287.83 (+0.10)
 	[289.52] SPELL_AURA_APPLIED: [Mug'Zee->Dps15: Solid Gold] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000024, Dps15, 0x512, 467225, Solid Gold, 0, DEBUFF, 0
