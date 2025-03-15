@@ -9,7 +9,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 473115 (Short Fuse)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 466748 (Infected Bite)
 	Unused event registration: SPELL_AURA_REMOVED 1217685 (Messed Up)
-	Unused event registration: SPELL_AURA_REMOVED 461536 (Rolling Rubbish)
 	Unused event registration: SPELL_AURA_REMOVED 465346 (Sorted)
 	Unused event registration: SPELL_AURA_REMOVED 473066 (Territorial)
 	Unused event registration: SPELL_AURA_REMOVED 473115 (Short Fuse)
@@ -43,6 +42,10 @@ Unused objects:
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=461536
 
 Timers:
+	Rolling Rubbish fades, time=20.00, type=fades, spellId=461536, triggerDeltas = 25.58, 113.60, 91.96
+		[ 25.58] SPELL_AURA_APPLIED: [->Tank1: Rolling Rubbish] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 25.58, 113.60, 91.96
+		[158.00] SPELL_AURA_REMOVED: [->Tank1: Rolling Rubbish] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
 	Demolish (%s), time=51.10, type=nextcount, spellId=464112, triggerDeltas = 0.00, 16.02, 45.98, 48.05, 19.58, 45.98, 46.02, 45.96
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 14, 30, 0
 		[ 16.02] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
@@ -205,7 +208,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 464399 466742 1220752 464112 1217954 467117 467109, SPELL_CAST_SUCCESS 464149, SPELL_AURA_APPLIED 465346 1217685 464854 473115 473066 1218704 1219384 1220648 466748 472893, SPELL_AURA_APPLIED_DOSE 466748, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117, SPELL_PERIODIC_DAMAGE 464854 464248, SPELL_PERIODIC_MISSED 464854 464248, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 464399 466742 1220752 464112 1217954 467117 467109, SPELL_CAST_SUCCESS 464149, SPELL_AURA_APPLIED 465346 1217685 464854 473115 473066 1218704 1219384 1220648 466748 472893 461536, SPELL_AURA_APPLIED_DOSE 466748, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117, SPELL_PERIODIC_DAMAGE 464854 464248, SPELL_PERIODIC_MISSED 464854 464248, UNIT_DIED
 		StartTimer: 10.0, Incinerator (1)
 		StartTimer: 16.0, Demolish (1)
 		StartTimer: 20.1, Balls+Adds (1)
@@ -230,6 +233,8 @@ Event trace:
 	[ 21.05] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps10: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000015, Dps10, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		ScheduleTask: announce465346target:CombinedShow("Dps10") at 21.55 (+0.50)
 			ShowAnnounce: Sorted on PlayerName, Dps14, Dps1, Dps16, Dps10
+	[ 25.58] SPELL_AURA_APPLIED: [->Tank1: Rolling Rubbish] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
+		StartTimer: 20.0, Rolling Rubbish fades
 	[ 27.01] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000009, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 27.52
@@ -247,9 +252,16 @@ Event trace:
 	[ 36.92] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000009, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
+	Unknown trigger
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\5.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\4.ogg
 	[ 41.84] SPELL_AURA_APPLIED: [Scrapmaster->Dps11: Scrap Rockets] Creature-0-1-2769-1-231839-0000000009, Scrapmaster, 0xa48, Player-1-00000017, Dps11, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
+	Unknown trigger
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\3.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\2.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\1.ogg
 	[ 47.01] SPELL_AURA_APPLIED: [Scrapmaster->Scrapmaster: Messed Up] Creature-0-1-2769-1-231839-0000000009, Scrapmaster, 0xa48, Creature-0-1-2769-1-231839-0000000009, Scrapmaster, 0xa48, 1217685, Messed Up, 0, BUFF, 0
 		ScanForMobs: Creature-0-1-2769-1-231839-0000000009, 2, 2, 1
 	[ 48.29] SPELL_AURA_APPLIED: [Scrapmaster->Healer2: Scrap Rockets] Creature-0-1-2769-1-231839-0000000009, Scrapmaster, 0xa48, Player-1-00000004, Healer2, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
@@ -379,6 +391,8 @@ Event trace:
 		AntiSpam: 3
 		ShowSpecialWarning: Hot Garbage damage - move away
 		PlaySound: VoicePack/watchfeet
+	[139.18] SPELL_AURA_APPLIED: [->Tank1: Rolling Rubbish] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
+		StartTimer: 20.0, Rolling Rubbish fades
 	[140.62] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000032, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 141.13
@@ -397,9 +411,17 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 153.23
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
+	Unknown trigger
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\5.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\4.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\3.ogg
 	[156.95] SPELL_AURA_APPLIED: [Scrapmaster->Dps12: Scrap Rockets] Creature-0-1-2769-1-231839-0000000032, Scrapmaster, 0xa48, Player-1-00000018, Dps12, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
+	Unknown trigger
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\2.ogg
+	[158.00] SPELL_AURA_REMOVED: [->Tank1: Rolling Rubbish] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
+		StopTimer: Timer461536fades
 	[158.57] SPELL_AURA_APPLIED: [Scrapmaster->Healer2: Scrap Rockets] Creature-0-1-2769-1-231839-000000007C, Scrapmaster, 0xa48, Player-1-00000004, Healer2, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
@@ -502,6 +524,8 @@ Event trace:
 	[228.04] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000045, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
+	[231.14] SPELL_AURA_APPLIED: [->Tank1: Rolling Rubbish] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
+		StartTimer: 20.0, Rolling Rubbish fades
 	[232.63] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000005A, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 233.12
@@ -520,12 +544,19 @@ Event trace:
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 242.76
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
+	Unknown trigger
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\5.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\4.ogg
 	[247.69] SPELL_AURA_APPLIED: [Scrapmaster->Dps4: Scrap Rockets] Creature-0-1-2769-1-231839-000000005A, Scrapmaster, 0xa48, Player-1-00000006, Dps4, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
 	[247.69] SPELL_AURA_APPLIED: [Scrapmaster->Dps21: Scrap Rockets] Creature-0-1-2769-1-231839-000000008C, Scrapmaster, 0xa48, Player-1-00000030, Dps21, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		ShowSpecialWarning: Scrap Rockets - interrupt Scrapmaster! (2)
 		PlaySound: VoicePack/kick2r
+	Unknown trigger
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\3.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\2.ogg
+		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\1.ogg
 	[258.61] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000008C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 258.63
