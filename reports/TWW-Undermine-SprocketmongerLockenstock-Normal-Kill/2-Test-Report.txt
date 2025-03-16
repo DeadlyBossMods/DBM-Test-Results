@@ -107,11 +107,10 @@ Announces:
 	Activate Inventions! (%s), type=count, spellId=473276, triggerDeltas = 30.02, 30.00, 29.98, 77.72, 29.96, 30.01
 		[ 30.02] SPELL_CAST_START: [Sprocketmonger Lockenstock: Activate Inventions!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 473276, Activate Inventions!, 0, 0
 			 Triggered 6x, delta times: 30.02, 30.00, 29.98, 77.72, 29.96, 30.01
-	Screwed! on >%s<, type=target, spellId=1217261, triggerDeltas = 56.59, 2.85, 1.63, 2.21, 21.26, 6.00, 25.06, 1.75, 3.88, 70.02, 31.03, 32.26
+	Screwed! on >%s<, type=target, spellId=1217261, triggerDeltas = 56.59, 2.85, 1.63, 23.47, 6.00, 25.06, 1.75, 3.88, 70.02, 31.03, 32.26
 		[ 56.59] Scheduled at 55.59 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps11: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000016, Dps11, 0x511, 1217261, Screwed!, 0, DEBUFF, 0
 		[ 59.44] Scheduled at 58.44 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps13: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000020, Dps13, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[ 61.07] Scheduled at 60.07 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps1: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000002, Dps1, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
-		[ 63.28] Scheduled at 62.28 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000004, Healer2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[ 84.54] Scheduled at 83.54 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps9: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps9, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[ 90.54] Scheduled at 89.54 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps9: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps9, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		[115.60] Scheduled at 114.60 by SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps19: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000030, Dps19, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
@@ -234,9 +233,6 @@ Event trace:
 			Filtered: 5x SPELL_CAST_START at 62.17, 62.32, 62.47, 62.62, 62.76
 		ShowSpecialWarning: Rocket Barrage - dodge attack
 		PlaySound: VoicePack/watchstep
-	[ 62.28] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer2: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000004, Healer2, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
-		ScheduleTask: announce1217261target:CombinedShow("Healer2") at 63.28 (+1.00)
-			ShowAnnounce: Screwed! on Healer1, Healer2
 	[ 63.00] SPELL_CAST_START: [Sprocketmonger Lockenstock: Sonic Ba-Boom] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 465232, Sonic Ba-Boom, 0, 0
 		ShowAnnounce: Sonic Ba-Boom (3)
 		StartTimer: 32.0, Sonic Ba-Boom (4)
@@ -250,7 +246,7 @@ Event trace:
 		StartTimer: 31.0, Screw Up (3)
 	[ 83.54] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps9: Screwed!] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000013, Dps9, 0x512, 1217261, Screwed!, 0, DEBUFF, 0
 		ScheduleTask: announce1217261target:CombinedShow("Dps9") at 84.54 (+1.00)
-			ShowAnnounce: Screwed! on Dps9
+			ShowAnnounce: Screwed! on Healer1, Healer2, Dps9
 	[ 87.07] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Dps11: Pyro Party Pack] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000016, Dps11, 0x511, 1214878, Pyro Party Pack, 0, DEBUFF, 0
 		ShowSpecialWarning: Pyro Party Pack - move away from others
 		PlaySound: VoicePack/runout
@@ -397,5 +393,3 @@ Event trace:
 		ShowAnnounce: Gravi-Gunk on PlayerName (8)
 	[256.66] ENCOUNTER_END: 3013, Sprocketmonger Lockenstock, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1216934 1216911 1214878 1216509 466860 1218318

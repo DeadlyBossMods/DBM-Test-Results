@@ -12,7 +12,7 @@ Unused objects:
 	[Special Warning] Mortal Wound on >%s< - taunt now, type=taunt, spellId=25646
 
 Timers:
-	Exploding Ghosts, time=30.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 0.00, 0.00, 0.00
+	Exploding Ghosts, time=30.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 0.00, 0.00
 		Unknown trigger
 	Mortal Wound: %s, time=15.00, type=target, spellId=25646, triggerDeltas = 9.69, 8.09, 8.06, 9.74, 8.11, 11.32, 8.11, 8.07, 8.09, 8.11, 8.12, 10.03, 12.61, 8.10, 8.13
 		[  9.69] SPELL_AURA_APPLIED: [Kurinnaxx->Tank1: Mortal Wound] Creature-0-1-509-1-15348-0000000001, Kurinnaxx, 0xa48, Player-1-00000004, Tank1, 0x512, 25646, Mortal Wound, 0, DEBUFF, 0
@@ -77,7 +77,7 @@ Announces:
 		[ 92.26] SPELL_AURA_APPLIED: [Kurinnaxx->Kurinnaxx: Enrage] Creature-0-1-509-1-15348-0000000001, Kurinnaxx, 0xa48, Creature-0-1-509-1-15348-0000000001, Kurinnaxx, 0xa48, 26527, Enrage, 0, BUFF, 0
 
 Special warnings:
-	Exploding ghosts - dodge, type=nil, spellId=<none>, triggerDeltas = 0.00, 0.00, 0.00, 0.00
+	Exploding ghosts - dodge, type=nil, spellId=<none>, triggerDeltas = 0.00, 0.00, 0.00
 		Unknown trigger
 	Sand Trap on you, type=you, spellId=25656, triggerDeltas = 76.05
 		[ 76.05] SPELL_CREATE: [Healer1->Sand Trap: Sand Trap] Player-1-00000007, Healer1, 0x511, GameObject-0-1-509-1-180647-0000000036, Sand Trap, 0x0, 25648, Sand Trap, 0, 0
@@ -169,10 +169,6 @@ Event trace:
 		ShowAnnounce: Mortal Wound on Dps3 (1)
 	[ 91.04] SPELL_AURA_REMOVED: [Kurinnaxx->Dps3: Mortal Wound] Creature-0-1-509-1-15348-0000000001, Kurinnaxx, 0xa48, Player-1-00000003, Dps3, 0x512, 25646, Mortal Wound, 0, DEBUFF, 0
 		StopTimer: Timer25646target\tDps3
-	Unknown trigger
-		ShowSpecialWarning: Exploding ghosts - dodge
-		PlaySound: VoicePack/ghostsoon
-		StartTimer: 30.0, Exploding Ghosts
 	[ 92.26] SPELL_AURA_APPLIED: [Kurinnaxx->Kurinnaxx: Enrage] Creature-0-1-509-1-15348-0000000001, Kurinnaxx, 0xa48, Creature-0-1-509-1-15348-0000000001, Kurinnaxx, 0xa48, 26527, Enrage, 0, BUFF, 0
 		ShowAnnounce: Enrage on Kurinnaxx
 	[ 92.26] SPELL_CREATE: [Dps2->Sand Trap: Sand Trap] Player-1-00000002, Dps2, 0x512, GameObject-0-1-509-1-180647-000000003F, Sand Trap, 0x0, 25648, Sand Trap, 0, 0
@@ -216,5 +212,3 @@ Event trace:
 		ShowAnnounce: Sand Trap on Healer2
 	[142.53] ENCOUNTER_END: 718, Kurinnaxx, 185, 20, 1, 0
 		EndCombat: ENCOUNTER_END
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 25646

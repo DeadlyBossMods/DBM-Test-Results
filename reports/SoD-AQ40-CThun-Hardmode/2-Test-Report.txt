@@ -5,7 +5,9 @@ Findings:
 	None
 
 Unused objects:
+	[Special Warning] Dark Glare - dodge attack, type=dodge, spellId=26029
 	[Special Warning] Eye Beam on you, type=you, spellId=26134
+	[Timer] Dark Glare ends, time=39.00, type=active, spellId=26029
 	[Yell] Eye Beam on PlayerName, type=yell, spellId=26134
 
 Timers:
@@ -40,12 +42,8 @@ Timers:
 		[210.64] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4525, nil, 0, false, false, false, false, 0
 		[337.19] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4556, nil, 0, false, false, false, false, 0
 		[440.65] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4582, nil, 0, false, false, false, false, 0
-	Dark Glare ends, time=39.00, type=active, spellId=26029, triggerDeltas = 48.00
-		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
-	Dark Glare, time=86.00, type=next, spellId=26029, triggerDeltas = 0.00, 48.00
+	Dark Glare, time=86.00, type=next, spellId=26029, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 717, C'thun, 186, 40, 0
-		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
-		[115.26] UNIT_DIED: [->Eye of C'Thun] "", nil, 0x0, Creature-0-1-531-1-15589-0000000001, Eye of C'Thun, 0xa48, -1, false, 0, 0
 
 Announces:
 	Claw Tentacle, type=nil, spellId=<none>, triggerDeltas = 8.00, 7.99, 8.00, 8.00, 8.01, 8.00, 7.98, 7.99, 8.00, 8.00, 8.02, 8.00, 7.99, 8.00
@@ -68,15 +66,11 @@ Special warnings:
 		[210.64] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4525, nil, 0, false, false, false, false, 0
 		[337.19] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4556, nil, 0, false, false, false, false, 0
 		[440.65] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4582, nil, 0, false, false, false, false, 0
-	Dark Glare - dodge attack, type=dodge, spellId=26029, triggerDeltas = 48.00
-		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
 
 Yells:
 	None
 
 Voice pack sounds:
-	VoicePack/laserrun
-		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
 	VoicePack/targetchange
 		[210.64] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4525, nil, 0, false, false, false, false, 0
 		[337.19] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4556, nil, 0, false, false, false, false, 0
@@ -93,12 +87,7 @@ Event trace:
 		StartTimer: 45.0, Eye Tentacles
 		StartTimer: 48.0, Dark Glare
 		ScheduleTask: mod:DarkGlare() at 48.00 (+48.00)
-			ShowSpecialWarning: Dark Glare - dodge attack
-			PlaySound: VoicePack/laserrun
-			StartTimer: 39.0, Dark Glare ends
-			StartTimer: 86.0, Dark Glare
-			ScheduleTask: mod:DarkGlare() at 134.00 (+86.00)
-				Unscheduled by UNIT_DIED at 115.26
+			Unscheduled by SPELL_CAST_SUCCESS at 8.00
 	[  0.00] SPELL_CAST_START: [Eye of C'Thun: Eye Beam] Creature-0-1-531-1-15589-0000000001, Eye of C'Thun, 0xa48, "", nil, 0x0, 341722, Eye Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-531-1-15589-0000000001", "EyeBeamTarget", 0.1, 3.0) at 0.10 (+0.10)
 			ScheduleTask: mod:BossTargetScanner("Creature-0-1-531-1-15589-0000000001", "EyeBeamTarget", 0.1, 3.0) at 0.20 (+0.10)
@@ -114,6 +103,7 @@ Event trace:
 	[  8.00] SPELL_CAST_SUCCESS: [Claw Tentacle: Birth] Creature-0-1-531-1-15725-0000000009, Claw Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
 		AntiSpam: 15725
 		StopTimer: TimerClawTentacle
+		UnscheduleTask: mod:DarkGlare() scheduled by ScheduleTask at 0.00
 		ShowAnnounce: Claw Tentacle
 		StartTimer: 8.0, Claw Tentacle
 	[ 15.99] SPELL_CAST_SUCCESS: [Claw Tentacle: Birth] Creature-0-1-531-1-15725-0000000010, Claw Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
@@ -226,13 +216,11 @@ Event trace:
 				ScheduleTask: mod:BossTargetScanner("Creature-0-1-531-1-15589-0000000001", "EyeBeamTarget", 0.1, 3.0) at 115.17 (+0.10)
 	[115.26] UNIT_DIED: [->Eye of C'Thun] "", nil, 0x0, Creature-0-1-531-1-15589-0000000001, Eye of C'Thun, 0xa48, -1, false, 0, 0
 		ShowAnnounce: Stage 2
-		StopTimer: Timer26029next
 		StopTimer: TimerEyeTentacle
 		StopTimer: TimerClawTentacle
 		StartTimer: 40.5, Eye Tentacles
 		StartTimer: 10.5, Giant Claw Tentacle
 		StartTimer: 41.3, Giant Eye Tentacle
-		UnscheduleTask: mod:DarkGlare() scheduled by ScheduleTask at 48.00
 	[126.63] SPELL_CAST_SUCCESS: [Giant Claw Tentacle: Birth] Creature-0-1-531-1-15728-000000006B, Giant Claw Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
 		AntiSpam: 15728
 		ShowAnnounce: Giant Claw Tentacle
@@ -264,9 +252,11 @@ Event trace:
 		ModTrace: EnterStomach, Dps4
 	[182.55] UNIT_DIED: [->Flesh Tentacle] "", nil, 0x0, Creature-0-1-531-1-15802-0000000064, Flesh Tentacle, 0xa48, -1, false, 0, 0
 		ScheduleTask: (anonymous function) at 212.55 (+30.00)
+			Unscheduled by SPELL_CAST_SUCCESS at 186.63
 	[186.63] SPELL_CAST_SUCCESS: [Eye Tentacle: Birth] Creature-0-1-531-1-15726-000000009B, Eye Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
 		AntiSpam: 15726
 			Filtered: 1x SPELL_CAST_SUCCESS at 186.63
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 182.55
 		ShowAnnounce: Eye Tentacles
 		StartTimer: 30.0, Eye Tentacles
 	[190.44] SPELL_AURA_APPLIED: [C'Thun->Dps13: Digestive Acid] Creature-0-1-531-1-15727-0000000001, C'Thun, 0xa48, Player-1-00000017, Dps13, 0x512, 26476, Digestive Acid, 0, DEBUFF, 0
@@ -291,12 +281,14 @@ Event trace:
 				ScheduleTask: mod:BossTargetScanner("Creature-0-1-531-1-15334-000000009E", "EyeBeamTarget", 0.1, 3.0) at 204.28 (+0.10)
 	[210.42] UNIT_DIED: [->Flesh Tentacle] "", nil, 0x0, Creature-0-1-531-1-15802-000000019A, Flesh Tentacle, 0xa48, -1, false, 0, 0
 		ScheduleTask: (anonymous function) at 240.42 (+30.00)
+			Unscheduled by CHAT_MSG_MONSTER_EMOTE at 210.64
 	[210.44] SPELL_AURA_APPLIED: [C'Thun->Dps12: Digestive Acid] Creature-0-1-531-1-15727-0000000001, C'Thun, 0xa48, Player-1-00000014, Dps12, 0x512, 26476, Digestive Acid, 0, DEBUFF, 0
 		ModTrace: EnterStomach, Dps12
 	[210.64] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4525, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: C'Thun Weakened!
 		PlaySound: VoicePack/targetchange
 		StopTimer: TimerEyeTentacle
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 210.42
 		StopTimer: TimerGiantEyeTentacle
 		StartTimer: 45.0, Weaken ends
 		StartTimer: 83.0, Eye Tentacles
@@ -350,11 +342,13 @@ Event trace:
 		StartTimer: 30.0, Eye Tentacles
 	[323.06] UNIT_DIED: [->Flesh Tentacle] "", nil, 0x0, Creature-0-1-531-1-15802-00000000CA, Flesh Tentacle, 0xa48, -1, false, 0, 0
 		ScheduleTask: (anonymous function) at 353.06 (+30.00)
+			Unscheduled by SPELL_CAST_SUCCESS at 328.05
 	[326.15] SPELL_AURA_APPLIED: [C'Thun->Dps10: Digestive Acid] Creature-0-1-531-1-15727-0000000001, C'Thun, 0xa48, Player-1-00000012, Dps10, 0x512, 26476, Digestive Acid, 0, DEBUFF, 0
 		ModTrace: EnterStomach, Dps10
 	[328.05] SPELL_CAST_SUCCESS: [Giant Eye Tentacle: Birth] Creature-0-1-531-1-15334-0000000100, Giant Eye Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
 		AntiSpam: 15334
 		StopTimer: TimerGiantEyeTentacle
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 323.06
 		ShowAnnounce: Giant Eye Tentacle
 		StartTimer: 60.0, Giant Eye Tentacle
 	[331.85] SPELL_CAST_START: [Giant Eye Tentacle: Eye Beam] Creature-0-1-531-1-15334-0000000100, Giant Eye Tentacle, 0xa48, "", nil, 0x0, 26134, Eye Beam, 0, 0
@@ -365,10 +359,12 @@ Event trace:
 		ModTrace: EnterStomach, Dps4
 	[337.13] UNIT_DIED: [->Flesh Tentacle] "", nil, 0x0, Creature-0-1-531-1-15802-00000001CA, Flesh Tentacle, 0xa48, -1, false, 0, 0
 		ScheduleTask: (anonymous function) at 367.13 (+30.00)
+			Unscheduled by CHAT_MSG_MONSTER_EMOTE at 337.19
 	[337.19] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4556, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: C'Thun Weakened!
 		PlaySound: VoicePack/targetchange
 		StopTimer: TimerEyeTentacle
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 337.13
 		StopTimer: TimerGiantClawTentacle
 		StopTimer: TimerGiantEyeTentacle
 		StartTimer: 45.0, Weaken ends
@@ -396,10 +392,12 @@ Event trace:
 		ModTrace: EnterStomach, PlayerName
 	[414.76] UNIT_DIED: [->Flesh Tentacle] "", nil, 0x0, Creature-0-1-531-1-15802-000000012A, Flesh Tentacle, 0xa48, -1, false, 0, 0
 		ScheduleTask: (anonymous function) at 444.76 (+30.00)
+			Unscheduled by SPELL_CAST_SUCCESS at 418.60
 	[418.60] SPELL_CAST_SUCCESS: [Eye Tentacle: Birth] Creature-0-1-531-1-15726-0000000143, Eye Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
 		AntiSpam: 15726
 			Filtered: 2x SPELL_CAST_SUCCESS at 418.6, 418.6
 		StopTimer: TimerEyeTentacle
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 414.76
 		ShowAnnounce: Eye Tentacles
 		StartTimer: 30.0, Eye Tentacles
 	[420.92] SPELL_AURA_REMOVED: [C'Thun->Dps3: Digestive Acid] Creature-0-1-531-1-15727-0000000001, C'Thun, 0xa48, Player-1-00000003, Dps3, 0x512, 26476, Digestive Acid, 0, DEBUFF, 0
@@ -437,11 +435,12 @@ Event trace:
 		StartTimer: 60.0, Giant Claw Tentacle
 	[440.46] UNIT_DIED: [->Flesh Tentacle] "", nil, 0x0, Creature-0-1-531-1-15802-000000020A, Flesh Tentacle, 0xa48, -1, false, 0, 0
 		ScheduleTask: (anonymous function) at 470.46 (+30.00)
-			Unscheduled by ENCOUNTER_END at 468.61
+			Unscheduled by CHAT_MSG_MONSTER_EMOTE at 440.65
 	[440.65] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4582, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: C'Thun Weakened!
 		PlaySound: VoicePack/targetchange
 		StopTimer: TimerEyeTentacle
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 440.46
 		StopTimer: TimerGiantClawTentacle
 		StartTimer: 45.0, Weaken ends
 		StartTimer: 83.0, Eye Tentacles
@@ -457,7 +456,4 @@ Event trace:
 		ModTrace: LeaveStomach, Dps1
 	[468.61] ENCOUNTER_END: 717, C'thun, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 440.46
 		AntiSpam: 717
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 26476

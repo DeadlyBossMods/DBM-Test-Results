@@ -200,9 +200,7 @@ Event trace:
 		UnscheduleTask: mod:BombTimerLoop() scheduled by ScheduleTask at 28.00
 		ScheduleTask: mod:BombTimerLoop() at 84.66 (+47.66)
 			ScheduleTask: mod:BombTimerLoop() at 132.02 (+47.36)
-				ScheduleTask: mod:BombTimerLoop() at 179.38 (+47.36)
-					ScheduleTask: mod:BombTimerLoop() at 226.74 (+47.36)
-						ScheduleTask: mod:BombTimerLoop() at 274.10 (+47.36)
+				Unscheduled by LOADING_SCREEN_DISABLED at 128.00
 			StartTimer: 47.4, Bombs
 			UpdateTimer: TimerBombs, 0.30666666727335, 47.36
 	[ 46.00] SPELL_AURA_APPLIED: [(DNT) Invisible Stalker->Player1: Arcane Bomb] Creature-0-1-469-1-231678-0000000001, (DNT) Invisible Stalker, 0xa48, Player-1-00000001, Player1, 0x511, 466357, Arcane Bomb, 0, DEBUFF, 0
@@ -244,6 +242,7 @@ Event trace:
 			StartTimer: 47.4, Nature's Fury
 	[128.00] LOADING_SCREEN_DISABLED: , 0
 		StopTimer: TimerBombs
+		UnscheduleTask: mod:BombTimerLoop() scheduled by ScheduleTask at 84.66
 	[248.00] LOADING_SCREEN_DISABLED: , 0
 		StartTimer: 47.4, Bombs
 		UpdateTimer: TimerBombs, 21.560000002686, 47.36

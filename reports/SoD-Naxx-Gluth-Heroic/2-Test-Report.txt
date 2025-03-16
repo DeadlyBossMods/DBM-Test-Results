@@ -55,21 +55,26 @@ Event trace:
 		StartTimer: 19.4, Terrifying Roar
 		StartTimer: 420.0, Berserk
 		ScheduleTask: announce:Schedule(5.0, "min") at 120.00 (+120.00)
-			Unscheduled by ENCOUNTER_END at 84.26
+			Unscheduled by SPELL_AURA_REMOVED at 11.86
 		ScheduleTask: announce:Schedule(3.0, "min") at 240.00 (+240.00)
-			Unscheduled by ENCOUNTER_END at 84.26
+			Unscheduled by SPELL_AURA_REMOVED at 11.86
 		ScheduleTask: announce:Schedule(1.0, "min") at 360.00 (+360.00)
-			Unscheduled by ENCOUNTER_END at 84.26
+			Unscheduled by SPELL_AURA_REMOVED at 11.86
 		ScheduleTask: announce:Schedule(30.0, "sec") at 390.00 (+390.00)
-			Unscheduled by ENCOUNTER_END at 84.26
+			Unscheduled by SPELL_AURA_REMOVED at 11.86
 		ScheduleTask: announce:Schedule(10.0, "sec") at 410.00 (+410.00)
-			Unscheduled by ENCOUNTER_END at 84.26
+			Unscheduled by SPELL_AURA_REMOVED at 11.86
 	[ 9.71] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
 		ShowSpecialWarning: Frenzy on Gluth - dispel now
 		PlaySound: VoicePack/enrage
 		StartTimer: 8.0, Frenzy ends
 	[11.86] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
 		StopTimer: Timer19451active
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
 	[17.78] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
 		ShowAnnounce: Terrifying Roar
 		StartTimer: 22.5, Terrifying Roar
@@ -126,10 +131,3 @@ Event trace:
 		StopTimer: Timer19451active
 	[84.26] ENCOUNTER_END: 1108, Gluth, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 28371

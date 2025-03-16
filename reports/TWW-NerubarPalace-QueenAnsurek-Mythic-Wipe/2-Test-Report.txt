@@ -70,6 +70,7 @@ Findings:
 Unused objects:
 	[Announce] Reaction Vapor (%s), type=count, spellId=441556
 	[Announce] Gorge on >%s< (%d), type=stack, spellId=443342
+	[Announce] Pull (%s), type=count, spellId=447411
 	[Announce] Caustic Fangs on >%s< (%d), type=stack, spellId=449236
 	[Special Warning] Feast - defensive, type=defensive, spellId=437093
 	[Special Warning] Reactive Toxin - move away from others, type=moveaway, spellId=437592
@@ -225,10 +226,6 @@ Announces:
 			 Triggered 3x, delta times: 359.65, 64.00, 83.01
 	Froth Vapor on >%s< (%d), type=stack, spellId=445880, triggerDeltas = 557.69
 		[557.69] SPELL_AURA_APPLIED: [Queen Ansurek->Queen Ansurek: Froth Vapor] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, 445880, Froth Vapor, 0, BUFF, 0
-	Pull (%s), type=count, spellId=447411, triggerDeltas = 235.16, 16.00, 18.83
-		[235.16] Scheduled at 234.66 by SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
-		[251.16] Scheduled at 250.66 by SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
-		[269.99] Scheduled at 269.49 by SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
 	Toxic Waves (%s), type=count, spellId=447456, triggerDeltas = 169.37, 4.02, 4.00, 11.06, 4.02, 3.99
 		[169.37] SPELL_CAST_SUCCESS: [Queen Ansurek: Paralyzing Venom] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 447456, Paralyzing Venom, 0, 0
 			 Triggered 6x, delta times: 169.37, 4.02, 4.00, 11.06, 4.02, 3.99
@@ -638,14 +635,10 @@ Event trace:
 		StartTimer: 6.0, Knock Up
 		StartTimer: 11.7, Pull (1)
 		StartTimer: 12.5, Expulsion Beam (1)
-	Unknown trigger
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\4.ogg
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\3.ogg
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\2.ogg
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\1.ogg
 	[234.66] SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
 		ScheduleTask: (anonymous function) at 235.16 (+0.50)
-			ShowAnnounce: Pull (1)
+			Unscheduled by SPELL_CAST_START at 234.66
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 234.66
 		StartTimer: 8.0, Pull (2)
 	[235.49] SPELL_CAST_START: [Chamber Expeller: Expulsion Beam] Creature-0-1-2657-1-224368-0000000036, Chamber Expeller, 0xa48, "", nil, 0x0, 451600, Expulsion Beam, 0, 0
 		ShowSpecialWarning: Expulsion Beam (1) - dodge attack
@@ -661,10 +654,10 @@ Event trace:
 		StartTimer: 10.0, Oust
 	[242.66] SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
 		ScheduleTask: (anonymous function) at 243.16 (+0.50)
-			Unscheduled by RAID_BOSS_WHISPER at 242.73
+			Unscheduled by SPELL_CAST_START at 242.66
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 242.66
 		StartTimer: 8.0, Pull (3)
 	[242.73] RAID_BOSS_WHISPER: %s begins to cast [Wrest]!, Queen Ansurek, 5, true, 0
-		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 242.66
 		ShowSpecialWarning: Pull! (2)
 		PlaySound: VoicePack/pullin
 		SetTimerProperty: Timer447411cdcount\t3, STFade, true
@@ -686,7 +679,8 @@ Event trace:
 		PlaySound: VoicePack/watchfeet
 	[250.66] SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
 		ScheduleTask: (anonymous function) at 251.16 (+0.50)
-			ShowAnnounce: Pull (3)
+			Unscheduled by SPELL_CAST_START at 250.66
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 250.66
 		StartTimer: 8.0, Pull (4)
 	[250.97] UNIT_DIED: [->Chamber Expeller] "", nil, 0x0, Creature-0-1-2657-1-224368-00000000A0, Chamber Expeller, 0xa48, -1, false, 0, 0
 		StopTimer: Timer451600cdcount\t5
@@ -697,7 +691,8 @@ Event trace:
 		StartTimer: 6.0, Gloom Touch
 	[261.46] SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
 		ScheduleTask: (anonymous function) at 261.96 (+0.50)
-			Unscheduled by RAID_BOSS_WHISPER at 261.66
+			Unscheduled by SPELL_CAST_START at 261.46
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 261.46
 		StartTimer: 8.0, Pull (5)
 	[261.49] SPELL_CAST_START: [Chamber Expeller: Expulsion Beam] Creature-0-1-2657-1-224368-000000003B, Chamber Expeller, 0xa48, "", nil, 0x0, 451600, Expulsion Beam, 0, 0
 		ShowSpecialWarning: Expulsion Beam (5) - dodge attack
@@ -707,7 +702,6 @@ Event trace:
 		ShowSpecialWarning: Dark Detonation - interrupt Chamber Acolyte! (1)
 		PlaySound: VoicePack/kick1r
 	[261.66] RAID_BOSS_WHISPER: %s begins to cast [Wrest]!, Queen Ansurek, 5, true, 0
-		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 261.46
 		ShowSpecialWarning: Pull! (4)
 		PlaySound: VoicePack/pullin
 		SetTimerProperty: Timer447411cdcount\t5, STFade, true
@@ -722,7 +716,8 @@ Event trace:
 		StartTimer: 10.0, Oust
 	[269.49] SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
 		ScheduleTask: (anonymous function) at 269.99 (+0.50)
-			ShowAnnounce: Pull (5)
+			Unscheduled by SPELL_CAST_START at 269.49
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 269.49
 		StartTimer: 8.0, Pull (6)
 	[269.62] SPELL_CAST_START: [Chamber Acolyte: Dark Detonation] Creature-0-1-2657-1-226200-000000003D, Chamber Acolyte, 0xa48, "", nil, 0x0, 455374, Dark Detonation, 0, 0
 		ShowSpecialWarning: Dark Detonation - interrupt Chamber Acolyte! (2)
@@ -744,10 +739,10 @@ Event trace:
 		StopTimer: Timer448458cast
 	[277.47] SPELL_CAST_START: [Queen Ansurek: Wrest] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 450191, Wrest, 0, 0
 		ScheduleTask: (anonymous function) at 277.97 (+0.50)
-			Unscheduled by RAID_BOSS_WHISPER at 277.59
+			Unscheduled by SPELL_CAST_START at 277.47
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 277.47
 		StartTimer: 8.0, Pull (7)
 	[277.59] RAID_BOSS_WHISPER: %s begins to cast [Wrest]!, Queen Ansurek, 5, true, 0
-		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 277.47
 		ShowSpecialWarning: Pull! (6)
 		PlaySound: VoicePack/pullin
 		SetTimerProperty: Timer447411cdcount\t7, STFade, true
@@ -795,11 +790,6 @@ Event trace:
 			Filtered: 1x UNIT_DIED at 309.27
 		ShowAnnounce: Knock Up
 		StartTimer: 6.0, Knock Up
-	Unknown trigger
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\4.ogg
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\3.ogg
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\2.ogg
-		PlaySound: Interface\AddOns\DBM-Core\Sounds\Corsica\1.ogg
 	[314.46] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2657-2-447208-000000014A, 447208, Queen Ansurek, 63.6, 0, ??, 0
 		ShowAnnounce: Platform (3)
 	[315.47] SPELL_CAST_START: [Queen Ansurek: Aphotic Communion] Creature-0-1-2657-1-218370-0000000002, Queen Ansurek, 0xa48, "", nil, 0x0, 449986, Aphotic Communion, 0, 0
@@ -1187,5 +1177,3 @@ Event trace:
 	[557.93] ENCOUNTER_END: 2922, Queen Ansurek, 16, 20, 0, 0
 		EndCombat: ENCOUNTER_END
 		UnscheduleTask: announce445880stack:Schedule("Queen Ansurek", 5.0) scheduled by ScheduleTask at 557.69
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 437586 447207 453990 462558 451278 443903 455387 445152 443656 445013 445021 464056 447967

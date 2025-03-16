@@ -59,17 +59,17 @@ Event trace:
 		RegisterEvents: Regular, SPELL_AURA_APPLIED 28169, SPELL_AURA_REMOVED 28169, SPELL_CAST_SUCCESS 28240
 		StartTimer: 720.0, Berserk
 		ScheduleTask: announce:Schedule(10.0, "min") at 120.00 (+120.00)
-			Unscheduled by ENCOUNTER_END at 75.26
+			Unscheduled by SPELL_AURA_REMOVED at 18.51
 		ScheduleTask: announce:Schedule(5.0, "min") at 420.00 (+420.00)
-			Unscheduled by ENCOUNTER_END at 75.26
+			Unscheduled by SPELL_AURA_REMOVED at 18.51
 		ScheduleTask: announce:Schedule(3.0, "min") at 540.00 (+540.00)
-			Unscheduled by ENCOUNTER_END at 75.26
+			Unscheduled by SPELL_AURA_REMOVED at 18.51
 		ScheduleTask: announce:Schedule(1.0, "min") at 660.00 (+660.00)
-			Unscheduled by ENCOUNTER_END at 75.26
+			Unscheduled by SPELL_AURA_REMOVED at 18.51
 		ScheduleTask: announce:Schedule(30.0, "sec") at 690.00 (+690.00)
-			Unscheduled by ENCOUNTER_END at 75.26
+			Unscheduled by SPELL_AURA_REMOVED at 18.51
 		ScheduleTask: announce:Schedule(10.0, "sec") at 710.00 (+710.00)
-			Unscheduled by ENCOUNTER_END at 75.26
+			Unscheduled by SPELL_AURA_REMOVED at 18.51
 	[ 9.53] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
 		ShowAnnounce: Poison Cloud
 		StartTimer: 15.0, Poison Cloud
@@ -78,6 +78,12 @@ Event trace:
 		ShowAnnounce: Mutating Injection on Dps14
 	[18.51] SPELL_AURA_REMOVED: [Grobbulus->Dps14: Mutating Injection] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, Player-1-00000016, Dps14, 0x512, 28169, Mutating Injection, 0, DEBUFF, 0
 		StopTimer: Timer28169target\tDps14
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
 	[25.70] SPELL_CAST_SUCCESS: [Grobbulus: Poison Cloud] Creature-0-1-533-1-15931-0000000001, Grobbulus, 0xa48, "", nil, 0x0, 28240, Poison Cloud, 0, 0
 		ShowAnnounce: Poison Cloud
 		StartTimer: 15.0, Poison Cloud
@@ -115,11 +121,3 @@ Event trace:
 		StartTimer: 15.0, Poison Cloud
 	[75.26] ENCOUNTER_END: 1111, Grobbulus, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 28169

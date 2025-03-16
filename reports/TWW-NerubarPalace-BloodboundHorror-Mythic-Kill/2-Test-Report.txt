@@ -39,12 +39,10 @@ Timers:
 		[206.13] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps8: Grasp From Beyond] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000008, Dps8, 0x512, 443042, Grasp From Beyond, 0, DEBUFF, 0
 		[234.02] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps2: Grasp From Beyond] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000002, Dps2, 0x512, 443042, Grasp From Beyond, 0, DEBUFF, 0
 		[275.16] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps12: Grasp From Beyond] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000012, Dps12, 0x512, 443042, Grasp From Beyond, 0, DEBUFF, 0
-	Crimson Rain (%s), time=128.00, type=nextcount, spellId=443203, triggerDeltas = 0.00, 11.04, 30.00, 30.00, 48.95, 19.14, 108.88, 19.04
+	Crimson Rain (%s), time=128.00, type=nextcount, spellId=443203, triggerDeltas = 0.00, 11.04, 108.95, 19.14, 108.88, 19.04
 		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
 		[ 11.04] SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
 			 Triggered 3x, delta times: 11.04, 128.09, 127.92
-		[ 41.04] Scheduled at 11.04 by SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-			 Triggered 2x, delta times: 41.04, 30.00
 		[119.99] SPELL_CAST_START: [The Bloodbound Horror: Goresplatter] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 442530, Goresplatter, 0, 0
 			 Triggered 2x, delta times: 119.99, 128.02
 	Gruesome Disgorge fades, time=40.00, type=fades, spellId=443612, triggerDeltas = 19.03, 127.99, 128.03
@@ -72,15 +70,9 @@ Timers:
 			 Triggered 11x, delta times: 8.97, 32.01, 26.98, 32.02, 37.02, 31.99, 27.03, 32.00, 37.02, 31.98, 27.01
 
 Announces:
-	Crimson Rain (%s), type=count, spellId=443203, triggerDeltas = 11.04, 30.00, 30.00, 30.00, 38.09, 30.00, 30.00, 30.00, 37.92, 30.00, 30.00
+	Crimson Rain (%s), type=count, spellId=443203, triggerDeltas = 11.04, 128.09, 127.92
 		[ 11.04] SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
 			 Triggered 3x, delta times: 11.04, 128.09, 127.92
-		[ 41.04] Scheduled at 11.04 by SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-			 Triggered 3x, delta times: 41.04, 30.00, 30.00
-		[169.13] Scheduled at 139.13 by SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-			 Triggered 3x, delta times: 169.13, 30.00, 30.00
-		[297.05] Scheduled at 267.05 by SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-			 Triggered 2x, delta times: 297.05, 30.00
 	Gruesome Disgorge faded, type=fades, spellId=443612, triggerDeltas = 59.02, 128.02, 128.02
 		[ 59.02] SPELL_AURA_REMOVED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 59.02, 128.02, 128.02
@@ -205,13 +197,11 @@ Event trace:
 		ShowAnnounce: Crimson Rain (1)
 		StartTimer: 30.0, Crimson Rain (2)
 		ScheduleTask: (anonymous function) at 41.04 (+30.00)
-			ShowAnnounce: Crimson Rain (2)
-			StartTimer: 30.0, Crimson Rain (3)
+			Unscheduled by SPELL_CAST_START at 31.95
 		ScheduleTask: (anonymous function) at 71.04 (+60.00)
-			ShowAnnounce: Crimson Rain (3)
-			StartTimer: 30.0, Crimson Rain (4)
+			Unscheduled by SPELL_CAST_START at 31.95
 		ScheduleTask: (anonymous function) at 101.04 (+90.00)
-			ShowAnnounce: Crimson Rain (4)
+			Unscheduled by SPELL_CAST_START at 31.95
 	[ 13.99] SPELL_CAST_START: [The Bloodbound Horror: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 444363, Gruesome Disgorge, 0, 0
 		ShowSpecialWarning: Frontal! (1)
 		StartTimer: 59.0, Frontal (2)
@@ -254,6 +244,9 @@ Event trace:
 	[ 31.95] SPELL_CAST_START: [The Bloodbound Horror: Spewing Hemorrhage] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 445936, Spewing Hemorrhage, 0, 0
 		ShowSpecialWarning: Beams (1) - dodge attack
 		PlaySound: VoicePack/farfromline
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 11.04
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 11.04
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 11.04
 		StartTimer: 59.0, Beams (2)
 	[ 33.62] SPELL_CAST_START: [Forgotten Harbinger: Manifest Horror] Creature-0-1-2657-1-221945-0000000092, Forgotten Harbinger, 0xa48, "", nil, 0x0, 445174, Manifest Horror, 0, 0
 		AntiSpam: 1
@@ -355,7 +348,7 @@ Event trace:
 		ShowSpecialWarning: Run away! - run away (1)
 		PlaySound: VoicePack/justrun
 		StartTimer: 128.0, Run away! (2)
-		StartTimer: 19.0, Crimson Rain (5)
+		StartTimer: 19.0, Crimson Rain (2)
 	[126.26] SPELL_PERIODIC_DAMAGE: [->Dps19: Black Blood] "", nil, 0x0, Player-1-00000019, Dps19, 0x511, 445518, Black Blood, 0, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Black Blood damage - move away
@@ -367,16 +360,19 @@ Event trace:
 		PlaySound: VoicePack/scatter
 		ShowYell: Bloodcurdle
 	[139.13] SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-		ShowAnnounce: Crimson Rain (5)
-		StartTimer: 30.0, Crimson Rain (6)
+		ShowAnnounce: Crimson Rain (2)
+		StartTimer: 30.0, Crimson Rain (3)
 		ScheduleTask: (anonymous function) at 169.13 (+30.00)
-			ShowAnnounce: Crimson Rain (6)
+			Unscheduled by SPELL_CAST_START at 142.02
 		ScheduleTask: (anonymous function) at 199.13 (+60.00)
-			ShowAnnounce: Crimson Rain (7)
+			Unscheduled by SPELL_CAST_START at 142.02
 		ScheduleTask: (anonymous function) at 229.13 (+90.00)
-			ShowAnnounce: Crimson Rain (8)
+			Unscheduled by SPELL_CAST_START at 142.02
 	[142.02] SPELL_CAST_START: [The Bloodbound Horror: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 444363, Gruesome Disgorge, 0, 0
 		ShowSpecialWarning: Frontal! (3)
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 139.13
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 139.13
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 139.13
 		StartTimer: 59.0, Frontal (4)
 	[147.01] SPELL_SUMMON: [The Bloodbound Horror->Forgotten Harbinger: Summon Forgotten Harbinger] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Creature-0-1-2657-1-221945-000000003E, Forgotten Harbinger, 0xa48, 444835, Summon Forgotten Harbinger, 0, 0
 		ScanForMobs: Creature-0-1-2657-1-221945-000000003E, 2, 8, 1
@@ -555,7 +551,7 @@ Event trace:
 		ShowSpecialWarning: Run away! - run away (2)
 		PlaySound: VoicePack/justrun
 		StartTimer: 128.0, Run away! (3)
-		StartTimer: 19.0, Crimson Rain (9)
+		StartTimer: 19.0, Crimson Rain (3)
 	[252.51] SPELL_PERIODIC_DAMAGE: [->Dps19: Black Blood] "", nil, 0x0, Player-1-00000019, Dps19, 0x511, 445518, Black Blood, 0, 0
 		AntiSpam: 3
 		ShowSpecialWarning: Black Blood damage - move away
@@ -563,20 +559,23 @@ Event trace:
 	[265.04] SPELL_CAST_START: [The Bloodbound Horror: Bloodcurdle] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 452237, Bloodcurdle, 0, 0
 		StartTimer: 32.0, Spreads (10)
 	[267.05] SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-		ShowAnnounce: Crimson Rain (9)
-		StartTimer: 30.0, Crimson Rain (10)
+		ShowAnnounce: Crimson Rain (3)
+		StartTimer: 30.0, Crimson Rain (4)
 		ScheduleTask: (anonymous function) at 297.05 (+30.00)
-			ShowAnnounce: Crimson Rain (10)
+			Unscheduled by SPELL_CAST_START at 270.05
 		ScheduleTask: (anonymous function) at 327.05 (+60.00)
-			ShowAnnounce: Crimson Rain (11)
+			Unscheduled by SPELL_CAST_START at 270.05
 		ScheduleTask: (anonymous function) at 357.05 (+90.00)
-			Unscheduled by ENCOUNTER_END at 330.34
+			Unscheduled by SPELL_CAST_START at 270.05
 	[267.06] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps19: Bloodcurdle] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 452245, Bloodcurdle, 0, DEBUFF, 0
 		ShowSpecialWarning: Spreads - move away from others
 		PlaySound: VoicePack/scatter
 		ShowYell: Bloodcurdle
 	[270.05] SPELL_CAST_START: [The Bloodbound Horror: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 444363, Gruesome Disgorge, 0, 0
 		ShowSpecialWarning: Frontal! (5)
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 267.05
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 267.05
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 267.05
 		StartTimer: 59.0, Frontal (6)
 	[275.05] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
 		ShowAnnounce: Gruesome Disgorge on YOU
@@ -710,6 +709,3 @@ Event trace:
 		ShowAnnounce: Casting Manifest Horror: -nan sec
 	[330.34] ENCOUNTER_END: 2917, The Bloodbound Horror, 16, 20, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 267.05
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 443612 452245 443042

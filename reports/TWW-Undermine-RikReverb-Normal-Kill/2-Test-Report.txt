@@ -22,6 +22,16 @@ Findings:
 	Timer for spell ID 466979 (Faulty Zap) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
 	Timer for spell ID 467606 (Sound Cannon) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
 	Timer for spell ID 473748 (Amplification!) is triggered by event SPELL_AURA_REMOVED 1213817 (Sound Cloud)
+	Timer Amplification! (%s), time=40.00, type=cdcount, spellId=473748 (time=9.70, variance=0.00) got refreshed early with 9.70s remaining
+		Refreshed by: [153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
+	Timer Echoing Chant (%s), time=97.30, type=cdcount, spellId=466866 (time=21.00, variance=0.00) got refreshed early with 21.00s remaining
+		Refreshed by: [153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
+	Timer Faulty Zap (%s), time=97.30, type=cdcount, spellId=466979 (time=43.50, variance=0.00) got refreshed early with 43.50s remaining
+		Refreshed by: [153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
+	Timer Sound Cannon (%s), time=97.30, type=cdcount, spellId=467606 (time=32.00, variance=0.00) got refreshed early with 32.00s remaining
+		Refreshed by: [153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
+	Timer Stage %s, time=33.00, type=stagecount, spellId=66911 (time=120.00, variance=0.00) got refreshed early with 120.00s remaining
+		Refreshed by: [153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
 
 Unused objects:
 	[Announce] Tinnitus on >%s< (%d), type=stack, spellId=464518
@@ -40,21 +50,21 @@ Unused objects:
 	[Yell] Sound Cannon on PlayerName, type=yell, spellId=467606
 
 Timers:
-	Stage %s, time=33.00, type=stagecount, spellId=66911, triggerDeltas = 0.00, 121.01, 32.00
+	Stage %s, time=33.00, type=stagecount, spellId=66911, triggerDeltas = 0.00, 121.01, 32.00, 0.00
 		[  0.00] ENCOUNTER_START: 3011, Rik Reverb, 14, 30, 0
 		[121.01] SPELL_AURA_APPLIED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
 		[153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-	Echoing Chant (%s), time=97.30, type=cdcount, spellId=466866, triggerDeltas = 0.00, 21.00, 58.49, 73.52, 21.04, 58.50
+	Echoing Chant (%s), time=97.30, type=cdcount, spellId=466866, triggerDeltas = 0.00, 21.00, 58.49, 73.52, 0.00, 21.04, 58.50
 		[  0.00] ENCOUNTER_START: 3011, Rik Reverb, 14, 30, 0
 		[ 21.00] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 			 Triggered 4x, delta times: 21.00, 58.49, 94.56, 58.50
 		[153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-	Faulty Zap (%s), time=97.30, type=cdcount, spellId=466979, triggerDeltas = 0.00, 43.50, 31.48, 78.03, 43.55, 31.49
+	Faulty Zap (%s), time=97.30, type=cdcount, spellId=466979, triggerDeltas = 0.00, 43.50, 31.48, 78.03, 0.00, 43.55, 31.49
 		[  0.00] ENCOUNTER_START: 3011, Rik Reverb, 14, 30, 0
 		[ 43.50] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
 			 Triggered 4x, delta times: 43.50, 31.48, 121.58, 31.49
 		[153.01] SPELL_AURA_REMOVED: [Rik Reverb->Rik Reverb: Sound Cloud] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, 1213817, Sound Cloud, 0, BUFF, 0
-	Sound Cannon (%s), time=97.30, type=cdcount, spellId=467606, triggerDeltas = 0.00, 32.03, 120.98, 32.00
+	Sound Cannon (%s), time=97.30, type=cdcount, spellId=467606, triggerDeltas = 0.00, 32.03, 120.98, 0.00, 32.00
 		[  0.00] ENCOUNTER_START: 3011, Rik Reverb, 14, 30, 0
 		[ 32.03] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 			 Triggered 2x, delta times: 32.03, 152.98
@@ -65,7 +75,7 @@ Timers:
 	Blaring Drop (%s), time=8.00, type=nextcount, spellId=473260, triggerDeltas = 121.26, 8.01, 8.00
 		[121.26] SPELL_CAST_START: [Rik Reverb: Blaring Drop] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473260, Blaring Drop, 0, 0
 			 Triggered 3x, delta times: 121.26, 8.01, 8.00
-	Amplification! (%s), time=40.00, type=cdcount, spellId=473748, triggerDeltas = 0.00, 9.71, 40.37, 102.93, 9.91, 41.50
+	Amplification! (%s), time=40.00, type=cdcount, spellId=473748, triggerDeltas = 0.00, 9.71, 40.37, 102.93, 0.00, 9.91, 41.50
 		[  0.00] ENCOUNTER_START: 3011, Rik Reverb, 14, 30, 0
 		[  9.71] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 			 Triggered 4x, delta times: 9.71, 40.37, 112.84, 41.50
@@ -273,6 +283,11 @@ Event trace:
 		StartTimer: 32.0, Sound Cannon (3)
 		StartTimer: 43.5, Faulty Zap (4)
 		StartTimer: 120.0, Stage 2
+		StartTimer: 9.7, Amplification! (4)
+		StartTimer: 21.0, Echoing Chant (4)
+		StartTimer: 32.0, Sound Cannon (3)
+		StartTimer: 43.5, Faulty Zap (4)
+		StartTimer: 120.0, Stage 2
 	[162.92] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -367,5 +382,3 @@ Event trace:
 		StartTimer: 28.5, Echoing Chant (6)
 	[238.66] ENCOUNTER_END: 3011, Rik Reverb, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
-	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1217122 466128 1213817 467542
