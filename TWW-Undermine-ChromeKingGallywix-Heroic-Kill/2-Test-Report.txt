@@ -2,7 +2,6 @@ Test: TWW/Undermine/ChromeKingGallywix/Heroic/Kill
 Mod:  DBM-Raids-WarWithin/2646
 
 Findings:
-	Unused event registration: SPELL_AURA_APPLIED 1214229 (Armageddon-class Plating)
 	Unused event registration: SPELL_AURA_APPLIED 1214369 (TOTAL DESTRUCTION!!!)
 	Unused event registration: SPELL_AURA_APPLIED 1216444 (Bigger Badder Bomb Blast)
 	Unused event registration: SPELL_AURA_APPLIED 1216846 (Holding a Wrench)
@@ -13,11 +12,16 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1220761 (Mechengineer's Canisters)
 	Unused event registration: SPELL_AURA_APPLIED 1220784 (Auto-Locking Cuff Bomb)
 	Unused event registration: SPELL_AURA_APPLIED 1220846 (Control Meltdown)
+	Unused event registration: SPELL_AURA_APPLIED 1226891 (Circuit Reboot)
 	Unused event registration: SPELL_AURA_APPLIED 471603 (Scatterblast Canisters)
 	Unused event registration: SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
+	Unused event registration: SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
+	Unused event registration: SPELL_AURA_REMOVED 466165 (1500-Pound ""Dud"")
 	Unused event registration: SPELL_AURA_REMOVED 466246 (Focused Detonation)
 	Unused event registration: SPELL_CAST_START 1217987 (Combination Canisters)
-	Unused event registration: SPELL_CAST_START 1219039 (Ionization)
+	Unused event registration: SPELL_CAST_START 1218488 (Scatterbomb Canisters)
+	Unused event registration: SPELL_CAST_START 1218546 (Biggest Baddest Bomb Barrage)
+	Unused event registration: SPELL_CAST_START 1218696 (Mayhem Rockets)
 	Unused event registration: SPELL_CAST_START 1219041 (Static Zap)
 	Unused event registration: SPELL_CAST_START 469286 (Giga Coils)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1215209 (Sabotage Zone)
@@ -40,22 +44,10 @@ Findings:
 	SpecialWarning for spell ID 1214369 (TOTAL DESTRUCTION!!!) is triggered by event SPELL_AURA_REMOVED 1214229 (Armageddon-class Plating)
 	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
 	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_INTERRUPT 96231 (Rebuke)
+	Timer for spell ID 1214755 (Overloaded Rockets) is triggered by event SPELL_CAST_START 1214607 (Bigger Badder Bomb Blast)
 	Timer for spell ID 1217292 (Time-Release Crackle) is triggered by event SPELL_AURA_APPLIED 466246 (Focused Detonation)
 	Timer for spell ID 1217292 (Time-Release Crackle) is triggered by event SPELL_AURA_APPLIED_DOSE 466246 (Focused Detonation)
-	Timer 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165 (time=15.00, variance=0.00) got refreshed early with 14.00s remaining
-		Refreshed by: [ 25.39] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000010, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-	Timer 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165 (time=15.00, variance=0.00) got refreshed early with 14.00s remaining
-		Refreshed by: [ 96.22] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000033, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-	Timer 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165 (time=15.00, variance=0.00) got refreshed early with 14.00s remaining
-		Refreshed by: [359.23] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000AD, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-	Timer 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165 (time=15.00, variance=0.00) got refreshed early with 14.00s remaining
-		Refreshed by: [518.65] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000FA, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-	Timer 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165 (time=15.00, variance=0.00) got refreshed early with 14.07s remaining
-		Refreshed by: [ 60.70] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000026, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-	Timer 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165 (time=15.00, variance=0.00) got refreshed early with 14.07s remaining
-		Refreshed by: [183.80] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000064, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-	Timer 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165 (time=15.00, variance=0.00) got refreshed early with 14.07s remaining
-		Refreshed by: [323.17] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000009C, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
+	Timer for spell ID 1219333 (Gallybux Finale Blast) is triggered by event SPELL_CAST_START 467182 (Suppression)
 	Timer Ego Check (%s), time=97.30, type=cdcount, spellId=466958 (time=14.00, variance=0.00) got refreshed early with 0.97s remaining
 		Refreshed by: [334.70] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 	Timer Ego Check (%s), time=97.30, type=cdcount, spellId=466958 (time=14.00, variance=0.00) got refreshed early with 5.93s remaining
@@ -75,6 +67,7 @@ Findings:
 
 Unused objects:
 	[Announce] Giga Blast Residue on >%s<, type=target, spellId=1218504
+	[Announce] Mayhem Rockets (%s), type=count, spellId=1218696
 	[Announce] Discharged Giga Bomb on >%s<, type=target, spellId=1218992
 	[Announce] Auto-Locking Cuff Bomb on >%s<, type=target, spellId=1220784
 	[Special Warning] Scatterblast Canisters on >%s< - taunt now, type=taunt, spellId=466340
@@ -84,11 +77,16 @@ Unused objects:
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1215209
 	[Special Warning] Wrench - defensive, type=defensive, spellId=1216845
 	[Special Warning] Combination Canisters - soak (%s), type=soakcount, spellId=1217987
+	[Special Warning] Scatterbomb Canisters - soak (%s), type=soakcount, spellId=1218488
+	[Special Warning] Biggest Baddest Bomb Barrage! (%s), type=count, spellId=1218546
 	[Special Warning] Ionization on >%s< - dispel now, type=dispel, spellId=1219039
 	[Special Warning] Static Zap - interrupt >%s<! (%d), type=interruptcount, spellId=1219041
 	[Timer] Shock Barrage, time=10.00, type=castpnp, spellId=466834
 	[Timer] TOTAL DESTRUCTION!!!, time=25.00, type=cast, spellId=1214369
-	[Timer] Combination Canisters AI, time=97.30, type=ai, spellId=1217987
+	[Timer] Combination Canisters (%s), time=97.30, type=cdcount, spellId=1217987
+	[Timer] Scatterbomb Canisters (%s), time=97.30, type=cdcount, spellId=1218488
+	[Timer] Biggest Baddest Bomb Barrage (%s), time=97.30, type=cdcount, spellId=1218546
+	[Timer] Mayhem Rockets, time=5.00, type=cast, spellId=1218696
 	[Timer] Control Meltdown (%s), time=15.00, type=castcount, spellId=1220846
 
 Timers:
@@ -103,8 +101,6 @@ Timers:
 	1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165, triggerDeltas = 24.37, 1.02, 34.32, 0.99, 34.50, 1.02, 86.60, 0.98, 138.43, 0.94, 35.04, 1.02, 60.82, 1.00, 61.67, 1.00, 33.93, 1.00
 		[ 24.37] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000000F, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 			 Triggered 18x, delta times: 24.37, 1.02, 34.32, 0.99, 34.50, 1.02, 86.60, 0.98, 138.43, 0.94, 35.04, 1.02, 60.82, 1.00, 61.67, 1.00, 33.93, 1.00
-		[ 26.44] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000000F, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-			 Triggered 10x, delta times: 26.44, 38.08, 36.80, 84.64, 137.47, 35.94, 61.57, 2.95, 59.43, 2.28
 	Scatterblast Canisters (%s), time=97.30, type=cdcount, spellId=466340, triggerDeltas = 0.00, 6.33, 17.06, 18.31, 18.86, 16.59
 		[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 15, 30, 0
 		[  6.33] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
@@ -156,6 +152,9 @@ Timers:
 			 Triggered 2x, delta times: 315.64, 160.54
 		[381.70] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 2x, delta times: 381.70, 75.83
+	Overloaded Rockets (%s), time=11.50, type=cdcount, spellId=1214755, triggerDeltas = 315.64, 36.04, 61.85, 62.65, 34.98
+		[315.64] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
+			 Triggered 5x, delta times: 315.64, 36.04, 61.85, 62.65, 34.98
 	Wrench, time=7.30, type=cdnp, spellId=1216845, triggerDeltas = 148.88, 1.23, 6.50, 0.59, 69.75, 0.00, 7.72, 0.00, 13.03, 0.01
 		[148.88] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-0000000053, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
 			 Triggered 10x, delta times: 148.88, 1.23, 6.50, 0.59, 69.75, 0.00, 7.72, 0.00, 13.03, 0.01
@@ -168,8 +167,15 @@ Timers:
 			 Triggered 3x, delta times: 102.86, 256.51, 123.96
 		[363.08] SPELL_AURA_APPLIED_DOSE: [Chrome King Gallywix->Tank6: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000030, Tank6, 0x512, 466246, Focused Detonation, 0, DEBUFF, 2, 0
 			 Triggered 2x, delta times: 363.08, 122.53
+	Gallybux Finale Blast (%s), time=6.00, type=castcount, spellId=1219333, triggerDeltas = 31.14, 38.99, 33.64, 62.05, 62.57, 112.28, 61.84, 62.73, 36.91
+		[ 31.14] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
+			 Triggered 9x, delta times: 31.14, 38.99, 33.64, 62.05, 62.57, 112.28, 61.84, 62.73, 36.91
 
 Announces:
+	%s, type=stagechange, spellId=<none>, triggerDeltas = 110.80, 156.14, 40.70
+		[110.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
+		[266.94] SPELL_AURA_APPLIED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 952817344, 0
+		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
 	Focused Detonation (%s), type=count, spellId=466246, triggerDeltas = 26.44, 2.05, 36.06, 1.89, 34.88, 84.67, 1.80, 135.64, 3.75, 93.76, 2.95
 		[ 26.44] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 			 Triggered 6x, delta times: 26.44, 38.11, 36.77, 84.67, 137.44, 97.51
@@ -262,6 +268,12 @@ Voice pack sounds:
 		[119.13] SPELL_CAST_START: [Sharpshot Sentry: Shock Barrage] Creature-0-1-2769-1-231978-000000003B, Sharpshot Sentry, 0xa48, "", nil, 0x0, 466834, Shock Barrage, 0, 0
 	VoicePack/kickcast
 		[290.52] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 0, 0
+	VoicePack/phasechange
+		[266.94] SPELL_AURA_APPLIED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 952817344, 0
+	VoicePack/pthree
+		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+	VoicePack/ptwo
+		[110.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
 	VoicePack/shareone
 		[  6.33] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 			 Triggered 3x, delta times: 6.33, 35.37, 35.45
@@ -294,7 +306,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 466340 467182 466751 469286 469327 466341 466834 1216845 1214607 466342 466958 1217987 1219041 1219039, SPELL_AURA_APPLIED 1216846 1214229 1214369 466165 1216444 1218504 1219039 1220784 469362 1218992 1218991 1220846 1220761 466246 469404 469293 471603 469387, SPELL_AURA_APPLIED_DOSE 466246, SPELL_AURA_REMOVED 1214229 1214369 466165 466246 1220290 469293, SPELL_INTERRUPT, SPELL_PERIODIC_DAMAGE 1215209, SPELL_PERIODIC_MISSED 1215209, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1
+		RegisterEvents: Regular, SPELL_CAST_START 466340 467182 466751 469286 469327 466341 466834 1216845 1214607 466342 466958 1217987 1219041 1218488 1218546 1218696, SPELL_AURA_APPLIED 1216846 1214229 1214369 466165 1216444 1218504 1219039 1220784 469362 1218992 1218991 1220846 1220761 466246 469404 469293 471603 469387 1226891, SPELL_AURA_APPLIED_DOSE 466246, SPELL_AURA_REMOVED 1214229 1214369 466165 466246 1220290 469293 1226891, SPELL_INTERRUPT, SPELL_PERIODIC_DAMAGE 1215209, SPELL_PERIODIC_MISSED 1215209, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1
 		StartTimer: 111.0, Stage 2
 		StartTimer: 6.5, Scatterblast Canisters (1)
 		StartTimer: 17.9, Big Bad Buncha Bombs (1)
@@ -319,8 +331,6 @@ Event trace:
 		StartTimer: 15.0, 1500-Pound ""Dud""
 	[ 25.39] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000010, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
-	[ 26.44] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000000F, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[ 26.44] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 		ShowAnnounce: Focused Detonation (1)
 		StartTimer: 10.0, Time-Release Crackle: PlayerName
@@ -330,6 +340,7 @@ Event trace:
 	[ 31.14] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (1)
 		StartTimer: 39.0, Suppression (2)
 	[ 38.15] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
 		ShowAnnounce: Venting Heat (2)
@@ -350,8 +361,6 @@ Event trace:
 		StartTimer: 16.5, Scatterblast Canisters (5)
 	[ 60.70] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000026, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
-	[ 64.52] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000025, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[ 64.55] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 		ShowAnnounce: Focused Detonation (1)
 		StartTimer: 10.0, Time-Release Crackle: PlayerName
@@ -364,6 +373,7 @@ Event trace:
 	[ 70.13] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (2) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (2)
 		StartTimer: 33.6, Suppression (3)
 	[ 77.15] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (5)
@@ -381,8 +391,6 @@ Event trace:
 	[ 97.75] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (6)
 		PlaySound: VoicePack/sharetwo
-	[101.32] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000032, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[101.32] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 		ShowAnnounce: Focused Detonation (1)
 		StartTimer: 10.0, Time-Release Crackle: PlayerName
@@ -391,7 +399,10 @@ Event trace:
 	[103.77] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (3) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (3)
 	[110.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
+		ShowAnnounce: Stage 2
+		PlaySound: VoicePack/ptwo
 		StartTimer: 6.0, Giga Coils (1)
 	[110.83] SPELL_AURA_APPLIED: [Darkfuse Technician->Darkfuse Technician: Carried Giga Bomb] Creature-0-1-2769-1-231977-000000003B, Darkfuse Technician, 0xa48, Creature-0-1-2769-1-231977-000000003B, Darkfuse Technician, 0xa48, 469387, Carried Giga Bomb, 0, BUFF, 0
 		ScanForMobs: Creature-0-1-2769-1-231977-000000003B, 2, 8, 1
@@ -464,6 +475,7 @@ Event trace:
 	[165.82] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (1)
 	[175.62] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 545, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Big Bad Buncha Bombs! (1)
 		PlaySound: VoicePack/bombsoon
@@ -473,8 +485,6 @@ Event trace:
 		StartTimer: 15.0, 1500-Pound ""Dud""
 	[184.92] SPELL_CAST_START: [Chrome King Gallywix: Fused Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466341, Fused Canisters, 0, 0
 		ShowAnnounce: Fused Canisters incoming debuff (2)
-	[185.96] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000064, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[185.99] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 		ShowAnnounce: Focused Detonation (1)
 		StartTimer: 10.0, Time-Release Crackle: PlayerName
@@ -528,6 +538,7 @@ Event trace:
 	[228.39] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (2) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (2)
 	[234.67] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-0000000076, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
 		StartTimer: 7.3, Wrench
 	[234.67] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-0000000075, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
@@ -540,10 +551,15 @@ Event trace:
 		StartTimer: 7.3, Wrench
 	[247.76] SPELL_CAST_START: [Chrome King Gallywix: Fused Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466341, Fused Canisters, 0, 0
 		ShowAnnounce: Fused Canisters incoming debuff (3)
+	[266.94] SPELL_AURA_APPLIED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 952817344, 0
+		ShowAnnounce: Stage 2.5
+		PlaySound: VoicePack/phasechange
 	[290.52] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 0, 0
 		ShowSpecialWarning: TOTAL DESTRUCTION!!! - interrupt Chrome King Gallywix!
 		PlaySound: VoicePack/kickcast
 	[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		ShowAnnounce: Stage 3
+		PlaySound: VoicePack/pthree
 		StartTimer: 60.0, Giga Coils (1)
 		StartTimer: 33.0, Suppression (1)
 		StartTimer: 8.0, Bigger Badder Bomb Blast (1)
@@ -552,6 +568,7 @@ Event trace:
 		StartTimer: 14.0, Ego Check (1)
 	[315.64] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 		ShowSpecialWarning: Bigger Badder Bomb Blast! (1)
+		StartTimer: 12.5, Overloaded Rockets (1)
 		PlaySound: VoicePack/bombsoon
 		StartTimer: 36.0, Bigger Badder Bomb Blast (2)
 	[321.66] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
@@ -560,8 +577,6 @@ Event trace:
 		StartTimer: 15.0, 1500-Pound ""Dud""
 	[323.17] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000009C, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
-	[323.43] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-000000009B, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[323.43] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 		ShowAnnounce: Focused Detonation (1)
 		StartTimer: 10.0, Time-Release Crackle: PlayerName
@@ -578,10 +593,12 @@ Event trace:
 	[340.67] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (1)
 	[349.63] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 		StartTimer: 14.0, Ego Check (4)
 	[351.68] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 		ShowSpecialWarning: Bigger Badder Bomb Blast! (2)
+		StartTimer: 12.5, Overloaded Rockets (2)
 		PlaySound: VoicePack/bombsoon
 	[357.68] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 		StartTimer: 14.0, Ego Check (5)
@@ -589,8 +606,6 @@ Event trace:
 		StartTimer: 15.0, 1500-Pound ""Dud""
 	[359.23] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000AD, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
-	[359.37] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000AC, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[359.37] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank6: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000030, Tank6, 0x512, 466246, Focused Detonation, 0, DEBUFF, 0
 		StartTimer: 10.0, Time-Release Crackle: Tank6
 	[361.82] SPELL_AURA_APPLIED: [Darkfuse Technician->Darkfuse Technician: Carried Giga Bomb] Creature-0-1-2769-1-231977-00000000AE, Darkfuse Technician, 0xa48, Creature-0-1-2769-1-231977-00000000AE, Darkfuse Technician, 0xa48, 469387, Carried Giga Bomb, 0, BUFF, 0
@@ -646,24 +661,22 @@ Event trace:
 	[402.51] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (2) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (2)
 	[411.49] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 		StartTimer: 15.3, Ego Check (7)
 	[413.53] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 		ShowSpecialWarning: Bigger Badder Bomb Blast! (3)
+		StartTimer: 12.5, Overloaded Rockets (3)
 		PlaySound: VoicePack/bombsoon
 	[419.56] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 		StartTimer: 15.3, Ego Check (8)
 	[420.05] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000CB, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
-	[420.94] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000CB, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[420.94] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 		ShowAnnounce: Focused Detonation (1)
 		StartTimer: 10.0, Time-Release Crackle: PlayerName
 	[421.05] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000CC, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
-	[423.89] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000CC, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[423.89] SPELL_AURA_APPLIED_DOSE: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 2, 0
 		ShowAnnounce: Focused Detonation (2)
 		StartTimer: 10.0, Time-Release Crackle: PlayerName
@@ -713,6 +726,7 @@ Event trace:
 	[465.24] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (3) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (3)
 		StartTimer: 43.0, Suppression (4)
 	[466.83] SPELL_AURA_APPLIED: [Giga Bomb->Dps13: Charged Giga Bomb] Creature-0-1-2769-1-233051-00000000E0, Giga Bomb, 0xa48, Player-1-00000020, Dps13, 0x512, 469362, Charged Giga Bomb, 0, DEBUFF, 0
 		ShowAnnounce: Charged Giga Bomb on Dps13
@@ -720,14 +734,13 @@ Event trace:
 		StartTimer: 16.4, Ego Check (10)
 	[476.18] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 		ShowSpecialWarning: Bigger Badder Bomb Blast! (4)
+		StartTimer: 12.5, Overloaded Rockets (4)
 		PlaySound: VoicePack/bombsoon
 		StartTimer: 35.0, Bigger Badder Bomb Blast (5)
 	[482.21] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 		StartTimer: 16.4, Ego Check (11)
 	[482.72] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000EA, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
-	[483.32] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000EA, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[483.33] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank6: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000030, Tank6, 0x512, 466246, Focused Detonation, 0, DEBUFF, 0
 		StartTimer: 10.0, Time-Release Crackle: Tank6
 	[483.72] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000EB, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
@@ -735,8 +748,6 @@ Event trace:
 	[485.18] SPELL_CAST_START: [Chrome King Gallywix: Tick-Tock Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466342, Tick-Tock Canisters, 0, 0
 		ShowSpecialWarning: Tick-Tock Canisters - soak (4)
 		PlaySound: VoicePack/helpsoak
-	[485.60] SPELL_AURA_REMOVED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000EB, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
-		StopTimer: Timer466165castpnp
 	[485.61] SPELL_AURA_APPLIED_DOSE: [Chrome King Gallywix->Tank6: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000030, Tank6, 0x512, 466246, Focused Detonation, 0, DEBUFF, 2, 0
 		StopTimer: Timer1217292target\tTank6
 		StartTimer: 10.0, Time-Release Crackle: Tank6
@@ -747,8 +758,10 @@ Event trace:
 	[502.15] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (4) - dodge attack
 		PlaySound: VoicePack/watchstep
+		StartTimer: 6.0, Gallybux Finale Blast (4)
 	[511.16] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 		ShowSpecialWarning: Bigger Badder Bomb Blast! (5)
+		StartTimer: 12.5, Overloaded Rockets (5)
 		PlaySound: VoicePack/bombsoon
 	[517.18] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 		StartTimer: 16.4, Ego Check (13)
@@ -759,4 +772,4 @@ Event trace:
 	[520.77] ENCOUNTER_END: 3016, Chrome King Gallywix, 15, 30, 1, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1214229 1214369 466165 466246 1220290 469293
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1214229 1214369 466165 466246 1220290 469293 1226891
