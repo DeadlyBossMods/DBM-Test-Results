@@ -24,6 +24,7 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
 	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_START 466470 (Frostshatter Boots)
 	Unused event registration: SPELL_CAST_START 466518 (Molten Gold Knuckles)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_START 474461 (Earthshaker Gaol)
@@ -39,7 +40,6 @@ Findings:
 	Announce for spell ID 466459 (Head Honcho: Mug) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Announce for spell ID 466460 (Head Honcho: Zee) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
 	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
-	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_START 466470 (Frostshatter Boots)
 	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Timer for spell ID 466480 (Frostshatter Spear) is triggered by event SPELL_AURA_APPLIED 466476 (Frostshatter Boots)
 	Timer for spell ID 466509 (Stormfury Finger Gun) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
@@ -99,11 +99,10 @@ Unused objects:
 Timers:
 	Faulty Wiring (%s), time=30.00, type=cdcount, spellId=<none>, triggerDeltas = 350.91
 		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 59.89, 119.98, 171.04, 16.25
+	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 59.89, 119.98, 171.04
 		[ 59.89] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 			 Triggered 2x, delta times: 59.89, 119.98
 		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-		[367.16] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
 	Frostshatter Spear, time=8.00, type=cast, spellId=466480, triggerDeltas = 96.67, 119.99, 152.53
 		[ 96.67] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps2: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000018, Frostshatter Spear, 0xa48, Player-1-00000002, Dps2, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
 		[216.66] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps13: Frostshatter Boots] Creature-0-1-2769-1-238694-00000000A3, Frostshatter Spear, 0xa48, Player-1-00000019, Dps13, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
@@ -331,7 +330,7 @@ Event trace:
 	[ 59.89] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug
 		StartTimer: 17.4, Earthshaker Gaol (1)
-		StartTimer: 25.0, Molten Gold Knuckles (1)
+		StartTimer: 27.8, Molten Gold Knuckles (1)
 		StartTimer: 34.7, Frostshatter Boots (1)
 		StartTimer: 50.0, Stormfury Finger Gun (1)
 	[ 60.75] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
@@ -556,7 +555,7 @@ Event trace:
 	[179.87] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug
 		StartTimer: 17.4, Earthshaker Gaol (2)
-		StartTimer: 25.0, Molten Gold Knuckles (2)
+		StartTimer: 27.8, Molten Gold Knuckles (2)
 		StartTimer: 34.7, Frostshatter Boots (2)
 		StartTimer: 50.0, Stormfury Finger Gun (2)
 	[180.00] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
@@ -896,14 +895,14 @@ Event trace:
 		StopTimer: Timer471419cdcount\t4
 		StartTimer: 3.7, Unstable Crawler Mines (1)
 		StartTimer: 16.2, Frostshatter Boots (1)
+		StartTimer: 32.2, Earthshaker Gaol (1)
 		StartTimer: 40.0, Goblin-guided Rocket (1)
 		StartTimer: 47.5, Faulty Wiring (1)
+		StartTimer: 50.0, Molten Gold Knuckles (1)
 		StartTimer: 62.4, Stormfury Finger Gun (1)
 		StartTimer: 74.7, Double Whammy Shot (1)
 		StartTimer: 81.2, Spray and Pray (1)
 		StartTimer: 118.0, Double-Minded Fury
-		StartTimer: 32.2, Earthshaker Gaol (1)
-		StartTimer: 50.0, Molten Gold Knuckles (1)
 	[351.53] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 351.63 (+0.10)
 	[353.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
@@ -933,8 +932,6 @@ Event trace:
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 365.41 (+0.10)
 	[366.11] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 366.21 (+0.10)
-	[367.16] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
-		StartTimer: 86.2, Frostshatter Boots (2)
 	[367.33] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 367.43 (+0.10)
 	[368.99] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0

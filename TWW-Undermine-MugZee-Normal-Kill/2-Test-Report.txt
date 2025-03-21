@@ -24,6 +24,7 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
 	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
+	Unused event registration: SPELL_CAST_START 466470 (Frostshatter Boots)
 	Unused event registration: SPELL_CAST_START 466518 (Molten Gold Knuckles)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_START 474461 (Earthshaker Gaol)
@@ -39,7 +40,6 @@ Findings:
 	Announce for spell ID 466459 (Head Honcho: Mug) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Announce for spell ID 466460 (Head Honcho: Zee) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
 	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
-	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_START 466470 (Frostshatter Boots)
 	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Timer for spell ID 466480 (Frostshatter Spear) is triggered by event SPELL_AURA_APPLIED 466476 (Frostshatter Boots)
 	Timer for spell ID 466509 (Stormfury Finger Gun) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
@@ -99,10 +99,9 @@ Unused objects:
 Timers:
 	Faulty Wiring (%s), time=30.00, type=cdcount, spellId=<none>, triggerDeltas = 223.57
 		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 75.20, 148.37, 16.23
+	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 75.20, 148.37
 		[ 75.20] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-		[239.80] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
 	Frostshatter Spear, time=8.00, type=cast, spellId=466480, triggerDeltas = 124.04, 117.32
 		[124.04] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps8: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000031, Frostshatter Spear, 0xa48, Player-1-00000012, Dps8, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
 		[241.36] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps7: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000062, Frostshatter Spear, 0xa48, Player-1-00000009, Dps7, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
@@ -282,8 +281,8 @@ Event trace:
 	[ 75.20] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug
 		StartTimer: 17.4, Earthshaker Gaol (1)
+		StartTimer: 34.7, Molten Gold Knuckles (1)
 		StartTimer: 46.6, Frostshatter Boots (1)
-		StartTimer: 50.0, Molten Gold Knuckles (1)
 		StartTimer: 60.0, Stormfury Finger Gun (1)
 	[ 89.12] SPELL_AURA_APPLIED: [Mug'Zee->Healer3: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000010, Healer3, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		ScheduleTask: (anonymous function) at 89.62 (+0.50)
@@ -398,21 +397,19 @@ Event trace:
 		StopTimer: Timer471419cdcount\t4
 		StartTimer: 3.7, Unstable Crawler Mines (1)
 		StartTimer: 16.2, Frostshatter Boots (1)
+		StartTimer: 32.8, Earthshaker Gaol (1)
 		StartTimer: 40.0, Goblin-guided Rocket (1)
 		StartTimer: 47.5, Faulty Wiring (1)
+		StartTimer: 50.0, Molten Gold Knuckles (1)
 		StartTimer: 62.4, Stormfury Finger Gun (1)
-		StartTimer: 74.7, Double Whammy Shot (1)
+		StartTimer: 75.3, Double Whammy Shot (1)
 		StartTimer: 81.2, Spray and Pray (1)
 		StartTimer: 118.0, Double-Minded Fury
-		StartTimer: 32.8, Earthshaker Gaol (1)
-		StartTimer: 33.3, Molten Gold Knuckles (1)
 	[226.48] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000052, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000052", "ArcTarget", 0.1, 8.0) at 226.58 (+0.10)
 	[227.31] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (1)
 		StartTimer: 88.7, Unstable Crawler Mines (2)
-	[239.80] SPELL_CAST_START: [Mug'Zee: Frostshatter Boots] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466470, Frostshatter Boots, 0, 0
-		StartTimer: 86.2, Frostshatter Boots (2)
 	[241.36] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps7: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000062, Frostshatter Spear, 0xa48, Player-1-00000009, Dps7, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 4x SPELL_AURA_APPLIED at 241.36, 241.36, 241.36, 241.36
