@@ -30,8 +30,6 @@ Findings:
 	Timer for spell ID 1216509 (Screw Up) is triggered by event SPELL_CAST_START 1216508 (Screw Up)
 	Timer for spell ID 1218319 (Voidsplosion) is triggered by event SPELL_CAST_START 466765 (Beta Launch)
 	Timer for spell ID 1218418 (Wire Transfer) is triggered by event SPELL_CAST_SUCCESS 466860 (Bleeding Edge)
-	Timer Wire Transfer (%s), time=97.30, type=nextcount, spellId=1218418 (time=20.00, variance=0.00) got refreshed early with 7.93s remaining
-		Refreshed by: [139.73] SPELL_CAST_START: [Sprocketmonger Lockenstock: Wire Transfer] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 1218418, Wire Transfer, 0, 0
 
 Unused objects:
 	[Announce] Screw Up faded, type=fades, spellId=1216509
@@ -290,7 +288,7 @@ Event trace:
 		StartTimer: 4.9, Voidsplosion (1)
 	[127.65] SPELL_CAST_SUCCESS: [Sprocketmonger Lockenstock: Bleeding Edge] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, "", nil, 0x0, 466860, Bleeding Edge, 0, 0
 		StartTimer: 10.0, Bleeding Edge ends
-		StartTimer: 20.0, Wire Transfer (1)
+		StartTimer: 12.0, Wire Transfer (1)
 	[128.40] SPELL_AURA_APPLIED: [Sprocketmonger Lockenstock->Healer1: Voidsplosion] Creature-0-1-2769-1-230583-0000000001, Sprocketmonger Lockenstock, 0xa48, Player-1-00000003, Healer1, 0x512, 1218319, Voidsplosion, 0, DEBUFF, 832296, 0
 		AntiSpam: 2
 			Filtered: 22x SPELL_AURA_APPLIED at 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4, 128.4
