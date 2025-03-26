@@ -23,7 +23,6 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1216142 (Double-Minded Fury)
 	Unused event registration: SPELL_CAST_START 1221299 (Spray and Pray)
 	Unused event registration: SPELL_CAST_START 1221302 (Stormfury Finger Gun)
-	Unused event registration: SPELL_CAST_START 1223085 (Double Whammy Shot)
 	Unused event registration: SPELL_CAST_START 466470 (Frostshatter Boots)
 	Unused event registration: SPELL_CAST_START 466518 (Molten Gold Knuckles)
 	Unused event registration: SPELL_CAST_START 469491 (Double Whammy Shot)
@@ -37,6 +36,7 @@ Findings:
 	Unused event registration: SPELL_PERIODIC_MISSED 472057 (Hot Mess)
 	Unused event registration: SPELL_PERIODIC_MISSED 474554 (Shaken Earth)
 	Unused event registration: UNIT_DIED
+	Unused event registration: UNIT_SPELLCAST_SUCCEEDED
 	Announce for spell ID 466459 (Head Honcho: Mug) is triggered by event SPELL_CAST_SUCCESS 468728 (Mug Taking Charge)
 	Announce for spell ID 466460 (Head Honcho: Zee) is triggered by event SPELL_CAST_SUCCESS 468794 (Zee Taking Charge)
 	Timer for spell ID 466476 (Frostshatter Boots) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
@@ -75,7 +75,7 @@ Unused objects:
 	[Special Warning] Golden Drip on >%s< - taunt now, type=taunt, spellId=467202
 	[Special Warning] Goblin-guided Rocket - move to >%s<, type=moveto, spellId=467380
 	[Special Warning] Perforating Wound on >%s< - taunt now, type=taunt, spellId=469391
-	[Special Warning] Double Whammy Shot - defensive, type=defensive, spellId=469491
+	[Special Warning] Double Whammy Shot - soak it, type=soak, spellId=469491
 	[Special Warning] Double Whammy Shot on you, type=you, spellId=469491
 	[Special Warning] Earthshaker Gaol on you, type=you, spellId=474461
 	[Special Warning] %s damage - move away, type=gtfo, spellId=474554
@@ -238,7 +238,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215591 1222948 469490 469601 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 1219283, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, RAID_BOSS_WHISPER, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 469491 1217791 1215953 1216142 1215481 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215591 1222948 469490 469601 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 1219283, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, RAID_BOSS_WHISPER, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1
 	[  0.03] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, 1215591, Faulty Wiring, 0, BUFF, 0
 		AntiSpam: 2
 			Filtered: 1x SPELL_AURA_APPLIED at 0.03
@@ -247,7 +247,7 @@ Event trace:
 		ShowAnnounce: Head Honcho: Zee
 		StartTimer: 13.9, Unstable Crawler Mines (1)
 		StartTimer: 29.8, Goblin-guided Rocket (1)
-		StartTimer: 42.4, Double Whammy Shot (1)
+		StartTimer: 38.9, Double Whammy Shot (1)
 		StartTimer: 50.0, Spray and Pray (1)
 	[ 13.88] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (1)
@@ -323,7 +323,7 @@ Event trace:
 		ShowAnnounce: Head Honcho: Zee
 		StartTimer: 13.9, Unstable Crawler Mines (2)
 		StartTimer: 29.8, Goblin-guided Rocket (3)
-		StartTimer: 42.4, Double Whammy Shot (2)
+		StartTimer: 38.9, Double Whammy Shot (2)
 		StartTimer: 50.0, Spray and Pray (2)
 	[133.78] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (2)
@@ -428,7 +428,7 @@ Event trace:
 		ShowAnnounce: Head Honcho: Zee
 		StartTimer: 13.9, Unstable Crawler Mines (3)
 		StartTimer: 29.8, Goblin-guided Rocket (5)
-		StartTimer: 42.4, Double Whammy Shot (3)
+		StartTimer: 38.9, Double Whammy Shot (3)
 		StartTimer: 50.0, Spray and Pray (3)
 	[249.96] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
@@ -484,7 +484,7 @@ Event trace:
 		StartTimer: 47.5, Faulty Wiring (1)
 		StartTimer: 50.0, Molten Gold Knuckles (1)
 		StartTimer: 62.4, Stormfury Finger Gun (1)
-		StartTimer: 74.7, Double Whammy Shot (1)
+		StartTimer: 71.2, Double Whammy Shot (1)
 		StartTimer: 81.2, Spray and Pray (1)
 		StartTimer: 118.0, Double-Minded Fury
 	[354.65] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
