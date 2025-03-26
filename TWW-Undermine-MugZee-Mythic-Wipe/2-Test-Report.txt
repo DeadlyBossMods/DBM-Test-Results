@@ -79,7 +79,6 @@ Unused objects:
 	[Special Warning] Double Whammy Shot on you, type=you, spellId=469491
 	[Special Warning] Earthshaker Gaol on you, type=you, spellId=474461
 	[Special Warning] %s damage - move away, type=gtfo, spellId=474554
-	[Special Warning] Surging Arc on you, type=you, spellId=1214991
 	[Special Warning] Static Charge - move to >%s<, type=moveto, spellId=1215953
 	[Special Warning] Static Charge on you, type=you, spellId=1215953
 	[Special Warning] Double-Minded Fury!, type=spell, spellId=1216142
@@ -92,7 +91,6 @@ Unused objects:
 	[Yell] Tank Soak, type=yell, spellId=469491
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=474461
 	[Yell] {rt%1$d}Earthshaker Gaol, type=shortposition, spellId=474461
-	[Yell] Surging Arc on PlayerName, type=yell, spellId=1214991
 	[Yell] %d, type=shortfade, spellId=1215953
 	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
 
@@ -240,7 +238,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3015, Mug'Zee, Heads of Security, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 1214991 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215591 1222948 469490 469601 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 1219283, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, RAID_BOSS_WHISPER, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1216142 474461 472659 472782 470910 466470 466509 1221302 466518 472458 466545 1221299 469491 1217791 1215953 1216142 1215481 1223085 463967, SPELL_CAST_SUCCESS 467380 468728 468794 467379, SPELL_AURA_APPLIED 472631 466476 467202 467225 467380 469369 1215591 1222948 469490 469601 1215898 471419, SPELL_AURA_APPLIED_DOSE 466385 1219283, SPELL_AURA_REMOVED 466459 466460 467202 467380 469369 1222948 469490 1215898 472631, SPELL_PERIODIC_DAMAGE 474554 470089 472057, SPELL_PERIODIC_MISSED 474554 470089 472057, RAID_BOSS_WHISPER, UNIT_DIED
 	[  0.03] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, 1215591, Faulty Wiring, 0, BUFF, 0
 		AntiSpam: 2
 			Filtered: 1x SPELL_AURA_APPLIED at 0.03
@@ -251,102 +249,24 @@ Event trace:
 		StartTimer: 29.8, Goblin-guided Rocket (1)
 		StartTimer: 42.4, Double Whammy Shot (1)
 		StartTimer: 50.0, Spray and Pray (1)
-	[  4.68] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 4.78 (+0.10)
-	[  4.68] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 4.78 (+0.10)
-	[  8.31] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 8.41 (+0.10)
-	[  8.31] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 8.41 (+0.10)
-	[ 12.00] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 12.10 (+0.10)
-	[ 12.00] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 12.10 (+0.10)
 	[ 13.88] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (1)
-	[ 15.66] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 15.76 (+0.10)
-	[ 15.66] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 15.76 (+0.10)
-	[ 19.33] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 19.43 (+0.10)
-	[ 19.33] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 19.43 (+0.10)
-	[ 20.55] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 20.65 (+0.10)
-	[ 22.98] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 23.08 (+0.10)
-	[ 24.22] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 24.32 (+0.10)
-	[ 26.65] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 26.75 (+0.10)
-	[ 27.89] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 27.99 (+0.10)
 	[ 29.81] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps10: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000010, Goblin Guided Rocket, 0xa48, Player-1-00000013, Dps10, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
 		PlaySound: VoicePack/sharetwo
-	[ 30.34] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 30.44 (+0.10)
-	[ 31.55] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 31.65 (+0.10)
-	[ 33.97] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 34.07 (+0.10)
-	[ 35.19] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 35.29 (+0.10)
-	[ 37.65] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 37.75 (+0.10)
-	[ 38.87] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 38.97 (+0.10)
-	[ 41.30] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 41.40 (+0.10)
-	[ 42.53] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 42.63 (+0.10)
 	[ 44.94] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000010, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000010", "BeamTarget", 0.1, 8.0) at 45.04 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer1
-	[ 44.95] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 45.05 (+0.10)
-	[ 46.15] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 46.25 (+0.10)
-	[ 48.59] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 48.69 (+0.10)
-	[ 49.80] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 49.90 (+0.10)
 	[ 49.96] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[ 49.98] SPELL_CAST_START: [Mug'Zee: Spray and Pray] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466545, Spray and Pray, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "SprayTarget", 0.1, 8.0) at 50.08 (+0.10)
 			ShowAnnounce: Spray and Pray on Dps10
-	[ 52.25] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 52.35 (+0.10)
-	[ 53.46] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 53.56 (+0.10)
-	[ 55.88] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 55.98 (+0.10)
-	[ 57.09] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 57.19 (+0.10)
-	[ 59.53] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 59.63 (+0.10)
 	[ 59.89] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Mug
 		StartTimer: 17.4, Earthshaker Gaol (1)
 		StartTimer: 27.8, Molten Gold Knuckles (1)
 		StartTimer: 34.7, Frostshatter Boots (1)
 		StartTimer: 50.0, Stormfury Finger Gun (1)
-	[ 60.75] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 60.85 (+0.10)
-	[ 63.17] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 63.27 (+0.10)
-	[ 64.39] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 64.49 (+0.10)
-	[ 66.82] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 66.92 (+0.10)
-	[ 68.05] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 68.15 (+0.10)
-	[ 70.48] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 70.58 (+0.10)
-	[ 71.70] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 71.80 (+0.10)
 	[ 73.81] SPELL_AURA_APPLIED: [Mug'Zee->Dps8: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000010, Dps8, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		ScheduleTask: (anonymous function) at 74.31 (+0.50)
 			Unscheduled by SPELL_AURA_APPLIED at 73.81
@@ -354,14 +274,6 @@ Event trace:
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 73.81
 		ScheduleTask: (anonymous function) at 74.31 (+0.50)
 			ShowAnnounce: Earthshaker Gaol (1) on Dps8, Dps2
-	[ 74.14] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 74.24 (+0.10)
-	[ 75.33] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 75.43 (+0.10)
-	[ 77.77] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 77.87 (+0.10)
-	[ 78.99] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 79.09 (+0.10)
 	[ 81.07] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000014, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 			Filtered: 1x SPELL_CAST_START at 83.56
@@ -371,27 +283,15 @@ Event trace:
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
 		PlaySound: VoicePack/kick1r
-	[ 81.49] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 81.59 (+0.10)
-	[ 82.65] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 82.75 (+0.10)
 	[ 85.07] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000014, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
 		PlaySound: VoicePack/kick1r
-	[ 85.07] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 85.17 (+0.10)
-	[ 86.29] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 86.39 (+0.10)
 	[ 87.53] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000014, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 			Filtered: 1x SPELL_CAST_START at 87.53
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[ 88.73] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 88.83 (+0.10)
-	[ 89.96] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 90.06 (+0.10)
 	[ 91.14] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000014, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 		ShowSpecialWarning: Shakedown - dodge attack
@@ -400,45 +300,21 @@ Event trace:
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (2)
 		PlaySound: VoicePack/kick2r
-	[ 92.35] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 92.45 (+0.10)
 	[ 93.60] SPELL_CAST_START: [Gallagio Goon: Gaol Break] Vehicle-0-1-2769-1-233474-0000000014, Gallagio Goon, 0xa48, "", nil, 0x0, 470910, Gaol Break, 0, 0
 		AntiSpam: 5
 			Filtered: 1x SPELL_CAST_START at 93.6
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
-	[ 93.60] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 93.70 (+0.10)
-	[ 96.03] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 96.13 (+0.10)
 	[ 96.67] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps2: Frostshatter Boots] Creature-0-1-2769-1-238694-0000000018, Frostshatter Spear, 0xa48, Player-1-00000002, Dps2, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 96.67, 96.67, 96.67
 		StartTimer: 8.0, Frostshatter Spear
-	[ 97.24] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 97.34 (+0.10)
-	[ 99.67] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 99.77 (+0.10)
 	[ 99.95] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
-	[100.87] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 100.97 (+0.10)
-	[103.32] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 103.42 (+0.10)
-	[104.53] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 104.63 (+0.10)
-	[106.97] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 107.07 (+0.10)
-	[108.17] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 108.27 (+0.10)
 	[109.92] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "FingerTarget", 0.1, 8.0) at 110.02 (+0.10)
 			ShowSpecialWarning: Stormfury Finger Gun (1) - dodge attack
 			PlaySound: DBM/SpecialWarningSound2
-	[110.63] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000004, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000004", "ArcTarget", 0.1, 8.0) at 110.73 (+0.10)
-	[111.82] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 111.92 (+0.10)
 	[119.90] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, 1215591, Faulty Wiring, 0, BUFF, 0
 		AntiSpam: 2
 			Filtered: 1x SPELL_AURA_APPLIED at 119.9
@@ -449,106 +325,18 @@ Event trace:
 		StartTimer: 29.8, Goblin-guided Rocket (3)
 		StartTimer: 42.4, Double Whammy Shot (2)
 		StartTimer: 50.0, Spray and Pray (2)
-	[125.19] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 125.29 (+0.10)
-	[125.22] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 125.32 (+0.10)
-	[128.85] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 128.95 (+0.10)
-	[128.85] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 128.95 (+0.10)
-	[129.28] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 129.38 (+0.10)
-	[132.39] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 132.49 (+0.10)
-	[132.52] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 132.62 (+0.10)
-	[132.52] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 132.62 (+0.10)
 	[133.78] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (2)
-	[136.19] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 136.29 (+0.10)
-	[136.19] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 136.29 (+0.10)
-	[136.19] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 136.29 (+0.10)
-	[139.48] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 139.58 (+0.10)
-	[139.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 140.03 (+0.10)
-	[139.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 140.03 (+0.10)
-	[143.51] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 143.61 (+0.10)
-	[143.51] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 143.61 (+0.10)
-	[143.52] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 143.62 (+0.10)
-	[147.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 147.28 (+0.10)
-	[147.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 147.28 (+0.10)
-	[147.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 147.28 (+0.10)
 	[149.70] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps14: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000028, Goblin Guided Rocket, 0xa48, Player-1-00000020, Dps14, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
 		PlaySound: VoicePack/shareone
 	[150.01] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
-	[150.82] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 150.92 (+0.10)
-	[150.82] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 150.92 (+0.10)
-	[150.82] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 150.92 (+0.10)
-	[154.46] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 154.56 (+0.10)
-	[154.46] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 154.56 (+0.10)
-	[154.46] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 154.56 (+0.10)
-	[158.13] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 158.23 (+0.10)
-	[158.14] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 158.24 (+0.10)
-	[158.14] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 158.24 (+0.10)
-	[161.76] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 161.86 (+0.10)
-	[161.76] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 161.86 (+0.10)
-	[161.76] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 161.86 (+0.10)
 	[163.77] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000028, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000028", "BeamTarget", 0.1, 8.0) at 163.87 (+0.10)
 			ShowAnnounce: Disintegration Beam on Dps4
-	[165.41] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 165.51 (+0.10)
-	[165.41] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 165.51 (+0.10)
-	[165.41] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 165.51 (+0.10)
-	[169.05] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 169.15 (+0.10)
-	[169.05] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 169.15 (+0.10)
-	[169.05] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 169.15 (+0.10)
 	[169.90] SPELL_CAST_START: [Mug'Zee: Spray and Pray] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466545, Spray and Pray, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "SprayTarget", 0.1, 8.0) at 170.00 (+0.10)
 			ShowAnnounce: Spray and Pray on Dps9
-	[172.71] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 172.81 (+0.10)
-	[172.71] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 172.81 (+0.10)
-	[172.71] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 172.81 (+0.10)
-	[176.37] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 176.47 (+0.10)
-	[176.37] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 176.47 (+0.10)
-	[176.37] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 176.47 (+0.10)
 	[179.61] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000028, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000028", "BeamTarget", 0.1, 8.0) at 179.71 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer5
@@ -558,30 +346,6 @@ Event trace:
 		StartTimer: 27.8, Molten Gold Knuckles (2)
 		StartTimer: 34.7, Frostshatter Boots (2)
 		StartTimer: 50.0, Stormfury Finger Gun (2)
-	[180.00] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 180.10 (+0.10)
-	[180.03] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 180.13 (+0.10)
-	[180.03] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 180.13 (+0.10)
-	[183.65] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 183.75 (+0.10)
-	[183.68] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 183.78 (+0.10)
-	[183.68] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 183.78 (+0.10)
-	[187.31] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 187.41 (+0.10)
-	[187.31] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 187.41 (+0.10)
-	[187.31] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 187.41 (+0.10)
-	[190.97] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 191.07 (+0.10)
-	[190.97] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 191.07 (+0.10)
-	[190.97] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000069, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000069", "ArcTarget", 0.1, 8.0) at 191.07 (+0.10)
 	[193.81] SPELL_AURA_APPLIED: [Mug'Zee->Dps3: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000004, Dps3, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		ScheduleTask: (anonymous function) at 194.31 (+0.50)
 			Unscheduled by SPELL_AURA_APPLIED at 193.81
@@ -593,14 +357,6 @@ Event trace:
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 193.81
 		ScheduleTask: (anonymous function) at 194.31 (+0.50)
 			ShowAnnounce: Earthshaker Gaol (2) on Dps3, Dps13, Dps2
-	[194.60] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 194.70 (+0.10)
-	[194.60] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 194.70 (+0.10)
-	[198.27] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 198.37 (+0.10)
-	[198.28] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 198.38 (+0.10)
 	[199.95] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[201.12] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000035, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
@@ -615,28 +371,16 @@ Event trace:
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
 		PlaySound: VoicePack/kick1r
-	[201.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 202.03 (+0.10)
-	[201.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 202.03 (+0.10)
 	[203.15] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-000000007B, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 			Filtered: 2x SPELL_CAST_START at 203.56, 203.96
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[205.57] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 205.67 (+0.10)
-	[205.57] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 205.67 (+0.10)
 	[207.19] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000035, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 			Filtered: 2x SPELL_CAST_START at 207.59, 207.61
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[209.22] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 209.32 (+0.10)
-	[209.22] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 209.32 (+0.10)
 	[210.87] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000035, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (2)
@@ -653,19 +397,11 @@ Event trace:
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (2)
 		PlaySound: VoicePack/kick2r
-	[212.89] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 212.99 (+0.10)
-	[212.89] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 212.99 (+0.10)
 	[214.90] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000092, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 			Filtered: 1x SPELL_CAST_START at 215.3
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[216.54] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 216.64 (+0.10)
-	[216.55] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 216.65 (+0.10)
 	[216.66] SPELL_AURA_APPLIED: [Frostshatter Spear->Dps13: Frostshatter Boots] Creature-0-1-2769-1-238694-00000000A3, Frostshatter Spear, 0xa48, Player-1-00000019, Dps13, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 216.66, 216.66, 216.66
@@ -680,26 +416,10 @@ Event trace:
 			Filtered: 1x SPELL_CAST_START at 220.96
 		ShowSpecialWarning: Gaol Break!
 		PlaySound: VoicePack/carefly
-	[219.75] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 219.85 (+0.10)
-	[220.16] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 220.26 (+0.10)
-	[223.80] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 223.90 (+0.10)
-	[223.81] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 223.91 (+0.10)
-	[227.43] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 227.53 (+0.10)
-	[227.44] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 227.54 (+0.10)
 	[229.88] SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "FingerTarget", 0.1, 8.0) at 229.98 (+0.10)
 			ShowSpecialWarning: Stormfury Finger Gun (2) - dodge attack
 			PlaySound: DBM/SpecialWarningSound2
-	[230.68] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 230.78 (+0.10)
-	[231.10] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000075, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000075", "ArcTarget", 0.1, 8.0) at 231.20 (+0.10)
 	[239.38] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, 1215591, Faulty Wiring, 0, BUFF, 0
 		AntiSpam: 2
 			Filtered: 1x SPELL_AURA_APPLIED at 239.38
@@ -710,182 +430,48 @@ Event trace:
 		StartTimer: 29.8, Goblin-guided Rocket (5)
 		StartTimer: 42.4, Double Whammy Shot (3)
 		StartTimer: 50.0, Spray and Pray (3)
-	[244.48] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 244.58 (+0.10)
-	[245.27] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 245.37 (+0.10)
-	[248.12] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 248.22 (+0.10)
-	[248.92] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 249.02 (+0.10)
-	[249.76] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 249.86 (+0.10)
 	[249.96] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
-	[251.78] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 251.88 (+0.10)
-	[252.58] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 252.68 (+0.10)
-	[252.98] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 253.08 (+0.10)
 	[253.30] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (3)
-	[255.42] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 255.52 (+0.10)
-	[256.22] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 256.32 (+0.10)
-	[256.64] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 256.74 (+0.10)
-	[259.10] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 259.20 (+0.10)
-	[259.94] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 260.04 (+0.10)
-	[260.34] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 260.44 (+0.10)
-	[262.79] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 262.89 (+0.10)
-	[263.60] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 263.70 (+0.10)
-	[264.05] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 264.15 (+0.10)
-	[266.44] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 266.54 (+0.10)
-	[267.26] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 267.36 (+0.10)
-	[267.67] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 267.77 (+0.10)
 	[269.21] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps8: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000047, Goblin Guided Rocket, 0xa48, Player-1-00000010, Dps8, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
 		PlaySound: VoicePack/sharetwo
-	[270.09] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 270.19 (+0.10)
-	[270.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 271.03 (+0.10)
-	[270.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000001E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000001E", "ArcTarget", 0.1, 8.0) at 271.03 (+0.10)
-	[273.75] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 273.85 (+0.10)
-	[274.56] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 274.66 (+0.10)
-	[277.38] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 277.48 (+0.10)
-	[278.21] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 278.31 (+0.10)
-	[281.02] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 281.12 (+0.10)
-	[281.44] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 281.54 (+0.10)
 	[283.90] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000047, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000047", "BeamTarget", 0.1, 8.0) at 284.00 (+0.10)
 			ShowAnnounce: Disintegration Beam on Dps6
-	[284.67] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 284.77 (+0.10)
-	[285.09] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 285.19 (+0.10)
-	[288.35] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 288.45 (+0.10)
-	[288.73] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 288.83 (+0.10)
 	[289.39] SPELL_CAST_START: [Mug'Zee: Spray and Pray] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466545, Spray and Pray, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-229953-0000000001", "SprayTarget", 0.1, 8.0) at 289.49 (+0.10)
 			ShowAnnounce: Spray and Pray on Healer2
-	[291.97] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 292.07 (+0.10)
-	[292.38] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 292.48 (+0.10)
-	[295.61] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 295.71 (+0.10)
-	[296.01] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 296.11 (+0.10)
 	[298.07] SPELL_CAST_START: [Mug'Zee: Electrocution Matrix] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1217791, Electrocution Matrix, 0, 0
 		ShowSpecialWarning: Electrocution Matrix - dodge attack
 		PlaySound: VoicePack/watchstep
-	[299.23] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 299.33 (+0.10)
-	[299.64] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 299.74 (+0.10)
 	[299.97] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 20, 0
 		ShowAnnounce: Moxie on Mug'Zee (20)
-	[302.88] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 302.98 (+0.10)
-	[303.30] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 303.40 (+0.10)
-	[306.20] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 306.30 (+0.10)
-	[306.94] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 307.04 (+0.10)
 	[308.06] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
 		StartTimer: 14.0, Static Charge (2)
 		ShowAnnounce: Stage 2.5
 		PlaySound: VoicePack/phasechange
 		StartTimer: 3.4, Bulletstorm (1)
 		StartTimer: 52.9, Intermission
-	[310.17] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 310.27 (+0.10)
-	[310.58] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 310.68 (+0.10)
 	[311.70] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 		ShowSpecialWarning: Bulletstorm (1) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 14.0, Bulletstorm (2)
-	[313.83] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 313.93 (+0.10)
-	[314.26] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 314.36 (+0.10)
-	[317.46] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 317.56 (+0.10)
-	[317.88] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 317.98 (+0.10)
-	[318.29] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 318.39 (+0.10)
-	[321.53] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 321.63 (+0.10)
 	[322.23] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
 		StartTimer: 14.0, Static Charge (3)
-	[322.34] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 322.44 (+0.10)
-	[325.19] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 325.29 (+0.10)
 	[325.98] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 		ShowSpecialWarning: Bulletstorm (2) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 14.0, Bulletstorm (3)
-	[326.00] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 326.10 (+0.10)
-	[328.32] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 328.42 (+0.10)
-	[329.65] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 329.75 (+0.10)
-	[332.48] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 332.58 (+0.10)
-	[333.30] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 333.40 (+0.10)
-	[336.11] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 336.21 (+0.10)
-	[336.56] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 336.66 (+0.10)
-	[339.79] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 339.89 (+0.10)
 	[340.39] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
 		ShowSpecialWarning: Bulletstorm (3) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 14.0, Bulletstorm (4)
-	[340.59] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 340.69 (+0.10)
-	[343.43] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 343.53 (+0.10)
-	[344.22] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 344.32 (+0.10)
-	[347.08] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 347.18 (+0.10)
-	[347.90] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 348.00 (+0.10)
 	[348.42] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, 1215591, Faulty Wiring, 0, BUFF, 0
 		AntiSpam: 2
 		ShowAnnounce: (4)
 	[349.96] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 30, 0
 		ShowAnnounce: Moxie on Mug'Zee (30)
-	[350.72] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 350.82 (+0.10)
 	[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 		ShowAnnounce: Stage 3
 		PlaySound: VoicePack/ptwo
@@ -901,59 +487,13 @@ Event trace:
 		StartTimer: 74.7, Double Whammy Shot (1)
 		StartTimer: 81.2, Spray and Pray (1)
 		StartTimer: 118.0, Double-Minded Fury
-	[351.53] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 351.63 (+0.10)
-	[353.18] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 353.28 (+0.10)
-	[354.38] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 354.48 (+0.10)
 	[354.65] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (1)
 		StartTimer: 88.7, Unstable Crawler Mines (2)
-	[355.21] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 355.31 (+0.10)
-	[356.41] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 356.51 (+0.10)
-	[358.05] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 358.15 (+0.10)
-	[358.85] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 358.95 (+0.10)
-	[360.15] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 360.25 (+0.10)
-	[361.69] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 361.79 (+0.10)
-	[362.48] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 362.58 (+0.10)
-	[363.70] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 363.80 (+0.10)
-	[365.31] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 365.41 (+0.10)
-	[366.11] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 366.21 (+0.10)
-	[367.33] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 367.43 (+0.10)
-	[368.99] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 369.09 (+0.10)
 	[369.19] SPELL_AURA_APPLIED: [Frostshatter Spear->Healer1: Frostshatter Boots] Creature-0-1-2769-1-238694-000000005F, Frostshatter Spear, 0xa48, Player-1-00000003, Healer1, 0x512, 466476, Frostshatter Boots, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 369.19, 369.19, 369.19
 		StartTimer: 8.0, Frostshatter Spear
-	[369.76] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 369.86 (+0.10)
-	[370.99] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 371.09 (+0.10)
-	[372.61] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 372.71 (+0.10)
-	[373.41] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 373.51 (+0.10)
-	[374.62] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 374.72 (+0.10)
-	[376.25] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 376.35 (+0.10)
-	[377.06] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 377.16 (+0.10)
-	[378.26] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 378.36 (+0.10)
 	[379.69] SPELL_AURA_APPLIED: [Mug'Zee->Dps8: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000010, Dps8, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		ScheduleTask: (anonymous function) at 380.19 (+0.50)
 			Unscheduled by SPELL_AURA_APPLIED at 379.69
@@ -968,18 +508,6 @@ Event trace:
 	[379.69] SPELL_AURA_APPLIED: [Mug'Zee->Dps14: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000020, Dps14, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 379.69
 		ShowAnnounce: Earthshaker Gaol (1) on Dps8, Dps9, Dps3, Dps14
-	[379.90] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 380.00 (+0.10)
-	[380.71] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 380.81 (+0.10)
-	[381.93] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 382.03 (+0.10)
-	[383.56] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 383.66 (+0.10)
-	[384.37] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 384.47 (+0.10)
-	[385.59] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 385.69 (+0.10)
 	[386.99] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-00000000A7, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
@@ -992,103 +520,23 @@ Event trace:
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
 		PlaySound: VoicePack/kick1r
-	[387.21] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 387.31 (+0.10)
 	[387.21] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000089, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 		StartTimer: 9.8, Pay Respects
 		ShowSpecialWarning: Pay Respects - interrupt Gallagio Goon! (1)
 		PlaySound: VoicePack/kick1r
-	[388.02] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 388.12 (+0.10)
-	[388.82] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 388.92 (+0.10)
 	[390.44] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000063, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[390.85] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 390.95 (+0.10)
-	[391.66] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 391.76 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 391.86 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 391.96 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 392.06 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 392.16 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 392.26 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 392.36 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 392.46 (+0.10)
 	[391.68] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps14: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000065, Goblin Guided Rocket, 0xa48, Player-1-00000020, Dps14, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
 		PlaySound: VoicePack/shareone
-	[392.88] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 392.98 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 393.08 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 393.18 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 393.28 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 393.38 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 393.48 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 393.58 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 393.68 (+0.10)
 	[394.09] SPELL_CAST_START: [Gallagio Goon: Shakedown] Vehicle-0-1-2769-1-233474-0000000063, Gallagio Goon, 0xa48, "", nil, 0x0, 472659, Shakedown, 0, 0
 		AntiSpam: 4
 		ShowSpecialWarning: Shakedown - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
-	[394.49] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 394.59 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 394.69 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 394.79 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 394.89 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 394.99 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 395.09 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 395.19 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 395.29 (+0.10)
-	[394.90] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.00 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.10 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.20 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.30 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.40 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.50 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.60 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 395.70 (+0.10)
-	[396.13] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-0000000057, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.23 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.33 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.43 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.53 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.63 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.73 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.83 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-0000000057", "ArcTarget", 0.1, 8.0) at 396.93 (+0.10)
-	[398.15] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.25 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.35 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.45 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.55 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.65 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.75 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.85 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 398.95 (+0.10)
 	[398.41] SPELL_AURA_APPLIED: [Mk II Electro Shocker->Mk II Electro Shocker: Faulty Wiring] Creature-0-1-2769-1-230316-0000000066, Mk II Electro Shocker, 0xa48, Creature-0-1-2769-1-230316-0000000066, Mk II Electro Shocker, 0xa48, 1215591, Faulty Wiring, 0, BUFF, 0
 		AntiSpam: 2
 		ShowAnnounce: (1)
-	[398.95] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000003F, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.05 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.15 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.25 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.35 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.45 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.55 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.65 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000003F", "ArcTarget", 0.1, 8.0) at 399.75 (+0.10)
-	[399.35] SPELL_CAST_START: [Mk II Electro Shocker: Surging Arc] Creature-0-1-2769-1-230316-000000007E, Mk II Electro Shocker, 0xa48, "", nil, 0x0, 1214991, Surging Arc, 0, 0
-		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 399.45 (+0.10)
-			ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 399.55 (+0.10)
-				ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 399.65 (+0.10)
-					ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 399.75 (+0.10)
-						ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 399.85 (+0.10)
-							ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 399.95 (+0.10)
-								ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 400.05 (+0.10)
-									ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230316-000000007E", "ArcTarget", 0.1, 8.0) at 400.15 (+0.10)
 	[399.97] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 40, 0
 		ShowAnnounce: Moxie on Mug'Zee (40)
 	[400.35] ENCOUNTER_END: 3015, Mug'Zee, Heads of Security, 16, 20, 0, 0
