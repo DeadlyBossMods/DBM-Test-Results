@@ -254,9 +254,8 @@ Special warnings:
 		[364.11] SPELL_CAST_START: [One-Armed Bandit: Hot Hot Heat] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465322, Hot Hot Heat, 0, 0
 	Scattered Payout - switch targets, type=switch, spellId=465580, triggerDeltas = 389.61
 		[389.61] SPELL_CAST_START: [One-Armed Bandit: Scattered Payout] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 465580, Scattered Payout, 0, 0
-	Burning Blast - dodge attack, type=dodge, spellId=472178, triggerDeltas = 191.04, 1.13, 0.38
+	Burning Blast - dodge attack, type=dodge, spellId=472178, triggerDeltas = 191.04
 		[191.04] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-0000000056, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
-			 Triggered 3x, delta times: 191.04, 1.13, 0.38
 
 Yells:
 	None
@@ -288,7 +287,6 @@ Voice pack sounds:
 			 Triggered 2x, delta times: 120.45, 6.40
 	VoicePack/watchstep
 		[191.04] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-0000000056, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
-			 Triggered 3x, delta times: 191.04, 1.13, 0.38
 
 Icons:
 	None
@@ -573,12 +571,8 @@ Event trace:
 		ScheduleTask: announce465009target:CombinedShow("Dps16") at 190.60 (+0.30)
 			ShowAnnounce: Explosive Gaze on Dps16
 	[191.04] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-0000000056, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
-		ShowSpecialWarning: Burning Blast - dodge attack
-		PlaySound: VoicePack/watchstep
-	[192.17] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-00000000F5, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
-		ShowSpecialWarning: Burning Blast - dodge attack
-		PlaySound: VoicePack/watchstep
-	[192.55] SPELL_CAST_START: [Fiery Dynamite Booty: Burning Blast] Creature-0-1-2769-1-231028-00000000D8, Fiery Dynamite Booty, 0xa48, "", nil, 0x0, 472178, Burning Blast, 0, 0
+		AntiSpam: 1
+			Filtered: 2x SPELL_CAST_START at 192.17, 192.55
 		ShowSpecialWarning: Burning Blast - dodge attack
 		PlaySound: VoicePack/watchstep
 	[203.59] SPELL_CAST_START: [One-Armed Bandit: Spin To Win!] Vehicle-0-1-2769-1-228458-0000000001, One-Armed Bandit, 0xa48, "", nil, 0x0, 461060, Spin To Win!, 0, 0
