@@ -222,11 +222,11 @@ Voice pack sounds:
 	VoicePack/ptwo
 		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 	VoicePack/shareone
-		[149.70] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps14: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000028, Goblin Guided Rocket, 0xa48, Player-1-00000020, Dps14, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 149.70, 241.98
-	VoicePack/sharetwo
 		[ 29.81] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps10: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000010, Goblin Guided Rocket, 0xa48, Player-1-00000013, Dps10, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
 		[269.21] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps8: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000047, Goblin Guided Rocket, 0xa48, Player-1-00000010, Dps8, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
+		[391.68] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps14: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000065, Goblin Guided Rocket, 0xa48, Player-1-00000020, Dps14, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
+	VoicePack/sharetwo
+		[149.70] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps14: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000028, Goblin Guided Rocket, 0xa48, Player-1-00000020, Dps14, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
 	VoicePack/watchstep
 		[298.07] SPELL_CAST_START: [Mug'Zee: Electrocution Matrix] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1217791, Electrocution Matrix, 0, 0
 		[311.70] SPELL_AURA_APPLIED: [Mug'Zee->Mug'Zee: Bulletstorm] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 471419, Bulletstorm, 0, BUFF, 0
@@ -252,7 +252,7 @@ Event trace:
 	[ 13.88] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (1)
 	[ 29.81] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps10: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000010, Goblin Guided Rocket, 0xa48, Player-1-00000013, Dps10, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
-		PlaySound: VoicePack/sharetwo
+		PlaySound: VoicePack/shareone
 	[ 44.94] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000010, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000010", "BeamTarget", 0.1, 8.0) at 45.04 (+0.10)
 			ShowAnnounce: Disintegration Beam on Healer1
@@ -322,13 +322,13 @@ Event trace:
 	[119.90] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee
 		StartTimer: 13.9, Unstable Crawler Mines (2)
-		StartTimer: 29.8, Goblin-guided Rocket (3)
+		StartTimer: 29.8, Goblin-guided Rocket (2)
 		StartTimer: 38.9, Double Whammy Shot (2)
 		StartTimer: 50.0, Spray and Pray (2)
 	[133.78] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (2)
 	[149.70] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps14: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000028, Goblin Guided Rocket, 0xa48, Player-1-00000020, Dps14, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
-		PlaySound: VoicePack/shareone
+		PlaySound: VoicePack/sharetwo
 	[150.01] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
 		ShowAnnounce: Moxie on Mug'Zee (10)
 	[163.77] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000028, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
@@ -427,7 +427,7 @@ Event trace:
 	[239.39] SPELL_CAST_SUCCESS: [Mug'Zee: Zee Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468794, Zee Taking Charge, 0, 0
 		ShowAnnounce: Head Honcho: Zee
 		StartTimer: 13.9, Unstable Crawler Mines (3)
-		StartTimer: 29.8, Goblin-guided Rocket (5)
+		StartTimer: 29.8, Goblin-guided Rocket (3)
 		StartTimer: 38.9, Double Whammy Shot (3)
 		StartTimer: 50.0, Spray and Pray (3)
 	[249.96] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
@@ -435,7 +435,7 @@ Event trace:
 	[253.30] SPELL_CAST_START: [Mug'Zee: Unstable Crawler Mines] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 472458, Unstable Crawler Mines, 0, 0
 		ShowAnnounce: Unstable Crawler Mines (3)
 	[269.21] SPELL_AURA_APPLIED: [Goblin Guided Rocket->Dps8: Goblin-guided Rocket] Vehicle-0-1-2769-1-229974-0000000047, Goblin Guided Rocket, 0xa48, Player-1-00000010, Dps8, 0x512, 467380, Goblin-guided Rocket, 0, DEBUFF, 0
-		PlaySound: VoicePack/sharetwo
+		PlaySound: VoicePack/shareone
 	[283.90] SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000047, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
 		ScheduleTask: mod:BossTargetScanner("Creature-0-1-2769-1-230312-0000000047", "BeamTarget", 0.1, 8.0) at 284.00 (+0.10)
 			ShowAnnounce: Disintegration Beam on Dps6
