@@ -15,7 +15,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 469387 (Carried Giga Bomb)
 	Unused event registration: SPELL_AURA_APPLIED 469404 (Giga BOOM!)
 	Unused event registration: SPELL_AURA_APPLIED 471603 (Scatterblast Canisters)
-	Unused event registration: SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Unused event registration: SPELL_AURA_REMOVED 1220290 (Trick Shots)
 	Unused event registration: SPELL_AURA_REMOVED 466165 (1500-Pound ""Dud"")
 	Unused event registration: SPELL_AURA_REMOVED 466246 (Focused Detonation)
@@ -29,24 +28,24 @@ Findings:
 	Unused event registration: SPELL_PERIODIC_MISSED 1215209 (Sabotage Zone)
 	Unused event registration: UNIT_DIED
 	Timer for spell ID 66911 (Dance) is triggered by event SPELL_AURA_APPLIED 1226891 (Circuit Reboot)
+	Timer for spell ID 66911 (Dance) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 66911 (Dance) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
-	Timer for spell ID 66911 (Dance) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
+	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
-	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
+	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
-	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
+	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
-	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
+	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
-	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
+	Timer for spell ID 469327 (Giga Blast) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 469327 (Giga Blast) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
-	Timer for spell ID 469327 (Giga Blast) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
 	SpecialWarning for spell ID 1214369 (TOTAL DESTRUCTION!!!) is triggered by event SPELL_AURA_REMOVED 1214229 (Armageddon-class Plating)
-	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
+	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 1214755 (Overloaded Rockets) is triggered by event SPELL_CAST_START 1214607 (Bigger Badder Bomb Blast)
 	Timer for spell ID 1217292 (Time-Release Crackle) is triggered by event SPELL_AURA_APPLIED 466246 (Focused Detonation)
 	Timer for spell ID 1217292 (Time-Release Crackle) is triggered by event SPELL_AURA_APPLIED_DOSE 466246 (Focused Detonation)
-	Timer for spell ID 1217987 (Combination Canisters) is triggered by event SPELL_INTERRUPT 6552 (Pummel)
+	Timer for spell ID 1217987 (Combination Canisters) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 1218488 (Scatterbomb Canisters) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
 	Timer for spell ID 1218546 (Biggest Baddest Bomb Barrage) is triggered by event SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
 	Timer for spell ID 1219333 (Gallybux Finale Blast) is triggered by event SPELL_CAST_START 467182 (Suppression)
@@ -77,7 +76,7 @@ Unused objects:
 
 Timers:
 	Stage %s, time=33.00, type=stagecount, spellId=66911, triggerDeltas = 30.28, 208.71, 33.10, 167.14
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[238.99] SPELL_AURA_APPLIED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 238.99, 200.24
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
@@ -85,38 +84,38 @@ Timers:
 		[ 44.30] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000019, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 			 Triggered 16x, delta times: 44.30, 0.35, 0.34, 0.33, 57.06, 0.32, 0.33, 0.33, 56.52, 0.32, 0.34, 0.33, 54.51, 0.34, 0.33, 0.34
 	Venting Heat (%s), time=97.30, type=cdcount, spellId=466751, triggerDeltas = 30.28, 39.58, 16.44, 23.57, 18.42, 22.03, 29.65, 12.06, 23.35, 56.71, 9.02, 35.01, 19.57, 36.94, 20.48, 77.46, 19.53, 33.50
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 69.86] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
 			 Triggered 15x, delta times: 69.86, 16.44, 23.57, 18.42, 22.03, 29.65, 12.06, 23.35, 65.73, 35.01, 19.57, 36.94, 20.48, 96.99, 33.50
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 272.09, 198.48
 	Ego Check (%s), time=97.30, type=cdcount, spellId=466958, triggerDeltas = 30.28, 16.01, 21.55, 14.54, 19.95, 17.08, 12.39, 16.48, 29.66, 5.53, 23.85, 23.63, 41.14, 198.48
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 46.29] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 			 Triggered 11x, delta times: 46.29, 21.55, 14.54, 19.95, 17.08, 12.39, 16.48, 29.66, 5.53, 23.85, 23.63
 		[238.99] SPELL_AURA_APPLIED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 272.09, 198.48
 	Suppression (%s), time=97.30, type=cdcount, spellId=467182, triggerDeltas = 30.28, 43.11, 60.45, 138.25, 23.09, 44.03, 131.36, 64.06
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 73.39] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 			 Triggered 5x, delta times: 73.39, 60.45, 161.34, 44.03, 195.42
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 272.09, 198.48
 	Giga Coils (%s), time=97.30, type=cdcount, spellId=469286, triggerDeltas = 30.28, 25.01, 58.10, 58.53, 100.17
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 55.29] UNIT_SPELLCAST_START: boss1, Cast-3-1-2769-2-469286-000000011F, 469286, Chrome King Gallywix, 95, 95, Tank1, 0
 		[113.39] UNIT_SPELLCAST_START: boss1, Cast-3-1-2769-2-469286-0000000127, 469286, Chrome King Gallywix, 84.8, 100, Tank1, 0
 		[171.92] UNIT_SPELLCAST_START: boss1, Cast-3-1-2769-2-469286-0000000283, 469286, Chrome King Gallywix, 74.7, 100, Tank1, 0
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 	Giga Blast (%s), time=6.50, type=cdcount, spellId=469327, triggerDeltas = 30.28, 18.03, 56.03, 62.06, 105.69, 49.57, 56.53, 92.38
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 48.31] SPELL_CAST_START: [Chrome King Gallywix: Giga Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 469327, Giga Blast, 0, 0
 			 Triggered 5x, delta times: 48.31, 56.03, 62.06, 155.26, 56.53
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 272.09, 198.48
 	Bigger Badder Bomb Blast (%s), time=97.30, type=cdcount, spellId=1214607, triggerDeltas = 30.28, 8.01, 58.06, 57.51
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 38.29] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 			 Triggered 3x, delta times: 38.29, 58.06, 57.51
 	Overloaded Rockets (%s), time=11.50, type=cdcount, spellId=1214755, triggerDeltas = 38.29, 58.06, 57.51, 55.52, 98.06, 48.09, 54.03, 89.00, 51.50
@@ -136,7 +135,7 @@ Timers:
 		[ 45.66] SPELL_AURA_APPLIED_DOSE: [Chrome King Gallywix->Tank2: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000016, Tank2, 0x512, 466246, Focused Detonation, 0, DEBUFF, 2, 0
 			 Triggered 12x, delta times: 45.66, 1.90, 1.24, 62.86, 2.52, 0.54, 46.39, 2.44, 1.62, 59.00, 1.83, 0.52
 	Combination Canisters (%s), time=97.30, type=cdcount, spellId=1217987, triggerDeltas = 30.28, 31.03, 28.50, 31.63, 38.44, 25.62, 38.95
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 61.31] SPELL_CAST_START: [Chrome King Gallywix: Combination Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1217987, Combination Canisters, 0, 0
 			 Triggered 6x, delta times: 61.31, 28.50, 31.63, 38.44, 25.62, 38.95
 		[238.99] SPELL_AURA_APPLIED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
@@ -160,7 +159,7 @@ Timers:
 
 Announces:
 	%s, type=stagechange, spellId=<none>, triggerDeltas = 30.28, 208.71, 33.10, 167.14, 31.34
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[238.99] SPELL_AURA_APPLIED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 238.99, 200.24
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
@@ -278,7 +277,7 @@ Voice pack sounds:
 		[238.99] SPELL_AURA_APPLIED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 238.99, 200.24
 	VoicePack/pone
-		[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 	VoicePack/pthree
 		[470.57] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 	VoicePack/ptwo
@@ -297,8 +296,9 @@ Event trace:
 	[ 30.27] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 0, 0
 		ShowSpecialWarning: TOTAL DESTRUCTION!!! - interrupt Chrome King Gallywix!
 		PlaySound: VoicePack/kickcast
-	[ 30.28] SPELL_INTERRUPT: [Tank1->Chrome King Gallywix: Pummel] Player-1-00000007, Tank1, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 6552, Pummel, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+	[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		AntiSpam: 3
+			Filtered: 1x SPELL_INTERRUPT at 30.28
 		ShowAnnounce: Stage 1
 		PlaySound: VoicePack/pone
 		StartTimer: 25.0, Giga Coils (1)

@@ -14,7 +14,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1220846 (Control Meltdown)
 	Unused event registration: SPELL_AURA_APPLIED 1226891 (Circuit Reboot)
 	Unused event registration: SPELL_AURA_APPLIED 471603 (Scatterblast Canisters)
-	Unused event registration: SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Unused event registration: SPELL_AURA_REMOVED 1226891 (Circuit Reboot)
 	Unused event registration: SPELL_AURA_REMOVED 466165 (1500-Pound ""Dud"")
 	Unused event registration: SPELL_AURA_REMOVED 466246 (Focused Detonation)
@@ -29,21 +28,21 @@ Findings:
 	Unused event registration: UNIT_DIED
 	Timer for spell ID 465952 (Big Bad Buncha Bombs) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
 	Timer for spell ID 466341 (Fused Canisters) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
+	Timer for spell ID 466342 (Tick-Tock Canisters) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 466342 (Tick-Tock Canisters) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
-	Timer for spell ID 466342 (Tick-Tock Canisters) is triggered by event SPELL_INTERRUPT 96231 (Rebuke)
+	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
-	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_INTERRUPT 96231 (Rebuke)
+	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
-	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_INTERRUPT 96231 (Rebuke)
+	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
-	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_INTERRUPT 96231 (Rebuke)
+	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_AURA_REMOVED 1220290 (Trick Shots)
 	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
-	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_INTERRUPT 96231 (Rebuke)
 	Timer for spell ID 469327 (Giga Blast) is triggered by event SPELL_AURA_APPLIED 469293 (Giga Coils)
 	SpecialWarning for spell ID 1214369 (TOTAL DESTRUCTION!!!) is triggered by event SPELL_AURA_REMOVED 1214229 (Armageddon-class Plating)
+	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
-	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_INTERRUPT 96231 (Rebuke)
 	Timer for spell ID 1214755 (Overloaded Rockets) is triggered by event SPELL_CAST_START 1214607 (Bigger Badder Bomb Blast)
 	Timer for spell ID 1217292 (Time-Release Crackle) is triggered by event SPELL_AURA_APPLIED 466246 (Focused Detonation)
 	Timer for spell ID 1217292 (Time-Release Crackle) is triggered by event SPELL_AURA_APPLIED_DOSE 466246 (Focused Detonation)
@@ -110,7 +109,7 @@ Timers:
 			 Triggered 2x, delta times: 141.84, 77.72
 		[151.95] SPELL_CAST_START: [Chrome King Gallywix: Fused Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466341, Fused Canisters, 0, 0
 	Tick-Tock Canisters (%s), time=97.30, type=cdcount, spellId=466342, triggerDeltas = 307.64, 74.06, 7.78, 68.05
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[381.70] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 2x, delta times: 381.70, 75.83
 		[389.48] SPELL_CAST_START: [Chrome King Gallywix: Tick-Tock Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466342, Tick-Tock Canisters, 0, 0
@@ -120,9 +119,9 @@ Timers:
 			 Triggered 4x, delta times: 12.36, 25.79, 28.44, 327.89
 		[141.84] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 4x, delta times: 141.84, 77.72, 162.14, 75.83
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 	Ego Check (%s), time=97.30, type=cdcount, spellId=466958, triggerDeltas = 307.64, 14.02, 13.04, 14.93, 8.05, 24.02, 16.31, 13.48, 8.07, 9.96, 28.01, 16.60, 8.08, 8.98, 25.99
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[321.66] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 			 Triggered 12x, delta times: 321.66, 13.04, 14.93, 8.05, 40.33, 13.48, 8.07, 9.96, 44.61, 8.08, 8.98, 25.99
 		[381.70] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
@@ -133,12 +132,12 @@ Timers:
 			 Triggered 3x, delta times: 31.14, 38.99, 395.11
 		[141.84] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 4x, delta times: 141.84, 77.72, 162.14, 75.83
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 	Giga Coils (%s), time=97.30, type=cdcount, spellId=469286, triggerDeltas = 110.80, 31.04, 77.72, 88.08, 74.06, 75.83
 		[110.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
 		[141.84] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 4x, delta times: 141.84, 77.72, 162.14, 75.83
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 	Giga Blast (%s), time=6.50, type=cdcount, spellId=469327, triggerDeltas = 119.83, 5.62, 6.49, 6.51, 61.15, 2.00, 6.53, 6.49, 153.07, 2.06, 6.50, 66.28, 2.01, 6.57
 		[119.83] SPELL_AURA_APPLIED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 4x, delta times: 119.83, 79.77, 168.09, 74.84
@@ -147,7 +146,7 @@ Timers:
 		[141.84] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 4x, delta times: 141.84, 77.72, 162.14, 75.83
 	Bigger Badder Bomb Blast (%s), time=97.30, type=cdcount, spellId=1214607, triggerDeltas = 307.64, 8.00, 66.06, 75.83, 18.65
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[315.64] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 			 Triggered 2x, delta times: 315.64, 160.54
 		[381.70] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
@@ -175,7 +174,7 @@ Announces:
 	%s, type=stagechange, spellId=<none>, triggerDeltas = 110.80, 156.14, 40.70
 		[110.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
 		[266.94] SPELL_AURA_APPLIED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 952817344, 0
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 	Focused Detonation (%s), type=count, spellId=466246, triggerDeltas = 26.44, 2.05, 36.06, 1.89, 34.88, 84.67, 1.80, 135.64, 3.75, 93.76, 2.95
 		[ 26.44] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 466246, Focused Detonation, 0, DEBUFF, 0
 			 Triggered 6x, delta times: 26.44, 38.11, 36.77, 84.67, 137.44, 97.51
@@ -271,7 +270,7 @@ Voice pack sounds:
 	VoicePack/phasechange
 		[266.94] SPELL_AURA_APPLIED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 952817344, 0
 	VoicePack/pthree
-		[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 	VoicePack/ptwo
 		[110.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
 	VoicePack/shareone
@@ -557,8 +556,9 @@ Event trace:
 	[290.52] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 0, 0
 		ShowSpecialWarning: TOTAL DESTRUCTION!!! - interrupt Chrome King Gallywix!
 		PlaySound: VoicePack/kickcast
-	[307.64] SPELL_INTERRUPT: [Healer2->Chrome King Gallywix: Rebuke] Player-1-00000009, Healer2, 0x512, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 96231, Rebuke, 0, 1214369, TOTAL DESTRUCTION!!!, 0
+	[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		AntiSpam: 3
+			Filtered: 1x SPELL_INTERRUPT at 307.64
 		ShowAnnounce: Stage 3
 		PlaySound: VoicePack/pthree
 		StartTimer: 60.0, Giga Coils (1)
