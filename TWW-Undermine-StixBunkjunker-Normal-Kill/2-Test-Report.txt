@@ -17,6 +17,7 @@ Findings:
 	Unused event registration: SPELL_PERIODIC_MISSED 464248 (Hot Garbage)
 	Unused event registration: SPELL_PERIODIC_MISSED 464854 (Garbage Pile)
 	Unused event registration: UNIT_DIED
+	Unused event registration: UNIT_POWER_UPDATE
 	SpecialWarning for spell ID 461536 (Rolling Rubbish) is triggered by event SPELL_AURA_APPLIED 465346 (Sorted)
 	Yell for spell ID 461536 (Rolling Rubbish) is triggered by event SPELL_AURA_APPLIED 465346 (Sorted)
 	Timer for spell ID 464112 (Demolish) is triggered by event SPELL_AURA_REMOVED 467117 (Overdrive)
@@ -29,6 +30,7 @@ Findings:
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Rolling Rubbish (%s), type=count, spellId=461536
 	[Announce] Infected Bite (%s), type=count, spellId=466748
 	[Announce] Marked For ""Recycling"" on >%s<, type=target, spellId=1220648
 	[Special Warning] Rolling Rubbish on >%s< - taunt now, type=taunt, spellId=461536
@@ -209,7 +211,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 464399 466742 1220752 464112 1217954 467117 467109, SPELL_CAST_SUCCESS 464149, SPELL_AURA_APPLIED 465346 1217685 464854 473115 473066 1218704 1219384 1220648 466748 472893 461536, SPELL_AURA_APPLIED_DOSE 466748, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117, SPELL_PERIODIC_DAMAGE 464854 464248, SPELL_PERIODIC_MISSED 464854 464248, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 464399 466742 1220752 464112 1217954 467117 467109, SPELL_CAST_SUCCESS 464149, SPELL_AURA_APPLIED 465346 1217685 464854 473115 473066 1218704 1219384 1220648 466748 472893 461536, SPELL_AURA_APPLIED_DOSE 466748, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117, SPELL_PERIODIC_DAMAGE 464854 464248, SPELL_PERIODIC_MISSED 464854 464248, UNIT_DIED, UNIT_POWER_UPDATE player
 		StartTimer: 10.0, Incinerator (1)
 		StartTimer: 16.0, Demolish (1)
 		StartTimer: 20.0, Balls+Adds (1)
