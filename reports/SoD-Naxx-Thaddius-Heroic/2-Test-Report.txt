@@ -38,15 +38,23 @@ Announces:
 		[176.12] Scheduled at 156.12 by SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
 	Magnetic Pull soon, type=soon, spellId=28338, triggerDeltas = 37.60
 		[ 37.60] Scheduled at 0.00 by ENCOUNTER_START: 1120, Thaddius, 186, 40, 0
+	Overcharged on >%s<, type=target, spellId=1219235, triggerDeltas = 0.00, 0.00
+		Unknown trigger
 
 Special warnings:
-	None
+	Overcharged - dodge attack, type=dodge, spellId=1219235, triggerDeltas = 8.20
+		[  8.20] SPELL_AURA_APPLIED: [Dps8->Dps8: xxxx Wish] Player-1-00000010, Dps8, 0x512, Player-1-00000010, Dps8, 0x512, 1219235, xxxx Wish, 0, DEBUFF, 0
+	Overcharged on you, type=you, spellId=1219235, triggerDeltas = 10.50
+		[ 10.50] SPELL_AURA_APPLIED: [Healer3->Healer3: xxxx Wish] Player-1-00000018, Healer3, 0x511, Player-1-00000018, Healer3, 0x511, 1219235, xxxx Wish, 0, DEBUFF, 0
 
 Yells:
-	None
+	{rt%2$d}%1$d, type=iconfade, spellId=1219235
+		[ 10.50] SPELL_AURA_APPLIED: [Healer3->Healer3: xxxx Wish] Player-1-00000018, Healer3, 0x511, Player-1-00000018, Healer3, 0x511, 1219235, xxxx Wish, 0, DEBUFF, 0
+		Unknown trigger
 
 Voice pack sounds:
-	None
+	VoicePack/watchstep
+		[  8.20] SPELL_AURA_APPLIED: [Dps8->Dps8: xxxx Wish] Player-1-00000010, Dps8, 0x512, Player-1-00000010, Dps8, 0x512, 1219235, xxxx Wish, 0, DEBUFF, 0
 
 Icons:
 	None
@@ -175,11 +183,27 @@ Event trace:
 																																																																																																														ScheduleTask: mod:BossHealthUpdate() at 54.50 (+0.50)
 																																																																																																															ScheduleTask: mod:BossHealthUpdate() at 55.00 (+0.50)
 																																																																																																																ScheduleTask: mod:BossHealthUpdate() at 55.50 (+0.50)
-																																																																																																																	ScheduleTask: mod:BossHealthUpdate() at 56.00 (+0.50)
-																																																																																																																		ScheduleTask: mod:BossHealthUpdate() at 56.50 (+0.50)
-																																																																																																																			ScheduleTask: mod:BossHealthUpdate() at 57.00 (+0.50)
-																																																																																																																				ScheduleTask: mod:BossHealthUpdate() at 57.50 (+0.50)
-																																																																																																																					ScheduleTask: mod:BossHealthUpdate() at 58.00 (+0.50)
+	[  8.20] SPELL_AURA_APPLIED: [Dps8->Dps8: xxxx Wish] Player-1-00000010, Dps8, 0x512, Player-1-00000010, Dps8, 0x512, 1219235, xxxx Wish, 0, DEBUFF, 0
+		AntiSpam: Bombs
+		ShowSpecialWarning: Overcharged - dodge attack
+		PlaySound: VoicePack/watchstep
+	Unknown trigger
+		ShowAnnounce: Overcharged on Dps8
+	[ 10.50] SPELL_AURA_APPLIED: [Healer3->Healer3: xxxx Wish] Player-1-00000018, Healer3, 0x511, Player-1-00000018, Healer3, 0x511, 1219235, xxxx Wish, 0, DEBUFF, 0
+		ShowYell: {rtUnknownUnknown
+		ShowSpecialWarning: Overcharged on you
+	Unknown trigger
+		ShowAnnounce: Overcharged on PlayerName
+	Unknown trigger
+		ShowYell: {rtUnknownUnknown
+	Unknown trigger
+		ShowYell: {rtUnknownUnknown
+	Unknown trigger
+		ShowYell: {rtUnknownUnknown
+	Unknown trigger
+		ShowYell: {rtUnknownUnknown
+	Unknown trigger
+		ShowYell: {rtUnknownUnknown
 	[ 43.62] CHAT_MSG_MONSTER_EMOTE: %s overloads!, Tesla Coil, "", "", World Trigger, "", 0, 0, "", 0, 4679, nil, 0, false, false, false, false, 0
 		UnscheduleTask: mod:TankThrow() scheduled by ScheduleTask at 40.60
 		StopTimer: Timer28338cd
