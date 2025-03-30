@@ -2,20 +2,21 @@ Test: SoD/Naxx/Sapphiron/Heroic
 Mod:  DBM-Raids-Vanilla/SapphironVanilla
 
 Findings:
-	Unused event registration: SPELL_AURA_APPLIED 1219729 (Glacial Crash)
-	Unused event registration: SPELL_AURA_APPLIED 1219732 (Glacial Crash)
 	Unused event registration: SPELL_AURA_APPLIED 28547 (Chill)
+	SpecialWarning for spell ID 1219729 (Glacial Crash) is triggered by event SPELL_AURA_APPLIED 1219732 (Glacial Crash)
+	Timer for spell ID 1219729 (Glacial Crash) is triggered by event SPELL_AURA_APPLIED 1219732 (Glacial Crash)
 	Timer for spell ID 1219729 (Glacial Crash) is triggered by event SPELL_CAST_START 28524 (Frost Breath)
+	Yell for spell ID 1219729 (Glacial Crash) is triggered by event SPELL_AURA_APPLIED 1219732 (Glacial Crash)
+	Timer Glacial Crash, time=30.75, type=next, spellId=1219729 (time=30.75, variance=0.00) got refreshed early with 19.42s remaining
+		Refreshed by: [ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Dps10: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000012, Dps10, 0x512, 1219729, Balbla, 0, DEBUFF, 0
+	Timer Glacial Crash, time=30.75, type=next, spellId=1219729 (time=30.75, variance=0.00) got refreshed early with 30.75s remaining
+		Refreshed by: [ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 1219732, Balbla, 0, DEBUFF, 0
 
 Unused objects:
 	[Announce] Air phase, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Special Warning] %s damage - move away, type=gtfo, spellId=28547
-	[Special Warning] Glacial Crash - soak it, type=soak, spellId=1219729
-	[Special Warning] Glacial Crash on you, type=you, spellId=1219729
-	[Yell] %d, type=shortfade, spellId=1219729
-	[Yell] Glacial Crash on PlayerName, type=yell, spellId=1219729
 
 Timers:
 	Air phase, time=66.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 68.93, 92.34
@@ -33,8 +34,11 @@ Timers:
 	Life Drain, time=22.00, type=cd, spellId=28542, triggerDeltas = 11.35, 58.75, 22.27, 22.68
 		[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
 			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
-	Glacial Crash, time=30.75, type=next, spellId=1219729, triggerDeltas = 0.00, 56.73, 92.34
+	Glacial Crash, time=30.75, type=next, spellId=1219729, triggerDeltas = 0.00, 11.35, 0.00, 45.38, 92.34
 		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Dps10: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000012, Dps10, 0x512, 1219729, Balbla, 0, DEBUFF, 0
+		[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 1219732, Balbla, 0, DEBUFF, 0
+		[ 32.00] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
 		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 			 Triggered 2x, delta times: 56.73, 92.34
 
@@ -69,15 +73,28 @@ Special warnings:
 	Frost Breath, type=nil, spellId=<none>, triggerDeltas = 56.73, 92.34
 		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 			 Triggered 2x, delta times: 56.73, 92.34
+	Glacial Crash - soak it, type=soak, spellId=1219729, triggerDeltas = 11.35
+		[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Dps10: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000012, Dps10, 0x512, 1219729, Balbla, 0, DEBUFF, 0
+	Glacial Crash on you, type=you, spellId=1219729, triggerDeltas = 11.35
+		[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 1219732, Balbla, 0, DEBUFF, 0
 
 Yells:
 	Icebolt on PlayerName, type=yell, spellId=28522
 		[148.33] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 28522, Icebolt, 0, DEBUFF, 0
+	%d, type=shortfade, spellId=1219729
+		[ 14.35] Scheduled at 11.35 by SPELL_AURA_APPLIED: [Sapphiron->Healer3: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 1219732, Balbla, 0, DEBUFF, 0
+			 Triggered 5x, delta times: 14.35, 1.00, 1.00, 1.00, 1.00
+	Glacial Crash on PlayerName, type=yell, spellId=1219729
+		[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 1219732, Balbla, 0, DEBUFF, 0
 
 Voice pack sounds:
+	VoicePack/bombyou
+		[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 1219732, Balbla, 0, DEBUFF, 0
 	VoicePack/findshelter
 		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 			 Triggered 2x, delta times: 56.73, 92.34
+	VoicePack/helpsoak
+		[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Dps10: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000012, Dps10, 0x512, 1219729, Balbla, 0, DEBUFF, 0
 
 Icons:
 	None
@@ -90,6 +107,7 @@ Event trace:
 			ShowAnnounce: Air phase in 10 seconds
 		StartTimer: 31.0, Air phase
 		ScheduleTask: (anonymous function) at 32.00 (+32.00)
+			StopTimer: Timer1219729next
 		StartTimer: 900.0, Berserk
 		ScheduleTask: announce:Schedule(10.0, "min") at 300.00 (+300.00)
 			Unscheduled by ENCOUNTER_END at 162.13
@@ -109,6 +127,26 @@ Event trace:
 		ScheduleTask: announce28542soon:Schedule() at 29.85 (+18.50)
 			ShowAnnounce: Life Drain soon
 		StartTimer: 22.0, Life Drain
+	[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Dps10: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000012, Dps10, 0x512, 1219729, Balbla, 0, DEBUFF, 0
+		StartTimer: 30.8, Glacial Crash
+		AntiSpam: Bomb
+		ShowSpecialWarning: Glacial Crash - soak it
+		PlaySound: VoicePack/helpsoak
+	[ 11.35] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Balbla] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 1219732, Balbla, 0, DEBUFF, 0
+		StartTimer: 30.8, Glacial Crash
+		ShowSpecialWarning: Glacial Crash on you
+		PlaySound: VoicePack/bombyou
+		ShowYell: Glacial Crash on PlayerName
+		ScheduleTask: yell1219729shortfade:ScheduleCountdown(1.0) at 18.35 (+7.00)
+			ShowYell: 1
+		ScheduleTask: yell1219729shortfade:ScheduleCountdown(2.0) at 17.35 (+6.00)
+			ShowYell: 2
+		ScheduleTask: yell1219729shortfade:ScheduleCountdown(3.0) at 16.35 (+5.00)
+			ShowYell: 3
+		ScheduleTask: yell1219729shortfade:ScheduleCountdown(4.0) at 15.35 (+4.00)
+			ShowYell: 4
+		ScheduleTask: yell1219729shortfade:ScheduleCountdown(5.0) at 14.35 (+3.00)
+			ShowYell: 5
 	[ 41.66] SPELL_AURA_APPLIED: [Sapphiron->Dps1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000001, Dps1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
 		ShowAnnounce: Icebolt (1) on Dps1
 	[ 45.45] SPELL_AURA_APPLIED: [Sapphiron->Dps5: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000006, Dps5, 0x512, 28522, Icebolt, 0, DEBUFF, 0
@@ -176,8 +214,8 @@ Event trace:
 		EndCombat: ENCOUNTER_END
 		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 161.27
-		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule() scheduled by ScheduleTask at 161.27
