@@ -149,9 +149,9 @@ Timers:
 			 Triggered 3x, delta times: 102.86, 256.51, 123.96
 		[363.08] SPELL_AURA_APPLIED_DOSE: [Chrome King Gallywix->Tank6: Focused Detonation] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000030, Tank6, 0x512, 466246, Focused Detonation, 0, DEBUFF, 2, 0
 			 Triggered 2x, delta times: 363.08, 122.53
-	Gallybux Finale Blast (%s), time=6.00, type=castcount, spellId=1219333, triggerDeltas = 31.14, 38.99, 33.64, 62.05, 62.57, 112.28, 61.84, 62.73, 36.91
-		[ 31.14] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
-			 Triggered 9x, delta times: 31.14, 38.99, 33.64, 62.05, 62.57, 112.28, 61.84, 62.73, 36.91
+	Gallybux Finale Blast (%s), time=6.00, type=castcount, spellId=1219333, triggerDeltas = 340.67, 61.84, 62.73, 36.91
+		[340.67] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
+			 Triggered 4x, delta times: 340.67, 61.84, 62.73, 36.91
 
 Announces:
 	%s, type=stagechange, spellId=<none>, triggerDeltas = 110.80, 156.14, 40.70
@@ -219,8 +219,6 @@ Special warnings:
 	Charged Giga Bomb on you, type=you, spellId=469362, triggerDeltas = 133.11, 80.40, 162.96, 77.78
 		[133.11] SPELL_AURA_APPLIED: [Giga Bomb->Tank4: Charged Giga Bomb] Creature-0-1-2769-1-233051-0000000049, Giga Bomb, 0xa48, Player-1-00000021, Tank4, 0x511, 469362, Charged Giga Bomb, 0, DEBUFF, 0
 			 Triggered 4x, delta times: 133.11, 80.40, 162.96, 77.78
-	Giga BOOM! on you, type=you, spellId=469404, triggerDeltas = 137.80
-		[137.80] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Giga BOOM!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 469404, Giga BOOM!, 0, DEBUFF, 0
 	TOTAL DESTRUCTION!!! - interrupt >%s<!, type=interrupt, spellId=1214369, triggerDeltas = 290.52
 		[290.52] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 0, 0
 	Bigger Badder Bomb Blast! (%s), type=count, spellId=1214607, triggerDeltas = 315.64, 36.04, 61.85, 62.65, 34.98
@@ -238,8 +236,6 @@ Voice pack sounds:
 		[175.62] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 545, nil, 0, false, false, false, false, 0
 		[315.64] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 			 Triggered 5x, delta times: 315.64, 36.04, 61.85, 62.65, 34.98
-	VoicePack/bombyou
-		[137.80] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Giga BOOM!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 469404, Giga BOOM!, 0, DEBUFF, 0
 	VoicePack/helpsoak
 		[329.62] SPELL_CAST_START: [Chrome King Gallywix: Tick-Tock Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466342, Tick-Tock Canisters, 0, 0
 			 Triggered 4x, delta times: 329.62, 59.86, 35.01, 60.69
@@ -288,7 +284,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 466340 467182 466751 469286 469327 466341 466834 1216845 1214607 466342 466958 1217987 1219041 1218488 1218546 1218696, SPELL_AURA_APPLIED 1216846 1214229 1214369 466165 1216444 1218504 1219039 1220784 469362 1218992 1218991 1220846 1220761 466246 469404 469293 471603 469387 1226891, SPELL_AURA_APPLIED_DOSE 466246, SPELL_AURA_REMOVED 1214229 1214369 466165 466246 1220290 469293 1226891, SPELL_INTERRUPT, SPELL_PERIODIC_DAMAGE 1215209, SPELL_PERIODIC_MISSED 1215209, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1
+		RegisterEvents: Regular, SPELL_CAST_START 466340 467182 466751 469286 469327 466341 466834 1216845 1214607 466342 466958 1217987 1219041 1218488 1218546 1218696, SPELL_AURA_APPLIED 1216846 1214229 1214369 466165 1216444 1218504 1219039 1220784 469362 1218992 1218991 1220846 1220761 466246 469293 471603 469387 1226891, SPELL_AURA_APPLIED_DOSE 466246, SPELL_AURA_REMOVED 1214229 1214369 466165 466246 1220290 469293 1226891, SPELL_INTERRUPT, SPELL_PERIODIC_DAMAGE 1215209, SPELL_PERIODIC_MISSED 1215209, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1
 		StartTimer: 111.0, Stage 2
 		StartTimer: 6.5, Scatterblast Canisters (1)
 		StartTimer: 17.9, Big Bad Buncha Bombs (1)
@@ -322,7 +318,6 @@ Event trace:
 	[ 31.14] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 6.0, Gallybux Finale Blast (1)
 		StartTimer: 39.0, Suppression (2)
 	[ 38.15] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
 		ShowAnnounce: Venting Heat (2)
@@ -355,7 +350,6 @@ Event trace:
 	[ 70.13] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 6.0, Gallybux Finale Blast (2)
 		StartTimer: 33.6, Suppression (3)
 	[ 77.15] SPELL_CAST_START: [Chrome King Gallywix: Scatterblast Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466340, Scatterblast Canisters, 0, 0
 		ShowSpecialWarning: Scatterblast Canisters! (5)
@@ -381,7 +375,6 @@ Event trace:
 	[103.77] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 6.0, Gallybux Finale Blast (3)
 	[110.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
 		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
@@ -428,9 +421,6 @@ Event trace:
 		ShowAnnounce: Charged Giga Bomb on Dps2
 	[135.86] SPELL_AURA_APPLIED: [Giga Bomb->Dps13: Charged Giga Bomb] Creature-0-1-2769-1-233051-000000004C, Giga Bomb, 0xa48, Player-1-00000020, Dps13, 0x512, 469362, Charged Giga Bomb, 0, DEBUFF, 0
 		ShowAnnounce: Charged Giga Bomb on Dps13
-	[137.80] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank4: Giga BOOM!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000021, Tank4, 0x511, 469404, Giga BOOM!, 0, DEBUFF, 0
-		ShowSpecialWarning: Giga BOOM! on you
-		PlaySound: VoicePack/bombyou
 	[138.45] SPELL_CAST_START: [Chrome King Gallywix: Giga Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 469327, Giga Blast, 0, 0
 		ShowAnnounce: Giga Blast (3)
 		StartTimer: 6.5, Giga Blast (4)
@@ -457,7 +447,6 @@ Event trace:
 	[165.82] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 6.0, Gallybux Finale Blast (1)
 	[175.62] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 545, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Big Bad Buncha Bombs! (1)
 		PlaySound: VoicePack/bombsoon
@@ -520,7 +509,6 @@ Event trace:
 	[228.39] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 6.0, Gallybux Finale Blast (2)
 	[234.67] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-0000000076, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
 		StartTimer: 7.3, Wrench
 	[234.67] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-0000000075, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
