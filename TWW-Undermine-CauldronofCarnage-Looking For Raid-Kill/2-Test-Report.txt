@@ -52,6 +52,7 @@ Timers:
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
 		[ 20.00] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 		[ 94.12] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		[104.53] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, -1, false, 0, 0
 	Colossal Clash (%s), time=95.00, type=nextcount, spellId=465833, triggerDeltas = 0.00, 165.06
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
 		[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
@@ -59,12 +60,12 @@ Timers:
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
 		[ 35.02] SPELL_CAST_START: [Torq: Lightning Bash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 466178, Lightning Bash, 0, 0
 		[ 94.12] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+		[104.53] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, -1, false, 0, 0
 	Beam (%s), time=97.30, type=cdcount, spellId=472233, triggerDeltas = 0.00, 16.00, 78.12, 16.93, 30.00, 40.00, 30.01
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
 		[ 16.00] SPELL_CAST_START: [Flarendo: Blastburn Roarcannon] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 472233, Blastburn Roarcannon, 0, 0
 			 Triggered 5x, delta times: 16.00, 95.05, 30.00, 40.00, 30.01
 		[ 94.12] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		[104.53] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, -1, false, 0, 0
 		[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
 	Bomb (%s), time=97.30, type=cdcount, spellId=473650, triggerDeltas = 0.00, 9.99, 84.13, 10.92, 30.03, 39.99, 30.00
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
@@ -80,7 +81,6 @@ Timers:
 		[ 30.00] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
 			 Triggered 5x, delta times: 30.00, 95.07, 30.00, 40.00, 30.04
 		[ 94.12] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-		[104.53] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, -1, false, 0, 0
 		[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
 
 Announces:
@@ -292,8 +292,8 @@ Event trace:
 	[ 95.08] SPELL_AURA_APPLIED_DOSE: [Torq->Tank3: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000018, Tank3, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 20, 0
 		ShowAnnounce: Galvanized Spite (20)
 	[104.53] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, -1, false, 0, 0
-		StopTimer: Timer472233cdcount\t3
-		StopTimer: Timer1214190cdcount\t3
+		StopTimer: Timer463900cdcount\t3
+		StopTimer: Timer466178cdcount\t3
 	[105.04] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
 		ShowSpecialWarning: Bomb - soak (3)
 		PlaySound: VoicePack/helpsoak
