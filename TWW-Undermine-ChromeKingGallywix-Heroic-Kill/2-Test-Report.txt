@@ -33,6 +33,7 @@ Findings:
 	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 466751 (Venting Heat) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
 	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
+	Timer for spell ID 466958 (Ego Check) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
 	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 467182 (Suppression) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
 	Timer for spell ID 469286 (Giga Coils) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
@@ -105,10 +106,12 @@ Timers:
 		[141.84] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 4x, delta times: 141.84, 77.72, 162.14, 75.83
 		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
-	Ego Check (%s), time=97.30, type=cdcount, spellId=466958, triggerDeltas = 307.64, 14.02, 13.04, 14.93, 48.38, 13.48, 8.07, 54.57, 8.08, 8.98
+	Ego Check (%s), time=97.30, type=cdcount, spellId=466958, triggerDeltas = 307.64, 14.02, 13.04, 14.93, 32.07, 16.31, 13.48, 8.07, 37.97, 16.60, 8.08, 8.98
 		[307.64] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[321.66] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 			 Triggered 9x, delta times: 321.66, 13.04, 14.93, 48.38, 13.48, 8.07, 54.57, 8.08, 8.98
+		[381.70] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
+			 Triggered 2x, delta times: 381.70, 75.83
 	Suppression (%s), time=97.30, type=cdcount, spellId=467182, triggerDeltas = 0.00, 31.14, 38.99, 71.71, 77.72, 88.08, 74.06, 75.83, 7.71
 		[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 15, 30, 0
 		[ 31.14] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
@@ -612,6 +615,7 @@ Event trace:
 		StartTimer: 30.7, Bigger Badder Bomb Blast (3)
 		StartTimer: 6.6, Tick-Tock Canisters (2)
 		StartTimer: 11.6, Venting Heat (2)
+		StartTimer: 15.3, Ego Check (5)
 	[383.09] SPELL_AURA_APPLIED: [Giga Bomb->Dps13: Charged Giga Bomb] Creature-0-1-2769-1-233051-00000000B9, Giga Bomb, 0xa48, Player-1-00000020, Dps13, 0x512, 469362, Charged Giga Bomb, 0, DEBUFF, 0
 		ShowAnnounce: Charged Giga Bomb on Dps13
 	[385.20] SPELL_AURA_APPLIED: [Giga Bomb->Dps1: Charged Giga Bomb] Creature-0-1-2769-1-233051-00000000B7, Giga Bomb, 0xa48, Player-1-00000003, Dps1, 0x512, 469362, Charged Giga Bomb, 0, DEBUFF, 0
@@ -685,6 +689,7 @@ Event trace:
 		StartTimer: 18.5, Bigger Badder Bomb Blast (4)
 		StartTimer: 26.4, Tick-Tock Canisters (4)
 		StartTimer: 37.4, Venting Heat (4)
+		StartTimer: 16.4, Ego Check (9)
 	[459.34] SPELL_AURA_APPLIED: [Giga Bomb->Tank3: Charged Giga Bomb] Creature-0-1-2769-1-233051-00000000DC, Giga Bomb, 0xa48, Player-1-00000012, Tank3, 0x512, 469362, Charged Giga Bomb, 0, DEBUFF, 0
 		ShowAnnounce: Charged Giga Bomb on Tank3
 	[463.13] SPELL_AURA_APPLIED: [Giga Bomb->Dps7: Charged Giga Bomb] Creature-0-1-2769-1-233051-00000000DD, Giga Bomb, 0xa48, Player-1-00000011, Dps7, 0x512, 469362, Charged Giga Bomb, 0, DEBUFF, 0
