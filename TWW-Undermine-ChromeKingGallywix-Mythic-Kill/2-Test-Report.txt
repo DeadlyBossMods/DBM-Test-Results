@@ -87,7 +87,7 @@ Timers:
 			 Triggered 15x, delta times: 69.86, 16.44, 23.57, 18.42, 22.03, 29.65, 12.06, 23.35, 65.73, 35.01, 19.57, 36.94, 20.48, 96.99, 33.50
 		[272.09] SPELL_AURA_REMOVED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 			 Triggered 2x, delta times: 272.09, 198.48
-	Ego Check (%s), time=97.30, type=cdcount, spellId=466958, triggerDeltas = 30.28, 16.01, 21.55, 14.54, 19.95, 17.08, 12.39, 16.48, 29.66, 5.53, 23.85, 23.63, 41.14, 21.07, 26.49, 28.57, 27.95, 28.96, 65.44, 23.04, 39.00
+	Ego Check, time=97.30, type=cd, spellId=466958, triggerDeltas = 30.28, 16.01, 21.55, 14.54, 19.95, 17.08, 12.39, 16.48, 29.66, 5.53, 23.85, 23.63, 41.14, 21.07, 26.49, 28.57, 27.95, 28.96, 65.44, 23.04, 39.00
 		[ 30.28] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
 		[ 46.29] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
 			 Triggered 18x, delta times: 46.29, 21.55, 14.54, 19.95, 17.08, 12.39, 16.48, 29.66, 5.53, 23.85, 23.63, 62.21, 26.49, 28.57, 27.95, 28.96, 88.48, 39.00
@@ -304,7 +304,7 @@ Event trace:
 		StartTimer: 31.0, Combination Canisters (1)
 		StartTimer: 8.0, Bigger Badder Bomb Blast (1)
 		StartTimer: 43.1, Suppression (1)
-		StartTimer: 16.0, Ego Check (1)
+		StartTimer: 16.0, Ego Check
 		StartTimer: 39.6, Venting Heat (1)
 		StartTimer: 208.7, Stage 1.5
 	[ 38.29] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
@@ -333,7 +333,7 @@ Event trace:
 		StopTimer: Timer1217292target\tTank2
 		StartTimer: 10.0, Time-Release Crackle: Tank2
 	[ 46.29] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 21.6, Ego Check (2)
+		StartTimer: 21.6, Ego Check
 	[ 47.10] SPELL_AURA_APPLIED: [Giga-Juiced Technician->Dps10: Ionization] Creature-0-1-2769-1-237192-0000000018, Giga-Juiced Technician, 0xa48, Player-1-00000012, Dps10, 0x512, 1219039, Ionization, 0, DEBUFF, 0
 		ScheduleTask: specWarn1219039dispel:CombinedShow("Dps10") at 47.60 (+0.50)
 			ShowSpecialWarning: Ionization on Dps10 - dispel now
@@ -367,7 +367,7 @@ Event trace:
 		PlaySound: VoicePack/helpsoak
 		StartTimer: 28.5, Combination Canisters (2)
 	[ 67.84] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 14.6, Ego Check (3)
+		StartTimer: 14.6, Ego Check
 	[ 69.86] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
 		ShowAnnounce: Venting Heat (1)
 		StartTimer: 16.4, Venting Heat (2)
@@ -381,7 +381,7 @@ Event trace:
 	[ 78.72] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-00000000FA, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
 		StartTimer: 7.3, Wrench
 	[ 82.38] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 19.9, Ego Check (4)
+		StartTimer: 19.9, Ego Check
 	[ 82.87] SPELL_CAST_START: [Giga-Juiced Technician: Static Zap] Creature-0-1-2769-1-237192-00000000B7, Giga-Juiced Technician, 0xa48, "", nil, 0x0, 1219041, Static Zap, 0, 0
 		ShowSpecialWarning: Static Zap - interrupt Giga-Juiced Technician! (1)
 		PlaySound: VoicePack/kick1r
@@ -418,7 +418,7 @@ Event trace:
 		ShowSpecialWarning: Static Zap - interrupt Giga-Juiced Technician! (3)
 		PlaySound: VoicePack/kick3r
 	[102.33] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 17.0, Ego Check (5)
+		StartTimer: 17.0, Ego Check
 	[102.38] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-0000000024, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
 		StartTimer: 15.0, 1500-Pound ""Dud""
 	[102.70] SPELL_AURA_APPLIED: [Chrome King Gallywix->1500-Pound "Dud": 1500-Pound "Dud"] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Creature-0-1-2769-1-231727-00000000B9, 1500-Pound "Dud", 0xa48, 466165, 1500-Pound "Dud", 0, BUFF, 0
@@ -452,7 +452,7 @@ Event trace:
 		StopTimer: Timer1217292target\tTank2
 		StartTimer: 10.0, Time-Release Crackle: Tank2
 	[119.41] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 12.4, Ego Check (6)
+		StartTimer: 12.4, Ego Check
 	[121.44] SPELL_CAST_START: [Chrome King Gallywix: Combination Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1217987, Combination Canisters, 0, 0
 		ShowSpecialWarning: Combination Canisters - soak (3)
 		PlaySound: VoicePack/helpsoak
@@ -461,7 +461,7 @@ Event trace:
 		ShowAnnounce: Venting Heat (4)
 		StartTimer: 22.0, Venting Heat (5)
 	[131.80] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 16.5, Ego Check (7)
+		StartTimer: 16.5, Ego Check
 	[133.84] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (2) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -480,7 +480,7 @@ Event trace:
 		ScheduleTask: specWarn1219039dispel:ScheduleVoice("helpdispel") at 148.23 (+0.50)
 			PlaySound: VoicePack/helpdispel
 	[148.28] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 29.6, Ego Check (8)
+		StartTimer: 29.6, Ego Check
 	[150.32] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
 		ShowAnnounce: Venting Heat (5)
 		StartTimer: 29.6, Venting Heat (6)
@@ -544,7 +544,7 @@ Event trace:
 	[177.34] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-000000003C, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
 		StartTimer: 7.3, Wrench
 	[177.94] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 11.5, Ego Check (9)
+		StartTimer: 11.5, Ego Check
 	[178.58] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-00000000C1, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
 		StartTimer: 7.3, Wrench
 	[178.58] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-000000003D, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
@@ -559,7 +559,7 @@ Event trace:
 		ShowAnnounce: Venting Heat (6)
 		StartTimer: 12.0, Venting Heat (7)
 	[183.47] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 23.8, Ego Check (10)
+		StartTimer: 23.8, Ego Check
 	[185.50] SPELL_CAST_START: [Chrome King Gallywix: Combination Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1217987, Combination Canisters, 0, 0
 		ShowSpecialWarning: Combination Canisters - soak (5)
 		PlaySound: VoicePack/helpsoak
@@ -595,7 +595,7 @@ Event trace:
 		ShowSpecialWarning: Static Zap - interrupt Giga-Juiced Technician! (3)
 		PlaySound: VoicePack/kick3r
 	[207.32] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 23.6, Ego Check (11)
+		StartTimer: 23.6, Ego Check
 	[208.10] SPELL_AURA_APPLIED: [Giga-Juiced Technician->Dps9: Ionization] Creature-0-1-2769-1-237192-000000003C, Giga-Juiced Technician, 0xa48, Player-1-00000011, Dps9, 0x512, 1219039, Ionization, 0, DEBUFF, 0
 		ScheduleTask: specWarn1219039dispel:CombinedShow("Dps9") at 208.60 (+0.50)
 			ShowSpecialWarning: Ionization on Dps9 - dispel now
@@ -645,12 +645,12 @@ Event trace:
 	[228.03] SPELL_AURA_APPLIED: [Chrome King Gallywix->Tank1: Auto-Locking Cuff Bomb] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Player-1-00000007, Tank1, 0x512, 1220784, Auto-Locking Cuff Bomb, 0, DEBUFF, 0
 		ShowAnnounce: Auto-Locking Cuff Bomb on Tank1
 	[230.95] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 11.6, Ego Check (12)
+		StartTimer: 11.6, Ego Check
 	[232.98] UNIT_SPELLCAST_START: boss1, Cast-3-1-2769-2-469286-0000000267, 469286, Chrome King Gallywix, 63.7, 100, Tank1, 0
 		ShowAnnounce: Giga Coils (4)
 	[238.99] SPELL_AURA_APPLIED: [->Chrome King Gallywix: Circuit Reboot] "", nil, 0x0, Vehicle-0-1-2769-1-232131-000000000B, Chrome King Gallywix, 0xa48, 1226891, Circuit Reboot, 0, BUFF, 0
 		AntiSpam: 1
-		StopTimer: Timer466958cdcount\t12
+		StopTimer: Timer466958cd
 		StopTimer: Timer1217987cdcount\t7
 		ShowAnnounce: Stage 1.5
 		PlaySound: VoicePack/phasechange
@@ -694,7 +694,7 @@ Event trace:
 		StartTimer: 12.5, Scatterbomb Canisters (1)
 		StartTimer: 35.3, Biggest Baddest Bomb Barrage (1)
 		StartTimer: 23.0, Suppression (1)
-		StartTimer: 21.0, Ego Check (1)
+		StartTimer: 21.0, Ego Check
 		StartTimer: 9.0, Venting Heat (1)
 		StartTimer: 167.1, Stage 2.5
 	[281.11] SPELL_CAST_START: [Chrome King Gallywix: Venting Heat] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466751, Venting Heat, 0, 0
@@ -705,7 +705,7 @@ Event trace:
 		PlaySound: VoicePack/helpsoak
 		StartTimer: 42.5, Scatterbomb Canisters (2)
 	[293.16] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 26.5, Ego Check (2)
+		StartTimer: 26.5, Ego Check
 	[295.18] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -720,7 +720,7 @@ Event trace:
 		ShowAnnounce: Venting Heat (2)
 		StartTimer: 19.6, Venting Heat (3)
 	[319.65] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 28.6, Ego Check (3)
+		StartTimer: 28.6, Ego Check
 	[321.66] SPELL_CAST_START: [Chrome King Gallywix: Giga Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 469327, Giga Blast, 0, 0
 		ShowAnnounce: Giga Blast (1)
 		StartTimer: 56.5, Giga Blast (2)
@@ -737,7 +737,7 @@ Event trace:
 		StartTimer: 6.0, Gallybux Finale Blast (2)
 		StartTimer: 44.8, Suppression (3)
 	[348.22] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 27.9, Ego Check (4)
+		StartTimer: 27.9, Ego Check
 	[355.53] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Biggest Baddest Bomb Barrage]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 4068, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Biggest Baddest Bomb Barrage! (2)
 		PlaySound: VoicePack/bombsoon
@@ -751,7 +751,7 @@ Event trace:
 		ShowAnnounce: Venting Heat (4)
 		StartTimer: 20.4, Venting Heat (5)
 	[376.17] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 29.0, Ego Check (5)
+		StartTimer: 29.0, Ego Check
 	[378.19] SPELL_CAST_START: [Chrome King Gallywix: Giga Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 469327, Giga Blast, 0, 0
 		ShowAnnounce: Giga Blast (2)
 		StartTimer: 43.5, Giga Blast (3)
@@ -766,7 +766,7 @@ Event trace:
 		ShowSpecialWarning: Scatterbomb Canisters - soak (4)
 		PlaySound: VoicePack/helpsoak
 	[405.13] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 22.0, Ego Check (6)
+		StartTimer: 22.0, Ego Check
 	[409.56] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Biggest Baddest Bomb Barrage]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 4078, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Biggest Baddest Bomb Barrage! (3)
 		PlaySound: VoicePack/bombsoon
@@ -829,7 +829,7 @@ Event trace:
 		StartTimer: 7.5, Scatterbomb Canisters (1)
 		StartTimer: 25.9, Biggest Baddest Bomb Barrage (1)
 		StartTimer: 64.1, Suppression (1)
-		StartTimer: 23.0, Ego Check (1)
+		StartTimer: 23.0, Ego Check
 		StartTimer: 19.5, Venting Heat (1)
 	[478.10] SPELL_CAST_START: [Chrome King Gallywix: Scatterbomb Canisters] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1218488, Scatterbomb Canisters, 0, 0
 		ShowSpecialWarning: Scatterbomb Canisters - soak (1)
@@ -839,7 +839,7 @@ Event trace:
 		ShowAnnounce: Venting Heat (1)
 		StartTimer: 32.5, Venting Heat (2)
 	[493.61] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 39.0, Ego Check (2)
+		StartTimer: 39.0, Ego Check
 	[498.56] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Biggest Baddest Bomb Barrage]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 4105, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Biggest Baddest Bomb Barrage! (1)
 		PlaySound: VoicePack/bombsoon
@@ -855,7 +855,7 @@ Event trace:
 	[527.10] SPELL_CAST_START: [Chrome King Gallywix: Giga Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 469327, Giga Blast, 0, 0
 		ShowAnnounce: Giga Blast (1)
 	[532.61] SPELL_CAST_START: [Chrome King Gallywix: Ego Check] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 466958, Ego Check, 0, 0
-		StartTimer: 26.0, Ego Check (3)
+		StartTimer: 26.0, Ego Check
 	[534.63] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
