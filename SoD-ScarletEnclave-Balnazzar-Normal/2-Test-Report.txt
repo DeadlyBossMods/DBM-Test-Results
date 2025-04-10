@@ -2,10 +2,16 @@ Test: SoD/ScarletEnclave/Balnazzar/Normal
 Mod:  DBM-Raids-Vanilla/Balnazzar
 
 Findings:
-	None
+	Unused event registration: SPELL_AURA_APPLIED 1231777 (Suppressing Darkness)
+	Unused event registration: SPELL_AURA_APPLIED 1231836 (Carrion Swarm)
+	Unused event registration: SPELL_AURA_APPLIED 1231844 (Circle of Domination)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1231836 (Carrion Swarm)
 
 Unused objects:
-	None
+	[Announce] Circle of Domination on >%s<, type=target, spellId=1231844
+	[Special Warning] Carrion Swarm on you, type=you, spellId=1231836
+	[Special Warning] Circle of Domination - move away, type=move, spellId=1231844
+	[Special Warning] Circle of Domination - move away, type=move, spellId=1231844
 
 Timers:
 	None
@@ -28,6 +34,6 @@ Icons:
 Event trace:
 	[0.00] ENCOUNTER_START: 3185, Balnazzar, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231844 1231836 1231777, SPELL_AURA_APPLIED_DOSE 1231836
 	[5.00] ENCOUNTER_END: 3185, Balnazzar, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
