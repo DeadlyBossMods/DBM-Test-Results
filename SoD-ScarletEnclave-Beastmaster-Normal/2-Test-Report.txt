@@ -2,13 +2,23 @@ Test: SoD/ScarletEnclave/Beastmaster/Normal
 Mod:  DBM-Raids-Vanilla/Beastmaster
 
 Findings:
-	None
+	Unused event registration: SPELL_AURA_APPLIED 1230200 (Enervate)
+	Unused event registration: SPELL_AURA_APPLIED 1230242 (Enkindle)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230200 (Enervate)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230242 (Enkindle)
+	Unused event registration: SPELL_CAST_SUCCESS 1230200 (Enervate)
+	Unused event registration: SPELL_CAST_SUCCESS 1230242 (Enkindle)
 
 Unused objects:
-	None
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Special Warning] %d stacks of Enervate on you, type=stack, spellId=1230200
+	[Special Warning] %d stacks of Enkindle on you, type=stack, spellId=1230242
+	[Timer] Mark %d, time=15.90, type=cd, spellId=<none>
 
 Timers:
-	None
+	Berserk, time=300.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
 
 Announces:
 	None
@@ -28,6 +38,19 @@ Icons:
 Event trace:
 	[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1230242 1230200, SPELL_AURA_APPLIED_DOSE 1230242 1230200, SPELL_CAST_SUCCESS 1230242 1230200
+		StartTimer: 300.0, Berserk
+		ScheduleTask: announce:Schedule(3.0, "min") at 120.00 (+120.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 240.00 (+240.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 270.00 (+270.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 290.00 (+290.00)
+			Unscheduled by ENCOUNTER_END at 5.00
 	[5.00] ENCOUNTER_END: 3196, Beastmaster, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
