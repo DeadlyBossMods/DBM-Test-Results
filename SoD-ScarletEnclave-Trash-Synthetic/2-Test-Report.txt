@@ -1,0 +1,37 @@
+Test: SoD/ScarletEnclave/Trash/Synthetic
+Mod:  DBM-Raids-Vanilla/SE_Trash
+
+Findings:
+	Unused event registration: DAMAGE_SHIELD
+	Unused event registration: DAMAGE_SHIELD_MISSED
+	Unused event registration: SPELL_AURA_APPLIED 1232703 (Retribution Aura)
+	Unused event registration: SPELL_CAST_START 1232703 (Retribution Aura)
+	Unused event registration: SPELL_DAMAGE 1232703 (Retribution Aura)
+	Unused event registration: SPELL_MISSED 1232703 (Retribution Aura)
+
+Unused objects:
+	[Special Warning] Retribution Aura - interrupt >%s<!, type=interrupt, spellId=1232703
+	[Special Warning] Retribution Aura on >%s< - stop attacking, type=reflect, spellId=1232703
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1233069
+
+Timers:
+	None
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ADDON_LOADED: DBM-Raids-Vanilla, 0
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1232703, SPELL_CAST_START 1232703, SPELL_DAMAGE 1232703, SPELL_MISSED 1232703, DAMAGE_SHIELD 1232703, DAMAGE_SHIELD_MISSED 1232703
