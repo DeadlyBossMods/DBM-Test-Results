@@ -27,6 +27,8 @@ Findings:
 	Timer for spell ID 473650 (Scrapbomb) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
 	Timer for spell ID 474159 (Static Charge) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
 	Timer for spell ID 1214190 (Eruption Stomp) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
+	Timer Colossal Clash (%s), time=95.00, type=nextcount, spellId=465833 (time=71.60, variance=0.00) got refreshed early with 1.57s remaining
+		Refreshed by: [ 70.00] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2769-2-465833-00000001F0, 465833, Flarendo, 90.5, 98, Tank1, 0
 
 Unused objects:
 	[Announce] King of Carnage (%s), type=count, spellId=471557
@@ -39,7 +41,7 @@ Unused objects:
 	[Special Warning] Molten Phlegm - move away from others, type=moveaway, spellId=1213690
 	[Special Warning] Voltaic Image - run away, type=run, spellId=1213994
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1214039
-	[Special Warning] Stomp (%s) - dodge attack, type=dodgecount, spellId=1214190
+	[Special Warning] Stomp - defensive, type=defensive, spellId=1214190
 	[Timer] Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690
 	[Timer] Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994
 	[Yell] %d, type=shortfade, spellId=472233
@@ -52,8 +54,12 @@ Timers:
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
 		[ 20.00] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 		[ 94.12] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-	Colossal Clash (%s), time=95.00, type=nextcount, spellId=465833, triggerDeltas = 0.00, 165.06
+	Colossal Clash ends, time=20.00, type=active, spellId=465833, triggerDeltas = 70.00, 95.06
+		[ 70.00] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2769-2-465833-00000001F0, 465833, Flarendo, 90.5, 98, Tank1, 0
+		[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
+	Colossal Clash (%s), time=95.00, type=nextcount, spellId=465833, triggerDeltas = 0.00, 70.00, 95.06
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
+		[ 70.00] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2769-2-465833-00000001F0, 465833, Flarendo, 90.5, 98, Tank1, 0
 		[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
 	Lightning Bash (%s), time=97.30, type=cdcount, spellId=466178, triggerDeltas = 0.00, 35.02, 59.10
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
@@ -95,7 +101,8 @@ Special warnings:
 	Thunderdrum Salvo (%s) - dodge attack, type=dodgecount, spellId=463900, triggerDeltas = 20.00, 24.99
 		[ 20.00] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 			 Triggered 2x, delta times: 20.00, 24.99
-	Colossal Clash (%s) - dodge attack, type=dodgecount, spellId=465833, triggerDeltas = 165.06
+	Colossal Clash (%s) - dodge attack, type=dodgecount, spellId=465833, triggerDeltas = 70.00, 95.06
+		[ 70.00] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2769-2-465833-00000001F0, 465833, Flarendo, 90.5, 98, Tank1, 0
 		[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
 	Bomb - soak (%s), type=soakcount, spellId=473650, triggerDeltas = 9.99, 30.03, 65.02, 30.03, 39.99, 30.00
 		[  9.99] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
@@ -111,6 +118,7 @@ Voice pack sounds:
 	VoicePack/watchstep
 		[ 20.00] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
 			 Triggered 2x, delta times: 20.00, 24.99
+		[ 70.00] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2769-2-465833-00000001F0, 465833, Flarendo, 90.5, 98, Tank1, 0
 		[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
 
 Icons:
@@ -119,7 +127,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 17, 25, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 473650 472233 1214190 473994 466178, SPELL_CAST_SUCCESS 463900, SPELL_AURA_APPLIED 472222 472225 471660 471557 1213690 1214009 1221826, SPELL_AURA_APPLIED_DOSE 472222 472225 471557 1221826, SPELL_AURA_REMOVED 471660 1213690 1214009 465863 465872, SPELL_PERIODIC_DAMAGE 1214039 463925, SPELL_PERIODIC_MISSED 1214039 463925, UNIT_DIED, RAID_BOSS_WHISPER, UNIT_POWER_UPDATE player, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 473650 472233 1214190 473994 466178, SPELL_CAST_SUCCESS 463900, SPELL_AURA_APPLIED 472222 472225 471660 471557 1213690 1214009 1221826, SPELL_AURA_APPLIED_DOSE 472222 472225 471557 1221826, SPELL_AURA_REMOVED 471660 1213690 1214009 465863 465872, SPELL_PERIODIC_DAMAGE 1214039 463925, SPELL_PERIODIC_MISSED 1214039 463925, UNIT_DIED, RAID_BOSS_WHISPER, UNIT_POWER_UPDATE player, UNIT_SPELLCAST_SUCCEEDED boss1 boss2
 		StartTimer: 71.6, Colossal Clash (1)
 		StartTimer: 10.0, Bomb (1)
 		StartTimer: 16.0, Beam (1)
@@ -274,6 +282,11 @@ Event trace:
 		ShowAnnounce: Galvanized Spite (12)
 	[ 65.10] SPELL_AURA_APPLIED_DOSE: [Torq->Tank3: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000018, Tank3, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 14, 0
 		ShowAnnounce: Galvanized Spite (14)
+	[ 70.00] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2769-2-465833-00000001F0, 465833, Flarendo, 90.5, 98, Tank1, 0
+		ShowSpecialWarning: Colossal Clash (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 95.0, Colossal Clash (2)
+		StartTimer: 24.0, Colossal Clash ends
 	[ 75.08] SPELL_AURA_APPLIED_DOSE: [Torq->Tank3: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000018, Tank3, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 16, 0
 		ShowAnnounce: Galvanized Spite (16)
 	[ 85.07] SPELL_AURA_APPLIED_DOSE: [Torq->Tank3: Galvanized Spite] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Player-1-00000018, Tank3, 0x511, 472225, Galvanized Spite, 0, DEBUFF, 18, 0
@@ -319,12 +332,13 @@ Event trace:
 	[160.09] SPELL_AURA_APPLIED_DOSE: [Flarendo->Tank3: Blistering Spite] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000018, Tank3, 0x511, 472222, Blistering Spite, 0, DEBUFF, 10, 0
 		ShowAnnounce: Blistering Spite (10)
 	[165.06] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2769-2-465833-000000038B, 465833, Flarendo, 45, 100, Tank3, 0
-		ShowSpecialWarning: Colossal Clash (1) - dodge attack
+		ShowSpecialWarning: Colossal Clash (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 95.0, Colossal Clash (2)
+		StartTimer: 95.0, Colossal Clash (3)
 		StopTimer: Timer473650cdcount\t5
 		StopTimer: Timer472233cdcount\t5
 		StopTimer: Timer1214190cdcount\t5
+		StartTimer: 24.0, Colossal Clash ends
 	[170.07] SPELL_AURA_APPLIED_DOSE: [Flarendo->Tank3: Blistering Spite] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, Player-1-00000018, Tank3, 0x511, 472222, Blistering Spite, 0, DEBUFF, 12, 0
 		ShowAnnounce: Blistering Spite (12)
 	[175.06] SPELL_CAST_START: [Flarendo: Scrapbomb] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 473650, Scrapbomb, 0, 0
