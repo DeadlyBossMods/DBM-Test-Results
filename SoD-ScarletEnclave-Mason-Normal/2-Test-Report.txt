@@ -5,12 +5,15 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1229005 (Mortal Wound)
 	Unused event registration: SPELL_AURA_APPLIED 1231592 (Drowning Shallows)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1229005 (Mortal Wound)
+	Unused event registration: SPELL_CAST_START 1234347 (Ignite Flesh)
 
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Mortal Wound on >%s< (%d), type=stack, spellId=1229005
+	[Announce] Casting Ignite Flesh: -nan sec, type=cast, spellId=1234347
 	[Special Warning] Drowning Shallows on >%s< - dispel now, type=dispel, spellId=1231592
+	[Special Warning] Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347
 
 Timers:
 	Berserk, time=360.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
@@ -34,7 +37,7 @@ Icons:
 Event trace:
 	[0.00] ENCOUNTER_START: 3197, Mason, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231592 1229005, SPELL_AURA_APPLIED_DOSE 1229005
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231592 1229005, SPELL_AURA_APPLIED_DOSE 1229005, SPELL_CAST_START 1234347
 		StartTimer: 360.0, Berserk
 		ScheduleTask: announce:Schedule(5.0, "min") at 60.00 (+60.00)
 			Unscheduled by ENCOUNTER_END at 5.00
