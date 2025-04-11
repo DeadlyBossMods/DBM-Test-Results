@@ -2,13 +2,32 @@ Test: SoD/ScarletEnclave/LillianVoss/Normal
 Mod:  DBM-Raids-Vanilla/LillianVoss
 
 Findings:
-	None
+	Unused event registration: SPELL_AURA_APPLIED 1232192 (Debilitate)
+	Unused event registration: SPELL_AURA_APPLIED 1233883 (Intoxicating Venom)
+	Unused event registration: SPELL_AURA_APPLIED 1234708 (Toxic Pool)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1232192 (Debilitate)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1233883 (Intoxicating Venom)
+	Unused event registration: SPELL_AURA_REMOVED 1233883 (Intoxicating Venom)
+	Unused event registration: SPELL_CAST_START 1233847 (Scarlet Grasp)
+	Unused event registration: SPELL_DAMAGE 1234708 (Toxic Pool)
+	Unused event registration: SPELL_MISSED 1234708 (Toxic Pool)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1234708 (Toxic Pool)
+	Unused event registration: SPELL_PERIODIC_MISSED 1234708 (Toxic Pool)
 
 Unused objects:
-	None
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Debilitate (%s) on >%s<, type=targetcount, spellId=1232192
+	[Announce] Casting Scarlet Grasp: -nan sec, type=cast, spellId=1233847
+	[Special Warning] Intoxicating Venom on you, type=you, spellId=1233883
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1234708
+	[Timer] Debilitate, time=21.00, type=var, spellId=1232192
 
 Timers:
-	None
+	Berserk, time=180.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+	Scarlet Grasp, time=30.75, type=next, spellId=1233847, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
 
 Announces:
 	None
@@ -28,6 +47,19 @@ Icons:
 Event trace:
 	[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1233883 1232192 1234708, SPELL_AURA_APPLIED_DOSE 1233883 1232192, SPELL_AURA_REMOVED 1233883, SPELL_CAST_START 1233847, SPELL_PERIODIC_DAMAGE 1234708, SPELL_PERIODIC_MISSED 1234708, SPELL_DAMAGE 1234708, SPELL_MISSED 1234708
+		StartTimer: 180.0, Berserk
+		ScheduleTask: announce:Schedule(1.0, "min") at 120.00 (+120.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 150.00 (+150.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 170.00 (+170.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		StartTimer: 30.7, Scarlet Grasp
 	[5.00] ENCOUNTER_END: 3190, LillianVoss, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1233883
