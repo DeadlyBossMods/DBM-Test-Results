@@ -1,0 +1,62 @@
+Test: SoD/ScarletEnclave/Beatrix/Normal
+Mod:  DBM-Raids-Vanilla/Beatrix
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1232389 (Unwavering Blade)
+	Unused event registration: SPELL_AURA_APPLIED 1232390 (Rose's Thorn)
+	Unused event registration: SPELL_AURA_APPLIED 1236162 (Unknown spell)
+	Unused event registration: SPELL_AURA_APPLIED 1236174 (Unknown spell)
+	Unused event registration: SPELL_AURA_APPLIED 1236182 (Unknown spell)
+	Unused event registration: SPELL_AURA_REFRESH 1232389 (Unwavering Blade)
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Unwavering Blade on >%s<, type=target, spellId=1232389
+	[Announce] Rose's Thorn on >%s<, type=target, spellId=1232390
+	[Announce] Unknown on >%s<, type=target, spellId=1236162
+	[Announce] Unknown, type=spell, spellId=1236174
+	[Announce] Unknown on >%s<, type=target, spellId=1236182
+	[Special Warning] Rose's Thorn!, type=spell, spellId=1232390
+
+Timers:
+	Berserk, time=413.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3187, Beatrix, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ENCOUNTER_START: 3187, Beatrix, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1236174 1232389 1236162 1236182 1232390, SPELL_AURA_REFRESH 1232389
+		StartTimer: 413.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 113.00 (+113.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(3.0, "min") at 233.00 (+233.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 353.00 (+353.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 383.00 (+383.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 403.00 (+403.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+	[5.00] ENCOUNTER_END: 3187, Beatrix, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00

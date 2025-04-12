@@ -1,0 +1,41 @@
+Test: SoD/ScarletEnclave/Trash/Synthetic
+Mod:  DBM-Raids-Vanilla/SE_Trash
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1232703 (Retribution Aura)
+	Unused event registration: SPELL_CAST_START 1232703 (Retribution Aura)
+	Unused event registration: SPELL_DAMAGE 1232703 (Retribution Aura)
+	Unused event registration: SPELL_MISSED 1232703 (Retribution Aura)
+
+Unused objects:
+	[Special Warning] Retribution Aura - interrupt >%s<!, type=interrupt, spellId=1232703
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1233069
+
+Timers:
+	None
+
+Announces:
+	None
+
+Special warnings:
+	Retribution Aura on >%s< - stop attacking, type=reflect, spellId=1232703, triggerDeltas = 1.00
+		[1.00] DAMAGE_SHIELD: [Scarlet Knight->Healer1: Retribution Aura] Creature-0-1-2856-1-240798-0000000001, Scarlet Knight, 0xa48, Player-1-00000001, Healer1, 0x511, 1232703, Retribution Aura, 0, 202, -1, 0
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/stopattack
+		[1.00] DAMAGE_SHIELD: [Scarlet Knight->Healer1: Retribution Aura] Creature-0-1-2856-1-240798-0000000001, Scarlet Knight, 0xa48, Player-1-00000001, Healer1, 0x511, 1232703, Retribution Aura, 0, 202, -1, 0
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ADDON_LOADED: DBM-Raids-Vanilla, 0
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1232703, SPELL_CAST_START 1232703, SPELL_DAMAGE 1232703, SPELL_MISSED 1232703, DAMAGE_SHIELD 1232703, DAMAGE_SHIELD_MISSED 1232703
+	[1.00] DAMAGE_SHIELD: [Scarlet Knight->Healer1: Retribution Aura] Creature-0-1-2856-1-240798-0000000001, Scarlet Knight, 0xa48, Player-1-00000001, Healer1, 0x511, 1232703, Retribution Aura, 0, 202, -1, 0
+		AntiSpam: Shield
+			Filtered: 1x DAMAGE_SHIELD_MISSED at 2
+		ShowSpecialWarning: Retribution Aura on Scarlet Knight - stop attacking
+		PlaySound: VoicePack/stopattack
