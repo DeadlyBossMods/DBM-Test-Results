@@ -1,0 +1,63 @@
+Test: SoD/ScarletEnclave/RebornCouncil/Normal
+Mod:  DBM-Raids-Vanilla/RebornCouncil
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1236157 (Unknown spell)
+	Unused event registration: SPELL_CAST_START 1231095 (Peeled Secrets)
+	Unused event registration: SPELL_CAST_START 1231264 (Blades of Light)
+	Unused event registration: SPELL_CAST_SUCCESS 1231383 (Divine Avatar)
+	Unused event registration: SPELL_CAST_SUCCESS 1236306 (Unknown spell)
+	Unused event registration: SPELL_DAMAGE 1236157 (Unknown spell)
+	Unused event registration: SPELL_MISSED 1236157 (Unknown spell)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1236157 (Unknown spell)
+	Unused event registration: SPELL_PERIODIC_MISSED 1236157 (Unknown spell)
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Unknown, type=spell, spellId=1236306
+	[Special Warning] Peeled Secrets - interrupt >%s<!, type=interrupt, spellId=1231095
+	[Special Warning] Blades of Light - dodge attack, type=dodge, spellId=1231264
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1236157
+
+Timers:
+	Berserk, time=300.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3188, RebornCouncil, 186, 40, 0
+	Blades of Light, time=31.00, type=var, spellId=1231264, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3188, RebornCouncil, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ENCOUNTER_START: 3188, RebornCouncil, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1231264 1231095, SPELL_CAST_SUCCESS 1236306 1231383, SPELL_AURA_APPLIED 1236157, SPELL_PERIODIC_DAMAGE 1236157, SPELL_PERIODIC_MISSED 1236157, SPELL_DAMAGE 1236157, SPELL_MISSED 1236157
+		StartTimer: 300.0, Berserk
+		ScheduleTask: announce:Schedule(3.0, "min") at 120.00 (+120.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 240.00 (+240.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 270.00 (+270.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 290.00 (+290.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		StartTimer: 31.0, Blades of Light
+	[5.00] ENCOUNTER_END: 3188, RebornCouncil, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
