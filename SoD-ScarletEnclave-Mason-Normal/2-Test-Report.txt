@@ -2,21 +2,33 @@ Test: SoD/ScarletEnclave/Mason/Normal
 Mod:  DBM-Raids-Vanilla/Mason
 
 Findings:
+	Unused event registration: CHAT_MSG_MONSTER_YELL
+	Unused event registration: SPELL_AURA_APPLIED 1228509 (Burning Oil)
 	Unused event registration: SPELL_AURA_APPLIED 1229005 (Mortal Wound)
 	Unused event registration: SPELL_AURA_APPLIED 1231592 (Drowning Shallows)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1229005 (Mortal Wound)
 	Unused event registration: SPELL_CAST_START 1234347 (Ignite Flesh)
+	Unused event registration: SPELL_DAMAGE 1228509 (Burning Oil)
+	Unused event registration: SPELL_MISSED 1228509 (Burning Oil)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1228509 (Burning Oil)
+	Unused event registration: SPELL_PERIODIC_MISSED 1228509 (Burning Oil)
+	Unused event registration: UNIT_HEALTH
 
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Stage 2 soon, type=prestage, spellId=<none>
 	[Announce] Mortal Wound on >%s< (%d), type=stack, spellId=1229005
-	[Announce] Casting Ignite Flesh: -nan sec, type=cast, spellId=1234347
+	[Special Warning] Cannon Fire - dodge attack, type=dodge, spellId=1228376
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1228509
 	[Special Warning] Drowning Shallows on >%s< - dispel now, type=dispel, spellId=1231592
 	[Special Warning] Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347
+	[Timer] Ignite Flesh, time=1.00, type=castpnp, spellId=1234347
 
 Timers:
 	Berserk, time=360.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3197, Mason, 186, 40, 0
+	Cannon Fire, time=30.50, type=next, spellId=1228376, triggerDeltas = 0.00
 		[0.00] ENCOUNTER_START: 3197, Mason, 186, 40, 0
 
 Announces:
@@ -37,7 +49,7 @@ Icons:
 Event trace:
 	[0.00] ENCOUNTER_START: 3197, Mason, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231592 1229005, SPELL_AURA_APPLIED_DOSE 1229005, SPELL_CAST_START 1234347
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231592 1229005 1228509, SPELL_AURA_APPLIED_DOSE 1229005, SPELL_CAST_START 1234347, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus, CHAT_MSG_MONSTER_YELL, SPELL_PERIODIC_DAMAGE 1228509, SPELL_PERIODIC_MISSED 1228509, SPELL_DAMAGE 1228509, SPELL_MISSED 1228509
 		StartTimer: 360.0, Berserk
 		ScheduleTask: announce:Schedule(5.0, "min") at 60.00 (+60.00)
 			Unscheduled by ENCOUNTER_END at 5.00
@@ -49,6 +61,7 @@ Event trace:
 			Unscheduled by ENCOUNTER_END at 5.00
 		ScheduleTask: announce:Schedule(10.0, "sec") at 350.00 (+350.00)
 			Unscheduled by ENCOUNTER_END at 5.00
+		StartTimer: 30.0, Cannon Fire
 	[5.00] ENCOUNTER_END: 3197, Mason, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
