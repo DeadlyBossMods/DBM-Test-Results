@@ -1,0 +1,68 @@
+Test: SoD/ScarletEnclave/Balnazzar/Normal
+Mod:  DBM-Raids-Vanilla/Balnazzar
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1231777 (Suppressing Darkness)
+	Unused event registration: SPELL_AURA_APPLIED 1231836 (Carrion Swarm)
+	Unused event registration: SPELL_AURA_APPLIED 1231844 (Circle of Domination)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1231836 (Carrion Swarm)
+	Unused event registration: SPELL_CAST_START 1231885 (Screeching Fear)
+	Unused event registration: SPELL_DAMAGE 1231645 (Prey on the Weak)
+	Unused event registration: SPELL_MISSED 1231645 (Prey on the Weak)
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Circle of Domination on >%s<, type=target, spellId=1231844
+	[Special Warning] Prey on the Weak - move to >%s<, type=moveto, spellId=1231636
+	[Special Warning] Carrion Swarm on you, type=you, spellId=1231836
+	[Special Warning] Circle of Domination - move away, type=move, spellId=1231844
+	[Special Warning] Circle of Domination - move away, type=move, spellId=1231844
+	[Special Warning] Screeching Fear - interrupt >%s<!, type=interrupt, spellId=1231885
+	[Timer] Prey on the Weak: %s, time=6.00, type=target, spellId=1231645
+	[Timer] Circle of Domination, time=10.00, type=next, spellId=1231844
+	[Timer] Screeching Fear, time=2.50, type=castpnp, spellId=1231885
+	[Timer] Screeching Fear, time=11.40, type=nextnp, spellId=1231885
+	[Yell] Circle of Domination on PlayerName, type=yell, spellId=1231844
+
+Timers:
+	Berserk, time=480.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3185, Balnazzar, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ENCOUNTER_START: 3185, Balnazzar, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231844 1231836 1231777, SPELL_AURA_APPLIED_DOSE 1231836, SPELL_DAMAGE 1231645, SPELL_MISSED 1231645, SPELL_CAST_START 1231885
+		StartTimer: 480.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 180.00 (+180.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(3.0, "min") at 300.00 (+300.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 420.00 (+420.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 450.00 (+450.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 470.00 (+470.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+	[5.00] ENCOUNTER_END: 3185, Balnazzar, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
