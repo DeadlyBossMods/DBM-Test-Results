@@ -2,17 +2,15 @@ Test: SoD/ScarletEnclave/Solistrasza/Normal
 Mod:  DBM-Raids-Vanilla/Solistrasza
 
 Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1228063 (Cremation)
 	Unused event registration: SPELL_AURA_APPLIED 1231993 (Tarnished Breath)
 	Unused event registration: SPELL_AURA_APPLIED 1232097 (Crimson Flare)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1231993 (Tarnished Breath)
 	Unused event registration: SPELL_CAST_START 1227696 (Hallowed Dive)
 	Unused event registration: SPELL_CAST_START 1228044 (Cremation)
+	Unused event registration: SPELL_CAST_START 1232032 (Crimson Flare)
 	Unused event registration: SPELL_CAST_SUCCESS 1232018 (Blistering Vent)
 	Unused event registration: SPELL_CAST_SUCCESS 1232333 (Aberrant Bloat)
-	Unused event registration: SPELL_DAMAGE 1232097 (Crimson Flare)
-	Unused event registration: SPELL_MISSED 1232097 (Crimson Flare)
-	Unused event registration: SPELL_PERIODIC_DAMAGE 1232097 (Crimson Flare)
-	Unused event registration: SPELL_PERIODIC_MISSED 1232097 (Crimson Flare)
 
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
@@ -21,11 +19,16 @@ Unused objects:
 	[Announce] Tarnished Breath on >%s< (%d), type=stack, spellId=1231993
 	[Announce] Blistering Vent soon, type=soon, spellId=1232018
 	[Announce] Blistering Vent, type=spell, spellId=1232018
-	[Special Warning] Cremation - interrupt >%s<!, type=interrupt, spellId=1228044
+	[Announce] Unknown on >%s<, type=target, spellId=1237171
+	[Special Warning] Cremation - dodge attack, type=dodge, spellId=1228044
 	[Special Warning] %d stacks of Tarnished Breath on you, type=stack, spellId=1231993
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1232097
 	[Special Warning] Incoming Adds - switch targets, type=adds, spellId=1232333
+	[Special Warning] Unknown on you, type=you, spellId=1237171
 	[Timer] Cremation, time=45.00, type=var, spellId=1228044
+	[Timer] Crimson Flare, time=10.00, type=cast, spellId=1232032
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1237171
+	[Yell] {rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1237171
 
 Timers:
 	Berserk, time=480.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
@@ -51,7 +54,7 @@ Icons:
 Event trace:
 	[0.00] ENCOUNTER_START: 3186, Solistrasza, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_SUCCESS 1232018 1232333, SPELL_CAST_START 1228044 1227696, SPELL_AURA_APPLIED 1231993 1232097, SPELL_AURA_APPLIED_DOSE 1231993, SPELL_PERIODIC_DAMAGE 1232097, SPELL_PERIODIC_MISSED 1232097, SPELL_DAMAGE 1232097, SPELL_MISSED 1232097
+		RegisterEvents: Regular, SPELL_CAST_SUCCESS 1232018 1232333, SPELL_CAST_START 1228044 1227696 1232032, SPELL_AURA_APPLIED 1231993 1232097 1228063, SPELL_AURA_APPLIED_DOSE 1231993
 		StartTimer: 45.0, Blistering Vent
 		ScheduleTask: announce1232018soon:Schedule() at 42.00 (+42.00)
 			Unscheduled by ENCOUNTER_END at 5.00
