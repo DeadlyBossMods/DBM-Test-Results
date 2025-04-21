@@ -1,0 +1,72 @@
+Test: SoD/ScarletEnclave/Beastmaster/Normal
+Mod:  DBM-Raids-Vanilla/Beastmaster
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1230200 (Enervate)
+	Unused event registration: SPELL_AURA_APPLIED 1230242 (Enkindle)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230200 (Enervate)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230242 (Enkindle)
+	Unused event registration: SPELL_CAST_START 1228295 (Stomp)
+	Unused event registration: SPELL_CAST_START 1230099 (Rending Slash)
+	Unused event registration: SPELL_CAST_START 1230105 (Wild Aperture)
+	Unused event registration: SPELL_CAST_SUCCESS 1230200 (Enervate)
+	Unused event registration: SPELL_CAST_SUCCESS 1230242 (Enkindle)
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Special Warning] Wild Aperture - dodge attack, type=dodge, spellId=1230105
+	[Special Warning] %d stacks of Enervate on you, type=stack, spellId=1230200
+	[Special Warning] %d stacks of Enervate on you, type=stack, spellId=1230200
+	[Special Warning] %d stacks of Enkindle on you, type=stack, spellId=1230242
+	[Special Warning] %d stacks of Enkindle on you, type=stack, spellId=1230242
+	[Timer] Stomp, time=21.00, type=cdnp, spellId=1228295
+	[Timer] Rending Slash, time=13.80, type=cdnp, spellId=1230099
+
+Timers:
+	Berserk, time=360.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
+	Mark %d, time=16.20, type=cd, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
+	Wild Aperture, time=24.50, type=var, spellId=1230105, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1230242 1230200, SPELL_AURA_APPLIED_DOSE 1230242 1230200, SPELL_CAST_SUCCESS 1230242 1230200, SPELL_CAST_START 1230105 1230099 1228295
+		StartTimer: 360.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 60.00 (+60.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(3.0, "min") at 180.00 (+180.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 300.00 (+300.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 330.00 (+330.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 350.00 (+350.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		StartTimer: 7.0, Wild Aperture
+		StartTimer: 16.2, Mark 1
+	[5.00] ENCOUNTER_END: 3196, Beastmaster, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
