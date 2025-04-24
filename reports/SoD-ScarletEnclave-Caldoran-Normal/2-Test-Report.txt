@@ -1,0 +1,95 @@
+Test: SoD/ScarletEnclave/Caldoran/Normal
+Mod:  DBM-Raids-Vanilla/Caldoran
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1229272 (Divine Conflagration)
+	Unused event registration: SPELL_AURA_APPLIED 1229397 (Divine Conflagration)
+	Unused event registration: SPELL_AURA_APPLIED 1229503 (Execution Sentence)
+	Unused event registration: SPELL_AURA_APPLIED 1230809 (Bloodflame)
+	Unused event registration: SPELL_CAST_START 1229226 (Righteous Flame)
+	Unused event registration: SPELL_CAST_START 1229236 (Reclamation)
+	Unused event registration: SPELL_CAST_START 1229714 (Blinding Flare)
+	Unused event registration: SPELL_CAST_START 1230271 (Dying Light)
+	Unused event registration: SPELL_CAST_START 1230697 (Cessation)
+	Unused event registration: SPELL_CAST_START 1230908 (Judge Unworthy)
+	Unused event registration: SPELL_CAST_START 1231027 (Darkgraven Blade)
+	Unused event registration: SPELL_CAST_START 1231618 (Wake of Ashes)
+	Unused event registration: SPELL_CAST_START 1231651 (Quietus)
+	Unused event registration: SPELL_CAST_START 1231654 (Wake of Ashes)
+	Unused event registration: SPELL_CAST_SUCCESS 1230125 (Wrath of the Crusade)
+	Unused event registration: SPELL_CAST_SUCCESS 1230137 (Wrath of the Crusade)
+	Unused event registration: UNIT_HEALTH
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Stage 2 soon, type=prestage, spellId=<none>
+	[Announce] Stage 2, type=stage, spellId=<none>
+	[Announce] Stage 3, type=stage, spellId=<none>
+	[Announce] Stage 4 soon, type=prestage, spellId=<none>
+	[Announce] Stage 4, type=stage, spellId=<none>
+	[Announce] Casting Reclamation: -nan sec, type=cast, spellId=1229236
+	[Announce] Divine Conflagration on >%s<, type=target, spellId=1229272
+	[Announce] Execution Sentence on >%s<, type=target, spellId=1229503
+	[Announce] Casting Blinding Flare: -nan sec, type=cast, spellId=1229714
+	[Announce] Casting Cessation: -nan sec, type=cast, spellId=1230697
+	[Announce] Casting Wake of Ashes: -nan sec, type=cast, spellId=1231618
+	[Announce] Casting Quietus: -nan sec, type=cast, spellId=1231651
+	[Announce] Casting Wake of Ashes: -nan sec, type=cast, spellId=1231654
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1230809
+	[Special Warning] Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347
+	[Special Warning] Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347
+	[Timer] Execution Sentence, time=130.00, type=var, spellId=1229503
+	[Timer] Wake of Ashes, time=33.00, type=var, spellId=1231618
+	[Timer] Quietus, time=29.00, type=var, spellId=1231651
+	[Timer] Wake of Ashes, time=22.00, type=var, spellId=1231654
+	[Timer] Stage %s, time=1230271.00, type=stagecount, spellId=<none>
+	[Yell] Divine Conflagration on PlayerName, type=yell, spellId=1229272
+
+Timers:
+	Berserk, time=710.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3189, Caldoran, 186, 40, 0
+	Blinding Flare, time=34.00, type=var, spellId=1229714, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3189, Caldoran, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ENCOUNTER_START: 3189, Caldoran, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1229226 1230908 1229714 1230697 1231651 1229236 1231618 1231654 1230271 1231027, SPELL_CAST_SUCCESS 1230137 1230125, SPELL_AURA_APPLIED 1229272 1229503 1230809 1229397, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus
+		StartTimer: 710.0, Berserk
+		ScheduleTask: announce:Schedule(10.0, "min") at 110.00 (+110.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(5.0, "min") at 410.00 (+410.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(3.0, "min") at 530.00 (+530.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 650.00 (+650.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 680.00 (+680.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 700.00 (+700.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		StartTimer: 34.0, Blinding Flare
+	[5.00] ENCOUNTER_END: 3189, Caldoran, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
