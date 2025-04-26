@@ -1,0 +1,219 @@
+Test: SoD/Naxx/Thaddius/Heroic
+Mod:  DBM-Raids-Vanilla/ThaddiusVanilla
+
+Findings:
+	Unused event registration: UNIT_AURA
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Magnetic Pull, type=spell, spellId=28338
+	[Special Warning] Polarity changed to %s, type=nil, spellId=<none>
+	[Special Warning] Polarity did not change, type=nil, spellId=<none>
+	[Yell] {rt%d}%s, type=shortposition, spellId=28089
+
+Timers:
+	Berserk, time=300.00, type=berserk, spellId=<none>, triggerDeltas = 43.62
+		[ 43.62] CHAT_MSG_MONSTER_EMOTE: %s overloads!, Tesla Coil, "", "", World Trigger, "", 0, 0, "", 0, 4679, nil, 0, false, false, false, false, 0
+	Polarity Shift, time=3.00, type=cast, spellId=28089, triggerDeltas = 58.90, 35.63, 30.80, 30.79
+		[ 58.90] SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+			 Triggered 4x, delta times: 58.90, 35.63, 30.80, 30.79
+	Polarity Shift, time=34.00, type=var, spellId=28089, triggerDeltas = 58.90, 35.63, 30.80, 30.79
+		[ 58.90] SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+			 Triggered 4x, delta times: 58.90, 35.63, 30.80, 30.79
+	Magnetic Pull, time=20.60, type=cd, spellId=28338, triggerDeltas = 0.00, 40.60
+		[  0.00] ENCOUNTER_START: 1120, Thaddius, 186, 40, 0
+		[ 40.60] Scheduled at 0.00 by ENCOUNTER_START: 1120, Thaddius, 186, 40, 0
+		[ 43.62] CHAT_MSG_MONSTER_EMOTE: %s overloads!, Tesla Coil, "", "", World Trigger, "", 0, 0, "", 0, 4679, nil, 0, false, false, false, false, 0
+
+Announces:
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 163.62
+		[163.62] Scheduled at 43.62 by CHAT_MSG_MONSTER_EMOTE: %s overloads!, Tesla Coil, "", "", World Trigger, "", 0, 0, "", 0, 4679, nil, 0, false, false, false, false, 0
+	Casting Polarity Shift: -nan sec, type=cast, spellId=28089, triggerDeltas = 58.90, 35.63, 30.80, 30.79
+		[ 58.90] SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+			 Triggered 4x, delta times: 58.90, 35.63, 30.80, 30.79
+	Polarity Shift soon, type=soon, spellId=28089, triggerDeltas = 78.90, 35.63, 30.80, 30.79
+		[ 78.90] Scheduled at 58.90 by SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+		[114.53] Scheduled at 94.53 by SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+		[145.33] Scheduled at 125.33 by SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+		[176.12] Scheduled at 156.12 by SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+	Magnetic Pull soon, type=soon, spellId=28338, triggerDeltas = 37.60
+		[ 37.60] Scheduled at 0.00 by ENCOUNTER_START: 1120, Thaddius, 186, 40, 0
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 1120, Thaddius, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 28089, CHAT_MSG_MONSTER_EMOTE, UNIT_AURA player
+		ScheduleTask: mod:TankThrow() at 40.60 (+40.60)
+			StartTimer: 20.6, Magnetic Pull
+			ScheduleTask: announce28338soon:Schedule() at 78.20 (+37.60)
+				Unscheduled by CHAT_MSG_MONSTER_EMOTE at 43.62
+			ScheduleTask: mod:TankThrow() at 81.20 (+40.60)
+				Unscheduled by CHAT_MSG_MONSTER_EMOTE at 43.62
+		StartTimer: 20.6, Magnetic Pull
+		ScheduleTask: announce28338soon:Schedule() at 37.60 (+37.60)
+			ShowAnnounce: Magnetic Pull soon
+		ScheduleTask: mod:BossHealthUpdate() at 0.50 (+0.50)
+			ScheduleTask: mod:BossHealthUpdate() at 1.00 (+0.50)
+				ScheduleTask: mod:BossHealthUpdate() at 1.50 (+0.50)
+					ScheduleTask: mod:BossHealthUpdate() at 2.00 (+0.50)
+						ScheduleTask: mod:BossHealthUpdate() at 2.50 (+0.50)
+							ScheduleTask: mod:BossHealthUpdate() at 3.00 (+0.50)
+								ScheduleTask: mod:BossHealthUpdate() at 3.50 (+0.50)
+									ScheduleTask: mod:BossHealthUpdate() at 4.00 (+0.50)
+										ScheduleTask: mod:BossHealthUpdate() at 4.50 (+0.50)
+											ScheduleTask: mod:BossHealthUpdate() at 5.00 (+0.50)
+												ScheduleTask: mod:BossHealthUpdate() at 5.50 (+0.50)
+													ScheduleTask: mod:BossHealthUpdate() at 6.00 (+0.50)
+														ScheduleTask: mod:BossHealthUpdate() at 6.50 (+0.50)
+															ScheduleTask: mod:BossHealthUpdate() at 7.00 (+0.50)
+																ScheduleTask: mod:BossHealthUpdate() at 7.50 (+0.50)
+																	ScheduleTask: mod:BossHealthUpdate() at 8.00 (+0.50)
+																		ScheduleTask: mod:BossHealthUpdate() at 8.50 (+0.50)
+																			ScheduleTask: mod:BossHealthUpdate() at 9.00 (+0.50)
+																				ScheduleTask: mod:BossHealthUpdate() at 9.50 (+0.50)
+																					ScheduleTask: mod:BossHealthUpdate() at 10.00 (+0.50)
+																						ScheduleTask: mod:BossHealthUpdate() at 10.50 (+0.50)
+																							ScheduleTask: mod:BossHealthUpdate() at 11.00 (+0.50)
+																								ScheduleTask: mod:BossHealthUpdate() at 11.50 (+0.50)
+																									ScheduleTask: mod:BossHealthUpdate() at 12.00 (+0.50)
+																										ScheduleTask: mod:BossHealthUpdate() at 12.50 (+0.50)
+																											ScheduleTask: mod:BossHealthUpdate() at 13.00 (+0.50)
+																												ScheduleTask: mod:BossHealthUpdate() at 13.50 (+0.50)
+																													ScheduleTask: mod:BossHealthUpdate() at 14.00 (+0.50)
+																														ScheduleTask: mod:BossHealthUpdate() at 14.50 (+0.50)
+																															ScheduleTask: mod:BossHealthUpdate() at 15.00 (+0.50)
+																																ScheduleTask: mod:BossHealthUpdate() at 15.50 (+0.50)
+																																	ScheduleTask: mod:BossHealthUpdate() at 16.00 (+0.50)
+																																		ScheduleTask: mod:BossHealthUpdate() at 16.50 (+0.50)
+																																			ScheduleTask: mod:BossHealthUpdate() at 17.00 (+0.50)
+																																				ScheduleTask: mod:BossHealthUpdate() at 17.50 (+0.50)
+																																					ScheduleTask: mod:BossHealthUpdate() at 18.00 (+0.50)
+																																						ScheduleTask: mod:BossHealthUpdate() at 18.50 (+0.50)
+																																							ScheduleTask: mod:BossHealthUpdate() at 19.00 (+0.50)
+																																								ScheduleTask: mod:BossHealthUpdate() at 19.50 (+0.50)
+																																									ScheduleTask: mod:BossHealthUpdate() at 20.00 (+0.50)
+																																										ScheduleTask: mod:BossHealthUpdate() at 20.50 (+0.50)
+																																											ScheduleTask: mod:BossHealthUpdate() at 21.00 (+0.50)
+																																												ScheduleTask: mod:BossHealthUpdate() at 21.50 (+0.50)
+																																													ScheduleTask: mod:BossHealthUpdate() at 22.00 (+0.50)
+																																														ScheduleTask: mod:BossHealthUpdate() at 22.50 (+0.50)
+																																															ScheduleTask: mod:BossHealthUpdate() at 23.00 (+0.50)
+																																																ScheduleTask: mod:BossHealthUpdate() at 23.50 (+0.50)
+																																																	ScheduleTask: mod:BossHealthUpdate() at 24.00 (+0.50)
+																																																		ScheduleTask: mod:BossHealthUpdate() at 24.50 (+0.50)
+																																																			ScheduleTask: mod:BossHealthUpdate() at 25.00 (+0.50)
+																																																				ScheduleTask: mod:BossHealthUpdate() at 25.50 (+0.50)
+																																																					ScheduleTask: mod:BossHealthUpdate() at 26.00 (+0.50)
+																																																						ScheduleTask: mod:BossHealthUpdate() at 26.50 (+0.50)
+																																																							ScheduleTask: mod:BossHealthUpdate() at 27.00 (+0.50)
+																																																								ScheduleTask: mod:BossHealthUpdate() at 27.50 (+0.50)
+																																																									ScheduleTask: mod:BossHealthUpdate() at 28.00 (+0.50)
+																																																										ScheduleTask: mod:BossHealthUpdate() at 28.50 (+0.50)
+																																																											ScheduleTask: mod:BossHealthUpdate() at 29.00 (+0.50)
+																																																												ScheduleTask: mod:BossHealthUpdate() at 29.50 (+0.50)
+																																																													ScheduleTask: mod:BossHealthUpdate() at 30.00 (+0.50)
+																																																														ScheduleTask: mod:BossHealthUpdate() at 30.50 (+0.50)
+																																																															ScheduleTask: mod:BossHealthUpdate() at 31.00 (+0.50)
+																																																																ScheduleTask: mod:BossHealthUpdate() at 31.50 (+0.50)
+																																																																	ScheduleTask: mod:BossHealthUpdate() at 32.00 (+0.50)
+																																																																		ScheduleTask: mod:BossHealthUpdate() at 32.50 (+0.50)
+																																																																			ScheduleTask: mod:BossHealthUpdate() at 33.00 (+0.50)
+																																																																				ScheduleTask: mod:BossHealthUpdate() at 33.50 (+0.50)
+																																																																					ScheduleTask: mod:BossHealthUpdate() at 34.00 (+0.50)
+																																																																						ScheduleTask: mod:BossHealthUpdate() at 34.50 (+0.50)
+																																																																							ScheduleTask: mod:BossHealthUpdate() at 35.00 (+0.50)
+																																																																								ScheduleTask: mod:BossHealthUpdate() at 35.50 (+0.50)
+																																																																									ScheduleTask: mod:BossHealthUpdate() at 36.00 (+0.50)
+																																																																										ScheduleTask: mod:BossHealthUpdate() at 36.50 (+0.50)
+																																																																											ScheduleTask: mod:BossHealthUpdate() at 37.00 (+0.50)
+																																																																												ScheduleTask: mod:BossHealthUpdate() at 37.50 (+0.50)
+																																																																													ScheduleTask: mod:BossHealthUpdate() at 38.00 (+0.50)
+																																																																														ScheduleTask: mod:BossHealthUpdate() at 38.50 (+0.50)
+																																																																															ScheduleTask: mod:BossHealthUpdate() at 39.00 (+0.50)
+																																																																																ScheduleTask: mod:BossHealthUpdate() at 39.50 (+0.50)
+																																																																																	ScheduleTask: mod:BossHealthUpdate() at 40.00 (+0.50)
+																																																																																		ScheduleTask: mod:BossHealthUpdate() at 40.50 (+0.50)
+																																																																																			ScheduleTask: mod:BossHealthUpdate() at 41.00 (+0.50)
+																																																																																				ScheduleTask: mod:BossHealthUpdate() at 41.50 (+0.50)
+																																																																																					ScheduleTask: mod:BossHealthUpdate() at 42.00 (+0.50)
+																																																																																						ScheduleTask: mod:BossHealthUpdate() at 42.50 (+0.50)
+																																																																																							ScheduleTask: mod:BossHealthUpdate() at 43.00 (+0.50)
+																																																																																								ScheduleTask: mod:BossHealthUpdate() at 43.50 (+0.50)
+																																																																																									ScheduleTask: mod:BossHealthUpdate() at 44.00 (+0.50)
+																																																																																										ScheduleTask: mod:BossHealthUpdate() at 44.50 (+0.50)
+																																																																																											ScheduleTask: mod:BossHealthUpdate() at 45.00 (+0.50)
+																																																																																												ScheduleTask: mod:BossHealthUpdate() at 45.50 (+0.50)
+																																																																																													ScheduleTask: mod:BossHealthUpdate() at 46.00 (+0.50)
+																																																																																														ScheduleTask: mod:BossHealthUpdate() at 46.50 (+0.50)
+																																																																																															ScheduleTask: mod:BossHealthUpdate() at 47.00 (+0.50)
+																																																																																																ScheduleTask: mod:BossHealthUpdate() at 47.50 (+0.50)
+																																																																																																	ScheduleTask: mod:BossHealthUpdate() at 48.00 (+0.50)
+																																																																																																		ScheduleTask: mod:BossHealthUpdate() at 48.50 (+0.50)
+																																																																																																			ScheduleTask: mod:BossHealthUpdate() at 49.00 (+0.50)
+																																																																																																				ScheduleTask: mod:BossHealthUpdate() at 49.50 (+0.50)
+																																																																																																					ScheduleTask: mod:BossHealthUpdate() at 50.00 (+0.50)
+																																																																																																						ScheduleTask: mod:BossHealthUpdate() at 50.50 (+0.50)
+																																																																																																							ScheduleTask: mod:BossHealthUpdate() at 51.00 (+0.50)
+																																																																																																								ScheduleTask: mod:BossHealthUpdate() at 51.50 (+0.50)
+																																																																																																									ScheduleTask: mod:BossHealthUpdate() at 52.00 (+0.50)
+																																																																																																										ScheduleTask: mod:BossHealthUpdate() at 52.50 (+0.50)
+																																																																																																											ScheduleTask: mod:BossHealthUpdate() at 53.00 (+0.50)
+																																																																																																												ScheduleTask: mod:BossHealthUpdate() at 53.50 (+0.50)
+																																																																																																													ScheduleTask: mod:BossHealthUpdate() at 54.00 (+0.50)
+																																																																																																														ScheduleTask: mod:BossHealthUpdate() at 54.50 (+0.50)
+																																																																																																															ScheduleTask: mod:BossHealthUpdate() at 55.00 (+0.50)
+																																																																																																																ScheduleTask: mod:BossHealthUpdate() at 55.50 (+0.50)
+	[ 43.62] CHAT_MSG_MONSTER_EMOTE: %s overloads!, Tesla Coil, "", "", World Trigger, "", 0, 0, "", 0, 4679, nil, 0, false, false, false, false, 0
+		UnscheduleTask: mod:TankThrow() scheduled by ScheduleTask at 40.60
+		StopTimer: Timer28338cd
+		UnscheduleTask: announce28338soon:Schedule() scheduled by ScheduleTask at 40.60
+		StartTimer: 300.0, Berserk
+		ScheduleTask: announce:Schedule(3.0, "min") at 163.62 (+120.00)
+			ShowAnnounce: Berserk in 3 min
+		ScheduleTask: announce:Schedule(1.0, "min") at 283.62 (+240.00)
+			Unscheduled by ENCOUNTER_END at 178.54
+		ScheduleTask: announce:Schedule(30.0, "sec") at 313.62 (+270.00)
+			Unscheduled by ENCOUNTER_END at 178.54
+		ScheduleTask: announce:Schedule(10.0, "sec") at 333.62 (+290.00)
+			Unscheduled by ENCOUNTER_END at 178.54
+	[ 58.90] SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+		StartTimer: 34.0, Polarity Shift
+		StartTimer: 3.0, Polarity Shift
+		ShowAnnounce: Casting Polarity Shift: -nan sec
+		ScheduleTask: announce28089soon:Schedule() at 78.90 (+20.00)
+			ShowAnnounce: Polarity Shift soon
+	[ 94.53] SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+		StartTimer: 34.0, Polarity Shift
+		StartTimer: 3.0, Polarity Shift
+		ShowAnnounce: Casting Polarity Shift: -nan sec
+		ScheduleTask: announce28089soon:Schedule() at 114.53 (+20.00)
+			ShowAnnounce: Polarity Shift soon
+	[125.33] SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+		StartTimer: 34.0, Polarity Shift
+		StartTimer: 3.0, Polarity Shift
+		ShowAnnounce: Casting Polarity Shift: -nan sec
+		ScheduleTask: announce28089soon:Schedule() at 145.33 (+20.00)
+			ShowAnnounce: Polarity Shift soon
+	[156.12] SPELL_CAST_START: [Thaddius: Polarity Shift] Creature-0-1-533-1-15928-0000000001, Thaddius, 0xa48, "", nil, 0x0, 28089, Polarity Shift, 0, 0
+		StartTimer: 34.0, Polarity Shift
+		StartTimer: 3.0, Polarity Shift
+		ShowAnnounce: Casting Polarity Shift: -nan sec
+		ScheduleTask: announce28089soon:Schedule() at 176.12 (+20.00)
+			ShowAnnounce: Polarity Shift soon
+	[178.54] ENCOUNTER_END: 1120, Thaddius, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 43.62
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 43.62
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 43.62
