@@ -1,0 +1,87 @@
+Test: SoD/ScarletEnclave/LillianVoss/Normal
+Mod:  DBM-Raids-Vanilla/LillianVoss
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1232192 (Debilitate)
+	Unused event registration: SPELL_AURA_APPLIED 1233849 (Unstable Concoction)
+	Unused event registration: SPELL_AURA_APPLIED 1233883 (Intoxicating Venom)
+	Unused event registration: SPELL_AURA_APPLIED 1233901 (Noxious Poison)
+	Unused event registration: SPELL_AURA_APPLIED 1234708 (Toxic Pool)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1232192 (Debilitate)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1233883 (Intoxicating Venom)
+	Unused event registration: SPELL_AURA_REMOVED 1233849 (Unstable Concoction)
+	Unused event registration: SPELL_AURA_REMOVED 1233883 (Intoxicating Venom)
+	Unused event registration: SPELL_AURA_REMOVED 1233901 (Noxious Poison)
+	Unused event registration: SPELL_CAST_START 1233847 (Scarlet Grasp)
+	Unused event registration: SPELL_CAST_SUCCESS 1234540 (Ignite)
+	Unused event registration: SPELL_DAMAGE 1234708 (Toxic Pool)
+	Unused event registration: SPELL_MISSED 1234708 (Toxic Pool)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1234708 (Toxic Pool)
+	Unused event registration: SPELL_PERIODIC_MISSED 1234708 (Toxic Pool)
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Debilitate (%s) on >%s<, type=targetcount, spellId=1232192
+	[Announce] Unstable Concoction on >%s<, type=target, spellId=1233849
+	[Announce] Noxious Poison on >%s<, type=target, spellId=1233901
+	[Announce] Ignite, type=spell, spellId=1234540
+	[Special Warning] Scarlet Grasp soon, type=soon, spellId=1233847
+	[Special Warning] Unstable Concoction on you, type=you, spellId=1233849
+	[Special Warning] Intoxicating Venom on you, type=you, spellId=1233883
+	[Special Warning] Noxious Poison on you, type=you, spellId=1233901
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1234708
+	[Timer] Debilitate, time=21.00, type=var, spellId=1232192
+	[Timer] Unstable Concoction fades, time=7.00, type=fades, spellId=1233849
+	[Timer] Noxious Poison fades, time=8.00, type=fades, spellId=1233901
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1233849
+	[Yell] {rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1233849
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1233901
+	[Yell] {rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1233901
+
+Timers:
+	Berserk, time=240.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+	Scarlet Grasp, time=30.75, type=next, spellId=1233847, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+	Unstable Concoction, time=30.50, type=next, spellId=1233849, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1233883 1232192 1233901 1233849 1234708, SPELL_AURA_APPLIED_DOSE 1233883 1232192, SPELL_AURA_REMOVED 1233883 1233901 1233849, SPELL_CAST_START 1233847, SPELL_CAST_SUCCESS 1234540, SPELL_PERIODIC_DAMAGE 1234708, SPELL_PERIODIC_MISSED 1234708, SPELL_DAMAGE 1234708, SPELL_MISSED 1234708
+		StartTimer: 240.0, Berserk
+		ScheduleTask: announce:Schedule(3.0, "min") at 60.00 (+60.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 180.00 (+180.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 210.00 (+210.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 230.00 (+230.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		StartTimer: 34.7, Scarlet Grasp
+		StartTimer: 30.5, Unstable Concoction
+	[5.00] ENCOUNTER_END: 3190, LillianVoss, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1233883 1233901 1233849
