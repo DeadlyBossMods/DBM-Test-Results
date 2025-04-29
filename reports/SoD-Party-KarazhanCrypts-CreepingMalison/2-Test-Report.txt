@@ -1,0 +1,50 @@
+Test: SoD/Party/KarazhanCrypts/CreepingMalison
+Mod:  DBM-Party-Vanilla/CreepingMalison
+
+Findings:
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1222097 (Burning Webs)
+	Unused event registration: SPELL_PERIODIC_MISSED 1222097 (Burning Webs)
+
+Unused objects:
+	None
+
+Timers:
+	None
+
+Announces:
+	None
+
+Special warnings:
+	%s damage - move away, type=gtfo, spellId=1222097, triggerDeltas = 55.05, 29.57, 38.60
+		[ 55.05] SPELL_AURA_APPLIED: [Healer1->Healer1: Burning Webs] Player-1-00000005, Healer1, 0x511, Player-1-00000005, Healer1, 0x511, 1222097, Burning Webs, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 55.05, 29.57, 38.60
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/watchfeet
+		[ 55.05] SPELL_AURA_APPLIED: [Healer1->Healer1: Burning Webs] Player-1-00000005, Healer1, 0x511, Player-1-00000005, Healer1, 0x511, 1222097, Burning Webs, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 55.05, 29.57, 38.60
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3146, Creeping Malison, 1, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_PERIODIC_DAMAGE 1222097, SPELL_PERIODIC_MISSED 1222097, SPELL_AURA_APPLIED 1222097
+	[ 55.05] SPELL_AURA_APPLIED: [Healer1->Healer1: Burning Webs] Player-1-00000005, Healer1, 0x511, Player-1-00000005, Healer1, 0x511, 1222097, Burning Webs, 0, DEBUFF, 0
+		AntiSpam: gtfo
+		ShowSpecialWarning: Burning Webs damage - move away
+		PlaySound: VoicePack/watchfeet
+	[ 84.62] SPELL_AURA_APPLIED: [Healer1->Healer1: Burning Webs] Player-1-00000005, Healer1, 0x511, Player-1-00000005, Healer1, 0x511, 1222097, Burning Webs, 0, DEBUFF, 0
+		AntiSpam: gtfo
+		ShowSpecialWarning: Burning Webs damage - move away
+		PlaySound: VoicePack/watchfeet
+	[123.22] SPELL_AURA_APPLIED: [Healer1->Healer1: Burning Webs] Player-1-00000005, Healer1, 0x511, Player-1-00000005, Healer1, 0x511, 1222097, Burning Webs, 0, DEBUFF, 0
+		AntiSpam: gtfo
+		ShowSpecialWarning: Burning Webs damage - move away
+		PlaySound: VoicePack/watchfeet
+	[135.17] ENCOUNTER_END: 3146, Creeping Malison, 1, 5, 1, 0
+		EndCombat: ENCOUNTER_END
