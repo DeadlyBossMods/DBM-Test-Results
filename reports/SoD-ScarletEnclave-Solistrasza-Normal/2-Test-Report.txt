@@ -1,0 +1,80 @@
+Test: SoD/ScarletEnclave/Solistrasza/Normal
+Mod:  DBM-Raids-Vanilla/Solistrasza
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1228063 (Cremation)
+	Unused event registration: SPELL_AURA_APPLIED 1231993 (Tarnished Breath)
+	Unused event registration: SPELL_AURA_APPLIED 1232097 (Crimson Flare)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1231993 (Tarnished Breath)
+	Unused event registration: SPELL_CAST_START 1227520 (Lightforge)
+	Unused event registration: SPELL_CAST_START 1227696 (Hallowed Dive)
+	Unused event registration: SPELL_CAST_START 1228044 (Cremation)
+	Unused event registration: SPELL_CAST_START 1232032 (Crimson Flare)
+	Unused event registration: SPELL_CAST_SUCCESS 1232018 (Blistering Vent)
+	Unused event registration: SPELL_CAST_SUCCESS 1232333 (Aberrant Bloat)
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Stage 2, type=stage, spellId=<none>
+	[Announce] Stage 3, type=stage, spellId=<none>
+	[Announce] Hallowed Dive, type=spell, spellId=1227696
+	[Announce] Tarnished Breath on >%s< (%d), type=stack, spellId=1231993
+	[Announce] Crimson Flare soon, type=soon, spellId=1232032
+	[Special Warning] Cremation - dodge attack, type=dodge, spellId=1228044
+	[Special Warning] %d stacks of Tarnished Breath on you, type=stack, spellId=1231993
+	[Special Warning] Crimson Flare - dodge attack, type=dodge, spellId=1232032
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1232097
+	[Special Warning] Incoming Adds - switch targets, type=adds, spellId=1232333
+	[Timer] Cremation, time=45.00, type=var, spellId=1228044
+	[Timer] Crimson Flare, time=10.00, type=cast, spellId=1232032
+	[Timer] Aberrant Bloat, time=30.00, type=castpnp, spellId=1232333
+	[Yell] Tarnished Breath on PlayerName (%d), type=count, spellId=1231993
+
+Timers:
+	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3186, Solistrasza, 186, 40, 0
+	Crimson Flare, time=37.00, type=cd, spellId=1232032, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3186, Solistrasza, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[0.00] ENCOUNTER_START: 3186, Solistrasza, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_SUCCESS 1232018 1232333, SPELL_CAST_START 1228044 1227696 1232032 1227520, SPELL_AURA_APPLIED 1231993 1232097 1228063, SPELL_AURA_APPLIED_DOSE 1231993
+		StartTimer: 45.0, Crimson Flare
+		ScheduleTask: announce1232032soon:Schedule() at 38.00 (+38.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		StartTimer: 600.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(3.0, "min") at 420.00 (+420.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 540.00 (+540.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 570.00 (+570.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 590.00 (+590.00)
+			Unscheduled by ENCOUNTER_END at 5.00
+	[5.00] ENCOUNTER_END: 3186, Solistrasza, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce1232032soon:Schedule() scheduled by ScheduleTask at 0.00
