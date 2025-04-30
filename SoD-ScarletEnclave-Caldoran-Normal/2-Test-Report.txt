@@ -6,6 +6,7 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1229397 (Divine Conflagration)
 	Unused event registration: SPELL_AURA_APPLIED 1229503 (Execution Sentence)
 	Unused event registration: SPELL_AURA_APPLIED 1230809 (Bloodflame)
+	Unused event registration: SPELL_CAST_START 1229114 (Devoted Offering)
 	Unused event registration: SPELL_CAST_START 1229226 (Righteous Flame)
 	Unused event registration: SPELL_CAST_START 1229236 (Reclamation)
 	Unused event registration: SPELL_CAST_START 1229714 (Blinding Flare)
@@ -35,20 +36,25 @@ Unused objects:
 	[Announce] Casting Wake of Ashes: -nan sec, type=cast, spellId=1231618
 	[Announce] Casting Quietus: -nan sec, type=cast, spellId=1231651
 	[Announce] Casting Wake of Ashes: -nan sec, type=cast, spellId=1231654
-	[Special Warning] Blinding Flare - stop casting, type=cast, spellId=1229714
+	[Special Warning] Devoted Offering - interrupt >%s<!, type=interrupt, spellId=1229114
+	[Special Warning] Blinding Flare!, type=spell, spellId=1229714
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1230809
 	[Special Warning] Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347
 	[Special Warning] Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347
 	[Timer] Berserk, time=360.00, type=berserk, spellId=<none>
-	[Timer] Blinding Flare, time=3.00, type=cast, spellId=1229714
+	[Timer] Devoted Offering, time=-nan, type=castpnp, spellId=1229114
+	[Timer] Blinding Flare, time=-nan, type=cast, spellId=1229714
+	[Timer] Ignite Flesh, time=-nan, type=castpnp, spellId=1234347
+	[Timer] Ignite Flesh, time=-nan, type=castpnp, spellId=1234347
 	[Timer] Stage %s, time=1230271.00, type=stagecount, spellId=<none>
-	[Timer] Execution Sentence, time=130.00, type=var, spellId=1229503
 	[Timer] Wake of Ashes, time=33.00, type=var, spellId=1231618
 	[Timer] Quietus, time=29.00, type=var, spellId=1231651
 	[Timer] Wake of Ashes, time=22.00, type=var, spellId=1231654
 	[Yell] Divine Conflagration on PlayerName, type=yell, spellId=1229272
 
 Timers:
+	Execution Sentence, time=130.00, type=var, spellId=1229503, triggerDeltas = 0.00
+		[0.00] ENCOUNTER_START: 3189, Caldoran, 186, 40, 0
 	Blinding Flare, time=34.00, type=var, spellId=1229714, triggerDeltas = 0.00
 		[0.00] ENCOUNTER_START: 3189, Caldoran, 186, 40, 0
 
@@ -70,7 +76,8 @@ Icons:
 Event trace:
 	[0.00] ENCOUNTER_START: 3189, Caldoran, 186, 40, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1229226 1230908 1229714 1230697 1231651 1229236 1231618 1231654 1230271 1231027, SPELL_CAST_SUCCESS 1230137 1230125, SPELL_AURA_APPLIED 1229272 1229503 1230809 1229397, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus
+		RegisterEvents: Regular, SPELL_CAST_START 1229226 1230908 1229714 1230697 1231651 1229236 1231618 1231654 1230271 1231027 1229114, SPELL_CAST_SUCCESS 1230137 1230125, SPELL_AURA_APPLIED 1229272 1229503 1230809 1229397, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus
 		StartTimer: 34.0, Blinding Flare
+		StartTimer: 48.0, Execution Sentence
 	[5.00] ENCOUNTER_END: 3189, Caldoran, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
