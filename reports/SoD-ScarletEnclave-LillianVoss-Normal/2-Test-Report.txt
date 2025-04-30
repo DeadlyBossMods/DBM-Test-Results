@@ -3,9 +3,7 @@ Mod:  DBM-Raids-Vanilla/LillianVoss
 
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1232192 (Debilitate)
-	Unused event registration: SPELL_AURA_APPLIED 1233849 (Unstable Concoction)
 	Unused event registration: SPELL_AURA_APPLIED 1233883 (Intoxicating Venom)
-	Unused event registration: SPELL_AURA_APPLIED 1233901 (Noxious Poison)
 	Unused event registration: SPELL_AURA_APPLIED 1234708 (Toxic Pool)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1232192 (Debilitate)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1233883 (Intoxicating Venom)
@@ -18,13 +16,15 @@ Findings:
 	Unused event registration: SPELL_MISSED 1234708 (Toxic Pool)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1234708 (Toxic Pool)
 	Unused event registration: SPELL_PERIODIC_MISSED 1234708 (Toxic Pool)
+	Timer Unstable Concoction, time=30.50, type=next, spellId=1233849 (time=30.50, variance=0.00) got refreshed early with 20.50s remaining
+		Refreshed by: [10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps3: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-3-00000001, Dps3, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+	Timer Unstable Concoction, time=30.50, type=next, spellId=1233849 (time=30.50, variance=0.00) got refreshed early with 30.50s remaining
+		Refreshed by: [10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps4: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-4-00000001, Dps4, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
 
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Debilitate (%s) on >%s<, type=targetcount, spellId=1232192
-	[Announce] Unstable Concoction on >%s<, type=target, spellId=1233849
-	[Announce] Noxious Poison on >%s<, type=target, spellId=1233901
 	[Announce] Ignite, type=spell, spellId=1234540
 	[Special Warning] Scarlet Grasp soon, type=soon, spellId=1233847
 	[Special Warning] Unstable Concoction on you, type=you, spellId=1233849
@@ -32,8 +32,6 @@ Unused objects:
 	[Special Warning] Noxious Poison on you, type=you, spellId=1233901
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1234708
 	[Timer] Debilitate, time=21.00, type=var, spellId=1232192
-	[Timer] Unstable Concoction fades, time=7.00, type=fades, spellId=1233849
-	[Timer] Noxious Poison fades, time=8.00, type=fades, spellId=1233901
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1233849
 	[Yell] {rt%1$d}{rt%1$d}{rt%1$d}, type=icontarget, spellId=1233849
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1233901
@@ -41,14 +39,25 @@ Unused objects:
 
 Timers:
 	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
-		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+		[ 0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
 	Scarlet Grasp, time=30.75, type=next, spellId=1233847, triggerDeltas = 0.00
-		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
-	Unstable Concoction, time=30.50, type=next, spellId=1233849, triggerDeltas = 0.00
-		[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+		[ 0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+	Unstable Concoction fades, time=7.00, type=fades, spellId=1233849, triggerDeltas = 10.00, 0.00
+		[10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps3: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-3-00000001, Dps3, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+		[10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps4: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-4-00000001, Dps4, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+	Unstable Concoction, time=30.50, type=next, spellId=1233849, triggerDeltas = 0.00, 10.00, 0.00
+		[ 0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+		[10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps3: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-3-00000001, Dps3, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+		[10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps4: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-4-00000001, Dps4, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+	Noxious Poison fades, time=8.00, type=fades, spellId=1233901, triggerDeltas = 1.00, 0.00
+		[ 1.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps1: Noxious Poison] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-1-00000001, Dps1, 0x512, 1233901, Noxious Poison, 0, DEBUFF, 0
+		[ 1.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps2: Noxious Poison] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-2-00000001, Dps2, 0x512, 1233901, Noxious Poison, 0, DEBUFF, 0
 
 Announces:
-	None
+	Unstable Concoction on >%s<, type=target, spellId=1233849, triggerDeltas = 10.10
+		[10.10] Scheduled at 10.00 by SPELL_AURA_APPLIED: [Lillian Voss->Dps4: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-4-00000001, Dps4, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+	Noxious Poison on >%s<, type=target, spellId=1233901, triggerDeltas = 1.10
+		[ 1.10] Scheduled at 1.00 by SPELL_AURA_APPLIED: [Lillian Voss->Dps2: Noxious Poison] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-2-00000001, Dps2, 0x512, 1233901, Noxious Poison, 0, DEBUFF, 0
 
 Special warnings:
 	None
@@ -63,28 +72,50 @@ Icons:
 	None
 
 Event trace:
-	[0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
+	[ 0.00] ENCOUNTER_START: 3190, LillianVoss, 186, 40, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_AURA_APPLIED 1233883 1232192 1233901 1233849 1234708, SPELL_AURA_APPLIED_DOSE 1233883 1232192, SPELL_AURA_REMOVED 1233883 1233901 1233849, SPELL_CAST_START 1233847, SPELL_CAST_SUCCESS 1234540, SPELL_PERIODIC_DAMAGE 1234708, SPELL_PERIODIC_MISSED 1234708, SPELL_DAMAGE 1234708, SPELL_MISSED 1234708
 		StartTimer: 600.0, Berserk
 		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 11.00
 		ScheduleTask: announce:Schedule(3.0, "min") at 420.00 (+420.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 11.00
 		ScheduleTask: announce:Schedule(1.0, "min") at 540.00 (+540.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 11.00
 		ScheduleTask: announce:Schedule(30.0, "sec") at 570.00 (+570.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 11.00
 		ScheduleTask: announce:Schedule(10.0, "sec") at 590.00 (+590.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 11.00
 		StartTimer: 34.7, Scarlet Grasp
 		StartTimer: 30.5, Unstable Concoction
-	[5.00] ENCOUNTER_END: 3190, LillianVoss, 186, 40, 1, 0
+	[ 1.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps1: Noxious Poison] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-1-00000001, Dps1, 0x512, 1233901, Noxious Poison, 0, DEBUFF, 0
+		StartTimer: 8.0, Noxious Poison fades
+		ScheduleTask: (anonymous function) at 3.00 (+2.00)
+	[ 1.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps2: Noxious Poison] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-2-00000001, Dps2, 0x512, 1233901, Noxious Poison, 0, DEBUFF, 0
+		StartTimer: 8.0, Noxious Poison fades
+		ScheduleTask: announce1233901target:CombinedShow("Dps2") at 1.10 (+0.10)
+			ShowAnnounce: Noxious Poison on Dps1, Dps2
+		ScheduleTask: (anonymous function) at 3.00 (+2.00)
+	[10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps3: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-3-00000001, Dps3, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+		StartTimer: 7.0, Unstable Concoction fades
+		StartTimer: 30.5, Unstable Concoction
+		ScheduleTask: (anonymous function) at 12.00 (+2.00)
+			Unscheduled by ENCOUNTER_END at 11.00
+	[10.00] SPELL_AURA_APPLIED: [Lillian Voss->Dps4: Unstable Concotion] Creature-0-1-2856-1-243021-0000000001, Lillian Voss, 0xa48, Player-4-00000001, Dps4, 0x512, 1233849, Unstable Concotion, 0, DEBUFF, 0
+		StartTimer: 7.0, Unstable Concoction fades
+		StartTimer: 30.5, Unstable Concoction
+		ScheduleTask: announce1233849target:CombinedShow("Dps4") at 10.10 (+0.10)
+			ShowAnnounce: Unstable Concoction on Dps3, Dps4
+		ScheduleTask: (anonymous function) at 12.00 (+2.00)
+			Unscheduled by ENCOUNTER_END at 11.00
+	[11.00] ENCOUNTER_END: 3190, LillianVoss, 186, 40, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 10.00
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 10.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1233883 1233901 1233849
