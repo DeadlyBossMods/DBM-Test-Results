@@ -4,7 +4,6 @@ Mod:  DBM-Raids-Vanilla/SE_Trash
 Findings:
 	Unused event registration: GOSSIP_SHOW
 	Unused event registration: SPELL_AURA_APPLIED 1232703 (Retribution Aura)
-	Unused event registration: SPELL_CAST_START 1232703 (Retribution Aura)
 	Unused event registration: SPELL_CAST_SUCCESS 1227435 (Sleep)
 	Unused event registration: SPELL_DAMAGE 1232703 (Retribution Aura)
 	Unused event registration: SPELL_MISSED 1232703 (Retribution Aura)
@@ -13,7 +12,6 @@ Findings:
 
 Unused objects:
 	[Special Warning] Whirlwind - dodge attack, type=dodge, spellId=1232678
-	[Special Warning] Retribution Aura - interrupt >%s<!, type=interrupt, spellId=1232703
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1233069
 	[Timer] %s, time=0.00, type=intermission, spellId=<none>
 	[Timer] Intermission, time=48.20, type=intermission, spellId=1227435
@@ -41,7 +39,7 @@ Icons:
 
 Event trace:
 	[0.00] ADDON_LOADED: DBM-Raids-Vanilla, 0
-		RegisterEvents: Regular, SPELL_AURA_APPLIED 1232703, SPELL_CAST_START 1232703, SPELL_CAST_SUCCESS 1227435, SPELL_DAMAGE 1232703, SPELL_MISSED 1232703, DAMAGE_SHIELD 1232703, DAMAGE_SHIELD_MISSED 1232703, GOSSIP_SHOW, UNIT_ENTERING_VEHICLE player, UNIT_SPELLCAST_START_UNFILTERED
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1232703, SPELL_CAST_SUCCESS 1227435, SPELL_DAMAGE 1232703, SPELL_MISSED 1232703, DAMAGE_SHIELD 1232703, DAMAGE_SHIELD_MISSED 1232703, GOSSIP_SHOW, UNIT_ENTERING_VEHICLE player, UNIT_SPELLCAST_START_UNFILTERED
 	[1.00] DAMAGE_SHIELD: [Scarlet Knight->Healer1: Retribution Aura] Creature-0-1-2856-1-240798-0000000001, Scarlet Knight, 0xa48, Player-1-00000001, Healer1, 0x511, 1232703, Retribution Aura, 0, 202, -1, 0
 		AntiSpam: Shield
 			Filtered: 1x DAMAGE_SHIELD_MISSED at 2
