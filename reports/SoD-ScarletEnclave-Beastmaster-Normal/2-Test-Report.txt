@@ -3,68 +3,293 @@ Mod:  DBM-Raids-Vanilla/Beastmaster
 
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1230200 (Enervate)
-	Unused event registration: SPELL_AURA_APPLIED 1230242 (Enkindle)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230200 (Enervate)
-	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230242 (Enkindle)
-	Unused event registration: SPELL_CAST_START 1228295 (Stomp)
-	Unused event registration: SPELL_CAST_START 1230099 (Rending Slash)
-	Unused event registration: SPELL_CAST_START 1230105 (Wild Aperture)
-	Unused event registration: SPELL_CAST_SUCCESS 1230200 (Enervate)
-	Unused event registration: SPELL_CAST_SUCCESS 1230242 (Enkindle)
+	Timer Wild Aperture, time=24.50, type=var, spellId=1230105 (time=24.50, variance=7.10) got refreshed early with 21.30s remaining
+		Refreshed by: [234.58] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+	Timer Wild Aperture, time=24.50, type=var, spellId=1230105 (time=24.50, variance=7.10) got refreshed early with 7.87s remaining
+		Refreshed by: [ 63.30] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
 
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Announce] Mark %d, type=nil, spellId=<none>
-	[Special Warning] Wild Aperture - dodge attack, type=dodge, spellId=1230105
 	[Special Warning] %d stacks of Enervate on you, type=stack, spellId=1230200
 	[Special Warning] %d stacks of Enervate on you, type=stack, spellId=1230200
-	[Special Warning] %d stacks of Enkindle on you, type=stack, spellId=1230242
-	[Special Warning] %d stacks of Enkindle on you, type=stack, spellId=1230242
-	[Timer] Stomp, time=21.00, type=cdnp, spellId=1228295
-	[Timer] Rending Slash, time=13.80, type=cdnp, spellId=1230099
 
 Timers:
 	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
-		[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
-	Mark %d, time=16.20, type=cd, spellId=<none>, triggerDeltas = 0.00
-		[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
-	Wild Aperture, time=24.50, type=var, spellId=1230105, triggerDeltas = 0.00
-		[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
+		[  0.00] ENCOUNTER_START: 3196, Beastmaster, 9, 40, 0
+	Mark %d, time=16.20, type=cd, spellId=<none>, triggerDeltas = 0.00, 15.95, 16.18, 16.17, 16.61, 16.25, 16.19, 15.76, 16.19, 16.21, 16.21, 16.17, 16.19, 16.21, 16.20, 16.19, 16.18, 16.20
+		[  0.00] ENCOUNTER_START: 3196, Beastmaster, 9, 40, 0
+		[ 15.95] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+			 Triggered 12x, delta times: 15.95, 16.18, 16.17, 16.61, 16.25, 16.19, 15.76, 16.19, 16.21, 16.21, 16.17, 16.19
+		[210.29] SPELL_CAST_SUCCESS: [Sir Dornel: Enervate] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230200, Enervate, 0, 0
+			 Triggered 5x, delta times: 210.29, 16.20, 16.19, 16.18, 16.20
+	Stomp, time=21.00, type=cdnp, spellId=1228295, triggerDeltas = 32.13, 23.06, 29.20, 21.03, 22.27, 21.08, 40.43, 22.72, 27.53
+		[ 32.13] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+			 Triggered 9x, delta times: 32.13, 23.06, 29.20, 21.03, 22.27, 21.08, 40.43, 22.72, 27.53
+	Rending Slash, time=13.80, type=cdnp, spellId=1230099, triggerDeltas = 17.57, 15.65, 15.08, 18.23, 17.39, 13.43, 14.15, 12.95, 17.81, 24.30, 12.84, 14.68, 15.52, 20.12, 14.39, 16.37, 12.96
+		[ 17.57] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+			 Triggered 17x, delta times: 17.57, 15.65, 15.08, 18.23, 17.39, 13.43, 14.15, 12.95, 17.81, 24.30, 12.84, 14.68, 15.52, 20.12, 14.39, 16.37, 12.96
+	Wild Aperture, time=24.50, type=var, spellId=1230105, triggerDeltas = 0.00, 7.85, 17.81, 21.03, 16.61, 19.47, 17.98, 18.85, 17.80, 38.86, 19.44, 17.84, 17.80, 3.24, 17.81
+		[  0.00] ENCOUNTER_START: 3196, Beastmaster, 9, 40, 0
+		[  7.85] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+			 Triggered 14x, delta times: 7.85, 17.81, 21.03, 16.61, 19.47, 17.98, 18.85, 17.80, 38.86, 19.44, 17.84, 17.80, 3.24, 17.81
 
 Announces:
-	None
+	Mark %d, type=nil, spellId=<none>, triggerDeltas = 15.95, 16.18, 16.17, 16.61, 16.25, 16.19, 15.76, 16.19, 16.21, 16.21, 16.17, 16.19, 16.21, 16.20, 16.19, 16.18, 16.20
+		[ 15.95] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+			 Triggered 12x, delta times: 15.95, 16.18, 16.17, 16.61, 16.25, 16.19, 15.76, 16.19, 16.21, 16.21, 16.17, 16.19
+		[210.29] SPELL_CAST_SUCCESS: [Sir Dornel: Enervate] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230200, Enervate, 0, 0
+			 Triggered 5x, delta times: 210.29, 16.20, 16.19, 16.18, 16.20
 
 Special warnings:
-	None
+	Wild Aperture - dodge attack, type=dodge, spellId=1230105, triggerDeltas = 7.85, 17.81, 21.03, 16.61, 19.47, 17.98, 18.85, 17.80, 38.86, 19.44, 17.84, 17.80, 3.24, 17.81
+		[  7.85] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+			 Triggered 14x, delta times: 7.85, 17.81, 21.03, 16.61, 19.47, 17.98, 18.85, 17.80, 38.86, 19.44, 17.84, 17.80, 3.24, 17.81
+	%d stacks of Enkindle on you, type=stack, spellId=1230242, triggerDeltas = 32.13, 32.79, 96.80
+		[ 32.13] SPELL_AURA_APPLIED: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 32.13, 32.79, 96.80
+	%d stacks of Enkindle on you, type=stack, spellId=1230242, triggerDeltas = 177.90
+		[177.90] SPELL_AURA_APPLIED_DOSE: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 2, 0
 
 Yells:
 	None
 
 Voice pack sounds:
-	None
+	VoicePack/stackhigh
+		[177.90] SPELL_AURA_APPLIED_DOSE: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 2, 0
+	VoicePack/watchfeet
+		[  7.85] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+			 Triggered 14x, delta times: 7.85, 17.81, 21.03, 16.61, 19.47, 17.98, 18.85, 17.80, 38.86, 19.44, 17.84, 17.80, 3.24, 17.81
+	VoicePack/swapsoon
+		[ 32.13] SPELL_AURA_APPLIED: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 32.13, 32.79, 96.80
 
 Icons:
 	None
 
 Event trace:
-	[0.00] ENCOUNTER_START: 3196, Beastmaster, 186, 40, 0
+	[  0.00] ENCOUNTER_START: 3196, Beastmaster, 9, 40, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_AURA_APPLIED 1230242 1230200, SPELL_AURA_APPLIED_DOSE 1230242 1230200, SPELL_CAST_SUCCESS 1230242 1230200, SPELL_CAST_START 1230105 1230099 1228295
 		StartTimer: 600.0, Berserk
 		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 276.71
 		ScheduleTask: announce:Schedule(3.0, "min") at 420.00 (+420.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 276.71
 		ScheduleTask: announce:Schedule(1.0, "min") at 540.00 (+540.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 276.71
 		ScheduleTask: announce:Schedule(30.0, "sec") at 570.00 (+570.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 276.71
 		ScheduleTask: announce:Schedule(10.0, "sec") at 590.00 (+590.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 276.71
 		StartTimer: 7.0, Wild Aperture
 		StartTimer: 16.2, Mark 1
-	[5.00] ENCOUNTER_END: 3196, Beastmaster, 186, 40, 1, 0
+	[  7.85] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[ 15.95] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 15.95
+		ShowAnnounce: Mark 1
+		StartTimer: 16.2, Mark 2
+	[ 17.57] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[ 25.66] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[ 32.13] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 32.13
+		ShowAnnounce: Mark 2
+		StartTimer: 16.2, Mark 3
+	[ 32.13] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[ 32.13] SPELL_AURA_APPLIED: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 0
+		PlaySound: VoicePack/swapsoon
+		ShowSpecialWarning: 1 stacks of Enkindle on you
+	[ 33.22] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[ 46.69] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[ 48.30] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 48.3
+		ShowAnnounce: Mark 3
+		StartTimer: 16.2, Mark 4
+	[ 48.30] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[ 55.19] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[ 63.30] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[ 64.91] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 64.91
+		ShowAnnounce: Mark 4
+		StartTimer: 16.2, Mark 5
+	[ 64.92] SPELL_AURA_APPLIED: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 0
+		PlaySound: VoicePack/swapsoon
+		ShowSpecialWarning: 1 stacks of Enkindle on you
+	[ 66.53] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[ 81.16] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 81.16
+		ShowAnnounce: Mark 5
+		StartTimer: 16.2, Mark 6
+	[ 82.77] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[ 83.92] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[ 84.39] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[ 97.35] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 97.35
+		ShowAnnounce: Mark 6
+		StartTimer: 16.2, Mark 7
+	[ 97.35] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[100.75] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[105.42] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[111.50] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[113.11] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 113.12
+		ShowAnnounce: Mark 7
+		StartTimer: 16.2, Mark 8
+	[119.60] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[124.45] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[127.69] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[129.30] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 129.3
+		ShowAnnounce: Mark 8
+		StartTimer: 16.2, Mark 9
+	[137.40] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[142.26] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[145.51] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 145.51
+		ShowAnnounce: Mark 9
+		StartTimer: 16.2, Mark 10
+	[148.77] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[161.72] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 161.72
+		ShowAnnounce: Mark 10
+		StartTimer: 16.2, Mark 11
+	[161.72] SPELL_AURA_APPLIED: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 0
+		PlaySound: VoicePack/swapsoon
+		ShowSpecialWarning: 1 stacks of Enkindle on you
+	[166.56] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[176.26] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[177.89] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 177.89
+		ShowAnnounce: Mark 11
+		StartTimer: 16.2, Mark 12
+	[177.90] SPELL_AURA_APPLIED_DOSE: [Alexei the Beastlord->Dps20: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, Player-1-00000021, Dps20, 0x511, 1230242, Enkindle, 0, DEBUFF, 2, 0
+		PlaySound: VoicePack/stackhigh
+		ShowSpecialWarning: 2 stacks of Enkindle on you
+	[179.40] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[189.20] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[194.08] SPELL_CAST_SUCCESS: [Alexei the Beastlord: Enkindle] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230242, Enkindle, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 194.08
+		ShowAnnounce: Mark 12
+		StartTimer: 16.2, Mark 13
+	[194.08] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[195.70] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[209.60] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[210.29] SPELL_CAST_SUCCESS: [Sir Dornel: Enervate] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230200, Enervate, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 211.92
+		ShowAnnounce: Mark 13
+		StartTimer: 16.2, Mark 14
+	[211.92] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[213.54] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[226.49] SPELL_CAST_SUCCESS: [Sir Dornel: Enervate] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230200, Enervate, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 228.1
+		ShowAnnounce: Mark 14
+		StartTimer: 16.2, Mark 15
+	[229.72] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[231.34] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[234.58] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[239.45] SPELL_CAST_START: [Sir Dornel: Stomp] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1228295, Stomp, 0, 0
+		StartTimer: 21.0, Stomp
+	[242.68] SPELL_CAST_SUCCESS: [Sir Dornel: Enervate] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230200, Enervate, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 245.92
+		ShowAnnounce: Mark 15
+		StartTimer: 16.2, Mark 16
+	[244.11] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[252.39] SPELL_CAST_START: [Sir Dornel: Wild Aperture] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230105, Wild Aperture, 0, 0
+		ShowSpecialWarning: Wild Aperture - dodge attack
+		PlaySound: VoicePack/watchfeet
+		StartTimer: 24.5, Wild Aperture
+	[258.86] SPELL_CAST_SUCCESS: [Sir Dornel: Enervate] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230200, Enervate, 0, 0
+		AntiSpam: Mark
+			Filtered: 1x SPELL_CAST_SUCCESS at 262.1
+		ShowAnnounce: Mark 16
+		StartTimer: 16.2, Mark 17
+	[260.48] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[273.44] SPELL_CAST_START: [Alexei the Beastlord: Rending Slash] Creature-0-1-2856-1-240794-0000000001, Alexei the Beastlord, 0xa48, "", nil, 0x0, 1230099, Rending Slash, 0, 0
+		StartTimer: 13.8, Rending Slash
+	[275.06] SPELL_CAST_SUCCESS: [Sir Dornel: Enervate] Creature-0-1-2856-1-241906-0000000001, Sir Dornel, 0xa48, "", nil, 0x0, 1230200, Enervate, 0, 0
+		AntiSpam: Mark
+		ShowAnnounce: Mark 17
+		StartTimer: 16.2, Mark 18
+	[276.71] ENCOUNTER_END: 3196, Beastmaster, 9, 40, 0, 0
 		EndCombat: ENCOUNTER_END
 		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
