@@ -4,9 +4,6 @@ Mod:  DBM-Raids-Vanilla/RebornCouncil
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1236157 (Unknown spell)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1236125 (Unknown spell)
-	Unused event registration: SPELL_CAST_START 1231095 (Peeled Secrets)
-	Unused event registration: SPELL_CAST_START 1231264 (Blades of Light)
-	Unused event registration: SPELL_CAST_SUCCESS 1231383 (Divine Avatar)
 	Unused event registration: SPELL_CAST_SUCCESS 1236220 (Unknown spell)
 	Unused event registration: SPELL_CAST_SUCCESS 1236306 (Unknown spell)
 	Unused event registration: SPELL_DAMAGE 1236157 (Unknown spell)
@@ -14,57 +11,230 @@ Findings:
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1236157 (Unknown spell)
 	Unused event registration: SPELL_PERIODIC_MISSED 1236157 (Unknown spell)
 	Unused event registration: UNIT_POWER_UPDATE
+	Announce for spell ID 1236306 (Unknown spell) is triggered by event SPELL_CAST_SUCCESS 1231383 (Divine Avatar)
 
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Announce] Unknown, type=spell, spellId=1236306
-	[Special Warning] Peeled Secrets - interrupt >%s<!, type=interrupt, spellId=1231095
-	[Special Warning] Blades of Light - dodge attack, type=dodge, spellId=1231264
 	[Special Warning] Whirlwind soon, type=soon, spellId=1231312
 	[Special Warning] %d stacks of Unknown on you, type=stack, spellId=1236125
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1236157
-	[Timer] Blades of Light, time=27.00, type=cdnp, spellId=1231264
 	[Timer] Unknown, time=30.00, type=cdnp, spellId=1236220
 
 Timers:
 	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
-		[0.00] ENCOUNTER_START: 3188, RebornCouncil, 186, 40, 0
+		[  0.00] ENCOUNTER_START: 3188, Reborn Council, 9, 40, 0
+	Blades of Light, time=27.00, type=cdnp, spellId=1231264, triggerDeltas = 32.38, 29.15, 29.15, 30.76, 27.54, 35.58, 32.43, 29.12, 32.42, 29.12, 27.49
+		[ 32.38] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+			 Triggered 11x, delta times: 32.38, 29.15, 29.15, 30.76, 27.54, 35.58, 32.43, 29.12, 32.42, 29.12, 27.49
 
 Announces:
-	None
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 300.00
+		[300.00] Scheduled at 0.00 by ENCOUNTER_START: 3188, Reborn Council, 9, 40, 0
+	Unknown, type=spell, spellId=1236306, triggerDeltas = 66.19, 129.52, 64.79
+		[ 66.19] SPELL_CAST_SUCCESS: [Herod: Divine Avatar] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231383, Divine Avatar, 0, 0
+			 Triggered 3x, delta times: 66.19, 129.52, 64.79
 
 Special warnings:
-	None
+	Peeled Secrets - interrupt >%s<!, type=interrupt, spellId=1231095, triggerDeltas = 8.05, 3.25, 12.95, 16.23, 4.85, 9.71, 3.25, 9.72, 3.25, 12.94, 4.86, 29.14, 6.48, 3.25, 9.72, 9.71, 4.85, 4.85, 45.33, 6.51, 14.56, 6.47, 6.46, 3.24, 6.50, 3.23, 8.09, 8.14, 3.23, 16.19, 4.85, 32.33, 11.33, 8.09, 6.47, 3.24, 4.85
+		[  8.05] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+			 Triggered 37x, delta times: 8.05, 3.25, 12.95, 16.23, 4.85, 9.71, 3.25, 9.72, 3.25, 12.94, 4.86, 29.14, 6.48, 3.25, 9.72, 9.71, 4.85, 4.85, 45.33, 6.51, 14.56, 6.47, 6.46, 3.24, 6.50, 3.23, 8.09, 8.14, 3.23, 16.19, 4.85, 32.33, 11.33, 8.09, 6.47, 3.24, 4.85
+	Blades of Light - dodge attack, type=dodge, spellId=1231264, triggerDeltas = 32.38, 29.15, 29.15, 30.76, 27.54, 35.58, 32.43, 29.12, 32.42, 29.12, 27.49
+		[ 32.38] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+			 Triggered 11x, delta times: 32.38, 29.15, 29.15, 30.76, 27.54, 35.58, 32.43, 29.12, 32.42, 29.12, 27.49
 
 Yells:
 	None
 
 Voice pack sounds:
-	None
+	VoicePack/watchfeet
+		[ 32.38] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+			 Triggered 11x, delta times: 32.38, 29.15, 29.15, 30.76, 27.54, 35.58, 32.43, 29.12, 32.42, 29.12, 27.49
+	VoicePack/kickcast
+		[  8.05] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+			 Triggered 37x, delta times: 8.05, 3.25, 12.95, 16.23, 4.85, 9.71, 3.25, 9.72, 3.25, 12.94, 4.86, 29.14, 6.48, 3.25, 9.72, 9.71, 4.85, 4.85, 45.33, 6.51, 14.56, 6.47, 6.46, 3.24, 6.50, 3.23, 8.09, 8.14, 3.23, 16.19, 4.85, 32.33, 11.33, 8.09, 6.47, 3.24, 4.85
 
 Icons:
 	None
 
 Event trace:
-	[0.00] ENCOUNTER_START: 3188, RebornCouncil, 186, 40, 0
+	[  0.00] ENCOUNTER_START: 3188, Reborn Council, 9, 40, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 1231264 1231095, SPELL_CAST_SUCCESS 1236306 1231383 1236220, SPELL_AURA_APPLIED_DOSE 1236125, UNIT_POWER_UPDATE_UNFILTERED, SPELL_AURA_APPLIED 1236157, SPELL_PERIODIC_DAMAGE 1236157, SPELL_PERIODIC_MISSED 1236157, SPELL_DAMAGE 1236157, SPELL_MISSED 1236157
 		StartTimer: 600.0, Berserk
 		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			ShowAnnounce: Berserk in 5 min
 		ScheduleTask: announce:Schedule(3.0, "min") at 420.00 (+420.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 359.80
 		ScheduleTask: announce:Schedule(1.0, "min") at 540.00 (+540.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 359.80
 		ScheduleTask: announce:Schedule(30.0, "sec") at 570.00 (+570.00)
-			Unscheduled by ENCOUNTER_END at 5.00
+			Unscheduled by ENCOUNTER_END at 359.80
 		ScheduleTask: announce:Schedule(10.0, "sec") at 590.00 (+590.00)
-			Unscheduled by ENCOUNTER_END at 5.00
-	[5.00] ENCOUNTER_END: 3188, RebornCouncil, 186, 40, 1, 0
+			Unscheduled by ENCOUNTER_END at 359.80
+	[  8.05] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 11.30] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 24.25] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 32.38] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[ 40.48] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 45.33] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 55.04] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 58.29] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 61.53] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[ 66.19] SPELL_CAST_SUCCESS: [Herod: Divine Avatar] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231383, Divine Avatar, 0, 0
+		ShowAnnounce: Unknown
+	[ 68.01] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 71.26] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 84.20] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 89.06] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[ 90.68] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[118.20] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[121.44] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[124.68] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[127.93] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[137.65] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[147.36] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[148.98] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[152.21] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[157.06] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[184.56] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[195.71] SPELL_CAST_SUCCESS: [Herod: Divine Avatar] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231383, Divine Avatar, 0, 0
+		ShowAnnounce: Unknown
+	[202.39] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[208.90] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[216.99] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[223.46] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[229.93] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[236.39] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[239.63] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[246.11] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[246.13] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[249.36] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[257.45] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[260.50] SPELL_CAST_SUCCESS: [Herod: Divine Avatar] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231383, Divine Avatar, 0, 0
+		ShowAnnounce: Unknown
+	[265.59] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[268.82] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[278.53] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[285.01] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[289.86] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[307.65] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[322.19] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[333.52] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[335.14] SPELL_CAST_START: [Herod: Blades of Light] Creature-0-1-2856-1-240795-0000000002, Herod, 0xa48, "", nil, 0x0, 1231264, Blades of Light, 0, 0
+		StartTimer: 27.0, Blades of Light
+		ShowSpecialWarning: Blades of Light - dodge attack
+		PlaySound: VoicePack/watchfeet
+	[341.61] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[348.08] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[351.32] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[356.17] SPELL_CAST_START: [Vishas: Peeled Secrets] Creature-0-1-2856-1-240809-0000000002, Vishas, 0xa48, "", nil, 0x0, 1231095, Peeled Secrets, 0, 0
+		ShowSpecialWarning: Peeled Secrets - interrupt Vishas!
+		PlaySound: VoicePack/kickcast
+	[359.80] ENCOUNTER_END: 3188, Reborn Council, 9, 40, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
