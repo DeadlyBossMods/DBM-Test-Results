@@ -47,6 +47,7 @@ Findings:
 	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_AURA_REMOVED 1214369 (TOTAL DESTRUCTION!!!)
 	Timer for spell ID 1214607 (Bigger Badder Bomb Blast) is triggered by event SPELL_AURA_REMOVED 469293 (Giga Coils)
 	Timer for spell ID 1214755 (Overloaded Rockets) is triggered by event SPELL_CAST_START 1214607 (Bigger Badder Bomb Blast)
+	SpecialWarning for spell ID 1219333 (Gallybux Finale Blast) is triggered by event SPELL_CAST_START 467182 (Suppression)
 	Timer for spell ID 1219333 (Gallybux Finale Blast) is triggered by event SPELL_CAST_START 467182 (Suppression)
 
 Unused objects:
@@ -195,6 +196,9 @@ Special warnings:
 	Bigger Badder Bomb Blast! (%s), type=count, spellId=1214607, triggerDeltas = 197.84, 34.02, 69.08
 		[197.84] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 			 Triggered 3x, delta times: 197.84, 34.02, 69.08
+	Gallybux Finale Blast - dodge attack, type=dodge, spellId=1219333, triggerDeltas = 222.85, 69.08
+		[222.85] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
+			 Triggered 2x, delta times: 222.85, 69.08
 
 Yells:
 	None
@@ -204,6 +208,9 @@ Voice pack sounds:
 		[123.37] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Trick Shots] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1220290, Trick Shots, 0, BUFF, 0
 	VoicePack/pthree
 		[189.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
+	VoicePack/justrun
+		[222.85] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
+			 Triggered 2x, delta times: 222.85, 69.08
 	VoicePack/bombsoon
 		[ 20.23] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 1122, nil, 0, false, false, false, false, 0
 		[ 59.55] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 1135, nil, 0, false, false, false, false, 0
@@ -425,6 +432,8 @@ Event trace:
 	[222.85] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (1) - dodge attack
 		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Gallybux Finale Blast - dodge attack
+		PlaySound: VoicePack/justrun
 		StartTimer: 6.0, Gallybux Finale Blast (1)
 	[231.86] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 		ShowSpecialWarning: Bigger Badder Bomb Blast! (2)
@@ -483,6 +492,8 @@ Event trace:
 	[291.93] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
 		ShowSpecialWarning: Suppression (2) - dodge attack
 		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Gallybux Finale Blast - dodge attack
+		PlaySound: VoicePack/justrun
 		StartTimer: 6.0, Gallybux Finale Blast (2)
 	[300.94] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
 		ShowSpecialWarning: Bigger Badder Bomb Blast! (3)
