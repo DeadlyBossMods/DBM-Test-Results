@@ -1,0 +1,216 @@
+Test: SoD/Naxx/Gothik/Heroic
+Mod:  DBM-Raids-Vanilla/GothikVanilla
+
+Findings:
+	None
+
+Unused objects:
+	None
+
+Timers:
+	Phase 2, time=270.00, type=cd, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+	Wave %d, time=20.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 27.00, 20.00, 20.00, 10.00, 10.00, 15.00, 5.00, 20.00, 10.00, 10.00, 5.00, 15.00, 10.00, 10.00, 10.00, 5.00, 5.00
+		[  0.00] ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+		[ 27.00] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+			 Triggered 17x, delta times: 27.00, 20.00, 20.00, 10.00, 10.00, 15.00, 5.00, 20.00, 10.00, 10.00, 5.00, 15.00, 10.00, 10.00, 10.00, 5.00, 5.00
+	Teleport, time=20.00, type=next, spellId=1222332, triggerDeltas = 270.70, 20.00, 20.00, 20.00, 20.00
+		[270.70] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+			 Triggered 5x, delta times: 270.70, 20.00, 20.00, 20.00, 20.00
+		[370.43] UNIT_HEALTH: target, 0
+
+Announces:
+	Knight down, type=nil, spellId=<none>, triggerDeltas = 92.79, 1.35, 25.81, 3.52, 22.81, 3.10, 25.17, 1.60, 22.62, 12.40, 27.09, 15.99, 25.61, 2.46
+		[ 92.79] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000031, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+			 Triggered 14x, delta times: 92.79, 1.35, 25.81, 3.52, 22.81, 3.10, 25.17, 1.60, 22.62, 12.40, 27.09, 15.99, 25.61, 2.46
+	Rider down, type=nil, spellId=<none>, triggerDeltas = 154.43, 30.19, 37.68, 44.42
+		[154.43] UNIT_DIED: [->Unrelenting Rider] "", nil, 0x0, Creature-0-1-533-1-16126-000000005E, Unrelenting Rider, 0xa48, -1, false, 0, 0
+			 Triggered 4x, delta times: 154.43, 30.19, 37.68, 44.42
+	Wave %d: %s in 3 sec, type=nil, spellId=<none>, triggerDeltas = 24.00, 20.00, 20.00, 10.00, 10.00, 15.00, 5.00, 20.00, 10.00, 10.00, 5.00, 15.00, 10.00, 10.00, 10.00, 5.00, 5.00, 20.00
+		[ 24.00] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+			 Triggered 18x, delta times: 24.00, 20.00, 20.00, 10.00, 10.00, 15.00, 5.00, 20.00, 10.00, 10.00, 5.00, 15.00, 10.00, 10.00, 10.00, 5.00, 5.00, 20.00
+	Wave %d: %s spawned, type=nil, spellId=<none>, triggerDeltas = 27.00, 20.00, 20.00, 10.00, 10.00, 15.00, 5.00, 20.00, 10.00, 10.00, 5.00, 15.00, 10.00, 10.00, 10.00, 5.00, 5.00, 20.00
+		[ 27.00] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+			 Triggered 18x, delta times: 27.00, 20.00, 20.00, 10.00, 10.00, 15.00, 5.00, 20.00, 10.00, 10.00, 5.00, 15.00, 10.00, 10.00, 10.00, 5.00, 5.00, 20.00
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 270.00
+		[270.00] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+	Teleport soon, type=soon, spellId=1222332, triggerDeltas = 297.70, 20.00, 20.00, 20.00
+		[297.70] Scheduled at 0.00 by ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+			 Triggered 4x, delta times: 297.70, 20.00, 20.00, 20.00
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 1109, Gothik the Harvester, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, UNIT_DIED, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus
+		StartTimer: 270.0, Phase 2
+		ScheduleTask: announce2stage:Schedule() at 270.00 (+270.00)
+			ShowAnnounce: Stage 2
+		StartTimer: 27.0, Wave 1
+		ScheduleTask: announce:Schedule(1.0, "3 Trainees") at 24.00 (+24.00)
+			ShowAnnounce: Wave 1: 3 Trainees in 3 sec
+		ScheduleTask: mod:NextWave() at 27.00 (+27.00)
+			ShowAnnounce: Wave 1: 3 Trainees spawned
+			StartTimer: 20.0, Wave 2
+			ScheduleTask: announce:Schedule(2.0, "3 Trainees") at 44.00 (+17.00)
+				ShowAnnounce: Wave 2: 3 Trainees in 3 sec
+			ScheduleTask: mod:NextWave() at 47.00 (+20.00)
+				ShowAnnounce: Wave 2: 3 Trainees spawned
+				StartTimer: 20.0, Wave 3
+				ScheduleTask: announce:Schedule(3.0, "3 Trainees") at 64.00 (+17.00)
+					ShowAnnounce: Wave 3: 3 Trainees in 3 sec
+				ScheduleTask: mod:NextWave() at 67.00 (+20.00)
+					ShowAnnounce: Wave 3: 3 Trainees spawned
+					StartTimer: 10.0, Wave 4
+					ScheduleTask: announce:Schedule(4.0, "2 Knights") at 74.00 (+7.00)
+						ShowAnnounce: Wave 4: 2 Knights in 3 sec
+					ScheduleTask: mod:NextWave() at 77.00 (+10.00)
+						ShowAnnounce: Wave 4: 2 Knights spawned
+						StartTimer: 10.0, Wave 5
+						ScheduleTask: announce:Schedule(5.0, "3 Trainees") at 84.00 (+7.00)
+							ShowAnnounce: Wave 5: 3 Trainees in 3 sec
+						ScheduleTask: mod:NextWave() at 87.00 (+10.00)
+							ShowAnnounce: Wave 5: 3 Trainees spawned
+							StartTimer: 15.0, Wave 6
+							ScheduleTask: announce:Schedule(6.0, "2 Knights") at 99.00 (+12.00)
+								ShowAnnounce: Wave 6: 2 Knights in 3 sec
+							ScheduleTask: mod:NextWave() at 102.00 (+15.00)
+								ShowAnnounce: Wave 6: 2 Knights spawned
+								StartTimer: 5.0, Wave 7
+								ScheduleTask: announce:Schedule(7.0, "3 Trainees") at 104.00 (+2.00)
+									ShowAnnounce: Wave 7: 3 Trainees in 3 sec
+								ScheduleTask: mod:NextWave() at 107.00 (+5.00)
+									ShowAnnounce: Wave 7: 3 Trainees spawned
+									StartTimer: 20.0, Wave 8
+									ScheduleTask: announce:Schedule(8.0, "2 Knights and 3 Trainees") at 124.00 (+17.00)
+										ShowAnnounce: Wave 8: 2 Knights and 3 Trainees in 3 sec
+									ScheduleTask: mod:NextWave() at 127.00 (+20.00)
+										ShowAnnounce: Wave 8: 2 Knights and 3 Trainees spawned
+										StartTimer: 10.0, Wave 9
+										ScheduleTask: announce:Schedule(9.0, "1 Riders") at 134.00 (+7.00)
+											ShowAnnounce: Wave 9: 1 Riders in 3 sec
+										ScheduleTask: mod:NextWave() at 137.00 (+10.00)
+											ShowAnnounce: Wave 9: 1 Riders spawned
+											StartTimer: 10.0, Wave 10
+											ScheduleTask: announce:Schedule(10.0, "3 Trainees") at 144.00 (+7.00)
+												ShowAnnounce: Wave 10: 3 Trainees in 3 sec
+											ScheduleTask: mod:NextWave() at 147.00 (+10.00)
+												ShowAnnounce: Wave 10: 3 Trainees spawned
+												StartTimer: 5.0, Wave 11
+												ScheduleTask: announce:Schedule(11.0, "2 Knights") at 149.00 (+2.00)
+													ShowAnnounce: Wave 11: 2 Knights in 3 sec
+												ScheduleTask: mod:NextWave() at 152.00 (+5.00)
+													ShowAnnounce: Wave 11: 2 Knights spawned
+													StartTimer: 15.0, Wave 12
+													ScheduleTask: announce:Schedule(12.0, "1 Riders and 3 Trainees") at 164.00 (+12.00)
+														ShowAnnounce: Wave 12: 1 Riders and 3 Trainees in 3 sec
+													ScheduleTask: mod:NextWave() at 167.00 (+15.00)
+														ShowAnnounce: Wave 12: 1 Riders and 3 Trainees spawned
+														StartTimer: 10.0, Wave 13
+														ScheduleTask: announce:Schedule(13.0, "2 Knights") at 174.00 (+7.00)
+															ShowAnnounce: Wave 13: 2 Knights in 3 sec
+														ScheduleTask: mod:NextWave() at 177.00 (+10.00)
+															ShowAnnounce: Wave 13: 2 Knights spawned
+															StartTimer: 10.0, Wave 14
+															ScheduleTask: announce:Schedule(14.0, "3 Trainees") at 184.00 (+7.00)
+																ShowAnnounce: Wave 14: 3 Trainees in 3 sec
+															ScheduleTask: mod:NextWave() at 187.00 (+10.00)
+																ShowAnnounce: Wave 14: 3 Trainees spawned
+																StartTimer: 10.0, Wave 15
+																ScheduleTask: announce:Schedule(15.0, "1 Riders") at 194.00 (+7.00)
+																	ShowAnnounce: Wave 15: 1 Riders in 3 sec
+																ScheduleTask: mod:NextWave() at 197.00 (+10.00)
+																	ShowAnnounce: Wave 15: 1 Riders spawned
+																	StartTimer: 5.0, Wave 16
+																	ScheduleTask: announce:Schedule(16.0, "2 Knights") at 199.00 (+2.00)
+																		ShowAnnounce: Wave 16: 2 Knights in 3 sec
+																	ScheduleTask: mod:NextWave() at 202.00 (+5.00)
+																		ShowAnnounce: Wave 16: 2 Knights spawned
+																		StartTimer: 5.0, Wave 17
+																		ScheduleTask: announce:Schedule(17.0, "3 Trainees") at 204.00 (+2.00)
+																			ShowAnnounce: Wave 17: 3 Trainees in 3 sec
+																		ScheduleTask: mod:NextWave() at 207.00 (+5.00)
+																			ShowAnnounce: Wave 17: 3 Trainees spawned
+																			StartTimer: 20.0, Wave 18
+																			ScheduleTask: announce:Schedule(18.0, "1 Riders, 2 Knights and 3 Trainees") at 224.00 (+17.00)
+																				ShowAnnounce: Wave 18: 1 Riders, 2 Knights and 3 Trainees in 3 sec
+																			ScheduleTask: mod:NextWave() at 227.00 (+20.00)
+																				ShowAnnounce: Wave 18: 1 Riders, 2 Knights and 3 Trainees spawned
+		ScheduleTask: mod:Teleport() at 270.70 (+270.70)
+			StartTimer: 20.0, Teleport
+			ScheduleTask: announce1222332soon:Schedule() at 297.70 (+27.00)
+				ShowAnnounce: Teleport soon
+			ScheduleTask: mod:Teleport() at 290.70 (+20.00)
+				StartTimer: 20.0, Teleport
+				ScheduleTask: announce1222332soon:Schedule() at 317.70 (+27.00)
+					ShowAnnounce: Teleport soon
+				ScheduleTask: mod:Teleport() at 310.70 (+20.00)
+					StartTimer: 20.0, Teleport
+					ScheduleTask: announce1222332soon:Schedule() at 337.70 (+27.00)
+						ShowAnnounce: Teleport soon
+					ScheduleTask: mod:Teleport() at 330.70 (+20.00)
+						StartTimer: 20.0, Teleport
+						ScheduleTask: announce1222332soon:Schedule() at 357.70 (+27.00)
+							ShowAnnounce: Teleport soon
+						ScheduleTask: mod:Teleport() at 350.70 (+20.00)
+							StartTimer: 20.0, Teleport
+							ScheduleTask: announce1222332soon:Schedule() at 377.70 (+27.00)
+								Unscheduled by UNIT_HEALTH at 370.43
+							ScheduleTask: mod:Teleport() at 370.70 (+20.00)
+								Unscheduled by UNIT_HEALTH at 370.43
+	[ 92.79] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000031, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[ 94.14] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000125, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[119.95] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-000000012E, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[123.47] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000045, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[146.28] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000058, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[149.38] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000138, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[154.43] UNIT_DIED: [->Unrelenting Rider] "", nil, 0x0, Creature-0-1-533-1-16126-000000005E, Unrelenting Rider, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Rider down
+	[174.55] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000148, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[176.15] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000069, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[184.62] UNIT_DIED: [->Unrelenting Rider] "", nil, 0x0, Creature-0-1-533-1-16126-0000000075, Unrelenting Rider, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Rider down
+	[198.77] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-000000007D, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[211.17] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000155, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[222.30] UNIT_DIED: [->Unrelenting Rider] "", nil, 0x0, Creature-0-1-533-1-16126-000000008C, Unrelenting Rider, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Rider down
+	[238.26] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-000000008F, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[254.25] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000162, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[261.80] SPELL_AURA_APPLIED: [Healer3->Healer3: Marching Orders] Player-1-00000018, Healer3, 0x511, Player-1-00000018, Healer3, 0x511, 1219058, Marching Orders, 0, DEBUFF, 0
+		AntiSpam: WelcomeMilitaryHardmode
+			Filtered: 2x SPELL_AURA_APPLIED at 306.42, 348.57
+	[266.72] UNIT_DIED: [->Unrelenting Rider] "", nil, 0x0, Creature-0-1-533-1-16126-00000000A0, Unrelenting Rider, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Rider down
+	[279.86] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-00000000A0, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[282.32] UNIT_DIED: [->Unrelenting Deathknight] "", nil, 0x0, Creature-0-1-533-1-16125-0000000174, Unrelenting Deathknight, 0xa48, -1, false, 0, 0
+		ShowAnnounce: Knight down
+	[370.43] UNIT_HEALTH: target, 0
+		UnscheduleTask: mod:Teleport() scheduled by ScheduleTask at 350.70
+		StopTimer: Timer1222332next
+		UnscheduleTask: announce1222332soon:Schedule() scheduled by ScheduleTask at 350.70
+	[388.84] UNIT_DIED: [->Gothik the Harvester] "", nil, 0x0, Creature-0-1-533-1-16060-0000000001, Gothik the Harvester, 0xa48, -1, false, 0, 0
+		EndCombat: Main CID Down
