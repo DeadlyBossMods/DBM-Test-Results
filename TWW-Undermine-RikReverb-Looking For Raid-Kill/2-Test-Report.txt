@@ -6,7 +6,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1214598 (Entranced)
 	Unused event registration: SPELL_AURA_APPLIED 1217122 (Lingering Voltage)
 	Unused event registration: SPELL_AURA_APPLIED 464518 (Tinnitus)
-	Unused event registration: SPELL_AURA_APPLIED 466128 (Resonance)
 	Unused event registration: SPELL_AURA_APPLIED 472298 (Entranced!)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1217122 (Lingering Voltage)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 464518 (Tinnitus)
@@ -203,6 +202,8 @@ Event trace:
 	[ 89.78] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (3) - dodge attack
 		PlaySound: VoicePack/watchstep
+	[100.89] SPELL_AURA_APPLIED: [Rik Reverb->Amplifier: Resonance] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Creature-0-1-2769-1-230197-000000001F, Amplifier, 0xa48, 466128, Resonance, 0, BUFF, 0
+		AntiSpam: 3
 	[101.52] SPELL_AURA_APPLIED: [->Dps14: Faulty Zap] "", nil, 0x0, Player-1-00000019, Dps14, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		AntiSpam: 2 on Dps14
 			Filtered: 1x SPELL_AURA_APPLIED at 104.55
@@ -270,10 +271,14 @@ Event trace:
 		StartTimer: 32.0, Sound Cannon (3)
 		StartTimer: 43.5, Faulty Zap (4)
 		StartTimer: 120.0, Stage 2
+	[156.66] SPELL_AURA_APPLIED: [Rik Reverb->Amplifier: Resonance] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Creature-0-1-2769-1-230197-000000001F, Amplifier, 0xa48, 466128, Resonance, 0, BUFF, 0
+		AntiSpam: 3
 	[162.67] SPELL_CAST_START: [Rik Reverb: Amplification!] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 473748, Amplification!, 0, 0
 		ShowSpecialWarning: Amplification! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 40.2, Amplification! (5)
+	[173.77] SPELL_AURA_APPLIED: [Rik Reverb->Amplifier: Resonance] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Creature-0-1-2769-1-230197-000000002A, Amplifier, 0xa48, 466128, Resonance, 0, BUFF, 0
+		AntiSpam: 3
 	[174.05] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (4) - dodge attack
 		PlaySound: VoicePack/watchwave

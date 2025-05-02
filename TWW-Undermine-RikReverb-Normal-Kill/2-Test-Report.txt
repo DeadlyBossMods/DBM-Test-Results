@@ -6,7 +6,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1214598 (Entranced)
 	Unused event registration: SPELL_AURA_APPLIED 1217122 (Lingering Voltage)
 	Unused event registration: SPELL_AURA_APPLIED 464518 (Tinnitus)
-	Unused event registration: SPELL_AURA_APPLIED 466128 (Resonance)
 	Unused event registration: SPELL_AURA_APPLIED 472298 (Entranced!)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1217122 (Lingering Voltage)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 464518 (Tinnitus)
@@ -278,6 +277,8 @@ Event trace:
 		ShowSpecialWarning: Amplification! (4) - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 40.2, Amplification! (5)
+	[172.78] SPELL_AURA_APPLIED: [Rik Reverb->Amplifier: Resonance] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Creature-0-1-2769-1-230197-0000000016, Amplifier, 0xa48, 466128, Resonance, 0, BUFF, 0
+		AntiSpam: 3
 	[174.05] SPELL_CAST_START: [Rik Reverb: Echoing Chant] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466866, Echoing Chant, 0, 0
 		ShowSpecialWarning: Echoing Chant (4) - dodge attack
 		PlaySound: VoicePack/watchwave
@@ -296,6 +297,8 @@ Event trace:
 							ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 185.61 (+0.10)
 								ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 185.71 (+0.10)
 									ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 185.81 (+0.10)
+	[185.08] SPELL_AURA_APPLIED: [Rik Reverb->Amplifier: Resonance] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Creature-0-1-2769-1-230197-0000000016, Amplifier, 0xa48, 466128, Resonance, 0, BUFF, 0
+		AntiSpam: 3
 	[196.56] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
 		StartTimer: 31.5, Faulty Zap (5)
 	[196.56] SPELL_AURA_APPLIED: [->Dps16: Faulty Zap] "", nil, 0x0, Player-1-00000022, Dps16, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
