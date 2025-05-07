@@ -1,0 +1,319 @@
+Test: SoD/ScarletEnclave/Mason/Normal
+Mod:  DBM-Raids-Vanilla/Mason
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1228509 (Burning Oil)
+	Unused event registration: SPELL_AURA_APPLIED 1229005 (Mortal Wound)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1228509 (Burning Oil)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1229005 (Mortal Wound)
+	Timer for spell ID 1228376 (Cannon Fire) is triggered by event SPELL_AURA_REMOVED 1231585 (Tidal Force)
+
+Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Mortal Wound on >%s< (%d), type=stack, spellId=1229005
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1228509
+
+Timers:
+	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3197, Mason, 9, 40, 0
+	Cannon Fire, time=30.50, type=next, spellId=1228376, triggerDeltas = 0.00, 30.20, 30.80, 30.69, 30.84, 30.76, 34.98, 36.28, 30.77, 36.50, 37.96, 30.73
+		[  0.00] ENCOUNTER_START: 3197, Mason, 9, 40, 0
+		[ 30.20] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7106, nil, 0, false, false, false, false, 0
+		[ 61.00] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7127, nil, 0, false, false, false, false, 0
+		[ 91.69] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7141, nil, 0, false, false, false, false, 0
+		[122.53] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7153, nil, 0, false, false, false, false, 0
+		[153.29] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7168, nil, 0, false, false, false, false, 0
+		[188.27] SPELL_AURA_REMOVED: [Mason the Echo->Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, 1231585, Tidal Force, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 188.27, 103.55
+		[224.55] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7197, nil, 0, false, false, false, false, 0
+		[255.32] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7206, nil, 0, false, false, false, false, 0
+		[329.78] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7238, nil, 0, false, false, false, false, 0
+		[360.51] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7248, nil, 0, false, false, false, false, 0
+	Ignite Flesh, time=1.00, type=castpnp, spellId=1234347, triggerDeltas = 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+		[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+			 Triggered 20x, delta times: 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+
+Announces:
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 300.00
+		[300.00] Scheduled at 0.00 by ENCOUNTER_START: 3197, Mason, 9, 40, 0
+	Stage 2 soon, type=prestage, spellId=<none>, triggerDeltas = 54.05, 103.91, 95.31
+		[ 54.05] UNIT_HEALTH: target, 0
+			 Triggered 3x, delta times: 54.05, 103.91, 95.31
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 66.05, 109.72, 102.00
+		[ 66.05] SPELL_CAST_START: [Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, "", nil, 0x0, 1231585, Tidal Force, 0, 0
+			 Triggered 3x, delta times: 66.05, 109.72, 102.00
+
+Special warnings:
+	Cannon Fire - dodge attack, type=dodge, spellId=1228376, triggerDeltas = 30.20, 30.80, 30.69, 30.84, 30.76, 71.26, 30.77, 74.46, 30.73
+		[ 30.20] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7106, nil, 0, false, false, false, false, 0
+		[ 61.00] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7127, nil, 0, false, false, false, false, 0
+		[ 91.69] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7141, nil, 0, false, false, false, false, 0
+		[122.53] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7153, nil, 0, false, false, false, false, 0
+		[153.29] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7168, nil, 0, false, false, false, false, 0
+		[224.55] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7197, nil, 0, false, false, false, false, 0
+		[255.32] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7206, nil, 0, false, false, false, false, 0
+		[329.78] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7238, nil, 0, false, false, false, false, 0
+		[360.51] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7248, nil, 0, false, false, false, false, 0
+	Drowning Shallows on >%s< - dispel now, type=dispel, spellId=1231592, triggerDeltas = 38.12, 43.71, 26.33, 27.12, 30.78, 25.92, 35.60, 29.16, 45.70, 30.38, 30.73
+		[ 38.12] SPELL_AURA_APPLIED: [Mason the Echo->Dps9: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000010, Dps9, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		[ 81.83] SPELL_AURA_APPLIED: [Mason the Echo->Dps3: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000003, Dps3, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 81.83, 110.15
+		[108.16] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 108.16, 119.42, 74.86, 61.11
+		[135.28] SPELL_AURA_APPLIED: [Mason the Echo->Dps19: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000021, Dps19, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 135.28, 121.46, 76.08
+		[166.06] SPELL_AURA_APPLIED: [Mason the Echo->Dps13: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000015, Dps13, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+	Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347, triggerDeltas = 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+		[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+			 Triggered 20x, delta times: 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/kickcast
+		[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+			 Triggered 20x, delta times: 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+	VoicePack/helpdispel
+		[ 38.12] SPELL_AURA_APPLIED: [Mason the Echo->Dps9: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000010, Dps9, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		[ 81.83] SPELL_AURA_APPLIED: [Mason the Echo->Dps3: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000003, Dps3, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 81.83, 110.15
+		[108.16] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 108.16, 119.42, 74.86, 61.11
+		[135.28] SPELL_AURA_APPLIED: [Mason the Echo->Dps19: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000021, Dps19, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 135.28, 121.46, 76.08
+		[166.06] SPELL_AURA_APPLIED: [Mason the Echo->Dps13: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000015, Dps13, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+	VoicePack/watchstep
+		[ 30.20] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7106, nil, 0, false, false, false, false, 0
+		[ 61.00] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7127, nil, 0, false, false, false, false, 0
+		[ 91.69] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7141, nil, 0, false, false, false, false, 0
+		[122.53] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7153, nil, 0, false, false, false, false, 0
+		[153.29] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7168, nil, 0, false, false, false, false, 0
+		[224.55] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7197, nil, 0, false, false, false, false, 0
+		[255.32] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7206, nil, 0, false, false, false, false, 0
+		[329.78] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7238, nil, 0, false, false, false, false, 0
+		[360.51] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7248, nil, 0, false, false, false, false, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3197, Mason, 9, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231592 1229005 1228509, SPELL_AURA_APPLIED_DOSE 1229005 1228509, SPELL_AURA_REMOVED 1231585, SPELL_CAST_START 1234347 1231585, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus, CHAT_MSG_MONSTER_YELL
+		StartTimer: 600.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
+			ShowAnnounce: Berserk in 5 min
+		ScheduleTask: announce:Schedule(3.0, "min") at 420.00 (+420.00)
+			Unscheduled by ENCOUNTER_END at 369.70
+		ScheduleTask: announce:Schedule(1.0, "min") at 540.00 (+540.00)
+			Unscheduled by ENCOUNTER_END at 369.70
+		ScheduleTask: announce:Schedule(30.0, "sec") at 570.00 (+570.00)
+			Unscheduled by ENCOUNTER_END at 369.70
+		ScheduleTask: announce:Schedule(10.0, "sec") at 590.00 (+590.00)
+			Unscheduled by ENCOUNTER_END at 369.70
+		StartTimer: 30.0, Cannon Fire
+	[ 30.20] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7106, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 38.12] SPELL_AURA_APPLIED: [Mason the Echo->Dps9: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000010, Dps9, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 38.12, 38.12, 38.12, 38.12, 38.12, 38.12, 38.12, 38.15, 38.15
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[ 54.05] UNIT_HEALTH: target, 0
+		ShowAnnounce: Stage 2 soon
+	[ 61.00] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7127, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 66.05] SPELL_CAST_START: [Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, "", nil, 0x0, 1231585, Tidal Force, 0, 0
+		ShowAnnounce: Stage 2
+	[ 81.83] SPELL_AURA_APPLIED: [Mason the Echo->Dps3: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000003, Dps3, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 81.83, 81.83, 81.83, 81.83, 81.83, 81.83, 81.83, 81.83, 81.83
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[ 91.69] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7141, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[107.34] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000002F, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[108.16] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 108.16, 108.17, 108.17, 108.17, 108.17, 108.17, 108.17, 108.17, 108.17
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[122.53] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7153, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[127.18] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[135.28] SPELL_AURA_APPLIED: [Mason the Echo->Dps19: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000021, Dps19, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 135.28, 135.28, 135.28, 135.28, 135.28, 135.28, 135.28, 135.28, 135.28
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[138.13] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000002F, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[148.25] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[153.29] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7168, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[157.96] UNIT_HEALTH: target, 0
+		ShowAnnounce: Stage 2 soon
+	[166.06] SPELL_AURA_APPLIED: [Mason the Echo->Dps13: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000015, Dps13, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 166.06, 166.06, 166.07, 166.07, 166.07, 166.07, 166.07, 166.07, 166.07
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[175.77] SPELL_CAST_START: [Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, "", nil, 0x0, 1231585, Tidal Force, 0, 0
+		ShowAnnounce: Stage 2
+	[188.27] SPELL_AURA_REMOVED: [Mason the Echo->Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, 1231585, Tidal Force, 0, DEBUFF, 0
+		StartTimer: 30.5, Cannon Fire
+	[191.98] SPELL_AURA_APPLIED: [Mason the Echo->Dps3: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000003, Dps3, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 191.98, 191.99, 191.99, 191.99, 191.99, 191.99, 191.99, 191.99, 192.21
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[202.09] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-0000000074, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[203.32] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000011D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[224.55] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7197, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[227.58] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 227.58, 227.58, 227.58, 227.58, 227.58, 227.58, 227.58, 227.58, 227.61
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[227.77] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-0000000074, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[230.83] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000011D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[250.67] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-0000000074, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[253.27] UNIT_HEALTH: target, 0
+		ShowAnnounce: Stage 2 soon
+	[253.50] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000011D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[255.32] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7206, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[256.74] SPELL_AURA_APPLIED: [Mason the Echo->Dps19: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000021, Dps19, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 256.74, 256.74, 256.74, 256.74, 256.74, 256.74, 256.74, 256.74, 256.74
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[276.14] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000011D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[277.77] SPELL_CAST_START: [Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, "", nil, 0x0, 1231585, Tidal Force, 0, 0
+		ShowAnnounce: Stage 2
+	[291.82] SPELL_AURA_REMOVED: [Mason the Echo->Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, 1231585, Tidal Force, 0, DEBUFF, 0
+		StartTimer: 30.5, Cannon Fire
+	[297.20] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000011D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[302.44] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 302.44, 302.44, 302.44, 302.44, 302.44, 302.44, 302.44, 302.44, 302.44
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[312.96] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000AE, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[313.40] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000013D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[318.25] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000011D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[329.78] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7238, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[332.82] SPELL_AURA_APPLIED: [Mason the Echo->Dps19: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000021, Dps19, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 332.82, 332.82, 332.82, 332.82, 332.82, 332.82, 332.82, 332.82, 332.82
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[334.03] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000AE, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[344.13] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000011D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[344.14] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-000000013D, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[359.91] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000AE, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Eastsea Scallywag!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 1.0, Ignite Flesh
+	[360.51] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7248, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 30.5, Cannon Fire
+		ShowSpecialWarning: Cannon Fire - dodge attack
+		PlaySound: VoicePack/watchstep
+	[363.55] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		AntiSpam: Decurse
+			Filtered: 9x SPELL_AURA_APPLIED at 363.55, 363.55, 363.55, 363.55, 363.55, 363.55, 363.55, 363.55, 363.55
+		ShowSpecialWarning: Drowning Shallows on Allies - dispel now
+		PlaySound: VoicePack/helpdispel
+	[369.70] ENCOUNTER_END: 3197, Mason, 9, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1231585
