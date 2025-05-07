@@ -2,121 +2,149 @@ Test: SoD/ScarletEnclave/Caldoran/Normal
 Mod:  DBM-Raids-Vanilla/Caldoran
 
 Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1229397 (Divine Conflagration)
 	Unused event registration: SPELL_AURA_APPLIED 1230809 (Bloodflame)
-	Unused event registration: SPELL_CAST_START 1230271 (Dying Light)
-	Unused event registration: SPELL_CAST_START 1230697 (Cessation)
-	Unused event registration: SPELL_CAST_START 1230908 (Judge Unworthy)
-	Unused event registration: SPELL_CAST_START 1231027 (Darkgraven Blade)
-	Unused event registration: SPELL_CAST_START 1231651 (Quietus)
-	Unused event registration: SPELL_CAST_START 1231654 (Wake of Ashes)
-	Unused event registration: SPELL_CAST_SUCCESS 1230125 (Wrath of the Crusade)
-	Unused event registration: SPELL_CAST_SUCCESS 1230137 (Wrath of the Crusade)
-	Unused event registration: UNIT_HEALTH
-	SpecialWarning for spell ID 1230809 (Bloodflame) is triggered by event SPELL_AURA_APPLIED 1229397 (Divine Conflagration)
+	Unused event registration: SWING_MISSED
 	SpecialWarning for spell ID 1234347 (Ignite Flesh) is triggered by event SPELL_CAST_START 1229226 (Righteous Flame)
+	SpecialWarning for spell ID 1234347 (Ignite Flesh) is triggered by event SPELL_CAST_START 1230908 (Judge Unworthy)
 	Timer for spell ID 1234347 (Ignite Flesh) is triggered by event SPELL_CAST_START 1229226 (Righteous Flame)
-	Timer Blinding Flare, time=34.00, type=var, spellId=1229714 (time=34.00, variance=5.00) got refreshed early with 6.40s remaining
-		Refreshed by: [ 27.57] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-	Timer Execution Sentence, time=130.00, type=var, spellId=1229503 (time=130.00, variance=13.00) got refreshed early with 18.20s remaining
-		Refreshed by: [144.22] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
-	Timer Wake of Ashes, time=33.00, type=var, spellId=1231618 (time=33.00, variance=8.00) got refreshed early with 8.67s remaining
-		Refreshed by: [191.21] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+	Timer for spell ID 1234347 (Ignite Flesh) is triggered by event SPELL_CAST_START 1230908 (Judge Unworthy)
+	Timer Execution Sentence, time=130.00, type=var, spellId=1229503 (time=130.00, variance=13.00) got refreshed early with 15.13s remaining
+		Refreshed by: [158.24] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+	Timer Execution Sentence, time=130.00, type=var, spellId=1229503 (time=130.00, variance=13.00) got refreshed early with 55.60s remaining
+		Refreshed by: [516.02] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+	Timer Quietus, time=29.00, type=var, spellId=1231651 (time=29.00, variance=4.50) got refreshed early with 4.70s remaining
+		Refreshed by: [626.15] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+	Timer Wake of Ashes, time=33.00, type=var, spellId=1231618 (time=33.00, variance=8.00) got refreshed early with 8.70s remaining
+		Refreshed by: [269.94] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+	Timer Wake of Ashes, time=33.00, type=var, spellId=1231618 (time=33.00, variance=8.00) got refreshed early with 8.73s remaining
+		Refreshed by: [294.20] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
 
 Unused objects:
-	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Announce] Stage 2 soon, type=prestage, spellId=<none>
-	[Announce] Stage 2, type=stage, spellId=<none>
-	[Announce] Stage 3, type=stage, spellId=<none>
-	[Announce] Stage 4 soon, type=prestage, spellId=<none>
-	[Announce] Stage 4, type=stage, spellId=<none>
-	[Announce] Casting Cessation: -nan sec, type=cast, spellId=1230697
-	[Announce] Casting Quietus: -nan sec, type=cast, spellId=1231651
-	[Announce] Casting Wake of Ashes: -nan sec, type=cast, spellId=1231654
-	[Special Warning] Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347
-	[Timer] Berserk, time=360.00, type=berserk, spellId=<none>
-	[Timer] Ignite Flesh, time=-nan, type=castpnp, spellId=1234347
-	[Timer] Stage %s, time=1230271.00, type=stagecount, spellId=<none>
-	[Timer] Quietus, time=29.00, type=var, spellId=1231651
-	[Timer] Wake of Ashes, time=22.00, type=var, spellId=1231654
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1230809
 	[Yell] Divine Conflagration on PlayerName, type=yell, spellId=1229272
 
 Timers:
-	Devoted Offering, time=-nan, type=castpnp, spellId=1229114, triggerDeltas = 40.12, 0.41, 0.64, 0.10, 30.87, 7.05, 24.15, 31.58, 0.00, 33.17, 8.12, 21.91, 1.18, 4.65, 0.00, 0.00, 0.00, 25.68, 0.41, 31.09, 2.95
-		[ 40.12] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000022, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-			 Triggered 21x, delta times: 40.12, 0.41, 0.64, 0.10, 30.87, 7.05, 24.15, 31.58, 0.00, 33.17, 8.12, 21.91, 1.18, 4.65, 0.00, 0.00, 0.00, 25.68, 0.41, 31.09, 2.95
-	Execution Sentence, time=130.00, type=var, spellId=1229503, triggerDeltas = 0.00, 32.42, 111.80, 118.14
+	Berserk, time=360.00, type=berserk, spellId=<none>, triggerDeltas = 438.35
+		[438.35] SWING_DAMAGE: [Grand Crusader Caldoran->Decoy Totem] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Creature-0-1-2856-1-212157-00000000E4, Decoy Totem, 0xa48, 28064, 28059, 0, nil, nil, false, false, 0
+	Devoted Offering, time=-nan, type=castpnp, spellId=1229114, triggerDeltas = 41.37, 0.79, 28.71, 1.50, 31.69, 0.59, 5.88, 2.43, 22.64, 0.00, 1.20, 30.75, 31.55, 1.77, 29.43, 0.40, 0.81, 1.64, 28.70, 31.55, 24.88, 6.71, 0.40, 4.49, 5.35, 8.39, 13.37, 0.51
+		[ 41.37] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001BA, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+			 Triggered 28x, delta times: 41.37, 0.79, 28.71, 1.50, 31.69, 0.59, 5.88, 2.43, 22.64, 0.00, 1.20, 30.75, 31.55, 1.77, 29.43, 0.40, 0.81, 1.64, 28.70, 31.55, 24.88, 6.71, 0.40, 4.49, 5.35, 8.39, 13.37, 0.51
+	Blinding Flare, time=-nan, type=cast, spellId=1229714, triggerDeltas = 30.42, 33.96, 30.77, 32.37, 30.70, 32.41, 32.34, 32.38, 29.15, 34.01, 132.78, 30.73, 34.00, 29.14, 38.90, 32.35, 29.20, 29.18, 29.12
+		[ 30.42] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+			 Triggered 19x, delta times: 30.42, 33.96, 30.77, 32.37, 30.70, 32.41, 32.34, 32.38, 29.15, 34.01, 132.78, 30.73, 34.00, 29.14, 38.90, 32.35, 29.20, 29.18, 29.12
+	Ignite Flesh, time=-nan, type=castpnp, spellId=1234347, triggerDeltas = 36.92, 4.45, 3.23, 3.24, 3.22, 3.22, 3.21, 4.86, 3.23, 5.70, 3.21, 4.05, 3.23, 3.65, 3.24, 6.44, 4.81, 2.93, 0.00, 1.81, 0.00, 1.42, 1.64, 0.46, 0.33, 0.81, 1.62, 0.81, 2.42, 1.61, 0.78, 0.84, 1.45, 0.99, 0.81, 1.61, 0.00, 1.61, 1.63, 0.00, 1.62, 3.22, 3.25, 0.80, 4.85, 4.84, 12.95, 7.22, 3.31, 3.23, 5.93, 3.79, 11.33, 2.75, 1.30, 3.22, 0.00, 3.40, 1.45, 1.64, 1.61, 1.62, 1.62, 1.62, 0.99, 0.64, 2.43, 0.81, 0.00, 3.21, 0.01, 2.43, 2.42, 0.00, 0.81, 1.63, 0.81, 0.00, 0.82, 1.63, 0.81, 0.00, 0.81, 1.61, 0.82, 0.82, 1.61, 0.81, 2.42, 3.23, 3.25, 3.21, 8.92, 2.43, 1.32, 3.93, 3.63, 12.94, 3.23, 5.68, 0.00, 3.23, 3.24, 1.63, 3.24, 0.00, 3.26, 6.48, 3.23, 0.00, 1.79, 0.37, 1.05, 1.64, 1.15, 0.48, 0.80, 0.81, 1.62, 0.00, 1.62, 0.82, 0.81, 0.00, 3.24, 0.00, 1.41, 0.00, 1.83, 0.00, 0.21, 3.03, 0.00, 3.27, 0.80, 1.42, 1.01, 2.46, 0.78, 0.00, 2.43, 0.81, 0.00, 3.22, 0.00, 0.81, 2.44, 0.01, 0.79, 2.46, 0.00, 0.81, 2.43, 0.00, 0.82, 2.41, 0.80, 2.41
+		[ 36.92] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+			 Triggered 158x, delta times: 36.92, 4.45, 3.23, 3.24, 3.22, 3.22, 3.21, 4.86, 3.23, 5.70, 3.21, 4.05, 3.23, 3.65, 3.24, 6.44, 4.81, 2.93, 0.00, 1.81, 0.00, 1.42, 1.64, 0.46, 0.33, 0.81, 1.62, 0.81, 2.42, 1.61, 0.78, 0.84, 1.45, 0.99, 0.81, 1.61, 0.00, 1.61, 1.63, 0.00, 1.62, 3.22, 3.25, 0.80, 4.85, 4.84, 12.95, 7.22, 3.31, 3.23, 5.93, 3.79, 11.33, 2.75, 1.30, 3.22, 0.00, 3.40, 1.45, 1.64, 1.61, 1.62, 1.62, 1.62, 0.99, 0.64, 2.43, 0.81, 0.00, 3.21, 0.01, 2.43, 2.42, 0.00, 0.81, 1.63, 0.81, 0.00, 0.82, 1.63, 0.81, 0.00, 0.81, 1.61, 0.82, 0.82, 1.61, 0.81, 2.42, 3.23, 3.25, 3.21, 8.92, 2.43, 1.32, 3.93, 3.63, 12.94, 3.23, 5.68, 0.00, 3.23, 3.24, 1.63, 3.24, 0.00, 3.26, 6.48, 3.23, 0.00, 1.79, 0.37, 1.05, 1.64, 1.15, 0.48, 0.80, 0.81, 1.62, 0.00, 1.62, 0.82, 0.81, 0.00, 3.24, 0.00, 1.41, 0.00, 1.83, 0.00, 0.21, 3.03, 0.00, 3.27, 0.80, 1.42, 1.01, 2.46, 0.78, 0.00, 2.43, 0.81, 0.00, 3.22, 0.00, 0.81, 2.44, 0.01, 0.79, 2.46, 0.00, 0.81, 2.43, 0.00, 0.82, 2.41, 0.80, 2.41
+	Ignite Flesh, time=-nan, type=castpnp, spellId=1234347, triggerDeltas = 444.83, 27.47, 24.29, 25.90, 29.12, 27.58, 25.91, 24.29, 25.98, 27.48
+		[444.83] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+			 Triggered 10x, delta times: 444.83, 27.47, 24.29, 25.90, 29.12, 27.58, 25.91, 24.29, 25.98, 27.48
+	Stage %s, time=1230271.00, type=stagecount, spellId=<none>, triggerDeltas = 372.39
+		[372.39] SPELL_CAST_START: [Grand Crusader Caldoran: Dying Light] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230271, Dying Light, 0, 0
+	Execution Sentence, time=130.00, type=var, spellId=1229503, triggerDeltas = 0.00, 43.39, 114.85, 118.16, 165.19, 74.43, 136.10
 		[  0.00] ENCOUNTER_START: 3189, Caldoran, 9, 40, 0
-		[ 32.42] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 32.42, 111.80, 118.14
-	Blinding Flare, time=-nan, type=cast, spellId=1229714, triggerDeltas = 27.57, 32.43, 34.02, 30.79, 30.73, 30.82, 30.73, 29.12, 33.92
-		[ 27.57] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-			 Triggered 9x, delta times: 27.57, 32.43, 34.02, 30.79, 30.73, 30.82, 30.73, 29.12, 33.92
-	Blinding Flare, time=34.00, type=var, spellId=1229714, triggerDeltas = 0.00, 27.57, 32.43, 34.02, 30.79, 30.73, 30.82, 30.73, 29.12, 33.92
+		[ 43.39] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 43.39, 114.85, 118.16, 165.19, 74.43, 136.10
+		[324.99] SPELL_CAST_SUCCESS: [The Ashbringer: Wrath of the Crusade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1230137, Wrath of the Crusade, 0, 0
+		[713.62] SPELL_CAST_START: [The Ashbringer: Darkgraven Blade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1231027, Darkgraven Blade, 0, 0
+	Blinding Flare, time=34.00, type=var, spellId=1229714, triggerDeltas = 0.00, 30.42, 33.96, 30.77, 32.37, 30.70, 32.41, 32.34, 32.38, 29.15, 34.01, 132.78, 30.73, 34.00, 29.14, 38.90, 32.35, 29.20, 29.18, 29.12
 		[  0.00] ENCOUNTER_START: 3189, Caldoran, 9, 40, 0
-		[ 27.57] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-			 Triggered 9x, delta times: 27.57, 32.43, 34.02, 30.79, 30.73, 30.82, 30.73, 29.12, 33.92
-	Wake of Ashes, time=33.00, type=var, spellId=1231618, triggerDeltas = 24.33, 32.41, 27.56, 25.94, 27.50, 29.15, 24.32, 29.12, 30.71, 25.86
-		[ 24.33] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-			 Triggered 10x, delta times: 24.33, 32.41, 27.56, 25.94, 27.50, 29.15, 24.32, 29.12, 30.71, 25.86
-	Ignite Flesh, time=-nan, type=castpnp, spellId=1234347, triggerDeltas = 34.58, 5.95, 4.86, 4.85, 3.26, 3.24, 3.25, 3.01, 3.47, 5.67, 3.23, 3.24, 0.81, 0.81, 2.43, 2.45, 0.80, 2.44, 0.81, 2.43, 0.79, 4.16, 1.15, 2.84, 0.00, 0.80, 0.81, 3.26, 1.60, 6.51, 3.22, 0.35, 2.88, 1.62, 1.63, 1.60, 1.61, 1.63, 1.61, 1.61, 0.81, 3.24, 3.21, 3.25, 4.87, 11.93, 4.24, 3.95, 0.93, 4.61, 0.25, 3.24, 0.82, 3.21, 3.25, 3.28, 3.24, 4.63, 2.26, 1.22, 2.02, 1.61, 1.61, 1.00, 0.00, 1.02, 0.00, 2.43, 0.80, 0.00, 0.00, 3.24, 3.23, 0.00, 0.00, 2.63, 0.61, 1.21, 1.21, 0.39, 0.40, 1.02, 1.42, 0.41, 0.39, 1.62, 0.56, 0.26, 2.43, 0.61, 0.59, 1.24, 1.59, 0.82, 0.00, 0.79, 2.42, 0.81, 3.25, 0.79, 2.43, 2.05, 1.21, 3.21, 3.26, 3.21, 4.03, 3.22, 5.66, 3.24, 4.87, 0.33, 1.68, 1.22, 0.80
-		[ 34.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-			 Triggered 115x, delta times: 34.58, 5.95, 4.86, 4.85, 3.26, 3.24, 3.25, 3.01, 3.47, 5.67, 3.23, 3.24, 0.81, 0.81, 2.43, 2.45, 0.80, 2.44, 0.81, 2.43, 0.79, 4.16, 1.15, 2.84, 0.00, 0.80, 0.81, 3.26, 1.60, 6.51, 3.22, 0.35, 2.88, 1.62, 1.63, 1.60, 1.61, 1.63, 1.61, 1.61, 0.81, 3.24, 3.21, 3.25, 4.87, 11.93, 4.24, 3.95, 0.93, 4.61, 0.25, 3.24, 0.82, 3.21, 3.25, 3.28, 3.24, 4.63, 2.26, 1.22, 2.02, 1.61, 1.61, 1.00, 0.00, 1.02, 0.00, 2.43, 0.80, 0.00, 0.00, 3.24, 3.23, 0.00, 0.00, 2.63, 0.61, 1.21, 1.21, 0.39, 0.40, 1.02, 1.42, 0.41, 0.39, 1.62, 0.56, 0.26, 2.43, 0.61, 0.59, 1.24, 1.59, 0.82, 0.00, 0.79, 2.42, 0.81, 3.25, 0.79, 2.43, 2.05, 1.21, 3.21, 3.26, 3.21, 4.03, 3.22, 5.66, 3.24, 4.87, 0.33, 1.68, 1.22, 0.80
+		[ 30.42] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+			 Triggered 19x, delta times: 30.42, 33.96, 30.77, 32.37, 30.70, 32.41, 32.34, 32.38, 29.15, 34.01, 132.78, 30.73, 34.00, 29.14, 38.90, 32.35, 29.20, 29.18, 29.12
+		[324.99] SPELL_CAST_SUCCESS: [The Ashbringer: Wrath of the Crusade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1230137, Wrath of the Crusade, 0, 0
+	Wake of Ashes, time=33.00, type=var, spellId=1231618, triggerDeltas = 23.94, 25.90, 27.49, 27.54, 27.49, 29.11, 25.89, 25.91, 32.38, 24.29, 24.26, 116.61
+		[ 23.94] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+			 Triggered 12x, delta times: 23.94, 25.90, 27.49, 27.54, 27.49, 29.11, 25.89, 25.91, 32.38, 24.29, 24.26, 116.61
+		[324.99] SPELL_CAST_SUCCESS: [The Ashbringer: Wrath of the Crusade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1230137, Wrath of the Crusade, 0, 0
+	Quietus, time=29.00, type=var, spellId=1231651, triggerDeltas = 438.35, 25.85, 27.55, 27.52, 29.10, 27.60, 25.89, 24.29, 25.97, 27.50, 27.52
+		[438.35] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+			 Triggered 11x, delta times: 438.35, 25.85, 27.55, 27.52, 29.10, 27.60, 25.89, 24.29, 25.97, 27.50, 27.52
+		[713.62] SPELL_CAST_START: [The Ashbringer: Darkgraven Blade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1231027, Darkgraven Blade, 0, 0
+	Wake of Ashes, time=22.00, type=var, spellId=1231654, triggerDeltas = 789.76, 24.27
+		[789.76] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231654, Wake of Ashes, 0, 0
+			 Triggered 2x, delta times: 789.76, 24.27
 
 Announces:
-	Casting Reclamation: -nan sec, type=cast, spellId=1229236, triggerDeltas = 76.19, 124.75
-		[ 76.19] SPELL_CAST_START: [Grand Crusader Caldoran: Reclamation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229236, Reclamation, 0, 0
-			 Triggered 2x, delta times: 76.19, 124.75
-	Divine Conflagration on >%s<, type=target, spellId=1229272, triggerDeltas = 37.28, 43.76, 32.47, 38.81, 42.14, 38.81, 42.02
-		[ 37.28] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps19: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000021, Dps19, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		[ 81.04] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps9: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000011, Dps9, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		[113.51] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps20: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000022, Dps20, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		[152.32] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps22: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000024, Dps22, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		[194.46] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps11: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000013, Dps11, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 194.46, 38.81
-		[275.29] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps10: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000012, Dps10, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-	Execution Sentence on >%s<, type=target, spellId=1229503, triggerDeltas = 32.42, 111.80, 118.14
-		[ 32.42] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 32.42, 111.80, 118.14
-	Casting Wake of Ashes: -nan sec, type=cast, spellId=1231618, triggerDeltas = 24.33, 32.41, 27.56, 25.94, 27.50, 29.15, 24.32, 29.12, 30.71, 25.86
-		[ 24.33] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-			 Triggered 10x, delta times: 24.33, 32.41, 27.56, 25.94, 27.50, 29.15, 24.32, 29.12, 30.71, 25.86
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 498.35
+		[498.35] Scheduled at 438.35 by SWING_DAMAGE: [Grand Crusader Caldoran->Decoy Totem] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Creature-0-1-2856-1-212157-00000000E4, Decoy Totem, 0xa48, 28064, 28059, 0, nil, nil, false, false, 0
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 618.35
+		[618.35] Scheduled at 438.35 by SWING_DAMAGE: [Grand Crusader Caldoran->Decoy Totem] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Creature-0-1-2856-1-212157-00000000E4, Decoy Totem, 0xa48, 28064, 28059, 0, nil, nil, false, false, 0
+	Stage 2 soon, type=prestage, spellId=<none>, triggerDeltas = 287.50
+		[287.50] UNIT_HEALTH: target, 0
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 324.99
+		[324.99] SPELL_CAST_SUCCESS: [The Ashbringer: Wrath of the Crusade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1230137, Wrath of the Crusade, 0, 0
+	Stage 3, type=stage, spellId=<none>, triggerDeltas = 372.39
+		[372.39] SPELL_CAST_START: [Grand Crusader Caldoran: Dying Light] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230271, Dying Light, 0, 0
+	Stage 4 soon, type=prestage, spellId=<none>, triggerDeltas = 687.58
+		[687.58] UNIT_HEALTH: target, 0
+	Stage 4, type=stage, spellId=<none>, triggerDeltas = 713.62
+		[713.62] SPELL_CAST_START: [The Ashbringer: Darkgraven Blade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1231027, Darkgraven Blade, 0, 0
+	Casting Reclamation: -nan sec, type=cast, spellId=1229236, triggerDeltas = 101.62, 108.41, 105.24
+		[101.62] SPELL_CAST_START: [Grand Crusader Caldoran: Reclamation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229236, Reclamation, 0, 0
+			 Triggered 3x, delta times: 101.62, 108.41, 105.24
+	Divine Conflagration on >%s<, type=target, spellId=1229272, triggerDeltas = 33.68, 33.95, 30.77, 32.35, 33.98, 40.46, 38.87, 35.58, 38.87
+		[ 33.68] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps12: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000013, Dps12, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 33.68, 210.38, 74.45
+		[ 67.63] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps10: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000011, Dps10, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 67.63, 30.77
+		[130.75] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps11: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000012, Dps11, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		[164.73] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		[205.19] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps20: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000022, Dps20, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		[279.64] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps15: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000017, Dps15, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+	Execution Sentence on >%s<, type=target, spellId=1229503, triggerDeltas = 43.39, 114.85, 118.16, 165.19, 74.43, 136.10
+		[ 43.39] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 43.39, 114.85, 118.16, 165.19, 74.43, 136.10
+	Casting Cessation: -nan sec, type=cast, spellId=1230697, triggerDeltas = 441.59, 131.13, 200.85
+		[441.59] SPELL_CAST_START: [Grand Crusader Caldoran: Cessation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230697, Cessation, 0, 0
+			 Triggered 3x, delta times: 441.59, 131.13, 200.85
+	Casting Wake of Ashes: -nan sec, type=cast, spellId=1231618, triggerDeltas = 23.94, 25.90, 27.49, 27.54, 27.49, 29.11, 25.89, 25.91, 32.38, 24.29, 24.26, 116.61
+		[ 23.94] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+			 Triggered 12x, delta times: 23.94, 25.90, 27.49, 27.54, 27.49, 29.11, 25.89, 25.91, 32.38, 24.29, 24.26, 116.61
+	Casting Quietus: -nan sec, type=cast, spellId=1231651, triggerDeltas = 438.35, 25.85, 27.55, 27.52, 29.10, 27.60, 25.89, 24.29, 25.97, 27.50, 27.52
+		[438.35] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+			 Triggered 11x, delta times: 438.35, 25.85, 27.55, 27.52, 29.10, 27.60, 25.89, 24.29, 25.97, 27.50, 27.52
+	Casting Wake of Ashes: -nan sec, type=cast, spellId=1231654, triggerDeltas = 789.76, 24.27
+		[789.76] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231654, Wake of Ashes, 0, 0
+			 Triggered 2x, delta times: 789.76, 24.27
 
 Special warnings:
-	Devoted Offering - interrupt >%s<!, type=interrupt, spellId=1229114, triggerDeltas = 40.12, 0.41, 0.64, 0.10, 30.87, 7.05, 24.15, 31.58, 0.00, 33.17, 8.12, 21.91, 1.18, 4.65, 0.00, 0.00, 0.00, 25.68, 0.41, 31.09, 2.95
-		[ 40.12] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000022, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-			 Triggered 21x, delta times: 40.12, 0.41, 0.64, 0.10, 30.87, 7.05, 24.15, 31.58, 0.00, 33.17, 8.12, 21.91, 1.18, 4.65, 0.00, 0.00, 0.00, 25.68, 0.41, 31.09, 2.95
-	Blinding Flare!, type=spell, spellId=1229714, triggerDeltas = 27.57, 32.43, 34.02, 30.79, 30.73, 30.82, 30.73, 29.12, 33.92
-		[ 27.57] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-			 Triggered 9x, delta times: 27.57, 32.43, 34.02, 30.79, 30.73, 30.82, 30.73, 29.12, 33.92
-	%s damage - move away, type=gtfo, spellId=1230809, triggerDeltas = 244.65
-		[244.65] SPELL_AURA_APPLIED: [->Dps16: Divine Conflagration] "", nil, 0x0, Player-1-00000018, Dps16, 0x511, 1229397, Divine Conflagration, 0, DEBUFF, 0
-	Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347, triggerDeltas = 34.58, 5.95, 4.86, 4.85, 3.26, 3.24, 3.25, 3.01, 3.47, 5.67, 3.23, 3.24, 0.81, 0.81, 2.43, 2.45, 0.80, 2.44, 0.81, 2.43, 0.79, 4.16, 1.15, 2.84, 0.00, 0.80, 0.81, 3.26, 1.60, 6.51, 3.22, 0.35, 2.88, 1.62, 1.63, 1.60, 1.61, 1.63, 1.61, 1.61, 0.81, 3.24, 3.21, 3.25, 4.87, 11.93, 4.24, 3.95, 0.93, 4.61, 0.25, 3.24, 0.82, 3.21, 3.25, 3.28, 3.24, 4.63, 2.26, 1.22, 2.02, 1.61, 1.61, 1.00, 0.00, 1.02, 0.00, 2.43, 0.80, 0.00, 0.00, 3.24, 3.23, 0.00, 0.00, 2.63, 0.61, 1.21, 1.21, 0.39, 0.40, 1.02, 1.42, 0.41, 0.39, 1.62, 0.56, 0.26, 2.43, 0.61, 0.59, 1.24, 1.59, 0.82, 0.00, 0.79, 2.42, 0.81, 3.25, 0.79, 2.43, 2.05, 1.21, 3.21, 3.26, 3.21, 4.03, 3.22, 5.66, 3.24, 4.87, 0.33, 1.68, 1.22, 0.80
-		[ 34.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-			 Triggered 115x, delta times: 34.58, 5.95, 4.86, 4.85, 3.26, 3.24, 3.25, 3.01, 3.47, 5.67, 3.23, 3.24, 0.81, 0.81, 2.43, 2.45, 0.80, 2.44, 0.81, 2.43, 0.79, 4.16, 1.15, 2.84, 0.00, 0.80, 0.81, 3.26, 1.60, 6.51, 3.22, 0.35, 2.88, 1.62, 1.63, 1.60, 1.61, 1.63, 1.61, 1.61, 0.81, 3.24, 3.21, 3.25, 4.87, 11.93, 4.24, 3.95, 0.93, 4.61, 0.25, 3.24, 0.82, 3.21, 3.25, 3.28, 3.24, 4.63, 2.26, 1.22, 2.02, 1.61, 1.61, 1.00, 0.00, 1.02, 0.00, 2.43, 0.80, 0.00, 0.00, 3.24, 3.23, 0.00, 0.00, 2.63, 0.61, 1.21, 1.21, 0.39, 0.40, 1.02, 1.42, 0.41, 0.39, 1.62, 0.56, 0.26, 2.43, 0.61, 0.59, 1.24, 1.59, 0.82, 0.00, 0.79, 2.42, 0.81, 3.25, 0.79, 2.43, 2.05, 1.21, 3.21, 3.26, 3.21, 4.03, 3.22, 5.66, 3.24, 4.87, 0.33, 1.68, 1.22, 0.80
+	Devoted Offering - interrupt >%s<!, type=interrupt, spellId=1229114, triggerDeltas = 41.37, 0.79, 28.71, 1.50, 31.69, 0.59, 5.88, 2.43, 22.64, 0.00, 1.20, 30.75, 31.55, 1.77, 29.43, 0.40, 0.81, 1.64, 28.70, 31.55, 24.88, 6.71, 0.40, 4.49, 5.35, 8.39, 13.37, 0.51
+		[ 41.37] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001BA, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+			 Triggered 28x, delta times: 41.37, 0.79, 28.71, 1.50, 31.69, 0.59, 5.88, 2.43, 22.64, 0.00, 1.20, 30.75, 31.55, 1.77, 29.43, 0.40, 0.81, 1.64, 28.70, 31.55, 24.88, 6.71, 0.40, 4.49, 5.35, 8.39, 13.37, 0.51
+	Blinding Flare!, type=spell, spellId=1229714, triggerDeltas = 30.42, 33.96, 30.77, 32.37, 30.70, 32.41, 32.34, 32.38, 29.15, 34.01, 132.78, 30.73, 34.00, 29.14, 38.90, 32.35, 29.20, 29.18, 29.12
+		[ 30.42] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+			 Triggered 19x, delta times: 30.42, 33.96, 30.77, 32.37, 30.70, 32.41, 32.34, 32.38, 29.15, 34.01, 132.78, 30.73, 34.00, 29.14, 38.90, 32.35, 29.20, 29.18, 29.12
+	Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347, triggerDeltas = 36.92, 4.45, 3.23, 3.24, 3.22, 3.22, 3.21, 4.86, 3.23, 5.70, 3.21, 4.05, 3.23, 3.65, 3.24, 6.44, 4.81, 2.93, 0.00, 1.81, 0.00, 1.42, 1.64, 0.46, 0.33, 0.81, 1.62, 0.81, 2.42, 1.61, 0.78, 0.84, 1.45, 0.99, 0.81, 1.61, 0.00, 1.61, 1.63, 0.00, 1.62, 3.22, 3.25, 0.80, 4.85, 4.84, 12.95, 7.22, 3.31, 3.23, 5.93, 3.79, 11.33, 2.75, 1.30, 3.22, 0.00, 3.40, 1.45, 1.64, 1.61, 1.62, 1.62, 1.62, 0.99, 0.64, 2.43, 0.81, 0.00, 3.21, 0.01, 2.43, 2.42, 0.00, 0.81, 1.63, 0.81, 0.00, 0.82, 1.63, 0.81, 0.00, 0.81, 1.61, 0.82, 0.82, 1.61, 0.81, 2.42, 3.23, 3.25, 3.21, 8.92, 2.43, 1.32, 3.93, 3.63, 12.94, 3.23, 5.68, 0.00, 3.23, 3.24, 1.63, 3.24, 0.00, 3.26, 6.48, 3.23, 0.00, 1.79, 0.37, 1.05, 1.64, 1.15, 0.48, 0.80, 0.81, 1.62, 0.00, 1.62, 0.82, 0.81, 0.00, 3.24, 0.00, 1.41, 0.00, 1.83, 0.00, 0.21, 3.03, 0.00, 3.27, 0.80, 1.42, 1.01, 2.46, 0.78, 0.00, 2.43, 0.81, 0.00, 3.22, 0.00, 0.81, 2.44, 0.01, 0.79, 2.46, 0.00, 0.81, 2.43, 0.00, 0.82, 2.41, 0.80, 2.41
+		[ 36.92] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+			 Triggered 158x, delta times: 36.92, 4.45, 3.23, 3.24, 3.22, 3.22, 3.21, 4.86, 3.23, 5.70, 3.21, 4.05, 3.23, 3.65, 3.24, 6.44, 4.81, 2.93, 0.00, 1.81, 0.00, 1.42, 1.64, 0.46, 0.33, 0.81, 1.62, 0.81, 2.42, 1.61, 0.78, 0.84, 1.45, 0.99, 0.81, 1.61, 0.00, 1.61, 1.63, 0.00, 1.62, 3.22, 3.25, 0.80, 4.85, 4.84, 12.95, 7.22, 3.31, 3.23, 5.93, 3.79, 11.33, 2.75, 1.30, 3.22, 0.00, 3.40, 1.45, 1.64, 1.61, 1.62, 1.62, 1.62, 0.99, 0.64, 2.43, 0.81, 0.00, 3.21, 0.01, 2.43, 2.42, 0.00, 0.81, 1.63, 0.81, 0.00, 0.82, 1.63, 0.81, 0.00, 0.81, 1.61, 0.82, 0.82, 1.61, 0.81, 2.42, 3.23, 3.25, 3.21, 8.92, 2.43, 1.32, 3.93, 3.63, 12.94, 3.23, 5.68, 0.00, 3.23, 3.24, 1.63, 3.24, 0.00, 3.26, 6.48, 3.23, 0.00, 1.79, 0.37, 1.05, 1.64, 1.15, 0.48, 0.80, 0.81, 1.62, 0.00, 1.62, 0.82, 0.81, 0.00, 3.24, 0.00, 1.41, 0.00, 1.83, 0.00, 0.21, 3.03, 0.00, 3.27, 0.80, 1.42, 1.01, 2.46, 0.78, 0.00, 2.43, 0.81, 0.00, 3.22, 0.00, 0.81, 2.44, 0.01, 0.79, 2.46, 0.00, 0.81, 2.43, 0.00, 0.82, 2.41, 0.80, 2.41
+	Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347, triggerDeltas = 444.83, 27.47, 24.29, 25.90, 29.12, 27.58, 25.91, 24.29, 25.98, 27.48
+		[444.83] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+			 Triggered 10x, delta times: 444.83, 27.47, 24.29, 25.90, 29.12, 27.58, 25.91, 24.29, 25.98, 27.48
 
 Yells:
 	None
 
 Voice pack sounds:
 	VoicePack/turnaway
-		[ 27.57] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-			 Triggered 9x, delta times: 27.57, 32.43, 34.02, 30.79, 30.73, 30.82, 30.73, 29.12, 33.92
-	VoicePack/watchfeet
-		[244.65] SPELL_AURA_APPLIED: [->Dps16: Divine Conflagration] "", nil, 0x0, Player-1-00000018, Dps16, 0x511, 1229397, Divine Conflagration, 0, DEBUFF, 0
+		[ 30.42] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+			 Triggered 19x, delta times: 30.42, 33.96, 30.77, 32.37, 30.70, 32.41, 32.34, 32.38, 29.15, 34.01, 132.78, 30.73, 34.00, 29.14, 38.90, 32.35, 29.20, 29.18, 29.12
 	VoicePack/kickcast
-		[ 34.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-			 Triggered 115x, delta times: 34.58, 5.95, 4.86, 4.85, 3.26, 3.24, 3.25, 3.01, 3.47, 5.67, 3.23, 3.24, 0.81, 0.81, 2.43, 2.45, 0.80, 2.44, 0.81, 2.43, 0.79, 4.16, 1.15, 2.84, 0.00, 0.80, 0.81, 3.26, 1.60, 6.51, 3.22, 0.35, 2.88, 1.62, 1.63, 1.60, 1.61, 1.63, 1.61, 1.61, 0.81, 3.24, 3.21, 3.25, 4.87, 11.93, 4.24, 3.95, 0.93, 4.61, 0.25, 3.24, 0.82, 3.21, 3.25, 3.28, 3.24, 4.63, 2.26, 1.22, 2.02, 1.61, 1.61, 1.00, 0.00, 1.02, 0.00, 2.43, 0.80, 0.00, 0.00, 3.24, 3.23, 0.00, 0.00, 2.63, 0.61, 1.21, 1.21, 0.39, 0.40, 1.02, 1.42, 0.41, 0.39, 1.62, 0.56, 0.26, 2.43, 0.61, 0.59, 1.24, 1.59, 0.82, 0.00, 0.79, 2.42, 0.81, 3.25, 0.79, 2.43, 2.05, 1.21, 3.21, 3.26, 3.21, 4.03, 3.22, 5.66, 3.24, 4.87, 0.33, 1.68, 1.22, 0.80
-		[ 40.12] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000022, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-			 Triggered 21x, delta times: 40.12, 0.41, 0.64, 0.10, 30.87, 7.05, 24.15, 31.58, 0.00, 33.17, 8.12, 21.91, 1.18, 4.65, 0.00, 0.00, 0.00, 25.68, 0.41, 31.09, 2.95
+		[ 36.92] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+			 Triggered 158x, delta times: 36.92, 4.45, 3.23, 3.24, 3.22, 3.22, 3.21, 4.86, 3.23, 5.70, 3.21, 4.05, 3.23, 3.65, 3.24, 6.44, 4.81, 2.93, 0.00, 1.81, 0.00, 1.42, 1.64, 0.46, 0.33, 0.81, 1.62, 0.81, 2.42, 1.61, 0.78, 0.84, 1.45, 0.99, 0.81, 1.61, 0.00, 1.61, 1.63, 0.00, 1.62, 3.22, 3.25, 0.80, 4.85, 4.84, 12.95, 7.22, 3.31, 3.23, 5.93, 3.79, 11.33, 2.75, 1.30, 3.22, 0.00, 3.40, 1.45, 1.64, 1.61, 1.62, 1.62, 1.62, 0.99, 0.64, 2.43, 0.81, 0.00, 3.21, 0.01, 2.43, 2.42, 0.00, 0.81, 1.63, 0.81, 0.00, 0.82, 1.63, 0.81, 0.00, 0.81, 1.61, 0.82, 0.82, 1.61, 0.81, 2.42, 3.23, 3.25, 3.21, 8.92, 2.43, 1.32, 3.93, 3.63, 12.94, 3.23, 5.68, 0.00, 3.23, 3.24, 1.63, 3.24, 0.00, 3.26, 6.48, 3.23, 0.00, 1.79, 0.37, 1.05, 1.64, 1.15, 0.48, 0.80, 0.81, 1.62, 0.00, 1.62, 0.82, 0.81, 0.00, 3.24, 0.00, 1.41, 0.00, 1.83, 0.00, 0.21, 3.03, 0.00, 3.27, 0.80, 1.42, 1.01, 2.46, 0.78, 0.00, 2.43, 0.81, 0.00, 3.22, 0.00, 0.81, 2.44, 0.01, 0.79, 2.46, 0.00, 0.81, 2.43, 0.00, 0.82, 2.41, 0.80, 2.41
+		[ 41.37] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001BA, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+			 Triggered 28x, delta times: 41.37, 0.79, 28.71, 1.50, 31.69, 0.59, 5.88, 2.43, 22.64, 0.00, 1.20, 30.75, 31.55, 1.77, 29.43, 0.40, 0.81, 1.64, 28.70, 31.55, 24.88, 6.71, 0.40, 4.49, 5.35, 8.39, 13.37, 0.51
+		[444.83] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+			 Triggered 10x, delta times: 444.83, 27.47, 24.29, 25.90, 29.12, 27.58, 25.91, 24.29, 25.98, 27.48
 	VoicePack/safenow
-		[ 30.57] Scheduled at 27.57 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		[ 63.00] Scheduled at 60.00 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		[ 97.02] Scheduled at 94.02 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		[127.81] Scheduled at 124.81 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		[158.54] Scheduled at 155.54 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		[189.36] Scheduled at 186.36 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		[220.09] Scheduled at 217.09 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[ 33.42] Scheduled at 30.42 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[ 67.38] Scheduled at 64.38 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[ 98.15] Scheduled at 95.15 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[130.52] Scheduled at 127.52 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[161.22] Scheduled at 158.22 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[193.63] Scheduled at 190.63 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[321.51] Scheduled at 318.51 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[485.02] Scheduled at 482.02 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		[619.41] Scheduled at 616.41 by SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
 
 Icons:
 	None
@@ -127,675 +155,1092 @@ Event trace:
 		RegisterEvents: Regular, SPELL_CAST_START 1229226 1230908 1229714 1230697 1231651 1229236 1231618 1231654 1230271 1231027 1229114, SPELL_CAST_SUCCESS 1230137 1230125, SPELL_AURA_APPLIED 1229272 1229503 1230809 1229397, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus
 		StartTimer: 34.0, Blinding Flare
 		StartTimer: 48.0, Execution Sentence
-	[ 24.33] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+	[ 23.94] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
 		ShowAnnounce: Casting Wake of Ashes: -nan sec
 		StartTimer: 33.0, Wake of Ashes
-	[ 27.57] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+	[ 30.42] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
 		StartTimer: 34.0, Blinding Flare
 		StartTimer: -nan, Blinding Flare
 		ShowSpecialWarning: Blinding Flare!
 		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 30.57 (+3.00)
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 33.42 (+3.00)
 			PlaySound: VoicePack/safenow
-	[ 32.42] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
-		ShowAnnounce: Execution Sentence on Tank1
+	[ 33.68] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps12: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000013, Dps12, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Dps12
+	[ 36.92] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 41.37] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001BA, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[ 41.37] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 42.16] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000020, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[ 43.39] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+		ShowAnnounce: Execution Sentence on Tank2
 		StartTimer: 130.0, Execution Sentence
-	[ 34.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[ 44.60] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[ 37.28] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps19: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000021, Dps19, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		ShowAnnounce: Divine Conflagration on Dps19
-	[ 40.12] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000022, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[ 40.53] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000B9, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[ 40.53] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[ 47.84] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[ 41.17] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000B9, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[ 41.27] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000022, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[ 45.39] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 50.24] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 53.50] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 56.74] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 56.74] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+	[ 49.84] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
 		ShowAnnounce: Casting Wake of Ashes: -nan sec
 		StartTimer: 33.0, Wake of Ashes
-	[ 59.99] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[ 51.06] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[ 60.00] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+	[ 54.28] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 57.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 62.35] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 64.38] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
 		StartTimer: 34.0, Blinding Flare
 		StartTimer: -nan, Blinding Flare
 		ShowSpecialWarning: Blinding Flare!
 		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 63.00 (+3.00)
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 67.38 (+3.00)
 			PlaySound: VoicePack/safenow
-	[ 63.00] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[ 65.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[ 66.47] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 72.14] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000035, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[ 72.14] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 75.37] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 76.19] SPELL_CAST_START: [Grand Crusader Caldoran: Reclamation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229236, Reclamation, 0, 0
-		ShowAnnounce: Casting Reclamation: -nan sec
-	[ 78.61] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 79.19] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000035, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[ 79.42] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 80.23] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 81.04] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps9: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000011, Dps9, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		ShowAnnounce: Divine Conflagration on Dps9
-	[ 82.66] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 84.30] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-		ShowAnnounce: Casting Wake of Ashes: -nan sec
-		StartTimer: 33.0, Wake of Ashes
-	[ 85.11] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 85.91] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 88.35] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 89.16] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 91.59] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 92.38] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 94.02] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		StartTimer: 34.0, Blinding Flare
-		StartTimer: -nan, Blinding Flare
-		ShowSpecialWarning: Blinding Flare!
-		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 97.02 (+3.00)
-			PlaySound: VoicePack/safenow
-	[ 96.54] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[ 97.69] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[100.53] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000C6, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[100.53] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[101.33] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000035, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[102.14] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[103.34] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000049, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[105.40] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000C6, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[107.00] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[110.24] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-		ShowAnnounce: Casting Wake of Ashes: -nan sec
-		StartTimer: 33.0, Wake of Ashes
-	[113.51] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[113.51] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps20: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000022, Dps20, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		ShowAnnounce: Divine Conflagration on Dps20
-	[116.73] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000C6, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[117.08] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[119.96] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000C6, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[121.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[123.21] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000C6, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[124.81] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[124.81] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		StartTimer: 34.0, Blinding Flare
-		StartTimer: -nan, Blinding Flare
-		ShowSpecialWarning: Blinding Flare!
-		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 127.81 (+3.00)
-			PlaySound: VoicePack/safenow
-	[126.42] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000C6, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[128.05] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[129.66] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000C6, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[131.27] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000049, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[132.08] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[134.92] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000005A, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[134.92] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000CC, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[135.32] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[137.74] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-		ShowAnnounce: Casting Wake of Ashes: -nan sec
-		StartTimer: 33.0, Wake of Ashes
-	[138.53] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[141.78] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[144.22] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
-		ShowAnnounce: Execution Sentence on Tank1
-		StartTimer: 130.0, Execution Sentence
-	[146.65] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[152.32] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps22: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000024, Dps22, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		ShowAnnounce: Divine Conflagration on Dps22
-	[155.54] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		StartTimer: 34.0, Blinding Flare
-		StartTimer: -nan, Blinding Flare
-		ShowSpecialWarning: Blinding Flare!
-		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 158.54 (+3.00)
-			PlaySound: VoicePack/safenow
-	[158.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[162.82] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[166.77] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[166.89] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-		ShowAnnounce: Casting Wake of Ashes: -nan sec
-		StartTimer: 33.0, Wake of Ashes
-	[167.70] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[168.09] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000006A, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[172.31] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[172.56] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[175.80] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[176.21] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000006A, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[176.62] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[179.83] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[183.08] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[186.36] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[186.36] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		StartTimer: 34.0, Blinding Flare
-		StartTimer: -nan, Blinding Flare
-		ShowSpecialWarning: Blinding Flare!
-		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 189.36 (+3.00)
-			PlaySound: VoicePack/safenow
-	[189.60] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[191.21] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-		ShowAnnounce: Casting Wake of Ashes: -nan sec
-		StartTimer: 33.0, Wake of Ashes
-	[194.23] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[194.46] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps11: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000013, Dps11, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		ShowAnnounce: Divine Conflagration on Dps11
-	[196.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[197.71] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000006A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[198.12] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000007B, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[199.30] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000007B, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[199.73] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[200.94] SPELL_CAST_START: [Grand Crusader Caldoran: Reclamation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229236, Reclamation, 0, 0
-		ShowAnnounce: Casting Reclamation: -nan sec
-	[201.34] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[202.95] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[203.95] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000005A, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[203.95] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000CC, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[203.95] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000006A, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[203.95] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000007B, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[203.95] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[203.95] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[204.97] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[204.97] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[207.40] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[208.20] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[208.20] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[208.20] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[211.44] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[214.67] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[214.67] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[214.67] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[217.09] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		StartTimer: 34.0, Blinding Flare
-		StartTimer: -nan, Blinding Flare
-		ShowSpecialWarning: Blinding Flare!
-		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 220.09 (+3.00)
-			PlaySound: VoicePack/safenow
-	[217.30] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[217.91] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[219.12] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[220.33] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[220.33] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-		ShowAnnounce: Casting Wake of Ashes: -nan sec
-		StartTimer: 33.0, Wake of Ashes
-	[220.72] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[221.12] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[222.14] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[223.56] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[223.97] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[224.36] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000005A, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[225.98] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[226.54] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[226.80] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[229.23] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[229.63] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000008B, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[229.84] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[230.04] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000E7, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[230.43] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[231.67] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[233.26] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000022, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[233.27] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps11: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000013, Dps11, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
-		ShowAnnounce: Divine Conflagration on Dps11
-	[234.08] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000007B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[234.08] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[234.87] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[237.29] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[238.10] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[241.35] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[242.14] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[244.57] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[244.65] SPELL_AURA_APPLIED: [->Dps16: Divine Conflagration] "", nil, 0x0, Player-1-00000018, Dps16, 0x511, 1229397, Divine Conflagration, 0, DEBUFF, 0
-		AntiSpam: gtfo
-		ShowSpecialWarning: Divine Conflagration damage - move away
-		PlaySound: VoicePack/watchfeet
-	[246.21] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
-		StartTimer: 34.0, Blinding Flare
-		StartTimer: -nan, Blinding Flare
-		ShowSpecialWarning: Blinding Flare!
-		PlaySound: VoicePack/turnaway
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 249.21 (+3.00)
-			Unscheduled by SPELL_CAST_START at 280.13
-	[246.62] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000E0, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[247.83] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[251.04] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[251.04] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
-		ShowAnnounce: Casting Wake of Ashes: -nan sec
-		StartTimer: 33.0, Wake of Ashes
-	[254.30] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[257.51] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[261.13] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000009E, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[261.54] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000009E, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[262.36] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
-		ShowAnnounce: Execution Sentence on Tank1
-		StartTimer: 130.0, Execution Sentence
-	[264.08] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000009E, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
-		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Devoted Offering
-	[264.76] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000009E, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[270.42] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[273.66] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
-		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
-		PlaySound: VoicePack/kickcast
-		StartTimer: -nan, Ignite Flesh
-	[275.29] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps10: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000012, Dps10, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+	[ 67.63] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps10: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000011, Dps10, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
 		ShowAnnounce: Divine Conflagration on Dps10
-	[276.90] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+	[ 70.87] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000032, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[ 71.28] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 72.37] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000032, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[ 74.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 77.33] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
 		ShowAnnounce: Casting Wake of Ashes: -nan sec
 		StartTimer: 33.0, Wake of Ashes
-	[278.53] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[ 78.54] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[278.86] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000009E, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[ 81.77] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[280.13] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+	[ 85.42] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 88.66] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 95.10] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[ 95.15] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
 		StartTimer: 34.0, Blinding Flare
 		StartTimer: -nan, Blinding Flare
 		ShowSpecialWarning: Blinding Flare!
 		PlaySound: VoicePack/turnaway
-		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 246.21
-		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 283.13 (+3.00)
-			Unscheduled by ENCOUNTER_END at 293.07
-	[280.54] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000009E, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 98.15 (+3.00)
+			PlaySound: VoicePack/safenow
+	[ 98.40] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps10: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000011, Dps10, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Dps10
+	[ 99.91] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[281.76] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000008B, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[101.62] SPELL_CAST_START: [Grand Crusader Caldoran: Reclamation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229236, Reclamation, 0, 0
+		ShowAnnounce: Casting Reclamation: -nan sec
+	[102.84] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000043, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[282.56] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-000000009E, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+	[102.84] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
 		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
 		PlaySound: VoicePack/kickcast
 		StartTimer: -nan, Ignite Flesh
-	[293.07] ENCOUNTER_END: 3189, Caldoran, 9, 40, 0, 0
+	[104.06] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000043, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[104.65] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000043, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[104.65] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[104.65] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[104.87] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[106.07] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000043, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[107.71] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[108.17] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[108.50] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[109.31] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000043, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[110.53] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000043, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[110.93] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[111.74] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[112.96] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000043, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[114.16] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[115.77] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[116.55] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[117.39] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[118.84] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[119.83] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000032, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[120.64] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[122.25] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000043, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[122.25] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[123.86] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[125.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000043, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[125.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000020, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[127.11] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[127.52] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 130.52 (+3.00)
+			PlaySound: VoicePack/safenow
+	[130.33] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[130.75] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps11: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000012, Dps11, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Dps11
+	[132.36] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[133.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[134.38] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000058, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[135.60] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000058, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[135.60] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001CF, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[136.80] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001CF, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[139.23] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000058, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[144.07] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000058, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[157.02] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000058, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[158.22] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 161.22 (+3.00)
+			PlaySound: VoicePack/safenow
+	[158.24] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+		ShowAnnounce: Execution Sentence on Tank2
+		StartTimer: 130.0, Execution Sentence
+	[161.47] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[164.24] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000068, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[164.73] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank1: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000007, Tank1, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Tank1
+	[167.55] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000068, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[167.55] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000068, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[170.78] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000068, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[176.71] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000068, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[180.50] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000068, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[187.36] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[190.63] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 193.63 (+3.00)
+			PlaySound: VoicePack/safenow
+	[191.83] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000068, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[194.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[195.88] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[199.10] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000079, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[199.10] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[199.10] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[200.87] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000079, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[202.50] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[203.95] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[205.19] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps20: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000022, Dps20, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Dps20
+	[205.59] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[207.20] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[208.82] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[210.03] SPELL_CAST_START: [Grand Crusader Caldoran: Reclamation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229236, Reclamation, 0, 0
+		ShowAnnounce: Casting Reclamation: -nan sec
+	[210.44] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[212.06] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[213.05] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[213.27] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[213.69] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[216.12] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[216.93] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[216.93] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[220.14] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[220.15] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[222.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[222.97] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 225.97 (+3.00)
+			Unscheduled by SPELL_CAST_START at 255.35
+	[225.00] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[225.00] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[225.81] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[227.44] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[228.25] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[228.25] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[229.07] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[230.30] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000087, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[230.70] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001F1, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[230.70] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[231.51] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000079, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[231.51] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[231.51] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000001F1, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[232.32] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[233.15] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000087, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[233.93] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[234.75] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[235.57] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001C8, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[237.18] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[237.99] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000001E5, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[240.41] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[243.64] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[244.06] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps12: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000013, Dps12, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Dps12
+	[245.65] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[246.89] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[250.10] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[255.35] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 222.97
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 258.35 (+3.00)
+			Unscheduled by SPELL_CAST_START at 284.50
+	[259.02] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000099, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[261.45] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[261.85] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-0000000099, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[262.77] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000099, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[266.70] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000099, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[269.94] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[270.33] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000099, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[276.40] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+		ShowAnnounce: Execution Sentence on Tank2
+		StartTimer: 130.0, Execution Sentence
+	[279.64] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps15: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000017, Dps15, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Dps15
+	[283.27] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000099, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[284.50] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 255.35
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 287.50 (+3.00)
+			Unscheduled by SPELL_CAST_START at 318.51
+	[286.50] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000099, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[287.50] UNIT_HEALTH: target, 0
+		ShowAnnounce: Stage 2 soon
+	[292.18] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[292.18] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[293.40] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000AD, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[294.20] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[295.41] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[298.65] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[300.28] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[303.52] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[303.52] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[306.78] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[313.26] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[315.27] SPELL_CAST_START: [Grand Crusader Caldoran: Reclamation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229236, Reclamation, 0, 0
+		ShowAnnounce: Casting Reclamation: -nan sec
+	[316.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[316.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[318.28] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000AD, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[318.28] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[318.51] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 284.50
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 321.51 (+3.00)
+			PlaySound: VoicePack/safenow
+	[318.51] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Dps12: Divine Conflagration] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000013, Dps12, 0x512, 1229272, Divine Conflagration, 0, DEBUFF, 0
+		ShowAnnounce: Divine Conflagration on Dps12
+	[318.65] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[319.70] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[321.34] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[322.49] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[322.97] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[323.77] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[324.58] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[324.99] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000BD, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[324.99] SPELL_CAST_SUCCESS: [The Ashbringer: Wrath of the Crusade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1230137, Wrath of the Crusade, 0, 0
+		AntiSpam: Phase2
+			Filtered: 1x SPELL_CAST_SUCCESS at 324.99
+		ShowAnnounce: Stage 2
+		StopTimer: Timer1229503var
+		StopTimer: Timer1231618var
+		StopTimer: Timer1229714var
+	[325.39] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000020F, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[326.20] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[326.20] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[327.82] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[328.64] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[329.45] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[329.45] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[329.88] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000020F, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[332.69] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[332.69] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[334.10] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[334.10] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000087, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[335.23] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000020F, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[335.93] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[335.93] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[336.14] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[339.17] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[339.17] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[342.44] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[343.24] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[343.62] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-000000020F, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[344.66] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[345.67] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[348.13] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[348.91] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[348.91] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[351.34] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[352.15] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000AD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[352.15] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[355.37] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000CF, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[355.37] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[356.18] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[356.99] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000CF, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[357.50] SPELL_CAST_START: [Scarlet Martyr: Devoted Offering] Creature-0-1-2856-1-242062-00000000CF, Scarlet Martyr, 0xa48, "", nil, 0x0, 1229114, Devoted Offering, 0, 0
+		ShowSpecialWarning: Devoted Offering - interrupt Scarlet Martyr!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Devoted Offering
+	[358.62] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000CF, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[358.63] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[359.42] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[361.88] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000CF, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[361.88] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[362.69] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[365.12] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000CF, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[365.12] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[365.94] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[368.35] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[369.15] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-00000000BD, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[371.56] SPELL_CAST_START: [Scarlet Magus: Righteous Flame] Creature-0-1-2856-1-242098-0000000206, Scarlet Magus, 0xa48, "", nil, 0x0, 1229226, Righteous Flame, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Scarlet Magus!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[372.39] SPELL_CAST_START: [Grand Crusader Caldoran: Dying Light] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230271, Dying Light, 0, 0
+		StartTimer: 20.0, Stage 3
+		ShowAnnounce: Stage 3
+		RegisterEvents: ShortTerm, SWING_DAMAGE, SWING_MISSED
+		RegisterEvents: Regular, SWING_DAMAGE, SWING_MISSED
+	[410.81] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231618, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 33.0, Wake of Ashes
+	[438.35] SWING_DAMAGE: [Grand Crusader Caldoran->Decoy Totem] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Creature-0-1-2856-1-212157-00000000E4, Decoy Totem, 0xa48, 28064, 28059, 0, nil, nil, false, false, 0
+		StartTimer: 360.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 498.35 (+60.00)
+			ShowAnnounce: Berserk in 5 min
+		ScheduleTask: announce:Schedule(3.0, "min") at 618.35 (+180.00)
+			ShowAnnounce: Berserk in 3 min
+		ScheduleTask: announce:Schedule(1.0, "min") at 738.35 (+300.00)
+			Unscheduled by ENCOUNTER_END at 825.65
+		ScheduleTask: announce:Schedule(30.0, "sec") at 768.35 (+330.00)
+			Unscheduled by ENCOUNTER_END at 825.65
+		ScheduleTask: announce:Schedule(10.0, "sec") at 788.35 (+350.00)
+			Unscheduled by ENCOUNTER_END at 825.65
+		UnregisterEvents: ShortTerm, SWING_MISSED
+		UnregisterEvents: ShortTerm, SWING_DAMAGE
+	[438.35] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[441.59] SPELL_CAST_START: [Grand Crusader Caldoran: Cessation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230697, Cessation, 0, 0
+		ShowAnnounce: Casting Cessation: -nan sec
+	[441.59] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+		ShowAnnounce: Execution Sentence on Tank2
+		StartTimer: 130.0, Execution Sentence
+	[444.83] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[451.29] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 454.29 (+3.00)
+			Unscheduled by SPELL_CAST_START at 482.02
+	[464.20] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[472.30] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[482.02] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 451.29
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 485.02 (+3.00)
+			PlaySound: VoicePack/safenow
+	[491.75] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[496.59] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[516.02] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 519.02 (+3.00)
+			Unscheduled by SPELL_CAST_START at 545.16
+	[516.02] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+		ShowAnnounce: Execution Sentence on Tank2
+		StartTimer: 130.0, Execution Sentence
+	[519.27] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[522.49] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[545.16] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 516.02
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 548.16 (+3.00)
+			Unscheduled by SPELL_CAST_START at 584.06
+	[548.37] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[551.61] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[572.72] SPELL_CAST_START: [Grand Crusader Caldoran: Cessation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230697, Cessation, 0, 0
+		ShowAnnounce: Casting Cessation: -nan sec
+	[575.97] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[579.19] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[584.06] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 545.16
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 587.06 (+3.00)
+			Unscheduled by SPELL_CAST_START at 616.41
+	[601.86] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[605.10] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[616.41] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 584.06
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 619.41 (+3.00)
+			PlaySound: VoicePack/safenow
+	[626.15] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[629.39] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[645.61] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 648.61 (+3.00)
+			Unscheduled by SPELL_CAST_START at 674.79
+	[652.12] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[652.12] SPELL_AURA_APPLIED: [Grand Crusader Caldoran->Tank2: Execution Sentence] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, Player-1-00000014, Tank2, 0x512, 1229503, Execution Sentence, 0, DEBUFF, 0
+		ShowAnnounce: Execution Sentence on Tank2
+		StartTimer: 130.0, Execution Sentence
+	[655.37] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[674.79] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 645.61
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 677.79 (+3.00)
+			Unscheduled by SPELL_CAST_START at 703.91
+	[679.62] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[682.85] SPELL_CAST_START: [Grand Crusader Caldoran: Judge Unworthy] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230908, Judge Unworthy, 0, 0
+		ShowSpecialWarning: Ignite Flesh - interrupt Grand Crusader Caldoran!
+		PlaySound: VoicePack/kickcast
+		StartTimer: -nan, Ignite Flesh
+	[687.58] UNIT_HEALTH: target, 0
+		ShowAnnounce: Stage 4 soon
+	[703.91] SPELL_CAST_START: [Grand Crusader Caldoran: Blinding Flare] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1229714, Blinding Flare, 0, 0
+		StartTimer: 34.0, Blinding Flare
+		StartTimer: -nan, Blinding Flare
+		ShowSpecialWarning: Blinding Flare!
+		PlaySound: VoicePack/turnaway
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 674.79
+		ScheduleTask: specWarn1229714spell:ScheduleVoice("safenow") at 706.91 (+3.00)
+			Unscheduled by ENCOUNTER_END at 825.65
+	[707.14] SPELL_CAST_START: [Grand Crusader Caldoran: Quietus] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231651, Quietus, 0, 0
+		StartTimer: 29.0, Quietus
+		ShowAnnounce: Casting Quietus: -nan sec
+	[713.62] SPELL_CAST_START: [The Ashbringer: Darkgraven Blade] Creature-0-1-2856-1-242298-0000000002, The Ashbringer, 0xa48, "", nil, 0x0, 1231027, Darkgraven Blade, 0, 0
+		ShowAnnounce: Stage 4
+		StopTimer: Timer1231651var
+		StopTimer: Timer1229503var
+	[773.57] SPELL_CAST_START: [Grand Crusader Caldoran: Cessation] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1230697, Cessation, 0, 0
+		ShowAnnounce: Casting Cessation: -nan sec
+	[789.76] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231654, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 22.0, Wake of Ashes
+	[814.03] SPELL_CAST_START: [Grand Crusader Caldoran: Wake of Ashes] Vehicle-0-1-2856-1-241006-0000000001, Grand Crusader Caldoran, 0xa48, "", nil, 0x0, 1231654, Wake of Ashes, 0, 0
+		ShowAnnounce: Casting Wake of Ashes: -nan sec
+		StartTimer: 22.0, Wake of Ashes
+	[825.65] ENCOUNTER_END: 3189, Caldoran, 9, 40, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 280.13
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 438.35
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 438.35
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 438.35
+		UnscheduleTask: specWarn1229714spell:ScheduleVoice("safenow") scheduled by ScheduleTask at 703.91
