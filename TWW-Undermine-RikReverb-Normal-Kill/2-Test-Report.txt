@@ -81,9 +81,10 @@ Announces:
 		[103.74] Scheduled at 103.24 by SPELL_AURA_APPLIED: [->Dps22: Faulty Zap] "", nil, 0x0, Player-1-00000030, Dps22, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		[198.78] Scheduled at 198.28 by SPELL_AURA_APPLIED: [->Dps21: Faulty Zap] "", nil, 0x0, Player-1-00000028, Dps21, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
 		[230.30] Scheduled at 229.80 by SPELL_AURA_APPLIED: [->Dps18: Faulty Zap] "", nil, 0x0, Player-1-00000024, Dps18, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
-	Sound Cannon incoming debuff (%s), type=incomingcount, spellId=467606, triggerDeltas = 32.03, 34.96, 118.02, 35.02
-		[ 32.03] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
-			 Triggered 4x, delta times: 32.03, 34.96, 118.02, 35.02
+	Sound Cannon on >%s<, type=target, spellId=467606, triggerDeltas = 32.13, 34.96, 153.04
+		[ 32.13] Scheduled at 32.03 by SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
+		[ 67.09] Scheduled at 66.99 by SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
+		[220.13] Scheduled at 220.03 by SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
 	Resonant Echoes on YOU, type=you, spellId=468119, triggerDeltas = 127.07
 		[127.07] SPELL_AURA_APPLIED: [Rik Reverb->Tank1: Resonant Echoes] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, Player-1-00000016, Tank1, 0x511, 468119, Resonant Echoes, 0, DEBUFF, 0
 
@@ -134,9 +135,9 @@ Event trace:
 		PlaySound: VoicePack/watchwave
 		StartTimer: 58.5, Echoing Chant (2)
 	[ 32.03] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
-		ShowAnnounce: Sound Cannon incoming debuff (1)
 		StartTimer: 35.0, Sound Cannon (2)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 32.13 (+0.10)
+			ShowAnnounce: Sound Cannon on Dps21
 	[ 43.50] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
 		StartTimer: 31.5, Faulty Zap (2)
 	[ 43.50] SPELL_AURA_APPLIED: [->Dps20: Faulty Zap] "", nil, 0x0, Player-1-00000027, Dps20, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
@@ -170,8 +171,8 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 		StartTimer: 49.0, Amplification! (3)
 	[ 66.99] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
-		ShowAnnounce: Sound Cannon incoming debuff (2)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 67.09 (+0.10)
+			ShowAnnounce: Sound Cannon on Healer5
 	[ 74.98] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
 		StartTimer: 26.5, Faulty Zap (3)
 	[ 75.02] SPELL_AURA_APPLIED: [->Dps19: Faulty Zap] "", nil, 0x0, Player-1-00000025, Dps19, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
@@ -287,7 +288,6 @@ Event trace:
 		AntiSpam: 4
 		ShowAnnounce: Haywire
 	[185.01] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
-		ShowAnnounce: Sound Cannon incoming debuff (3)
 		StartTimer: 35.0, Sound Cannon (4)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 185.11 (+0.10)
 			ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 185.21 (+0.10)
@@ -335,8 +335,8 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 		StartTimer: 49.0, Amplification! (6)
 	[220.03] SPELL_CAST_START: [Rik Reverb: Sound Cannon] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 467606, Sound Cannon, 0, 0
-		ShowAnnounce: Sound Cannon incoming debuff (4)
 		ScheduleTask: mod:BossTargetScanner("Vehicle-0-1-2769-1-228648-0000000001", "CannonTarget", 0.1, 8.0, nil, nil, nil, nil, true) at 220.13 (+0.10)
+			ShowAnnounce: Sound Cannon on Healer3
 	[228.05] SPELL_CAST_START: [Rik Reverb: Faulty Zap] Vehicle-0-1-2769-1-228648-0000000001, Rik Reverb, 0xa48, "", nil, 0x0, 466979, Faulty Zap, 0, 0
 		StartTimer: 26.5, Faulty Zap (6)
 	[228.05] SPELL_AURA_APPLIED: [->Dps10: Faulty Zap] "", nil, 0x0, Player-1-00000013, Dps10, 0x512, 467108, Faulty Zap, 0, DEBUFF, 0
