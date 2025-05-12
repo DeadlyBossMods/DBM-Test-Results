@@ -86,11 +86,11 @@ Announces:
 		[ 85.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 205.00
 		[205.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
-	Sorted (%s) on >%s<, type=targetcount, spellId=465346, triggerDeltas = 23.74, 79.12, 51.10, 51.14
-		[ 23.74] Scheduled at 23.24 by SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps13: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000019, Dps13, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		[102.86] Scheduled at 102.36 by SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps3: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000004, Dps3, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		[153.96] Scheduled at 153.46 by SPELL_AURA_APPLIED: [Stix Bunkjunker->Healer1: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000003, Healer1, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		[205.10] Scheduled at 204.60 by SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank1: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000006, Tank1, 0x512, 465346, Sorted, 0, DEBUFF, 0
+	Sorted (%s) on >%s<, type=targetcount, spellId=465346, triggerDeltas = 23.24, 79.12, 51.10, 52.14
+		[ 23.24] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps13: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000019, Dps13, 0x512, 465346, Sorted, 0, DEBUFF, 0
+		[102.36] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps3: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000004, Dps3, 0x512, 465346, Sorted, 0, DEBUFF, 0
+		[153.46] SPELL_AURA_APPLIED: [Stix Bunkjunker->Healer1: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000003, Healer1, 0x512, 465346, Sorted, 0, DEBUFF, 0
+		[205.60] Scheduled at 204.60 by SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank1: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000006, Tank1, 0x512, 465346, Sorted, 0, DEBUFF, 0
 	Casting Dumpster Dive: -nan sec, type=cast, spellId=466742, triggerDeltas = 25.19, 79.13, 31.95, 19.17, 31.51, 4.86, 4.85, 9.93, 11.55
 		[ 25.19] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000011, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 			 Triggered 9x, delta times: 25.19, 79.13, 31.95, 19.17, 31.51, 4.86, 4.85, 9.93, 11.55
@@ -243,20 +243,19 @@ Event trace:
 		PlaySound: VoicePack/specialsoon
 		StartTimer: 51.1, Balls+Adds (2)
 	[ 23.24] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps11: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000017, Dps11, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		ScheduleTask: (anonymous function) at 23.74 (+0.50)
+		ScheduleTask: (anonymous function) at 24.24 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 23.24
 	[ 23.24] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps2: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000002, Dps2, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 23.24
-		ScheduleTask: (anonymous function) at 23.74 (+0.50)
+		ScheduleTask: (anonymous function) at 24.24 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 23.24
 	[ 23.24] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank2: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000020, Tank2, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 23.24
-		ScheduleTask: (anonymous function) at 23.74 (+0.50)
+		ScheduleTask: (anonymous function) at 24.24 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 23.24
 	[ 23.24] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps13: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000019, Dps13, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 23.24
-		ScheduleTask: (anonymous function) at 23.74 (+0.50)
-			ShowAnnounce: Sorted (1) on Dps11, Tank2, Dps2, Dps13
+		ShowAnnounce: Sorted (1) on Dps11, Tank2, Dps2, Dps13
 	[ 25.19] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000011, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 25.3
@@ -329,20 +328,19 @@ Event trace:
 		PlaySound: VoicePack/specialsoon
 		StartTimer: 51.1, Balls+Adds (3)
 	[102.36] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps11: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000017, Dps11, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		ScheduleTask: (anonymous function) at 102.86 (+0.50)
+		ScheduleTask: (anonymous function) at 103.36 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 102.36
 	[102.36] SPELL_AURA_APPLIED: [Stix Bunkjunker->Healer5: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000016, Healer5, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 102.36
-		ScheduleTask: (anonymous function) at 102.86 (+0.50)
+		ScheduleTask: (anonymous function) at 103.36 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 102.36
 	[102.36] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps7: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000009, Dps7, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 102.36
-		ScheduleTask: (anonymous function) at 102.86 (+0.50)
+		ScheduleTask: (anonymous function) at 103.36 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 102.36
 	[102.36] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps3: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000004, Dps3, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 102.36
-		ScheduleTask: (anonymous function) at 102.86 (+0.50)
-			ShowAnnounce: Sorted (2) on Dps11, Dps7, Healer5, Dps3
+		ShowAnnounce: Sorted (2) on Dps11, Dps7, Healer5, Dps3
 	[104.32] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000026, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_CAST_START at 104.42, 104.53, 104.63
@@ -425,20 +423,19 @@ Event trace:
 		PlaySound: VoicePack/specialsoon
 		StartTimer: 51.1, Balls+Adds (4)
 	[153.46] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps11: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000017, Dps11, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		ScheduleTask: (anonymous function) at 153.96 (+0.50)
+		ScheduleTask: (anonymous function) at 154.46 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 153.46
 	[153.46] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps4: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000005, Dps4, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 153.46
-		ScheduleTask: (anonymous function) at 153.96 (+0.50)
+		ScheduleTask: (anonymous function) at 154.46 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 153.46
 	[153.46] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps10: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000015, Dps10, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 153.46
-		ScheduleTask: (anonymous function) at 153.96 (+0.50)
+		ScheduleTask: (anonymous function) at 154.46 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 153.46
 	[153.46] SPELL_AURA_APPLIED: [Stix Bunkjunker->Healer1: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000003, Healer1, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 153.46
-		ScheduleTask: (anonymous function) at 153.96 (+0.50)
-			ShowAnnounce: Sorted (3) on Dps11, Dps10, Dps4, Healer1
+		ShowAnnounce: Sorted (3) on Dps11, Dps10, Dps4, Healer1
 	[155.44] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000036, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_CAST_START at 155.53, 155.63, 155.76
@@ -549,11 +546,11 @@ Event trace:
 		PlaySound: VoicePack/specialsoon
 		StartTimer: 51.1, Balls+Adds (5)
 	[204.59] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps11: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000017, Dps11, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		ScheduleTask: (anonymous function) at 205.09 (+0.50)
+		ScheduleTask: (anonymous function) at 205.59 (+1.00)
 			Unscheduled by SPELL_AURA_APPLIED at 204.60
 	[204.60] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank1: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000006, Tank1, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 204.59
-		ScheduleTask: (anonymous function) at 205.10 (+0.50)
+		ScheduleTask: (anonymous function) at 205.60 (+1.00)
 			ShowAnnounce: Sorted (4) on Dps11, Tank1
 	[206.59] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000042, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 		AntiSpam: 1
@@ -597,8 +594,8 @@ Event trace:
 		ShowAnnounce: Casting Dumpster Dive: -nan sec
 	[219.50] ENCOUNTER_END: 3012, Stix Bunkjunker, 16, 20, 0, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 465346 461536 1217685 473115 473066 467117
