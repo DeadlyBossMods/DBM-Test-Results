@@ -1,0 +1,184 @@
+Test: SoD/Naxx/Sapphiron/Heroic
+Mod:  DBM-Raids-Vanilla/SapphironVanilla
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1219729 (Glacial Crash)
+	Unused event registration: SPELL_AURA_APPLIED 1219732 (Glacial Crash)
+	Unused event registration: SPELL_AURA_APPLIED 28547 (Chill)
+	Timer for spell ID 1219729 (Glacial Crash) is triggered by event SPELL_CAST_START 28524 (Frost Breath)
+
+Unused objects:
+	[Announce] Air phase, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Special Warning] %s damage - move away, type=gtfo, spellId=28547
+	[Special Warning] Glacial Crash - soak it, type=soak, spellId=1219729
+	[Special Warning] Glacial Crash on you, type=you, spellId=1219729
+	[Yell] %d, type=shortfade, spellId=1219729
+	[Yell] Glacial Crash on PlayerName, type=yell, spellId=1219729
+
+Timers:
+	Air phase, time=66.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 68.93, 92.34
+		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[ 68.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+		[161.27] Scheduled at 149.07 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+	Berserk, time=900.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+	Frost Breath, time=7.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
+	Landing, time=36.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
+	Life Drain, time=22.00, type=cd, spellId=28542, triggerDeltas = 11.35, 58.75, 22.27, 22.68
+		[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
+	Glacial Crash, time=30.75, type=next, spellId=1219729, triggerDeltas = 0.00, 56.73, 92.34
+		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
+
+Announces:
+	Air phase in 10 seconds, type=nil, spellId=<none>, triggerDeltas = 21.00, 103.93
+		[ 21.00] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[124.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+	Sapphiron landed, type=nil, spellId=<none>, triggerDeltas = 68.93, 92.34
+		[ 68.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+		[161.27] Scheduled at 149.07 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+	Icebolt (%s) on >%s<, type=targetcount, spellId=28522, triggerDeltas = 41.66, 3.79, 3.33, 3.83, 3.80, 78.80, 3.27, 3.23, 3.63, 2.99
+		[ 41.66] SPELL_AURA_APPLIED: [Sapphiron->Dps1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000001, Dps1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 41.66, 100.05
+		[ 45.45] SPELL_AURA_APPLIED: [Sapphiron->Dps5: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000006, Dps5, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		[ 48.78] SPELL_AURA_APPLIED: [Sapphiron->Dps7: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000008, Dps7, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		[ 52.61] SPELL_AURA_APPLIED: [Sapphiron->Dps14: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000016, Dps14, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		[ 56.41] SPELL_AURA_APPLIED: [Sapphiron->Dps15: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000020, Dps15, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		[135.21] SPELL_AURA_APPLIED: [Sapphiron->Dps4: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000005, Dps4, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		[138.48] SPELL_AURA_APPLIED: [Sapphiron->Tank1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000009, Tank1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		[145.34] SPELL_AURA_APPLIED: [Sapphiron->Healer4: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000019, Healer4, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		[148.33] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 28522, Icebolt, 0, DEBUFF, 0
+	Life Drain soon, type=soon, spellId=28542, triggerDeltas = 29.85, 58.75, 22.27, 22.68
+		[ 29.85] Scheduled at 11.35 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		[ 88.60] Scheduled at 70.10 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		[110.87] Scheduled at 92.37 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		[133.55] Scheduled at 115.05 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+	Life Drain, type=spell, spellId=28542, triggerDeltas = 11.35, 58.75, 22.27, 22.68
+		[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
+
+Special warnings:
+	Frost Breath, type=nil, spellId=<none>, triggerDeltas = 56.73, 92.34
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
+
+Yells:
+	Icebolt on PlayerName, type=yell, spellId=28522
+		[148.33] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 28522, Icebolt, 0, DEBUFF, 0
+
+Voice pack sounds:
+	VoicePack/findshelter
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 28522 28547 1219729 1219732, SPELL_CAST_START 28524, SPELL_CAST_SUCCESS 28542
+		ScheduleTask: announce:Schedule() at 21.00 (+21.00)
+			ShowAnnounce: Air phase in 10 seconds
+		StartTimer: 31.0, Air phase
+		ScheduleTask: (anonymous function) at 32.00 (+32.00)
+		StartTimer: 900.0, Berserk
+		ScheduleTask: announce:Schedule(10.0, "min") at 300.00 (+300.00)
+			Unscheduled by ENCOUNTER_END at 162.13
+		ScheduleTask: announce:Schedule(5.0, "min") at 600.00 (+600.00)
+			Unscheduled by ENCOUNTER_END at 162.13
+		ScheduleTask: announce:Schedule(3.0, "min") at 720.00 (+720.00)
+			Unscheduled by ENCOUNTER_END at 162.13
+		ScheduleTask: announce:Schedule(1.0, "min") at 840.00 (+840.00)
+			Unscheduled by ENCOUNTER_END at 162.13
+		ScheduleTask: announce:Schedule(30.0, "sec") at 870.00 (+870.00)
+			Unscheduled by ENCOUNTER_END at 162.13
+		ScheduleTask: announce:Schedule(10.0, "sec") at 890.00 (+890.00)
+			Unscheduled by ENCOUNTER_END at 162.13
+		StartTimer: 30.7, Glacial Crash
+	[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		ShowAnnounce: Life Drain
+		ScheduleTask: announce28542soon:Schedule() at 29.85 (+18.50)
+			ShowAnnounce: Life Drain soon
+		StartTimer: 22.0, Life Drain
+	[ 41.66] SPELL_AURA_APPLIED: [Sapphiron->Dps1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000001, Dps1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (1) on Dps1
+	[ 45.45] SPELL_AURA_APPLIED: [Sapphiron->Dps5: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000006, Dps5, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (2) on Dps5
+	[ 48.78] SPELL_AURA_APPLIED: [Sapphiron->Dps7: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000008, Dps7, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (3) on Dps7
+	[ 52.61] SPELL_AURA_APPLIED: [Sapphiron->Dps14: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000016, Dps14, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (4) on Dps14
+	[ 56.41] SPELL_AURA_APPLIED: [Sapphiron->Dps15: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000020, Dps15, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (5) on Dps15
+	[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+		StartTimer: 7.0, Frost Breath
+		StartTimer: 28.5, Landing
+		UpdateTimer: TimerLanding, 16.3, 28.5
+		ScheduleTask: (anonymous function) at 68.93 (+12.20)
+			ScheduleTask: announce:Schedule() at 124.93 (+56.00)
+				ShowAnnounce: Air phase in 10 seconds
+			ShowAnnounce: Sapphiron landed
+			StartTimer: 66.0, Air phase
+			ScheduleTask: (anonymous function) at 135.93 (+67.00)
+		ShowSpecialWarning: Frost Breath
+		PlaySound: VoicePack/findshelter
+		StartTimer: 14.9, Glacial Crash
+	[ 70.10] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		ShowAnnounce: Life Drain
+		ScheduleTask: announce28542soon:Schedule() at 88.60 (+18.50)
+			ShowAnnounce: Life Drain soon
+		StartTimer: 22.0, Life Drain
+	[ 92.37] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		ShowAnnounce: Life Drain
+		ScheduleTask: announce28542soon:Schedule() at 110.87 (+18.50)
+			ShowAnnounce: Life Drain soon
+		StartTimer: 22.0, Life Drain
+	[115.05] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		ShowAnnounce: Life Drain
+		ScheduleTask: announce28542soon:Schedule() at 133.55 (+18.50)
+			ShowAnnounce: Life Drain soon
+		StartTimer: 22.0, Life Drain
+	[135.21] SPELL_AURA_APPLIED: [Sapphiron->Dps4: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000005, Dps4, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (1) on Dps4
+	[138.48] SPELL_AURA_APPLIED: [Sapphiron->Tank1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000009, Tank1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (2) on Tank1
+	[141.71] SPELL_AURA_APPLIED: [Sapphiron->Dps1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000001, Dps1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (3) on Dps1
+	[145.34] SPELL_AURA_APPLIED: [Sapphiron->Healer4: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000019, Healer4, 0x512, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (4) on Healer4
+	[148.33] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 28522, Icebolt, 0, DEBUFF, 0
+		ShowAnnounce: Icebolt (5) on PlayerName
+		ShowYell: Icebolt on PlayerName
+	[149.07] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+		StartTimer: 7.0, Frost Breath
+		StartTimer: 28.5, Landing
+		UpdateTimer: TimerLanding, 16.3, 28.5
+		ScheduleTask: (anonymous function) at 161.27 (+12.20)
+			ScheduleTask: announce:Schedule() at 217.27 (+56.00)
+				Unscheduled by ENCOUNTER_END at 162.13
+			ShowAnnounce: Sapphiron landed
+			StartTimer: 66.0, Air phase
+			ScheduleTask: (anonymous function) at 228.27 (+67.00)
+				Unscheduled by ENCOUNTER_END at 162.13
+		ShowSpecialWarning: Frost Breath
+		PlaySound: VoicePack/findshelter
+		StartTimer: 14.9, Glacial Crash
+	[162.13] ENCOUNTER_END: 1119, Sapphiron, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule() scheduled by ScheduleTask at 161.27
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: (anonymous function) scheduled by ScheduleTask at 161.27
