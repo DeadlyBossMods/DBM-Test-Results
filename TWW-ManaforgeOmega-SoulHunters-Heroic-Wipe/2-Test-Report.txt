@@ -4,7 +4,6 @@ Mod:  DBM-Raids-WarWithin/2688
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1226493 (Shattered Soul)
 	Unused event registration: SPELL_CAST_START 1218103 (Eye Beam)
-	Unused event registration: SPELL_CAST_START 1222244 (Consume)
 	Unused event registration: SPELL_CAST_START 1222337 (Fracture)
 	Unused event registration: SPELL_CAST_START 1227809 (The Hunt)
 	Unused event registration: SPELL_CAST_START 1241833 (Fracture)
@@ -25,7 +24,6 @@ Unused objects:
 	[Timer] Blade Dance AI, time=97.30, type=ai, spellId=1227058
 	[Timer] Voidstep AI, time=97.30, type=ai, spellId=1227355
 	[Timer] The Hunt AI, time=97.30, type=ai, spellId=1227809
-	[Timer] Consume AI, time=97.30, type=ai, spellId=1234565
 	[Timer] Fracture AI, time=97.30, type=ai, spellId=1241833
 	[Timer] Spirit Bomb AI, time=97.30, type=ai, spellId=1242259
 	[Timer] Fel Inferno AI, time=97.30, type=ai, spellId=1245384
@@ -43,9 +41,6 @@ Announces:
 		[133.76] SPELL_AURA_REMOVED: [Adarus Duskblaze->Adarus Duskblaze: Collapsing Star] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1233093, Collapsing Star, 0, BUFF, 0
 	Fel Rush ended, type=ends, spellId=1233863, triggerDeltas = 255.67
 		[255.67] SPELL_AURA_REMOVED: [Velaryn Bloodwrath->Velaryn Bloodwrath: Fel Rush] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1233863, Fel Rush, 0, BUFF, 0
-	Consume (%s), type=count, spellId=1234565, triggerDeltas = 15.00, 2.75, 2.76, 2.74, 2.74, 2.72, 7.11, 2.72, 2.73, 2.75, 2.72, 2.72, 2.75, 2.72, 2.74, 7.14, 2.72, 2.74, 2.74, 2.73, 2.72, 2.74, 2.71, 7.13, 2.72, 2.73, 2.73, 38.27, 2.73, 2.72, 2.75, 2.70, 2.76, 7.12, 2.72, 2.73, 2.73, 2.76, 2.74, 2.71, 2.75, 2.72, 7.10, 2.75, 2.72, 2.75, 2.73, 2.76, 2.71, 2.73, 7.08, 2.73, 2.73, 2.72, 2.75, 35.61, 2.75, 2.72, 2.73, 2.72, 2.73, 7.10, 2.73, 2.71, 2.74, 2.72, 2.73, 2.75, 2.72, 2.74, 7.12, 2.76, 2.74, 2.73, 2.75, 2.72, 2.73, 2.74, 7.11, 2.73, 2.75, 2.70, 2.74, 35.59, 2.73, 7.08, 2.73, 2.76
-		[ 15.00] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-			 Triggered 88x, delta times: 15.00, 2.75, 2.76, 2.74, 2.74, 2.72, 7.11, 2.72, 2.73, 2.75, 2.72, 2.72, 2.75, 2.72, 2.74, 7.14, 2.72, 2.74, 2.74, 2.73, 2.72, 2.74, 2.71, 7.13, 2.72, 2.73, 2.73, 38.27, 2.73, 2.72, 2.75, 2.70, 2.76, 7.12, 2.72, 2.73, 2.73, 2.76, 2.74, 2.71, 2.75, 2.72, 7.10, 2.75, 2.72, 2.75, 2.73, 2.76, 2.71, 2.73, 7.08, 2.73, 2.73, 2.72, 2.75, 35.61, 2.75, 2.72, 2.73, 2.72, 2.73, 7.10, 2.73, 2.71, 2.74, 2.72, 2.73, 2.75, 2.72, 2.74, 7.12, 2.76, 2.74, 2.73, 2.75, 2.72, 2.73, 2.74, 7.11, 2.73, 2.75, 2.70, 2.74, 35.59, 2.73, 7.08, 2.73, 2.76
 
 Special warnings:
 	Voidstep (%s) - dodge attack, type=dodgecount, spellId=1227355, triggerDeltas = 31.45, 28.98, 26.24, 67.22, 28.99, 26.23, 67.27, 28.96, 26.27, 56.37
@@ -86,81 +81,27 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1234565 1222244 1227355 1227809 1218103 1241833 1222337 1242259 1231501 1232568 1232569 1227117, SPELL_CAST_SUCCESS 1227058 1245384 1225154 1227113, SPELL_AURA_APPLIED 1226493 1233093 1233863, SPELL_AURA_REMOVED 1233093 1233863 1242133, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1227355 1227809 1218103 1241833 1222337 1242259 1231501 1232568 1232569 1227117, SPELL_CAST_SUCCESS 1227058 1245384 1225154 1227113, SPELL_AURA_APPLIED 1226493 1233093 1233863, SPELL_AURA_REMOVED 1233093 1233863 1242133, UNIT_DIED
 	[  0.97] SPELL_CAST_SUCCESS: [Ilyssa Darksorrow: Immolation Aura] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1225154, Immolation Aura, 0, 0
 		ShowAnnounce: Immolation Aura (1)
-	[ 15.00] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (1)
-	[ 17.75] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (2)
-	[ 20.51] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (3)
-	[ 23.25] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (4)
-	[ 25.99] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (5)
-	[ 28.71] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (6)
 	[ 31.28] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (1)
 		PlaySound: VoicePack/aesoon
 	[ 31.45] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[ 35.82] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (7)
-	[ 38.54] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (8)
-	[ 41.27] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (9)
-	[ 44.02] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (10)
-	[ 46.74] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (11)
-	[ 49.46] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (12)
-	[ 52.21] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (13)
-	[ 54.93] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (14)
-	[ 57.67] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (15)
 	[ 60.43] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (2) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[ 63.89] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (2)
 		PlaySound: VoicePack/aesoon
-	[ 64.81] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (16)
-	[ 67.53] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (17)
-	[ 70.27] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (18)
-	[ 73.01] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (19)
-	[ 75.74] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (20)
-	[ 78.46] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (21)
-	[ 81.20] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (22)
-	[ 83.91] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (23)
 	[ 86.67] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[ 91.04] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (24)
-	[ 93.76] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (25)
-	[ 96.49] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (26)
 	[ 96.51] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (3)
 		PlaySound: VoicePack/aesoon
-	[ 99.22] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (27)
 	[101.98] SPELL_CAST_START: [Adarus Duskblaze: Metamorphosis] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1232569, Metamorphosis, 0, 0
 		AntiSpam: 1
 			Filtered: 2x SPELL_CAST_START at 102.59, 102.9
@@ -176,80 +117,24 @@ Event trace:
 			Filtered: 1x SPELL_AURA_REMOVED at 133.96
 	[133.96] SPELL_AURA_REMOVED: [Velaryn Bloodwrath->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		AntiSpam: 3
-	[137.49] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (28)
-	[140.22] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (29)
-	[142.94] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (30)
-	[145.69] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (31)
-	[148.39] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (32)
-	[151.15] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (33)
 	[153.78] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (4)
 		PlaySound: VoicePack/aesoon
 	[153.89] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (4) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[158.27] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (34)
-	[160.99] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (35)
-	[163.72] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (36)
-	[166.45] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (37)
-	[169.21] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (38)
-	[171.95] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (39)
-	[174.66] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (40)
-	[177.41] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (41)
-	[180.13] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (42)
 	[182.88] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (5) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[186.38] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (5)
 		PlaySound: VoicePack/aesoon
-	[187.23] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (43)
-	[189.98] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (44)
-	[192.70] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (45)
-	[195.45] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (46)
-	[198.18] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (47)
-	[200.94] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (48)
-	[203.65] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (49)
-	[206.38] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (50)
 	[209.11] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (6) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[213.46] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (51)
-	[216.19] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (52)
-	[218.92] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (53)
 	[218.99] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (6)
 		PlaySound: VoicePack/aesoon
-	[221.64] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (54)
-	[224.39] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (55)
 	[224.49] SPELL_CAST_START: [Velaryn Bloodwrath: Metamorphosis] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1231501, Metamorphosis, 0, 0
 		AntiSpam: 1
 			Filtered: 2x SPELL_CAST_START at 225.11, 226.4
@@ -262,80 +147,24 @@ Event trace:
 		AntiSpam: 3
 	[256.46] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		AntiSpam: 2
-	[260.00] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (56)
-	[262.75] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (57)
-	[265.47] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (58)
-	[268.20] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (59)
-	[270.92] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (60)
-	[273.65] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (61)
 	[276.27] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (7)
 		PlaySound: VoicePack/aesoon
 	[276.38] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (7) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[280.75] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (62)
-	[283.48] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (63)
-	[286.19] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (64)
-	[288.93] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (65)
-	[291.65] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (66)
-	[294.38] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (67)
-	[297.13] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (68)
-	[299.85] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (69)
-	[302.59] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (70)
 	[305.34] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (8) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[308.89] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (8)
 		PlaySound: VoicePack/aesoon
-	[309.71] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (71)
-	[312.47] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (72)
-	[315.21] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (73)
-	[317.94] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (74)
-	[320.69] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (75)
-	[323.41] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (76)
-	[326.14] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (77)
-	[328.88] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (78)
 	[331.61] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (9) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[335.99] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (79)
-	[338.72] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (80)
-	[341.47] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (81)
 	[341.53] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (9)
 		PlaySound: VoicePack/aesoon
-	[344.17] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (82)
-	[346.91] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (83)
 	[346.99] SPELL_CAST_START: [Ilyssa Darksorrow: Metamorphosis] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1232568, Metamorphosis, 0, 0
 		AntiSpam: 1
 			Filtered: 2x SPELL_CAST_START at 347.93, 348.93
@@ -349,22 +178,12 @@ Event trace:
 		AntiSpam: 2
 	[378.97] SPELL_AURA_REMOVED: [Velaryn Bloodwrath->Ilyssa Darksorrow: Soul Engorgement] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		AntiSpam: 3
-	[382.50] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (84)
-	[385.23] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (85)
 	[387.98] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (10) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[392.31] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (86)
 	[393.36] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (10)
 		PlaySound: VoicePack/aesoon
-	[395.04] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (87)
-	[397.80] SPELL_CAST_START: [Adarus Duskblaze: Consume] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1234565, Consume, 0, 0
-		ShowAnnounce: Consume (88)
 	[399.47] SPELL_CAST_START: [Velaryn Bloodwrath: Metamorphosis] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1231501, Metamorphosis, 0, 0
 		AntiSpam: 1
 			Filtered: 2x SPELL_CAST_START at 399.79, 399.83
