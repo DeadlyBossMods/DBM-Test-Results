@@ -1,0 +1,571 @@
+Test: TWW/ManaforgeOmega/Loomithar/Normal/Kill
+Mod:  DBM-Raids-WarWithin/2686
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1227163 (Writhing Wave)
+	Unused event registration: SPELL_AURA_APPLIED 1227784 (Arcane Outrage)
+	Unused event registration: SPELL_AURA_APPLIED 1228059 (Unbound Rage)
+	Unused event registration: SPELL_AURA_APPLIED 1237212 (Piercing Strand)
+	Unused event registration: SPELL_AURA_APPLIED 1238502 (Woven Ward)
+	Unused event registration: SPELL_AURA_REMOVED 1226311 (Infusion Tether)
+	Unused event registration: SPELL_AURA_REMOVED 1228059 (Unbound Rage)
+	Unused event registration: SPELL_AURA_REMOVED 1238502 (Woven Ward)
+	Unused event registration: SPELL_CAST_START 1227263 (Piercing Strand)
+	Unused event registration: SPELL_CAST_START 1227782 (Arcane Outrage)
+	Unused event registration: SPELL_CAST_SUCCESS 1226315 (Infusion Tether)
+	Unused event registration: SPELL_CAST_SUCCESS 1226867 (Primal Spellstorm)
+	Unused event registration: SPELL_CAST_SUCCESS 1230115 (Primal Spellstorm)
+
+Unused objects:
+	[Announce] Infusion Tether faded, type=fades, spellId=1226315
+	[Announce] Primal Spellstorm (%s), type=count, spellId=1226867
+	[Special Warning] Infusion Tether on you, type=you, spellId=1226315
+	[Special Warning] Writhing Wave on >%s< - taunt now, type=taunt, spellId=1227226
+	[Special Warning] Piercing Strand - defensive, type=defensive, spellId=1227263
+	[Special Warning] Piercing Strand on >%s< - taunt now, type=taunt, spellId=1227263
+	[Special Warning] Unbound Rage!, type=spell, spellId=1228059
+	[Special Warning] Lair Weaving on you, type=you, spellId=1237307
+	[Timer] Infusion Tether AI, time=97.30, type=ai, spellId=1226315
+	[Timer] Overinfusion Burst AI, time=97.30, type=ai, spellId=1226395
+	[Timer] Primal Spellstorm AI, time=97.30, type=ai, spellId=1226867
+	[Timer] Writhing Wave AI, time=97.30, type=ai, spellId=1227226
+	[Timer] Piercing Strand AI, time=97.30, type=ai, spellId=1227263
+	[Timer] Lair Weaving AI, time=97.30, type=ai, spellId=1237272
+	[Timer] Lair Weaving AI, time=97.30, type=ai, spellId=1237307
+	[Yell] Infusion Tether, type=shortyell, spellId=1226315
+
+Timers:
+	None
+
+Announces:
+	Infusion Tether on >%s<, type=target, spellId=1226315, triggerDeltas = 22.31, 39.01, 45.96, 39.03, 45.99, 38.98, 46.04, 39.02, 46.01
+		[ 22.31] Scheduled at 22.01 by SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[ 61.32] Scheduled at 61.02 by SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[107.28] Scheduled at 106.98 by SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[146.31] Scheduled at 146.01 by SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[192.30] Scheduled at 192.00 by SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[231.28] Scheduled at 230.98 by SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[277.32] Scheduled at 277.02 by SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[316.34] Scheduled at 316.04 by SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[362.35] Scheduled at 362.05 by SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+
+Special warnings:
+	Overinfusion Burst - dodge attack, type=dodge, spellId=1226395, triggerDeltas = 75.96, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 85.00, 0.00, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 84.98, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 84.97, 0.00, 0.01, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01
+		[ 75.96] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1226395, Overinfusion Burst, 0, BUFF, 0
+			 Triggered 4x, delta times: 75.96, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps15: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000018, Dps15, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000006, Tank1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.01, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000005, Dps4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps16: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000019, Dps16, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 84.99, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 84.99, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps14: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000017, Dps14, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.01, 85.01, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps22: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000028, Dps22, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.01, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000025, Healer3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.01, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps18: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Dps18, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000002, Dps1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 84.99
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 85.00
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 84.99
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps21: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000026, Dps21, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 75.98, 85.01, 85.00
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.01, 84.98
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps19: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000022, Dps19, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 84.99
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.02, 85.00, 84.98
+		[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000011, Dps9, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 160.99, 85.01, 84.98
+	Writhing Wave! (%s), type=count, spellId=1227226, triggerDeltas = 395.52, 19.99, 20.04, 19.97
+		[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 4x, delta times: 395.52, 19.99, 20.04, 19.97
+	Lair Weaving (%s) - dodge attack, type=dodgecount, spellId=1237272, triggerDeltas = 43.97, 85.00, 85.02, 84.97
+		[ 43.97] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1237272, Lair Weaving, 0, BUFF, 0
+			 Triggered 4x, delta times: 43.97, 85.00, 85.02, 84.97
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/sharetwo
+		[415.51] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 2x, delta times: 415.51, 40.01
+	VoicePack/shareone
+		[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 2x, delta times: 395.52, 40.03
+	VoicePack/specialsoon
+		[ 43.97] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1237272, Lair Weaving, 0, BUFF, 0
+			 Triggered 4x, delta times: 43.97, 85.00, 85.02, 84.97
+	VoicePack/watchstep
+		[ 75.96] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1226395, Overinfusion Burst, 0, BUFF, 0
+			 Triggered 4x, delta times: 75.96, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps15: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000018, Dps15, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000006, Tank1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.01, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000005, Dps4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps16: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000019, Dps16, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 84.99, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 84.99, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps14: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000017, Dps14, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.01, 85.01, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps22: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000028, Dps22, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.01, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000025, Healer3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.01, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.03, 85.00, 84.98
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps18: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Dps18, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.97, 85.02, 85.00, 84.99
+		[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000002, Dps1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 75.97, 85.02
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 84.99
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 85.00
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 84.99
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps21: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000026, Dps21, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 75.98, 85.01, 85.00
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.01, 84.98
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps19: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000022, Dps19, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.01, 85.00, 84.99
+		[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.98, 85.02, 85.00, 84.98
+		[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000011, Dps9, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 160.99, 85.01, 84.98
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 14, 28, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226867 1230115 1226315, SPELL_AURA_APPLIED 1237272 1226395 1226311 1238502 1237212 1228059 1227784 1227163, SPELL_AURA_REMOVED 1226311 1238502 1228059
+	[ 22.01] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Tank2") at 22.31 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps11, Dps8, Healer3, Tank2
+	[ 43.97] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1237272, Lair Weaving, 0, BUFF, 0
+		ShowSpecialWarning: Lair Weaving (1) - dodge attack
+		PlaySound: VoicePack/specialsoon
+	[ 61.02] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Dps6") at 61.32 (+0.30)
+			ShowAnnounce: Infusion Tether on Healer2, Dps20, Dps9, Dps6
+	[ 75.96] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1226395, Overinfusion Burst, 0, BUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps15: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000018, Dps15, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000006, Tank1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000005, Dps4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps16: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000019, Dps16, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps14: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000017, Dps14, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps22: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000028, Dps22, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000025, Healer3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps18: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Dps18, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000002, Dps1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps21: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000026, Dps21, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps19: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000022, Dps19, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[ 75.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[106.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Dps10") at 107.28 (+0.30)
+			ShowAnnounce: Infusion Tether on Healer4, Dps13, Healer1, Dps10
+	[128.97] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1237272, Lair Weaving, 0, BUFF, 0
+		ShowSpecialWarning: Lair Weaving (2) - dodge attack
+		PlaySound: VoicePack/specialsoon
+	[146.01] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Dps20") at 146.31 (+0.30)
+			ShowAnnounce: Infusion Tether on Tank2, Dps15, Dps6, Dps20
+	[160.98] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1226395, Overinfusion Burst, 0, BUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps14: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000017, Dps14, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps22: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000028, Dps22, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000011, Dps9, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps15: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000018, Dps15, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000006, Tank1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000002, Dps1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps21: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000026, Dps21, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps18: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Dps18, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps16: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000019, Dps16, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000005, Dps4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps19: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000022, Dps19, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[160.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[161.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[161.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[161.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[161.00] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[161.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[161.00] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[161.00] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000025, Healer3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[192.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Dps13") at 192.30 (+0.30)
+			ShowAnnounce: Infusion Tether on Healer1, Dps7, Dps22, Dps13
+	[213.99] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1237272, Lair Weaving, 0, BUFF, 0
+		ShowSpecialWarning: Lair Weaving (3) - dodge attack
+		PlaySound: VoicePack/specialsoon
+	[230.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Dps17") at 231.28 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps12, Dps5, Tank2, Dps17
+	[245.98] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1226395, Overinfusion Burst, 0, BUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000006, Tank1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps18: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Dps18, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps21: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000026, Dps21, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps19: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000022, Dps19, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000005, Dps4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps14: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000017, Dps14, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[245.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000025, Healer3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000011, Dps9, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps22: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000028, Dps22, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[246.00] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[277.02] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Healer2") at 277.32 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps9, Dps22, Healer1, Healer2
+	[298.96] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1237272, Lair Weaving, 0, BUFF, 0
+		ShowSpecialWarning: Lair Weaving (4) - dodge attack
+		PlaySound: VoicePack/specialsoon
+	[316.04] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Dps17") at 316.34 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps7, Dps13, Dps20, Dps17
+	[330.97] SPELL_AURA_APPLIED: [Loom'ithar->Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, 1226395, Overinfusion Burst, 0, BUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000011, Dps9, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000005, Dps4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps18: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Dps18, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps19: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000022, Dps19, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps14: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000017, Dps14, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000006, Tank1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps22: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000028, Dps22, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000025, Healer3, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[330.99] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226395, Overinfusion Burst, 0, DEBUFF, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+	[362.05] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226315target:CombinedShow("Dps8") at 362.35 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps5, Dps22, Dps12, Dps8
+	[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (19)
+		PlaySound: VoicePack/shareone
+	[415.51] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (20)
+		PlaySound: VoicePack/sharetwo
+	[435.55] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (21)
+		PlaySound: VoicePack/shareone
+	[455.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (22)
+		PlaySound: VoicePack/sharetwo
+	[458.48] ENCOUNTER_END: 3131, Loom'ithar, 14, 28, 1, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1226311 1238502 1228059
