@@ -23,8 +23,6 @@ Findings:
 	Timer for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
 	Timer for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
 	Timer for spell ID 1234733 (Cleanse the Chamber) is triggered by event SPELL_AURA_REMOVED 1220982 (Protocol: Purge)
-	Timer Manifest Matrices (%s), time=38.90, type=varcount, spellId=1219450 (time=35.20, variance=0.00) got refreshed early with 2.10s remaining
-		Refreshed by: [ 44.22] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
 	Timer Obliteration Arcanocannon (%s), time=36.50, type=varcount, spellId=1219263 (time=34.00, variance=0.00) got refreshed early with 0.93s remaining
 		Refreshed by: [ 53.98] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
 
@@ -150,7 +148,7 @@ Event trace:
 		StartTimer: 30.7, Eradicating Salvo (1)
 		StartTimer: 61.2, Protocol: Purge (Unknown)
 	[ 11.12] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
-		StartTimer: 35.2, Manifest Matrices (2)
+		StartTimer: 33.1, Manifest Matrices (2)
 	[ 13.65] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps6: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, Player-1-00000008, Dps6, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
 		ScheduleTask: announce1219450target:CombinedShow("Dps6") at 13.95 (+0.30)
 			ShowAnnounce: Manifest Matrices on Dps12, Dps16, Dps10, Healer1, Dps6
@@ -166,7 +164,7 @@ Event trace:
 		ScheduleTask: announce1219531targetcount:CombinedShow(1.0, "Dps16") at 31.12 (+0.30)
 			ShowAnnounce: Eradicating Salvo (1) on Dps16
 	[ 44.22] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
-		StartTimer: 35.2, Manifest Matrices (3)
+		StartTimer: 33.1, Manifest Matrices (3)
 	[ 46.71] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps18: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, Player-1-00000024, Dps18, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
 		ScheduleTask: announce1219450target:CombinedShow("Dps18") at 47.01 (+0.30)
 			ShowAnnounce: Manifest Matrices on Dps11, Tank2, Dps5, Dps7, Dps18
@@ -184,7 +182,7 @@ Event trace:
 		StartTimer: 28.8, Eradicating Salvo (1)
 		StartTimer: 94.0, Protocol: Purge (2)
 	[103.90] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
-		StartTimer: 33.1, Manifest Matrices (2)
+		StartTimer: 35.2, Manifest Matrices (2)
 	[106.25] SPELL_AURA_APPLIED: [Plexus Sentinel->Healer2: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, Player-1-00000023, Healer2, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
 		ScheduleTask: announce1219450target:CombinedShow("Healer2") at 106.55 (+0.30)
 			ShowAnnounce: Manifest Matrices on Dps7, Healer3, Dps12, Dps5, Healer2
@@ -200,7 +198,7 @@ Event trace:
 		ScheduleTask: announce1219531targetcount:CombinedShow(1.0, "Dps1") at 126.36 (+0.30)
 			ShowAnnounce: Eradicating Salvo (1) on Dps1
 	[139.48] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
-		StartTimer: 33.1, Manifest Matrices (3)
+		StartTimer: 35.2, Manifest Matrices (3)
 	[141.83] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps10: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, Player-1-00000012, Dps10, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
 		ScheduleTask: announce1219450target:CombinedShow("Dps10") at 142.13 (+0.30)
 			ShowAnnounce: Manifest Matrices on Dps1, Dps13, Tank2, Dps10
@@ -215,7 +213,7 @@ Event trace:
 		ScheduleTask: announce1219531targetcount:CombinedShow(2.0, "Dps7") at 160.47 (+0.30)
 			ShowAnnounce: Eradicating Salvo (2) on Dps7
 	[174.80] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
-		StartTimer: 33.1, Manifest Matrices (4)
+		StartTimer: 35.2, Manifest Matrices (4)
 	[178.07] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank3: Manifest Matrices] Creature-0-1-2810-1-233814-0000000004, Plexus Sentinel, 0xa48, Player-1-00000019, Tank3, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
 		ScheduleTask: announce1219450target:CombinedShow("Tank3") at 178.37 (+0.30)
 			ShowAnnounce: Manifest Matrices on Dps17, Dps15, Healer1, Dps6, Tank3
