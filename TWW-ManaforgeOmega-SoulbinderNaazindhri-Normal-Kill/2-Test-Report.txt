@@ -8,37 +8,48 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1225626 (Soulfire Convergence)
 	Unused event registration: SPELL_AURA_REMOVED 1227049 (Voidblade Ambush)
 	Unused event registration: SPELL_AURA_REMOVED 1227276 (Soulfray Annihilation)
-	Unused event registration: SPELL_CAST_START 1225616 (Soulfire Convergence)
-	Unused event registration: SPELL_CAST_START 1241100 (Mystic Lash)
 	Unused event registration: SPELL_CAST_START 1242088 (Arcane Expulsion)
-	Unused event registration: SPELL_CAST_SUCCESS 1227276 (Soulfray Annihilation)
-	Unused event registration: SPELL_CAST_SUCCESS 1240756 (Deathspindle)
+	Unused event registration: SPELL_CAST_SUCCESS 1227848 (Essence Implosion)
 	Unused event registration: UNIT_DIED
 
 Unused objects:
-	[Announce] Deathspindle (%s), type=count, spellId=1240756
 	[Announce] Mystic Lash on >%s< (%d), type=stack, spellId=1241100
 	[Special Warning] Soulfire Convergence on you, type=you, spellId=1225616
 	[Special Warning] Voidblade Ambush - move away from others, type=moveaway, spellId=1227048
 	[Special Warning] Soulfray Annihilation (%s) on you, type=youcount, spellId=1227276
 	[Special Warning] %d stacks of Mystic Lash on you, type=stack, spellId=1241100
 	[Special Warning] Mystic Lash on >%s< - taunt now, type=taunt, spellId=1241100
-	[Timer] Arcane Expulsion AI, time=97.30, type=ai, spellId=1223859
-	[Timer] Soul Calling AI, time=97.30, type=ai, spellId=1225582
-	[Timer] Soulfire Convergence AI, time=97.30, type=ai, spellId=1225616
-	[Timer] Soulfray Annihilation AI, time=97.30, type=ai, spellId=1227276
-	[Timer] Essence Implosion AI, time=97.30, type=ai, spellId=1227848
-	[Timer] Deathspindle AI, time=97.30, type=ai, spellId=1240756
-	[Timer] Mystic Lash AI, time=97.30, type=ai, spellId=1241100
 	[Yell] %d, type=shortfade, spellId=1225616
-	[Yell] Soulfire Convergence, type=shortyell, spellId=1225616
+	[Yell] Orbs, type=shortyell, spellId=1225616
 	[Yell] %d, type=shortfade, spellId=1227048
 	[Yell] Voidblade Ambush, type=shortyell, spellId=1227048
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1227276
 	[Yell] {rt%1$d}Soulfray Annihilation, type=shortposition, spellId=1227276
 
 Timers:
-	None
+	Arcane Expulsion (%s), time=97.30, type=nextcount, spellId=1223859, triggerDeltas = 0.00, 42.01, 39.98, 64.00, 46.06, 39.98, 64.02, 46.08, 39.99, 63.98, 46.06, 40.03, 64.00
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 14, 28, 0
+		[ 42.01] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
+			 Triggered 12x, delta times: 42.01, 39.98, 64.00, 46.06, 39.98, 64.02, 46.08, 39.99, 63.98, 46.06, 40.03, 64.00
+	Soul Calling (%s), time=150.00, type=nextcount, spellId=1225582, triggerDeltas = 0.00, 13.99, 150.07, 150.04, 150.07, 150.09
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 14, 28, 0
+		[ 13.99] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
+			 Triggered 5x, delta times: 13.99, 150.07, 150.04, 150.07, 150.09
+	Soulfire Convergence (%s), time=97.30, type=nextcount, spellId=1225616, triggerDeltas = 0.00, 30.01, 40.00, 64.98, 45.06, 39.98, 65.04, 45.02, 40.01, 65.03, 45.04, 39.97, 65.03
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 14, 28, 0
+		[ 30.01] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+			 Triggered 12x, delta times: 30.01, 40.00, 64.98, 45.06, 39.98, 65.04, 45.02, 40.01, 65.03, 45.04, 39.97, 65.03
+	Voidblade Ambush, time=12.10, type=cdnp, spellId=1227048, triggerDeltas = 274.75, 2.44, 10.02, 3.30, 12.14, 12.12, 12.17, 12.12, 12.15, 12.13, 60.74, 0.93, 0.29, 10.95, 1.22, 0.00, 10.92, 2.53, 0.00, 9.62, 2.44, 0.00, 9.72, 2.43, 0.00, 9.73, 2.42, 0.00, 9.73, 2.42, 0.00, 9.70, 2.42, 0.01, 12.15, 0.00, 12.17, 0.00, 12.14, 0.00, 12.13, 0.00, 12.21, 2.43, 1.61, 0.17, 11.16, 0.83, 0.79, 10.57, 0.82, 1.03, 10.31, 0.82, 0.84
+		[274.75] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CA, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+			 Triggered 55x, delta times: 274.75, 2.44, 10.02, 3.30, 12.14, 12.12, 12.17, 12.12, 12.15, 12.13, 60.74, 0.93, 0.29, 10.95, 1.22, 0.00, 10.92, 2.53, 0.00, 9.62, 2.44, 0.00, 9.72, 2.43, 0.00, 9.73, 2.42, 0.00, 9.73, 2.42, 0.00, 9.70, 2.42, 0.01, 12.15, 0.00, 12.17, 0.00, 12.14, 0.00, 12.13, 0.00, 12.21, 2.43, 1.61, 0.17, 11.16, 0.83, 0.79, 10.57, 0.82, 1.03, 10.31, 0.82, 0.84
+	Soulfray Annihilation (%s), time=97.30, type=nextcount, spellId=1227276, triggerDeltas = 0.00, 19.98, 39.99, 40.01, 70.07, 40.01, 39.99, 70.06, 39.98, 40.02, 70.05, 40.01, 39.98
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 14, 28, 0
+		[ 19.98] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+			 Triggered 12x, delta times: 19.98, 39.99, 40.01, 70.07, 40.01, 39.99, 70.06, 39.98, 40.02, 70.05, 40.01, 39.98
+	Mystic Lash (%s), time=97.30, type=nextcount, spellId=1241100, triggerDeltas = 0.00, 5.99, 40.10, 39.96, 37.94, 32.06, 40.11, 39.93, 37.96, 32.08, 40.06, 39.99, 37.93, 32.07, 40.04, 40.05, 37.91, 32.04
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 14, 28, 0
+		[  5.99] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+			 Triggered 17x, delta times: 5.99, 40.10, 39.96, 37.94, 32.06, 40.11, 39.93, 37.96, 32.08, 40.06, 39.99, 37.93, 32.07, 40.04, 40.05, 37.91, 32.04
 
 Announces:
 	Soul Calling (%s), type=count, spellId=1225582, triggerDeltas = 13.99, 150.07, 150.04, 150.07, 150.09
@@ -106,24 +117,6 @@ Announces:
 		[470.46] Scheduled at 470.16 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps16: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000024, Dps16, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		[510.47] Scheduled at 510.17 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Tank1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		[550.45] Scheduled at 550.15 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Dps1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
-	Essence Implosion (%s), type=count, spellId=1227848, triggerDeltas = 26.30, 1.22, 39.05, 0.79, 39.20, 0.08, 70.93, 1.15, 37.46, 40.04, 0.01, 13.86, 0.00, 0.00, 0.41, 0.00, 56.15, 80.95, 12.65, 0.00, 0.00, 0.38, 0.00, 0.01, 55.85, 1.03, 39.27, 0.56, 39.40, 13.72, 0.00, 0.01, 0.79, 0.00, 0.44
-		[ 26.30] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-			 Triggered 8x, delta times: 26.30, 189.88, 53.91, 150.16, 56.24, 40.30, 39.96, 14.52
-		[ 27.52] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238207-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-			 Triggered 5x, delta times: 27.52, 242.98, 137.10, 12.65, 150.22
-		[ 66.57] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-			 Triggered 8x, delta times: 66.57, 189.65, 0.01, 13.86, 56.56, 93.99, 96.71, 53.92
-		[ 67.36] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238210-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-			 Triggered 5x, delta times: 67.36, 111.36, 241.91, 56.89, 94.19
-		[106.56] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238196-0000000002, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		[106.64] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238195-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		[177.57] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238197-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-			 Triggered 2x, delta times: 177.57, 92.93
-		[270.09] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238198-0000000002, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		[420.25] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238199-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		[420.63] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238201-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		[570.47] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238202-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		[570.48] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238203-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
 
 Special warnings:
 	Arcane Expulsion! (%s), type=count, spellId=1223859, triggerDeltas = 42.01, 39.98, 64.00, 46.06, 39.98, 64.02, 46.08, 39.99, 63.98, 46.06, 40.03, 64.00
@@ -168,17 +161,25 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 14, 28, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1225582 1227052 1241100 1223859 1242088 1225616, SPELL_CAST_SUCCESS 1227848 1227276 1240756, SPELL_AURA_APPLIED 1227049 1227049 1227276 1237607 1225626, SPELL_AURA_APPLIED_DOSE 1237607, SPELL_AURA_REMOVED 1227049 1227276 1225626, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1225582 1227052 1241100 1223859 1242088 1225616, SPELL_CAST_SUCCESS 1227848 1227276 1227048, SPELL_AURA_APPLIED 1227049 1227049 1227276 1237607 1225626, SPELL_AURA_APPLIED_DOSE 1237607, SPELL_AURA_REMOVED 1227049 1227276 1225626, UNIT_DIED
+		StartTimer: 6.0, Mystic Lash (1)
+		StartTimer: 14.0, Soul Calling (1)
+		StartTimer: 20.0, Soulfray Annihilation (1)
+		StartTimer: 30.0, Soulfire Convergence (1)
+		StartTimer: 42.0, Arcane Expulsion (1)
+	[  5.99] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (2)
 	[ 13.99] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (1)
 		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Soul Calling (2)
+	[ 19.98] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (2)
 	[ 19.98] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps19: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000029, Dps19, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(1.0, "Dps19") at 20.28 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 1
-	[ 26.30] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (1)
-	[ 27.52] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238207-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (2)
+	[ 30.01] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 40.0, Soulfire Convergence (2)
 	[ 33.54] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000004, Dps2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps2") at 33.84 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps2
@@ -194,13 +195,16 @@ Event trace:
 	[ 42.01] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (1)
 		PlaySound: VoicePack/carefly
+		StartTimer: 40.0, Arcane Expulsion (2)
+	[ 46.09] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (3)
+	[ 59.97] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (3)
 	[ 59.97] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank5: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank5, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(2.0, "Tank5") at 60.27 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 2
-	[ 66.57] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (3)
-	[ 67.36] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238210-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (4)
+	[ 70.01] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 65.0, Soulfire Convergence (3)
 	[ 73.52] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps13: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Dps13, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps13") at 73.82 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps13
@@ -216,13 +220,18 @@ Event trace:
 	[ 81.99] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (2)
 		PlaySound: VoicePack/carefly
+		StartTimer: 64.0, Arcane Expulsion (3)
+	[ 86.05] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 37.9, Mystic Lash (4)
+	[ 99.98] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 70.0, Soulfray Annihilation (4)
 	[100.01] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps18: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000028, Dps18, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(3.0, "Dps18") at 100.31 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 3
-	[106.56] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238196-0000000002, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (5)
-	[106.64] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238195-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (6)
+	[123.99] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 32.1, Mystic Lash (5)
+	[134.99] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 45.0, Soulfire Convergence (4)
 	[138.50] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000016, Healer1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Healer1") at 138.80 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Healer1
@@ -238,16 +247,20 @@ Event trace:
 	[145.99] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (3)
 		PlaySound: VoicePack/carefly
+		StartTimer: 46.1, Arcane Expulsion (4)
+	[156.05] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (6)
 	[164.06] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (2)
 		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Soul Calling (3)
+	[170.05] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (5)
 	[170.05] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps15: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000022, Dps15, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(4.0, "Dps15") at 170.35 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 4
-	[177.57] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238197-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (7)
-	[178.72] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238210-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (8)
+	[180.05] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 40.0, Soulfire Convergence (5)
 	[183.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps13: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Dps13, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps13") at 183.87 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps13
@@ -263,11 +276,16 @@ Event trace:
 	[192.05] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (4)
 		PlaySound: VoicePack/carefly
+		StartTimer: 40.0, Arcane Expulsion (5)
+	[196.16] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (7)
+	[210.06] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (6)
 	[210.06] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000016, Healer1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(5.0, "Healer1") at 210.36 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 5
-	[216.18] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (9)
+	[220.03] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 65.0, Soulfire Convergence (6)
 	[223.54] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps11: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000014, Dps11, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps11") at 223.84 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps11
@@ -283,23 +301,14 @@ Event trace:
 	[232.03] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (5)
 		PlaySound: VoicePack/carefly
+		StartTimer: 64.0, Arcane Expulsion (6)
+	[236.09] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 37.9, Mystic Lash (8)
+	[250.05] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 70.0, Soulfray Annihilation (7)
 	[250.07] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps8: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000011, Dps8, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(6.0, "Dps8") at 250.37 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 6
-	[256.22] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (10)
-	[256.23] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (11)
-	[270.09] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238198-0000000002, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (12)
-	[270.09] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (13)
-	[270.09] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (14)
-	[270.50] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238207-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (15)
-	[270.50] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238197-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (16)
 	[271.10] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (1)
 		PlaySound: VoicePack/kick1r
@@ -309,9 +318,15 @@ Event trace:
 	[271.10] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-0000000072, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (1)
 		PlaySound: VoicePack/kick1r
+	[274.05] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 32.1, Mystic Lash (9)
+	[274.75] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CA, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[275.97] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
+	[277.19] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[278.40] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
@@ -330,6 +345,8 @@ Event trace:
 	[284.47] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-0000000072, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (3)
 		PlaySound: VoicePack/kick3r
+	[285.07] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 45.0, Soulfire Convergence (7)
 	[285.66] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (4)
 		PlaySound: VoicePack/kick4r
@@ -339,12 +356,16 @@ Event trace:
 	[286.96] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-0000000072, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (4)
 		PlaySound: VoicePack/kick4r
+	[287.21] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CA, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[288.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000004, Dps2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps2") at 288.87 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps2
 	[289.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps17: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000026, Dps17, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps17") at 289.87 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps17
+	[290.51] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[290.58] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Tank1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Tank1") at 290.88 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Tank1
@@ -363,6 +384,7 @@ Event trace:
 	[296.05] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (6)
 		PlaySound: VoicePack/carefly
+		StartTimer: 46.1, Arcane Expulsion (7)
 	[296.59] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (7)
 		PlaySound: VoicePack/kickcast
@@ -378,9 +400,13 @@ Event trace:
 	[301.45] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-0000000072, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (7)
 		PlaySound: VoicePack/kickcast
+	[302.65] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[305.07] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (8)
 		PlaySound: VoicePack/kickcast
+	[306.13] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (10)
 	[306.28] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (8)
 		PlaySound: VoicePack/kickcast
@@ -399,6 +425,9 @@ Event trace:
 	[314.10] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (3)
 		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Soul Calling (4)
+	[314.77] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[316.00] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-0000000072, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (10)
 		PlaySound: VoicePack/kickcast
@@ -408,6 +437,8 @@ Event trace:
 	[318.42] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (10)
 		PlaySound: VoicePack/kickcast
+	[320.11] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (8)
 	[320.11] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps17: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000026, Dps17, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(7.0, "Dps17") at 320.41 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 7
@@ -423,8 +454,8 @@ Event trace:
 	[322.84] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (12)
 		PlaySound: VoicePack/kickcast
-	[326.65] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (17)
+	[326.94] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[326.94] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (12)
 		PlaySound: VoicePack/kickcast
@@ -434,6 +465,8 @@ Event trace:
 	[329.37] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (13)
 		PlaySound: VoicePack/kickcast
+	[330.09] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 40.0, Soulfire Convergence (8)
 	[333.02] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (13)
 		PlaySound: VoicePack/kickcast
@@ -458,6 +491,8 @@ Event trace:
 	[337.85] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (14)
 		PlaySound: VoicePack/kickcast
+	[339.06] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[340.29] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (15)
 		PlaySound: VoicePack/kickcast
@@ -467,18 +502,29 @@ Event trace:
 	[342.13] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (7)
 		PlaySound: VoicePack/carefly
+		StartTimer: 40.0, Arcane Expulsion (8)
 	[342.71] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (15)
 		PlaySound: VoicePack/kickcast
 	[345.15] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (16)
 		PlaySound: VoicePack/kickcast
+	[346.19] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (11)
 	[346.35] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-0000000072, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (15)
 		PlaySound: VoicePack/kickcast
+	[351.21] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[360.09] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (9)
 	[360.11] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank5: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank5, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(8.0, "Tank5") at 360.41 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 8
+	[363.34] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000072, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[370.10] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 65.0, Soulfire Convergence (9)
 	[373.61] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps10: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Dps10, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps10") at 373.91 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps10
@@ -494,23 +540,14 @@ Event trace:
 	[382.12] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (8)
 		PlaySound: VoicePack/carefly
+		StartTimer: 64.0, Arcane Expulsion (9)
+	[386.18] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 37.9, Mystic Lash (12)
+	[400.11] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 70.0, Soulfray Annihilation (10)
 	[400.11] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer3: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000025, Healer3, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(9.0, "Healer3") at 400.41 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 9
-	[407.60] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238207-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (18)
-	[420.25] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238207-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (19)
-	[420.25] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (20)
-	[420.25] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238199-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (21)
-	[420.63] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238210-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (22)
-	[420.63] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238201-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (23)
-	[420.64] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (24)
 	[421.65] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (1)
 		PlaySound: VoicePack/kick1r
@@ -520,6 +557,14 @@ Event trace:
 	[421.65] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (1)
 		PlaySound: VoicePack/kick1r
+	[424.08] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[424.11] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 32.1, Mystic Lash (13)
+	[425.01] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[425.30] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[427.72] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
@@ -535,6 +580,14 @@ Event trace:
 	[432.60] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E4, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (3)
 		PlaySound: VoicePack/kick3r
+	[435.13] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 45.0, Soulfire Convergence (10)
+	[436.25] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[437.47] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[437.47] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[438.63] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps12: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000017, Dps12, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps12") at 438.93 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps12
@@ -559,15 +612,22 @@ Event trace:
 	[446.10] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (9)
 		PlaySound: VoicePack/carefly
+		StartTimer: 46.1, Arcane Expulsion (10)
 	[447.19] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E4, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (5)
 		PlaySound: VoicePack/kick5r
 	[447.19] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (4)
 		PlaySound: VoicePack/kick4r
+	[448.39] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[448.39] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (5)
 		PlaySound: VoicePack/kick5r
+	[450.92] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[450.92] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[452.04] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (5)
 		PlaySound: VoicePack/kick5r
@@ -580,6 +640,10 @@ Event trace:
 	[455.66] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (6)
 		PlaySound: VoicePack/kickcast
+	[456.18] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (14)
+	[460.54] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[460.54] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E4, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (7)
 		PlaySound: VoicePack/kickcast
@@ -589,9 +653,14 @@ Event trace:
 	[460.91] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (7)
 		PlaySound: VoicePack/kickcast
+	[462.98] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[462.98] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[464.17] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (4)
 		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Soul Calling (5)
 	[466.62] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (8)
 		PlaySound: VoicePack/kickcast
@@ -601,28 +670,34 @@ Event trace:
 	[466.62] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (8)
 		PlaySound: VoicePack/kickcast
+	[470.16] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (11)
 	[470.16] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps16: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000024, Dps16, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(10.0, "Dps16") at 470.46 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 10
 	[471.50] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (9)
 		PlaySound: VoicePack/kickcast
+	[472.70] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[472.70] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000E4, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (9)
 		PlaySound: VoicePack/kickcast
 	[472.70] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (9)
 		PlaySound: VoicePack/kickcast
-	[476.49] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (25)
-	[477.52] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238210-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (26)
+	[475.13] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[475.13] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[478.78] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (10)
 		PlaySound: VoicePack/kickcast
 	[478.78] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (10)
 		PlaySound: VoicePack/kickcast
+	[480.17] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 40.0, Soulfire Convergence (11)
 	[482.42] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (11)
 		PlaySound: VoicePack/kickcast
@@ -632,6 +707,8 @@ Event trace:
 	[484.70] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000004, Dps2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps2") at 485.00 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps2
+	[484.86] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[485.69] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000023, Healer2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Healer2") at 485.99 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Healer2
@@ -641,6 +718,10 @@ Event trace:
 	[486.69] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Tank1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Tank1") at 486.99 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Tank1
+	[487.28] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[487.28] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[488.49] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-000000008A, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (12)
 		PlaySound: VoicePack/kickcast
@@ -650,31 +731,50 @@ Event trace:
 	[492.16] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (10)
 		PlaySound: VoicePack/carefly
+		StartTimer: 40.0, Arcane Expulsion (11)
+	[496.22] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (15)
+	[497.01] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[497.01] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (13)
 		PlaySound: VoicePack/kickcast
+	[499.43] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[499.43] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[502.65] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (14)
 		PlaySound: VoicePack/kickcast
+	[509.13] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E4, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[509.13] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (15)
 		PlaySound: VoicePack/kickcast
+	[510.17] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 40.0, Soulfray Annihilation (12)
 	[510.17] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Tank1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(11.0, "Tank1") at 510.47 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 11
+	[511.55] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[511.56] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[514.81] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (16)
 		PlaySound: VoicePack/kickcast
-	[516.79] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (27)
-	[517.35] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (28)
+	[520.14] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 65.0, Soulfire Convergence (12)
 	[522.49] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (17)
 		PlaySound: VoicePack/kickcast
 	[523.66] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank5: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank5, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Tank5") at 523.96 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Tank5
+	[523.71] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[523.71] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[524.67] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000007, Dps4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps4") at 524.97 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps4
@@ -690,15 +790,28 @@ Event trace:
 	[532.19] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (11)
 		PlaySound: VoicePack/carefly
+		StartTimer: 64.0, Arcane Expulsion (12)
 	[533.44] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (19)
 		PlaySound: VoicePack/kickcast
+	[535.88] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[535.88] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[536.27] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 37.9, Mystic Lash (16)
 	[539.52] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (20)
 		PlaySound: VoicePack/kickcast
 	[545.58] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (21)
 		PlaySound: VoicePack/kickcast
+	[548.02] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[548.02] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[550.15] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 70.0, Soulfray Annihilation (13)
 	[550.15] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Dps1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		ScheduleTask: announce1227276target:CombinedShow(12.0, "Dps1") at 550.45 (+0.30)
 			ShowAnnounce: Soulfray Annihilation on 12
@@ -708,32 +821,22 @@ Event trace:
 	[555.30] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (23)
 		PlaySound: VoicePack/kickcast
-	[556.75] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (29)
 	[559.75] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (24)
 		PlaySound: VoicePack/kickcast
+	[560.15] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CD, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[560.15] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[564.61] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (25)
 		PlaySound: VoicePack/kickcast
 	[568.68] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (26)
 		PlaySound: VoicePack/kickcast
-	[570.47] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238207-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (30)
-	[570.47] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238202-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (31)
-	[570.48] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238203-0000000001, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (32)
-	[571.27] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238204-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (33)
-	[571.27] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238205-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (34)
 	[571.52] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A6, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (1)
 		PlaySound: VoicePack/kick1r
-	[571.71] SPELL_CAST_SUCCESS: [Binding Machine: Essence Implosion] Creature-0-1-2810-1-238210-0000000003, Binding Machine, 0xa48, "", nil, 0x0, 1227848, Essence Implosion, 0, 0
-		ShowAnnounce: Essence Implosion (35)
 	[572.34] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000D0, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (1)
 		PlaySound: VoicePack/kick1r
@@ -743,12 +846,22 @@ Event trace:
 	[572.34] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000CD, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (27)
 		PlaySound: VoicePack/kickcast
+	[572.36] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000008A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[574.18] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 32.1, Mystic Lash (17)
+	[574.79] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A6, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[575.52] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A7, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
 	[576.40] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A6, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
+	[576.40] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CF, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[576.57] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A7, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[577.21] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A7, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (3)
 		PlaySound: VoicePack/kick3r
@@ -764,18 +877,26 @@ Event trace:
 	[581.61] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A6, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (4)
 		PlaySound: VoicePack/kick4r
+	[585.17] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 45.0, Soulfire Convergence (13)
 	[587.73] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000D0, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (3)
 		PlaySound: VoicePack/kick3r
 	[587.73] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A7, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (4)
 		PlaySound: VoicePack/kick4r
+	[587.73] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A6, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[588.56] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A6, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (5)
 		PlaySound: VoicePack/kick5r
+	[588.56] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CF, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[588.69] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps8: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000011, Dps8, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps8") at 588.99 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps8
+	[589.35] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A7, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[589.68] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps9: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, Player-1-00000012, Dps9, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
 		ScheduleTask: announce1225616target:CombinedShow("Dps9") at 589.98 (+0.30)
 			ShowAnnounce: Soulfire Convergence on Dps9
@@ -797,30 +918,46 @@ Event trace:
 	[596.19] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (12)
 		PlaySound: VoicePack/carefly
+		StartTimer: 46.1, Arcane Expulsion (13)
 	[598.30] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A6, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (7)
 		PlaySound: VoicePack/kickcast
 	[598.71] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A7, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (6)
 		PlaySound: VoicePack/kickcast
+	[599.92] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A6, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[600.74] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CF, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[601.14] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000D0, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (5)
 		PlaySound: VoicePack/kick5r
+	[601.77] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A7, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[603.15] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A6, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (8)
 		PlaySound: VoicePack/kickcast
 	[603.58] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A7, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (7)
 		PlaySound: VoicePack/kickcast
+	[606.22] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 39.9, Mystic Lash (18)
 	[608.08] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A6, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (9)
 		PlaySound: VoicePack/kickcast
 	[608.44] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A7, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (8)
 		PlaySound: VoicePack/kickcast
+	[612.08] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A6, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[612.90] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000CF, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[613.74] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A7, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
 	[614.26] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000005, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (5)
 		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Soul Calling (6)
 	[614.53] SPELL_CAST_START: [Shadowguard Mage: Void Volley] Creature-0-1-2810-1-237981-00000000A7, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Volley, 0, 0
 		ShowSpecialWarning: Void Volley - interrupt Shadowguard Mage! (9)
 		PlaySound: VoicePack/kickcast
