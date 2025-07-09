@@ -21,8 +21,6 @@ Findings:
 	Announce for spell ID 1248009 (Dark Terminus) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer Overwhelming Power (%s), time=44.00, type=cdcount, spellId=1228502 (time=31.00, variance=0.00) got refreshed early with 20.93s remaining
 		Refreshed by: [587.37] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
-	Timer Silencing Tempest (%s), time=97.30, type=cdcount, spellId=1228161 (time=63.00, variance=0.00) got refreshed early with 5.33s remaining
-		Refreshed by: [271.24] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 
 Unused objects:
 	[Special Warning] %d stacks of Overwhelming Power on you, type=stack, spellId=1228502
@@ -220,7 +218,7 @@ Event trace:
 	[213.59] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		StartTimer: 18.6, Overwhelming Power (1)
 		StartTimer: 68.7, Arcane Obliteration (1)
-		StartTimer: 63.0, Silencing Tempest (1)
+		StartTimer: 57.6, Silencing Tempest (1)
 		StartTimer: 149.9, Arcane Expulsion (2)
 	[219.61] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 		ShowAnnounce: Mana Splinter on Forgeweaver Araz
@@ -262,7 +260,7 @@ Event trace:
 	[315.24] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 		ShowSpecialWarning: Silencing Tempest (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 33.0, Silencing Tempest (3)
+		StartTimer: 21.0, Silencing Tempest (3)
 	[320.22] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (6)
 	[321.44] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Dps13: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Player-1-00000017, Dps13, 0x512, 1228506, Overwhelming Power, 0, DEBUFF, 2, 0
