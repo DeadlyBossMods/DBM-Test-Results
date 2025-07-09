@@ -1,0 +1,167 @@
+Test: TWW/ManaforgeOmega/Fractillus/Heroic/Wipe
+Mod:  DBM-Raids-WarWithin/2747
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1227378 (Crystal Encasement)
+	Unused event registration: SPELL_AURA_APPLIED 1231871 (Shockwave Slam)
+	Unused event registration: SPELL_CAST_START 1225938 (Entropic Conjunction)
+	Unused event registration: SPELL_CAST_START 1227367 (Shattershell)
+	Unused event registration: SPELL_CAST_START 1230610 (Entropic Conjunction)
+	Unused event registration: SPELL_CAST_START 1231871 (Shockwave Slam)
+
+Unused objects:
+	[Special Warning] Shockwave Slam - defensive, type=defensive, spellId=1231871
+	[Special Warning] Shockwave Slam on >%s< - taunt now, type=taunt, spellId=1231871
+	[Timer] Shattering Backhand AI, time=97.30, type=ai, spellId=1220394
+	[Timer] Shattershell AI, time=97.30, type=ai, spellId=1227373
+	[Timer] Shockwave Slam AI, time=97.30, type=ai, spellId=1231871
+	[Timer] Crystalline Eruption AI, time=97.30, type=ai, spellId=1233416
+
+Timers:
+	None
+
+Announces:
+	None
+
+Special warnings:
+	Shattering Backhand! (%s), type=count, spellId=1220394, triggerDeltas = 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
+		[ 37.75] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+			 Triggered 8x, delta times: 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
+	Enraged Shattering!, type=spell, spellId=1225673, triggerDeltas = 334.39
+		[334.39] SPELL_CAST_START: [Fractillus: Enraged Tantrum] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Tantrum, 0, 0
+	Shattershell - move to >%s<, type=moveto, spellId=1227373, triggerDeltas = 111.32, 39.27
+		[111.32] SPELL_AURA_APPLIED: [Fractillus->Tank3: Nether Crystallization] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1227373, Nether Crystallization, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 111.32, 39.27
+	Crystalline Eruption! (%s), type=count, spellId=1233416, triggerDeltas = 10.71, 17.03, 23.07, 17.07, 22.31, 17.11, 16.46, 6.05, 17.04, 23.07, 17.03, 21.87, 16.99, 23.13, 17.01, 22.77, 16.15, 17.00, 8.53
+		[ 10.71] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+			 Triggered 19x, delta times: 10.71, 17.03, 23.07, 17.07, 22.31, 17.11, 16.46, 6.05, 17.04, 23.07, 17.03, 21.87, 16.99, 23.13, 17.01, 22.77, 16.15, 17.00, 8.53
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/aesoon
+		[ 37.75] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+			 Triggered 8x, delta times: 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
+	VoicePack/specialsoon
+		[ 10.71] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+			 Triggered 19x, delta times: 10.71, 17.03, 23.07, 17.07, 22.31, 17.11, 16.46, 6.05, 17.04, 23.07, 17.03, 21.87, 16.99, 23.13, 17.01, 22.77, 16.15, 17.00, 8.53
+	VoicePack/stilldanger
+		[334.39] SPELL_CAST_START: [Fractillus: Enraged Tantrum] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Tantrum, 0, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1233416 1230610 1225938 1220394 1227367 1231871 1225673, SPELL_AURA_APPLIED 1227378 1227373 1231871
+	[ 10.71] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (1)
+		PlaySound: VoicePack/specialsoon
+	[ 27.74] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (2)
+		PlaySound: VoicePack/specialsoon
+	[ 37.75] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (1)
+		PlaySound: VoicePack/aesoon
+	[ 50.81] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (3)
+		PlaySound: VoicePack/specialsoon
+	[ 67.88] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (4)
+		PlaySound: VoicePack/specialsoon
+	[ 77.87] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (2)
+		PlaySound: VoicePack/aesoon
+	[ 90.19] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (5)
+		PlaySound: VoicePack/specialsoon
+	[107.30] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (6)
+		PlaySound: VoicePack/specialsoon
+	[111.32] SPELL_AURA_APPLIED: [Fractillus->Tank3: Nether Crystallization] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1227373, Nether Crystallization, 0, DEBUFF, 0
+		ShowSpecialWarning: Shattershell - move to Crystal Nexus
+	[117.19] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (3)
+		PlaySound: VoicePack/aesoon
+	[123.76] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (7)
+		PlaySound: VoicePack/specialsoon
+	[129.81] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (8)
+		PlaySound: VoicePack/specialsoon
+	[146.85] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (9)
+		PlaySound: VoicePack/specialsoon
+	[150.59] SPELL_AURA_APPLIED: [Fractillus->Tank3: Nether Crystallization] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1227373, Nether Crystallization, 0, DEBUFF, 0
+		ShowSpecialWarning: Shattershell - move to Crystal Nexus
+	[156.86] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (4)
+		PlaySound: VoicePack/aesoon
+	[169.92] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (10)
+		PlaySound: VoicePack/specialsoon
+	[186.95] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (11)
+		PlaySound: VoicePack/specialsoon
+	[196.56] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (5)
+		PlaySound: VoicePack/aesoon
+	[208.82] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (12)
+		PlaySound: VoicePack/specialsoon
+	[225.81] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (13)
+		PlaySound: VoicePack/specialsoon
+	[235.86] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (6)
+		PlaySound: VoicePack/aesoon
+	[248.94] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (14)
+		PlaySound: VoicePack/specialsoon
+	[265.95] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (15)
+		PlaySound: VoicePack/specialsoon
+	[275.99] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (7)
+		PlaySound: VoicePack/aesoon
+	[288.72] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (16)
+		PlaySound: VoicePack/specialsoon
+	[304.87] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (17)
+		PlaySound: VoicePack/specialsoon
+	[316.10] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (8)
+		PlaySound: VoicePack/aesoon
+	[321.87] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (18)
+		PlaySound: VoicePack/specialsoon
+	[330.40] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Crystalline Eruption! (19)
+		PlaySound: VoicePack/specialsoon
+	[334.39] SPELL_CAST_START: [Fractillus: Enraged Tantrum] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Tantrum, 0, 0
+		ShowSpecialWarning: Enraged Shattering!
+		PlaySound: VoicePack/stilldanger
+	[339.33] ENCOUNTER_END: 3133, Fractillus, 15, 20, 0, 0
+		EndCombat: ENCOUNTER_END
