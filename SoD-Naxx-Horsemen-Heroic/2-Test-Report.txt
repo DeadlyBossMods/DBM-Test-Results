@@ -6,7 +6,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 28833 (Mark of Blaumeux)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 28834 (Mark of Mograine)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 28835 (Mark of Zeliek)
-	Unused event registration: SPELL_AURA_REMOVED 29061 (Shield Wall)
 	Unused event registration: SPELL_CAST_SUCCESS 28832 (Mark of Korth'azz)
 	Unused event registration: SPELL_CAST_SUCCESS 28833 (Mark of Blaumeux)
 	Unused event registration: SPELL_CAST_SUCCESS 28834 (Mark of Mograine)
@@ -67,6 +66,7 @@ Timers:
 			 Triggered 2x, delta times: 37.20, 48.59
 		[ 43.68] SPELL_AURA_APPLIED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
 			 Triggered 2x, delta times: 43.68, 34.01
+		[ 63.66] SPELL_AURA_REMOVED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
 		[165.16] SPELL_AURA_APPLIED: [Sir Zeliek->Sir Zeliek: Shield Wall] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, 29061, Shield Wall, 0, BUFF, 0
 			 Triggered 2x, delta times: 165.16, 63.19
 		[181.35] SPELL_AURA_APPLIED: [Lady Blaumeux->Lady Blaumeux: Shield Wall] Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, Creature-0-1-533-1-16065-0000000001, Lady Blaumeux, 0xa48, 29061, Shield Wall, 0, BUFF, 0
@@ -219,6 +219,8 @@ Event trace:
 		StartTimer: 13.0, Mark 5
 		ScheduleTask: announce:Schedule(5.0) at 69.77 (+9.90)
 			ShowAnnounce: Mark 5 in 3 seconds
+	[ 63.66] SPELL_AURA_REMOVED: [Highlord Mograine->Highlord Mograine: Shield Wall] Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, Creature-0-1-533-1-16062-0000000001, Highlord Mograine, 0xa48, 29061, Shield Wall, 0, BUFF, 0
+		StopTimer: Timer29061target\tHighlord Mograine
 	[ 64.73] SPELL_CAST_SUCCESS: [Sir Zeliek->Dps6: Holy Wrath] Creature-0-1-533-1-16063-0000000001, Sir Zeliek, 0xa48, Player-1-00000008, Dps6, 0x512, 28883, Holy Wrath, 0, 0
 		ShowAnnounce: Holy Wrath on Dps6
 		StartTimer: 14.5, Holy Wrath
