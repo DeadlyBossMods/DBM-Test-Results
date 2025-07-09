@@ -2,27 +2,55 @@ Test: TWW/ManaforgeOmega/Fractillus/Normal/Kill
 Mod:  DBM-Raids-WarWithin/2747
 
 Findings:
+	Unused event registration: RAID_BOSS_WHISPER
 	Unused event registration: SPELL_AURA_APPLIED 1227373 (Shattershell)
 	Unused event registration: SPELL_AURA_APPLIED 1227378 (Crystal Encasement)
 	Unused event registration: SPELL_AURA_APPLIED 1231871 (Shockwave Slam)
+	Unused event registration: SPELL_AURA_APPLIED 1247424 (Null Consumption)
+	Unused event registration: SPELL_AURA_REMOVED 1247424 (Null Consumption)
 	Unused event registration: SPELL_CAST_START 1225673 (Enraged Shattering)
-	Unused event registration: SPELL_CAST_START 1225938 (Entropic Conjunction)
-	Unused event registration: SPELL_CAST_START 1227367 (Shattershell)
-	Unused event registration: SPELL_CAST_START 1230610 (Entropic Conjunction)
 	Unused event registration: SPELL_CAST_START 1231871 (Shockwave Slam)
 
 Unused objects:
+	[Announce] Crystalline Eruption on >%s<, type=target, spellId=1233416
+	[Special Warning] Shattering Backhand on you, type=you, spellId=1220394
 	[Special Warning] Enraged Shattering!, type=spell, spellId=1225673
 	[Special Warning] Shattershell - move to >%s<, type=moveto, spellId=1227373
 	[Special Warning] Shockwave Slam - defensive, type=defensive, spellId=1231871
 	[Special Warning] Shockwave Slam on >%s< - taunt now, type=taunt, spellId=1231871
-	[Timer] Shattering Backhand AI, time=97.30, type=ai, spellId=1220394
-	[Timer] Shattershell AI, time=97.30, type=ai, spellId=1227373
-	[Timer] Shockwave Slam AI, time=97.30, type=ai, spellId=1231871
-	[Timer] Crystalline Eruption AI, time=97.30, type=ai, spellId=1233416
+	[Special Warning] Crystalline Eruption on you, type=you, spellId=1233416
+	[Special Warning] Null Consumption - move away from others, type=moveaway, spellId=1247424
+	[Yell] %d, type=shortfade, spellId=1247424
+	[Yell] Null Consumption, type=shortyell, spellId=1247424
 
 Timers:
-	None
+	Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394, triggerDeltas = 0.00, 38.00, 40.22, 40.16, 40.24
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		[ 38.00] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+			 Triggered 4x, delta times: 38.00, 40.22, 40.16, 40.24
+	Shattershell (%s), time=40.50, type=varcount, spellId=1227373, triggerDeltas = 0.00, 31.68, 40.24, 40.16, 40.20, 40.24
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		[ 31.68] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000365, 1227367, Fractillus, 72.7, 93, Tank1, 0
+		[ 71.92] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000300, 1227367, Fractillus, 54, 94, Tank1, 0
+		[112.08] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-000000018B, 1227367, Fractillus, 36.3, 97, Dps19, 0
+		[152.28] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000200, 1227367, Fractillus, 18.2, 97, Tank1, 0
+		[192.52] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000248, 1227367, Fractillus, 3.1, 97, Tank1, 0
+	Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+	Crystalline Eruption (%s), time=23.10, type=varcount, spellId=1233416, triggerDeltas = 0.00, 3.62, 17.16, 16.03, 8.55, 16.78, 22.15, 17.02, 23.14, 16.86, 16.10, 8.57, 16.16
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		[  3.62] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000002B7, 1233411, Fractillus, 99.6, 9, Dps19, 0
+		[ 20.78] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000380, 1233411, Fractillus, 81.1, 60, Tank1, 0
+		[ 36.81] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000357, 1233411, Fractillus, 69.9, 100, Tank1, 0
+		[ 45.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000024C, 1233411, Fractillus, 65.8, 15, Dps19, 0
+		[ 62.14] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000016D, 1233411, Fractillus, 57.3, 66, Tank1, 0
+		[ 84.29] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000001B9, 1233411, Fractillus, 49.9, 12, Tank1, 0
+		[101.31] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000217, 1233411, Fractillus, 42.2, 64, Dps19, 0
+		[124.45] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000278, 1233411, Fractillus, 32.8, 12, Dps19, 0
+		[141.31] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000212, 1233411, Fractillus, 24.3, 64, Dps19, 0
+		[157.41] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000251, 1233411, Fractillus, 16.1, 100, Tank1, 0
+		[165.98] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000151, 1233411, Fractillus, 13.1, 16, Tank1, 0
+		[182.14] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000019C, 1233411, Fractillus, 6.9, 67, Dps19, 0
 
 Announces:
 	None
@@ -31,9 +59,6 @@ Special warnings:
 	Shattering Backhand! (%s), type=count, spellId=1220394, triggerDeltas = 38.00, 40.22, 40.16, 40.24
 		[ 38.00] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 			 Triggered 4x, delta times: 38.00, 40.22, 40.16, 40.24
-	Crystalline Eruption! (%s), type=count, spellId=1233416, triggerDeltas = 10.64, 17.23, 15.92, 8.56, 16.82, 22.11, 17.05, 23.14, 16.86, 16.09, 8.56, 16.17
-		[ 10.64] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-			 Triggered 12x, delta times: 10.64, 17.23, 15.92, 8.56, 16.82, 22.11, 17.05, 23.14, 16.86, 16.09, 8.56, 16.17
 
 Yells:
 	None
@@ -42,9 +67,6 @@ Voice pack sounds:
 	VoicePack/aesoon
 		[ 38.00] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 			 Triggered 4x, delta times: 38.00, 40.22, 40.16, 40.24
-	VoicePack/specialsoon
-		[ 10.64] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-			 Triggered 12x, delta times: 10.64, 17.23, 15.92, 8.56, 16.82, 22.11, 17.05, 23.14, 16.86, 16.09, 8.56, 16.17
 
 Icons:
 	None
@@ -52,66 +74,62 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1233416 1230610 1225938 1220394 1227367 1231871 1225673, SPELL_AURA_APPLIED 1227378 1227373 1231871
-	[ 10.64] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (1)
-		PlaySound: VoicePack/specialsoon
-	[ 27.87] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (2)
-		PlaySound: VoicePack/specialsoon
+		RegisterEvents: Regular, SPELL_CAST_START 1220394 1231871 1225673, SPELL_AURA_APPLIED 1227378 1227373 1231871 1247424, SPELL_AURA_REMOVED 1247424, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		StartTimer: 3.7, Crystalline Eruption (1)
+		StartTimer: 37.8, Shattering Backhand (1)
+		StartTimer: 31.5, Shattershell (1)
+		StartTimer: 15.9, Shockwave Slam (1)
+	[  3.62] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000002B7, 1233411, Fractillus, 99.6, 9, Dps19, 0
+		StartTimer: 23.1, Crystalline Eruption (2)
+	[ 20.78] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000380, 1233411, Fractillus, 81.1, 60, Tank1, 0
+		StartTimer: 23.1, Crystalline Eruption (3)
+	[ 31.68] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000365, 1227367, Fractillus, 72.7, 93, Tank1, 0
+		StartTimer: 40.5, Shattershell (2)
+	[ 36.81] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000357, 1233411, Fractillus, 69.9, 100, Tank1, 0
+		StartTimer: 23.1, Crystalline Eruption (4)
 	[ 38.00] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 		ShowSpecialWarning: Shattering Backhand! (1)
 		PlaySound: VoicePack/aesoon
-	[ 43.79] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (3)
-		PlaySound: VoicePack/specialsoon
-	[ 52.35] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (4)
-		PlaySound: VoicePack/specialsoon
-	[ 69.17] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (5)
-		PlaySound: VoicePack/specialsoon
+		StartTimer: 39.3, Shattering Backhand (Unknown)
+	[ 45.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000024C, 1233411, Fractillus, 65.8, 15, Dps19, 0
+		StartTimer: 23.1, Crystalline Eruption (5)
+	[ 62.14] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000016D, 1233411, Fractillus, 57.3, 66, Tank1, 0
+		StartTimer: 23.1, Crystalline Eruption (6)
+	[ 71.92] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000300, 1227367, Fractillus, 54, 94, Tank1, 0
+		StartTimer: 40.5, Shattershell (3)
 	[ 78.22] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 		ShowSpecialWarning: Shattering Backhand! (2)
 		PlaySound: VoicePack/aesoon
-	[ 91.28] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (6)
-		PlaySound: VoicePack/specialsoon
-	[108.33] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (7)
-		PlaySound: VoicePack/specialsoon
+		StartTimer: 39.3, Shattering Backhand (Unknown)
+	[ 84.29] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000001B9, 1233411, Fractillus, 49.9, 12, Tank1, 0
+		StartTimer: 23.1, Crystalline Eruption (7)
+	[101.31] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000217, 1233411, Fractillus, 42.2, 64, Dps19, 0
+		StartTimer: 23.1, Crystalline Eruption (8)
+	[112.08] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-000000018B, 1227367, Fractillus, 36.3, 97, Dps19, 0
+		StartTimer: 40.5, Shattershell (4)
 	[118.38] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 		ShowSpecialWarning: Shattering Backhand! (3)
 		PlaySound: VoicePack/aesoon
-	[131.47] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (8)
-		PlaySound: VoicePack/specialsoon
-	[148.33] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (9)
-		PlaySound: VoicePack/specialsoon
+		StartTimer: 39.3, Shattering Backhand (Unknown)
+	[124.45] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000278, 1233411, Fractillus, 32.8, 12, Dps19, 0
+		StartTimer: 23.1, Crystalline Eruption (9)
+	[141.31] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000212, 1233411, Fractillus, 24.3, 64, Dps19, 0
+		StartTimer: 23.1, Crystalline Eruption (10)
+	[152.28] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000200, 1227367, Fractillus, 18.2, 97, Tank1, 0
+		StartTimer: 40.5, Shattershell (5)
+	[157.41] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000251, 1233411, Fractillus, 16.1, 100, Tank1, 0
+		StartTimer: 23.1, Crystalline Eruption (11)
 	[158.62] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 		ShowSpecialWarning: Shattering Backhand! (4)
 		PlaySound: VoicePack/aesoon
-	[164.42] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (10)
-		PlaySound: VoicePack/specialsoon
-	[172.98] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (11)
-		PlaySound: VoicePack/specialsoon
-	[189.15] SPELL_CAST_START: [Fractillus: Entropic Conjunction] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233416, Entropic Conjunction, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Crystalline Eruption! (12)
-		PlaySound: VoicePack/specialsoon
+		StartTimer: 39.3, Shattering Backhand (Unknown)
+	[165.98] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000151, 1233411, Fractillus, 13.1, 16, Tank1, 0
+		StartTimer: 23.1, Crystalline Eruption (12)
+	[182.14] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000019C, 1233411, Fractillus, 6.9, 67, Dps19, 0
+		StartTimer: 23.1, Crystalline Eruption (13)
+	[192.52] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000248, 1227367, Fractillus, 3.1, 97, Tank1, 0
+		StartTimer: 40.5, Shattershell (6)
 	[198.44] ENCOUNTER_END: 3133, Fractillus, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1247424
