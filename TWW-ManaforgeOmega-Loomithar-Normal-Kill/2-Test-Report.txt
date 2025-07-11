@@ -10,7 +10,6 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1226311 (Infusion Tether)
 	Unused event registration: SPELL_AURA_REMOVED 1238502 (Woven Ward)
 	Timer for spell ID 1226315 (Infusion Tether) is triggered by event SPELL_AURA_APPLIED 1226311 (Infusion Tether)
-	Timer for spell ID 1237307 (Lair Weaving) is triggered by event SPELL_CAST_START 1227782 (Arcane Outrage)
 
 Unused objects:
 	[Announce] Infusion Tether faded, type=fades, spellId=1226315
@@ -19,7 +18,7 @@ Unused objects:
 	[Special Warning] Writhing Wave on >%s< - taunt now, type=taunt, spellId=1227226
 	[Special Warning] Piercing Strand - defensive, type=defensive, spellId=1227263
 	[Special Warning] Piercing Strand on >%s< - taunt now, type=taunt, spellId=1227263
-	[Special Warning] Lair Weaving on you, type=you, spellId=1237307
+	[Special Warning] Arcane Outrage on you, type=you, spellId=1227782
 	[Yell] Infusion Tether, type=shortyell, spellId=1226315
 
 Timers:
@@ -50,6 +49,11 @@ Timers:
 		[  9.48] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
 			 Triggered 18x, delta times: 9.48, 6.02, 40.48, 4.00, 34.49, 5.99, 40.52, 4.03, 34.49, 6.01, 40.48, 4.03, 34.47, 6.00, 40.47, 4.04, 34.51, 5.99
 		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+	Arcane Outrage (%s), time=20.00, type=nextcount, spellId=1227782, triggerDeltas = 379.48, 23.04, 20.00, 19.98
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+		[392.53] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227775-00000001F7, 1227775, Loom'ithar, 41.2, 0, ??, 0
+		[402.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+			 Triggered 3x, delta times: 402.52, 20.00, 19.98
 	Unbound Rage, time=5.80, type=cast, spellId=1228059, triggerDeltas = 379.48
 		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
 	Lair Weaving (%s), time=85.00, type=nextcount, spellId=1237272, triggerDeltas = 0.00, 43.97, 85.00, 85.02, 84.97
@@ -57,11 +61,6 @@ Timers:
 		[ 43.97] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 			 Triggered 4x, delta times: 43.97, 85.00, 85.02, 84.97
 		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
-	Lair Weaving (%s), time=20.00, type=nextcount, spellId=1237307, triggerDeltas = 379.48, 23.04, 20.00, 19.98
-		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
-		[392.53] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227775-00000001F7, 1227775, Loom'ithar, 41.2, 0, ??, 0
-		[402.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
-			 Triggered 3x, delta times: 402.52, 20.00, 19.98
 
 Announces:
 	Infusion Tether on >%s<, type=target, spellId=1226315, triggerDeltas = 22.31, 39.01, 45.96, 39.03, 45.99, 38.98, 46.04, 39.02, 46.01
@@ -258,29 +257,29 @@ Event trace:
 		PlaySound: VoicePack/carefly
 		StartTimer: 5.8, Unbound Rage
 		StartTimer: 13.0, Writhing Wave (1)
-		StartTimer: 23.0, Lair Weaving (1)
+		StartTimer: 23.0, Arcane Outrage (1)
 	[392.53] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227775-00000001F7, 1227775, Loom'ithar, 41.2, 0, ??, 0
 		StartTimer: 16.0, Writhing Wave (1)
 		UpdateTimer: Timer1227226nextcount\t1, 13, 16
-		UpdateTimer: Timer1237307nextcount\t1, 13, 23
+		UpdateTimer: Timer1227782nextcount\t1, 13, 23
 	[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (1)
 		StartTimer: 20.0, Writhing Wave (2)
 		PlaySound: VoicePack/shareone
 	[402.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
-		StartTimer: 20.0, Lair Weaving (2)
+		StartTimer: 20.0, Arcane Outrage (2)
 	[415.51] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (2)
 		StartTimer: 20.0, Writhing Wave (3)
 		PlaySound: VoicePack/sharetwo
 	[422.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
-		StartTimer: 20.0, Lair Weaving (3)
+		StartTimer: 20.0, Arcane Outrage (3)
 	[435.55] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (3)
 		StartTimer: 20.0, Writhing Wave (4)
 		PlaySound: VoicePack/shareone
 	[442.50] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
-		StartTimer: 20.0, Lair Weaving (4)
+		StartTimer: 20.0, Arcane Outrage (4)
 	[455.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (4)
 		StartTimer: 20.0, Writhing Wave (5)
