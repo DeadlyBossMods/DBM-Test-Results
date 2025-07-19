@@ -23,29 +23,20 @@ Findings:
 	Timer for spell ID 442428 (Decimate) is triggered by event SPELL_CAST_START 456420 (Shattering Sweep)
 
 Unused objects:
-	[Special Warning] Expose - defensive, type=defensive, spellId=435401
-	[Special Warning] Phase Lunge - defensive, type=defensive, spellId=435403
-	[Special Warning] Phase Lunge on >%s< - taunt now, type=taunt, spellId=435410
-	[Special Warning] Expose on >%s< - taunt now, type=taunt, spellId=438845
 	[Special Warning] %s damage - move away, type=gtfo, spellId=459785
+	[Special Warning] Expose on >%s< - taunt now, type=taunt, spellId=438845
+	[Special Warning] Phase Lunge on >%s< - taunt now, type=taunt, spellId=435410
+	[Special Warning] Phase Lunge - defensive, type=defensive, spellId=435403
+	[Special Warning] Expose - defensive, type=defensive, spellId=435401
 
 Timers:
-	Charge (%s), time=42.60, type=cdcount, spellId=433517, triggerDeltas = 0.00, 12.37, 28.11, 49.86, 21.75, 27.89, 48.50, 19.47, 27.92, 50.01, 21.73, 27.94
+	Cosmic Shards fades, time=6.00, type=fades, spellId=459273, triggerDeltas = 53.83, 0.01, 0.06, 0.00, 0.10, 0.01, 0.06, 26.52, 0.09, 0.02, 0.00, 0.19, 37.75, 0.01, 34.15, 0.00, 0.01, 0.07, 0.00, 0.07, 0.07, 26.72, 0.05, 0.07, 0.06, 62.34, 0.01, 9.03, 0.10, 0.00, 0.05, 27.84, 0.00, 0.06, 0.01, 0.11, 0.04, 34.41, 0.02
+		[ 53.83] SPELL_AURA_APPLIED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
+			 Triggered 9x, delta times: 53.83, 26.76, 38.05, 34.16, 26.94, 62.52, 9.04, 27.99, 34.63
+		[ 53.84] SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 2, 0
+			 Triggered 30x, delta times: 53.84, 0.06, 0.00, 0.10, 0.01, 0.06, 26.61, 0.02, 0.00, 0.19, 37.76, 34.15, 0.01, 0.07, 0.00, 0.07, 0.07, 26.77, 0.07, 0.06, 62.35, 9.13, 0.00, 0.05, 27.84, 0.06, 0.01, 0.11, 0.04, 34.43
+	Sweep (%s), time=97.30, type=cdcount, spellId=456420, triggerDeltas = 0.00, 90.34, 98.14, 97.40
 		[  0.00] ENCOUNTER_START: 2898, Sikran, Captain of the Sureki, 16, 20, 0
-		[ 12.37] SPELL_CAST_SUCCESS: [Sikran: Phase Blades] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 433475, Phase Blades, 0, 0
-			 Triggered 8x, delta times: 12.37, 28.11, 71.61, 27.89, 67.97, 27.92, 71.74, 27.94
-		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
-			 Triggered 3x, delta times: 90.34, 98.14, 97.40
-	Tank Combo (%s), time=22.00, type=cdcount, spellId=439511, triggerDeltas = 0.00, 6.28, 25.69, 25.54, 32.83, 12.17, 26.72, 26.45, 32.80, 12.16, 26.72, 26.74, 31.78, 12.17, 26.71
-		[  0.00] ENCOUNTER_START: 2898, Sikran, Captain of the Sureki, 16, 20, 0
-		[  6.28] SPELL_CAST_START: [Sikran: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 432965, Expose, 0, 0
-			 Triggered 11x, delta times: 6.28, 25.69, 25.54, 45.00, 26.72, 26.45, 44.96, 26.72, 26.74, 43.95, 26.71
-		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
-			 Triggered 3x, delta times: 90.34, 98.14, 97.40
-	Rain of Arrows (%s), time=52.30, type=cdcount, spellId=439559, triggerDeltas = 0.00, 22.17, 68.17, 19.49, 27.89, 50.76, 20.70, 27.91, 48.79, 19.47, 27.92
-		[  0.00] ENCOUNTER_START: 2898, Sikran, Captain of the Sureki, 16, 20, 0
-		[ 22.17] SPELL_CAST_START: [Sikran: Rain of Arrows] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 439559, Rain of Arrows, 0, 0
-			 Triggered 7x, delta times: 22.17, 87.66, 27.89, 71.46, 27.91, 68.26, 27.92
 		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
 			 Triggered 3x, delta times: 90.34, 98.14, 97.40
 	Decimate (%s), time=38.10, type=cdcount, spellId=442428, triggerDeltas = 0.00, 51.61, 38.73, 60.14, 38.00, 60.62, 36.78
@@ -54,23 +45,26 @@ Timers:
 			 Triggered 3x, delta times: 51.61, 98.87, 98.62
 		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
 			 Triggered 3x, delta times: 90.34, 98.14, 97.40
-	Sweep (%s), time=97.30, type=cdcount, spellId=456420, triggerDeltas = 0.00, 90.34, 98.14, 97.40
+	Rain of Arrows (%s), time=52.30, type=cdcount, spellId=439559, triggerDeltas = 0.00, 22.17, 68.17, 19.49, 27.89, 50.76, 20.70, 27.91, 48.79, 19.47, 27.92
 		[  0.00] ENCOUNTER_START: 2898, Sikran, Captain of the Sureki, 16, 20, 0
+		[ 22.17] SPELL_CAST_START: [Sikran: Rain of Arrows] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 439559, Rain of Arrows, 0, 0
+			 Triggered 7x, delta times: 22.17, 87.66, 27.89, 71.46, 27.91, 68.26, 27.92
 		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
 			 Triggered 3x, delta times: 90.34, 98.14, 97.40
-	Cosmic Shards fades, time=6.00, type=fades, spellId=459273, triggerDeltas = 53.83, 0.01, 0.06, 0.00, 0.10, 0.01, 0.06, 26.52, 0.09, 0.02, 0.00, 0.19, 37.75, 0.01, 34.15, 0.00, 0.01, 0.07, 0.00, 0.07, 0.07, 26.72, 0.05, 0.07, 0.06, 62.34, 0.01, 9.03, 0.10, 0.00, 0.05, 27.84, 0.00, 0.06, 0.01, 0.11, 0.04, 34.41, 0.02
-		[ 53.83] SPELL_AURA_APPLIED: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 0
-			 Triggered 9x, delta times: 53.83, 26.76, 38.05, 34.16, 26.94, 62.52, 9.04, 27.99, 34.63
-		[ 53.84] SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 2, 0
-			 Triggered 30x, delta times: 53.84, 0.06, 0.00, 0.10, 0.01, 0.06, 26.61, 0.02, 0.00, 0.19, 37.76, 34.15, 0.01, 0.07, 0.00, 0.07, 0.07, 26.77, 0.07, 0.06, 62.35, 9.13, 0.00, 0.05, 27.84, 0.06, 0.01, 0.11, 0.04, 34.43
+	Tank Combo (%s), time=22.00, type=cdcount, spellId=439511, triggerDeltas = 0.00, 6.28, 25.69, 25.54, 32.83, 12.17, 26.72, 26.45, 32.80, 12.16, 26.72, 26.74, 31.78, 12.17, 26.71
+		[  0.00] ENCOUNTER_START: 2898, Sikran, Captain of the Sureki, 16, 20, 0
+		[  6.28] SPELL_CAST_START: [Sikran: Expose] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 432965, Expose, 0, 0
+			 Triggered 11x, delta times: 6.28, 25.69, 25.54, 45.00, 26.72, 26.45, 44.96, 26.72, 26.74, 43.95, 26.71
+		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
+			 Triggered 3x, delta times: 90.34, 98.14, 97.40
+	Charge (%s), time=42.60, type=cdcount, spellId=433517, triggerDeltas = 0.00, 12.37, 28.11, 49.86, 21.75, 27.89, 48.50, 19.47, 27.92, 50.01, 21.73, 27.94
+		[  0.00] ENCOUNTER_START: 2898, Sikran, Captain of the Sureki, 16, 20, 0
+		[ 12.37] SPELL_CAST_SUCCESS: [Sikran: Phase Blades] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 433475, Phase Blades, 0, 0
+			 Triggered 8x, delta times: 12.37, 28.11, 71.61, 27.89, 67.97, 27.92, 71.74, 27.94
+		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
+			 Triggered 3x, delta times: 90.34, 98.14, 97.40
 
 Announces:
-	Charge incoming debuff (%s), type=incomingcount, spellId=433517, triggerDeltas = 12.37, 28.11, 28.00, 43.61, 27.89, 27.68, 40.29, 27.92, 27.97, 43.77, 27.94
-		[ 12.37] SPELL_CAST_SUCCESS: [Sikran: Phase Blades] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 433475, Phase Blades, 0, 0
-			 Triggered 11x, delta times: 12.37, 28.11, 28.00, 43.61, 27.89, 27.68, 40.29, 27.92, 27.97, 43.77, 27.94
-	Decimate incoming debuff (%s), type=incomingcount, spellId=442428, triggerDeltas = 51.61, 26.84, 72.03, 27.11, 71.51, 27.98
-		[ 51.61] SPELL_CAST_START: [Sikran: Decimate] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 442428, Decimate, 0, 0
-			 Triggered 6x, delta times: 51.61, 26.84, 72.03, 27.11, 71.51, 27.98
 	Cosmic Shards (%s), type=count, spellId=459273, triggerDeltas = 54.57, 26.82, 37.76, 34.37, 26.90, 62.35, 9.18, 28.06, 34.43
 		[ 54.57] Scheduled at 54.07 by SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-0000000099, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 7, 0
 		[ 81.39] Scheduled at 80.89 by SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-000000009D, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 5, 0
@@ -81,14 +75,20 @@ Announces:
 		[251.95] Scheduled at 251.45 by SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-000000006E, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 4, 0
 		[280.01] Scheduled at 279.51 by SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-00000000B8, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 6, 0
 		[314.44] Scheduled at 313.94 by SPELL_AURA_APPLIED_DOSE: [Cosmic Simulacrum->Dps19: Cosmic Shards] Creature-0-1-2657-1-228746-000000008D, Cosmic Simulacrum, 0xa48, Player-1-00000019, Dps19, 0x511, 459273, Cosmic Shards, 0, DEBUFF, 2, 0
+	Decimate incoming debuff (%s), type=incomingcount, spellId=442428, triggerDeltas = 51.61, 26.84, 72.03, 27.11, 71.51, 27.98
+		[ 51.61] SPELL_CAST_START: [Sikran: Decimate] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 442428, Decimate, 0, 0
+			 Triggered 6x, delta times: 51.61, 26.84, 72.03, 27.11, 71.51, 27.98
+	Charge incoming debuff (%s), type=incomingcount, spellId=433517, triggerDeltas = 12.37, 28.11, 28.00, 43.61, 27.89, 27.68, 40.29, 27.92, 27.97, 43.77, 27.94
+		[ 12.37] SPELL_CAST_SUCCESS: [Sikran: Phase Blades] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 433475, Phase Blades, 0, 0
+			 Triggered 11x, delta times: 12.37, 28.11, 28.00, 43.61, 27.89, 27.68, 40.29, 27.92, 27.97, 43.77, 27.94
 
 Special warnings:
-	Rain of Arrows (%s) - dodge attack, type=dodgecount, spellId=439559, triggerDeltas = 24.19, 40.20, 47.46, 27.86, 27.70, 43.75, 27.93, 27.94, 40.32, 27.93
-		[ 24.19] SPELL_CAST_SUCCESS: [Sikran: Rain of Arrows] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 439559, Rain of Arrows, 0, 0
-			 Triggered 10x, delta times: 24.19, 40.20, 47.46, 27.86, 27.70, 43.75, 27.93, 27.94, 40.32, 27.93
 	Sweep - run away (%s), type=runcount, spellId=456420, triggerDeltas = 90.34, 98.14, 97.40
 		[ 90.34] SPELL_CAST_START: [Sikran: Shattering Sweep] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 456420, Shattering Sweep, 0, 0
 			 Triggered 3x, delta times: 90.34, 98.14, 97.40
+	Rain of Arrows (%s) - dodge attack, type=dodgecount, spellId=439559, triggerDeltas = 24.19, 40.20, 47.46, 27.86, 27.70, 43.75, 27.93, 27.94, 40.32, 27.93
+		[ 24.19] SPELL_CAST_SUCCESS: [Sikran: Rain of Arrows] Creature-0-1-2657-1-214503-0000000001, Sikran, 0xa48, "", nil, 0x0, 439559, Rain of Arrows, 0, 0
+			 Triggered 10x, delta times: 24.19, 40.20, 47.46, 27.86, 27.70, 43.75, 27.93, 27.94, 40.32, 27.93
 
 Yells:
 	None

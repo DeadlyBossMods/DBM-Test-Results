@@ -29,26 +29,28 @@ Findings:
 Unused objects:
 	[Announce] Rolling Rubbish (%s), type=count, spellId=461536
 	[Announce] Marked For ""Recycling"" on >%s<, type=target, spellId=1220648
-	[Special Warning] Rolling Rubbish on >%s< - taunt now, type=taunt, spellId=461536
 	[Special Warning] Demolish - defensive, type=defensive, spellId=464112
-	[Special Warning] Meltdown - defensive, type=defensive, spellId=1217954
-	[Special Warning] Prototype Powercoil on you, type=you, spellId=1218704
+	[Special Warning] Rolling Rubbish on >%s< - taunt now, type=taunt, spellId=461536
 	[Special Warning] Marked For ""Recycling"" on you, type=you, spellId=1220648
+	[Special Warning] Prototype Powercoil on you, type=you, spellId=1218704
+	[Special Warning] Meltdown - defensive, type=defensive, spellId=1217954
 	[Timer] The Recycler, time=14.00, type=castpnp, spellId=1220752
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=461536
 
 Timers:
 	Berserk, time=480.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
-	Rolling Rubbish fades, time=20.00, type=fades, spellId=461536, triggerDeltas = 27.75, 123.58, 102.20, 102.23
-		[ 27.75] SPELL_AURA_APPLIED: [->Tank3: Rolling Rubbish] "", nil, 0x0, Player-1-00000012, Tank3, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
-			 Triggered 4x, delta times: 27.75, 123.58, 102.20, 102.23
-		[ 39.35] SPELL_AURA_REMOVED: [->Tank3: Rolling Rubbish] "", nil, 0x0, Player-1-00000012, Tank3, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
-			 Triggered 4x, delta times: 39.35, 120.08, 110.60, 99.84
-	Demolish (%s), time=51.10, type=nextcount, spellId=464112, triggerDeltas = 0.00, 17.75, 51.09, 52.29, 20.17, 51.13, 51.10, 51.11, 51.09
+	Short Fuse, time=30.00, type=castpnp, spellId=473115, triggerDeltas = 25.32, 0.20, 0.25, 50.61, 0.20, 0.27, 72.03, 0.05, 0.11, 0.12, 0.11, 50.65, 0.13, 0.13, 0.08, 0.10, 50.67, 0.11, 0.14, 0.08, 0.15, 50.68, 0.10, 0.09, 0.20, 0.04, 50.69, 0.11, 0.07, 0.15, 0.11
+		[ 25.32] SPELL_AURA_APPLIED: [Territorial Bombshell->Territorial Bombshell: Short Fuse] Creature-0-1-2769-1-231531-000000000E, Territorial Bombshell, 0xa48, Creature-0-1-2769-1-231531-000000000E, Territorial Bombshell, 0xa48, 473115, Short Fuse, 0, BUFF, 0
+			 Triggered 31x, delta times: 25.32, 0.20, 0.25, 50.61, 0.20, 0.27, 72.03, 0.05, 0.11, 0.12, 0.11, 50.65, 0.13, 0.13, 0.08, 0.10, 50.67, 0.11, 0.14, 0.08, 0.15, 50.68, 0.10, 0.09, 0.20, 0.04, 50.69, 0.11, 0.07, 0.15, 0.11
+	Overdrive ends, time=10.00, type=active, spellId=467117, triggerDeltas = 111.10
+		[111.10] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
+	Overdrive, time=111.10, type=next, spellId=467117, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
-		[ 17.75] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
-			 Triggered 7x, delta times: 17.75, 51.09, 72.46, 51.13, 51.10, 51.11, 51.09
+	Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399, triggerDeltas = 0.00, 22.20, 51.11, 47.82, 24.62, 51.10, 51.14, 51.10, 51.13
+		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
+		[ 22.20] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+			 Triggered 7x, delta times: 22.20, 51.11, 72.44, 51.10, 51.14, 51.10, 51.13
 		[111.10] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
 		[121.13] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
 	Incinerator (%s), time=25.50, type=nextcount, spellId=464149, triggerDeltas = 0.00, 11.11, 25.51, 25.56, 25.57, 33.38, 13.53, 25.54, 25.56, 25.55, 25.53, 25.58, 25.55, 25.60, 25.52, 25.57
@@ -57,19 +59,17 @@ Timers:
 			 Triggered 14x, delta times: 11.11, 25.51, 25.56, 25.57, 46.91, 25.54, 25.56, 25.55, 25.53, 25.58, 25.55, 25.60, 25.52, 25.57
 		[111.10] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
 		[121.13] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
-	Balls+Adds (%s), time=51.10, type=nextcount, spellId=464399, triggerDeltas = 0.00, 22.20, 51.11, 47.82, 24.62, 51.10, 51.14, 51.10, 51.13
+	Demolish (%s), time=51.10, type=nextcount, spellId=464112, triggerDeltas = 0.00, 17.75, 51.09, 52.29, 20.17, 51.13, 51.10, 51.11, 51.09
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
-		[ 22.20] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-			 Triggered 7x, delta times: 22.20, 51.11, 72.44, 51.10, 51.14, 51.10, 51.13
+		[ 17.75] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
+			 Triggered 7x, delta times: 17.75, 51.09, 72.46, 51.13, 51.10, 51.11, 51.09
 		[111.10] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
 		[121.13] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
-	Overdrive ends, time=10.00, type=active, spellId=467117, triggerDeltas = 111.10
-		[111.10] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
-	Overdrive, time=111.10, type=next, spellId=467117, triggerDeltas = 0.00
-		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
-	Short Fuse, time=30.00, type=castpnp, spellId=473115, triggerDeltas = 25.32, 0.20, 0.25, 50.61, 0.20, 0.27, 72.03, 0.05, 0.11, 0.12, 0.11, 50.65, 0.13, 0.13, 0.08, 0.10, 50.67, 0.11, 0.14, 0.08, 0.15, 50.68, 0.10, 0.09, 0.20, 0.04, 50.69, 0.11, 0.07, 0.15, 0.11
-		[ 25.32] SPELL_AURA_APPLIED: [Territorial Bombshell->Territorial Bombshell: Short Fuse] Creature-0-1-2769-1-231531-000000000E, Territorial Bombshell, 0xa48, Creature-0-1-2769-1-231531-000000000E, Territorial Bombshell, 0xa48, 473115, Short Fuse, 0, BUFF, 0
-			 Triggered 31x, delta times: 25.32, 0.20, 0.25, 50.61, 0.20, 0.27, 72.03, 0.05, 0.11, 0.12, 0.11, 50.65, 0.13, 0.13, 0.08, 0.10, 50.67, 0.11, 0.14, 0.08, 0.15, 50.68, 0.10, 0.09, 0.20, 0.04, 50.69, 0.11, 0.07, 0.15, 0.11
+	Rolling Rubbish fades, time=20.00, type=fades, spellId=461536, triggerDeltas = 27.75, 123.58, 102.20, 102.23
+		[ 27.75] SPELL_AURA_APPLIED: [->Tank3: Rolling Rubbish] "", nil, 0x0, Player-1-00000012, Tank3, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 27.75, 123.58, 102.20, 102.23
+		[ 39.35] SPELL_AURA_REMOVED: [->Tank3: Rolling Rubbish] "", nil, 0x0, Player-1-00000012, Tank3, 0x511, 461536, Rolling Rubbish, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 39.35, 120.08, 110.60, 99.84
 	Meltdown (%s), time=51.10, type=nextcount, spellId=1217954, triggerDeltas = 0.00, 44.42, 51.12, 25.59, 46.84, 51.16, 51.11, 51.08, 51.13
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
 		[ 44.42] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
@@ -82,6 +82,12 @@ Announces:
 		[180.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 300.00
 		[300.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 15, 30, 0
+	Infected Bite (%s), type=count, spellId=466748, triggerDeltas = 50.65, 113.73, 210.75
+		[ 50.65] SPELL_AURA_APPLIED_DOSE: [Junkyard Hyena->Tank3: Infected Bite] Creature-0-1-2769-1-231935-000000000C, Junkyard Hyena, 0xa48, Player-1-00000012, Tank3, 0x511, 466748, Infected Bite, 0, DEBUFF, 2, 0
+			 Triggered 3x, delta times: 50.65, 113.73, 210.75
+	Casting Dumpster Dive: -nan sec, type=cast, spellId=466742, triggerDeltas = 29.21, 9.86, 15.81, 25.42, 8.70, 17.50, 46.24, 10.26, 18.25, 22.64, 11.16, 17.53, 15.83, 6.58, 8.51, 6.09, 11.00, 7.31, 18.20, 9.60, 16.90, 16.27, 8.36, 7.49, 15.93
+		[ 29.21] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
+			 Triggered 25x, delta times: 29.21, 9.86, 15.81, 25.42, 8.70, 17.50, 46.24, 10.26, 18.25, 22.64, 11.16, 17.53, 15.83, 6.58, 8.51, 6.09, 11.00, 7.31, 18.20, 9.60, 16.90, 16.27, 8.36, 7.49, 15.93
 	Sorted (%s) on >%s<, type=targetcount, spellId=465346, triggerDeltas = 23.23, 51.11, 72.43, 51.10, 51.12, 51.14, 51.10
 		[ 23.23] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank4: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000014, Tank4, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		[ 74.34] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank1: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000001, Tank1, 0x512, 465346, Sorted, 0, DEBUFF, 0
@@ -90,35 +96,29 @@ Announces:
 		[248.99] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps18: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000031, Dps18, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		[300.13] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps7: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000010, Dps7, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		[351.23] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000003, Dps2, 0x512, 465346, Sorted, 0, DEBUFF, 0
-	Casting Dumpster Dive: -nan sec, type=cast, spellId=466742, triggerDeltas = 29.21, 9.86, 15.81, 25.42, 8.70, 17.50, 46.24, 10.26, 18.25, 22.64, 11.16, 17.53, 15.83, 6.58, 8.51, 6.09, 11.00, 7.31, 18.20, 9.60, 16.90, 16.27, 8.36, 7.49, 15.93
-		[ 29.21] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
-			 Triggered 25x, delta times: 29.21, 9.86, 15.81, 25.42, 8.70, 17.50, 46.24, 10.26, 18.25, 22.64, 11.16, 17.53, 15.83, 6.58, 8.51, 6.09, 11.00, 7.31, 18.20, 9.60, 16.90, 16.27, 8.36, 7.49, 15.93
-	Infected Bite (%s), type=count, spellId=466748, triggerDeltas = 50.65, 113.73, 210.75
-		[ 50.65] SPELL_AURA_APPLIED_DOSE: [Junkyard Hyena->Tank3: Infected Bite] Creature-0-1-2769-1-231935-000000000C, Junkyard Hyena, 0xa48, Player-1-00000012, Tank3, 0x511, 466748, Infected Bite, 0, DEBUFF, 2, 0
-			 Triggered 3x, delta times: 50.65, 113.73, 210.75
 
 Special warnings:
-	Rolling Rubbish on you, type=you, spellId=461536, triggerDeltas = 23.23, 123.54, 102.22, 102.24
-		[ 23.23] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank4: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000014, Tank4, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		[146.77] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps5: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000007, Dps5, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		[248.99] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps18: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000031, Dps18, 0x512, 465346, Sorted, 0, DEBUFF, 0
-		[351.23] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000003, Dps2, 0x512, 465346, Sorted, 0, DEBUFF, 0
-	Incinerator (%s) - move away from others, type=moveawaycount, spellId=464149, triggerDeltas = 11.11, 25.51, 25.56, 25.57, 46.91, 25.54, 25.56, 25.55, 25.53, 25.58, 25.55, 25.60, 25.52, 25.57
-		[ 11.11] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
-			 Triggered 14x, delta times: 11.11, 25.51, 25.56, 25.57, 46.91, 25.54, 25.56, 25.55, 25.53, 25.58, 25.55, 25.60, 25.52, 25.57
-	Balls+Adds! (%s), type=count, spellId=464399, triggerDeltas = 22.20, 51.11, 72.44, 51.10, 51.14, 51.10, 51.13
-		[ 22.20] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-			 Triggered 7x, delta times: 22.20, 51.11, 72.44, 51.10, 51.14, 51.10, 51.13
+	Incineration on you, type=you, spellId=472893, triggerDeltas = 13.71, 27.28, 24.87, 23.46, 47.07, 28.92, 48.12, 25.99, 51.63, 49.52
+		[ 13.71] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank3: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000012, Tank3, 0x511, 472893, Incineration, 0, DEBUFF, 0
+			 Triggered 10x, delta times: 13.71, 27.28, 24.87, 23.46, 47.07, 28.92, 48.12, 25.99, 51.63, 49.52
+	Trash Compactor - dodge attack, type=dodge, spellId=467135, triggerDeltas = 119.50
+		[119.50] SPELL_CAST_START: [Stix Bunkjunker: Trash Compactor] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467109, Trash Compactor, 0, 0
 	%s damage - move away, type=gtfo, spellId=464854, triggerDeltas = 80.88, 12.65, 183.70, 7.48, 4.43, 5.07, 16.71
 		[ 80.88] SPELL_AURA_APPLIED: [->Tank3: Garbage Pile] "", nil, 0x0, Player-1-00000012, Tank3, 0x511, 464854, Garbage Pile, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 80.88, 208.26, 21.78
 		[ 93.53] SPELL_PERIODIC_DAMAGE: [Stix Bunkjunker->Tank3: Hot Garbage] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000012, Tank3, 0x511, 464248, Hot Garbage, 0, 0
 			 Triggered 4x, delta times: 93.53, 183.70, 7.48, 9.50
-	Trash Compactor - dodge attack, type=dodge, spellId=467135, triggerDeltas = 119.50
-		[119.50] SPELL_CAST_START: [Stix Bunkjunker: Trash Compactor] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467109, Trash Compactor, 0, 0
-	Incineration on you, type=you, spellId=472893, triggerDeltas = 13.71, 27.28, 24.87, 23.46, 47.07, 28.92, 48.12, 25.99, 51.63, 49.52
-		[ 13.71] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank3: Incineration] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000012, Tank3, 0x511, 472893, Incineration, 0, DEBUFF, 0
-			 Triggered 10x, delta times: 13.71, 27.28, 24.87, 23.46, 47.07, 28.92, 48.12, 25.99, 51.63, 49.52
+	Balls+Adds! (%s), type=count, spellId=464399, triggerDeltas = 22.20, 51.11, 72.44, 51.10, 51.14, 51.10, 51.13
+		[ 22.20] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+			 Triggered 7x, delta times: 22.20, 51.11, 72.44, 51.10, 51.14, 51.10, 51.13
+	Incinerator (%s) - move away from others, type=moveawaycount, spellId=464149, triggerDeltas = 11.11, 25.51, 25.56, 25.57, 46.91, 25.54, 25.56, 25.55, 25.53, 25.58, 25.55, 25.60, 25.52, 25.57
+		[ 11.11] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
+			 Triggered 14x, delta times: 11.11, 25.51, 25.56, 25.57, 46.91, 25.54, 25.56, 25.55, 25.53, 25.58, 25.55, 25.60, 25.52, 25.57
+	Rolling Rubbish on you, type=you, spellId=461536, triggerDeltas = 23.23, 123.54, 102.22, 102.24
+		[ 23.23] SPELL_AURA_APPLIED: [Stix Bunkjunker->Tank4: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000014, Tank4, 0x512, 465346, Sorted, 0, DEBUFF, 0
+		[146.77] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps5: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000007, Dps5, 0x512, 465346, Sorted, 0, DEBUFF, 0
+		[248.99] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps18: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000031, Dps18, 0x512, 465346, Sorted, 0, DEBUFF, 0
+		[351.23] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps2: Sorted] Vehicle-0-1-2769-1-230322-0000000001, Stix Bunkjunker, 0xa48, Player-1-00000003, Dps2, 0x512, 465346, Sorted, 0, DEBUFF, 0
 	Scrap Rockets - interrupt >%s<! (%d), type=interruptcount, spellId=1219384, triggerDeltas = 34.17, 0.00, 9.80, 2.45, 3.60, 4.89, 4.92, 3.55, 22.02, 0.00, 9.72, 2.53, 6.03, 7.33, 6.06, 41.09, 0.00, 9.75, 1.21, 4.81, 2.42, 1.22, 11.04, 6.05, 14.34, 0.00, 7.71, 3.75, 7.26, 9.79, 2.43, 19.93, 0.00, 8.57, 6.09, 1.19, 3.68, 6.09, 3.62, 3.73, 18.27, 0.00, 7.30, 2.50, 8.52, 8.54, 1.23, 2.39, 3.65, 8.55, 8.58, 0.00, 7.29, 2.41, 3.67, 7.31, 3.69
 		[ 34.17] SPELL_AURA_APPLIED: [Scrapmaster->Dps11: Scrap Rockets] Creature-0-1-2769-1-231839-000000000C, Scrapmaster, 0xa48, Player-1-00000019, Dps11, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 			 Triggered 5x, delta times: 34.17, 29.21, 131.28, 65.21, 126.87

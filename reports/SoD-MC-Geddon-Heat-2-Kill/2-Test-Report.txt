@@ -40,15 +40,8 @@ Unused objects:
 	[Announce] Inferno, type=spell, spellId=19695
 
 Timers:
-	Ignite Mana, time=33.00, type=var, spellId=19659, triggerDeltas = 23.64, 30.24, 42.02, 30.34, 31.20
-		[ 23.64] SPELL_CAST_SUCCESS: [Baron Geddon: Ignite Mana] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 19659, Ignite Mana, 0, 0
-			 Triggered 5x, delta times: 23.64, 30.24, 42.02, 30.34, 31.20
-	Inferno ends, time=8.00, type=active, spellId=19695, triggerDeltas = 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
-		[ 13.00] SPELL_CAST_SUCCESS: [Baron Geddon: Inferno] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461110, Inferno, 0, 0
-			 Triggered 7x, delta times: 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
-	Inferno, time=27.90, type=var, spellId=19695, triggerDeltas = 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
-		[ 13.00] SPELL_CAST_SUCCESS: [Baron Geddon: Inferno] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461110, Inferno, 0, 0
-			 Triggered 7x, delta times: 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
+	Armageddon, time=8.00, type=cast, spellId=20478, triggerDeltas = 191.38
+		[191.38] SPELL_CAST_SUCCESS: [Baron Geddon: Armageddon] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461121, Armageddon, 0, 0
 	Living Bomb: %s, time=8.00, type=target, spellId=20475, triggerDeltas = 15.05, 0.00, 16.18, 0.00, 14.18, 0.00, 13.31, 0.00, 24.27, 0.00, 15.75, 0.00, 11.72, 0.00, 30.76, 0.00, 12.58, 0.00, 14.96, 0.02, 14.54, 0.01
 		[ 15.05] SPELL_AURA_APPLIED: [Baron Geddon->Dps3: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000003, Dps3, 0x512, 461090, Living Bomb, 0, DEBUFF, 0
 		[ 15.05] SPELL_AURA_APPLIED: [Baron Geddon->Dps4: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000004, Dps4, 0x512, 461090, Living Bomb, 0, DEBUFF, 0
@@ -75,8 +68,15 @@ Timers:
 		[  0.00] ENCOUNTER_START: 668, Baron Geddon, 226, 20, 0
 		[ 15.03] SPELL_CAST_SUCCESS: [Baron Geddon: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461090, Living Bomb, 0, 0
 			 Triggered 11x, delta times: 15.03, 16.20, 14.18, 13.31, 24.25, 15.77, 11.72, 30.76, 12.58, 14.96, 14.56
-	Armageddon, time=8.00, type=cast, spellId=20478, triggerDeltas = 191.38
-		[191.38] SPELL_CAST_SUCCESS: [Baron Geddon: Armageddon] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461121, Armageddon, 0, 0
+	Inferno ends, time=8.00, type=active, spellId=19695, triggerDeltas = 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
+		[ 13.00] SPELL_CAST_SUCCESS: [Baron Geddon: Inferno] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461110, Inferno, 0, 0
+			 Triggered 7x, delta times: 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
+	Inferno, time=27.90, type=var, spellId=19695, triggerDeltas = 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
+		[ 13.00] SPELL_CAST_SUCCESS: [Baron Geddon: Inferno] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461110, Inferno, 0, 0
+			 Triggered 7x, delta times: 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
+	Ignite Mana, time=33.00, type=var, spellId=19659, triggerDeltas = 23.64, 30.24, 42.02, 30.34, 31.20
+		[ 23.64] SPELL_CAST_SUCCESS: [Baron Geddon: Ignite Mana] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 19659, Ignite Mana, 0, 0
+			 Triggered 5x, delta times: 23.64, 30.24, 42.02, 30.34, 31.20
 
 Announces:
 	Living Bomb on >%s<, type=target, spellId=20475, triggerDeltas = 15.15, 16.18, 14.18, 13.31, 24.27, 15.75, 11.72, 30.76, 12.58, 14.98, 14.55
@@ -93,24 +93,24 @@ Announces:
 		[183.43] Scheduled at 183.33 by SPELL_AURA_APPLIED: [Baron Geddon->Healer2: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000009, Healer2, 0x512, 461090, Living Bomb, 0, DEBUFF, 0
 
 Special warnings:
+	Armageddon!, type=spell, spellId=20478, triggerDeltas = 191.38
+		[191.38] SPELL_CAST_SUCCESS: [Baron Geddon: Armageddon] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461121, Armageddon, 0, 0
+	Living Bomb on you, type=you, spellId=20475, triggerDeltas = 82.99
+		[ 82.99] SPELL_AURA_APPLIED: [Baron Geddon->Dps5: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000005, Dps5, 0x511, 461090, Living Bomb, 0, DEBUFF, 0
+	%s damage - move away, type=gtfo, spellId=19698, triggerDeltas = 42.12, 16.92, 16.23, 51.12, 25.59, 3.05
+		[ 42.12] SPELL_AURA_APPLIED: [->Dps5: Living Fallout] "", nil, 0x0, Player-1-00000005, Dps5, 0x511, 461103, Living Fallout, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 42.12, 16.92
+		[ 75.27] SPELL_AURA_APPLIED: [->Dps5: Inferno] "", nil, 0x0, Player-1-00000005, Dps5, 0x511, 461111, Inferno, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 75.27, 51.12, 25.59, 3.05
+	Inferno - run away, type=run, spellId=19695, triggerDeltas = 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
+		[ 13.00] SPELL_CAST_SUCCESS: [Baron Geddon: Inferno] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461110, Inferno, 0, 0
+			 Triggered 7x, delta times: 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
 	Ignite Mana on >%s< - dispel now, type=dispel, spellId=19659, triggerDeltas = 23.96, 30.23, 42.01, 30.36, 31.18
 		[ 23.96] Scheduled at 23.66 by SPELL_AURA_APPLIED: [Baron Geddon->Pet1: Ignite Mana] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Pet-0-1-409-1-213450-0000000001, Pet1, 0x1112, 19659, Ignite Mana, 0, DEBUFF, 0
 		[ 54.19] Scheduled at 53.89 by SPELL_AURA_APPLIED: [Baron Geddon->Dps16: Ignite Mana] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000020, Dps16, 0x512, 19659, Ignite Mana, 0, DEBUFF, 0
 		[ 96.20] Scheduled at 95.90 by SPELL_AURA_APPLIED: [Baron Geddon->Dps16: Ignite Mana] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000020, Dps16, 0x512, 19659, Ignite Mana, 0, DEBUFF, 0
 		[126.56] Scheduled at 126.26 by SPELL_AURA_APPLIED: [Baron Geddon->Dps15: Ignite Mana] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000019, Dps15, 0x512, 19659, Ignite Mana, 0, DEBUFF, 0
 		[157.74] Scheduled at 157.44 by SPELL_AURA_APPLIED: [Baron Geddon->Dps15: Ignite Mana] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000019, Dps15, 0x512, 19659, Ignite Mana, 0, DEBUFF, 0
-	Inferno - run away, type=run, spellId=19695, triggerDeltas = 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
-		[ 13.00] SPELL_CAST_SUCCESS: [Baron Geddon: Inferno] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461110, Inferno, 0, 0
-			 Triggered 7x, delta times: 13.00, 24.30, 26.26, 28.72, 24.24, 29.19, 33.98
-	%s damage - move away, type=gtfo, spellId=19698, triggerDeltas = 42.12, 16.92, 16.23, 51.12, 25.59, 3.05
-		[ 42.12] SPELL_AURA_APPLIED: [->Dps5: Living Fallout] "", nil, 0x0, Player-1-00000005, Dps5, 0x511, 461103, Living Fallout, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 42.12, 16.92
-		[ 75.27] SPELL_AURA_APPLIED: [->Dps5: Inferno] "", nil, 0x0, Player-1-00000005, Dps5, 0x511, 461111, Inferno, 0, DEBUFF, 0
-			 Triggered 4x, delta times: 75.27, 51.12, 25.59, 3.05
-	Living Bomb on you, type=you, spellId=20475, triggerDeltas = 82.99
-		[ 82.99] SPELL_AURA_APPLIED: [Baron Geddon->Dps5: Living Bomb] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, Player-1-00000005, Dps5, 0x511, 461090, Living Bomb, 0, DEBUFF, 0
-	Armageddon!, type=spell, spellId=20478, triggerDeltas = 191.38
-		[191.38] SPELL_CAST_SUCCESS: [Baron Geddon: Armageddon] Creature-0-1-409-1-228433-0000000001, Baron Geddon, 0xa48, "", nil, 0x0, 461121, Armageddon, 0, 0
 
 Yells:
 	%d, type=shortfade, spellId=20475

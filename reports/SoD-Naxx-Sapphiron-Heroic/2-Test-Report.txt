@@ -8,9 +8,9 @@ Findings:
 	Timer for spell ID 1219729 (Glacial Crash) is triggered by event SPELL_CAST_START 28524 (Frost Breath)
 
 Unused objects:
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Air phase, type=nil, spellId=<none>
-	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Special Warning] %s damage - move away, type=gtfo, spellId=28547
 	[Special Warning] Glacial Crash - soak it, type=soak, spellId=1219729
 	[Special Warning] Glacial Crash on you, type=you, spellId=1219729
@@ -18,18 +18,18 @@ Unused objects:
 	[Yell] Glacial Crash on PlayerName, type=yell, spellId=1219729
 
 Timers:
+	Landing, time=36.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
+	Frost Breath, time=7.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
+		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+			 Triggered 2x, delta times: 56.73, 92.34
+	Berserk, time=900.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
 	Air phase, time=66.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 68.93, 92.34
 		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
 		[ 68.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 		[161.27] Scheduled at 149.07 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
-	Berserk, time=900.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
-		[  0.00] ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
-	Frost Breath, time=7.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
-		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
-			 Triggered 2x, delta times: 56.73, 92.34
-	Landing, time=36.00, type=cd, spellId=<none>, triggerDeltas = 56.73, 92.34
-		[ 56.73] SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
-			 Triggered 2x, delta times: 56.73, 92.34
 	Life Drain, time=22.00, type=cd, spellId=28542, triggerDeltas = 11.35, 58.75, 22.27, 22.68
 		[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
 			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
@@ -39,12 +39,20 @@ Timers:
 			 Triggered 2x, delta times: 56.73, 92.34
 
 Announces:
-	Air phase in 10 seconds, type=nil, spellId=<none>, triggerDeltas = 21.00, 103.93
-		[ 21.00] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
-		[124.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 	Sapphiron landed, type=nil, spellId=<none>, triggerDeltas = 68.93, 92.34
 		[ 68.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
 		[161.27] Scheduled at 149.07 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+	Air phase in 10 seconds, type=nil, spellId=<none>, triggerDeltas = 21.00, 103.93
+		[ 21.00] Scheduled at 0.00 by ENCOUNTER_START: 1119, Sapphiron, 186, 40, 0
+		[124.93] Scheduled at 56.73 by SPELL_CAST_START: [Sapphiron: Frost Breath] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28524, Frost Breath, 0, 0
+	Life Drain soon, type=soon, spellId=28542, triggerDeltas = 29.85, 58.75, 22.27, 22.68
+		[ 29.85] Scheduled at 11.35 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		[ 88.60] Scheduled at 70.10 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		[110.87] Scheduled at 92.37 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+		[133.55] Scheduled at 115.05 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+	Life Drain, type=spell, spellId=28542, triggerDeltas = 11.35, 58.75, 22.27, 22.68
+		[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
+			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
 	Icebolt (%s) on >%s<, type=targetcount, spellId=28522, triggerDeltas = 41.66, 3.79, 3.33, 3.83, 3.80, 78.80, 3.27, 3.23, 3.63, 2.99
 		[ 41.66] SPELL_AURA_APPLIED: [Sapphiron->Dps1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000001, Dps1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 41.66, 100.05
@@ -56,14 +64,6 @@ Announces:
 		[138.48] SPELL_AURA_APPLIED: [Sapphiron->Tank1: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000009, Tank1, 0x512, 28522, Icebolt, 0, DEBUFF, 0
 		[145.34] SPELL_AURA_APPLIED: [Sapphiron->Healer4: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000019, Healer4, 0x512, 28522, Icebolt, 0, DEBUFF, 0
 		[148.33] SPELL_AURA_APPLIED: [Sapphiron->Healer3: Icebolt] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, Player-1-00000018, Healer3, 0x511, 28522, Icebolt, 0, DEBUFF, 0
-	Life Drain soon, type=soon, spellId=28542, triggerDeltas = 29.85, 58.75, 22.27, 22.68
-		[ 29.85] Scheduled at 11.35 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
-		[ 88.60] Scheduled at 70.10 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
-		[110.87] Scheduled at 92.37 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
-		[133.55] Scheduled at 115.05 by SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
-	Life Drain, type=spell, spellId=28542, triggerDeltas = 11.35, 58.75, 22.27, 22.68
-		[ 11.35] SPELL_CAST_SUCCESS: [Sapphiron: Life Drain] Creature-0-1-533-1-15989-0000000008, Sapphiron, 0xa48, "", nil, 0x0, 28542, Life Drain, 0, 0
-			 Triggered 4x, delta times: 11.35, 58.75, 22.27, 22.68
 
 Special warnings:
 	Frost Breath, type=nil, spellId=<none>, triggerDeltas = 56.73, 92.34

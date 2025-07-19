@@ -9,30 +9,12 @@ Findings:
 
 Unused objects:
 	[Announce] Crystalline Shockwave on >%s<, type=target, spellId=1233416
+	[Special Warning] Crystalline Shockwave on you, type=you, spellId=1233416
 	[Special Warning] Shockwave Slam - defensive, type=defensive, spellId=1231871
 	[Special Warning] Shockwave Slam on >%s< - taunt now, type=taunt, spellId=1231871
-	[Special Warning] Crystalline Shockwave on you, type=you, spellId=1233416
 	[Yell] %d, type=shortfade, spellId=1247424
 
 Timers:
-	Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394, triggerDeltas = 0.00, 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
-		[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
-		[ 37.75] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
-			 Triggered 8x, delta times: 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
-	Shattershell (%s), time=40.50, type=varcount, spellId=1227373, triggerDeltas = 0.00, 31.45, 40.16, 39.68, 39.30, 40.06, 40.09, 38.53, 40.53
-		[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
-		[ 31.45] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000000A3, 1227367, Fractillus, 81, 93, Dps12, 0
-		[ 71.61] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000001FA, 1227367, Fractillus, 69.5, 97, Dps12, 0
-		[111.29] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000004EF, 1227367, Fractillus, 56.8, 97, Dps12, 0
-		[150.59] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-000000011F, 1227367, Fractillus, 46.3, 94, Dps12, 0
-		[190.65] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000159, 1227367, Fractillus, 32.4, 97, Dps12, 0
-		[230.74] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000001DF, 1227367, Fractillus, 25, 96, Dps12, 0
-		[269.27] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000518, 1227367, Fractillus, 23, 97, Dps12, 0
-		[309.80] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-000000025A, 1227367, Fractillus, 20.8, 94, Tank3, 0
-	Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871, triggerDeltas = 0.00, 15.88, 38.89, 41.33, 38.87, 38.90, 40.09, 40.12, 38.93
-		[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
-		[ 15.88] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
-			 Triggered 8x, delta times: 15.88, 38.89, 41.33, 38.87, 38.90, 40.09, 40.12, 38.93
 	Crystalline Shockwave (%s), time=23.10, type=varcount, spellId=1233416, triggerDeltas = 0.00, 3.70, 17.05, 23.05, 17.07, 22.33, 17.09, 16.46, 6.06, 17.03, 23.07, 17.05, 21.85, 17.00, 23.12, 17.02, 22.77, 16.16, 17.00, 8.51
 		[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
 		[  3.70] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000263, 1233411, Fractillus, 99.1, 9, Dps12, 0
@@ -54,25 +36,43 @@ Timers:
 		[297.88] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000002D3, 1233411, Fractillus, 21.4, 58, Dps12, 0
 		[314.88] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000281, 1233411, Fractillus, 20.5, 100, Tank3, 0
 		[323.39] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000581, 1233411, Fractillus, 20.1, 15, Tank3, 0
+	Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871, triggerDeltas = 0.00, 15.88, 38.89, 41.33, 38.87, 38.90, 40.09, 40.12, 38.93
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
+		[ 15.88] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+			 Triggered 8x, delta times: 15.88, 38.89, 41.33, 38.87, 38.90, 40.09, 40.12, 38.93
+	Shattershell (%s), time=40.50, type=varcount, spellId=1227373, triggerDeltas = 0.00, 31.45, 40.16, 39.68, 39.30, 40.06, 40.09, 38.53, 40.53
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
+		[ 31.45] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000000A3, 1227367, Fractillus, 81, 93, Dps12, 0
+		[ 71.61] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000001FA, 1227367, Fractillus, 69.5, 97, Dps12, 0
+		[111.29] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000004EF, 1227367, Fractillus, 56.8, 97, Dps12, 0
+		[150.59] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-000000011F, 1227367, Fractillus, 46.3, 94, Dps12, 0
+		[190.65] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000159, 1227367, Fractillus, 32.4, 97, Dps12, 0
+		[230.74] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000001DF, 1227367, Fractillus, 25, 96, Dps12, 0
+		[269.27] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000518, 1227367, Fractillus, 23, 97, Dps12, 0
+		[309.80] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-000000025A, 1227367, Fractillus, 20.8, 94, Tank3, 0
+	Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394, triggerDeltas = 0.00, 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 15, 20, 0
+		[ 37.75] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
+			 Triggered 8x, delta times: 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
 
 Announces:
 	None
 
 Special warnings:
+	Null Consumption - move away from others, type=moveaway, spellId=1247424, triggerDeltas = 40.37, 198.05
+		[ 40.37] SPELL_AURA_APPLIED: [Fractillus->Tank3: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 40.37, 198.05
+	Shattershell - move to >%s<, type=moveto, spellId=1227373, triggerDeltas = 111.32, 39.27
+		[111.32] SPELL_AURA_APPLIED: [Fractillus->Tank3: Nether Crystallization] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1227373, Nether Crystallization, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 111.32, 39.27
+	Enraged Shattering!, type=spell, spellId=1225673, triggerDeltas = 334.39
+		[334.39] SPELL_CAST_START: [Fractillus: Enraged Tantrum] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Tantrum, 0, 0
 	Shattering Backhand! (%s), type=count, spellId=1220394, triggerDeltas = 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
 		[ 37.75] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 			 Triggered 8x, delta times: 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
 	Shattering Backhand on you, type=you, spellId=1220394, triggerDeltas = 119.32, 39.28
 		[119.32] SPELL_AURA_APPLIED: [->Tank3: Crystallized] "", nil, 0x0, Player-1-00000016, Tank3, 0x511, 1227378, Crystallized, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 119.32, 39.28
-	Enraged Shattering!, type=spell, spellId=1225673, triggerDeltas = 334.39
-		[334.39] SPELL_CAST_START: [Fractillus: Enraged Tantrum] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Tantrum, 0, 0
-	Shattershell - move to >%s<, type=moveto, spellId=1227373, triggerDeltas = 111.32, 39.27
-		[111.32] SPELL_AURA_APPLIED: [Fractillus->Tank3: Nether Crystallization] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1227373, Nether Crystallization, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 111.32, 39.27
-	Null Consumption - move away from others, type=moveaway, spellId=1247424, triggerDeltas = 40.37, 198.05
-		[ 40.37] SPELL_AURA_APPLIED: [Fractillus->Tank3: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 40.37, 198.05
 
 Yells:
 	Null Consumption, type=shortyell, spellId=1247424

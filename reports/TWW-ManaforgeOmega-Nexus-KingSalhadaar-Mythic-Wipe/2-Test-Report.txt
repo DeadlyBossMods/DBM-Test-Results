@@ -29,23 +29,23 @@ Findings:
 
 Unused objects:
 	[Announce] Starshattered on >%s< (%d), type=stack, spellId=1226413
-	[Special Warning] %d stacks of Starshattered on you, type=stack, spellId=1226413
-	[Special Warning] Starshattered on >%s< - taunt now, type=taunt, spellId=1226413
-	[Special Warning] Banishment - move away from others, type=moveaway, spellId=1227529
-	[Special Warning] King's Hunger - switch targets (%s), type=switchcustom, spellId=1228265
-	[Special Warning] %s damage - move away, type=gtfo, spellId=1231097
 	[Special Warning] Cosmic Maw - defensive, type=defensive, spellId=1234529
 	[Special Warning] Cosmic Maw on >%s< - taunt now, type=taunt, spellId=1234529
-	[Timer] Subjugation Rule AI, time=97.30, type=ai, spellId=1224776
-	[Timer] Command: Behead AI, time=97.30, type=ai, spellId=1225010
-	[Timer] Command: Besiege AI, time=97.30, type=ai, spellId=1225016
-	[Timer] Fractal Images AI, time=97.30, type=ai, spellId=1225099
-	[Timer] Galactic Smash AI, time=97.30, type=ai, spellId=1225319
-	[Timer] Starkiller Swing AI, time=97.30, type=ai, spellId=1226024
-	[Timer] Banishment AI, time=97.30, type=ai, spellId=1227529
-	[Timer] Netherbreaker AI, time=10.00, type=ai, spellId=1228115
-	[Timer] Dimension Breath AI, time=97.30, type=ai, spellId=1228163
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1231097
+	[Special Warning] King's Hunger - switch targets (%s), type=switchcustom, spellId=1228265
+	[Special Warning] Banishment - move away from others, type=moveaway, spellId=1227529
+	[Special Warning] %d stacks of Starshattered on you, type=stack, spellId=1226413
+	[Special Warning] Starshattered on >%s< - taunt now, type=taunt, spellId=1226413
 	[Timer] Cosmic Maw AI, time=97.30, type=ai, spellId=1234529
+	[Timer] Dimension Breath AI, time=97.30, type=ai, spellId=1228163
+	[Timer] Netherbreaker AI, time=10.00, type=ai, spellId=1228115
+	[Timer] Banishment AI, time=97.30, type=ai, spellId=1227529
+	[Timer] Starkiller Swing AI, time=97.30, type=ai, spellId=1226024
+	[Timer] Galactic Smash AI, time=97.30, type=ai, spellId=1225319
+	[Timer] Fractal Images AI, time=97.30, type=ai, spellId=1225099
+	[Timer] Command: Besiege AI, time=97.30, type=ai, spellId=1225016
+	[Timer] Command: Behead AI, time=97.30, type=ai, spellId=1225010
+	[Timer] Subjugation Rule AI, time=97.30, type=ai, spellId=1224776
 	[Yell] %d, type=shortfade, spellId=1227529
 
 Timers:
@@ -54,8 +54,11 @@ Timers:
 			 Triggered 2x, delta times: 212.00, 0.00
 
 Announces:
-	Casting Decree: Oath-Bound: -nan sec, type=cast, spellId=1224731, triggerDeltas = 0.02
-		[  0.02] SPELL_CAST_START: [Nexus-King Salhadaar: Decree: Oath-Bound] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224731, Decree: Oath-Bound, 0, 0
+	Casting Self-Destruct: -nan sec, type=cast, spellId=1230302, triggerDeltas = 212.00, 0.00
+		[212.00] SPELL_CAST_START: [Manaforged Titan: Self-Destruct] Creature-0-1-2810-1-241800-0000000052, Manaforged Titan, 0xa48, "", nil, 0x0, 1230302, Self-Destruct, 0, 0
+			 Triggered 2x, delta times: 212.00, 0.00
+	Fractal Images (%s), type=count, spellId=1225099, triggerDeltas = 0.02
+		[  0.02] SPELL_CAST_START: [The Royal Voidwing: Fractal Images] Vehicle-0-1-2810-1-244170-0000000001, The Royal Voidwing, 0xa48, "", nil, 0x0, 1225099, Fractal Images, 0, 0
 	King's Thrall on >%s<, type=target, spellId=1224767, triggerDeltas = 16.83, 40.46, 13.84, 25.56, 2.98, 17.57
 		[ 16.83] Scheduled at 16.53 by SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Dps6: King's Thrall] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000010, Dps6, 0x512, 1224767, King's Thrall, 0, DEBUFF, 0
 		[ 57.29] Scheduled at 56.99 by SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Healer5: King's Thrall] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000021, Healer5, 0x512, 1224767, King's Thrall, 0, DEBUFF, 0
@@ -63,42 +66,39 @@ Announces:
 		[ 96.69] Scheduled at 96.39 by SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Dps8: King's Thrall] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000012, Dps8, 0x512, 1224767, King's Thrall, 0, DEBUFF, 0
 		[ 99.67] Scheduled at 99.37 by SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Dps1: King's Thrall] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000002, Dps1, 0x512, 1224767, King's Thrall, 0, DEBUFF, 0
 		[117.24] Scheduled at 116.94 by SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Dps7: King's Thrall] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000011, Dps7, 0x512, 1224767, King's Thrall, 0, DEBUFF, 0
-	Fractal Images (%s), type=count, spellId=1225099, triggerDeltas = 0.02
-		[  0.02] SPELL_CAST_START: [The Royal Voidwing: Fractal Images] Vehicle-0-1-2810-1-244170-0000000001, The Royal Voidwing, 0xa48, "", nil, 0x0, 1225099, Fractal Images, 0, 0
-	Casting Self-Destruct: -nan sec, type=cast, spellId=1230302, triggerDeltas = 212.00, 0.00
-		[212.00] SPELL_CAST_START: [Manaforged Titan: Self-Destruct] Creature-0-1-2810-1-241800-0000000052, Manaforged Titan, 0xa48, "", nil, 0x0, 1230302, Self-Destruct, 0, 0
-			 Triggered 2x, delta times: 212.00, 0.00
+	Casting Decree: Oath-Bound: -nan sec, type=cast, spellId=1224731, triggerDeltas = 0.02
+		[  0.02] SPELL_CAST_START: [Nexus-King Salhadaar: Decree: Oath-Bound] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224731, Decree: Oath-Bound, 0, 0
 
 Special warnings:
-	Conquer - soak (%s), type=soakcount, spellId=1224787, triggerDeltas = 17.47, 4.99, 37.98, 5.00, 29.00, 10.99
-		[ 17.47] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
-			 Triggered 6x, delta times: 17.47, 4.99, 37.98, 5.00, 29.00, 10.99
-	Vanquish - soak (%s), type=soakcount, spellId=1224812, triggerDeltas = 14.47, 13.00, 26.97, 3.00, 42.00, 3.00
-		[ 14.47] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
-			 Triggered 6x, delta times: 14.47, 13.00, 26.97, 3.00, 42.00, 3.00
-	Invoke the Oath!, type=spell, spellId=1224906, triggerDeltas = 114.91
-		[114.91] SPELL_CAST_START: [Nexus-King Salhadaar: Invoke the Oath] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224906, Invoke the Oath, 0, 0
-	Command: Besiege (%s) - dodge attack, type=dodgecount, spellId=1225016, triggerDeltas = 9.04, 39.90, 39.97
-		[  9.04] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
-			 Triggered 3x, delta times: 9.04, 39.90, 39.97
-	Coalesce Voidwing - dodge attack, type=dodge, spellId=1227734, triggerDeltas = 119.49
-		[119.49] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
-	Rally the Shadowguard - switch targets, type=switch, spellId=1228065, triggerDeltas = 157.97
-		[157.97] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
-	Nexus Beams - dodge attack, type=dodge, spellId=1228075, triggerDeltas = 189.58, 21.83, 23.09
-		[189.58] SPELL_CAST_START: [Nexus-Prince Xevvos: Nexus Beams] Creature-0-1-2810-1-241798-0000000050, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
-		[211.41] SPELL_CAST_START: [Nexus-Prince Ky'vor: Nexus Beams] Creature-0-1-2810-1-241803-0000000050, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
-			 Triggered 2x, delta times: 211.41, 23.09
-	Dimension Breath! (%s), type=count, spellId=1228163, triggerDeltas = 139.95
-		[139.95] SPELL_CAST_START: [The Royal Voidwing: Dimension Breath] Vehicle-0-1-2810-1-233823-0000000046, The Royal Voidwing, 0xa48, "", nil, 0x0, 1228163, Dimension Breath, 0, 0
+	Dread Mortar - dodge attack, type=dodge, spellId=1232399, triggerDeltas = 182.30, 24.25
+		[182.30] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-0000000052, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+			 Triggered 2x, delta times: 182.30, 24.25
 	Netherblast - interrupt >%s<! (%d), type=interruptcount, spellId=1230263, triggerDeltas = 166.55, 1.21, 4.84, 6.06, 1.22, 4.85, 16.98, 20.63, 6.09
 		[166.55] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000050, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 			 Triggered 4x, delta times: 166.55, 6.05, 6.06, 6.07
 		[167.76] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000050, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 			 Triggered 5x, delta times: 167.76, 12.12, 21.83, 20.63, 6.09
-	Dread Mortar - dodge attack, type=dodge, spellId=1232399, triggerDeltas = 182.30, 24.25
-		[182.30] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-0000000052, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
-			 Triggered 2x, delta times: 182.30, 24.25
+	Dimension Breath! (%s), type=count, spellId=1228163, triggerDeltas = 139.95
+		[139.95] SPELL_CAST_START: [The Royal Voidwing: Dimension Breath] Vehicle-0-1-2810-1-233823-0000000046, The Royal Voidwing, 0xa48, "", nil, 0x0, 1228163, Dimension Breath, 0, 0
+	Nexus Beams - dodge attack, type=dodge, spellId=1228075, triggerDeltas = 189.58, 21.83, 23.09
+		[189.58] SPELL_CAST_START: [Nexus-Prince Xevvos: Nexus Beams] Creature-0-1-2810-1-241798-0000000050, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+		[211.41] SPELL_CAST_START: [Nexus-Prince Ky'vor: Nexus Beams] Creature-0-1-2810-1-241803-0000000050, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+			 Triggered 2x, delta times: 211.41, 23.09
+	Rally the Shadowguard - switch targets, type=switch, spellId=1228065, triggerDeltas = 157.97
+		[157.97] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
+	Coalesce Voidwing - dodge attack, type=dodge, spellId=1227734, triggerDeltas = 119.49
+		[119.49] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Command: Besiege (%s) - dodge attack, type=dodgecount, spellId=1225016, triggerDeltas = 9.04, 39.90, 39.97
+		[  9.04] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
+			 Triggered 3x, delta times: 9.04, 39.90, 39.97
+	Invoke the Oath!, type=spell, spellId=1224906, triggerDeltas = 114.91
+		[114.91] SPELL_CAST_START: [Nexus-King Salhadaar: Invoke the Oath] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224906, Invoke the Oath, 0, 0
+	Vanquish - soak (%s), type=soakcount, spellId=1224812, triggerDeltas = 14.47, 13.00, 26.97, 3.00, 42.00, 3.00
+		[ 14.47] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+			 Triggered 6x, delta times: 14.47, 13.00, 26.97, 3.00, 42.00, 3.00
+	Conquer - soak (%s), type=soakcount, spellId=1224787, triggerDeltas = 17.47, 4.99, 37.98, 5.00, 29.00, 10.99
+		[ 17.47] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+			 Triggered 6x, delta times: 17.47, 4.99, 37.98, 5.00, 29.00, 10.99
 
 Yells:
 	None

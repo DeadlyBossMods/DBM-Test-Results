@@ -16,6 +16,13 @@ Unused objects:
 Timers:
 	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3197, Mason, 9, 40, 0
+	Ignite Flesh, time=1.00, type=castpnp, spellId=1234347, triggerDeltas = 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+		[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+			 Triggered 20x, delta times: 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+	Tidal Force (%s), time=3.00, type=nextcount, spellId=1231587, triggerDeltas = 71.04, 3.01, 3.00, 103.73, 2.99, 3.00, 95.99, 3.01, 3.00, 3.00
+		[ 71.04] SPELL_AURA_APPLIED: [Mason the Echo->Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, 1231587, Tidal Force, 0, DEBUFF, 0
+		[ 74.05] SPELL_AURA_APPLIED_DOSE: [Mason the Echo->Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, 1231587, Tidal Force, 0, DEBUFF, 2, 0
+			 Triggered 9x, delta times: 74.05, 3.00, 103.73, 2.99, 3.00, 95.99, 3.01, 3.00, 3.00
 	Cannon Fire, time=30.50, type=next, spellId=1228376, triggerDeltas = 0.00, 30.20, 30.80, 30.69, 30.84, 30.76, 34.98, 36.28, 30.77, 36.50, 37.96, 30.73
 		[  0.00] ENCOUNTER_START: 3197, Mason, 9, 40, 0
 		[ 30.20] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7106, nil, 0, false, false, false, false, 0
@@ -29,13 +36,6 @@ Timers:
 		[255.32] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7206, nil, 0, false, false, false, false, 0
 		[329.78] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7238, nil, 0, false, false, false, false, 0
 		[360.51] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7248, nil, 0, false, false, false, false, 0
-	Tidal Force (%s), time=3.00, type=nextcount, spellId=1231587, triggerDeltas = 71.04, 3.01, 3.00, 103.73, 2.99, 3.00, 95.99, 3.01, 3.00, 3.00
-		[ 71.04] SPELL_AURA_APPLIED: [Mason the Echo->Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, 1231587, Tidal Force, 0, DEBUFF, 0
-		[ 74.05] SPELL_AURA_APPLIED_DOSE: [Mason the Echo->Mason the Echo: Tidal Force] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, 1231587, Tidal Force, 0, DEBUFF, 2, 0
-			 Triggered 9x, delta times: 74.05, 3.00, 103.73, 2.99, 3.00, 95.99, 3.01, 3.00, 3.00
-	Ignite Flesh, time=1.00, type=castpnp, spellId=1234347, triggerDeltas = 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
-		[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
-			 Triggered 20x, delta times: 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
 
 Announces:
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 300.00
@@ -48,6 +48,18 @@ Announces:
 			 Triggered 3x, delta times: 66.05, 109.72, 102.00
 
 Special warnings:
+	Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347, triggerDeltas = 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+		[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
+			 Triggered 20x, delta times: 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
+	Drowning Shallows on >%s< - dispel now, type=dispel, spellId=1231592, triggerDeltas = 38.12, 43.71, 26.33, 27.12, 30.78, 25.92, 35.60, 29.16, 45.70, 30.38, 30.73
+		[ 38.12] SPELL_AURA_APPLIED: [Mason the Echo->Dps9: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000010, Dps9, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+		[ 81.83] SPELL_AURA_APPLIED: [Mason the Echo->Dps3: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000003, Dps3, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 81.83, 110.15
+		[108.16] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 4x, delta times: 108.16, 119.42, 74.86, 61.11
+		[135.28] SPELL_AURA_APPLIED: [Mason the Echo->Dps19: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000021, Dps19, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 135.28, 121.46, 76.08
+		[166.06] SPELL_AURA_APPLIED: [Mason the Echo->Dps13: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000015, Dps13, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
 	Cannon Fire - dodge attack, type=dodge, spellId=1228376, triggerDeltas = 30.20, 30.80, 30.69, 30.84, 30.76, 71.26, 30.77, 74.46, 30.73
 		[ 30.20] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7106, nil, 0, false, false, false, false, 0
 		[ 61.00] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7127, nil, 0, false, false, false, false, 0
@@ -58,18 +70,6 @@ Special warnings:
 		[255.32] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7206, nil, 0, false, false, false, false, 0
 		[329.78] CHAT_MSG_MONSTER_YELL: Fire!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7238, nil, 0, false, false, false, false, 0
 		[360.51] CHAT_MSG_MONSTER_YELL: Fire at will!, Mason the Echo, "", "", "", "", 0, 0, "", 0, 7248, nil, 0, false, false, false, false, 0
-	Drowning Shallows on >%s< - dispel now, type=dispel, spellId=1231592, triggerDeltas = 38.12, 43.71, 26.33, 27.12, 30.78, 25.92, 35.60, 29.16, 45.70, 30.38, 30.73
-		[ 38.12] SPELL_AURA_APPLIED: [Mason the Echo->Dps9: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000010, Dps9, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
-		[ 81.83] SPELL_AURA_APPLIED: [Mason the Echo->Dps3: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000003, Dps3, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 81.83, 110.15
-		[108.16] SPELL_AURA_APPLIED: [Mason the Echo->Dps1: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000001, Dps1, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
-			 Triggered 4x, delta times: 108.16, 119.42, 74.86, 61.11
-		[135.28] SPELL_AURA_APPLIED: [Mason the Echo->Dps19: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000021, Dps19, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 135.28, 121.46, 76.08
-		[166.06] SPELL_AURA_APPLIED: [Mason the Echo->Dps13: Drowning Shallows] Creature-0-1-2856-1-241021-0000000003, Mason the Echo, 0xa48, Player-1-00000015, Dps13, 0x512, 1231592, Drowning Shallows, 0, DEBUFF, 0
-	Ignite Flesh - interrupt >%s<!, type=interrupt, spellId=1234347, triggerDeltas = 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
-		[104.01] SPELL_CAST_START: [Eastsea Scallywag: Ignite Flesh] Creature-0-1-2856-1-242853-00000000FC, Eastsea Scallywag, 0xa48, "", nil, 0x0, 1234347, Ignite Flesh, 0, 0
-			 Triggered 20x, delta times: 104.01, 3.33, 19.84, 10.95, 10.12, 53.84, 1.23, 24.45, 3.06, 19.84, 2.83, 22.64, 21.06, 15.76, 0.44, 4.85, 15.78, 10.10, 0.01, 15.77
 
 Yells:
 	None

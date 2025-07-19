@@ -14,17 +14,44 @@ Findings:
 	Yell for spell ID 452237 (Bloodcurdle) is triggered by event SPELL_AURA_APPLIED 452245 (Bloodcurdle)
 
 Unused objects:
-	[Announce] Grasp faded, type=fades, spellId=443042
 	[Announce] Blood Pact on >%s< (%d), type=stack, spellId=445272
-	[Special Warning] Grasp - move away from others, type=moveaway, spellId=443042
-	[Special Warning] Gruesome Disgorge on >%s< - taunt now, type=taunt, spellId=443612
+	[Announce] Grasp faded, type=fades, spellId=443042
 	[Special Warning] Slam - defensive, type=defensive, spellId=445016
-	[Yell] Tentacle, type=shortyell, spellId=443042
+	[Special Warning] Gruesome Disgorge on >%s< - taunt now, type=taunt, spellId=443612
+	[Special Warning] Grasp - move away from others, type=moveaway, spellId=443042
 	[Yell] %d, type=shortfade, spellId=452237
+	[Yell] Tentacle, type=shortyell, spellId=443042
 
 Timers:
-	Run away! (%s), time=128.00, type=nextcount, spellId=442530, triggerDeltas = 0.00, 119.99, 128.02
+	Spreads (%s), time=40.00, type=nextcount, spellId=452237, triggerDeltas = 0.00, 8.97, 32.01, 26.98, 32.02, 37.02, 31.99, 27.03, 32.00, 37.02, 31.98, 27.01
 		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
+		[  8.97] SPELL_CAST_START: [The Bloodbound Horror: Bloodcurdle] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 452237, Bloodcurdle, 0, 0
+			 Triggered 11x, delta times: 8.97, 32.01, 26.98, 32.02, 37.02, 31.99, 27.03, 32.00, 37.02, 31.98, 27.01
+	Shield, time=15.50, type=cdnp, spellId=451288, triggerDeltas = 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
+		[ 21.48] SPELL_CAST_START: [Lost Watcher: Black Bulwark] Creature-0-1-2657-1-221667-0000000008, Lost Watcher, 0xa48, "", nil, 0x0, 451288, Black Bulwark, 0, 0
+			 Triggered 13x, delta times: 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
+	Beams (%s), time=40.00, type=nextcount, spellId=445936, triggerDeltas = 0.00, 31.95, 59.03, 69.02, 59.03, 69.00
+		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
+		[ 31.95] SPELL_CAST_START: [The Bloodbound Horror: Spewing Hemorrhage] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 445936, Spewing Hemorrhage, 0, 0
+			 Triggered 5x, delta times: 31.95, 59.03, 69.02, 59.03, 69.00
+	Slam, time=13.40, type=cdnp, spellId=445016, triggerDeltas = 30.70, 57.05, 18.26, 53.45, 58.30, 21.87, 46.06, 3.64, 13.38
+		[ 30.70] SPELL_CAST_SUCCESS: [Lost Watcher->Dps19: Spectral Slam] Creature-0-1-2657-1-221667-0000000008, Lost Watcher, 0xa48, Player-1-00000019, Dps19, 0x511, 445016, Spectral Slam, 0, 0
+			 Triggered 5x, delta times: 30.70, 128.76, 126.23, 3.64, 13.38
+		[ 87.75] SPELL_CAST_SUCCESS: [Lost Watcher->Tank1: Spectral Slam] Creature-0-1-2657-1-221667-000000001F, Lost Watcher, 0xa48, Player-1-00000020, Tank1, 0x512, 445016, Spectral Slam, 0, 0
+			 Triggered 4x, delta times: 87.75, 18.26, 111.75, 21.87
+	Frontal (%s), time=49.00, type=nextcount, spellId=444363, triggerDeltas = 0.00, 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
+		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
+		[ 13.99] SPELL_CAST_START: [The Bloodbound Horror: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 444363, Gruesome Disgorge, 0, 0
+			 Triggered 6x, delta times: 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
+	Gruesome Disgorge fades, time=40.00, type=fades, spellId=443612, triggerDeltas = 19.03, 127.99, 128.03
+		[ 19.03] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 19.03, 127.99, 128.03
+	Crimson Rain (%s), time=128.00, type=nextcount, spellId=443203, triggerDeltas = 0.00, 11.04, 30.00, 30.00, 48.95, 19.14, 108.88, 19.04
+		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
+		[ 11.04] SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
+			 Triggered 3x, delta times: 11.04, 128.09, 127.92
+		[ 41.04] Scheduled at 11.04 by SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
+			 Triggered 2x, delta times: 41.04, 30.00
 		[119.99] SPELL_CAST_START: [The Bloodbound Horror: Goresplatter] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 442530, Goresplatter, 0, 0
 			 Triggered 2x, delta times: 119.99, 128.02
 	Grasp (%s), time=40.00, type=nextcount, spellId=443042, triggerDeltas = 0.00, 19.08, 27.87, 31.16, 27.86, 41.17, 27.87, 31.12, 27.89, 41.14, 27.87
@@ -39,39 +66,21 @@ Timers:
 		[206.13] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps8: Grasp From Beyond] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000008, Dps8, 0x512, 443042, Grasp From Beyond, 0, DEBUFF, 0
 		[234.02] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps2: Grasp From Beyond] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000002, Dps2, 0x512, 443042, Grasp From Beyond, 0, DEBUFF, 0
 		[275.16] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps12: Grasp From Beyond] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000012, Dps12, 0x512, 443042, Grasp From Beyond, 0, DEBUFF, 0
-	Crimson Rain (%s), time=128.00, type=nextcount, spellId=443203, triggerDeltas = 0.00, 11.04, 30.00, 30.00, 48.95, 19.14, 108.88, 19.04
+	Run away! (%s), time=128.00, type=nextcount, spellId=442530, triggerDeltas = 0.00, 119.99, 128.02
 		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
-		[ 11.04] SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-			 Triggered 3x, delta times: 11.04, 128.09, 127.92
-		[ 41.04] Scheduled at 11.04 by SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
-			 Triggered 2x, delta times: 41.04, 30.00
 		[119.99] SPELL_CAST_START: [The Bloodbound Horror: Goresplatter] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 442530, Goresplatter, 0, 0
 			 Triggered 2x, delta times: 119.99, 128.02
-	Gruesome Disgorge fades, time=40.00, type=fades, spellId=443612, triggerDeltas = 19.03, 127.99, 128.03
-		[ 19.03] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 19.03, 127.99, 128.03
-	Frontal (%s), time=49.00, type=nextcount, spellId=444363, triggerDeltas = 0.00, 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
-		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
-		[ 13.99] SPELL_CAST_START: [The Bloodbound Horror: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 444363, Gruesome Disgorge, 0, 0
-			 Triggered 6x, delta times: 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
-	Slam, time=13.40, type=cdnp, spellId=445016, triggerDeltas = 30.70, 57.05, 18.26, 53.45, 58.30, 21.87, 46.06, 3.64, 13.38
-		[ 30.70] SPELL_CAST_SUCCESS: [Lost Watcher->Dps19: Spectral Slam] Creature-0-1-2657-1-221667-0000000008, Lost Watcher, 0xa48, Player-1-00000019, Dps19, 0x511, 445016, Spectral Slam, 0, 0
-			 Triggered 5x, delta times: 30.70, 128.76, 126.23, 3.64, 13.38
-		[ 87.75] SPELL_CAST_SUCCESS: [Lost Watcher->Tank1: Spectral Slam] Creature-0-1-2657-1-221667-000000001F, Lost Watcher, 0xa48, Player-1-00000020, Tank1, 0x512, 445016, Spectral Slam, 0, 0
-			 Triggered 4x, delta times: 87.75, 18.26, 111.75, 21.87
-	Beams (%s), time=40.00, type=nextcount, spellId=445936, triggerDeltas = 0.00, 31.95, 59.03, 69.02, 59.03, 69.00
-		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
-		[ 31.95] SPELL_CAST_START: [The Bloodbound Horror: Spewing Hemorrhage] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 445936, Spewing Hemorrhage, 0, 0
-			 Triggered 5x, delta times: 31.95, 59.03, 69.02, 59.03, 69.00
-	Shield, time=15.50, type=cdnp, spellId=451288, triggerDeltas = 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
-		[ 21.48] SPELL_CAST_START: [Lost Watcher: Black Bulwark] Creature-0-1-2657-1-221667-0000000008, Lost Watcher, 0xa48, "", nil, 0x0, 451288, Black Bulwark, 0, 0
-			 Triggered 13x, delta times: 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
-	Spreads (%s), time=40.00, type=nextcount, spellId=452237, triggerDeltas = 0.00, 8.97, 32.01, 26.98, 32.02, 37.02, 31.99, 27.03, 32.00, 37.02, 31.98, 27.01
-		[  0.00] ENCOUNTER_START: 2917, The Bloodbound Horror, 16, 20, 0
-		[  8.97] SPELL_CAST_START: [The Bloodbound Horror: Bloodcurdle] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 452237, Bloodcurdle, 0, 0
-			 Triggered 11x, delta times: 8.97, 32.01, 26.98, 32.02, 37.02, 31.99, 27.03, 32.00, 37.02, 31.98, 27.01
 
 Announces:
+	Casting Manifest Horror: -nan sec, type=cast, spellId=445174, triggerDeltas = 21.62, 3.99, 4.00, 4.01, 4.01, 43.46, 4.01, 4.00, 4.01, 4.00, 4.00, 4.01, 4.00, 40.06, 4.01, 4.00, 4.00, 4.01, 4.01, 3.99, 4.02, 3.99, 4.01, 4.00, 4.01, 4.03, 3.97, 4.02, 3.42, 4.01, 4.02, 3.99, 3.99, 4.02, 49.14, 4.00, 4.00, 4.02, 3.99, 4.01, 4.01, 4.01, 4.01, 4.00, 3.99, 4.00, 4.01, 4.01
+		[ 21.62] SPELL_CAST_START: [Forgotten Harbinger: Manifest Horror] Creature-0-1-2657-1-221945-00000000C6, Forgotten Harbinger, 0xa48, "", nil, 0x0, 445174, Manifest Horror, 0, 0
+			 Triggered 48x, delta times: 21.62, 3.99, 4.00, 4.01, 4.01, 43.46, 4.01, 4.00, 4.01, 4.00, 4.00, 4.01, 4.00, 40.06, 4.01, 4.00, 4.00, 4.01, 4.01, 3.99, 4.02, 3.99, 4.01, 4.00, 4.01, 4.03, 3.97, 4.02, 3.42, 4.01, 4.02, 3.99, 3.99, 4.02, 49.14, 4.00, 4.00, 4.02, 3.99, 4.01, 4.01, 4.01, 4.01, 4.00, 3.99, 4.00, 4.01, 4.01
+	Gruesome Disgorge faded, type=fades, spellId=443612, triggerDeltas = 59.02, 128.02, 128.02
+		[ 59.02] SPELL_AURA_REMOVED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 59.02, 128.02, 128.02
+	Gruesome Disgorge on YOU, type=you, spellId=443612, triggerDeltas = 19.03, 127.99, 128.03
+		[ 19.03] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 19.03, 127.99, 128.03
 	Crimson Rain (%s), type=count, spellId=443203, triggerDeltas = 11.04, 30.00, 30.00, 30.00, 38.09, 30.00, 30.00, 30.00, 37.92, 30.00, 30.00
 		[ 11.04] SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
 			 Triggered 3x, delta times: 11.04, 128.09, 127.92
@@ -81,35 +90,26 @@ Announces:
 			 Triggered 3x, delta times: 169.13, 30.00, 30.00
 		[297.05] Scheduled at 267.05 by SPELL_CAST_SUCCESS: [The Bloodbound Horror: Crimson Rain] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 443203, Crimson Rain, 0, 0
 			 Triggered 2x, delta times: 297.05, 30.00
-	Gruesome Disgorge faded, type=fades, spellId=443612, triggerDeltas = 59.02, 128.02, 128.02
-		[ 59.02] SPELL_AURA_REMOVED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 59.02, 128.02, 128.02
-	Gruesome Disgorge on YOU, type=you, spellId=443612, triggerDeltas = 19.03, 127.99, 128.03
-		[ 19.03] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps19: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 443612, Gruesome Disgorge, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 19.03, 127.99, 128.03
-	Casting Manifest Horror: -nan sec, type=cast, spellId=445174, triggerDeltas = 21.62, 3.99, 4.00, 4.01, 4.01, 43.46, 4.01, 4.00, 4.01, 4.00, 4.00, 4.01, 4.00, 40.06, 4.01, 4.00, 4.00, 4.01, 4.01, 3.99, 4.02, 3.99, 4.01, 4.00, 4.01, 4.03, 3.97, 4.02, 3.42, 4.01, 4.02, 3.99, 3.99, 4.02, 49.14, 4.00, 4.00, 4.02, 3.99, 4.01, 4.01, 4.01, 4.01, 4.00, 3.99, 4.00, 4.01, 4.01
-		[ 21.62] SPELL_CAST_START: [Forgotten Harbinger: Manifest Horror] Creature-0-1-2657-1-221945-00000000C6, Forgotten Harbinger, 0xa48, "", nil, 0x0, 445174, Manifest Horror, 0, 0
-			 Triggered 48x, delta times: 21.62, 3.99, 4.00, 4.01, 4.01, 43.46, 4.01, 4.00, 4.01, 4.00, 4.00, 4.01, 4.00, 40.06, 4.01, 4.00, 4.00, 4.01, 4.01, 3.99, 4.02, 3.99, 4.01, 4.00, 4.01, 4.03, 3.97, 4.02, 3.42, 4.01, 4.02, 3.99, 3.99, 4.02, 49.14, 4.00, 4.00, 4.02, 3.99, 4.01, 4.01, 4.01, 4.01, 4.00, 3.99, 4.00, 4.01, 4.01
 
 Special warnings:
-	Run away! - run away (%s), type=runcount, spellId=442530, triggerDeltas = 119.99, 128.02
-		[119.99] SPELL_CAST_START: [The Bloodbound Horror: Goresplatter] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 442530, Goresplatter, 0, 0
-			 Triggered 2x, delta times: 119.99, 128.02
-	Frontal! (%s), type=count, spellId=444363, triggerDeltas = 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
-		[ 13.99] SPELL_CAST_START: [The Bloodbound Horror: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 444363, Gruesome Disgorge, 0, 0
-			 Triggered 6x, delta times: 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
-	%s damage - move away, type=gtfo, spellId=445518, triggerDeltas = 30.42, 36.70, 59.14, 88.65, 7.17, 30.43, 47.98, 10.32
-		[ 30.42] SPELL_PERIODIC_DAMAGE: [->Dps19: Black Blood] "", nil, 0x0, Player-1-00000019, Dps19, 0x511, 445518, Black Blood, 0, 0
-			 Triggered 8x, delta times: 30.42, 36.70, 59.14, 88.65, 7.17, 30.43, 47.98, 10.32
-	Beams (%s) - dodge attack, type=dodgecount, spellId=445936, triggerDeltas = 31.95, 59.03, 69.02, 59.03, 69.00
-		[ 31.95] SPELL_CAST_START: [The Bloodbound Horror: Spewing Hemorrhage] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 445936, Spewing Hemorrhage, 0, 0
-			 Triggered 5x, delta times: 31.95, 59.03, 69.02, 59.03, 69.00
-	Shield - interrupt >%s<! (%d), type=interruptcount, spellId=451288, triggerDeltas = 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
-		[ 21.48] SPELL_CAST_START: [Lost Watcher: Black Bulwark] Creature-0-1-2657-1-221667-0000000008, Lost Watcher, 0xa48, "", nil, 0x0, 451288, Black Bulwark, 0, 0
-			 Triggered 13x, delta times: 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
 	Spreads - move away from others, type=moveaway, spellId=452237, triggerDeltas = 10.98, 32.02, 26.98, 32.01, 37.05, 31.98, 27.03, 32.00, 37.01, 32.00, 26.97
 		[ 10.98] SPELL_AURA_APPLIED: [The Bloodbound Horror->Dps19: Bloodcurdle] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, Player-1-00000019, Dps19, 0x511, 452245, Bloodcurdle, 0, DEBUFF, 0
 			 Triggered 11x, delta times: 10.98, 32.02, 26.98, 32.01, 37.05, 31.98, 27.03, 32.00, 37.01, 32.00, 26.97
+	Shield - interrupt >%s<! (%d), type=interruptcount, spellId=451288, triggerDeltas = 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
+		[ 21.48] SPELL_CAST_START: [Lost Watcher: Black Bulwark] Creature-0-1-2657-1-221667-0000000008, Lost Watcher, 0xa48, "", nil, 0x0, 451288, Black Bulwark, 0, 0
+			 Triggered 13x, delta times: 21.48, 58.99, 16.43, 52.62, 16.66, 42.37, 17.13, 16.99, 34.89, 0.28, 17.02, 2.42, 14.55
+	Beams (%s) - dodge attack, type=dodgecount, spellId=445936, triggerDeltas = 31.95, 59.03, 69.02, 59.03, 69.00
+		[ 31.95] SPELL_CAST_START: [The Bloodbound Horror: Spewing Hemorrhage] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 445936, Spewing Hemorrhage, 0, 0
+			 Triggered 5x, delta times: 31.95, 59.03, 69.02, 59.03, 69.00
+	%s damage - move away, type=gtfo, spellId=445518, triggerDeltas = 30.42, 36.70, 59.14, 88.65, 7.17, 30.43, 47.98, 10.32
+		[ 30.42] SPELL_PERIODIC_DAMAGE: [->Dps19: Black Blood] "", nil, 0x0, Player-1-00000019, Dps19, 0x511, 445518, Black Blood, 0, 0
+			 Triggered 8x, delta times: 30.42, 36.70, 59.14, 88.65, 7.17, 30.43, 47.98, 10.32
+	Frontal! (%s), type=count, spellId=444363, triggerDeltas = 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
+		[ 13.99] SPELL_CAST_START: [The Bloodbound Horror: Gruesome Disgorge] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 444363, Gruesome Disgorge, 0, 0
+			 Triggered 6x, delta times: 13.99, 58.99, 69.04, 59.01, 69.02, 59.00
+	Run away! - run away (%s), type=runcount, spellId=442530, triggerDeltas = 119.99, 128.02
+		[119.99] SPELL_CAST_START: [The Bloodbound Horror: Goresplatter] Creature-0-1-2657-1-214502-0000000001, The Bloodbound Horror, 0xa48, "", nil, 0x0, 442530, Goresplatter, 0, 0
+			 Triggered 2x, delta times: 119.99, 128.02
 
 Yells:
 	Bloodcurdle, type=shortyell, spellId=452237

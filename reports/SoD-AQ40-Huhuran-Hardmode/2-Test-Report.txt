@@ -25,13 +25,40 @@ Findings:
 	Announce for spell ID 26068 (Berserk) is triggered by event SPELL_AURA_APPLIED 1215885 (Berserk)
 
 Unused objects:
-	[Announce] Frenzy, type=spell, spellId=26051
 	[Announce] Berserk soon, type=soon, spellId=26068
+	[Announce] Frenzy, type=spell, spellId=26051
 	[Special Warning] %d stacks of Acid Spit on you, type=stack, spellId=26050
 	[Special Warning] Acid Spit on >%s< - taunt now, type=taunt, spellId=26050
 	[Timer] Noxious Poison fades, time=8.00, type=fades, spellId=26053
 
 Timers:
+	Wyvern Sting, time=25.00, type=cd, spellId=26180, triggerDeltas = 0.00, 26.98, 27.54, 27.52, 42.37, 29.66
+		[  0.00] ENCOUNTER_START: 714, Princess Huhuran, 186, 40, 0
+		[ 26.98] Scheduled at 25.98 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
+		[ 54.52] Scheduled at 53.52 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000004, Dps3, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
+		[ 82.04] Scheduled at 81.04 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
+		[101.96] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Berserk] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215885, Berserk, 0, BUFF, 0
+		[124.41] Scheduled at 123.41 by SPELL_AURA_APPLIED: [Princess Huhuran->Healer3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000018, Healer3, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
+		[154.07] Scheduled at 153.07 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps1: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000001, Dps1, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
+	Wyvern Sting fades, time=12.00, type=fades, spellId=26180, triggerDeltas = 152.88
+		[152.88] SPELL_AURA_APPLIED: [Princess Huhuran->Healer1: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000005, Healer1, 0x511, 26180, Wyvern Sting, 0, DEBUFF, 0
+	Noxious Poison, time=11.00, type=cd, spellId=26053, triggerDeltas = 0.00, 33.96, 16.19, 14.59, 50.17, 12.95
+		[  0.00] ENCOUNTER_START: 714, Princess Huhuran, 186, 40, 0
+		[ 33.96] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps14: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000017, Dps14, 0x512, 1215752, Noxious Poison, 0, 0
+		[ 50.15] SPELL_CAST_SUCCESS: [Princess Huhuran->Tank1: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000003, Tank1, 0x512, 1215752, Noxious Poison, 0, 0
+		[ 64.74] SPELL_CAST_SUCCESS: [Princess Huhuran->Pet2: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Pet-0-1-531-1-416-0000000002, Pet2, 0x1112, 1215752, Noxious Poison, 0, 0
+		[114.91] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps9: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000011, Dps9, 0x512, 26053, Noxious Poison, 0, 0
+		[127.86] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps3: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000004, Dps3, 0x512, 26053, Noxious Poison, 0, 0
+	Frenzy ends, time=8.00, type=active, spellId=26051, triggerDeltas = 8.07, 17.81, 16.21, 24.26, 34.00
+		[  8.07] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
+			 Triggered 5x, delta times: 8.07, 17.81, 16.21, 24.26, 34.00
+		[ 44.46] SPELL_AURA_REMOVED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
+			 Triggered 3x, delta times: 44.46, 27.14, 31.70
+	Frenzy, time=11.80, type=cd, spellId=26051, triggerDeltas = 0.00, 8.07, 17.81, 16.21, 24.26, 34.00
+		[  0.00] ENCOUNTER_START: 714, Princess Huhuran, 186, 40, 0
+		[  8.07] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
+			 Triggered 5x, delta times: 8.07, 17.81, 16.21, 24.26, 34.00
+		[101.96] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Berserk] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215885, Berserk, 0, BUFF, 0
 	Acid Spit: %s, time=30.00, type=target, spellId=26050, triggerDeltas = 6.44, 6.47, 8.13, 17.78, 4.87, 1.62, 3.23, 3.24, 12.31, 8.73, 16.19, 21.03, 11.37, 3.22, 6.47, 7.86
 		[  6.44] SPELL_AURA_APPLIED: [Princess Huhuran->Dps6: Acid Spit] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000008, Dps6, 0x512, 1215757, Acid Spit, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 6.44, 57.65
@@ -48,35 +75,22 @@ Timers:
 		[132.08] SPELL_AURA_REMOVED: [Princess Huhuran->Dps8: Acid Spit] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000010, Dps8, 0x512, 26050, Acid Spit, 0, DEBUFF, 0
 		[138.96] SPELL_AURA_APPLIED: [Princess Huhuran->Dps6: Acid Spit] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000008, Dps6, 0x512, 26050, Acid Spit, 0, DEBUFF, 0
 		[156.40] SPELL_AURA_REMOVED: [Princess Huhuran->Dps6: Acid Spit] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000008, Dps6, 0x512, 26050, Acid Spit, 0, DEBUFF, 0
-	Frenzy ends, time=8.00, type=active, spellId=26051, triggerDeltas = 8.07, 17.81, 16.21, 24.26, 34.00
-		[  8.07] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
-			 Triggered 5x, delta times: 8.07, 17.81, 16.21, 24.26, 34.00
-		[ 44.46] SPELL_AURA_REMOVED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
-			 Triggered 3x, delta times: 44.46, 27.14, 31.70
-	Frenzy, time=11.80, type=cd, spellId=26051, triggerDeltas = 0.00, 8.07, 17.81, 16.21, 24.26, 34.00
-		[  0.00] ENCOUNTER_START: 714, Princess Huhuran, 186, 40, 0
-		[  8.07] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Frenzy] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215755, Frenzy, 0, BUFF, 0
-			 Triggered 5x, delta times: 8.07, 17.81, 16.21, 24.26, 34.00
+
+Announces:
+	Wyvern Sting on >%s<, type=target, spellId=26180, triggerDeltas = 26.98, 27.54, 27.52, 42.37, 29.66
+		[ 26.98] Scheduled at 25.98 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
+		[ 54.52] Scheduled at 53.52 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000004, Dps3, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
+		[ 82.04] Scheduled at 81.04 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
+		[124.41] Scheduled at 123.41 by SPELL_AURA_APPLIED: [Princess Huhuran->Healer3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000018, Healer3, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
+		[154.07] Scheduled at 153.07 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps1: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000001, Dps1, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
+	Berserk, type=spell, spellId=26068, triggerDeltas = 101.96
 		[101.96] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Berserk] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215885, Berserk, 0, BUFF, 0
-	Noxious Poison, time=11.00, type=cd, spellId=26053, triggerDeltas = 0.00, 33.96, 16.19, 14.59, 50.17, 12.95
-		[  0.00] ENCOUNTER_START: 714, Princess Huhuran, 186, 40, 0
+	Noxious Poison, type=spell, spellId=26053, triggerDeltas = 33.96, 16.19, 14.59, 50.17, 12.95
 		[ 33.96] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps14: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000017, Dps14, 0x512, 1215752, Noxious Poison, 0, 0
 		[ 50.15] SPELL_CAST_SUCCESS: [Princess Huhuran->Tank1: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000003, Tank1, 0x512, 1215752, Noxious Poison, 0, 0
 		[ 64.74] SPELL_CAST_SUCCESS: [Princess Huhuran->Pet2: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Pet-0-1-531-1-416-0000000002, Pet2, 0x1112, 1215752, Noxious Poison, 0, 0
 		[114.91] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps9: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000011, Dps9, 0x512, 26053, Noxious Poison, 0, 0
 		[127.86] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps3: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000004, Dps3, 0x512, 26053, Noxious Poison, 0, 0
-	Wyvern Sting, time=25.00, type=cd, spellId=26180, triggerDeltas = 0.00, 26.98, 27.54, 27.52, 42.37, 29.66
-		[  0.00] ENCOUNTER_START: 714, Princess Huhuran, 186, 40, 0
-		[ 26.98] Scheduled at 25.98 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
-		[ 54.52] Scheduled at 53.52 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000004, Dps3, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
-		[ 82.04] Scheduled at 81.04 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
-		[101.96] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Berserk] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215885, Berserk, 0, BUFF, 0
-		[124.41] Scheduled at 123.41 by SPELL_AURA_APPLIED: [Princess Huhuran->Healer3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000018, Healer3, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
-		[154.07] Scheduled at 153.07 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps1: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000001, Dps1, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
-	Wyvern Sting fades, time=12.00, type=fades, spellId=26180, triggerDeltas = 152.88
-		[152.88] SPELL_AURA_APPLIED: [Princess Huhuran->Healer1: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000005, Healer1, 0x511, 26180, Wyvern Sting, 0, DEBUFF, 0
-
-Announces:
 	Acid Spit on >%s< (%d), type=stack, spellId=26050, triggerDeltas = 6.44, 6.47, 8.13, 17.78, 4.87, 1.62, 3.23, 3.24, 12.31, 8.73, 16.19, 21.03, 11.37, 3.22, 6.47, 7.86
 		[  6.44] SPELL_AURA_APPLIED: [Princess Huhuran->Dps6: Acid Spit] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000008, Dps6, 0x512, 1215757, Acid Spit, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 6.44, 57.65
@@ -91,20 +105,6 @@ Announces:
 		[124.63] SPELL_AURA_APPLIED_DOSE: [Princess Huhuran->Tank1: Acid Spit] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000003, Tank1, 0x512, 26050, Acid Spit, 0, DEBUFF, 2, 0
 			 Triggered 2x, delta times: 124.63, 6.47
 		[138.96] SPELL_AURA_APPLIED: [Princess Huhuran->Dps6: Acid Spit] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000008, Dps6, 0x512, 26050, Acid Spit, 0, DEBUFF, 0
-	Noxious Poison, type=spell, spellId=26053, triggerDeltas = 33.96, 16.19, 14.59, 50.17, 12.95
-		[ 33.96] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps14: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000017, Dps14, 0x512, 1215752, Noxious Poison, 0, 0
-		[ 50.15] SPELL_CAST_SUCCESS: [Princess Huhuran->Tank1: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000003, Tank1, 0x512, 1215752, Noxious Poison, 0, 0
-		[ 64.74] SPELL_CAST_SUCCESS: [Princess Huhuran->Pet2: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Pet-0-1-531-1-416-0000000002, Pet2, 0x1112, 1215752, Noxious Poison, 0, 0
-		[114.91] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps9: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000011, Dps9, 0x512, 26053, Noxious Poison, 0, 0
-		[127.86] SPELL_CAST_SUCCESS: [Princess Huhuran->Dps3: Noxious Poison] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000004, Dps3, 0x512, 26053, Noxious Poison, 0, 0
-	Berserk, type=spell, spellId=26068, triggerDeltas = 101.96
-		[101.96] SPELL_AURA_APPLIED: [Princess Huhuran->Princess Huhuran: Berserk] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, 1215885, Berserk, 0, BUFF, 0
-	Wyvern Sting on >%s<, type=target, spellId=26180, triggerDeltas = 26.98, 27.54, 27.52, 42.37, 29.66
-		[ 26.98] Scheduled at 25.98 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
-		[ 54.52] Scheduled at 53.52 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000004, Dps3, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
-		[ 82.04] Scheduled at 81.04 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps5: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000007, Dps5, 0x512, 1215753, Wyvern Sting, 0, DEBUFF, 0
-		[124.41] Scheduled at 123.41 by SPELL_AURA_APPLIED: [Princess Huhuran->Healer3: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000018, Healer3, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
-		[154.07] Scheduled at 153.07 by SPELL_AURA_APPLIED: [Princess Huhuran->Dps1: Wyvern Sting] Creature-0-1-531-1-15509-0000000001, Princess Huhuran, 0xa48, Player-1-00000001, Dps1, 0x512, 26180, Wyvern Sting, 0, DEBUFF, 0
 
 Special warnings:
 	Frenzy on >%s< - dispel now, type=dispel, spellId=26051, triggerDeltas = 8.07, 17.81, 16.21, 24.26, 34.00

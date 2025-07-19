@@ -25,28 +25,22 @@ Findings:
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Announce] Corrupted Blood on >%s<, type=target, spellId=24328
-	[Announce] Aspect of Mar'li on >%s<, type=target, spellId=24686
-	[Announce] Aspect of Thekal, type=spell, spellId=24689
 	[Announce] Aspect of Arlokk on >%s<, type=target, spellId=24690
+	[Announce] Aspect of Thekal, type=spell, spellId=24689
+	[Announce] Aspect of Mar'li on >%s<, type=target, spellId=24686
+	[Announce] Corrupted Blood on >%s<, type=target, spellId=24328
 	[Special Warning] Corrupted Blood - move away from others, type=moveaway, spellId=24328
 	[Yell] Corrupted Blood on PlayerName, type=yell, spellId=24328
 
 Timers:
 	Berserk, time=585.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 793, Hakkar, 226, 20, 0
-	Blood Siphon, time=90.00, type=next, spellId=24324, triggerDeltas = 0.00, 90.35, 90.68
-		[  0.00] ENCOUNTER_START: 793, Hakkar, 226, 20, 0
-		[ 90.35] SPELL_CAST_SUCCESS: [Hakkar: Blood Siphon] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, "", nil, 0x0, 24324, Blood Siphon, 0, 0
-			 Triggered 2x, delta times: 90.35, 90.68
-	Cause Insanity, time=20.00, type=cd, spellId=24327, triggerDeltas = 20.73, 21.47, 41.70, 21.03, 21.07, 21.02, 42.15
-		[ 20.73] SPELL_AURA_APPLIED: [Hakkar->Tank2: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000010, Tank2, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
-			 Triggered 6x, delta times: 20.73, 63.17, 21.03, 21.07, 21.02, 42.15
-		[ 42.20] SPELL_AURA_APPLIED: [Hakkar->Tank1: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000002, Tank1, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
-	Cause Insanity: %s, time=10.00, type=target, spellId=24327, triggerDeltas = 20.73, 21.47, 41.70, 21.03, 21.07, 21.02, 42.15
-		[ 20.73] SPELL_AURA_APPLIED: [Hakkar->Tank2: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000010, Tank2, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
-			 Triggered 6x, delta times: 20.73, 63.17, 21.03, 21.07, 21.02, 42.15
-		[ 42.20] SPELL_AURA_APPLIED: [Hakkar->Tank1: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000002, Tank1, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
+	Sonic Burst fades, time=10.00, type=fades, spellId=468012, triggerDeltas = 39.99, 119.99
+		[ 39.99] SPELL_AURA_APPLIED: [Hakkar->Tank1: Sonic Burst] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000002, Tank1, 0x512, 468012, Sonic Burst, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 39.99, 119.99
+	Aspect of Thekal ends, time=8.00, type=active, spellId=24689, triggerDeltas = 19.99, 120.00
+		[ 19.99] SPELL_AURA_APPLIED: [Hakkar->Hakkar: Bloodlust] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, 468408, Bloodlust, 0, BUFF, 0
+			 Triggered 2x, delta times: 19.99, 120.00
 	Special, time=20.00, type=nextspecial, spellId=24687, triggerDeltas = 19.99, 20.00, 20.00, 22.00, 20.00, 20.00, 18.00, 19.99, 20.01, 22.00
 		[ 19.99] SPELL_AURA_APPLIED: [Hakkar->Hakkar: Bloodlust] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, 468408, Bloodlust, 0, BUFF, 0
 			 Triggered 2x, delta times: 19.99, 120.00
@@ -57,21 +51,27 @@ Timers:
 		[ 81.99] Scheduled at 59.99 by SPELL_AURA_APPLIED: [Hakkar->Hakkar: Aspect of Arlokk] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, 468491, Aspect of Arlokk, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 81.99, 20.00, 20.00
 		[201.99] Scheduled at 179.99 by SPELL_AURA_APPLIED: [Hakkar->Hakkar: Aspect of Arlokk] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, 468491, Aspect of Arlokk, 0, DEBUFF, 0
-	Aspect of Thekal ends, time=8.00, type=active, spellId=24689, triggerDeltas = 19.99, 120.00
-		[ 19.99] SPELL_AURA_APPLIED: [Hakkar->Hakkar: Bloodlust] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, 468408, Bloodlust, 0, BUFF, 0
-			 Triggered 2x, delta times: 19.99, 120.00
-	Sonic Burst fades, time=10.00, type=fades, spellId=468012, triggerDeltas = 39.99, 119.99
-		[ 39.99] SPELL_AURA_APPLIED: [Hakkar->Tank1: Sonic Burst] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000002, Tank1, 0x512, 468012, Sonic Burst, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 39.99, 119.99
+	Cause Insanity, time=20.00, type=cd, spellId=24327, triggerDeltas = 20.73, 21.47, 41.70, 21.03, 21.07, 21.02, 42.15
+		[ 20.73] SPELL_AURA_APPLIED: [Hakkar->Tank2: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000010, Tank2, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 20.73, 63.17, 21.03, 21.07, 21.02, 42.15
+		[ 42.20] SPELL_AURA_APPLIED: [Hakkar->Tank1: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000002, Tank1, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
+	Cause Insanity: %s, time=10.00, type=target, spellId=24327, triggerDeltas = 20.73, 21.47, 41.70, 21.03, 21.07, 21.02, 42.15
+		[ 20.73] SPELL_AURA_APPLIED: [Hakkar->Tank2: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000010, Tank2, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 20.73, 63.17, 21.03, 21.07, 21.02, 42.15
+		[ 42.20] SPELL_AURA_APPLIED: [Hakkar->Tank1: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000002, Tank1, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
+	Blood Siphon, time=90.00, type=next, spellId=24324, triggerDeltas = 0.00, 90.35, 90.68
+		[  0.00] ENCOUNTER_START: 793, Hakkar, 226, 20, 0
+		[ 90.35] SPELL_CAST_SUCCESS: [Hakkar: Blood Siphon] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, "", nil, 0x0, 24324, Blood Siphon, 0, 0
+			 Triggered 2x, delta times: 90.35, 90.68
 
 Announces:
-	Blood Siphon soon, type=soon, spellId=24324, triggerDeltas = 80.00, 90.35
-		[ 80.00] Scheduled at 0.00 by ENCOUNTER_START: 793, Hakkar, 226, 20, 0
-		[170.35] Scheduled at 90.35 by SPELL_CAST_SUCCESS: [Hakkar: Blood Siphon] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, "", nil, 0x0, 24324, Blood Siphon, 0, 0
 	Cause Insanity on >%s<, type=target, spellId=24327, triggerDeltas = 20.73, 21.47, 41.70, 21.03, 21.07, 21.02, 42.15
 		[ 20.73] SPELL_AURA_APPLIED: [Hakkar->Tank2: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000010, Tank2, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
 			 Triggered 6x, delta times: 20.73, 63.17, 21.03, 21.07, 21.02, 42.15
 		[ 42.20] SPELL_AURA_APPLIED: [Hakkar->Tank1: Cause Insanity] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, Player-1-00000002, Tank1, 0x512, 24327, Cause Insanity, 0, DEBUFF, 0
+	Blood Siphon soon, type=soon, spellId=24324, triggerDeltas = 80.00, 90.35
+		[ 80.00] Scheduled at 0.00 by ENCOUNTER_START: 793, Hakkar, 226, 20, 0
+		[170.35] Scheduled at 90.35 by SPELL_CAST_SUCCESS: [Hakkar: Blood Siphon] Creature-0-1-309-1-14834-0000000005, Hakkar, 0xa48, "", nil, 0x0, 24324, Blood Siphon, 0, 0
 
 Special warnings:
 	Aspect of Thekal on >%s< - dispel now, type=dispel, spellId=24689, triggerDeltas = 19.99, 120.00
