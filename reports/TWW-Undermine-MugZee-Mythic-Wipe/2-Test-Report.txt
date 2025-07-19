@@ -67,6 +67,9 @@ Findings:
 Unused objects:
 	[Announce] Solid Gold on >%s<, type=target, spellId=467225
 	[Announce] Double Whammy Shot on >%s<, type=target, spellId=469491
+	[Special Warning] Static Charge - move to >%s<, type=moveto, spellId=1215953
+	[Special Warning] Static Charge on you, type=you, spellId=1215953
+	[Special Warning] Double-Minded Fury!, type=spell, spellId=1216142
 	[Special Warning] Frostshatter Boots on you, type=you, spellId=466476
 	[Special Warning] Stormfury Finger Gun (%s) on you, type=youcount, spellId=466509
 	[Special Warning] Molten Gold Knuckles - defensive, type=defensive, spellId=466518
@@ -79,10 +82,9 @@ Unused objects:
 	[Special Warning] Double Whammy Shot on you, type=you, spellId=469491
 	[Special Warning] Earthshaker Gaol on you, type=you, spellId=474461
 	[Special Warning] %s damage - move away, type=gtfo, spellId=474554
-	[Special Warning] Static Charge - move to >%s<, type=moveto, spellId=1215953
-	[Special Warning] Static Charge on you, type=you, spellId=1215953
-	[Special Warning] Double-Minded Fury!, type=spell, spellId=1216142
 	[Timer] Shakedown, time=3.00, type=cdnp, spellId=472659
+	[Yell] %d, type=shortfade, spellId=1215953
+	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
 	[Yell] %d, type=shortfade, spellId=466545
 	[Yell] Spray and Pray on PlayerName, type=yell, spellId=466545
 	[Yell] %d, type=shortfade, spellId=467380
@@ -91,11 +93,14 @@ Unused objects:
 	[Yell] Tank Soak, type=yell, spellId=469491
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=474461
 	[Yell] {rt%1$d}Earthshaker Gaol, type=shortposition, spellId=474461
-	[Yell] %d, type=shortfade, spellId=1215953
-	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
 
 Timers:
 	Faulty Wiring (%s), time=30.00, type=cdcount, spellId=<none>, triggerDeltas = 350.91
+		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
+	Static Charge (%s), time=14.00, type=cdcount, spellId=1215953, triggerDeltas = 308.06, 14.17
+		[308.06] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
+			 Triggered 2x, delta times: 308.06, 14.17
+	Double-Minded Fury, time=97.30, type=next, spellId=1216142, triggerDeltas = 350.91
 		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 59.89, 119.98, 171.04
 		[ 59.89] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
@@ -144,11 +149,6 @@ Timers:
 		[ 59.89] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 			 Triggered 2x, delta times: 59.89, 119.98
 		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-	Static Charge (%s), time=14.00, type=cdcount, spellId=1215953, triggerDeltas = 308.06, 14.17
-		[308.06] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
-			 Triggered 2x, delta times: 308.06, 14.17
-	Double-Minded Fury, time=97.30, type=next, spellId=1216142, triggerDeltas = 350.91
-		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 
 Announces:
 	 (%s), type=count, spellId=<none>, triggerDeltas = 0.03, 119.87, 119.48, 109.04, 49.99
@@ -156,6 +156,13 @@ Announces:
 			 Triggered 5x, delta times: 0.03, 119.87, 119.48, 109.04, 49.99
 	%s, type=stagechange, spellId=<none>, triggerDeltas = 308.06, 42.85
 		[308.06] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
+		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
+	Disintegration Beam on >%s<, type=target, spellId=1215481, triggerDeltas = 45.04, 118.83, 15.84, 104.29
+		[ 45.04] Scheduled at 44.94 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000010, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
+		[163.87] Scheduled at 163.77 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000028, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
+		[179.71] Scheduled at 179.61 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000028, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
+		[284.00] Scheduled at 283.90 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000047, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
+	Head Honcho: Mug'Zee, type=spell, spellId=1222408, triggerDeltas = 350.91
 		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 	Moxie on >%s< (%d), type=stack, spellId=466385, triggerDeltas = 49.96, 49.99, 50.06, 49.94, 50.01, 50.01, 49.99, 50.01
 		[ 49.96] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
@@ -177,15 +184,10 @@ Announces:
 		[ 74.31] Scheduled at 73.81 by SPELL_AURA_APPLIED: [Mug'Zee->Dps2: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000002, Dps2, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		[194.31] Scheduled at 193.81 by SPELL_AURA_APPLIED: [Mug'Zee->Dps2: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000002, Dps2, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		[379.69] SPELL_AURA_APPLIED: [Mug'Zee->Dps14: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000020, Dps14, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
-	Disintegration Beam on >%s<, type=target, spellId=1215481, triggerDeltas = 45.04, 118.83, 15.84, 104.29
-		[ 45.04] Scheduled at 44.94 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000010, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
-		[163.87] Scheduled at 163.77 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000028, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
-		[179.71] Scheduled at 179.61 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000028, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
-		[284.00] Scheduled at 283.90 by SPELL_CAST_START: [Volunteer Rocketeer: Disintegration Beam] Creature-0-1-2769-1-230312-0000000047, Volunteer Rocketeer, 0xa48, "", nil, 0x0, 1215481, Disintegration Beam, 0, 0
-	Head Honcho: Mug'Zee, type=spell, spellId=1222408, triggerDeltas = 350.91
-		[350.91] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 
 Special warnings:
+	Electrocution Matrix - dodge attack, type=dodge, spellId=1216495, triggerDeltas = 298.07
+		[298.07] SPELL_CAST_START: [Mug'Zee: Electrocution Matrix] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1217791, Electrocution Matrix, 0, 0
 	Stormfury Finger Gun (%s) - dodge attack, type=dodgecount, spellId=466509, triggerDeltas = 110.02, 119.96
 		[110.02] Scheduled at 109.92 by SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
 		[229.98] Scheduled at 229.88 by SPELL_CAST_START: [Mug'Zee: Stormfury Finger Gun] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 466509, Stormfury Finger Gun, 0, 0
@@ -201,8 +203,6 @@ Special warnings:
 	Pay Respects - interrupt >%s<! (%d), type=interruptcount, spellId=472782, triggerDeltas = 81.48, 3.59, 6.07, 109.98, 0.40, 0.41, 8.94, 1.59, 0.00, 174.53, 0.22, 0.00
 		[ 81.48] SPELL_CAST_START: [Gallagio Goon: Pay Respects] Vehicle-0-1-2769-1-233474-0000000071, Gallagio Goon, 0xa48, "", nil, 0x0, 472782, Pay Respects, 0, 0
 			 Triggered 12x, delta times: 81.48, 3.59, 6.07, 109.98, 0.40, 0.41, 8.94, 1.59, 0.00, 174.53, 0.22, 0.00
-	Electrocution Matrix - dodge attack, type=dodge, spellId=1216495, triggerDeltas = 298.07
-		[298.07] SPELL_CAST_START: [Mug'Zee: Electrocution Matrix] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1217791, Electrocution Matrix, 0, 0
 
 Yells:
 	None

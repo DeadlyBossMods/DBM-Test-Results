@@ -11,9 +11,10 @@ Unused objects:
 	[Timer] Emerge, time=30.00, type=cd, spellId=<none>
 
 Timers:
-	Submerge, time=30.00, type=cd, spellId=<none>, triggerDeltas = 0.00
-		[  0.00] ENCOUNTER_START: 716, Ouro, 186, 40, 0
-		[129.41] SPELL_AURA_APPLIED: [Ouro->Ouro: Berserk] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, 26615, Berserk, 0, BUFF, 0
+	Blinding Admiration, time=30.00, type=next, spellId=1215744, triggerDeltas = 29.61, 30.73, 30.77, 30.71, 30.79, 30.73
+		[ 29.61] SPELL_DAMAGE: [Curse of Madness: Blinding Admiration] Creature-0-1-531-1-236173-000000001B, Curse of Madness, 0xa48, "", nil, 0x0, 1215745, Blinding Admiration, 0, 0
+			 Triggered 5x, delta times: 29.61, 30.73, 30.77, 61.50, 30.73
+		[121.82] SPELL_DAMAGE: [Curse of Madness->Pet3: Blinding Admiration] Creature-0-1-531-1-236173-000000005E, Curse of Madness, 0xa48, Pet-0-1-531-1-416-0000000003, Pet3, 0x1112, 1215745, Blinding Admiration, 0, 0
 	Sand Blast, time=22.60, type=next, spellId=26102, triggerDeltas = 0.00, 24.25, 22.61, 22.67, 22.67, 24.24, 34.03, 27.49
 		[  0.00] ENCOUNTER_START: 716, Ouro, 186, 40, 0
 		[ 24.25] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
@@ -22,10 +23,9 @@ Timers:
 		[  0.00] ENCOUNTER_START: 716, Ouro, 186, 40, 0
 		[ 22.62] SPELL_CAST_START: [Ouro: Sweep] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26103, Sweep, 0, 0
 			 Triggered 6x, delta times: 22.62, 30.72, 30.77, 30.71, 30.78, 30.73
-	Blinding Admiration, time=30.00, type=next, spellId=1215744, triggerDeltas = 29.61, 30.73, 30.77, 30.71, 30.79, 30.73
-		[ 29.61] SPELL_DAMAGE: [Curse of Madness: Blinding Admiration] Creature-0-1-531-1-236173-000000001B, Curse of Madness, 0xa48, "", nil, 0x0, 1215745, Blinding Admiration, 0, 0
-			 Triggered 5x, delta times: 29.61, 30.73, 30.77, 61.50, 30.73
-		[121.82] SPELL_DAMAGE: [Curse of Madness->Pet3: Blinding Admiration] Creature-0-1-531-1-236173-000000005E, Curse of Madness, 0xa48, Pet-0-1-531-1-416-0000000003, Pet3, 0x1112, 1215745, Blinding Admiration, 0, 0
+	Submerge, time=30.00, type=cd, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 716, Ouro, 186, 40, 0
+		[129.41] SPELL_AURA_APPLIED: [Ouro->Ouro: Berserk] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, 26615, Berserk, 0, BUFF, 0
 
 Announces:
 	Sweep, type=spell, spellId=26103, triggerDeltas = 22.62, 30.72, 30.77, 30.71, 30.78, 30.73
@@ -37,15 +37,15 @@ Announces:
 		[129.41] SPELL_AURA_APPLIED: [Ouro->Ouro: Berserk] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, 26615, Berserk, 0, BUFF, 0
 
 Special warnings:
+	Sand Blast!, type=spell, spellId=26102, triggerDeltas = 24.25, 22.61, 22.67, 22.67, 24.24, 34.03, 27.49
+		[ 24.25] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
+			 Triggered 7x, delta times: 24.25, 22.61, 22.67, 22.67, 24.24, 34.03, 27.49
 	Look away, type=nil, spellId=<none>, triggerDeltas = 55.61, 30.73, 30.77, 30.71, 30.79
 		[ 55.61] Scheduled at 29.61 by SPELL_DAMAGE: [Curse of Madness: Blinding Admiration] Creature-0-1-531-1-236173-000000001B, Curse of Madness, 0xa48, "", nil, 0x0, 1215745, Blinding Admiration, 0, 0
 		[ 86.34] Scheduled at 60.34 by SPELL_DAMAGE: [Curse of Madness: Blinding Admiration] Creature-0-1-531-1-236173-0000000035, Curse of Madness, 0xa48, "", nil, 0x0, 1215745, Blinding Admiration, 0, 0
 		[117.11] Scheduled at 91.11 by SPELL_DAMAGE: [Curse of Madness: Blinding Admiration] Creature-0-1-531-1-236173-000000004D, Curse of Madness, 0xa48, "", nil, 0x0, 1215745, Blinding Admiration, 0, 0
 		[147.82] Scheduled at 121.82 by SPELL_DAMAGE: [Curse of Madness->Pet3: Blinding Admiration] Creature-0-1-531-1-236173-000000005E, Curse of Madness, 0xa48, Pet-0-1-531-1-416-0000000003, Pet3, 0x1112, 1215745, Blinding Admiration, 0, 0
 		[178.61] Scheduled at 152.61 by SPELL_DAMAGE: [Curse of Madness: Blinding Admiration] Creature-0-1-531-1-236173-0000000073, Curse of Madness, 0xa48, "", nil, 0x0, 1215745, Blinding Admiration, 0, 0
-	Sand Blast!, type=spell, spellId=26102, triggerDeltas = 24.25, 22.61, 22.67, 22.67, 24.24, 34.03, 27.49
-		[ 24.25] SPELL_CAST_START: [Ouro: Sand Blast] Creature-0-1-531-1-15517-0000000005, Ouro, 0xa48, "", nil, 0x0, 26102, Sand Blast, 0, 0
-			 Triggered 7x, delta times: 24.25, 22.61, 22.67, 22.67, 24.24, 34.03, 27.49
 
 Yells:
 	None

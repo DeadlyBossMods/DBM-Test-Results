@@ -31,21 +31,28 @@ Findings:
 Unused objects:
 	[Announce] Rolling Rubbish (%s), type=count, spellId=461536
 	[Announce] Infected Bite (%s), type=count, spellId=466748
+	[Special Warning] Meltdown - defensive, type=defensive, spellId=1217954
+	[Special Warning] Prototype Powercoil on you, type=you, spellId=1218704
+	[Special Warning] Marked For ""Recycling"" on you, type=you, spellId=1220648
 	[Special Warning] Rolling Rubbish on >%s< - taunt now, type=taunt, spellId=461536
 	[Special Warning] Rolling Rubbish on you, type=you, spellId=461536
 	[Special Warning] Demolish - defensive, type=defensive, spellId=464112
 	[Special Warning] %s damage - move away, type=gtfo, spellId=464854
 	[Special Warning] Incineration on you, type=you, spellId=472893
-	[Special Warning] Meltdown - defensive, type=defensive, spellId=1217954
-	[Special Warning] Prototype Powercoil on you, type=you, spellId=1218704
-	[Special Warning] Marked For ""Recycling"" on you, type=you, spellId=1220648
 	[Timer] Rolling Rubbish fades, time=20.00, type=fades, spellId=461536
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=461536
 	[Yell] {rt%1$d}Rolling Rubbish, type=shortposition, spellId=461536
 
 Timers:
-	Berserk, time=385.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+	Meltdown (%s), time=51.10, type=nextcount, spellId=1217954, triggerDeltas = 0.00, 44.40, 32.28, 46.89, 51.11
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
+		[ 44.40] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
+			 Triggered 3x, delta times: 44.40, 79.17, 51.11
+		[ 66.67] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
+		[ 76.68] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
+	The Recycler, time=14.00, type=castpnp, spellId=1220752, triggerDeltas = 28.75, 0.13, 79.02, 0.12, 0.08, 0.11, 50.80, 0.12, 0.13, 0.11, 50.74, 0.20, 0.00, 0.10
+		[ 28.75] SPELL_CAST_START: [Scrapmaster: The Recycler] Creature-0-1-2769-1-231839-0000000011, Scrapmaster, 0xa48, "", nil, 0x0, 1220752, The Recycler, 0, 0
+			 Triggered 14x, delta times: 28.75, 0.13, 79.02, 0.12, 0.08, 0.11, 50.80, 0.12, 0.13, 0.11, 50.74, 0.20, 0.00, 0.10
 	Demolish (%s), time=51.10, type=nextcount, spellId=464112, triggerDeltas = 0.00, 17.72, 58.96, 20.21, 51.13, 51.11
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
 		[ 17.72] SPELL_CAST_START: [Stix Bunkjunker: Demolish] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464112, Demolish, 0, 0
@@ -71,21 +78,15 @@ Timers:
 	Short Fuse, time=30.00, type=castpnp, spellId=473115, triggerDeltas = 25.29, 0.21, 0.23, 78.66, 0.11, 0.10, 0.13, 0.15, 50.60, 0.12, 0.11, 0.13, 0.12, 50.67, 0.10, 0.14, 0.11, 0.13
 		[ 25.29] SPELL_AURA_APPLIED: [Territorial Bombshell->Territorial Bombshell: Short Fuse] Creature-0-1-2769-1-231531-0000000013, Territorial Bombshell, 0xa48, Creature-0-1-2769-1-231531-0000000013, Territorial Bombshell, 0xa48, 473115, Short Fuse, 0, BUFF, 0
 			 Triggered 18x, delta times: 25.29, 0.21, 0.23, 78.66, 0.11, 0.10, 0.13, 0.15, 50.60, 0.12, 0.11, 0.13, 0.12, 50.67, 0.10, 0.14, 0.11, 0.13
-	Meltdown (%s), time=51.10, type=nextcount, spellId=1217954, triggerDeltas = 0.00, 44.40, 32.28, 46.89, 51.11
+	Berserk, time=385.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
-		[ 44.40] SPELL_CAST_START: [Stix Bunkjunker: Meltdown] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 1217954, Meltdown, 0, 0
-			 Triggered 3x, delta times: 44.40, 79.17, 51.11
-		[ 66.67] SPELL_CAST_START: [Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467117, Overdrive, 0, 0
-		[ 76.68] SPELL_AURA_REMOVED: [Stix Bunkjunker->Stix Bunkjunker: Overdrive] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, 467117, Overdrive, 0, BUFF, 0
-	The Recycler, time=14.00, type=castpnp, spellId=1220752, triggerDeltas = 28.75, 0.13, 79.02, 0.12, 0.08, 0.11, 50.80, 0.12, 0.13, 0.11, 50.74, 0.20, 0.00, 0.10
-		[ 28.75] SPELL_CAST_START: [Scrapmaster: The Recycler] Creature-0-1-2769-1-231839-0000000011, Scrapmaster, 0xa48, "", nil, 0x0, 1220752, The Recycler, 0, 0
-			 Triggered 14x, delta times: 28.75, 0.13, 79.02, 0.12, 0.08, 0.11, 50.80, 0.12, 0.13, 0.11, 50.74, 0.20, 0.00, 0.10
 
 Announces:
-	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 85.00
-		[ 85.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
-	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 205.00
-		[205.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
+	Marked For ""Recycling"" on >%s<, type=target, spellId=1220648, triggerDeltas = 30.88, 79.33, 51.16, 51.04
+		[ 30.88] Scheduled at 28.88 by SPELL_AURA_APPLIED: [Scrapmaster->Healer4: Marked For "Recycling"] Creature-0-1-2769-1-231839-000000004E, Scrapmaster, 0xa48, Player-1-00000013, Healer4, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
+		[110.21] Scheduled at 108.21 by SPELL_AURA_APPLIED: [Scrapmaster->Dps13: Marked For "Recycling"] Creature-0-1-2769-1-231839-0000000080, Scrapmaster, 0xa48, Player-1-00000019, Dps13, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
+		[161.37] Scheduled at 159.37 by SPELL_AURA_APPLIED: [Scrapmaster->Healer3: Marked For "Recycling"] Creature-0-1-2769-1-231839-0000000083, Scrapmaster, 0xa48, Player-1-00000012, Healer3, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
+		[212.41] Scheduled at 210.41 by SPELL_AURA_APPLIED: [Scrapmaster->Tank1: Marked For "Recycling"] Creature-0-1-2769-1-231839-0000000087, Scrapmaster, 0xa48, Player-1-00000006, Tank1, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
 	Sorted (%s) on >%s<, type=targetcount, spellId=465346, triggerDeltas = 23.24, 79.12, 51.10, 52.14
 		[ 23.24] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps13: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000019, Dps13, 0x512, 465346, Sorted, 0, DEBUFF, 0
 		[102.36] SPELL_AURA_APPLIED: [Stix Bunkjunker->Dps3: Sorted] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, Player-1-00000004, Dps3, 0x512, 465346, Sorted, 0, DEBUFF, 0
@@ -94,21 +95,12 @@ Announces:
 	Casting Dumpster Dive: -nan sec, type=cast, spellId=466742, triggerDeltas = 25.19, 79.13, 31.95, 19.17, 31.51, 4.86, 4.85, 9.93, 11.55
 		[ 25.19] SPELL_CAST_START: [Scrapmaster: Dumpster Dive] Creature-0-1-2769-1-231839-0000000011, Scrapmaster, 0xa48, "", nil, 0x0, 466742, Dumpster Dive, 0, 0
 			 Triggered 9x, delta times: 25.19, 79.13, 31.95, 19.17, 31.51, 4.86, 4.85, 9.93, 11.55
-	Marked For ""Recycling"" on >%s<, type=target, spellId=1220648, triggerDeltas = 30.88, 79.33, 51.16, 51.04
-		[ 30.88] Scheduled at 28.88 by SPELL_AURA_APPLIED: [Scrapmaster->Healer4: Marked For "Recycling"] Creature-0-1-2769-1-231839-000000004E, Scrapmaster, 0xa48, Player-1-00000013, Healer4, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
-		[110.21] Scheduled at 108.21 by SPELL_AURA_APPLIED: [Scrapmaster->Dps13: Marked For "Recycling"] Creature-0-1-2769-1-231839-0000000080, Scrapmaster, 0xa48, Player-1-00000019, Dps13, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
-		[161.37] Scheduled at 159.37 by SPELL_AURA_APPLIED: [Scrapmaster->Healer3: Marked For "Recycling"] Creature-0-1-2769-1-231839-0000000083, Scrapmaster, 0xa48, Player-1-00000012, Healer3, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
-		[212.41] Scheduled at 210.41 by SPELL_AURA_APPLIED: [Scrapmaster->Tank1: Marked For "Recycling"] Creature-0-1-2769-1-231839-0000000087, Scrapmaster, 0xa48, Player-1-00000006, Tank1, 0x512, 1220648, Marked For "Recycling", 0, DEBUFF, 0
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 85.00
+		[ 85.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
+	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 205.00
+		[205.00] Scheduled at 0.00 by ENCOUNTER_START: 3012, Stix Bunkjunker, 16, 20, 0
 
 Special warnings:
-	Incinerator (%s) - move away from others, type=moveawaycount, spellId=464149, triggerDeltas = 11.08, 25.57, 25.56, 28.01, 25.56, 25.57, 25.52, 25.59, 25.55
-		[ 11.08] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
-			 Triggered 9x, delta times: 11.08, 25.57, 25.56, 28.01, 25.56, 25.57, 25.52, 25.59, 25.55
-	Balls+Adds! (%s), type=count, spellId=464399, triggerDeltas = 22.19, 79.15, 51.09, 51.15
-		[ 22.19] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
-			 Triggered 4x, delta times: 22.19, 79.15, 51.09, 51.15
-	Trash Compactor - dodge attack, type=dodge, spellId=467135, triggerDeltas = 75.09
-		[ 75.09] SPELL_CAST_START: [Stix Bunkjunker: Trash Compactor] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467109, Trash Compactor, 0, 0
 	Scrap Rockets - interrupt >%s<! (%d), type=interruptcount, spellId=1219384, triggerDeltas = 37.82, 6.08, 1.20, 6.02, 3.73, 63.21, 1.22, 3.64, 2.42, 3.65, 1.01, 0.20, 6.09, 32.03, 4.89, 1.16, 2.47, 4.04, 0.00, 0.00, 1.21, 1.20, 0.00, 3.66, 1.22, 0.00, 4.85, 8.65, 5.96
 		[ 37.82] SPELL_AURA_APPLIED: [Scrapmaster->Dps1: Scrap Rockets] Creature-0-1-2769-1-231839-0000000011, Scrapmaster, 0xa48, Player-1-00000001, Dps1, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 			 Triggered 4x, delta times: 37.82, 85.10, 13.37, 51.88
@@ -134,6 +126,14 @@ Special warnings:
 		[183.29] SPELL_AURA_APPLIED: [Scrapmaster->Dps5: Scrap Rockets] Creature-0-1-2769-1-231839-0000000077, Scrapmaster, 0xa48, Player-1-00000007, Dps5, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		[201.67] SPELL_AURA_APPLIED: [Scrapmaster->Dps11: Scrap Rockets] Creature-0-1-2769-1-231839-000000005D, Scrapmaster, 0xa48, Player-1-00000017, Dps11, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
 		[207.63] SPELL_AURA_APPLIED: [Scrapmaster->Tank1: Scrap Rockets] Creature-0-1-2769-1-231839-000000005D, Scrapmaster, 0xa48, Player-1-00000006, Tank1, 0x512, 1219384, Scrap Rockets, 0, DEBUFF, 0
+	Incinerator (%s) - move away from others, type=moveawaycount, spellId=464149, triggerDeltas = 11.08, 25.57, 25.56, 28.01, 25.56, 25.57, 25.52, 25.59, 25.55
+		[ 11.08] SPELL_CAST_SUCCESS: [Stix Bunkjunker: Incinerator] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464149, Incinerator, 0, 0
+			 Triggered 9x, delta times: 11.08, 25.57, 25.56, 28.01, 25.56, 25.57, 25.52, 25.59, 25.55
+	Balls+Adds! (%s), type=count, spellId=464399, triggerDeltas = 22.19, 79.15, 51.09, 51.15
+		[ 22.19] SPELL_CAST_START: [Stix Bunkjunker: Electromagnetic Sorting] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 464399, Electromagnetic Sorting, 0, 0
+			 Triggered 4x, delta times: 22.19, 79.15, 51.09, 51.15
+	Trash Compactor - dodge attack, type=dodge, spellId=467135, triggerDeltas = 75.09
+		[ 75.09] SPELL_CAST_START: [Stix Bunkjunker: Trash Compactor] Vehicle-0-1-2769-1-230322-0000000002, Stix Bunkjunker, 0xa48, "", nil, 0x0, 467109, Trash Compactor, 0, 0
 
 Yells:
 	None

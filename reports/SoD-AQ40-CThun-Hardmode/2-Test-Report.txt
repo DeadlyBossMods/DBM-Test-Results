@@ -9,6 +9,12 @@ Unused objects:
 	[Yell] Eye Beam on PlayerName, type=yell, spellId=26134
 
 Timers:
+	Dark Glare ends, time=39.00, type=active, spellId=26029, triggerDeltas = 48.00
+		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
+	Dark Glare, time=86.00, type=next, spellId=26029, triggerDeltas = 0.00, 48.00
+		[  0.00] ENCOUNTER_START: 717, C'thun, 186, 40, 0
+		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
+		[115.26] UNIT_DIED: [->Eye of C'Thun] "", nil, 0x0, Creature-0-1-531-1-15589-0000000001, Eye of C'Thun, 0xa48, -1, false, 0, 0
 	Claw Tentacle, time=8.00, type=cd, spellId=<none>, triggerDeltas = 0.00, 8.00, 7.99, 8.00, 8.00, 8.01, 8.00, 7.98, 7.99, 8.00, 8.00, 8.02, 8.00, 7.99, 8.00
 		[  0.00] ENCOUNTER_START: 717, C'thun, 186, 40, 0
 		[  8.00] SPELL_CAST_SUCCESS: [Claw Tentacle: Birth] Creature-0-1-531-1-15725-0000000009, Claw Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
@@ -40,14 +46,10 @@ Timers:
 		[210.64] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4525, nil, 0, false, false, false, false, 0
 		[337.19] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4556, nil, 0, false, false, false, false, 0
 		[440.65] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4582, nil, 0, false, false, false, false, 0
-	Dark Glare ends, time=39.00, type=active, spellId=26029, triggerDeltas = 48.00
-		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
-	Dark Glare, time=86.00, type=next, spellId=26029, triggerDeltas = 0.00, 48.00
-		[  0.00] ENCOUNTER_START: 717, C'thun, 186, 40, 0
-		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
-		[115.26] UNIT_DIED: [->Eye of C'Thun] "", nil, 0x0, Creature-0-1-531-1-15589-0000000001, Eye of C'Thun, 0xa48, -1, false, 0, 0
 
 Announces:
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 115.26
+		[115.26] UNIT_DIED: [->Eye of C'Thun] "", nil, 0x0, Creature-0-1-531-1-15589-0000000001, Eye of C'Thun, 0xa48, -1, false, 0, 0
 	Claw Tentacle, type=nil, spellId=<none>, triggerDeltas = 8.00, 7.99, 8.00, 8.00, 8.01, 8.00, 7.98, 7.99, 8.00, 8.00, 8.02, 8.00, 7.99, 8.00
 		[  8.00] SPELL_CAST_SUCCESS: [Claw Tentacle: Birth] Creature-0-1-531-1-15725-0000000009, Claw Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
 			 Triggered 14x, delta times: 8.00, 7.99, 8.00, 8.00, 8.01, 8.00, 7.98, 7.99, 8.00, 8.00, 8.02, 8.00, 7.99, 8.00
@@ -60,16 +62,14 @@ Announces:
 	Giant Eye Tentacle, type=nil, spellId=<none>, triggerDeltas = 157.00, 136.03, 35.02
 		[157.00] SPELL_CAST_SUCCESS: [Giant Eye Tentacle: Birth] Creature-0-1-531-1-15334-0000000084, Giant Eye Tentacle, 0xa48, "", nil, 0x0, 26586, Birth, 0, 0
 			 Triggered 3x, delta times: 157.00, 136.03, 35.02
-	Stage 2, type=stage, spellId=<none>, triggerDeltas = 115.26
-		[115.26] UNIT_DIED: [->Eye of C'Thun] "", nil, 0x0, Creature-0-1-531-1-15589-0000000001, Eye of C'Thun, 0xa48, -1, false, 0, 0
 
 Special warnings:
+	Dark Glare - dodge attack, type=dodge, spellId=26029, triggerDeltas = 48.00
+		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
 	C'Thun Weakened!, type=nil, spellId=<none>, triggerDeltas = 210.64, 126.55, 103.46
 		[210.64] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4525, nil, 0, false, false, false, false, 0
 		[337.19] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4556, nil, 0, false, false, false, false, 0
 		[440.65] CHAT_MSG_MONSTER_EMOTE: %s is weakened!, C'Thun, "", "", C'Thun, "", 0, 0, "", 0, 4582, nil, 0, false, false, false, false, 0
-	Dark Glare - dodge attack, type=dodge, spellId=26029, triggerDeltas = 48.00
-		[ 48.00] Scheduled at 0.00 by ENCOUNTER_START: 717, C'thun, 186, 40, 0
 
 Yells:
 	None

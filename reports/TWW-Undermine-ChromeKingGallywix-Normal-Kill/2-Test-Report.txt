@@ -51,14 +51,12 @@ Findings:
 	Timer for spell ID 1219333 (Gallybux Finale Blast) is triggered by event SPELL_CAST_START 467182 (Suppression)
 
 Unused objects:
-	[Announce] Focused Detonation (%s), type=count, spellId=466246
-	[Announce] Fused Canisters incoming debuff (%s), type=incomingcount, spellId=466341
 	[Announce] Giga Blast Residue on >%s<, type=target, spellId=1218504
 	[Announce] Mayhem Rockets (%s), type=count, spellId=1218696
 	[Announce] Discharged Giga Bomb on >%s<, type=target, spellId=1218992
 	[Announce] Auto-Locking Cuff Bomb on >%s<, type=target, spellId=1220784
-	[Special Warning] Scatterblast Canisters on >%s< - taunt now, type=taunt, spellId=466340
-	[Special Warning] Ego Check - defensive, type=defensive, spellId=466958
+	[Announce] Focused Detonation (%s), type=count, spellId=466246
+	[Announce] Fused Canisters incoming debuff (%s), type=incomingcount, spellId=466341
 	[Special Warning] Cratering - dodge attack, type=dodge, spellId=1214226
 	[Special Warning] Bigger Badder Bomb Blast on >%s< - taunt now, type=taunt, spellId=1214607
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1215209
@@ -68,9 +66,8 @@ Unused objects:
 	[Special Warning] Biggest Baddest Bomb Barrage! (%s), type=count, spellId=1218546
 	[Special Warning] Ionization on >%s< - dispel now, type=dispel, spellId=1219039
 	[Special Warning] Static Zap - interrupt >%s<! (%d), type=interruptcount, spellId=1219041
-	[Timer] 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165
-	[Timer] Shock Barrage, time=10.00, type=castpnp, spellId=466834
-	[Timer] Ego Check, time=97.30, type=cd, spellId=466958
+	[Special Warning] Scatterblast Canisters on >%s< - taunt now, type=taunt, spellId=466340
+	[Special Warning] Ego Check - defensive, type=defensive, spellId=466958
 	[Timer] TOTAL DESTRUCTION!!!, time=25.00, type=cast, spellId=1214369
 	[Timer] Time-Release Crackle: %s, time=10.00, type=target, spellId=1217292
 	[Timer] Combination Canisters (%s), time=97.30, type=cdcount, spellId=1217987
@@ -78,10 +75,24 @@ Unused objects:
 	[Timer] Biggest Baddest Bomb Barrage (%s), time=97.30, type=cdcount, spellId=1218546
 	[Timer] Mayhem Rockets, time=5.00, type=cast, spellId=1218696
 	[Timer] Control Meltdown (%s), time=15.00, type=castcount, spellId=1220846
+	[Timer] 1500-Pound ""Dud"", time=15.00, type=castpnp, spellId=466165
+	[Timer] Shock Barrage, time=10.00, type=castpnp, spellId=466834
+	[Timer] Ego Check, time=97.30, type=cd, spellId=466958
 
 Timers:
-	Stage %s, time=33.00, type=stagecount, spellId=66911, triggerDeltas = 0.00
-		[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 14, 25, 0
+	Bigger Badder Bomb Blast (%s), time=97.30, type=cdcount, spellId=1214607, triggerDeltas = 189.80, 8.04, 73.02
+		[189.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
+		[197.84] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
+		[270.86] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
+	Overloaded Rockets (%s), time=11.50, type=cdcount, spellId=1214755, triggerDeltas = 197.84, 34.02, 69.08
+		[197.84] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
+			 Triggered 3x, delta times: 197.84, 34.02, 69.08
+	Wrench, time=7.30, type=cdnp, spellId=1216845, triggerDeltas = 159.52, 1.21, 6.08, 1.21
+		[159.52] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-000000003A, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
+			 Triggered 4x, delta times: 159.52, 1.21, 6.08, 1.21
+	Gallybux Finale Blast (%s), time=6.00, type=castcount, spellId=1219333, triggerDeltas = 222.85, 69.08
+		[222.85] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
+			 Triggered 2x, delta times: 222.85, 69.08
 	Big Bad Buncha Bombs (%s), time=97.30, type=cdcount, spellId=465952, triggerDeltas = 0.00, 20.23, 39.32, 92.91
 		[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 14, 25, 0
 		[ 20.23] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 1122, nil, 0, false, false, false, false, 0
@@ -126,19 +137,8 @@ Timers:
 			 Triggered 9x, delta times: 137.92, 6.53, 6.53, 101.89, 6.48, 6.52, 68.46, 6.52, 6.52
 		[152.46] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
 			 Triggered 2x, delta times: 152.46, 118.40
-	Bigger Badder Bomb Blast (%s), time=97.30, type=cdcount, spellId=1214607, triggerDeltas = 189.80, 8.04, 73.02
-		[189.80] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: TOTAL DESTRUCTION!!!] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214369, TOTAL DESTRUCTION!!!, 0, BUFF, 0
-		[197.84] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
-		[270.86] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Giga Coils] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 469293, Giga Coils, 0, BUFF, 0
-	Overloaded Rockets (%s), time=11.50, type=cdcount, spellId=1214755, triggerDeltas = 197.84, 34.02, 69.08
-		[197.84] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
-			 Triggered 3x, delta times: 197.84, 34.02, 69.08
-	Wrench, time=7.30, type=cdnp, spellId=1216845, triggerDeltas = 159.52, 1.21, 6.08, 1.21
-		[159.52] SPELL_CAST_START: [Darkfuse Wrenchmonger: Wrench] Creature-0-1-2769-1-231939-000000003A, Darkfuse Wrenchmonger, 0xa48, "", nil, 0x0, 1216845, Wrench, 0, 0
-			 Triggered 4x, delta times: 159.52, 1.21, 6.08, 1.21
-	Gallybux Finale Blast (%s), time=6.00, type=castcount, spellId=1219333, triggerDeltas = 222.85, 69.08
-		[222.85] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
-			 Triggered 2x, delta times: 222.85, 69.08
+	Stage %s, time=33.00, type=stagecount, spellId=66911, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3016, Chrome King Gallywix, 14, 25, 0
 
 Announces:
 	%s, type=stagechange, spellId=<none>, triggerDeltas = 123.37, 48.35, 18.08
@@ -173,6 +173,14 @@ Announces:
 		[347.49] SPELL_AURA_APPLIED: [Giga Bomb->Dps4: Charged Giga Bomb] Creature-0-1-2769-1-233051-0000000078, Giga Bomb, 0xa48, Player-1-00000006, Dps4, 0x512, 469362, Charged Giga Bomb, 0, DEBUFF, 0
 
 Special warnings:
+	TOTAL DESTRUCTION!!! - interrupt >%s<!, type=interrupt, spellId=1214369, triggerDeltas = 188.93
+		[188.93] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 0, 0
+	Bigger Badder Bomb Blast! (%s), type=count, spellId=1214607, triggerDeltas = 197.84, 34.02, 69.08
+		[197.84] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
+			 Triggered 3x, delta times: 197.84, 34.02, 69.08
+	Gallybux Finale Blast - dodge attack, type=dodge, spellId=1219333, triggerDeltas = 222.85, 69.08
+		[222.85] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
+			 Triggered 2x, delta times: 222.85, 69.08
 	Big Bad Buncha Bombs! (%s), type=count, spellId=465952, triggerDeltas = 20.23, 39.32, 39.38
 		[ 20.23] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 1122, nil, 0, false, false, false, false, 0
 		[ 59.55] CHAT_MSG_RAID_BOSS_EMOTE: %s begins to cast [Big Bad Buncha Bombs]!, Chrome King Gallywix, "", "", "", "", 0, 0, "", 0, 1135, nil, 0, false, false, false, false, 0
@@ -191,14 +199,6 @@ Special warnings:
 			 Triggered 5x, delta times: 34.78, 43.47, 37.34, 107.26, 69.08
 	Charged Giga Bomb on you, type=you, spellId=469362, triggerDeltas = 145.95
 		[145.95] SPELL_AURA_APPLIED: [Giga Bomb->Tank2: Charged Giga Bomb] Creature-0-1-2769-1-233051-0000000087, Giga Bomb, 0xa48, Player-1-00000015, Tank2, 0x511, 469362, Charged Giga Bomb, 0, DEBUFF, 0
-	TOTAL DESTRUCTION!!! - interrupt >%s<!, type=interrupt, spellId=1214369, triggerDeltas = 188.93
-		[188.93] SPELL_AURA_REMOVED: [Chrome King Gallywix->Chrome King Gallywix: Armageddon-class Plating] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, 1214229, Armageddon-class Plating, 0, DEBUFF, 0, 0
-	Bigger Badder Bomb Blast! (%s), type=count, spellId=1214607, triggerDeltas = 197.84, 34.02, 69.08
-		[197.84] SPELL_CAST_START: [Chrome King Gallywix: Bigger Badder Bomb Blast] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 1214607, Bigger Badder Bomb Blast, 0, 0
-			 Triggered 3x, delta times: 197.84, 34.02, 69.08
-	Gallybux Finale Blast - dodge attack, type=dodge, spellId=1219333, triggerDeltas = 222.85, 69.08
-		[222.85] SPELL_CAST_START: [Chrome King Gallywix: Suppression] Vehicle-0-1-2769-1-231075-0000000001, Chrome King Gallywix, 0xa48, "", nil, 0x0, 467182, Suppression, 0, 0
-			 Triggered 2x, delta times: 222.85, 69.08
 
 Yells:
 	None
