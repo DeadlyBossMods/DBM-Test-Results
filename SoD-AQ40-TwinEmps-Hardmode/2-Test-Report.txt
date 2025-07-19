@@ -12,12 +12,10 @@ Findings:
 Unused objects:
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
-	[Special Warning] Explode Bug - move away, type=move, spellId=804
 	[Special Warning] Unbalancing Strike - defensive, type=defensive, spellId=26613
+	[Special Warning] Explode Bug - move away, type=move, spellId=804
 
 Timers:
-	Berserk, time=900.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
-		[  0.00] ENCOUNTER_START: 715, Twin Emperors, 186, 40, 0
 	Twin Teleport, time=29.20, type=cd, spellId=800, triggerDeltas = 0.00, 30.96, 35.60, 35.64, 35.65, 35.63
 		[  0.00] ENCOUNTER_START: 715, Twin Emperors, 186, 40, 0
 		[ 30.96] SPELL_CAST_SUCCESS: [Emperor Vek'lor: Twin Teleport] Creature-0-1-531-1-15276-0000000001, Emperor Vek'lor, 0xa48, "", nil, 0x0, 1217333, Twin Teleport, 0, 0
@@ -28,19 +26,21 @@ Timers:
 	Explode Bug, time=9.00, type=var, spellId=804, triggerDeltas = 4.78, 9.71, 24.27, 40.51, 6.46, 11.33, 4.87, 11.39, 11.31, 27.54, 38.88
 		[  4.78] SPELL_CAST_SUCCESS: [Emperor Vek'lor: Explode Bug] Creature-0-1-531-1-15276-0000000001, Emperor Vek'lor, 0xa48, "", nil, 0x0, 804, Explode Bug, 0, 0
 			 Triggered 11x, delta times: 4.78, 9.71, 24.27, 40.51, 6.46, 11.33, 4.87, 11.39, 11.31, 27.54, 38.88
+	Berserk, time=900.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 715, Twin Emperors, 186, 40, 0
 
 Announces:
+	Unbalancing Strike on >%s<, type=target, spellId=26613, triggerDeltas = 40.37, 93.98, 22.69, 11.34, 11.36
+		[ 40.37] SPELL_AURA_APPLIED: [Emperor Vek'nilash->Dps10: Unbalancing Strike] Creature-0-1-531-1-15275-0000000001, Emperor Vek'nilash, 0xa48, Player-1-00000013, Dps10, 0x512, 26613, Unbalancing Strike, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 40.37, 93.98, 45.39
+		[157.04] SPELL_AURA_APPLIED: [Emperor Vek'nilash->Tank1: Unbalancing Strike] Creature-0-1-531-1-15275-0000000001, Emperor Vek'nilash, 0xa48, Player-1-00000012, Tank1, 0x512, 26613, Unbalancing Strike, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 157.04, 11.34
 	Twin Teleport, type=spell, spellId=800, triggerDeltas = 30.96, 35.60, 35.64, 35.65, 35.63
 		[ 30.96] SPELL_CAST_SUCCESS: [Emperor Vek'lor: Twin Teleport] Creature-0-1-531-1-15276-0000000001, Emperor Vek'lor, 0xa48, "", nil, 0x0, 1217333, Twin Teleport, 0, 0
 			 Triggered 5x, delta times: 30.96, 35.60, 35.64, 35.65, 35.63
 	Mutate Bug, type=spell, spellId=802, triggerDeltas = 30.67, 12.93, 12.97, 17.81, 12.97, 14.58, 21.08, 11.34, 14.60, 12.93, 11.34, 17.83
 		[ 30.67] SPELL_CAST_SUCCESS: [Emperor Vek'nilash: Mutate Bug] Creature-0-1-531-1-15275-0000000001, Emperor Vek'nilash, 0xa48, "", nil, 0x0, 802, Mutate Bug, 0, 0
 			 Triggered 12x, delta times: 30.67, 12.93, 12.97, 17.81, 12.97, 14.58, 21.08, 11.34, 14.60, 12.93, 11.34, 17.83
-	Unbalancing Strike on >%s<, type=target, spellId=26613, triggerDeltas = 40.37, 93.98, 22.69, 11.34, 11.36
-		[ 40.37] SPELL_AURA_APPLIED: [Emperor Vek'nilash->Dps10: Unbalancing Strike] Creature-0-1-531-1-15275-0000000001, Emperor Vek'nilash, 0xa48, Player-1-00000013, Dps10, 0x512, 26613, Unbalancing Strike, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 40.37, 93.98, 45.39
-		[157.04] SPELL_AURA_APPLIED: [Emperor Vek'nilash->Tank1: Unbalancing Strike] Creature-0-1-531-1-15275-0000000001, Emperor Vek'nilash, 0xa48, Player-1-00000012, Tank1, 0x512, 26613, Unbalancing Strike, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 157.04, 11.34
 
 Special warnings:
 	%s damage - move away, type=gtfo, spellId=26607, triggerDeltas = 12.87

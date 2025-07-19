@@ -64,8 +64,12 @@ Findings:
 	Announce for spell ID 1222408 (Head Honcho: Mug'Zee) is triggered by event SPELL_CAST_START 463967 (Bloodlust)
 
 Unused objects:
-	[Announce] Double Whammy Shot on >%s<, type=target, spellId=469491
 	[Announce] Disintegration Beam on >%s<, type=target, spellId=1215481
+	[Announce] Double Whammy Shot on >%s<, type=target, spellId=469491
+	[Special Warning] Static Charge - move to >%s<, type=moveto, spellId=1215953
+	[Special Warning] Static Charge on you, type=you, spellId=1215953
+	[Special Warning] Double-Minded Fury!, type=spell, spellId=1216142
+	[Special Warning] Electrocution Matrix - dodge attack, type=dodge, spellId=1216495
 	[Special Warning] Frostshatter Boots on you, type=you, spellId=466476
 	[Special Warning] Stormfury Finger Gun (%s) on you, type=youcount, spellId=466509
 	[Special Warning] Molten Gold Knuckles - defensive, type=defensive, spellId=466518
@@ -78,11 +82,9 @@ Unused objects:
 	[Special Warning] Double Whammy Shot on you, type=you, spellId=469491
 	[Special Warning] Earthshaker Gaol on you, type=you, spellId=474461
 	[Special Warning] %s damage - move away, type=gtfo, spellId=474554
-	[Special Warning] Static Charge - move to >%s<, type=moveto, spellId=1215953
-	[Special Warning] Static Charge on you, type=you, spellId=1215953
-	[Special Warning] Double-Minded Fury!, type=spell, spellId=1216142
-	[Special Warning] Electrocution Matrix - dodge attack, type=dodge, spellId=1216495
 	[Timer] Shakedown, time=3.00, type=cdnp, spellId=472659
+	[Yell] %d, type=shortfade, spellId=1215953
+	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
 	[Yell] %d, type=shortfade, spellId=466545
 	[Yell] Spray and Pray on PlayerName, type=yell, spellId=466545
 	[Yell] %d, type=shortfade, spellId=467380
@@ -91,11 +93,14 @@ Unused objects:
 	[Yell] Tank Soak, type=yell, spellId=469491
 	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=474461
 	[Yell] {rt%1$d}Earthshaker Gaol, type=shortposition, spellId=474461
-	[Yell] %d, type=shortfade, spellId=1215953
-	[Yell] Static Charge on PlayerName, type=yell, spellId=1215953
 
 Timers:
 	Faulty Wiring (%s), time=30.00, type=cdcount, spellId=<none>, triggerDeltas = 223.57
+		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
+	Static Charge (%s), time=14.00, type=cdcount, spellId=1215953, triggerDeltas = 181.07, 14.11
+		[181.07] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
+			 Triggered 2x, delta times: 181.07, 14.11
+	Double-Minded Fury, time=97.30, type=next, spellId=1216142, triggerDeltas = 223.57
 		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 	Frostshatter Boots (%s), time=30.00, type=cdcount, spellId=466476, triggerDeltas = 75.20, 148.37
 		[ 75.20] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
@@ -142,11 +147,6 @@ Timers:
 	Earthshaker Gaol (%s), time=35.00, type=cdcount, spellId=474461, triggerDeltas = 75.20, 148.37
 		[ 75.20] SPELL_CAST_SUCCESS: [Mug'Zee: Mug Taking Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 468728, Mug Taking Charge, 0, 0
 		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
-	Static Charge (%s), time=14.00, type=cdcount, spellId=1215953, triggerDeltas = 181.07, 14.11
-		[181.07] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
-			 Triggered 2x, delta times: 181.07, 14.11
-	Double-Minded Fury, time=97.30, type=next, spellId=1216142, triggerDeltas = 223.57
-		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 
 Announces:
 	 (%s), type=count, spellId=<none>, triggerDeltas = 0.18, 148.02, 72.87, 49.99
@@ -154,6 +154,8 @@ Announces:
 			 Triggered 4x, delta times: 0.18, 148.02, 72.87, 49.99
 	%s, type=stagechange, spellId=<none>, triggerDeltas = 181.07, 42.50
 		[181.07] SPELL_CAST_START: [Mug'Zee: Static Charge] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 1215953, Static Charge, 0, 0
+		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
+	Head Honcho: Mug'Zee, type=spell, spellId=1222408, triggerDeltas = 223.57
 		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 	Moxie on >%s< (%d), type=stack, spellId=466385, triggerDeltas = 50.01, 50.03, 49.99, 49.97, 50.01
 		[ 50.01] SPELL_AURA_APPLIED_DOSE: [Mug'Zee->Mug'Zee: Moxie] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, 466385, Moxie, 0, BUFF, 10, 0
@@ -173,8 +175,6 @@ Announces:
 	Earthshaker Gaol (%s) on >%s<, type=targetcount, spellId=474461, triggerDeltas = 89.14, 163.19
 		[ 89.14] SPELL_AURA_APPLIED: [Mug'Zee->Dps4: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000006, Dps4, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
 		[252.33] SPELL_AURA_APPLIED: [Mug'Zee->Dps12: Earthshaker Gaol] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, Player-1-00000021, Dps12, 0x512, 472631, Earthshaker Gaol, 0, DEBUFF, 0
-	Head Honcho: Mug'Zee, type=spell, spellId=1222408, triggerDeltas = 223.57
-		[223.57] SPELL_CAST_START: [Mug'Zee: Bloodlust] Creature-0-1-2769-1-229953-0000000001, Mug'Zee, 0xa48, "", nil, 0x0, 463967, Bloodlust, 0, 0
 
 Special warnings:
 	Stormfury Finger Gun (%s) - dodge attack, type=dodgecount, spellId=466509, triggerDeltas = 135.31, 150.84

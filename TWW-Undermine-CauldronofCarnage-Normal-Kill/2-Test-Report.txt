@@ -29,26 +29,33 @@ Findings:
 	Timer for spell ID 1214190 (Eruption Stomp) is triggered by event SPELL_AURA_REMOVED 465872 (Colossal Clash)
 
 Unused objects:
-	[Announce] King of Carnage (%s), type=count, spellId=471557
-	[Announce] Beam on >%s<, type=target, spellId=472233
 	[Announce] Voltaic Image on >%s<, type=target, spellId=1213994
 	[Announce] Tiny Tussle (%s), type=count, spellId=1221826
-	[Special Warning] Lightning Bash - defensive, type=defensive, spellId=466178
-	[Special Warning] Beam - move away from others, type=moveaway, spellId=472233
-	[Special Warning] %d stacks of Static Charge on you, type=stack, spellId=474159
+	[Announce] King of Carnage (%s), type=count, spellId=471557
+	[Announce] Beam on >%s<, type=target, spellId=472233
 	[Special Warning] Molten Phlegm - move away from others, type=moveaway, spellId=1213690
 	[Special Warning] Voltaic Image - run away, type=run, spellId=1213994
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1214039
 	[Special Warning] Stomp - defensive, type=defensive, spellId=1214190
+	[Special Warning] Lightning Bash - defensive, type=defensive, spellId=466178
+	[Special Warning] Beam - move away from others, type=moveaway, spellId=472233
+	[Special Warning] %d stacks of Static Charge on you, type=stack, spellId=474159
 	[Timer] Molten Phlegm (%s), time=97.30, type=cdcount, spellId=1213690
 	[Timer] Voltaic Image (%s), time=97.30, type=cdcount, spellId=1213994
+	[Yell] %d, type=shortfade, spellId=1213690
+	[Yell] %d, type=shortfade, spellId=1214190
 	[Yell] %d, type=shortfade, spellId=472233
 	[Yell] Beam, type=shortyell, spellId=472233
 	[Yell] %s, type=repeaticon, spellId=474159
-	[Yell] %d, type=shortfade, spellId=1213690
-	[Yell] %d, type=shortfade, spellId=1214190
 
 Timers:
+	Stomp (%s), time=97.30, type=cdcount, spellId=1214190, triggerDeltas = 0.00, 29.99, 64.21, 30.79, 64.15
+		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 14, 30, 0
+		[ 29.99] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
+			 Triggered 2x, delta times: 29.99, 95.00
+		[ 94.20] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
+			 Triggered 2x, delta times: 94.20, 94.94
+		[194.62] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, -1, false, 0, 0
 	Thunderdrum Salvo (%s), time=97.30, type=cdcount, spellId=463900, triggerDeltas = 0.00, 20.01, 74.19, 20.80, 74.14
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 14, 30, 0
 		[ 20.01] SPELL_CAST_SUCCESS: [Torq: Thunderdrum Salvo] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, "", nil, 0x0, 463900, Thunderdrum Salvo, 0, 0
@@ -86,13 +93,6 @@ Timers:
 		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 14, 30, 0
 		[ 94.20] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
 			 Triggered 2x, delta times: 94.20, 94.94
-	Stomp (%s), time=97.30, type=cdcount, spellId=1214190, triggerDeltas = 0.00, 29.99, 64.21, 30.79, 64.15
-		[  0.00] ENCOUNTER_START: 3010, Cauldron of Carnage, 14, 30, 0
-		[ 29.99] SPELL_CAST_START: [Flarendo: Eruption Stomp] Creature-0-1-2769-1-229181-0000000001, Flarendo, 0xa48, "", nil, 0x0, 1214190, Eruption Stomp, 0, 0
-			 Triggered 2x, delta times: 29.99, 95.00
-		[ 94.20] SPELL_AURA_REMOVED: [Torq->Torq: Colossal Clash] Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, 465872, Colossal Clash, 0, BUFF, 0
-			 Triggered 2x, delta times: 94.20, 94.94
-		[194.62] UNIT_DIED: [->Torq] "", nil, 0x0, Creature-0-1-2769-1-229177-0000000001, Torq, 0xa48, -1, false, 0, 0
 
 Announces:
 	Blistering Spite (%s), type=count, spellId=472222, triggerDeltas = 15.09, 10.00, 10.01, 10.02, 9.98, 9.99, 10.01, 10.00, 100.01, 9.97
