@@ -10,6 +10,7 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1233979 (Astral Harvest)
 	Unused event registration: SPELL_AURA_REMOVED 1243873 (Void Harvest)
 	Unused event registration: SPELL_CAST_START 1232221 (Death Throes)
+	Unused event registration: SPELL_CAST_START 1248133 (Void Tear)
 	Unused event registration: UNIT_DIED
 	Timer for spell ID 1227631 (Arcane Expulsion) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1228161 (Silencing Tempest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
@@ -33,12 +34,14 @@ Findings:
 		Refreshed by: [603.37] SPELL_CAST_START: [Dark Singularity: Hungering Gloom] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Hungering Gloom, 0, 0
 
 Unused objects:
+	[Announce] Void Tear (%s), type=count, spellId=1248133
 	[Special Warning] %d stacks of Overwhelming Power on you, type=stack, spellId=1228502
 	[Special Warning] Overwhelming Power on >%s< - taunt now, type=taunt, spellId=1228502
 	[Special Warning] Death Throes! (%s), type=count, spellId=1232221
 	[Special Warning] Astral Harvest on you, type=you, spellId=1233979
 	[Special Warning] Void Harvest on you, type=you, spellId=1243873
 	[Timer] Death Throes (%s), time=97.30, type=cdcount, spellId=1232221
+	[Timer] Void Tear (%s), time=97.30, type=cdcount, spellId=1248133
 	[Yell] Silencing Tempest, type=shortyell, spellId=1228161
 	[Yell] %d, type=shortfade, spellId=1228216
 	[Yell] Soak, type=shortyell, spellId=1228216
@@ -146,7 +149,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 15, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1234328 1232221 1230529 1243887, SPELL_CAST_SUCCESS 1230231, SPELL_AURA_APPLIED 1228506 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_APPLIED_DOSE 1228506, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1234328 1232221 1230529 1243887 1248133, SPELL_CAST_SUCCESS 1230231, SPELL_AURA_APPLIED 1228506 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_APPLIED_DOSE 1228506, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_DIED
 		StartTimer: 4.0, Overwhelming Power (1)
 		StartTimer: 30.9, Arcane Obliteration (1)
 		StartTimer: 63.0, Silencing Tempest (1)
