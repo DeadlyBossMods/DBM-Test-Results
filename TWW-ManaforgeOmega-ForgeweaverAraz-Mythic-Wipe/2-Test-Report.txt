@@ -27,12 +27,8 @@ Findings:
 		Refreshed by: [483.36] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 	Timer Silencing Tempest (%s), time=97.30, type=cdcount, spellId=1228161 (time=35.30, variance=0.00) got refreshed early with 0.23s remaining
 		Refreshed by: [491.37] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
-	Timer Void Harvest (%s), time=97.30, type=cdcount, spellId=1243873 (time=31.30, variance=0.00) got refreshed early with 0.27s remaining
+	Timer Void Harvest (%s), time=8.00, type=cdcount, spellId=1243873 (time=31.30, variance=0.00) got refreshed early with 0.27s remaining
 		Refreshed by: [487.36] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
-	Timer Void Harvest (%s), time=97.30, type=cdcount, spellId=1243873 (time=97.30, variance=0.00) got refreshed early with 89.30s remaining
-		Refreshed by: [495.36] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
-	Timer Void Harvest (%s), time=97.30, type=cdcount, spellId=1243873 (time=97.30, variance=0.00) got refreshed early with 89.30s remaining
-		Refreshed by: [503.35] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
 
 Unused objects:
 	[Special Warning] %d stacks of Overwhelming Power on you, type=stack, spellId=1228502
@@ -71,7 +67,7 @@ Timers:
 		[204.61] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Death Throes (%s), time=97.30, type=cdcount, spellId=1232221, triggerDeltas = 456.30
 		[456.30] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-	Void Harvest (%s), time=97.30, type=cdcount, spellId=1243873, triggerDeltas = 456.30, 31.06, 8.00, 7.99
+	Void Harvest (%s), time=8.00, type=cdcount, spellId=1243873, triggerDeltas = 456.30, 31.06, 8.00, 7.99
 		[456.30] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		[487.36] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
 			 Triggered 3x, delta times: 487.36, 8.00, 7.99
@@ -401,7 +397,7 @@ Event trace:
 	[484.58] SPELL_AURA_APPLIED: [Forgeweaver Araz->Tank8: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Player-1-00000016, Tank8, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 0
 		ShowAnnounce: Overwhelming Power on PlayerName (1)
 	[487.36] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
-		StartTimer: 97.3, Void Harvest (2)
+		StartTimer: 8.0, Void Harvest (2)
 	[487.36] SPELL_AURA_APPLIED: [Dark Singularity->Tank8: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, Player-1-00000016, Tank8, 0x511, 1243873, Void Harvest, 0, DEBUFF, 0
 		ShowSpecialWarning: Void Harvest on you
 		PlaySound: VoicePack/runout
@@ -412,12 +408,12 @@ Event trace:
 	[494.37] SPELL_AURA_APPLIED: [Forgeweaver Araz->Tank8: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Player-1-00000016, Tank8, 0x511, 1228188, Silencing Tempest, 0, DEBUFF, 0
 		ShowYell: Silencing Tempest
 	[495.36] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
-		StartTimer: 97.3, Void Harvest (3)
+		StartTimer: 8.0, Void Harvest (3)
 	[495.36] SPELL_AURA_APPLIED: [Dark Singularity->Tank8: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, Player-1-00000016, Tank8, 0x511, 1243873, Void Harvest, 0, DEBUFF, 0
 		ShowSpecialWarning: Void Harvest on you
 		PlaySound: VoicePack/runout
 	[503.35] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
-		StartTimer: 97.3, Void Harvest (4)
+		StartTimer: 28.0, Void Harvest (4)
 	[503.35] SPELL_AURA_APPLIED: [Dark Singularity->Tank8: Void Harvest] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, Player-1-00000016, Tank8, 0x511, 1243873, Void Harvest, 0, DEBUFF, 0
 		ShowSpecialWarning: Void Harvest on you
 		PlaySound: VoicePack/runout
@@ -425,8 +421,8 @@ Event trace:
 		StartTimer: 22.0, Overwhelming Power (3)
 	[507.36] ENCOUNTER_END: 3132, Forgeweaver Araz, 16, 20, 0, 0
 		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873
