@@ -39,12 +39,6 @@ Findings:
 	Timer for spell ID 1230302 (Self-Destruct) is triggered by event SPELL_CAST_START 1228065 (Rally the Shadowguard)
 	Timer for spell ID 1234529 (Cosmic Maw) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
 	Timer for spell ID 1234529 (Cosmic Maw) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
-	Timer Command: Besiege (%s), time=40.00, type=cdcount, spellId=1225016 (time=49.00, variance=0.00) got refreshed early with 3.03s remaining
-		Refreshed by: [ 45.94] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
-	Timer Galactic Smash (%s), time=55.00, type=cdcount, spellId=1225319 (time=9.00, variance=0.00) got refreshed early with 2.73s remaining
-		Refreshed by: [282.07] SPELL_CAST_START: [Nexus-King Salhadaar: Galactic Smash] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225319, Galactic Smash, 0, 0
-	Timer Tank Combo (%s), time=40.00, type=cdcount, spellId=1224776 (time=14.50, variance=0.00) got refreshed early with 2.03s remaining
-		Refreshed by: [ 12.44] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1224776-0000000249, 1224776, Nexus-King Salhadaar, 95.3, 0, Tank4, 0
 
 Unused objects:
 	[Announce] King's Thrall on >%s<, type=target, spellId=1224767
@@ -200,11 +194,11 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 14, 29, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 1224731 1224787 1224812 1227529 1224906 1225010 1225016 1228065 1230302 1232399 1228075 1230263 1227734 1228115 1228163 1234529 1228265 1225319 1234904 1228053 1237106, SPELL_CAST_SUCCESS 1234904 1226442, SPELL_AURA_APPLIED 1224737 1224767 1224776 1227549 1237105 1234529 1228265 1226413, SPELL_AURA_APPLIED_DOSE 1224737 1226413, SPELL_AURA_REMOVED 1224737 1227549 1237105 1228284 1228265, SPELL_AURA_REMOVED_DOSE 1224737, SPELL_PERIODIC_DAMAGE 1231097, SPELL_PERIODIC_MISSED 1231097, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1
-		StartTimer: 14.5, Tank Combo (1)
+		StartTimer: 12.5, Tank Combo (1)
 		StartTimer: 30.0, Banishment (1)
 		StartTimer: 117.0, Invoke the Oath
 		StartTimer: 32.4, Behead (1)
-		StartTimer: 49.0, Command: Besiege (1)
+		StartTimer: 46.0, Command: Besiege (1)
 	[  0.11] SPELL_CAST_START: [Nexus-King Salhadaar: Decree: Oath-Bound] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224731, Decree: Oath-Bound, 0, 0
 		ShowAnnounce: Casting Decree: Oath-Bound: -nan sec
 	[ 12.44] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
@@ -337,7 +331,7 @@ Event trace:
 		StartTimer: 30.0, King's Hunger ends
 	[275.80] SPELL_AURA_REMOVED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-000000003E, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
 		StopTimer: Timer1228265active
-		StartTimer: 9.0, Galactic Smash (1)
+		StartTimer: 6.2, Galactic Smash (1)
 		StartTimer: 46.8, Starkiller Swing (1)
 		StartTimer: 185.0, World in Twilight
 	[282.07] SPELL_CAST_START: [Nexus-King Salhadaar: Galactic Smash] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225319, Galactic Smash, 0, 0
