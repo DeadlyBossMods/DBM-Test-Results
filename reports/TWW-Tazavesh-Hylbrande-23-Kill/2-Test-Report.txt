@@ -1,0 +1,284 @@
+Test: TWW/Tazavesh/Hylbrande/23/Kill
+Mod:  DBM-Party-Shadowlands/2448
+
+Findings:
+	Unused event registration: RAID_BOSS_WHISPER
+	Unused event registration: SPELL_AURA_APPLIED 346427 (Titanic Insight)
+	Unused event registration: SPELL_AURA_APPLIED 358131 (Lightning Nova)
+	Unused event registration: SPELL_AURA_REMOVED 346427 (Titanic Insight)
+	Timer for spell ID 346116 (Shearing Swings) is triggered by event SPELL_AURA_REMOVED 346766 (Sanitizing Cycle)
+	Timer for spell ID 346959 (Purged by Fire) is triggered by event SPELL_AURA_REMOVED 346766 (Sanitizing Cycle)
+	Timer for spell ID 346959 (Purged by Fire) is triggered by event SPELL_CAST_START 346957 (Purged by Fire)
+	Timer for spell ID 347094 (Titanic Crash) is triggered by event SPELL_AURA_REMOVED 346766 (Sanitizing Cycle)
+	Timer for spell ID 353312 (Purifying Burst) is triggered by event SPELL_AURA_REMOVED 346766 (Sanitizing Cycle)
+	Timer , time=29.10, type=cd, spellId=<none> (time=23.40, variance=0.00) got refreshed early with 0.43s remaining
+		Refreshed by: [ 76.91] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001A, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Timer Purged by Fire, time=17.00, type=cd, spellId=346959 (time=12.10, variance=0.00) got refreshed early with 1.27s remaining
+		Refreshed by: [ 10.81] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+	Timer Purged by Fire, time=17.00, type=cd, spellId=346959 (time=19.30, variance=0.00) got refreshed early with 0.47s remaining
+		Refreshed by: [ 72.78] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000001, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+	Timer Purged by Fire, time=17.00, type=cd, spellId=346959 (time=19.30, variance=0.00) got refreshed early with 0.63s remaining
+		Refreshed by: [155.47] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+	Timer Purifying Burst, time=23.10, type=cd, spellId=353312 (time=23.10, variance=0.00) got refreshed early with 2.50s remaining
+		Refreshed by: [ 88.55] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+	Timer Purifying Burst, time=23.10, type=cd, spellId=353312 (time=6.00, variance=0.00) got refreshed early with 0.83s remaining
+		Refreshed by: [  5.14] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+	Timer Shearing Swings, time=10.90, type=cd, spellId=346116 (time=10.90, variance=0.00) got refreshed early with 0.77s remaining
+		Refreshed by: [ 18.52] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+
+Unused objects:
+	[Announce] Titanic Insight on >%s<, type=target, spellId=346427
+	[Announce] Purged by Fire on >%s<, type=target, spellId=346959
+	[Announce] Lightning Nova on >%s<, type=target, spellId=358131
+	[Special Warning] Shearing Swings - defensive, type=defensive, spellId=346116
+	[Special Warning] Purged by Fire on you, type=you, spellId=346959
+	[Timer] Titanic Insight: %s, time=15.00, type=target, spellId=346427
+	[Yell] Purged by Fire on PlayerName, type=yell, spellId=346959
+
+Timers:
+	, time=29.10, type=cd, spellId=<none>, triggerDeltas = 0.00, 53.94, 22.97, 59.89, 24.00
+		[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
+		[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+			 Triggered 2x, delta times: 53.94, 82.86
+		[ 76.91] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001A, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+			 Triggered 2x, delta times: 76.91, 83.89
+	Shearing Swings, time=10.90, type=cd, spellId=346116, triggerDeltas = 0.00, 8.37, 10.15, 35.42, 17.64, 10.88, 10.94, 10.93, 32.47, 17.45
+		[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
+		[  8.37] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+			 Triggered 7x, delta times: 8.37, 10.15, 53.06, 10.88, 10.94, 10.93, 49.92
+		[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+			 Triggered 2x, delta times: 53.94, 82.86
+	Sanitizing Cycle, time=11.00, type=cd, spellId=346766, triggerDeltas = 0.00, 53.94, 82.86
+		[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
+		[ 37.73] SPELL_CAST_START: [Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 346766, Sanitizing Cycle, 0, 0
+			 Triggered 2x, delta times: 37.73, 83.87
+		[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+			 Triggered 2x, delta times: 53.94, 82.86
+	Purged by Fire, time=17.00, type=cd, spellId=346959, triggerDeltas = 0.00, 10.81, 43.13, 18.84, 19.42, 44.60, 18.67
+		[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
+		[ 10.81] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+			 Triggered 4x, delta times: 10.81, 61.97, 19.42, 63.27
+		[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+			 Triggered 2x, delta times: 53.94, 82.86
+	Titanic Crash, time=23.10, type=cd, spellId=347094, triggerDeltas = 0.00, 53.94, 23.69, 59.17, 23.50
+		[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
+		[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+			 Triggered 2x, delta times: 53.94, 82.86
+		[ 77.63] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
+			 Triggered 2x, delta times: 77.63, 82.67
+	Purifying Burst, time=23.10, type=cd, spellId=353312, triggerDeltas = 0.00, 5.14, 48.80, 14.01, 20.60, 48.25, 13.72
+		[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
+		[  5.14] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+			 Triggered 4x, delta times: 5.14, 62.81, 20.60, 61.97
+		[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+			 Triggered 2x, delta times: 53.94, 82.86
+
+Announces:
+	 soon, type=soon, spellId=<none>, triggerDeltas = 18.52, 54.26, 30.33, 53.57
+		[ 18.52] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-0000000045, 346971, Hylbrande, 80.9, 70, ??, 0
+		[ 72.78] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-000000006A, 346971, Hylbrande, 51.8, 20, Tank2, 0
+		[103.11] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-000000003D, 346971, Hylbrande, 35.3, 70, ??, 0
+		[156.68] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-0000000068, 346971, Hylbrande, 5.8, 20, Tank2, 0
+	, type=spell, spellId=<none>, triggerDeltas = 22.22, 54.69, 30.35, 53.54
+		[ 22.22] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000018, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+			 Triggered 4x, delta times: 22.22, 54.69, 30.35, 53.54
+	Keeper's Protection ended, type=ends, spellId=347958, triggerDeltas = 47.31
+		[ 47.31] SPELL_AURA_REMOVED: [Vault Purifier->Security Panel: Keeper's Protection] Creature-0-1-2441-1-176551-0000000018, Vault Purifier, 0xa48, Vehicle-0-1-2441-1-175661-0000000001, Security Panel, 0xa48, 347958, Keeper's Protection, 0, BUFF, 0
+	Purifying Burst (%s), type=count, spellId=353312, triggerDeltas = 5.14, 20.23, 42.58, 20.60, 21.86, 40.11
+		[  5.14] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+			 Triggered 6x, delta times: 5.14, 20.23, 42.58, 20.60, 21.86, 40.11
+
+Special warnings:
+	Sanitizing Cycle! (%s), type=count, spellId=346766, triggerDeltas = 37.73, 83.87
+		[ 37.73] SPELL_CAST_START: [Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 346766, Sanitizing Cycle, 0, 0
+			 Triggered 2x, delta times: 37.73, 83.87
+	Titanic Crash - dodge attack, type=dodge, spellId=347094, triggerDeltas = 15.67, 61.96, 23.08, 59.59
+		[ 15.67] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
+			 Triggered 4x, delta times: 15.67, 61.96, 23.08, 59.59
+	Lightning Nova - interrupt >%s<!, type=interrupt, spellId=358131, triggerDeltas = 8.79, 6.05, 6.06, 60.80, 4.81, 4.87, 8.52
+		[  8.79] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-0000000003, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+			 Triggered 7x, delta times: 8.79, 6.05, 6.06, 60.80, 4.81, 4.87, 8.52
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/kickcast
+		[  8.79] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-0000000003, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+			 Triggered 7x, delta times: 8.79, 6.05, 6.06, 60.80, 4.81, 4.87, 8.52
+	VoicePack/specialsoon
+		[ 37.73] SPELL_CAST_START: [Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 346766, Sanitizing Cycle, 0, 0
+			 Triggered 2x, delta times: 37.73, 83.87
+	VoicePack/shockwave
+		[ 15.67] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
+			 Triggered 4x, delta times: 15.67, 61.96, 23.08, 59.59
+
+Icons:
+	Icon 1, target=Creature-0-1-2441-1-176551-0000000010, scanMethod=nil
+		[107.26] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000010, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Icon 1, target=Creature-0-1-2441-1-176551-0000000015, scanMethod=nil
+		[160.80] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000015, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Icon 1, target=Creature-0-1-2441-1-176551-0000000018, scanMethod=nil
+		[ 22.22] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000018, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Icon 1, target=Creature-0-1-2441-1-176551-000000001A, scanMethod=nil
+		[ 76.91] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001A, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Icon 2, target=Creature-0-1-2441-1-176551-0000000008, scanMethod=nil
+		[ 22.22] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000008, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Icon 2, target=Creature-0-1-2441-1-176551-000000000C, scanMethod=nil
+		[ 76.91] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000000C, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Icon 2, target=Creature-0-1-2441-1-176551-000000001B, scanMethod=nil
+		[107.26] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001B, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+	Icon 2, target=Creature-0-1-2441-1-176551-000000001E, scanMethod=nil
+		[160.80] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001E, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 347094 346957 346766 358131 353312, SPELL_CAST_SUCCESS 346116 181113, SPELL_AURA_APPLIED 358131 346427, SPELL_AURA_REMOVED 347958 346766 346427, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		StartTimer: 6.0, Purifying Burst
+		StartTimer: 8.5, Shearing Swings
+		StartTimer: 12.1, Purged by Fire
+		StartTimer: 15.8, Titanic Crash
+		StartTimer: 22.3, 
+		StartTimer: 37.8, Sanitizing Cycle
+	[  5.14] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+		ShowAnnounce: Purifying Burst (1)
+		StartTimer: 23.1, Purifying Burst
+	[  8.37] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+		StartTimer: 10.9, Shearing Swings
+	[  8.79] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-0000000003, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
+		PlaySound: VoicePack/kickcast
+	[ 10.81] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+		StartTimer: 17.0, Purged by Fire
+	[ 14.84] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-0000000003, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
+		PlaySound: VoicePack/kickcast
+	[ 15.67] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
+		ShowSpecialWarning: Titanic Crash - dodge attack
+		PlaySound: VoicePack/shockwave
+	[ 18.52] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-0000000045, 346971, Hylbrande, 80.9, 70, ??, 0
+		ShowAnnounce: soon
+	[ 18.52] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+		StartTimer: 10.9, Shearing Swings
+	[ 20.90] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-0000000003, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
+		PlaySound: VoicePack/kickcast
+	[ 22.22] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000018, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_CAST_SUCCESS at 22.22
+		ShowAnnounce: 
+		ScanForMobs: Creature-0-1-2441-1-176551-0000000018, 2, 1, 1
+	[ 22.22] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000008, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		ScanForMobs: Creature-0-1-2441-1-176551-0000000008, 2, 2, 1
+	[ 25.37] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+		ShowAnnounce: Purifying Burst (2)
+	[ 37.73] SPELL_CAST_START: [Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 346766, Sanitizing Cycle, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Sanitizing Cycle! (1)
+		PlaySound: VoicePack/specialsoon
+		StopTimer: Timer346766cd
+	[ 47.31] SPELL_AURA_REMOVED: [Vault Purifier->Security Panel: Keeper's Protection] Creature-0-1-2441-1-176551-0000000018, Vault Purifier, 0xa48, Vehicle-0-1-2441-1-175661-0000000001, Security Panel, 0xa48, 347958, Keeper's Protection, 0, BUFF, 0
+		ShowAnnounce: Keeper's Protection ended
+	[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+		AntiSpam: 3
+		StartTimer: 13.2, Purifying Burst
+		StartTimer: 15.6, Shearing Swings
+		StartTimer: 19.3, Purged by Fire
+		StartTimer: 22.9, Titanic Crash
+		StartTimer: 23.4, 
+		StartTimer: 68.1, Sanitizing Cycle
+	[ 67.95] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+		ShowAnnounce: Purifying Burst (3)
+		StartTimer: 23.1, Purifying Burst
+	[ 71.58] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+		StartTimer: 10.9, Shearing Swings
+	[ 72.78] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-000000006A, 346971, Hylbrande, 51.8, 20, Tank2, 0
+		ShowAnnounce: soon
+	[ 72.78] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000001, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+		StartTimer: 17.0, Purged by Fire
+	[ 76.91] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001A, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_CAST_SUCCESS at 76.91
+		ShowAnnounce: 
+		StartTimer: 29.1, 
+		ScanForMobs: Creature-0-1-2441-1-176551-000000001A, 2, 1, 1
+	[ 76.91] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000000C, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		ScanForMobs: Creature-0-1-2441-1-176551-000000000C, 2, 2, 1
+	[ 77.63] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
+		ShowSpecialWarning: Titanic Crash - dodge attack
+		PlaySound: VoicePack/shockwave
+		StartTimer: 23.1, Titanic Crash
+	[ 81.70] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-000000000C, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
+		PlaySound: VoicePack/kickcast
+	[ 82.46] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+		StartTimer: 10.9, Shearing Swings
+	[ 86.51] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-000000000C, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
+		PlaySound: VoicePack/kickcast
+	[ 88.55] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+		ShowAnnounce: Purifying Burst (4)
+		StartTimer: 23.1, Purifying Burst
+	[ 91.38] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-000000000C, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
+		PlaySound: VoicePack/kickcast
+	[ 92.20] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+		StartTimer: 17.0, Purged by Fire
+	[ 93.40] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+		StartTimer: 10.9, Shearing Swings
+	[ 99.90] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-000000000C, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
+		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
+		PlaySound: VoicePack/kickcast
+	[100.71] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
+		ShowSpecialWarning: Titanic Crash - dodge attack
+		PlaySound: VoicePack/shockwave
+	[103.11] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-000000003D, 346971, Hylbrande, 35.3, 70, ??, 0
+		ShowAnnounce: soon
+	[104.33] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+		StartTimer: 10.9, Shearing Swings
+	[107.26] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000010, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_CAST_SUCCESS at 107.26
+		ShowAnnounce: 
+		ScanForMobs: Creature-0-1-2441-1-176551-0000000010, 2, 1, 1
+	[107.26] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001B, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		ScanForMobs: Creature-0-1-2441-1-176551-000000001B, 2, 2, 1
+	[110.41] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+		ShowAnnounce: Purifying Burst (5)
+	[121.60] SPELL_CAST_START: [Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 346766, Sanitizing Cycle, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Sanitizing Cycle! (3)
+		PlaySound: VoicePack/specialsoon
+		StopTimer: Timer346766cd
+	[136.80] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
+		AntiSpam: 3
+		StartTimer: 13.2, Purifying Burst
+		StartTimer: 15.6, Shearing Swings
+		StartTimer: 19.3, Purged by Fire
+		StartTimer: 22.9, Titanic Crash
+		StartTimer: 23.4, 
+		StartTimer: 68.1, Sanitizing Cycle
+	[150.52] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
+		ShowAnnounce: Purifying Burst (6)
+		StartTimer: 23.1, Purifying Burst
+	[154.25] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
+		StartTimer: 10.9, Shearing Swings
+	[155.47] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
+		StartTimer: 17.0, Purged by Fire
+	[156.68] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-0000000068, 346971, Hylbrande, 5.8, 20, Tank2, 0
+		ShowAnnounce: soon
+	[160.30] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
+		ShowSpecialWarning: Titanic Crash - dodge attack
+		PlaySound: VoicePack/shockwave
+		StartTimer: 23.1, Titanic Crash
+	[160.80] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-0000000015, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_CAST_SUCCESS at 160.8
+		ShowAnnounce: 
+		StartTimer: 29.1, 
+		ScanForMobs: Creature-0-1-2441-1-176551-0000000015, 2, 1, 1
+	[160.80] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001E, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
+		ScanForMobs: Creature-0-1-2441-1-176551-000000001E, 2, 2, 1
+	[162.75] ENCOUNTER_END: 2426, Hylbrande, 23, 5, 1, 0
+		EndCombat: ENCOUNTER_END

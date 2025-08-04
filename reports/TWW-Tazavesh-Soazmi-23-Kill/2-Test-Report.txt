@@ -1,0 +1,58 @@
+Test: TWW/Tazavesh/Soazmi/23/Kill
+Mod:  DBM-Party-Shadowlands/2451
+
+Findings:
+	Unused event registration: CHAT_MSG_MONSTER_SAY
+	Unused event registration: SPELL_AURA_APPLIED 347152 (Triple Technique)
+	Unused event registration: SPELL_AURA_APPLIED 357189 (Double Technique)
+	Unused event registration: SPELL_AURA_REMOVED 347152 (Triple Technique)
+	Unused event registration: SPELL_AURA_REMOVED 357189 (Double Technique)
+	Unused event registration: SPELL_AURA_REMOVED_DOSE 347152 (Triple Technique)
+	Unused event registration: SPELL_AURA_REMOVED_DOSE 357189 (Double Technique)
+	Unused event registration: SPELL_CAST_START 347150 (Triple Technique)
+	Unused event registration: SPELL_CAST_START 347249 (Divide)
+	Unused event registration: SPELL_CAST_START 347392 (Deploy Relocators)
+	Unused event registration: SPELL_CAST_START 347414 (Divide)
+	Unused event registration: SPELL_CAST_START 347610 (Shuri)
+	Unused event registration: SPELL_CAST_START 347623 (Quickblade)
+	Unused event registration: SPELL_CAST_START 357188 (Double Technique)
+
+Unused objects:
+	[Announce] Divide (%s), type=count, spellId=347249
+	[Announce] Quickblade, type=spell, spellId=347623
+	[Special Warning] Triple Technique - interrupt >%s<! (%d), type=interruptcount, spellId=347150
+	[Special Warning] Shuri - move to >%s<, type=moveto, spellId=347481
+	[Special Warning] Double Technique - interrupt >%s<! (%d), type=interruptcount, spellId=357188
+	[Timer] Roleplay, time=24.00, type=roleplay, spellId=<none>
+
+Timers:
+	Shuri, time=15.00, type=cd, spellId=347481, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 2437, So'azmi, 23, 5, 0
+	Quickblade, time=15.00, type=cd, spellId=347623, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 2437, So'azmi, 23, 5, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ADDON_LOADED: DBM-Party-Shadowlands, 0
+		RegisterEvents: Regular, CHAT_MSG_MONSTER_SAY
+	[  0.00] ENCOUNTER_START: 2437, So'azmi, 23, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 347392 347249 347414 347623 347610 357188 347150, SPELL_AURA_APPLIED 357189 347152, SPELL_AURA_REMOVED 357189 347152, SPELL_AURA_REMOVED_DOSE 357189 347152
+		StartTimer: 8.1, Quickblade
+		StartTimer: 19.0, Shuri
+	[135.48] ENCOUNTER_END: 2437, So'azmi, 23, 5, 1, 0
+		EndCombat: ENCOUNTER_END
