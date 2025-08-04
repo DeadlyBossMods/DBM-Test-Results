@@ -2,41 +2,106 @@ Test: TWW/Tazavesh/Zophex/23/Kill
 Mod:  DBM-Party-Shadowlands/2437
 
 Findings:
-	None
+	Unused event registration: SPELL_AURA_REMOVED 345770 (Impound Contraband)
+	Unused event registration: SPELL_PERIODIC_MISSED 348366 (Armed Security)
+	Timer for spell ID 347949 (Interrogation) is triggered by event SPELL_AURA_REMOVED 345990 (Containment Cell)
 
 Unused objects:
 	[Announce] Impound Contraband ended, type=ends, spellId=345770
 	[Announce] Impound Contraband on >%s<, type=target, spellId=345770
-	[Announce] Containment Cell on >%s<, type=target, spellId=345990
-	[Announce] Armed Security, type=spell, spellId=346204
-	[Announce] Fully Armed, type=spell, spellId=348128
 	[Special Warning] Impound Contraband on you, type=you, spellId=345770
 	[Special Warning] Containment Cell on you, type=you, spellId=345990
 	[Special Warning] Interrogation - run away, type=run, spellId=347949
-	[Special Warning] Interrogation - switch targets, type=switch, spellId=347949
-	[Special Warning] %s damage - move away, type=gtfo, spellId=348366
-	[Timer] Impound Contraband, time=26.70, type=cd, spellId=345770
-	[Timer] Armed Security, time=34.40, type=cd, spellId=346204
-	[Timer] Interrogation, time=30.80, type=cd, spellId=347949
 	[Yell] Interrogation on PlayerName, type=yell, spellId=347949
 
 Timers:
-	None
+	Impound Contraband, time=26.70, type=cd, spellId=345770, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 2425, Zo'phex the Sentinel, 23, 5, 0
+	Armed Security, time=34.40, type=cd, spellId=346204, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 2425, Zo'phex the Sentinel, 23, 5, 0
+	Interrogation, time=30.80, type=cd, spellId=347949, triggerDeltas = 0.00, 45.76, 47.55
+		[  0.00] ENCOUNTER_START: 2425, Zo'phex the Sentinel, 23, 5, 0
+		[ 45.76] SPELL_AURA_REMOVED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 45.76, 47.55
 
 Announces:
-	None
+	Containment Cell on >%s<, type=target, spellId=345990, triggerDeltas = 39.34, 46.17
+		[ 39.34] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 39.34, 46.17
+	Armed Security, type=spell, spellId=346204, triggerDeltas = 7.26, 46.23, 47.34, 44.87
+		[  7.26] SPELL_CAST_START: [Zo'phex: Armed Security] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 346204, Armed Security, 0, 0
+			 Triggered 4x, delta times: 7.26, 46.23, 47.34, 44.87
+	Fully Armed, type=spell, spellId=348128, triggerDeltas = 30.67, 46.19, 47.29
+		[ 30.67] SPELL_AURA_APPLIED: [Zo'phex->Zo'phex: Fully Armed] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, 348128, Fully Armed, 0, BUFF, 0
+			 Triggered 3x, delta times: 30.67, 46.19, 47.29
+	Hard Light Baton on >%s<, type=target, spellId=355888, triggerDeltas = 151.37
+		[151.37] SPELL_AURA_APPLIED: [Customs Security->Customs Security: Hard Light Baton] Creature-0-1-2441-1-177807-0000000034, Customs Security, 0xa48, Creature-0-1-2441-1-177807-0000000034, Customs Security, 0xa48, 355888, Hard Light Baton, 0, BUFF, 0
 
 Special warnings:
-	None
+	Interrogation - switch targets, type=switch, spellId=347949, triggerDeltas = 34.34, 46.17, 47.29
+		[ 34.34] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 347949, Interrogation, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 34.34, 46.17
+		[127.80] SPELL_AURA_APPLIED: [Zo'phex->Dps1: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000002, Dps1, 0x512, 347949, Interrogation, 0, DEBUFF, 0
+	%s damage - move away, type=gtfo, spellId=348366, triggerDeltas = 9.76
+		[  9.76] SPELL_PERIODIC_DAMAGE: [->Tank1: Armed Security] "", nil, 0x0, Player-1-00000005, Tank1, 0x511, 348366, Armed Security, 0, 0
 
 Yells:
 	None
 
 Voice pack sounds:
-	None
+	VoicePack/watchfeet
+		[  9.76] SPELL_PERIODIC_DAMAGE: [->Tank1: Armed Security] "", nil, 0x0, Player-1-00000005, Tank1, 0x511, 348366, Armed Security, 0, 0
+	VoicePack/targetchange
+		[ 34.34] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 347949, Interrogation, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 34.34, 46.17
+		[127.80] SPELL_AURA_APPLIED: [Zo'phex->Dps1: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000002, Dps1, 0x512, 347949, Interrogation, 0, DEBUFF, 0
 
 Icons:
 	None
 
 Event trace:
-
+	[  0.00] ENCOUNTER_START: 2425, Zo'phex the Sentinel, 23, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 346204, SPELL_AURA_APPLIED 347949 348128 345770 345990, SPELL_AURA_REMOVED 345770 345990, SPELL_PERIODIC_DAMAGE 348366, SPELL_PERIODIC_MISSED 348366
+		StartTimer: 7.2, Armed Security
+		StartTimer: 18.1, Impound Contraband
+		StartTimer: 31.6, Interrogation
+	[  7.26] SPELL_CAST_START: [Zo'phex: Armed Security] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 346204, Armed Security, 0, 0
+		ShowAnnounce: Armed Security
+	[  9.76] SPELL_PERIODIC_DAMAGE: [->Tank1: Armed Security] "", nil, 0x0, Player-1-00000005, Tank1, 0x511, 348366, Armed Security, 0, 0
+		AntiSpam: 1
+		ShowSpecialWarning: Armed Security damage - move away
+		PlaySound: VoicePack/watchfeet
+	[ 30.67] SPELL_AURA_APPLIED: [Zo'phex->Zo'phex: Fully Armed] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, 348128, Fully Armed, 0, BUFF, 0
+		ShowAnnounce: Fully Armed
+	[ 34.34] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 347949, Interrogation, 0, DEBUFF, 0
+		ShowSpecialWarning: Interrogation - switch targets
+		PlaySound: VoicePack/targetchange
+	[ 39.34] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
+		ShowAnnounce: Containment Cell on Dps2
+	[ 45.76] SPELL_AURA_REMOVED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
+		StartTimer: 30.8, Interrogation
+	[ 53.49] SPELL_CAST_START: [Zo'phex: Armed Security] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 346204, Armed Security, 0, 0
+		ShowAnnounce: Armed Security
+	[ 76.86] SPELL_AURA_APPLIED: [Zo'phex->Zo'phex: Fully Armed] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, 348128, Fully Armed, 0, BUFF, 0
+		ShowAnnounce: Fully Armed
+	[ 80.51] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 347949, Interrogation, 0, DEBUFF, 0
+		ShowSpecialWarning: Interrogation - switch targets
+		PlaySound: VoicePack/targetchange
+	[ 85.51] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
+		ShowAnnounce: Containment Cell on Dps2
+	[ 93.31] SPELL_AURA_REMOVED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
+		StartTimer: 30.8, Interrogation
+	[100.83] SPELL_CAST_START: [Zo'phex: Armed Security] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 346204, Armed Security, 0, 0
+		ShowAnnounce: Armed Security
+	[124.15] SPELL_AURA_APPLIED: [Zo'phex->Zo'phex: Fully Armed] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, 348128, Fully Armed, 0, BUFF, 0
+		ShowAnnounce: Fully Armed
+	[127.80] SPELL_AURA_APPLIED: [Zo'phex->Dps1: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000002, Dps1, 0x512, 347949, Interrogation, 0, DEBUFF, 0
+		ShowSpecialWarning: Interrogation - switch targets
+		PlaySound: VoicePack/targetchange
+	[145.70] SPELL_CAST_START: [Zo'phex: Armed Security] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 346204, Armed Security, 0, 0
+		ShowAnnounce: Armed Security
+	[151.37] SPELL_AURA_APPLIED: [Customs Security->Customs Security: Hard Light Baton] Creature-0-1-2441-1-177807-0000000034, Customs Security, 0xa48, Creature-0-1-2441-1-177807-0000000034, Customs Security, 0xa48, 355888, Hard Light Baton, 0, BUFF, 0
+		ShowAnnounce: Hard Light Baton on Customs Security
+	[152.33] UNIT_DIED: [->Zo'phex] "", nil, 0x0, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, -1, false, 0, 0
+		EndCombat: Main CID Down
