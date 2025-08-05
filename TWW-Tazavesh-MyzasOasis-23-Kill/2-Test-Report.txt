@@ -6,7 +6,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 353835 (Suppression)
 	Unused event registration: SPELL_AURA_REMOVED 353706 (Rowdy)
 	Unused event registration: UNIT_DIED
-	Announce for spell ID 350916 (Security Slam) is triggered by event SPELL_CAST_START 359028 (Security Slam)
 	SpecialWarning for spell ID 350916 (Security Slam) is triggered by event SPELL_CAST_START 355438 (Suppression Spark)
 	Timer for spell ID 350916 (Security Slam) is triggered by event SPELL_CAST_START 359028 (Security Slam)
 	Timer for spell ID 350916 (Security Slam) is triggered by event SPELL_CAST_SUCCESS 181089 (Encounter Event)
@@ -17,10 +16,6 @@ Findings:
 Unused objects:
 	[Announce] Suppression on >%s<, type=target, spellId=353835
 	[Special Warning] Security Slam - defensive, type=defensive, spellId=350916
-	[Timer] Dischordant Song AI, time=15.80, type=ai, spellId=357404
-	[Timer] Infectious Solo AI, time=15.80, type=ai, spellId=357436
-	[Timer] Drumroll AI, time=15.80, type=ai, spellId=357513
-	[Timer] Rip Chord AI, time=15.80, type=ai, spellId=357542
 
 Timers:
 	Security Slam, time=13.70, type=cd, spellId=350916, triggerDeltas = 22.79, 0.00, 18.61, 182.02, 10.11, 26.68
@@ -42,6 +37,18 @@ Timers:
 	Suppression Spark, time=37.60, type=cd, spellId=355438, triggerDeltas = 223.42, 75.61
 		[223.42] SPELL_CAST_SUCCESS: [Zo'gron: Encounter Event] Creature-0-1-2441-1-176563-0000000003, Zo'gron, 0xa48, "", nil, 0x0, 181089, Encounter Event, 0, 0
 		[299.03] SPELL_CAST_START: [Zo'gron: Suppression Spark] Creature-0-1-2441-1-176563-0000000003, Zo'gron, 0xa48, "", nil, 0x0, 355438, Suppression Spark, 0, 0
+	Dischordant Song, time=18.20, type=cd, spellId=357404, triggerDeltas = 111.53, 20.65, 18.21
+		[111.53] SPELL_CAST_START: [Evaile: Dischordant Song] Creature-0-1-2441-1-180399-000000000F, Evaile, 0xa48, "", nil, 0x0, 357404, Dischordant Song, 0, 0
+			 Triggered 3x, delta times: 111.53, 20.65, 18.21
+	Infectious Solo, time=20.60, type=cd, spellId=357436, triggerDeltas = 83.10, 20.70, 20.58, 20.56, 20.66, 20.65
+		[ 83.10] SPELL_CAST_START: [Verethian: Infectious Solo] Creature-0-1-2441-1-180470-000000000B, Verethian, 0xa48, "", nil, 0x0, 357436, Infectious Solo, 0, 0
+			 Triggered 6x, delta times: 83.10, 20.70, 20.58, 20.56, 20.66, 20.65
+	Drumroll, time=27.90, type=cd, spellId=357513, triggerDeltas = 84.80, 27.93
+		[ 84.80] SPELL_CAST_START: [Hips: Drumroll] Creature-0-1-2441-1-180485-000000000C, Hips, 0xa48, "", nil, 0x0, 357513, Drumroll, 0, 0
+			 Triggered 2x, delta times: 84.80, 27.93
+	Rip Chord, time=17.00, type=cd, spellId=357542, triggerDeltas = 104.25, 16.99, 17.02, 17.07, 17.02
+		[104.25] SPELL_CAST_START: [Vilt: Rip Chord] Creature-0-1-2441-1-180484-000000000E, Vilt, 0xa48, "", nil, 0x0, 357542, Rip Chord, 0, 0
+			 Triggered 5x, delta times: 104.25, 16.99, 17.02, 17.07, 17.02
 	Rotten Food, time=10.00, type=next, spellId=359222, triggerDeltas = 0.00, 20.67, 10.01, 9.99, 10.01, 10.00, 9.98, 10.02, 9.98, 10.01, 10.00, 10.01, 9.98, 10.02, 9.99, 10.01, 9.99, 10.01, 9.99, 10.01, 10.00, 9.98, 10.00, 10.01, 10.00, 10.01, 9.98, 10.01, 10.01
 		[  0.00] ENCOUNTER_START: 2440, Myza's Oasis, 23, 5, 0
 		[ 20.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-000000001B, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
@@ -50,11 +57,6 @@ Timers:
 			 Triggered 19x, delta times: 30.68, 9.99, 10.01, 10.00, 9.98, 10.02, 9.98, 20.01, 19.99, 10.02, 20.00, 20.00, 9.99, 10.01, 10.00, 9.98, 30.01, 19.99, 20.02
 
 Announces:
-	Security Slam, type=spell, spellId=350916, triggerDeltas = 22.79, 0.00, 18.61, 192.13, 26.68
-		[ 22.79] SPELL_CAST_START: [Oasis Security: Security Slam] Creature-0-1-2441-1-179269-0000000006, Oasis Security, 0xa48, "", nil, 0x0, 350916, Security Slam, 0, 0
-			 Triggered 3x, delta times: 22.79, 0.00, 18.61
-		[233.53] SPELL_CAST_START: [Zo'gron: Security Slam] Creature-0-1-2441-1-176563-0000000003, Zo'gron, 0xa48, "", nil, 0x0, 359028, Security Slam, 0, 0
-			 Triggered 2x, delta times: 233.53, 26.68
 	Drumroll, type=spell, spellId=357513, triggerDeltas = 84.80, 27.93
 		[ 84.80] SPELL_CAST_START: [Hips: Drumroll] Creature-0-1-2441-1-180485-000000000C, Hips, 0xa48, "", nil, 0x0, 357513, Drumroll, 0, 0
 			 Triggered 2x, delta times: 84.80, 27.93
@@ -114,15 +116,13 @@ Event trace:
 		RegisterEvents: Regular, SPELL_CAST_START 350916 350922 355438 350919 359028 357404 357513 357436 357542 359222, SPELL_CAST_SUCCESS 181089, SPELL_AURA_APPLIED 353706 353835, SPELL_AURA_REMOVED 353706, UNIT_DIED
 		StartTimer: 20.5, Rotten Food
 	[ 20.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-000000001B, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 20.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[ 22.79] SPELL_CAST_START: [Oasis Security: Security Slam] Creature-0-1-2441-1-179269-0000000006, Oasis Security, 0xa48, "", nil, 0x0, 350916, Security Slam, 0, 0
-		ShowAnnounce: Security Slam
 		StartTimer: 13.7, Security Slam
 	[ 22.79] SPELL_CAST_START: [Oasis Security: Security Slam] Creature-0-1-2441-1-179269-000000001D, Oasis Security, 0xa48, "", nil, 0x0, 350916, Security Slam, 0, 0
-		ShowAnnounce: Security Slam
 		StartTimer: 13.7, Security Slam
 	[ 28.86] SPELL_CAST_START: [Oasis Security: Menacing Shout] Creature-0-1-2441-1-179269-0000000006, Oasis Security, 0xa48, "", nil, 0x0, 350922, Menacing Shout, 0, 0
 		ShowSpecialWarning: Menacing Shout - interrupt Oasis Security!
@@ -133,146 +133,161 @@ Event trace:
 		PlaySound: VoicePack/kickcast
 		StartTimer: 25.5, Menacing Shout
 	[ 30.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000021, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 30.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[ 40.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000034, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 40.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[ 41.40] SPELL_CAST_START: [Oasis Security: Security Slam] Creature-0-1-2441-1-179269-000000001D, Oasis Security, 0xa48, "", nil, 0x0, 350916, Security Slam, 0, 0
-		ShowAnnounce: Security Slam
 		StartTimer: 13.7, Security Slam
 	[ 50.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000029, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 50.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[ 60.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000025, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 60.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[ 70.66] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000028, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 70.66
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[ 80.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000029, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 80.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[ 83.10] SPELL_CAST_START: [Verethian: Infectious Solo] Creature-0-1-2441-1-180470-000000000B, Verethian, 0xa48, "", nil, 0x0, 357436, Infectious Solo, 0, 0
 		ShowSpecialWarning: Infectious Solo - run away
 		PlaySound: VoicePack/justrun
+		StartTimer: 20.6, Infectious Solo
 	[ 84.80] SPELL_CAST_START: [Hips: Drumroll] Creature-0-1-2441-1-180485-000000000C, Hips, 0xa48, "", nil, 0x0, 357513, Drumroll, 0, 0
 		ShowAnnounce: Drumroll
+		StartTimer: 27.9, Drumroll
 	[ 90.66] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000021, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 90.66
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[100.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-0000000001, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 100.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[103.80] SPELL_CAST_START: [Verethian: Infectious Solo] Creature-0-1-2441-1-180470-000000000B, Verethian, 0xa48, "", nil, 0x0, 357436, Infectious Solo, 0, 0
 		ShowSpecialWarning: Infectious Solo - run away
 		PlaySound: VoicePack/justrun
+		StartTimer: 20.6, Infectious Solo
 	[104.25] SPELL_CAST_START: [Vilt: Rip Chord] Creature-0-1-2441-1-180484-000000000E, Vilt, 0xa48, "", nil, 0x0, 357542, Rip Chord, 0, 0
 		ShowAnnounce: Rip Chord
+		StartTimer: 17.0, Rip Chord
 	[110.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-000000002D, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 110.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[111.53] SPELL_CAST_START: [Evaile: Dischordant Song] Creature-0-1-2441-1-180399-000000000F, Evaile, 0xa48, "", nil, 0x0, 357404, Dischordant Song, 0, 0
 		ShowSpecialWarning: Dischordant Song - interrupt Evaile!
 		PlaySound: VoicePack/kickcast
+		StartTimer: 18.2, Dischordant Song
 	[112.73] SPELL_CAST_START: [Hips: Drumroll] Creature-0-1-2441-1-180485-000000000C, Hips, 0xa48, "", nil, 0x0, 357513, Drumroll, 0, 0
 		ShowAnnounce: Drumroll
+		StartTimer: 27.9, Drumroll
 	[120.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-000000001A, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 120.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[121.24] SPELL_CAST_START: [Vilt: Rip Chord] Creature-0-1-2441-1-180484-000000000E, Vilt, 0xa48, "", nil, 0x0, 357542, Rip Chord, 0, 0
 		ShowAnnounce: Rip Chord
+		StartTimer: 17.0, Rip Chord
 	[124.38] SPELL_CAST_START: [Verethian: Infectious Solo] Creature-0-1-2441-1-180470-000000000B, Verethian, 0xa48, "", nil, 0x0, 357436, Infectious Solo, 0, 0
 		ShowSpecialWarning: Infectious Solo - run away
 		PlaySound: VoicePack/justrun
+		StartTimer: 20.6, Infectious Solo
 	[130.66] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000029, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 130.66
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[132.18] SPELL_CAST_START: [Evaile: Dischordant Song] Creature-0-1-2441-1-180399-000000000F, Evaile, 0xa48, "", nil, 0x0, 357404, Dischordant Song, 0, 0
 		ShowSpecialWarning: Dischordant Song - interrupt Evaile!
 		PlaySound: VoicePack/kickcast
+		StartTimer: 18.2, Dischordant Song
 	[138.26] SPELL_CAST_START: [Vilt: Rip Chord] Creature-0-1-2441-1-180484-000000000E, Vilt, 0xa48, "", nil, 0x0, 357542, Rip Chord, 0, 0
 		ShowAnnounce: Rip Chord
+		StartTimer: 17.0, Rip Chord
 	[140.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-000000002D, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 140.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[144.94] SPELL_CAST_START: [Verethian: Infectious Solo] Creature-0-1-2441-1-180470-000000000B, Verethian, 0xa48, "", nil, 0x0, 357436, Infectious Solo, 0, 0
 		ShowSpecialWarning: Infectious Solo - run away
 		PlaySound: VoicePack/justrun
+		StartTimer: 20.6, Infectious Solo
 	[150.39] SPELL_CAST_START: [Evaile: Dischordant Song] Creature-0-1-2441-1-180399-000000000F, Evaile, 0xa48, "", nil, 0x0, 357404, Dischordant Song, 0, 0
 		ShowSpecialWarning: Dischordant Song - interrupt Evaile!
 		PlaySound: VoicePack/kickcast
+		StartTimer: 18.2, Dischordant Song
 	[150.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-000000001A, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 150.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[155.33] SPELL_CAST_START: [Vilt: Rip Chord] Creature-0-1-2441-1-180484-000000000E, Vilt, 0xa48, "", nil, 0x0, 357542, Rip Chord, 0, 0
 		ShowAnnounce: Rip Chord
+		StartTimer: 17.0, Rip Chord
 	[160.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000028, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 160.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[165.60] SPELL_CAST_START: [Verethian: Infectious Solo] Creature-0-1-2441-1-180470-000000000B, Verethian, 0xa48, "", nil, 0x0, 357436, Infectious Solo, 0, 0
 		ShowSpecialWarning: Infectious Solo - run away
 		PlaySound: VoicePack/justrun
+		StartTimer: 20.6, Infectious Solo
 	[170.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-000000001A, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 170.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[172.35] SPELL_CAST_START: [Vilt: Rip Chord] Creature-0-1-2441-1-180484-000000000E, Vilt, 0xa48, "", nil, 0x0, 357542, Rip Chord, 0, 0
 		ShowAnnounce: Rip Chord
+		StartTimer: 17.0, Rip Chord
 	[180.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000028, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 180.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[186.25] SPELL_CAST_START: [Verethian: Infectious Solo] Creature-0-1-2441-1-180470-000000000B, Verethian, 0xa48, "", nil, 0x0, 357436, Infectious Solo, 0, 0
 		ShowSpecialWarning: Infectious Solo - run away
 		PlaySound: VoicePack/justrun
+		StartTimer: 20.6, Infectious Solo
 	[190.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-000000001B, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 190.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[200.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-000000001B, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 200.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[210.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000034, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 210.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[220.66] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000025, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 220.66
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
@@ -282,24 +297,23 @@ Event trace:
 		StartTimer: 19.8, Suppression Spark
 		StartTimer: 27.1, Crowd Control
 	[230.66] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-0000000002, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 230.66
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[233.53] SPELL_CAST_START: [Zo'gron: Security Slam] Creature-0-1-2441-1-176563-0000000003, Zo'gron, 0xa48, "", nil, 0x0, 359028, Security Slam, 0, 0
-		ShowAnnounce: Security Slam
 		StartTimer: 15.8, Security Slam
 	[235.95] SPELL_CAST_START: [Zo'gron: Menacing Shout] Creature-0-1-2441-1-176563-0000000003, Zo'gron, 0xa48, "", nil, 0x0, 350922, Menacing Shout, 0, 0
 		ShowSpecialWarning: Menacing Shout - interrupt Zo'gron!
 		PlaySound: VoicePack/kickcast
 		StartTimer: 25.5, Menacing Shout
 	[240.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-0000000002, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 240.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[250.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-000000001B, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 250.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
@@ -308,20 +322,19 @@ Event trace:
 		PlaySound: VoicePack/shockwave
 		StartTimer: 21.8, Crowd Control
 	[260.21] SPELL_CAST_START: [Zo'gron: Security Slam] Creature-0-1-2441-1-176563-0000000003, Zo'gron, 0xa48, "", nil, 0x0, 359028, Security Slam, 0, 0
-		ShowAnnounce: Security Slam
 		StartTimer: 15.8, Security Slam
 	[260.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-0000000001, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 260.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[270.66] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000025, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 270.66
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
 	[280.67] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-180158-0000000002, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 280.67
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
@@ -334,7 +347,7 @@ Event trace:
 		PlaySound: VoicePack/shockwave
 		StartTimer: 21.8, Crowd Control
 	[290.68] SPELL_CAST_START: [Unruly Patron: Rotten Food] Creature-0-1-2441-1-176561-0000000021, Unruly Patron, 0xa48, "", nil, 0x0, 359222, Rotten Food, 0, 0
-		AntiSpam: 1
+		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_START at 290.68
 		ShowAnnounce: Rotten Food
 		StartTimer: 10.0, Rotten Food
