@@ -11,12 +11,10 @@ Findings:
 	Timer for spell ID 346959 (Purged by Fire) is triggered by event SPELL_CAST_START 346957 (Purged by Fire)
 	Timer for spell ID 347094 (Titanic Crash) is triggered by event SPELL_AURA_REMOVED 346766 (Sanitizing Cycle)
 	Timer for spell ID 353312 (Purifying Burst) is triggered by event SPELL_AURA_REMOVED 346766 (Sanitizing Cycle)
-	Timer Purged by Fire, time=17.00, type=cd, spellId=346959 (time=19.00, variance=0.00) got refreshed early with 0.17s remaining
+	Timer Purged by Fire, time=16.70, type=cd, spellId=346959 (time=19.00, variance=0.00) got refreshed early with 0.17s remaining
 		Refreshed by: [ 72.78] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000001, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
-	Timer Purged by Fire, time=17.00, type=cd, spellId=346959 (time=19.00, variance=0.00) got refreshed early with 0.33s remaining
+	Timer Purged by Fire, time=16.70, type=cd, spellId=346959 (time=19.00, variance=0.00) got refreshed early with 0.33s remaining
 		Refreshed by: [155.47] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
-	Timer Purifying Burst, time=20.20, type=cd, spellId=353312 (time=6.00, variance=0.00) got refreshed early with 0.83s remaining
-		Refreshed by: [  5.14] SPELL_CAST_START: [Hylbrande: Purifying Burst] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 353312, Purifying Burst, 0, 0
 	Timer Shearing Swings, time=10.90, type=cd, spellId=346116 (time=10.90, variance=0.00) got refreshed early with 0.77s remaining
 		Refreshed by: [ 18.52] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
 
@@ -48,7 +46,7 @@ Timers:
 			 Triggered 2x, delta times: 37.73, 83.87
 		[ 53.94] SPELL_AURA_REMOVED: [Hylbrande->Hylbrande: Sanitizing Cycle] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, 346766, Sanitizing Cycle, 0, BUFF, 0
 			 Triggered 2x, delta times: 53.94, 82.86
-	Purged by Fire, time=17.00, type=cd, spellId=346959, triggerDeltas = 0.00, 10.81, 43.13, 18.84, 19.42, 44.60, 18.67
+	Purged by Fire, time=16.70, type=cd, spellId=346959, triggerDeltas = 0.00, 10.81, 43.13, 18.84, 19.42, 44.60, 18.67
 		[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
 		[ 10.81] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
 			 Triggered 4x, delta times: 10.81, 61.97, 19.42, 63.27
@@ -129,7 +127,7 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 2426, Hylbrande, 23, 5, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 347094 346957 346766 358131 353312, SPELL_CAST_SUCCESS 346116 181113, SPELL_AURA_APPLIED 358131 346427, SPELL_AURA_REMOVED 347958 346766 346427, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
-		StartTimer: 6.0, Purifying Burst
+		StartTimer: 5.2, Purifying Burst
 		StartTimer: 8.5, Shearing Swings
 		StartTimer: 10.8, Purged by Fire
 		StartTimer: 15.8, Titanic Crash
@@ -144,7 +142,7 @@ Event trace:
 		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
 		PlaySound: VoicePack/kickcast
 	[ 10.81] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
-		StartTimer: 17.0, Purged by Fire
+		StartTimer: 16.7, Purged by Fire
 	[ 14.84] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-0000000003, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
 		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
 		PlaySound: VoicePack/kickcast
@@ -190,7 +188,7 @@ Event trace:
 	[ 72.78] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-000000006A, 346971, Hylbrande, 51.8, 20, Tank2, 0
 		ShowAnnounce: soon
 	[ 72.78] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000001, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
-		StartTimer: 17.0, Purged by Fire
+		StartTimer: 16.7, Purged by Fire
 	[ 76.91] SPELL_CAST_SUCCESS: [Vault Purifier: Encounter Spawn] Creature-0-1-2441-1-176551-000000001A, Vault Purifier, 0xa48, "", nil, 0x0, 181113, Encounter Spawn, 0, 0
 		AntiSpam: 2
 			Filtered: 1x SPELL_CAST_SUCCESS at 76.91
@@ -218,7 +216,7 @@ Event trace:
 		ShowSpecialWarning: Lightning Nova - interrupt Stormbound Breaker!
 		PlaySound: VoicePack/kickcast
 	[ 92.20] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
-		StartTimer: 17.0, Purged by Fire
+		StartTimer: 16.7, Purged by Fire
 	[ 93.40] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
 		StartTimer: 10.9, Shearing Swings
 	[ 99.90] SPELL_CAST_START: [Stormbound Breaker: Lightning Nova] Creature-0-1-2441-1-180640-000000000C, Stormbound Breaker, 0xa48, "", nil, 0x0, 358131, Lightning Nova, 0, 0
@@ -259,7 +257,7 @@ Event trace:
 	[154.25] SPELL_CAST_SUCCESS: [Hylbrande->Tank2: Shearing Swings] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, Player-1-00000005, Tank2, 0x511, 346116, Shearing Swings, 0, 0
 		StartTimer: 10.9, Shearing Swings
 	[155.47] SPELL_CAST_START: [Titanic Defense Turret: Purged by Fire] Creature-0-1-2441-1-175667-0000000017, Titanic Defense Turret, 0xa48, "", nil, 0x0, 346957, Purged by Fire, 0, 0
-		StartTimer: 17.0, Purged by Fire
+		StartTimer: 16.7, Purged by Fire
 	[156.68] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2441-2-346971-0000000068, 346971, Hylbrande, 5.8, 20, Tank2, 0
 		ShowAnnounce: soon
 	[160.30] SPELL_CAST_START: [Hylbrande: Titanic Crash] Creature-0-1-2441-1-175663-0000000002, Hylbrande, 0xa48, "", nil, 0x0, 347094, Titanic Crash, 0, 0
