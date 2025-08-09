@@ -1,0 +1,406 @@
+Test: TWW/ManaforgeOmega/Nexus-KingSalhadaar/Heroic/Wipe
+Mod:  DBM-Raids-WarWithin/2690
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1224737 (Oath-Bound)
+	Unused event registration: SPELL_AURA_APPLIED 1224767 (King's Thrall)
+	Unused event registration: SPELL_AURA_APPLIED 1224776 (Subjugation Rule)
+	Unused event registration: SPELL_AURA_APPLIED 1227549 (Banishment)
+	Unused event registration: SPELL_AURA_APPLIED 1234529 (Cosmic Maw)
+	Unused event registration: SPELL_AURA_APPLIED 1237105 (Twilight Barrier)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1224737 (Oath-Bound)
+	Unused event registration: SPELL_AURA_REMOVED 1224737 (Oath-Bound)
+	Unused event registration: SPELL_AURA_REMOVED 1227549 (Banishment)
+	Unused event registration: SPELL_AURA_REMOVED 1237105 (Twilight Barrier)
+	Unused event registration: SPELL_AURA_REMOVED_DOSE 1224737 (Oath-Bound)
+	Unused event registration: SPELL_CAST_START 1224906 (Invoke the Oath)
+	Unused event registration: SPELL_CAST_START 1228115 (Netherbreaker)
+	Unused event registration: SPELL_CAST_START 1228265 (King's Hunger)
+	Unused event registration: SPELL_CAST_START 1230302 (Self-Destruct)
+	Unused event registration: SPELL_CAST_START 1234529 (Cosmic Maw)
+	Unused event registration: SPELL_CAST_START 1234904 (Command: Behead)
+	Unused event registration: SPELL_CAST_START 1237106 (Twilight Massacre)
+	Unused event registration: SPELL_CAST_SUCCESS 1234904 (Command: Behead)
+	Unused event registration: SPELL_PERIODIC_MISSED 1231097 (Cosmic Rip)
+	Timer for spell ID 1224827 (Behead) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
+	Timer for spell ID 1224827 (Behead) is triggered by event SPELL_CAST_START 1225010 (Command: Behead)
+	Timer for spell ID 1224827 (Behead) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
+	Timer for spell ID 1225319 (Galactic Smash) is triggered by event SPELL_AURA_REMOVED 1228265 (King's Hunger)
+	Timer for spell ID 1225634 (World in Twilight) is triggered by event SPELL_AURA_REMOVED 1228265 (King's Hunger)
+	Timer for spell ID 1226442 (Starkiller Swing) is triggered by event SPELL_AURA_REMOVED 1228265 (King's Hunger)
+	Timer for spell ID 1228065 (Rally the Shadowguard) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
+	Timer for spell ID 1228115 (Netherbreaker) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
+	Timer for spell ID 1228115 (Netherbreaker) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
+	Timer for spell ID 1228163 (Dimension Breath) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
+	Timer for spell ID 1228163 (Dimension Breath) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
+	Timer for spell ID 1230302 (Self-Destruct) is triggered by event SPELL_CAST_START 1228065 (Rally the Shadowguard)
+	Timer for spell ID 1234529 (Cosmic Maw) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
+	Timer for spell ID 1234529 (Cosmic Maw) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
+
+Unused objects:
+	[Announce] King's Thrall on >%s<, type=target, spellId=1224767
+	[Announce] Casting Self-Destruct: -nan sec, type=cast, spellId=1230302
+	[Special Warning] Invoke the Oath!, type=spell, spellId=1224906
+	[Special Warning] Starshattered on >%s< - taunt now, type=taunt, spellId=1226413
+	[Special Warning] Banishment - move away from others, type=moveaway, spellId=1227529
+	[Special Warning] Cosmic Maw - defensive, type=defensive, spellId=1234529
+	[Special Warning] Cosmic Maw on >%s< - taunt now, type=taunt, spellId=1234529
+	[Timer] Self-Destruct, time=10.00, type=castpnp, spellId=1230302
+	[Timer] Twilight Massacre, time=99.00, type=cdnp, spellId=1237106
+	[Yell] %d, type=shortfade, spellId=1227529
+
+Timers:
+	Tank Combo (%s), time=40.00, type=cdcount, spellId=1224776, triggerDeltas = 0.00, 14.50, 39.97, 40.00
+		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 15, 20, 0
+		[ 14.50] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1224776-00000002D4, 1224776, Nexus-King Salhadaar, 89.6, 0, Tank1, 0
+		[ 54.47] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1224776-000000024A, 1224776, Nexus-King Salhadaar, 69.3, 0, Dps14, 0
+		[ 94.47] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1224776-0000000265, 1224776, Nexus-King Salhadaar, 54, 0, Tank1, 0
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Behead (%s), time=40.00, type=cdcount, spellId=1224827, triggerDeltas = 0.00, 32.44, 40.02, 34.49, 80.82
+		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 15, 20, 0
+		[ 32.44] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Behead] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225010, Command: Behead, 0, 0
+			 Triggered 2x, delta times: 32.44, 40.02
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+		[187.77] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
+	Invoke the Oath, time=117.00, type=next, spellId=1224906, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 15, 20, 0
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Command: Besiege (%s), time=40.00, type=cdcount, spellId=1225016, triggerDeltas = 0.00, 48.97, 39.96
+		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 15, 20, 0
+		[ 48.97] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
+			 Triggered 2x, delta times: 48.97, 39.96
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Galactic Smash (%s), time=55.00, type=cdcount, spellId=1225319, triggerDeltas = 256.04, 9.00, 55.02, 55.01
+		[256.04] SPELL_AURA_REMOVED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+		[265.04] SPELL_CAST_START: [Nexus-King Salhadaar: Galactic Smash] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225319, Galactic Smash, 0, 0
+			 Triggered 3x, delta times: 265.04, 55.02, 55.01
+	World in Twilight, time=185.00, type=next, spellId=1225634, triggerDeltas = 256.04
+		[256.04] SPELL_AURA_REMOVED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+	Starkiller Swing (%s), time=97.30, type=cdcount, spellId=1226442, triggerDeltas = 256.04, 36.80, 15.00, 40.00, 15.00
+		[256.04] SPELL_AURA_REMOVED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+		[292.84] SPELL_CAST_SUCCESS: [Nexus-King Salhadaar->Tank1: Starkiller Swing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226442, Starkiller Swing, 0, 0
+			 Triggered 2x, delta times: 292.84, 15.00
+		[347.84] SPELL_CAST_SUCCESS: [Nexus-King Salhadaar->Dps7: Starkiller Swing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000008, Dps7, 0x512, 1226442, Starkiller Swing, 0, 0
+		[362.84] SPELL_CAST_SUCCESS: [Nexus-King Salhadaar->Dps9: Starkiller Swing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000010, Dps9, 0x512, 1226442, Starkiller Swing, 0, 0
+	Banishment (%s), time=97.30, type=cdcount, spellId=1227529, triggerDeltas = 0.00, 30.52, 15.95, 24.10
+		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 15, 20, 0
+		[ 30.52] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
+			 Triggered 3x, delta times: 30.52, 15.95, 24.10
+	Knockback, time=6.20, type=cast, spellId=1227734, triggerDeltas = 106.95
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Reap, time=12.20, type=cdnp, spellId=1228053, triggerDeltas = 162.28, 0.00, 0.00, 0.00, 1.21, 0.00, 0.00, 0.00, 10.95, 0.00, 0.00, 0.00, 1.22, 0.00, 0.00, 0.00
+		[162.28] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000124, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+			 Triggered 16x, delta times: 162.28, 0.00, 0.00, 0.00, 1.21, 0.00, 0.00, 0.00, 10.95, 0.00, 0.00, 0.00, 1.22, 0.00, 0.00, 0.00
+	Rally the Shadowguard, time=10.00, type=next, spellId=1228065, triggerDeltas = 106.95
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Nexus Beams, time=20.60, type=cdnp, spellId=1228075, triggerDeltas = 169.57, 1.23
+		[169.57] SPELL_CAST_START: [Nexus-Prince Xevvos: Nexus Beams] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+		[170.80] SPELL_CAST_START: [Nexus-Prince Ky'vor: Nexus Beams] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+	Netherbreaker (%s), time=10.00, type=cdcount, spellId=1228115, triggerDeltas = 106.95, 80.82
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+		[187.77] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
+	Dimension Breath (%s), time=97.30, type=cdcount, spellId=1228163, triggerDeltas = 106.95, 80.82
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+		[187.77] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
+	King's Hunger ends, time=30.00, type=active, spellId=1228265, triggerDeltas = 252.96
+		[252.96] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+		[256.04] SPELL_AURA_REMOVED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+	Self-Destruct, time=64.00, type=cd, spellId=1230302, triggerDeltas = 145.41
+		[145.41] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
+		[188.49] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000DE, Manaforged Titan, 0xa48, -1, false, 0, 0
+	Dread Mortar, time=24.30, type=cdnp, spellId=1232399, triggerDeltas = 161.07, 0.00, 24.34, 0.00
+		[161.07] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-000000005B, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+			 Triggered 4x, delta times: 161.07, 0.00, 24.34, 0.00
+	Cosmic Maw (%s), time=97.30, type=cdcount, spellId=1234529, triggerDeltas = 106.95, 80.82
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+		[187.77] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
+
+Announces:
+	Casting Decree: Oath-Bound: -nan sec, type=cast, spellId=1224731, triggerDeltas = 0.08
+		[  0.08] SPELL_CAST_START: [Nexus-King Salhadaar: Decree: Oath-Bound] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224731, Decree: Oath-Bound, 0, 0
+
+Special warnings:
+	Conquer - soak (%s), type=soakcount, spellId=1224787, triggerDeltas = 20.47, 5.02, 28.98, 5.01, 34.99
+		[ 20.47] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+			 Triggered 5x, delta times: 20.47, 5.02, 28.98, 5.01, 34.99
+	Vanquish!, type=spell, spellId=1224812, triggerDeltas = 14.50, 2.97, 46.99, 3.01, 32.01, 3.00
+		[ 14.50] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+			 Triggered 6x, delta times: 14.50, 2.97, 46.99, 3.01, 32.01, 3.00
+	Command: Besiege (%s) - dodge attack, type=dodgecount, spellId=1225016, triggerDeltas = 48.97, 39.96
+		[ 48.97] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
+			 Triggered 2x, delta times: 48.97, 39.96
+	Starshattered on you, type=you, spellId=1226413, triggerDeltas = 298.84, 15.00
+		[298.84] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Tank1: Starshattered] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226413, Starshattered, 0, DEBUFF, 0
+		[313.84] SPELL_AURA_APPLIED_DOSE: [Nexus-King Salhadaar->Tank1: Starshattered] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226413, Starshattered, 0, DEBUFF, 2, 0
+	Coalesce Voidwing - dodge attack, type=dodge, spellId=1227734, triggerDeltas = 106.95
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Rally the Shadowguard - switch targets, type=switch, spellId=1228065, triggerDeltas = 145.41
+		[145.41] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
+	Nexus Beams - dodge attack, type=dodge, spellId=1228075, triggerDeltas = 169.57, 1.23
+		[169.57] SPELL_CAST_START: [Nexus-Prince Xevvos: Nexus Beams] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+		[170.80] SPELL_CAST_START: [Nexus-Prince Ky'vor: Nexus Beams] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+	Dimension Breath! (%s), type=count, spellId=1228163, triggerDeltas = 135.41, 100.02
+		[135.41] SPELL_CAST_START: [The Royal Voidwing: Dimension Breath] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, "", nil, 0x0, 1228163, Dimension Breath, 0, 0
+			 Triggered 2x, delta times: 135.41, 100.02
+	King's Hunger - switch targets (%s), type=switchcustom, spellId=1228265, triggerDeltas = 252.96
+		[252.96] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+	Netherblast - interrupt >%s<! (%d), type=interruptcount, spellId=1230263, triggerDeltas = 152.57, 1.21, 6.07, 4.87, 1.21
+		[152.57] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+			 Triggered 2x, delta times: 152.57, 12.15
+		[153.78] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+			 Triggered 3x, delta times: 153.78, 6.07, 6.08
+	%s damage - move away, type=gtfo, spellId=1231097, triggerDeltas = 151.55
+		[151.55] SPELL_PERIODIC_DAMAGE: [->Tank1: Cosmic Rip] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 1231097, Cosmic Rip, 0, 0
+	Dread Mortar - dodge attack, type=dodge, spellId=1232399, triggerDeltas = 161.07, 0.00, 24.34, 0.00
+		[161.07] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-000000005B, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+			 Triggered 4x, delta times: 161.07, 0.00, 24.34, 0.00
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/breathsoon
+		[ 48.97] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
+			 Triggered 2x, delta times: 48.97, 39.96
+		[135.41] SPELL_CAST_START: [The Royal Voidwing: Dimension Breath] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, "", nil, 0x0, 1228163, Dimension Breath, 0, 0
+			 Triggered 2x, delta times: 135.41, 100.02
+	VoicePack/kick2r
+		[159.85] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+		[164.72] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+	VoicePack/kick3r
+		[165.93] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+	VoicePack/watchfeet
+		[151.55] SPELL_PERIODIC_DAMAGE: [->Tank1: Cosmic Rip] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 1231097, Cosmic Rip, 0, 0
+	VoicePack/kick1r
+		[152.57] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+		[153.78] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+	VoicePack/killmob
+		[145.41] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
+	VoicePack/targetchange
+		[252.96] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+	VoicePack/shareone
+		[ 20.47] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+			 Triggered 3x, delta times: 20.47, 34.00, 40.00
+	VoicePack/carefly
+		[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	VoicePack/watchstep
+		[161.07] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-000000005B, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+			 Triggered 4x, delta times: 161.07, 0.00, 24.34, 0.00
+		[169.57] SPELL_CAST_START: [Nexus-Prince Xevvos: Nexus Beams] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+		[170.80] SPELL_CAST_START: [Nexus-Prince Ky'vor: Nexus Beams] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+	VoicePack/targetyou
+		[298.84] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Tank1: Starshattered] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226413, Starshattered, 0, DEBUFF, 0
+		[313.84] SPELL_AURA_APPLIED_DOSE: [Nexus-King Salhadaar->Tank1: Starshattered] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226413, Starshattered, 0, DEBUFF, 2, 0
+	VoicePack/sharetwo
+		[ 25.49] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+			 Triggered 2x, delta times: 25.49, 33.99
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 15, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1224731 1224787 1224812 1227529 1224906 1225010 1225016 1228065 1230302 1232399 1228075 1230263 1227734 1228115 1228163 1234529 1228265 1225319 1234904 1228053 1237106, SPELL_CAST_SUCCESS 1234904 1226442, SPELL_AURA_APPLIED 1224737 1224767 1224776 1227549 1237105 1234529 1228265 1226413, SPELL_AURA_APPLIED_DOSE 1224737 1226413, SPELL_AURA_REMOVED 1224737 1227549 1237105 1228284 1228265, SPELL_AURA_REMOVED_DOSE 1224737, SPELL_PERIODIC_DAMAGE 1231097, SPELL_PERIODIC_MISSED 1231097, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1
+		StartTimer: 14.5, Tank Combo (1)
+		StartTimer: 30.0, Banishment (1)
+		StartTimer: 117.0, Invoke the Oath
+		StartTimer: 32.4, Behead (1)
+		StartTimer: 49.0, Command: Besiege (1)
+	[  0.08] SPELL_CAST_START: [Nexus-King Salhadaar: Decree: Oath-Bound] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224731, Decree: Oath-Bound, 0, 0
+		ShowAnnounce: Casting Decree: Oath-Bound: -nan sec
+	[ 14.50] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+		ShowSpecialWarning: Vanquish!
+		PlaySound: DBM/SpecialWarningSound2
+	[ 14.50] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1224776-00000002D4, 1224776, Nexus-King Salhadaar, 89.6, 0, Tank1, 0
+		StartTimer: 40.0, Tank Combo (2)
+	[ 17.47] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+		ShowSpecialWarning: Vanquish!
+		PlaySound: DBM/SpecialWarningSound2
+	[ 20.47] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+		ShowSpecialWarning: Conquer - soak (1)
+		PlaySound: VoicePack/shareone
+	[ 25.49] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+		ShowSpecialWarning: Conquer - soak (2)
+		PlaySound: VoicePack/sharetwo
+	[ 30.52] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
+		StartTimer: 15.9, Banishment (2)
+	[ 32.44] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Behead] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225010, Command: Behead, 0, 0
+		StartTimer: 40.0, Behead (2)
+	[ 46.47] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
+		StartTimer: 24.1, Banishment (3)
+	[ 48.97] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
+		ShowSpecialWarning: Command: Besiege (1) - dodge attack
+		PlaySound: VoicePack/breathsoon
+		StartTimer: 40.0, Command: Besiege (2)
+	[ 54.47] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+		ShowSpecialWarning: Conquer - soak (3)
+		PlaySound: VoicePack/shareone
+	[ 54.47] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1224776-000000024A, 1224776, Nexus-King Salhadaar, 69.3, 0, Dps14, 0
+		StartTimer: 40.0, Tank Combo (3)
+	[ 59.48] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+		ShowSpecialWarning: Conquer - soak (4)
+		PlaySound: VoicePack/sharetwo
+	[ 64.46] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+		ShowSpecialWarning: Vanquish!
+		PlaySound: DBM/SpecialWarningSound2
+	[ 67.47] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+		ShowSpecialWarning: Vanquish!
+		PlaySound: DBM/SpecialWarningSound2
+	[ 70.57] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
+		StartTimer: 15.9, Banishment (4)
+	[ 72.46] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Behead] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225010, Command: Behead, 0, 0
+		StartTimer: 40.0, Behead (3)
+	[ 88.93] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
+		ShowSpecialWarning: Command: Besiege (2) - dodge attack
+		PlaySound: VoicePack/breathsoon
+		StartTimer: 40.0, Command: Besiege (3)
+	[ 94.47] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
+		ShowSpecialWarning: Conquer - soak (5)
+		PlaySound: VoicePack/shareone
+	[ 94.47] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1224776-0000000265, 1224776, Nexus-King Salhadaar, 54, 0, Tank1, 0
+		StartTimer: 40.0, Tank Combo (4)
+	[ 99.48] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+		ShowSpecialWarning: Vanquish!
+		PlaySound: DBM/SpecialWarningSound2
+	[102.48] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
+		ShowSpecialWarning: Vanquish!
+		PlaySound: DBM/SpecialWarningSound2
+	[106.95] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+		ShowSpecialWarning: Coalesce Voidwing - dodge attack
+		PlaySound: VoicePack/carefly
+		StartTimer: 6.2, Knockback
+		StopTimer: Timer1224776cdcount\t4
+		StopTimer: Timer1224906next
+		StopTimer: Timer1224827cdcount\t3
+		StopTimer: Timer1225016cdcount\t3
+		StartTimer: 11.5, Netherbreaker (1)
+		StartTimer: 20.5, Behead (1)
+		StartTimer: 22.5, Cosmic Maw (1)
+		StartTimer: 28.5, Dimension Breath (1)
+		StartTimer: 38.4, Rally the Shadowguard
+	[135.41] SPELL_CAST_START: [The Royal Voidwing: Dimension Breath] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, "", nil, 0x0, 1228163, Dimension Breath, 0, 0
+		ShowSpecialWarning: Dimension Breath! (1)
+		PlaySound: VoicePack/breathsoon
+	[145.41] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
+		ShowSpecialWarning: Rally the Shadowguard - switch targets
+		PlaySound: VoicePack/killmob
+		StartTimer: 64.0, Self-Destruct
+	[151.55] SPELL_PERIODIC_DAMAGE: [->Tank1: Cosmic Rip] "", nil, 0x0, Player-1-00000016, Tank1, 0x511, 1231097, Cosmic Rip, 0, 0
+		AntiSpam: 4
+		ShowSpecialWarning: Cosmic Rip damage - move away
+		PlaySound: VoicePack/watchfeet
+	[152.57] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (1)
+		PlaySound: VoicePack/kick1r
+	[153.78] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Ky'vor! (1)
+		PlaySound: VoicePack/kick1r
+	[159.85] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Ky'vor! (2)
+		PlaySound: VoicePack/kick2r
+	[161.07] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-000000005B, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+		ShowSpecialWarning: Dread Mortar - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 24.3, Dread Mortar
+	[161.07] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-00000000DE, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+		ShowSpecialWarning: Dread Mortar - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 24.3, Dread Mortar
+	[162.28] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000124, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[162.28] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000110, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[162.28] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-00000000DD, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[162.28] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000005A, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[163.49] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000012C, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[163.49] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000133, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[163.49] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000138, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[163.49] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000013E, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[164.72] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (2)
+		PlaySound: VoicePack/kick2r
+	[165.93] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
+		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Ky'vor! (3)
+		PlaySound: VoicePack/kick3r
+	[169.57] SPELL_CAST_START: [Nexus-Prince Xevvos: Nexus Beams] Creature-0-1-2810-1-241798-0000000059, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+		ShowSpecialWarning: Nexus Beams - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 20.6, Nexus Beams
+	[170.80] SPELL_CAST_START: [Nexus-Prince Ky'vor: Nexus Beams] Creature-0-1-2810-1-241803-0000000059, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
+		ShowSpecialWarning: Nexus Beams - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 20.6, Nexus Beams
+	[174.44] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000124, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[174.44] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000110, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[174.44] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-00000000DD, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[174.44] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000005A, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[175.66] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000012C, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[175.66] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000133, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[175.66] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000138, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[175.66] SPELL_CAST_START: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000013E, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[185.41] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-000000005B, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+		ShowSpecialWarning: Dread Mortar - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 24.3, Dread Mortar
+	[185.41] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-00000000DE, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
+		ShowSpecialWarning: Dread Mortar - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 24.3, Dread Mortar
+	[187.77] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
+		StartTimer: 32.6, Netherbreaker (2)
+		StartTimer: 39.6, Behead (2)
+		StartTimer: 41.6, Cosmic Maw (2)
+		StartTimer: 47.6, Dimension Breath (2)
+	[188.49] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000DE, Manaforged Titan, 0xa48, -1, false, 0, 0
+		StopTimer: Timer1230302cd
+	[235.43] SPELL_CAST_START: [The Royal Voidwing: Dimension Breath] Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, "", nil, 0x0, 1228163, Dimension Breath, 0, 0
+		ShowSpecialWarning: Dimension Breath! (2)
+		PlaySound: VoicePack/breathsoon
+	[252.96] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+		ShowSpecialWarning: King's Hunger - switch targets (The Royal Voidwing)
+		PlaySound: VoicePack/targetchange
+		StartTimer: 30.0, King's Hunger ends
+	[256.04] SPELL_AURA_REMOVED: [Nexus-King Salhadaar->The Royal Voidwing: King's Hunger] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Vehicle-0-1-2810-1-233823-0000000040, The Royal Voidwing, 0xa48, 1228265, King's Hunger, 0, BUFF, 0
+		StopTimer: Timer1228265active
+		StartTimer: 9.0, Galactic Smash (1)
+		StartTimer: 36.8, Starkiller Swing (1)
+		StartTimer: 185.0, World in Twilight
+	[265.04] SPELL_CAST_START: [Nexus-King Salhadaar: Galactic Smash] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225319, Galactic Smash, 0, 0
+		StartTimer: 55.0, Galactic Smash (2)
+	[292.84] SPELL_CAST_SUCCESS: [Nexus-King Salhadaar->Tank1: Starkiller Swing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226442, Starkiller Swing, 0, 0
+		StartTimer: 15.0, Starkiller Swing (2)
+	[298.84] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Tank1: Starshattered] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226413, Starshattered, 0, DEBUFF, 0
+		ShowSpecialWarning: Starshattered on you
+		PlaySound: VoicePack/targetyou
+	[307.84] SPELL_CAST_SUCCESS: [Nexus-King Salhadaar->Tank1: Starkiller Swing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226442, Starkiller Swing, 0, 0
+		StartTimer: 40.0, Starkiller Swing (3)
+	[313.84] SPELL_AURA_APPLIED_DOSE: [Nexus-King Salhadaar->Tank1: Starshattered] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000016, Tank1, 0x511, 1226413, Starshattered, 0, DEBUFF, 2, 0
+		ShowSpecialWarning: Starshattered on you
+		PlaySound: VoicePack/targetyou
+	[320.06] SPELL_CAST_START: [Nexus-King Salhadaar: Galactic Smash] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225319, Galactic Smash, 0, 0
+		StartTimer: 55.0, Galactic Smash (3)
+	[347.84] SPELL_CAST_SUCCESS: [Nexus-King Salhadaar->Dps7: Starkiller Swing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000008, Dps7, 0x512, 1226442, Starkiller Swing, 0, 0
+		StartTimer: 15.0, Starkiller Swing (4)
+	[362.84] SPELL_CAST_SUCCESS: [Nexus-King Salhadaar->Dps9: Starkiller Swing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000010, Dps9, 0x512, 1226442, Starkiller Swing, 0, 0
+		StartTimer: 40.0, Starkiller Swing (5)
+	[375.07] SPELL_CAST_START: [Nexus-King Salhadaar: Galactic Smash] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225319, Galactic Smash, 0, 0
+		StartTimer: 55.0, Galactic Smash (4)
+	[384.25] ENCOUNTER_END: 3134, Nexus-King Salhadaar, 15, 20, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1224737 1227549 1237105 1228284 1228265
