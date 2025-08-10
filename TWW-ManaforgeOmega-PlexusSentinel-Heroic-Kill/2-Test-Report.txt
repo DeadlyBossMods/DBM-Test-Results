@@ -7,17 +7,16 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1219607 (Eradicating Salvo)
 	Unused event registration: SPELL_AURA_REMOVED 1220982 (Protocol: Purge)
 	Unused event registration: SPELL_CAST_START 1220555 (Protocol: Purge)
-	Unused event registration: SPELL_CAST_START 1234733 (Cleanse the Chamber)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1219354 (Potent Mana Residue)
 	SpecialWarning for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_APPLIED 1219439 (Obliteration Arcanocannon)
+	Timer for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
 	Yell for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_APPLIED 1219439 (Obliteration Arcanocannon)
 	Timer for spell ID 1219450 (Manifest Matrices) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
 	Timer for spell ID 1219450 (Manifest Matrices) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
 	SpecialWarning for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_CAST_START 1220553 (Protocol: Purge)
-	Timer Manifest Matrices (%s), time=38.90, type=varcount, spellId=1219450 (time=10.70, variance=0.00) got refreshed early with 0.30s remaining
-		Refreshed by: [ 10.37] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
-	Timer Obliteration Arcanocannon (%s), time=36.50, type=varcount, spellId=1219263 (time=21.60, variance=0.00) got refreshed early with 0.40s remaining
-		Refreshed by: [ 21.19] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+	Timer Obliteration Arcanocannon (%s), time=36.50, type=varcount, spellId=1219263 (time=20.20, variance=2.00) got refreshed early with 2.33s remaining
+		Refreshed by: [113.34] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
 
 Unused objects:
 	[Special Warning] Obliteration Arcanocannon on >%s< - taunt now, type=taunt, spellId=1219263
@@ -31,10 +30,12 @@ Unused objects:
 	[Yell] {rt%1$d}Eradicating Salvo, type=shortposition, spellId=1219531
 
 Timers:
-	Obliteration Arcanocannon (%s), time=36.50, type=varcount, spellId=1219263, triggerDeltas = 0.00, 21.19, 92.15, 34.17
+	Obliteration Arcanocannon (%s), time=36.50, type=varcount, spellId=1219263, triggerDeltas = 0.00, 21.19, 74.30, 17.85, 34.17, 65.38
 		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 15, 24, 0
 		[ 21.19] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
 			 Triggered 3x, delta times: 21.19, 92.15, 34.17
+		[ 95.49] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[212.89] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
 	Manifest Matrices (%s), time=38.90, type=varcount, spellId=1219450, triggerDeltas = 0.00, 10.37, 85.12, 6.65, 35.29, 75.46
 		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 15, 24, 0
 		[ 10.37] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
@@ -63,7 +64,7 @@ Announces:
 		[158.84] Scheduled at 158.54 by SPELL_AURA_APPLIED: [Plexus Sentinel->Dps5: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000011, Dps5, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
 
 Special warnings:
-	Obliteration Arcanocannon on you, type=you, spellId=1219263, triggerDeltas = 54.12, 93.39
+	Obliteration Arcanocannon (%s) on you, type=youcount, spellId=1219263, triggerDeltas = 54.12, 93.39
 		[ 54.12] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank5: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000018, Tank5, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 54.12, 93.39
 	%s damage - move away, type=gtfo, spellId=1219354, triggerDeltas = 60.87, 93.79
@@ -95,9 +96,9 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 15, 24, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1219450 1219263 1219531 1220489 1220553 1220555 1234733, SPELL_AURA_APPLIED 1219459 1219439 1219607, SPELL_AURA_REMOVED 1219459 1219439 1219607 1220618 1220981 1220982, SPELL_PERIODIC_DAMAGE 1219354, SPELL_PERIODIC_MISSED 1219354
-		StartTimer: 10.7, Manifest Matrices (1)
-		StartTimer: 21.6, Obliteration Arcanocannon (1)
+		RegisterEvents: Regular, SPELL_CAST_START 1219450 1219263 1219531 1220489 1220553 1220555, SPELL_AURA_APPLIED 1219459 1219439 1219607, SPELL_AURA_REMOVED 1219459 1219439 1219607 1220618 1220981 1220982, SPELL_PERIODIC_DAMAGE 1219354, SPELL_PERIODIC_MISSED 1219354
+		StartTimer: 10.4, Manifest Matrices (1)
+		StartTimer: 21.2, Obliteration Arcanocannon (1)
 		StartTimer: 30.1, Eradicating Salvo (1)
 		StartTimer: 61.2, Protocol: Purge (1)
 	[ 10.37] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
@@ -119,7 +120,7 @@ Event trace:
 		ScheduleTask: announce1219450target:CombinedShow("Tank3") at 47.09 (+0.30)
 			ShowAnnounce: Manifest Matrices on Dps3, Dps12, Dps11, Dps13, Tank3
 	[ 54.12] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank5: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000018, Tank5, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
-		ShowSpecialWarning: Obliteration Arcanocannon on you
+		ShowSpecialWarning: Obliteration Arcanocannon (2) on you
 		PlaySound: VoicePack/runout
 		ShowYell: Obliteration Arcanocannon
 	[ 60.87] SPELL_PERIODIC_MISSED: [Plexus Sentinel->Tank5: Potent Mana Residue] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000018, Tank5, 0x511, 1219354, Potent Mana Residue, 0, 0
@@ -134,6 +135,7 @@ Event trace:
 		PlaySound: VoicePack/findshelter
 	[ 95.49] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
 		StartTimer: 6.2, Manifest Matrices (1)
+		StartTimer: 20.2, Obliteration Arcanocannon (1)
 	[102.14] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
 		StartTimer: 35.2, Manifest Matrices (2)
 	[104.68] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps7: Manifest Matrices] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000013, Dps7, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
@@ -154,7 +156,7 @@ Event trace:
 	[147.51] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
 		StartTimer: 34.0, Obliteration Arcanocannon (3)
 	[147.51] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank5: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000018, Tank5, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
-		ShowSpecialWarning: Obliteration Arcanocannon on you
+		ShowSpecialWarning: Obliteration Arcanocannon (2) on you
 		PlaySound: VoicePack/runout
 		ShowYell: Obliteration Arcanocannon
 	[154.66] SPELL_PERIODIC_MISSED: [Plexus Sentinel->Tank5: Potent Mana Residue] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000018, Tank5, 0x511, 1219354, Potent Mana Residue, 0, 0
@@ -172,6 +174,7 @@ Event trace:
 		PlaySound: VoicePack/findshelter
 	[212.89] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
 		StartTimer: 6.2, Manifest Matrices (1)
+		StartTimer: 20.2, Obliteration Arcanocannon (1)
 	[214.94] ENCOUNTER_END: 3129, Plexus Sentinel, 15, 24, 1, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
