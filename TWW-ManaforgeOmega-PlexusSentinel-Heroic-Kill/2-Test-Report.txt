@@ -14,9 +14,13 @@ Findings:
 	Yell for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_APPLIED 1219439 (Obliteration Arcanocannon)
 	Timer for spell ID 1219450 (Manifest Matrices) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
 	Timer for spell ID 1219450 (Manifest Matrices) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
+	Timer for spell ID 1219531 (Eradicating Salvo) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1219531 (Eradicating Salvo) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
 	SpecialWarning for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_CAST_START 1220553 (Protocol: Purge)
-	Timer Obliteration Arcanocannon (%s), time=36.50, type=varcount, spellId=1219263 (time=20.20, variance=2.00) got refreshed early with 2.33s remaining
-		Refreshed by: [113.34] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+	Timer for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
+	Timer Eradicating Salvo (%s), time=36.50, type=varcount, spellId=1219531 (time=28.70, variance=0.80) got refreshed early with 0.90s remaining
+		Refreshed by: [123.28] SPELL_CAST_START: [Plexus Sentinel: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219531, Eradicating Salvo, 0, 0
 
 Unused objects:
 	[Special Warning] Obliteration Arcanocannon on >%s< - taunt now, type=taunt, spellId=1219263
@@ -42,12 +46,16 @@ Timers:
 			 Triggered 3x, delta times: 10.37, 91.77, 35.29
 		[ 95.49] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
 		[212.89] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
-	Eradicating Salvo (%s), time=36.50, type=varcount, spellId=1219531, triggerDeltas = 0.00, 30.47, 92.81
+	Eradicating Salvo (%s), time=36.50, type=varcount, spellId=1219531, triggerDeltas = 0.00, 30.47, 65.02, 27.79, 89.61
 		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 15, 24, 0
 		[ 30.47] SPELL_CAST_START: [Plexus Sentinel: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219531, Eradicating Salvo, 0, 0
 			 Triggered 2x, delta times: 30.47, 92.81
-	Protocol: Purge (%s), time=97.30, type=cdcount, spellId=1220489, triggerDeltas = 0.00
+		[ 95.49] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[212.89] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
+	Protocol: Purge (%s), time=97.30, type=cdcount, spellId=1220489, triggerDeltas = 0.00, 95.49, 117.40
 		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 15, 24, 0
+		[ 95.49] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[212.89] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
 
 Announces:
 	Manifest Matrices on >%s<, type=target, spellId=1219450, triggerDeltas = 13.56, 0.38, 33.15, 57.89, 35.38, 35.76
@@ -136,6 +144,8 @@ Event trace:
 	[ 95.49] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
 		StartTimer: 6.2, Manifest Matrices (1)
 		StartTimer: 20.2, Obliteration Arcanocannon (1)
+		StartTimer: 28.7, Eradicating Salvo (1)
+		StartTimer: 94.0, Protocol: Purge (2)
 	[102.14] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
 		StartTimer: 35.2, Manifest Matrices (2)
 	[104.68] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps7: Manifest Matrices] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Player-1-00000013, Dps7, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
@@ -175,6 +185,8 @@ Event trace:
 	[212.89] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000003, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
 		StartTimer: 6.2, Manifest Matrices (1)
 		StartTimer: 20.2, Obliteration Arcanocannon (1)
+		StartTimer: 28.7, Eradicating Salvo (1)
+		StartTimer: 94.0, Protocol: Purge (3)
 	[214.94] ENCOUNTER_END: 3129, Plexus Sentinel, 15, 24, 1, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
