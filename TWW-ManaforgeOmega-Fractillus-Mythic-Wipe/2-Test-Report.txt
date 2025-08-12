@@ -5,7 +5,6 @@ Findings:
 	Unused event registration: RAID_BOSS_WHISPER
 	Unused event registration: SPELL_AURA_APPLIED 1231871 (Shockwave Slam)
 	Unused event registration: SPELL_AURA_REMOVED 1247424 (Null Consumption)
-	SpecialWarning for spell ID 1220394 (Shattering Backhand) is triggered by event SPELL_AURA_APPLIED 1227378 (Crystal Encasement)
 	Timer Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871 (time=50.00, variance=0.00) got refreshed early with 0.37s remaining
 		Refreshed by: [ 69.11] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
 
@@ -54,14 +53,14 @@ Special warnings:
 	Shattering Backhand! (%s), type=count, spellId=1220394, triggerDeltas = 48.34, 50.04, 50.29, 50.25, 50.03
 		[ 48.34] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
 			 Triggered 5x, delta times: 48.34, 50.04, 50.29, 50.25, 50.03
-	Shattering Backhand on you, type=you, spellId=1220394, triggerDeltas = 149.15, 50.22, 50.08
-		[149.15] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
-			 Triggered 3x, delta times: 149.15, 50.22, 50.08
 	Enraged Shattering!, type=spell, spellId=1225673, triggerDeltas = 290.36
 		[290.36] SPELL_CAST_START: [Fractillus: Enraged Shattering] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Shattering, 0, 0
 	Shattershell - move to >%s<, type=moveto, spellId=1227373, triggerDeltas = 141.12, 50.27, 50.05
 		[141.12] SPELL_AURA_APPLIED: [Fractillus->Tank1: Shattershell] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1227373, Shattershell, 0, DEBUFF, 0
 			 Triggered 3x, delta times: 141.12, 50.27, 50.05
+	Crystal Encasement on you, type=you, spellId=1227378, triggerDeltas = 149.15, 50.22, 50.08
+		[149.15] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 149.15, 50.22, 50.08
 	Null Consumption - move away from others, type=moveaway, spellId=1247424, triggerDeltas = 50.98, 50.03, 50.33, 50.19, 50.03
 		[ 50.98] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
 			 Triggered 5x, delta times: 50.98, 50.03, 50.33, 50.19, 50.03
@@ -142,7 +141,7 @@ Event trace:
 		PlaySound: VoicePack/aesoon
 		StartTimer: 50.0, Shattering Backhand (4)
 	[149.15] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
-		ShowSpecialWarning: Shattering Backhand on you
+		ShowSpecialWarning: Crystal Encasement on you
 		PlaySound: VoicePack/targetyou
 	[151.34] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
 		ShowSpecialWarning: Null Consumption - move away from others
@@ -163,7 +162,7 @@ Event trace:
 		PlaySound: VoicePack/aesoon
 		StartTimer: 50.0, Shattering Backhand (5)
 	[199.37] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
-		ShowSpecialWarning: Shattering Backhand on you
+		ShowSpecialWarning: Crystal Encasement on you
 		PlaySound: VoicePack/targetyou
 	[201.53] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
 		ShowSpecialWarning: Null Consumption - move away from others
@@ -184,7 +183,7 @@ Event trace:
 		PlaySound: VoicePack/aesoon
 		StartTimer: 50.0, Shattering Backhand (6)
 	[249.45] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
-		ShowSpecialWarning: Shattering Backhand on you
+		ShowSpecialWarning: Crystal Encasement on you
 		PlaySound: VoicePack/targetyou
 	[251.56] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
 		ShowSpecialWarning: Null Consumption - move away from others

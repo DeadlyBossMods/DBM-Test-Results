@@ -12,37 +12,39 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1232221 (Death Throes)
 	Unused event registration: SPELL_CAST_START 1248133 (Void Tear)
 	Timer for spell ID 1227631 (Arcane Expulsion) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
-	Timer for spell ID 1228161 (Silencing Tempest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
+	SpecialWarning for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1228161 (Silencing Tempest)
+	Timer for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1228161 (Silencing Tempest)
+	Timer for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1228216 (Arcane Obliteration) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Announce for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_AURA_APPLIED 1228506 (Overwhelming Power)
 	Announce for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_AURA_APPLIED_DOSE 1228506 (Overwhelming Power)
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1231720 (Invoke Collector) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
-	Timer for spell ID 1243873 (Void Harvest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
-	Timer for spell ID 1243873 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
+	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
+	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
 	Announce for spell ID 1248009 (Dark Terminus) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 
 Unused objects:
 	[Announce] Void Tear (%s), type=count, spellId=1248133
+	[Special Warning] Astral Harvest on you, type=you, spellId=1228214
 	[Special Warning] %d stacks of Overwhelming Power on you, type=stack, spellId=1228502
 	[Special Warning] Overwhelming Power on >%s< - taunt now, type=taunt, spellId=1228502
 	[Special Warning] Death Throes! (%s), type=count, spellId=1232221
-	[Special Warning] Astral Harvest on you, type=you, spellId=1233979
-	[Special Warning] Void Harvest on you, type=you, spellId=1243873
+	[Special Warning] Void Harvest on you, type=you, spellId=1243901
 	[Timer] Death Throes (%s), time=97.30, type=cdcount, spellId=1232221
-	[Timer] Void Tear (%s), time=97.30, type=cdcount, spellId=1248133
-	[Yell] Silencing Tempest, type=shortyell, spellId=1228161
+	[Timer] Void Tear (%s), time=97.30, type=cdcount, spellId=1248171
+	[Yell] Silencing Tempest, type=shortyell, spellId=1228188
+	[Yell] %d, type=shortfade, spellId=1228214
 	[Yell] %d, type=shortfade, spellId=1228216
 	[Yell] Soak, type=shortyell, spellId=1228216
-	[Yell] %d, type=shortfade, spellId=1233979
-	[Yell] %d, type=shortfade, spellId=1243873
+	[Yell] %d, type=shortfade, spellId=1243901
 
 Timers:
 	Arcane Expulsion (%s), time=97.30, type=cdcount, spellId=1227631, triggerDeltas = 0.00, 213.59
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 15, 20, 0
 		[213.59] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		[358.24] SPELL_CAST_SUCCESS: [Forgeweaver Araz: Phase Transition P1 -> P2] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230231, Phase Transition P1 -> P2, 0, 0
-	Silencing Tempest (%s), time=97.30, type=cdcount, spellId=1228161, triggerDeltas = 0.00, 62.88, 44.03, 106.68, 57.65, 44.00, 98.99, 89.11, 46.00
+	Silencing Tempest (%s), time=97.30, type=cdcount, spellId=1228188, triggerDeltas = 0.00, 62.88, 44.03, 106.68, 57.65, 44.00, 98.99, 89.11, 46.00
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 15, 20, 0
 		[ 62.88] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 			 Triggered 6x, delta times: 62.88, 44.03, 164.33, 44.00, 188.10, 46.00
@@ -63,7 +65,7 @@ Timers:
 		[  8.99] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 			 Triggered 4x, delta times: 8.99, 43.92, 184.33, 21.98
 		[213.59] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-	Void Harvest (%s), time=8.00, type=cdcount, spellId=1243873, triggerDeltas = 414.23, 39.09, 8.00, 80.01, 8.01, 46.02
+	Void Harvest (%s), time=8.00, type=cdcount, spellId=1243901, triggerDeltas = 414.23, 39.09, 8.00, 80.01, 8.01, 46.02
 		[414.23] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		[453.32] SPELL_CAST_START: [Dark Singularity: Hungering Gloom] Creature-0-1-2810-1-243859-0000000001, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Hungering Gloom, 0, 0
 			 Triggered 5x, delta times: 453.32, 8.00, 80.01, 8.01, 46.02
@@ -98,7 +100,7 @@ Special warnings:
 	Arcane Expulsion! (%s), type=count, spellId=1227631, triggerDeltas = 144.88, 208.35
 		[144.88] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 			 Triggered 2x, delta times: 144.88, 208.35
-	Silencing Tempest (%s) - dodge attack, type=dodgecount, spellId=1228161, triggerDeltas = 62.88, 44.03, 22.98, 141.35, 44.00, 21.01, 167.09, 46.00, 96.01
+	Silencing Tempest (%s) - dodge attack, type=dodgecount, spellId=1228188, triggerDeltas = 62.88, 44.03, 22.98, 141.35, 44.00, 21.01, 167.09, 46.00, 96.01
 		[ 62.88] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 			 Triggered 9x, delta times: 62.88, 44.03, 22.98, 141.35, 44.00, 21.01, 167.09, 46.00, 96.01
 	Soak! (%s), type=count, spellId=1228216, triggerDeltas = 31.20, 44.98, 206.37

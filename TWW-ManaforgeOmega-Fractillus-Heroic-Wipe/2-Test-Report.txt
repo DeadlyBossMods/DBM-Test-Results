@@ -5,7 +5,6 @@ Findings:
 	Unused event registration: RAID_BOSS_WHISPER
 	Unused event registration: SPELL_AURA_APPLIED 1231871 (Shockwave Slam)
 	Unused event registration: SPELL_AURA_REMOVED 1247424 (Null Consumption)
-	SpecialWarning for spell ID 1220394 (Shattering Backhand) is triggered by event SPELL_AURA_APPLIED 1227378 (Crystal Encasement)
 
 Unused objects:
 	[Announce] Crystalline Shockwave on >%s<, type=target, spellId=1233416
@@ -62,14 +61,14 @@ Special warnings:
 	Shattering Backhand! (%s), type=count, spellId=1220394, triggerDeltas = 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
 		[ 37.75] SPELL_CAST_START: [Fractillus: Crystalline Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Crystalline Backhand, 0, 0
 			 Triggered 8x, delta times: 37.75, 40.12, 39.32, 39.67, 39.70, 39.30, 40.13, 40.11
-	Shattering Backhand on you, type=you, spellId=1220394, triggerDeltas = 119.32, 39.28
-		[119.32] SPELL_AURA_APPLIED: [->Tank3: Crystallized] "", nil, 0x0, Player-1-00000016, Tank3, 0x511, 1227378, Crystallized, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 119.32, 39.28
 	Enraged Shattering!, type=spell, spellId=1225673, triggerDeltas = 334.39
 		[334.39] SPELL_CAST_START: [Fractillus: Enraged Tantrum] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Tantrum, 0, 0
 	Shattershell - move to >%s<, type=moveto, spellId=1227373, triggerDeltas = 111.32, 39.27
 		[111.32] SPELL_AURA_APPLIED: [Fractillus->Tank3: Nether Crystallization] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1227373, Nether Crystallization, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 111.32, 39.27
+	Crystal Encasement on you, type=you, spellId=1227378, triggerDeltas = 119.32, 39.28
+		[119.32] SPELL_AURA_APPLIED: [->Tank3: Crystallized] "", nil, 0x0, Player-1-00000016, Tank3, 0x511, 1227378, Crystallized, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 119.32, 39.28
 	Null Consumption - move away from others, type=moveaway, spellId=1247424, triggerDeltas = 40.37, 198.05
 		[ 40.37] SPELL_AURA_APPLIED: [Fractillus->Tank3: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000016, Tank3, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 40.37, 198.05
@@ -148,7 +147,7 @@ Event trace:
 		PlaySound: VoicePack/aesoon
 		StartTimer: 39.3, Shattering Backhand (4)
 	[119.32] SPELL_AURA_APPLIED: [->Tank3: Crystallized] "", nil, 0x0, Player-1-00000016, Tank3, 0x511, 1227378, Crystallized, 0, DEBUFF, 0
-		ShowSpecialWarning: Shattering Backhand on you
+		ShowSpecialWarning: Crystal Encasement on you
 		PlaySound: VoicePack/targetyou
 	[122.81] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000002E1, 1233411, Fractillus, 54.5, 9, Dps12, 0
 		StartTimer: 23.1, Crystalline Shockwave (9)
@@ -165,7 +164,7 @@ Event trace:
 		PlaySound: VoicePack/aesoon
 		StartTimer: 39.3, Shattering Backhand (5)
 	[158.60] SPELL_AURA_APPLIED: [->Tank3: Crystallized] "", nil, 0x0, Player-1-00000016, Tank3, 0x511, 1227378, Crystallized, 0, DEBUFF, 0
-		ShowSpecialWarning: Shattering Backhand on you
+		ShowSpecialWarning: Crystal Encasement on you
 		PlaySound: VoicePack/targetyou
 	[162.91] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000432, 1233411, Fractillus, 42.3, 12, Dps12, 0
 		StartTimer: 23.1, Crystalline Shockwave (11)

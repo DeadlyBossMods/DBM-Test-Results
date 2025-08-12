@@ -30,6 +30,9 @@ Findings:
 	Unused event registration: UNIT_DIED
 	Timer for spell ID 1224827 (Behead) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
 	Timer for spell ID 1224827 (Behead) is triggered by event SPELL_CAST_START 1225010 (Command: Behead)
+	SpecialWarning for spell ID 1227470 (Besiege) is triggered by event SPELL_CAST_START 1225016 (Command: Besiege)
+	Timer for spell ID 1227470 (Besiege) is triggered by event SPELL_CAST_START 1225016 (Command: Besiege)
+	Timer for spell ID 1227549 (Banishment) is triggered by event SPELL_CAST_START 1227529 (Banishment)
 	Timer for spell ID 1228065 (Rally the Shadowguard) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
 	Timer for spell ID 1228115 (Netherbreaker) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
 	Timer for spell ID 1228115 (Netherbreaker) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
@@ -42,18 +45,18 @@ Findings:
 Unused objects:
 	[Special Warning] Starshattered on >%s< - taunt now, type=taunt, spellId=1226413
 	[Special Warning] Starshattered on you, type=you, spellId=1226413
-	[Special Warning] Banishment - move away from others, type=moveaway, spellId=1227529
+	[Special Warning] Banishment - move away from others, type=moveaway, spellId=1227549
 	[Special Warning] King's Hunger - switch targets (%s), type=switchcustom, spellId=1228265
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1231097
 	[Special Warning] Cosmic Maw - defensive, type=defensive, spellId=1234529
 	[Special Warning] Cosmic Maw on >%s< - taunt now, type=taunt, spellId=1234529
-	[Timer] Galactic Smash (%s), time=55.00, type=cdcount, spellId=1225319
 	[Timer] World in Twilight, time=185.00, type=next, spellId=1225634
 	[Timer] Starkiller Swing (%s), time=97.30, type=cdcount, spellId=1226442
+	[Timer] Galactic Smash (%s), time=55.00, type=cdcount, spellId=1226648
 	[Timer] Reap, time=12.20, type=cdnp, spellId=1228053
 	[Timer] King's Hunger ends, time=30.00, type=active, spellId=1228265
 	[Timer] Twilight Massacre, time=99.00, type=cdnp, spellId=1237106
-	[Yell] %d, type=shortfade, spellId=1227529
+	[Yell] %d, type=shortfade, spellId=1227549
 
 Timers:
 	Tank Combo (%s), time=40.00, type=cdcount, spellId=1224776, triggerDeltas = 0.00, 14.47, 39.97, 40.00
@@ -69,12 +72,12 @@ Timers:
 		[223.96] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000046, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000046, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
 	Invoke the Oath, time=117.00, type=next, spellId=1224906, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 16, 20, 0
-	Command: Besiege (%s), time=40.00, type=cdcount, spellId=1225016, triggerDeltas = 0.00, 9.04, 39.90, 39.97
+	Besiege (%s), time=40.00, type=cdcount, spellId=1227470, triggerDeltas = 0.00, 9.04, 39.90, 39.97
 		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 16, 20, 0
 		[  9.04] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
 			 Triggered 3x, delta times: 9.04, 39.90, 39.97
 		[119.49] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
-	Banishment (%s), time=97.30, type=cdcount, spellId=1227529, triggerDeltas = 0.00, 30.49, 15.91, 24.11
+	Banishment (%s), time=97.30, type=cdcount, spellId=1227549, triggerDeltas = 0.00, 30.49, 15.91, 24.11
 		[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 16, 20, 0
 		[ 30.49] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
 			 Triggered 3x, delta times: 30.49, 15.91, 24.11
@@ -126,7 +129,7 @@ Special warnings:
 			 Triggered 6x, delta times: 14.47, 13.00, 26.97, 3.00, 42.00, 3.00
 	Invoke the Oath!, type=spell, spellId=1224906, triggerDeltas = 114.91
 		[114.91] SPELL_CAST_START: [Nexus-King Salhadaar: Invoke the Oath] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224906, Invoke the Oath, 0, 0
-	Command: Besiege (%s) - dodge attack, type=dodgecount, spellId=1225016, triggerDeltas = 9.04, 39.90, 39.97
+	Besiege (%s) - dodge attack, type=dodgecount, spellId=1227470, triggerDeltas = 9.04, 39.90, 39.97
 		[  9.04] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
 			 Triggered 3x, delta times: 9.04, 39.90, 39.97
 	Coalesce Voidwing - dodge attack, type=dodge, spellId=1227734, triggerDeltas = 119.49
@@ -200,13 +203,13 @@ Event trace:
 		StartTimer: 30.0, Banishment (1)
 		StartTimer: 117.0, Invoke the Oath
 		StartTimer: 32.4, Behead (1)
-		StartTimer: 9.0, Command: Besiege (1)
+		StartTimer: 9.0, Besiege (1)
 	[  0.02] SPELL_CAST_START: [Nexus-King Salhadaar: Decree: Oath-Bound] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224731, Decree: Oath-Bound, 0, 0
 		ShowAnnounce: Casting Decree: Oath-Bound: -nan sec
 	[  9.04] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
-		ShowSpecialWarning: Command: Besiege (1) - dodge attack
+		ShowSpecialWarning: Besiege (1) - dodge attack
 		PlaySound: VoicePack/breathsoon
-		StartTimer: 40.0, Command: Besiege (2)
+		StartTimer: 40.0, Besiege (2)
 	[ 14.47] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
 		ShowSpecialWarning: Vanquish!
 		PlaySound: DBM/SpecialWarningSound2
@@ -231,9 +234,9 @@ Event trace:
 	[ 46.40] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
 		StartTimer: 24.1, Banishment (3)
 	[ 48.94] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
-		ShowSpecialWarning: Command: Besiege (2) - dodge attack
+		ShowSpecialWarning: Besiege (2) - dodge attack
 		PlaySound: VoicePack/breathsoon
-		StartTimer: 40.0, Command: Besiege (3)
+		StartTimer: 40.0, Besiege (3)
 	[ 54.44] SPELL_CAST_START: [Nexus-King Salhadaar: Vanquish] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224812, Vanquish, 0, 0
 		ShowSpecialWarning: Vanquish!
 		PlaySound: DBM/SpecialWarningSound2
@@ -259,9 +262,9 @@ Event trace:
 	[ 72.43] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Behead] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225010, Command: Behead, 0, 0
 		StartTimer: 40.0, Behead (3)
 	[ 88.91] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
-		ShowSpecialWarning: Command: Besiege (3) - dodge attack
+		ShowSpecialWarning: Besiege (3) - dodge attack
 		PlaySound: VoicePack/breathsoon
-		StartTimer: 40.0, Command: Besiege (4)
+		StartTimer: 40.0, Besiege (4)
 	[ 94.44] SPELL_CAST_START: [Nexus-King Salhadaar: Conquer] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224787, Conquer, 0, 0
 		ShowSpecialWarning: Conquer - soak (5)
 		PlaySound: VoicePack/shareone
@@ -293,7 +296,7 @@ Event trace:
 		PlaySound: VoicePack/carefly
 		StartTimer: 6.2, Knockback
 		StopTimer: Timer1224776cdcount\t4
-		StopTimer: Timer1225016cdcount\t4
+		StopTimer: Timer1227470cdcount\t4
 		StartTimer: 7.1, Netherbreaker (1)
 		StartTimer: 15.5, Cosmic Maw (1)
 		StartTimer: 20.5, Dimension Breath (1)
