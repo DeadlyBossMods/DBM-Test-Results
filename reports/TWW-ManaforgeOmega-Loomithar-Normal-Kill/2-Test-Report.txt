@@ -1,0 +1,291 @@
+Test: TWW/ManaforgeOmega/Loomithar/Normal/Kill
+Mod:  DBM-Raids-WarWithin/2686
+
+Findings:
+	Unused event registration: CHAT_MSG_RAID_BOSS_WHISPER
+	Unused event registration: SPELL_AURA_APPLIED 1227163 (Writhing Wave)
+	Unused event registration: SPELL_AURA_APPLIED 1227784 (Arcane Outrage)
+	Unused event registration: SPELL_AURA_APPLIED 1228070 (Unbound Rage)
+	Unused event registration: SPELL_AURA_APPLIED 1237212 (Piercing Strand)
+	Unused event registration: SPELL_AURA_APPLIED 1238502 (Woven Ward)
+	Unused event registration: SPELL_AURA_REMOVED 1226311 (Infusion Tether)
+	Unused event registration: SPELL_AURA_REMOVED 1238502 (Woven Ward)
+	Timer for spell ID 1237212 (Piercing Strand) is triggered by event SPELL_CAST_START 1227263 (Piercing Strand)
+
+Unused objects:
+	[Announce] Infusion Tether faded, type=fades, spellId=1226311
+	[Announce] Infusion Pylons (%s), type=count, spellId=1246921
+	[Special Warning] Infusion Tether on you, type=you, spellId=1226311
+	[Special Warning] Writhing Wave on >%s< - taunt now, type=taunt, spellId=1227226
+	[Special Warning] Arcane Outrage on you, type=you, spellId=1227782
+	[Special Warning] Piercing Strand - defensive, type=defensive, spellId=1237212
+	[Special Warning] Piercing Strand on >%s< - taunt now, type=taunt, spellId=1237212
+	[Timer] Infusion Pylons (%s), time=97.30, type=cdcount, spellId=1246921
+	[Yell] Infusion Tether, type=shortyell, spellId=1226311
+
+Timers:
+	Infusion Tether (%s), time=97.30, type=cdcount, spellId=1226311, triggerDeltas = 0.00, 22.01, 39.01, 45.95, 39.04, 45.99, 38.98, 46.04, 39.02, 46.01
+		[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 14, 28, 0
+		[ 22.01] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[ 61.02] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[106.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[146.01] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[192.00] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[230.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[277.02] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000011, Dps9, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[316.04] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[362.05] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+	Overinfusion Burst (%s), time=85.00, type=nextcount, spellId=1226395, triggerDeltas = 0.00, 75.96, 85.02, 85.00, 84.99
+		[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 14, 28, 0
+		[ 75.96] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
+			 Triggered 4x, delta times: 75.96, 85.02, 85.00, 84.99
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+	Writhing Wave (%s), time=20.00, type=nextcount, spellId=1227226, triggerDeltas = 379.48, 16.04, 19.99, 20.04, 19.97
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+		[392.53] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227775-00000001F7, 1227775, Loom'ithar, 41.2, 0, ??, 0
+		[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 4x, delta times: 395.52, 19.99, 20.04, 19.97
+	Arcane Outrage (%s), time=20.00, type=nextcount, spellId=1227782, triggerDeltas = 379.48, 23.04, 20.00, 19.98
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+		[392.53] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227775-00000001F7, 1227775, Loom'ithar, 41.2, 0, ??, 0
+		[402.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+			 Triggered 3x, delta times: 402.52, 20.00, 19.98
+	Unbound Rage, time=5.80, type=cast, spellId=1228059, triggerDeltas = 379.48
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+	Piercing Strand (%s), time=97.30, type=cdcount, spellId=1237212, triggerDeltas = 0.00, 9.48, 6.02, 40.48, 4.00, 34.49, 5.99, 40.52, 4.03, 34.49, 6.01, 40.48, 4.03, 34.47, 6.00, 40.47, 4.04, 34.51, 5.99
+		[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 14, 28, 0
+		[  9.48] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+			 Triggered 18x, delta times: 9.48, 6.02, 40.48, 4.00, 34.49, 5.99, 40.52, 4.03, 34.49, 6.01, 40.48, 4.03, 34.47, 6.00, 40.47, 4.04, 34.51, 5.99
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+	Lair Weaving (%s), time=85.00, type=nextcount, spellId=1237272, triggerDeltas = 0.00, 43.97, 85.00, 85.02, 84.97
+		[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 14, 28, 0
+		[ 43.97] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
+			 Triggered 4x, delta times: 43.97, 85.00, 85.02, 84.97
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+
+Announces:
+	Infusion Tether on >%s<, type=target, spellId=1226311, triggerDeltas = 22.31, 39.01, 45.96, 39.03, 45.99, 38.98, 46.04, 39.02, 46.01
+		[ 22.31] Scheduled at 22.01 by SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[ 61.32] Scheduled at 61.02 by SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[107.28] Scheduled at 106.98 by SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[146.31] Scheduled at 146.01 by SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[192.30] Scheduled at 192.00 by SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[231.28] Scheduled at 230.98 by SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[277.32] Scheduled at 277.02 by SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[316.34] Scheduled at 316.04 by SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		[362.35] Scheduled at 362.05 by SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+
+Special warnings:
+	Overinfusion Burst - dodge attack, type=dodge, spellId=1226395, triggerDeltas = 75.96, 85.02, 85.00, 84.99
+		[ 75.96] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
+			 Triggered 4x, delta times: 75.96, 85.02, 85.00, 84.99
+	Writhing Wave! (%s), type=count, spellId=1227226, triggerDeltas = 395.52, 19.99, 20.04, 19.97
+		[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 4x, delta times: 395.52, 19.99, 20.04, 19.97
+	Unbound Rage!, type=spell, spellId=1228059, triggerDeltas = 379.48
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+	Lair Weaving (%s) - dodge attack, type=dodgecount, spellId=1237272, triggerDeltas = 43.97, 85.00, 85.02, 84.97
+		[ 43.97] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
+			 Triggered 4x, delta times: 43.97, 85.00, 85.02, 84.97
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/specialsoon
+		[ 43.97] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
+			 Triggered 4x, delta times: 43.97, 85.00, 85.02, 84.97
+	VoicePack/shareone
+		[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 2x, delta times: 395.52, 40.03
+	VoicePack/sharetwo
+		[415.51] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 2x, delta times: 415.51, 40.01
+	VoicePack/watchstep
+		[ 75.96] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
+			 Triggered 4x, delta times: 75.96, 85.02, 85.00, 84.99
+	VoicePack/carefly
+		[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 14, 28, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226395 1237272, SPELL_AURA_APPLIED 1226311 1238502 1237212 1228070 1227784 1227163, SPELL_AURA_REMOVED 1226311 1238502, CHAT_MSG_RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		StartTimer: 9.5, Piercing Strand (1)
+		StartTimer: 22.0, Infusion Tether (1)
+		StartTimer: 44.0, Lair Weaving (1)
+		StartTimer: 76.0, Overinfusion Burst (1)
+	[  9.48] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 6.0, Piercing Strand (2)
+	[ 15.50] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 40.5, Piercing Strand (3)
+	[ 22.01] SPELL_AURA_APPLIED: [Loom'ithar->Dps11: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000013, Dps11, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 22.01, 22.01, 22.01
+		StartTimer: 39.0, Infusion Tether (2)
+	[ 22.01] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Tank2") at 22.31 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps11, Dps8, Healer3, Tank2
+	[ 43.97] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
+		ShowSpecialWarning: Lair Weaving (1) - dodge attack
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 85.0, Lair Weaving (2)
+	[ 55.98] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 4.0, Piercing Strand (4)
+	[ 59.98] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 34.5, Piercing Strand (5)
+	[ 61.02] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 61.02, 61.02, 61.02
+		StartTimer: 46.0, Infusion Tether (3)
+	[ 61.02] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps6, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Dps6") at 61.32 (+0.30)
+			ShowAnnounce: Infusion Tether on Healer2, Dps20, Dps9, Dps6
+	[ 75.96] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 85.0, Overinfusion Burst (2)
+	[ 94.47] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 6.0, Piercing Strand (6)
+	[100.46] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 40.5, Piercing Strand (7)
+	[106.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer4: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000027, Healer4, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 106.98, 106.98, 106.98
+		StartTimer: 39.0, Infusion Tether (4)
+	[106.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps10: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps10, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Dps10") at 107.28 (+0.30)
+			ShowAnnounce: Infusion Tether on Healer4, Dps13, Healer1, Dps10
+	[128.97] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
+		ShowSpecialWarning: Lair Weaving (2) - dodge attack
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 85.0, Lair Weaving (3)
+	[140.98] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 4.0, Piercing Strand (8)
+	[145.01] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 34.5, Piercing Strand (9)
+	[146.01] SPELL_AURA_APPLIED: [Loom'ithar->Tank2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000029, Tank2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 146.01, 146.01, 146.01
+		StartTimer: 46.0, Infusion Tether (5)
+	[146.01] SPELL_AURA_APPLIED: [Loom'ithar->Dps20: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000024, Dps20, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Dps20") at 146.31 (+0.30)
+			ShowAnnounce: Infusion Tether on Tank2, Dps15, Dps6, Dps20
+	[160.98] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 85.0, Overinfusion Burst (3)
+	[179.50] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 6.0, Piercing Strand (10)
+	[185.51] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 40.5, Piercing Strand (11)
+	[192.00] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000016, Healer1, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 192, 192, 192
+		StartTimer: 39.0, Infusion Tether (6)
+	[192.00] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Dps13, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Dps13") at 192.30 (+0.30)
+			ShowAnnounce: Infusion Tether on Healer1, Dps7, Dps22, Dps13
+	[213.99] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
+		ShowSpecialWarning: Lair Weaving (3) - dodge attack
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 85.0, Lair Weaving (4)
+	[225.99] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 4.0, Piercing Strand (12)
+	[230.02] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 34.5, Piercing Strand (13)
+	[230.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps12: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000014, Dps12, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 230.98, 230.98, 230.98
+		StartTimer: 46.0, Infusion Tether (7)
+	[230.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Dps17") at 231.28 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps12, Dps5, Tank2, Dps17
+	[245.98] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 85.0, Overinfusion Burst (4)
+	[264.49] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 6.0, Piercing Strand (14)
+	[270.49] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 40.5, Piercing Strand (15)
+	[277.02] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000011, Dps9, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 277.02, 277.02, 277.02
+		StartTimer: 39.0, Infusion Tether (8)
+	[277.02] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000023, Healer2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Healer2") at 277.32 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps9, Dps22, Healer1, Healer2
+	[298.96] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
+		ShowSpecialWarning: Lair Weaving (4) - dodge attack
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 85.0, Lair Weaving (5)
+	[310.96] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 4.0, Piercing Strand (16)
+	[315.00] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 34.5, Piercing Strand (17)
+	[316.04] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Dps7, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 316.04, 316.04, 316.04
+		StartTimer: 46.0, Infusion Tether (9)
+	[316.04] SPELL_AURA_APPLIED: [Loom'ithar->Dps17: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000020, Dps17, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Dps17") at 316.34 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps7, Dps13, Dps20, Dps17
+	[330.97] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
+		ShowSpecialWarning: Overinfusion Burst - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 85.0, Overinfusion Burst (5)
+	[349.51] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 6.0, Piercing Strand (18)
+	[355.50] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
+		StartTimer: 40.5, Piercing Strand (19)
+	[362.05] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps5, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		AntiSpam: 1
+			Filtered: 3x SPELL_AURA_APPLIED at 362.05, 362.05, 362.05
+		StartTimer: 39.0, Infusion Tether (10)
+	[362.05] SPELL_AURA_APPLIED: [Loom'ithar->Dps8: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Dps8, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+		ScheduleTask: announce1226311target:CombinedShow("Dps8") at 362.35 (+0.30)
+			ShowAnnounce: Infusion Tether on Dps5, Dps22, Dps12, Dps8
+	[379.48] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-00000001CE, 1228059, Loom'ithar, 49.7, 51, Dps4, 0
+		StopTimer: Timer1237272nextcount\t5
+		StopTimer: Timer1226395nextcount\t5
+		StopTimer: Timer1226311cdcount\t10
+		StopTimer: Timer1237212cdcount\t19
+		ShowSpecialWarning: Unbound Rage!
+		PlaySound: VoicePack/carefly
+		StartTimer: 5.8, Unbound Rage
+		StartTimer: 16.0, Writhing Wave (1)
+		StartTimer: 23.0, Arcane Outrage (1)
+	[392.53] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227775-00000001F7, 1227775, Loom'ithar, 41.2, 0, ??, 0
+		UpdateTimer: Timer1227226nextcount\t1, 13, 16
+		UpdateTimer: Timer1227782nextcount\t1, 13, 23
+	[395.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (1)
+		StartTimer: 20.0, Writhing Wave (2)
+		PlaySound: VoicePack/shareone
+	[402.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		StartTimer: 20.0, Arcane Outrage (2)
+	[415.51] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (2)
+		StartTimer: 20.0, Writhing Wave (3)
+		PlaySound: VoicePack/sharetwo
+	[422.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		StartTimer: 20.0, Arcane Outrage (3)
+	[435.55] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (3)
+		StartTimer: 20.0, Writhing Wave (4)
+		PlaySound: VoicePack/shareone
+	[442.50] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		StartTimer: 20.0, Arcane Outrage (4)
+	[455.52] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+		ShowSpecialWarning: Writhing Wave! (4)
+		StartTimer: 20.0, Writhing Wave (5)
+		PlaySound: VoicePack/sharetwo
+	[458.48] ENCOUNTER_END: 3131, Loom'ithar, 14, 28, 1, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1226311 1238502
