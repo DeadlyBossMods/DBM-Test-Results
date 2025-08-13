@@ -18,16 +18,13 @@ Findings:
 	Timer for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1228216 (Arcane Obliteration) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
-	Timer for spell ID 1231720 (Invoke Collector) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 
 Unused objects:
-	[Announce] Overwhelming Power on >%s< (%d), type=stack, spellId=1228502
 	[Announce] Stage 1248009, type=stage, spellId=1248009
 	[Announce] Void Tear (%s), type=count, spellId=1248133
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Special Warning] Astral Harvest on you, type=you, spellId=1228214
-	[Special Warning] Arcane Obliteration on >%s< - taunt now, type=taunt, spellId=1228216
 	[Special Warning] Death Throes! (%s), type=count, spellId=1232221
 	[Special Warning] Void Harvest on you, type=you, spellId=1243901
 	[Timer] Death Throes (%s), time=97.30, type=cdcount, spellId=1232221
@@ -55,10 +52,9 @@ Timers:
 		[  4.00] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 			 Triggered 7x, delta times: 4.00, 22.00, 22.00, 22.00, 22.02, 99.71, 34.11
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-	Invoke Collector (%s), time=97.30, type=cdcount, spellId=1231720, triggerDeltas = 0.00, 9.00, 163.94
+	Invoke Collector (%s), time=97.30, type=cdcount, spellId=1231720, triggerDeltas = 0.00, 9.00
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[  9.00] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
-		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 
@@ -108,7 +104,7 @@ Event trace:
 		StartTimer: 4.0, Overwhelming Power (1)
 		StartTimer: 30.9, Arcane Obliteration (1)
 		StartTimer: 97.9, Silencing Tempest (1)
-		StartTimer: 129.9, Arcane Expulsion (1)
+		StartTimer: 125.0, Arcane Expulsion (1)
 		StartTimer: 9.0, Invoke Collector (1)
 		StartTimer: 600.0, Berserk
 		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
@@ -181,10 +177,9 @@ Event trace:
 		PlaySound: DBM/SpecialWarningSound2
 	[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		StartTimer: 18.6, Overwhelming Power (1)
-		StartTimer: 68.7, Arcane Obliteration (1)
-		StartTimer: 97.9, Silencing Tempest (1)
-		StartTimer: 129.9, Arcane Expulsion (2)
-		StartTimer: 23.7, Invoke Collector (1)
+		StartTimer: 45.6, Arcane Obliteration (1)
+		StartTimer: 67.6, Silencing Tempest (1)
+		StartTimer: 79.6, Arcane Expulsion (2)
 	[178.97] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 		ShowAnnounce: Mana Splinter on Forgeweaver Araz
 	[190.98] SPELL_AURA_REMOVED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
@@ -195,9 +190,9 @@ Event trace:
 		StartTimer: 22.0, Overwhelming Power (3)
 	[245.09] ENCOUNTER_END: 3132, Forgeweaver Araz, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
 	Unknown trigger
