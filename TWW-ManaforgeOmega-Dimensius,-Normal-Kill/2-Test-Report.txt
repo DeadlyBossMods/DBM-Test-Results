@@ -18,6 +18,7 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1234244 (Inverse Gravity)
 	Unused event registration: SPELL_AURA_REMOVED 1243577 (Reverse Gravity)
 	Unused event registration: SPELL_AURA_REMOVED_DOSE 1228207 (Collective Gravity)
+	Unused event registration: SPELL_CAST_START 1234898 (Event Horizon)
 	Unused event registration: SPELL_CAST_START 1237319 (Gamma Burst)
 	Unused event registration: SPELL_CAST_START 1246541 (Null Binding)
 	Unused event registration: SPELL_CAST_START 1248240 (Infinite Possibilities)
@@ -37,8 +38,6 @@ Findings:
 	Timer for spell ID 1237695 (Stardust Nova) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1238765 (Extinction) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1239262 (Conqueror's Cross) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
-	Timer Reverse Gravity (%s), time=97.30, type=cdcount, spellId=1243577 (time=56.20, variance=0.00) got refreshed early with 11.20s remaining
-		Refreshed by: [101.21] SPELL_AURA_APPLIED: [Dimensius->Dps1: Reverse Gravity] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, Player-1-00000001, Dps1, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
 
 Unused objects:
 	[Announce] Crushing Gravity faded, type=fades, spellId=1234243
@@ -70,9 +69,8 @@ Timers:
 	Dark Matter (%s), time=97.30, type=cdcount, spellId=1230979, triggerDeltas = 0.00, 37.47
 		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 14, 30, 0
 		[ 37.47] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
-	Extinguish The Stars (%s), time=97.30, type=cdcount, spellId=1231716, triggerDeltas = 320.91, 16.50
+	Extinguish The Stars (%s), time=97.30, type=cdcount, spellId=1231716, triggerDeltas = 320.91
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
-		[337.41] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
 	Supernova (%s), time=97.30, type=cdcount, spellId=1232973, triggerDeltas = 320.91, 56.38, 14.45, 33.33, 33.35, 18.87
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
 		[377.29] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
@@ -120,11 +118,9 @@ Timers:
 		[268.40] SPELL_CAST_START: [Pargoth: Conqueror's Cross] Creature-0-1-2810-1-245222-0000000002, Pargoth, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
 			 Triggered 2x, delta times: 268.40, 35.27
 		[306.82] UNIT_DIED: [->Pargoth] "", nil, 0x0, Creature-0-1-2810-1-245222-0000000002, Pargoth, 0xa48, -1, false, 0, 0
-	Reverse Gravity (%s), time=97.30, type=cdcount, spellId=1243577, triggerDeltas = 0.00, 56.23, 44.98
+	Reverse Gravity (%s), time=97.30, type=cdcount, spellId=1243577, triggerDeltas = 0.00, 56.23
 		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 14, 30, 0
 		[ 56.23] SPELL_AURA_APPLIED: [Dimensius->Dps19: Reverse Gravity] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, Player-1-00000020, Dps19, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
-		[101.21] SPELL_AURA_APPLIED: [Dimensius->Dps1: Reverse Gravity] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, Player-1-00000001, Dps1, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
-		[129.67] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
 	Shattered Space (%s), time=97.30, type=cdcount, spellId=1243690, triggerDeltas = 0.00, 43.75
 		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 14, 30, 0
 		[ 43.75] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000390, 1243690, Dimensius, 62, 24, ??, 0
@@ -347,7 +343,7 @@ Event trace:
 	[ 56.23] SPELL_AURA_APPLIED: [Dimensius->Dps19: Reverse Gravity] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, Player-1-00000020, Dps19, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
 		AntiSpam: 2
 			Filtered: 3x SPELL_AURA_APPLIED at 56.23, 56.23, 56.23
-		StartTimer: 56.2, Reverse Gravity (1)
+		StartTimer: 45.0, Reverse Gravity (1)
 	[ 57.80] SPELL_AURA_APPLIED: [->Dps11: Excess Mass] "", nil, 0x0, Player-1-00000012, Dps11, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
 		ShowAnnounce: Excess Mass on Dps11
 	[ 62.25] SPELL_AURA_APPLIED: [->Tank1: Airborne] "", nil, 0x0, Player-1-00000004, Tank1, 0x511, 1243609, Airborne, 0, DEBUFF, 0
@@ -381,7 +377,6 @@ Event trace:
 	[101.21] SPELL_AURA_APPLIED: [Dimensius->Dps1: Reverse Gravity] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, Player-1-00000001, Dps1, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
 		AntiSpam: 2
 			Filtered: 3x SPELL_AURA_APPLIED at 101.21, 101.21, 101.21
-		StartTimer: 45.0, Reverse Gravity (2)
 	[112.46] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
 		ShowSpecialWarning: Devour - move to 2
 		PlaySound: VoicePack/gather
@@ -393,8 +388,6 @@ Event trace:
 		PlaySound: VoicePack/carefly
 	[128.98] SPELL_AURA_APPLIED: [Dimensius->Tank1: Mortal Fragility] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, Player-1-00000004, Tank1, 0x511, 1230168, Mortal Fragility, 0, DEBUFF, 0
 		ShowAnnounce: Mortal Fragility on YOU
-	[129.67] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
-		StopTimer: Timer1243577cdcount\t2
 	[143.49] SPELL_AURA_APPLIED: [Tank1->Tank1: Soaring Reshii] Player-1-00000004, Tank1, 0x511, Player-1-00000004, Tank1, 0x511, 1235114, Soaring Reshii, 0, DEBUFF, 0
 		ShowAnnounce: Soaring Reshii on YOU
 	[170.29] SPELL_AURA_REMOVED: [Artoshion->Artoshion: Eclipse] Creature-0-1-2810-1-245255-0000000002, Artoshion, 0xa48, Creature-0-1-2810-1-245255-0000000002, Artoshion, 0xa48, 1237690, Eclipse, 0, BUFF, 0
@@ -477,7 +470,6 @@ Event trace:
 	[337.41] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
 		ShowSpecialWarning: Extinguish The Stars (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 16.6, Extinguish The Stars (1)
 	[368.41] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
 		ShowSpecialWarning: Devour - move to Gravity Well
 		PlaySound: VoicePack/findshelter
