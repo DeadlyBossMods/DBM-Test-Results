@@ -3,15 +3,16 @@ Mod:  DBM-Raids-WarWithin/2685
 
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1227049 (Voidblade Ambush)
+	Unused event registration: SPELL_AURA_APPLIED 1237607 (Mystic Lash)
+	Unused event registration: SPELL_AURA_APPLIED 1248464 (Mystic Lash)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1248464 (Mystic Lash)
 	Unused event registration: SPELL_AURA_REMOVED 1225626 (Soulfire Convergence)
 	Unused event registration: SPELL_AURA_REMOVED 1227049 (Voidblade Ambush)
 	Unused event registration: SPELL_AURA_REMOVED 1227276 (Soulfray Annihilation)
 	Unused event registration: SPELL_CAST_START 1242088 (Arcane Expulsion)
 	Unused event registration: SPELL_CAST_SUCCESS 1227848 (Essence Implosion)
 	Unused event registration: UNIT_DIED
-	Announce for spell ID 1241100 (Mystic Lash) is triggered by event SPELL_AURA_APPLIED 1237607 (Mystic Lash)
 	Announce for spell ID 1241100 (Mystic Lash) is triggered by event SPELL_AURA_APPLIED_DOSE 1237607 (Mystic Lash)
-	SpecialWarning for spell ID 1241100 (Mystic Lash) is triggered by event SPELL_AURA_APPLIED_DOSE 1237607 (Mystic Lash)
 
 Unused objects:
 	[Special Warning] Soulfire Convergence on you, type=you, spellId=1225616
@@ -170,15 +171,9 @@ Announces:
 		[620.13] Scheduled at 619.83 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank3: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000029, Tank3, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		[661.13] Scheduled at 660.83 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps12: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000014, Dps12, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
 		[701.10] Scheduled at 700.80 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000012, Healer1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
-	Mystic Lash on >%s< (%d), type=stack, spellId=1241100, triggerDeltas = 8.02, 1.01, 0.98, 0.99, 1.04, 0.99, 35.00, 1.00, 1.00, 1.02, 0.97, 1.02, 35.05, 0.99, 0.97, 1.00, 1.00, 1.05, 32.88, 0.96, 1.03, 1.02, 1.00, 0.98, 26.95, 1.00, 1.01, 0.98, 1.01, 0.99, 35.07, 0.99, 1.02, 1.00, 0.99, 0.98, 34.98, 1.00, 0.99, 1.00, 1.01, 0.99, 32.99, 0.99, 1.01, 1.01, 1.03, 0.97, 26.96, 1.00, 1.00, 38.08, 1.01, 0.99, 0.99, 1.02, 1.00, 34.93, 1.00, 1.00, 1.00, 1.00, 0.98, 33.01, 1.00, 0.99, 1.01, 1.01, 1.04, 26.92, 1.04, 0.97, 38.05, 0.99, 1.00, 1.00, 1.01, 0.99, 34.95, 1.01, 1.01, 0.99, 1.01, 0.99, 32.98, 1.00, 1.00, 1.00, 0.99, 1.02, 26.98, 0.99, 39.01, 1.01, 0.99, 1.00, 0.99, 1.02, 35.03, 1.01, 1.00, 1.00, 1.02, 0.98, 32.92, 1.01, 0.98, 1.00, 1.01, 1.02
-		[  8.02] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-			 Triggered 8x, delta times: 8.02, 80.07, 69.83, 80.02, 110.03, 77.93, 111.97, 150.02
-		[  9.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-			 Triggered 46x, delta times: 9.03, 0.98, 0.99, 1.04, 0.99, 76.05, 0.97, 1.00, 1.00, 1.05, 65.82, 1.01, 0.98, 1.01, 0.99, 76.03, 0.99, 1.00, 1.01, 0.99, 106.05, 0.99, 0.99, 1.02, 1.00, 73.92, 0.99, 1.01, 1.01, 1.04, 26.92, 1.04, 0.97, 79.00, 1.01, 0.99, 1.01, 0.99, 37.99, 26.98, 0.99, 80.06, 1.00, 1.00, 1.02, 0.98
-		[ 48.03] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-			 Triggered 9x, delta times: 48.03, 77.95, 72.00, 77.94, 111.99, 110.02, 77.93, 71.99, 77.97
-		[ 49.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-			 Triggered 47x, delta times: 49.03, 1.00, 1.02, 0.97, 1.02, 73.90, 1.03, 1.02, 1.00, 0.98, 68.00, 1.02, 1.00, 0.99, 0.98, 73.95, 1.01, 1.01, 1.03, 0.97, 26.96, 1.00, 1.00, 79.02, 1.00, 1.00, 1.00, 0.98, 106.03, 1.00, 1.00, 1.01, 0.99, 73.94, 1.00, 1.00, 0.99, 69.01, 0.99, 1.00, 0.99, 1.02, 73.97, 0.98, 1.00, 1.01, 1.02
+	Mystic Lash on >%s< (%d), type=stack, spellId=1241100, triggerDeltas = 13.03, 80.07, 69.81, 80.02, 110.05, 77.97, 31.92, 80.01, 68.98, 81.04
+		[ 13.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
+			 Triggered 10x, delta times: 13.03, 80.07, 69.81, 80.02, 110.05, 77.97, 31.92, 80.01, 68.98, 81.04
 
 Special warnings:
 	Arcane Expulsion! (%s), type=count, spellId=1223859, triggerDeltas = 41.94, 40.02, 63.98, 45.94, 40.02, 63.98, 46.00, 40.00, 63.99, 45.98, 39.97, 64.02, 45.98, 40.00, 64.00
@@ -187,9 +182,6 @@ Special warnings:
 	Void Burst - interrupt >%s<! (%d), type=interruptcount, spellId=1227052, triggerDeltas = 121.29, 6.21, 4.94, 139.15, 1.23, 2.47, 5.40, 140.87, 1.21, 4.86, 1.20, 2.44, 1.23, 4.87, 1.22, 4.91, 127.53, 0.00, 0.00, 6.07, 0.00, 0.00, 4.57, 1.50, 4.87, 0.03, 1.22, 4.87, 3.35
 		[121.29] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 			 Triggered 29x, delta times: 121.29, 6.21, 4.94, 139.15, 1.23, 2.47, 5.40, 140.87, 1.21, 4.86, 1.20, 2.44, 1.23, 4.87, 1.22, 4.91, 127.53, 0.00, 0.00, 6.07, 0.00, 0.00, 4.57, 1.50, 4.87, 0.03, 1.22, 4.87, 3.35
-	%d stacks of Mystic Lash on you, type=stack, spellId=1241100, triggerDeltas = 460.86, 1.02, 0.99, 146.98, 1.00, 1.01, 1.00
-		[460.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 10, 0
-			 Triggered 7x, delta times: 460.86, 1.02, 0.99, 146.98, 1.00, 1.01, 1.00
 
 Yells:
 	None
@@ -198,24 +190,21 @@ Voice pack sounds:
 	VoicePack/kick5r
 		[443.50] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000001AB, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 			 Triggered 2x, delta times: 443.50, 154.01
-	VoicePack/kick2r
-		[127.50] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
-			 Triggered 7x, delta times: 127.50, 145.32, 154.81, 1.20, 148.27, 0.00, 0.00
 	VoicePack/kick1r
 		[121.29] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 			 Triggered 7x, delta times: 121.29, 150.30, 149.97, 1.21, 148.26, 0.00, 0.00
 	VoicePack/mobsoon
 		[ 13.97] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 			 Triggered 5x, delta times: 13.97, 149.94, 149.98, 149.97, 149.94
-	VoicePack/kick3r
-		[132.44] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
-			 Triggered 7x, delta times: 132.44, 142.85, 155.98, 1.23, 149.17, 1.50, 4.87
-	VoicePack/stackhigh
-		[460.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 10, 0
-			 Triggered 7x, delta times: 460.86, 1.02, 0.99, 146.98, 1.00, 1.01, 1.00
+	VoicePack/kick2r
+		[127.50] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
+			 Triggered 7x, delta times: 127.50, 145.32, 154.81, 1.20, 148.27, 0.00, 0.00
 	VoicePack/kick4r
 		[280.69] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000000A1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 			 Triggered 6x, delta times: 280.69, 156.68, 1.22, 149.48, 1.22, 4.87
+	VoicePack/kick3r
+		[132.44] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
+			 Triggered 7x, delta times: 132.44, 142.85, 155.98, 1.23, 149.17, 1.50, 4.87
 	VoicePack/carefly
 		[ 41.94] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1223859, Arcane Expulsion, 0, 0
 			 Triggered 15x, delta times: 41.94, 40.02, 63.98, 45.94, 40.02, 63.98, 46.00, 40.00, 63.99, 45.98, 39.97, 64.02, 45.98, 40.00, 64.00
@@ -226,7 +215,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1225582 1227052 1241100 1223859 1242088 1225616, SPELL_CAST_SUCCESS 1227848 1227276 1227048, SPELL_AURA_APPLIED 1227049 1227049 1227276 1237607 1225626, SPELL_AURA_APPLIED_DOSE 1237607, SPELL_AURA_REMOVED 1227049 1227276 1225626, UNIT_DIED
+		RegisterEvents: Regular, SPELL_CAST_START 1225582 1227052 1241100 1223859 1242088 1225616, SPELL_CAST_SUCCESS 1227848 1227276 1227048, SPELL_AURA_APPLIED 1227049 1227049 1227276 1237607 1225626 1248464, SPELL_AURA_APPLIED_DOSE 1237607 1248464, SPELL_AURA_REMOVED 1227049 1227276 1225626, UNIT_DIED
 		StartTimer: 6.0, Mystic Lash (1)
 		StartTimer: 14.0, Soul Calling (1)
 		StartTimer: 20.0, Soulfray Annihilation (1)
@@ -234,16 +223,6 @@ Event trace:
 		StartTimer: 42.0, Arcane Expulsion (1)
 	[  5.98] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (2)
-	[  8.02] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
-	[  9.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
-	[ 10.01] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
-	[ 11.00] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[ 12.04] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[ 13.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[ 13.97] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
@@ -275,18 +254,6 @@ Event trace:
 		StartTimer: 40.0, Arcane Expulsion (2)
 	[ 45.97] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (3)
-	[ 48.03] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
-	[ 49.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
-	[ 50.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[ 51.05] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[ 52.02] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[ 53.04] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[ 53.96] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
 		StartTimer: 16.0, Soulfire Convergence (3)
 	[ 57.49] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps9: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000010, Dps9, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
@@ -326,16 +293,6 @@ Event trace:
 		StartTimer: 64.0, Arcane Expulsion (3)
 	[ 86.00] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 37.9, Mystic Lash (4)
-	[ 88.09] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
-	[ 89.08] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
-	[ 90.05] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
-	[ 91.05] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[ 92.05] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[ 93.10] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[ 93.97] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
@@ -366,23 +323,11 @@ Event trace:
 		StartTimer: 32.0, Mystic Lash (5)
 	[124.64] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000001E3, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
-	[125.98] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
 	[126.25] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000061, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
-	[126.94] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
 	[127.50] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
-	[127.97] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[128.99] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[129.99] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[130.97] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[132.44] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-0000000061, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (3)
 		PlaySound: VoicePack/kick3r
@@ -408,16 +353,6 @@ Event trace:
 		StartTimer: 46.1, Arcane Expulsion (4)
 	[155.90] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (6)
-	[157.92] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
-	[158.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
-	[159.93] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
-	[160.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[161.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[162.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[163.91] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
@@ -449,18 +384,6 @@ Event trace:
 		StartTimer: 40.0, Arcane Expulsion (5)
 	[195.98] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (7)
-	[197.98] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
-	[198.97] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
-	[199.99] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[200.99] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[201.98] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[202.96] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[203.91] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
 		StartTimer: 16.0, Soulfire Convergence (8)
 	[207.43] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Dps1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
@@ -500,16 +423,6 @@ Event trace:
 		StartTimer: 64.0, Arcane Expulsion (6)
 	[235.92] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 37.9, Mystic Lash (8)
-	[237.94] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
-	[238.94] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
-	[239.93] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
-	[240.93] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[241.94] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[242.93] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[243.91] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
@@ -546,21 +459,9 @@ Event trace:
 		StartTimer: 12.1, Voidblade Ambush
 	[275.89] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000A2, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
-	[275.92] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
-	[276.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
-	[277.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[278.93] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[279.96] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
 	[280.69] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000000A1, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (4)
 		PlaySound: VoicePack/kick4r
-	[280.93] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[284.89] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
 		StartTimer: 45.0, Soulfire Convergence (11)
 	[288.41] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps11: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Dps11, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
@@ -581,12 +482,6 @@ Event trace:
 		StartTimer: 46.1, Arcane Expulsion (7)
 	[305.88] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (10)
-	[307.89] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 7, 0
-		ShowAnnounce: Mystic Lash on Tank2 (7)
-	[308.89] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 8, 0
-		ShowAnnounce: Mystic Lash on Tank2 (8)
-	[309.89] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 9, 0
-		ShowAnnounce: Mystic Lash on Tank2 (9)
 	[313.89] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (3)
 		PlaySound: VoicePack/mobsoon
@@ -616,16 +511,6 @@ Event trace:
 		StartTimer: 40.0, Arcane Expulsion (8)
 	[345.96] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (11)
-	[347.97] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
-	[348.98] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
-	[349.97] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
-	[350.96] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[351.98] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[352.98] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[353.90] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
@@ -667,18 +552,6 @@ Event trace:
 		StartTimer: 64.0, Arcane Expulsion (9)
 	[385.89] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 37.9, Mystic Lash (12)
-	[387.91] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
-	[388.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
-	[389.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[390.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[391.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[392.89] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[393.89] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
 		StartTimer: 41.0, Soulfire Convergence (15)
 	[397.40] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps20: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000024, Dps20, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
@@ -708,24 +581,14 @@ Event trace:
 		StartTimer: 32.0, Mystic Lash (13)
 	[424.01] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000E2, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
-	[425.90] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
 	[426.43] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000001AB, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
-	[426.90] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
 	[427.63] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000000E2, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
-	[427.89] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
 	[428.83] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000001AB, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
-	[428.90] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[429.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[430.95] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[431.27] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000000E2, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
@@ -767,21 +630,8 @@ Event trace:
 		StartTimer: 46.1, Arcane Expulsion (10)
 	[455.85] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (14)
-	[457.87] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 7, 0
-		ShowAnnounce: Mystic Lash on PlayerName (7)
-	[458.91] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 8, 0
-		ShowAnnounce: Mystic Lash on PlayerName (8)
-	[459.88] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 9, 0
-		ShowAnnounce: Mystic Lash on PlayerName (9)
-	[460.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 10, 0
-		ShowSpecialWarning: 10 stacks of Mystic Lash on you
-		PlaySound: VoicePack/stackhigh
-	[461.88] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 11, 0
-		ShowSpecialWarning: 11 stacks of Mystic Lash on you
-		PlaySound: VoicePack/stackhigh
 	[462.87] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 12, 0
-		ShowSpecialWarning: 12 stacks of Mystic Lash on you
-		PlaySound: VoicePack/stackhigh
+		ShowAnnounce: Mystic Lash on PlayerName (12)
 	[463.86] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (4)
 		PlaySound: VoicePack/mobsoon
@@ -811,18 +661,6 @@ Event trace:
 		StartTimer: 40.0, Arcane Expulsion (11)
 	[495.92] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (15)
-	[497.93] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
-	[498.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
-	[499.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[500.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[501.93] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[502.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[503.84] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
 		StartTimer: 16.0, Soulfire Convergence (18)
 	[507.36] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps11: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Dps11, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
@@ -862,16 +700,6 @@ Event trace:
 		StartTimer: 64.0, Arcane Expulsion (12)
 	[535.88] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 37.9, Mystic Lash (16)
-	[537.87] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
-	[538.88] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
-	[539.89] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
-	[540.88] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[541.89] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[542.88] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[543.83] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
@@ -904,14 +732,10 @@ Event trace:
 		PlaySound: VoicePack/kick1r
 	[573.84] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 32.0, Mystic Lash (17)
-	[575.86] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
 	[575.90] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000121, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
 	[575.90] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-0000000120, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
-	[576.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
 	[577.10] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000001B9, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
@@ -921,14 +745,6 @@ Event trace:
 	[577.10] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000001FA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (2)
 		PlaySound: VoicePack/kick2r
-	[577.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[578.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[579.85] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[580.87] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 7, 0
-		ShowAnnounce: Mystic Lash on PlayerName (7)
 	[581.67] SPELL_CAST_START: [Shadowguard Mage: Void Burst] Creature-0-1-2810-1-237981-00000001FA, Shadowguard Mage, 0xa48, "", nil, 0x0, 1227052, Void Burst, 0, 0
 		ShowSpecialWarning: Void Burst - interrupt Shadowguard Mage! (3)
 		PlaySound: VoicePack/kick3r
@@ -972,22 +788,8 @@ Event trace:
 		PlaySound: VoicePack/kick5r
 	[605.85] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (18)
-	[607.85] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 8, 0
-		ShowAnnounce: Mystic Lash on PlayerName (8)
-	[608.84] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 9, 0
-		ShowAnnounce: Mystic Lash on PlayerName (9)
-	[609.85] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 10, 0
-		ShowSpecialWarning: 10 stacks of Mystic Lash on you
-		PlaySound: VoicePack/stackhigh
-	[610.85] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 11, 0
-		ShowSpecialWarning: 11 stacks of Mystic Lash on you
-		PlaySound: VoicePack/stackhigh
 	[611.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 12, 0
-		ShowSpecialWarning: 12 stacks of Mystic Lash on you
-		PlaySound: VoicePack/stackhigh
-	[612.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 13, 0
-		ShowSpecialWarning: 13 stacks of Mystic Lash on you
-		PlaySound: VoicePack/stackhigh
+		ShowAnnounce: Mystic Lash on PlayerName (12)
 	[613.80] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
 		ShowAnnounce: Soul Calling (5)
 		PlaySound: VoicePack/mobsoon
@@ -1017,18 +819,6 @@ Event trace:
 		StartTimer: 40.0, Arcane Expulsion (14)
 	[645.84] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 39.9, Mystic Lash (19)
-	[647.85] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
-	[648.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
-	[649.85] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[650.85] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[651.84] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[652.86] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[653.87] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
 		StartTimer: 16.0, Soulfire Convergence (23)
 	[657.36] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Dps2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
@@ -1068,16 +858,6 @@ Event trace:
 		StartTimer: 64.0, Arcane Expulsion (15)
 	[685.89] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
 		StartTimer: 37.9, Mystic Lash (20)
-	[687.89] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on PlayerName (1)
-	[688.90] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on PlayerName (2)
-	[689.90] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on PlayerName (3)
-	[690.90] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on PlayerName (4)
-	[691.92] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on PlayerName (5)
 	[692.90] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000019, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
 		ShowAnnounce: Mystic Lash on PlayerName (6)
 	[693.81] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
@@ -1105,18 +885,6 @@ Event trace:
 		StartTimer: 12.1, Voidblade Ambush
 	[725.30] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000014C, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
 		StartTimer: 12.1, Voidblade Ambush
-	[725.82] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 0
-		ShowAnnounce: Mystic Lash on Tank2 (1)
-	[726.83] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 2, 0
-		ShowAnnounce: Mystic Lash on Tank2 (2)
-	[727.81] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 3, 0
-		ShowAnnounce: Mystic Lash on Tank2 (3)
-	[728.81] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 4, 0
-		ShowAnnounce: Mystic Lash on Tank2 (4)
-	[729.82] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 5, 0
-		ShowAnnounce: Mystic Lash on Tank2 (5)
-	[730.84] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank2: Mystic Lash] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank2, 0x512, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
-		ShowAnnounce: Mystic Lash on Tank2 (6)
 	[734.85] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000002, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
 		StartTimer: 45.0, Soulfire Convergence (26)
 	[736.84] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000001C7, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
