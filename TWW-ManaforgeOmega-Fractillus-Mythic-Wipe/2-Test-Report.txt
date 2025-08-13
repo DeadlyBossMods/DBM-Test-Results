@@ -8,8 +8,6 @@ Findings:
 	Unused event registration: SPELL_CAST_SUCCESS 1233411 (Crystalline Shockwave)
 	Timer Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394 (time=48.90, variance=0.00) got refreshed early with 0.53s remaining
 		Refreshed by: [ 48.34] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
-	Timer Shattershell (%s), time=40.50, type=varcount, spellId=1227373 (time=42.20, variance=0.00) got refreshed early with 1.40s remaining
-		Refreshed by: [ 40.79] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000171, 1227367, Fractillus, 93.2, 85, Tank1, 0
 	Timer Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871 (time=51.50, variance=1.60) got refreshed early with 1.87s remaining
 		Refreshed by: [ 69.11] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
 
@@ -83,9 +81,9 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 3133, Fractillus, 16, 20, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 1220394 1231871 1225673, SPELL_CAST_SUCCESS 1233411, SPELL_AURA_APPLIED 1227378 1227373 1231871 1247424, SPELL_AURA_REMOVED 1247424, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
-		StartTimer: 7.0, Crystalline Shockwave (1)
+		StartTimer: 6.0, Crystalline Shockwave (1)
 		StartTimer: 18.1, Shockwave Slam (1)
-		StartTimer: 42.2, Shattershell (1)
+		StartTimer: 40.8, Shattershell (1)
 		StartTimer: 48.9, Shattering Backhand (1)
 	[ 19.49] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
 		StartTimer: 51.5, Shockwave Slam (2)
