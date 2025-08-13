@@ -4,6 +4,7 @@ Mod:  DBM-Raids-WarWithin/2687
 Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1228188 (Silencing Tempest)
 	Unused event registration: SPELL_AURA_APPLIED 1228454 (Mark of Power)
+	Unused event registration: SPELL_AURA_APPLIED 1228506 (Overwhelming Power)
 	Unused event registration: SPELL_AURA_APPLIED 1233979 (Astral Harvest)
 	Unused event registration: SPELL_AURA_APPLIED 1243873 (Void Harvest)
 	Unused event registration: SPELL_AURA_REMOVED 1228454 (Mark of Power)
@@ -12,25 +13,26 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1232221 (Death Throes)
 	Unused event registration: SPELL_CAST_START 1243887 (Void Harvest)
 	Unused event registration: SPELL_CAST_START 1248133 (Void Tear)
-	Unused event registration: SPELL_CAST_SUCCESS 1230231 (Phase Transition P1 -> P2)
+	Unused event registration: UNIT_SPELLCAST_SUCCEEDED
+	Timer for spell ID 1227631 (Arcane Expulsion) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	SpecialWarning for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1228161 (Silencing Tempest)
 	Timer for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
-	Announce for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_AURA_APPLIED 1228506 (Overwhelming Power)
+	Timer for spell ID 1228216 (Arcane Obliteration) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Announce for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_AURA_APPLIED_DOSE 1228506 (Overwhelming Power)
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
-	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
-	Announce for spell ID 1248009 (Dark Terminus) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
+	Timer for spell ID 1231720 (Invoke Collector) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 
 Unused objects:
+	[Announce] Stage 1248009, type=stage, spellId=1248009
 	[Announce] Void Tear (%s), type=count, spellId=1248133
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Special Warning] Astral Harvest on you, type=you, spellId=1228214
-	[Special Warning] %d stacks of Overwhelming Power on you, type=stack, spellId=1228502
-	[Special Warning] Overwhelming Power on >%s< - taunt now, type=taunt, spellId=1228502
+	[Special Warning] Arcane Obliteration on >%s< - taunt now, type=taunt, spellId=1228216
 	[Special Warning] Death Throes! (%s), type=count, spellId=1232221
 	[Special Warning] Void Harvest on you, type=you, spellId=1243901
 	[Timer] Death Throes (%s), time=97.30, type=cdcount, spellId=1232221
+	[Timer] Void Harvest (%s), time=8.00, type=cdcount, spellId=1243901
 	[Timer] Void Tear (%s), time=97.30, type=cdcount, spellId=1248171
 	[Yell] Silencing Tempest, type=shortyell, spellId=1228188
 	[Yell] %d, type=shortfade, spellId=1228214
@@ -39,41 +41,35 @@ Unused objects:
 	[Yell] %d, type=shortfade, spellId=1243901
 
 Timers:
-	Arcane Expulsion (%s), time=97.30, type=cdcount, spellId=1227631, triggerDeltas = 0.00
+	Arcane Expulsion (%s), time=97.30, type=cdcount, spellId=1227631, triggerDeltas = 0.00, 172.94
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
+		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Silencing Tempest (%s), time=97.30, type=cdcount, spellId=1228188, triggerDeltas = 0.00, 172.94
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-	Arcane Obliteration (%s), time=45.00, type=cdcount, spellId=1228216, triggerDeltas = 0.00, 30.98
+	Arcane Obliteration (%s), time=45.00, type=cdcount, spellId=1228216, triggerDeltas = 0.00, 30.98, 141.96
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[ 30.98] SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
-	Overwhelming Power (%s), time=44.00, type=cdcount, spellId=1228502, triggerDeltas = 0.00, 4.00, 22.00, 22.00, 22.00, 22.02, 80.92
+		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
+	Overwhelming Power (%s), time=44.00, type=cdcount, spellId=1228502, triggerDeltas = 0.00, 4.00, 22.00, 22.00, 22.00, 22.02, 80.92, 18.79, 34.11
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[  4.00] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
-			 Triggered 5x, delta times: 4.00, 22.00, 22.00, 22.00, 22.02
+			 Triggered 7x, delta times: 4.00, 22.00, 22.00, 22.00, 22.02, 99.71, 34.11
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-	Invoke Collector (%s), time=97.30, type=cdcount, spellId=1231720, triggerDeltas = 0.00, 9.00
+	Invoke Collector (%s), time=97.30, type=cdcount, spellId=1231720, triggerDeltas = 0.00, 9.00, 163.94
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[  9.00] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
-	Void Harvest (%s), time=8.00, type=cdcount, spellId=1243901, triggerDeltas = 172.94
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 
 Announces:
-	Overwhelming Power on >%s< (%d), type=stack, spellId=1228502, triggerDeltas = 5.21, 22.00, 22.03, 21.98, 22.03, 21.98, 77.70, 34.12
-		[  5.21] SPELL_AURA_APPLIED: [Forgeweaver Araz->Tank1: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000013, Tank1, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 0
-		[ 27.21] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Tank1: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000013, Tank1, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 2, 0
-			 Triggered 4x, delta times: 27.21, 22.03, 21.98, 22.03
-		[115.23] SPELL_AURA_APPLIED: [Forgeweaver Araz->Dps12: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000012, Dps12, 0x512, 1228506, Overwhelming Power, 0, DEBUFF, 0
-			 Triggered 2x, delta times: 115.23, 77.70
-		[227.05] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Dps12: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000012, Dps12, 0x512, 1228506, Overwhelming Power, 0, DEBUFF, 2, 0
+	Overwhelming Power on >%s< (%d), type=stack, spellId=1228502, triggerDeltas = 71.22
+		[ 71.22] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Tank1: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000013, Tank1, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 4, 0
 	Mana Splinter faded, type=fades, spellId=1233415, triggerDeltas = 190.98
 		[190.98] SPELL_AURA_REMOVED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 	Mana Splinter on >%s<, type=target, spellId=1233415, triggerDeltas = 178.97
 		[178.97] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
-	Stage 1248009, type=stage, spellId=1248009, triggerDeltas = 172.94
-		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 
 Special warnings:
 	Arcane Expulsion! (%s), type=count, spellId=1227631, triggerDeltas = 125.01
@@ -94,13 +90,11 @@ Yells:
 	None
 
 Voice pack sounds:
-	VoicePack/ptwo
-		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
+	VoicePack/carefly
+		[125.01] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 	VoicePack/helpsoak
 		[ 31.28] Scheduled at 30.98 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
 		[ 76.29] Scheduled at 75.99 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
-	VoicePack/carefly
-		[125.01] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 	VoicePack/watchstep
 		[ 98.00] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 	VoicePack/killmob
@@ -113,7 +107,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1234328 1232221 1230529 1243887 1248133, SPELL_CAST_SUCCESS 1230231, SPELL_AURA_APPLIED 1228506 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_APPLIED_DOSE 1228506, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873
+		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1234328 1232221 1230529 1243887 1248133, SPELL_AURA_APPLIED 1228506 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_APPLIED_DOSE 1228506, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 4.0, Overwhelming Power (1)
 		StartTimer: 30.9, Arcane Obliteration (1)
 		StartTimer: 97.9, Silencing Tempest (1)
@@ -132,16 +126,12 @@ Event trace:
 			Unscheduled by ENCOUNTER_END at 245.09
 	[  4.00] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (2)
-	[  5.21] SPELL_AURA_APPLIED: [Forgeweaver Araz->Tank1: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000013, Tank1, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 0
-		ShowAnnounce: Overwhelming Power on PlayerName (1)
 	[  9.00] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 		ShowSpecialWarning: Invoke Collector - switch targets (1)
 		PlaySound: VoicePack/killmob
 		StartTimer: 44.0, Invoke Collector (2)
 	[ 26.00] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (3)
-	[ 27.21] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Tank1: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000013, Tank1, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 2, 0
-		ShowAnnounce: Overwhelming Power on PlayerName (2)
 	[ 30.98] SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
 		StartTimer: 45.0, Arcane Obliteration (2)
 		ScheduleTask: (anonymous function) at 31.28 (+0.30)
@@ -149,8 +139,6 @@ Event trace:
 			PlaySound: VoicePack/helpsoak
 	[ 48.00] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (4)
-	[ 49.24] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Tank1: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000013, Tank1, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 3, 0
-		ShowAnnounce: Overwhelming Power on PlayerName (3)
 	[ 52.99] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 		ShowSpecialWarning: Invoke Collector - switch targets (2)
 		PlaySound: VoicePack/killmob
@@ -164,13 +152,9 @@ Event trace:
 			PlaySound: VoicePack/helpsoak
 	[ 92.02] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (6)
-	[ 93.25] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Tank1: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000013, Tank1, 0x511, 1228506, Overwhelming Power, 0, DEBUFF, 5, 0
-		ShowAnnounce: Overwhelming Power on PlayerName (5)
 	[ 98.00] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 		ShowSpecialWarning: Silencing Tempest (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-	[115.23] SPELL_AURA_APPLIED: [Forgeweaver Araz->Dps12: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000012, Dps12, 0x512, 1228506, Overwhelming Power, 0, DEBUFF, 0
-		ShowAnnounce: Overwhelming Power on Dps12 (1)
 	[125.01] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (1)
 		PlaySound: VoicePack/carefly
@@ -201,25 +185,25 @@ Event trace:
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-		ShowAnnounce: Stage 1248009
-		PlaySound: VoicePack/ptwo
-		StartTimer: 31.2, Overwhelming Power (1)
-		StartTimer: 47.2, Silencing Tempest (1)
-		StartTimer: 39.2, Void Harvest (1)
+		StartTimer: 18.6, Overwhelming Power (1)
+		StartTimer: 68.7, Arcane Obliteration (1)
+		StartTimer: 97.9, Silencing Tempest (1)
+		StartTimer: 129.9, Arcane Expulsion (2)
+		StartTimer: 23.7, Invoke Collector (1)
 	[178.97] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 		ShowAnnounce: Mana Splinter on Forgeweaver Araz
 	[190.98] SPELL_AURA_REMOVED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 		ShowAnnounce: Mana Splinter faded
-	[192.93] SPELL_AURA_APPLIED: [Forgeweaver Araz->Dps12: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000012, Dps12, 0x512, 1228506, Overwhelming Power, 0, DEBUFF, 0
-		ShowAnnounce: Overwhelming Power on Dps12 (1)
-	[227.05] SPELL_AURA_APPLIED_DOSE: [Forgeweaver Araz->Dps12: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Player-1-00000012, Dps12, 0x512, 1228506, Overwhelming Power, 0, DEBUFF, 2, 0
-		ShowAnnounce: Overwhelming Power on Dps12 (2)
+	[191.73] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
+		StartTimer: 22.0, Overwhelming Power (2)
+	[225.84] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
+		StartTimer: 22.0, Overwhelming Power (3)
 	[245.09] ENCOUNTER_END: 3132, Forgeweaver Araz, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
-		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873
