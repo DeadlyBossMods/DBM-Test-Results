@@ -1,0 +1,122 @@
+Test: TWW/ManaforgeOmega/Fractillus/Normal/Kill
+Mod:  DBM-Raids-WarWithin/2747
+
+Findings:
+	Unused event registration: RAID_BOSS_WHISPER
+	Unused event registration: SPELL_AURA_APPLIED 1227373 (Shattershell)
+	Unused event registration: SPELL_AURA_APPLIED 1227378 (Crystal Encasement)
+	Unused event registration: SPELL_AURA_APPLIED 1231871 (Shockwave Slam)
+	Unused event registration: SPELL_AURA_APPLIED 1247424 (Null Consumption)
+	Unused event registration: SPELL_AURA_REMOVED 1247424 (Null Consumption)
+	Unused event registration: SPELL_CAST_START 1225673 (Enraged Shattering)
+
+Unused objects:
+	[Announce] Crystalline Shockwave on >%s<, type=target, spellId=1233416
+	[Special Warning] Enraged Shattering!, type=spell, spellId=1225673
+	[Special Warning] Shattershell - move to >%s<, type=moveto, spellId=1227373
+	[Special Warning] Crystal Encasement on you, type=you, spellId=1227378
+	[Special Warning] Shockwave Slam - defensive, type=defensive, spellId=1231871
+	[Special Warning] Shockwave Slam on >%s< - taunt now, type=taunt, spellId=1231871
+	[Special Warning] Crystalline Shockwave on you, type=you, spellId=1233416
+	[Special Warning] Null Consumption - move away from others, type=moveaway, spellId=1247424
+	[Yell] %d, type=shortfade, spellId=1247424
+	[Yell] Null Consumption, type=shortyell, spellId=1247424
+
+Timers:
+	Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394, triggerDeltas = 0.00, 48.76, 51.09, 51.07
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		[ 48.76] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+			 Triggered 3x, delta times: 48.76, 51.09, 51.07
+	Shattershell (%s), time=40.50, type=varcount, spellId=1227373, triggerDeltas = 0.00, 41.23, 49.91, 51.05
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		[ 41.23] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000109, 1227367, Fractillus, 72.3, 87, Tank1, 0
+		[ 91.14] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000000E5, 1227367, Fractillus, 50.3, 87, Tank2, 0
+		[142.19] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000108, 1227367, Fractillus, 24.1, 88, Tank1, 0
+	Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871, triggerDeltas = 0.00, 18.23, 51.23, 51.04, 51.11
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		[ 18.23] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+			 Triggered 4x, delta times: 18.23, 51.23, 51.04, 51.11
+	Crystalline Shockwave (%s), time=23.10, type=varcount, spellId=1233416, triggerDeltas = 0.00, 6.03, 20.73, 30.55, 20.67, 30.39, 20.65, 30.42, 20.68
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		[  6.03] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000294, 1233411, Fractillus, 97.1, 12, Tank2, 0
+		[ 26.76] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000279, 1233411, Fractillus, 79.9, 55, Tank1, 0
+		[ 57.31] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000118, 1233411, Fractillus, 65.2, 15, Tank1, 0
+		[ 77.98] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000025F, 1233411, Fractillus, 56, 57, Tank2, 0
+		[108.37] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000013B, 1233411, Fractillus, 42.5, 15, Tank2, 0
+		[129.02] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000028D, 1233411, Fractillus, 33.2, 58, Tank1, 0
+		[159.44] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000014D, 1233411, Fractillus, 14.4, 15, Tank1, 0
+		[180.12] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000000E2, 1233411, Fractillus, 3.4, 59, Tank2, 0
+
+Announces:
+	None
+
+Special warnings:
+	Shattering Backhand! (%s), type=count, spellId=1220394, triggerDeltas = 48.76, 51.09, 51.07
+		[ 48.76] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+			 Triggered 3x, delta times: 48.76, 51.09, 51.07
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/aesoon
+		[ 48.76] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+			 Triggered 3x, delta times: 48.76, 51.09, 51.07
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1220394 1231871 1225673, SPELL_AURA_APPLIED 1227378 1227373 1231871 1247424, SPELL_AURA_REMOVED 1247424, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		StartTimer: 3.7, Crystalline Shockwave (1)
+		StartTimer: 15.9, Shockwave Slam (1)
+		StartTimer: 31.5, Shattershell (1)
+		StartTimer: 37.8, Shattering Backhand (1)
+	[  6.03] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000294, 1233411, Fractillus, 97.1, 12, Tank2, 0
+		StartTimer: 23.1, Crystalline Shockwave (2)
+	[ 18.23] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 41.3, Shockwave Slam (2)
+	[ 26.76] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000279, 1233411, Fractillus, 79.9, 55, Tank1, 0
+		StartTimer: 23.1, Crystalline Shockwave (3)
+	[ 41.23] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000109, 1227367, Fractillus, 72.3, 87, Tank1, 0
+		StartTimer: 40.5, Shattershell (2)
+	[ 48.76] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (1)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 39.3, Shattering Backhand (2)
+	[ 57.31] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-0000000118, 1233411, Fractillus, 65.2, 15, Tank1, 0
+		StartTimer: 23.1, Crystalline Shockwave (4)
+	[ 69.46] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 41.3, Shockwave Slam (3)
+	[ 77.98] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000025F, 1233411, Fractillus, 56, 57, Tank2, 0
+		StartTimer: 23.1, Crystalline Shockwave (5)
+	[ 91.14] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000000E5, 1227367, Fractillus, 50.3, 87, Tank2, 0
+		StartTimer: 40.5, Shattershell (3)
+	[ 99.85] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (2)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 39.3, Shattering Backhand (3)
+	[108.37] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000013B, 1233411, Fractillus, 42.5, 15, Tank2, 0
+		StartTimer: 23.1, Crystalline Shockwave (6)
+	[120.50] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 41.3, Shockwave Slam (4)
+	[129.02] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000028D, 1233411, Fractillus, 33.2, 58, Tank1, 0
+		StartTimer: 23.1, Crystalline Shockwave (7)
+	[142.19] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000108, 1227367, Fractillus, 24.1, 88, Tank1, 0
+		StartTimer: 40.5, Shattershell (4)
+	[150.92] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (3)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 39.3, Shattering Backhand (4)
+	[159.44] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-000000014D, 1233411, Fractillus, 14.4, 15, Tank1, 0
+		StartTimer: 23.1, Crystalline Shockwave (8)
+	[171.61] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 41.3, Shockwave Slam (5)
+	[180.12] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233411-00000000E2, 1233411, Fractillus, 3.4, 59, Tank2, 0
+		StartTimer: 23.1, Crystalline Shockwave (9)
+	[185.88] ENCOUNTER_END: 3133, Fractillus, 14, 30, 1, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1247424
