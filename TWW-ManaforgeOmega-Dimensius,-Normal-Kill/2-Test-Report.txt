@@ -23,7 +23,6 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1248240 (Infinite Possibilities)
 	Unused event registration: SPELL_CAST_START 1249423 (Mass Destruction)
 	Unused event registration: SPELL_CAST_SUCCESS 1234242 (Gravitational Distortion)
-	Unused event registration: SPELL_CAST_SUCCESS 1237690 (Eclipse)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1231002 (Dark Energy)
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1237696 (Debris Field)
 	Unused event registration: SPELL_PERIODIC_MISSED 1231002 (Dark Energy)
@@ -40,13 +39,10 @@ Findings:
 	Timer for spell ID 1239262 (Conqueror's Cross) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer Reverse Gravity (%s), time=97.30, type=cdcount, spellId=1243577 (time=56.20, variance=0.00) got refreshed early with 11.20s remaining
 		Refreshed by: [101.21] SPELL_AURA_APPLIED: [Dimensius->Dps1: Reverse Gravity] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, Player-1-00000001, Dps1, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
-	Timer Shattered Space (%s), time=97.30, type=cdcount, spellId=1243690 (time=47.00, variance=0.00) got refreshed early with 3.23s remaining
-		Refreshed by: [ 43.75] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000390, 1243690, Dimensius, 62, 24, ??, 0
 
 Unused objects:
 	[Announce] Crushing Gravity faded, type=fades, spellId=1234243
 	[Announce] Inverse Gravity faded, type=fades, spellId=1234244
-	[Announce] Casting Eclipse: 32.0 sec, type=cast, spellId=1237690
 	[Announce] Stellar Core on YOU, type=you, spellId=1246930
 	[Special Warning] Mortal Fragility on >%s< - taunt now, type=taunt, spellId=1230168
 	[Special Warning] %s damage - move away, type=gtfo, spellId=1231002
@@ -293,11 +289,11 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1230087 1248240 1229038 1230979 1238765 1237319 1237694 1249423 1239262 1246541 1237695 1233539 1234044 1234263 1232973 1234898, SPELL_CAST_SUCCESS 1234242 1237690 1231716, SPELL_AURA_APPLIED 1231005 1228206 1228207 1230168 1229674 1243699 1243577 1243609 1235114 1246930 1234243 1234244 1246145 1245292 1232394 1234266 1250055, SPELL_AURA_APPLIED_DOSE 1228207 1230168 1229674 1246145 1234266, SPELL_AURA_REMOVED 1228207 1229038 1243577 1243609 1234243 1234244 1233539 1237690, SPELL_AURA_REMOVED_DOSE 1228207, SPELL_PERIODIC_DAMAGE 1231002 1237696, SPELL_PERIODIC_MISSED 1231002 1237696, UNIT_DIED, UNIT_SPELLCAST_START boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1230087 1248240 1229038 1230979 1238765 1237319 1237694 1249423 1239262 1246541 1237695 1233539 1234044 1234263 1232973 1234898, SPELL_CAST_SUCCESS 1234242 1231716, SPELL_AURA_APPLIED 1231005 1228206 1228207 1230168 1229674 1243699 1243577 1243609 1235114 1246930 1234243 1234244 1246145 1245292 1232394 1234266 1250055, SPELL_AURA_APPLIED_DOSE 1228207 1230168 1229674 1246145 1234266, SPELL_AURA_REMOVED 1228207 1229038 1243577 1243609 1234243 1234244 1233539 1237690, SPELL_AURA_REMOVED_DOSE 1228207, SPELL_PERIODIC_DAMAGE 1231002 1237696, SPELL_PERIODIC_MISSED 1231002 1237696, UNIT_DIED, UNIT_SPELLCAST_START boss1
 		StartTimer: 25.0, Massive Smash (1)
 		StartTimer: 12.5, Devour (1)
 		StartTimer: 37.5, Dark Matter (1)
-		StartTimer: 47.0, Shattered Space (1)
+		StartTimer: 43.7, Shattered Space (1)
 		StartTimer: 56.2, Reverse Gravity (1)
 	[  1.49] SPELL_AURA_APPLIED: [Living Mass->Living Mass: Fission] Creature-0-1-2810-1-242587-0000000003, Living Mass, 0xa48, Creature-0-1-2810-1-242587-0000000003, Living Mass, 0xa48, 1231005, Fission, 0, BUFF, 0
 		ScanForMobs: Creature-0-1-2810-1-242587-0000000003, 2, 6, 1
