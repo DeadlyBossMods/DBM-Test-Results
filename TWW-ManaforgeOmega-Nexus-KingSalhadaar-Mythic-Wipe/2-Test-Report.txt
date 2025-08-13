@@ -41,6 +41,8 @@ Findings:
 	Timer for spell ID 1230302 (Self-Destruct) is triggered by event SPELL_CAST_START 1228065 (Rally the Shadowguard)
 	Timer for spell ID 1234529 (Cosmic Maw) is triggered by event SPELL_AURA_REMOVED 1228284 (Royal Ward)
 	Timer for spell ID 1234529 (Cosmic Maw) is triggered by event SPELL_CAST_START 1227734 (Coalesce Voidwing)
+	Timer Banishment (%s), time=97.30, type=cdcount, spellId=1227549 (time=16.40, variance=0.00) got refreshed early with 0.47s remaining
+		Refreshed by: [ 46.40] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
 
 Unused objects:
 	[Special Warning] Starshattered on >%s< - taunt now, type=taunt, spellId=1226413
@@ -202,7 +204,7 @@ Event trace:
 		StartTimer: 14.5, Tank Combo (1)
 		StartTimer: 30.0, Banishment (1)
 		StartTimer: 117.0, Invoke the Oath
-		StartTimer: 32.4, Behead (1)
+		StartTimer: 32.5, Behead (1)
 		StartTimer: 9.0, Besiege (1)
 	[  0.02] SPELL_CAST_START: [Nexus-King Salhadaar: Decree: Oath-Bound] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1224731, Decree: Oath-Bound, 0, 0
 		ShowAnnounce: Casting Decree: Oath-Bound: -nan sec
@@ -228,11 +230,11 @@ Event trace:
 		ShowSpecialWarning: Vanquish!
 		PlaySound: DBM/SpecialWarningSound2
 	[ 30.49] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
-		StartTimer: 15.9, Banishment (2)
+		StartTimer: 16.4, Banishment (2)
 	[ 32.41] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Behead] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225010, Command: Behead, 0, 0
 		StartTimer: 40.0, Behead (2)
 	[ 46.40] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
-		StartTimer: 24.1, Banishment (3)
+		StartTimer: 23.6, Banishment (3)
 	[ 48.94] SPELL_CAST_START: [Nexus-King Salhadaar: Command: Besiege] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1225016, Command: Besiege, 0, 0
 		ShowSpecialWarning: Besiege (2) - dodge attack
 		PlaySound: VoicePack/breathsoon
@@ -255,7 +257,7 @@ Event trace:
 		ShowSpecialWarning: Conquer - soak (4)
 		PlaySound: VoicePack/sharetwo
 	[ 70.51] SPELL_CAST_START: [Nexus-King Salhadaar: Banishment] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227529, Banishment, 0, 0
-		StartTimer: 15.9, Banishment (4)
+		StartTimer: 16.4, Banishment (4)
 	[ 70.83] SPELL_AURA_APPLIED: [Nexus-King Salhadaar->Healer1: King's Thrall] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, Player-1-00000007, Healer1, 0x512, 1224767, King's Thrall, 0, DEBUFF, 0
 		ScheduleTask: announce1224767target:CombinedShow("Healer1") at 71.13 (+0.30)
 			ShowAnnounce: King's Thrall on Healer1
