@@ -20,7 +20,6 @@ Findings:
 	SpecialWarning for spell ID 1243901 (Void Harvest) is triggered by event SPELL_AURA_APPLIED 1243873 (Void Harvest)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
-	Announce for spell ID 1248009 (Dark Terminus) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1248171 (Void Tear) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1248171 (Void Tear) is triggered by event SPELL_CAST_START 1248133 (Void Tear)
 	Timer Overwhelming Power (%s), time=44.00, type=cdcount, spellId=1228502 (time=27.30, variance=0.00) got refreshed early with 0.27s remaining
@@ -84,11 +83,11 @@ Announces:
 	Mana Splinter on >%s<, type=target, spellId=1233415, triggerDeltas = 210.68, 251.63
 		[210.68] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 			 Triggered 2x, delta times: 210.68, 251.63
-	Stage 1248009, type=stage, spellId=1248009, triggerDeltas = 456.30
-		[456.30] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Void Tear (%s), type=count, spellId=1248133, triggerDeltas = 21.50, 46.58, 14.53, 29.47, 14.50, 15.54, 99.61, 21.42, 15.56, 28.97, 15.02, 14.43
 		[ 21.50] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000012, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
 			 Triggered 12x, delta times: 21.50, 46.58, 14.53, 29.47, 14.50, 15.54, 99.61, 21.42, 15.56, 28.97, 15.02, 14.43
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 456.30
+		[456.30] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 300.00
 		[300.00] Scheduled at 0.00 by ENCOUNTER_START: 3132, Forgeweaver Araz, 16, 20, 0
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 420.00
@@ -347,7 +346,7 @@ Event trace:
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[456.30] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-		ShowAnnounce: Stage 1248009
+		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
 		StartTimer: 27.3, Overwhelming Power (1)
 		StartTimer: 35.3, Silencing Tempest (1)

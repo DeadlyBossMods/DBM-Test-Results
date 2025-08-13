@@ -20,7 +20,6 @@ Findings:
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
-	Announce for spell ID 1248009 (Dark Terminus) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer Overwhelming Power (%s), time=44.00, type=cdcount, spellId=1228502 (time=22.00, variance=0.00) got refreshed early with 11.93s remaining
 		Refreshed by: [587.37] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 
@@ -75,7 +74,7 @@ Announces:
 	Mana Splinter on >%s<, type=target, spellId=1233415, triggerDeltas = 219.61, 200.63
 		[219.61] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 			 Triggered 2x, delta times: 219.61, 200.63
-	Stage 1248009, type=stage, spellId=1248009, triggerDeltas = 414.23
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 414.23
 		[414.23] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 300.00
 		[300.00] Scheduled at 0.00 by ENCOUNTER_START: 3132, Forgeweaver Araz, 15, 20, 0
@@ -253,7 +252,7 @@ Event trace:
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
 	[414.23] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-		ShowAnnounce: Stage 1248009
+		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
 		StartTimer: 27.3, Overwhelming Power (1)
 		StartTimer: 35.3, Silencing Tempest (1)
