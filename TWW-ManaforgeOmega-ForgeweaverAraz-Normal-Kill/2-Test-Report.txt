@@ -75,9 +75,6 @@ Special warnings:
 	Invoke Collector - switch targets (%s), type=switchcount, spellId=1231720, triggerDeltas = 9.00, 43.99
 		[  9.00] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 			 Triggered 2x, delta times: 9.00, 43.99
-	Photon Blast - dodge attack, type=dodge, spellId=1234328, triggerDeltas = 137.02, 4.02, 3.99, 4.00, 5.04, 3.99
-		[137.02] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000080, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-			 Triggered 6x, delta times: 137.02, 4.02, 3.99, 4.00, 5.04, 3.99
 
 Yells:
 	None
@@ -100,7 +97,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1234328 1232221 1230529 1243887 1248133, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1232221 1230529 1243887 1248133, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 4.0, Overwhelming Power (1)
 		StartTimer: 30.9, Arcane Obliteration (1)
 		StartTimer: 97.9, Silencing Tempest (1)
@@ -149,32 +146,6 @@ Event trace:
 	[125.01] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (1)
 		PlaySound: VoicePack/carefly
-	[137.02] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000080, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[141.04] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000080, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[145.03] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000080, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 146.05
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[149.03] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000080, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 150.05
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[154.07] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000002, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[158.06] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000002, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		StartTimer: 18.6, Overwhelming Power (1)
 		StartTimer: 45.6, Arcane Obliteration (1)

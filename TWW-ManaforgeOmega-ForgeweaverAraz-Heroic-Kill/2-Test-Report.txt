@@ -98,9 +98,6 @@ Special warnings:
 	Invoke Collector - switch targets (%s), type=switchcount, spellId=1231720, triggerDeltas = 8.99, 43.98, 44.01
 		[  8.99] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 			 Triggered 3x, delta times: 8.99, 43.98, 44.01
-	Photon Blast - dodge attack, type=dodge, spellId=1234328, triggerDeltas = 157.00, 3.98, 4.03, 4.01, 4.98, 4.01, 4.98, 4.00, 5.05, 3.98, 5.04, 3.99, 97.81, 3.99, 4.01, 3.99, 4.97, 4.01, 5.01, 3.99, 5.05, 4.01, 4.96, 3.99, 4.02
-		[157.00] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-			 Triggered 25x, delta times: 157.00, 3.98, 4.03, 4.01, 4.98, 4.01, 4.98, 4.00, 5.05, 3.98, 5.04, 3.99, 97.81, 3.99, 4.01, 3.99, 4.97, 4.01, 5.01, 3.99, 5.05, 4.01, 4.96, 3.99, 4.02
 
 Yells:
 	None
@@ -128,7 +125,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1234328 1232221 1230529 1243887 1248133, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1232221 1230529 1243887 1248133, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 4.0, Overwhelming Power (1)
 		StartTimer: 30.9, Arcane Obliteration (1)
 		StartTimer: 63.0, Silencing Tempest (1)
@@ -189,61 +186,6 @@ Event trace:
 	[144.96] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (1)
 		PlaySound: VoicePack/carefly
-	[157.00] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[160.98] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[165.01] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 166
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[169.02] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 170.01
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[174.00] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 174.99
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[178.01] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 179
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[182.99] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[186.99] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 188.03
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[192.04] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[196.02] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 197.08
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[201.06] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[205.05] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 206.06
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[209.70] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		StartTimer: 18.6, Overwhelming Power (1)
 		StartTimer: 45.7, Arcane Obliteration (1)
@@ -267,64 +209,6 @@ Event trace:
 	[290.81] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Arcane Expulsion! (2)
 		PlaySound: VoicePack/carefly
-	[302.86] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[306.85] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[310.86] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 311.83
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[314.85] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 315.82
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[319.82] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 320.84
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[323.83] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 324.82
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[328.84] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[332.83] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 333.88
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[337.88] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[341.89] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-			Filtered: 1x SPELL_CAST_START at 342.85
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[346.85] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[350.84] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
-	[354.86] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
-		AntiSpam: 1
-		ShowSpecialWarning: Photon Blast - dodge attack
-		PlaySound: DBM/SpecialWarningSound2
 	[358.71] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
