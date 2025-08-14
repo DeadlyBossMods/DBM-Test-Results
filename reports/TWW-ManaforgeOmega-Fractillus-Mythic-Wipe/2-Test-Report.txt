@@ -1,0 +1,171 @@
+Test: TWW/ManaforgeOmega/Fractillus/Mythic/Wipe
+Mod:  DBM-Raids-WarWithin/2747
+
+Findings:
+	Unused event registration: RAID_BOSS_WHISPER
+	Unused event registration: SPELL_AURA_APPLIED 1231871 (Shockwave Slam)
+	Unused event registration: SPELL_AURA_REMOVED 1247424 (Null Consumption)
+	Unused event registration: SPELL_CAST_SUCCESS 1233411 (Crystalline Shockwave)
+	Timer Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394 (time=48.90, variance=0.00) got refreshed early with 0.53s remaining
+		Refreshed by: [ 48.34] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+	Timer Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871 (time=51.50, variance=1.60) got refreshed early with 1.87s remaining
+		Refreshed by: [ 69.11] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+
+Unused objects:
+	[Announce] Crystalline Shockwave on >%s<, type=target, spellId=1233416
+	[Special Warning] Shockwave Slam - defensive, type=defensive, spellId=1231871
+	[Special Warning] Shockwave Slam on >%s< - taunt now, type=taunt, spellId=1231871
+	[Special Warning] Crystalline Shockwave on you, type=you, spellId=1233416
+	[Yell] %d, type=shortfade, spellId=1247424
+
+Timers:
+	Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394, triggerDeltas = 0.00, 48.34, 50.04, 50.29, 50.25, 50.03
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 16, 20, 0
+		[ 48.34] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+			 Triggered 5x, delta times: 48.34, 50.04, 50.29, 50.25, 50.03
+	Shattershell (%s), time=40.50, type=varcount, spellId=1227373, triggerDeltas = 0.00, 40.79, 50.06, 50.27, 50.24, 50.06
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 16, 20, 0
+		[ 40.79] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000171, 1227367, Fractillus, 93.2, 85, Tank1, 0
+		[ 90.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000245, 1227367, Fractillus, 87.6, 85, Tank2, 0
+		[141.12] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000002E1, 1227367, Fractillus, 80.5, 87, Tank1, 0
+		[191.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000003BB, 1227367, Fractillus, 74.5, 87, Tank2, 0
+		[241.42] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000381, 1227367, Fractillus, 69, 87, Tank1, 0
+	Shockwave Slam (%s), time=41.30, type=varcount, spellId=1231871, triggerDeltas = 0.00, 19.49, 49.62, 50.51, 49.87, 50.21, 50.03
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 16, 20, 0
+		[ 19.49] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+			 Triggered 6x, delta times: 19.49, 49.62, 50.51, 49.87, 50.21, 50.03
+	Crystalline Shockwave (%s), time=23.10, type=varcount, spellId=1233416, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3133, Fractillus, 16, 20, 0
+
+Announces:
+	None
+
+Special warnings:
+	Shattering Backhand! (%s), type=count, spellId=1220394, triggerDeltas = 48.34, 50.04, 50.29, 50.25, 50.03
+		[ 48.34] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+			 Triggered 5x, delta times: 48.34, 50.04, 50.29, 50.25, 50.03
+	Enraged Shattering!, type=spell, spellId=1225673, triggerDeltas = 290.36
+		[290.36] SPELL_CAST_START: [Fractillus: Enraged Shattering] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Shattering, 0, 0
+	Shattershell - move to >%s<, type=moveto, spellId=1227373, triggerDeltas = 141.12, 50.27, 50.05
+		[141.12] SPELL_AURA_APPLIED: [Fractillus->Tank1: Shattershell] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1227373, Shattershell, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 141.12, 50.27, 50.05
+	Crystal Encasement on you, type=you, spellId=1227378, triggerDeltas = 149.15, 50.22, 50.08
+		[149.15] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 149.15, 50.22, 50.08
+	Null Consumption - move away from others, type=moveaway, spellId=1247424, triggerDeltas = 50.98, 50.03, 50.33, 50.19, 50.03
+		[ 50.98] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+			 Triggered 5x, delta times: 50.98, 50.03, 50.33, 50.19, 50.03
+
+Yells:
+	Null Consumption, type=shortyell, spellId=1247424
+		[ 50.98] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+			 Triggered 5x, delta times: 50.98, 50.03, 50.33, 50.19, 50.03
+
+Voice pack sounds:
+	VoicePack/aesoon
+		[ 48.34] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+			 Triggered 5x, delta times: 48.34, 50.04, 50.29, 50.25, 50.03
+	VoicePack/stilldanger
+		[290.36] SPELL_CAST_START: [Fractillus: Enraged Shattering] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Shattering, 0, 0
+	VoicePack/targetyou
+		[149.15] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 149.15, 50.22, 50.08
+	VoicePack/runout
+		[ 50.98] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+			 Triggered 5x, delta times: 50.98, 50.03, 50.33, 50.19, 50.03
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3133, Fractillus, 16, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1220394 1231871 1225673, SPELL_CAST_SUCCESS 1233411, SPELL_AURA_APPLIED 1227378 1227373 1231871 1247424, SPELL_AURA_REMOVED 1247424, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		StartTimer: 6.0, Crystalline Shockwave (1)
+		StartTimer: 18.1, Shockwave Slam (1)
+		StartTimer: 40.8, Shattershell (1)
+		StartTimer: 48.9, Shattering Backhand (1)
+	[ 19.49] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 51.5, Shockwave Slam (2)
+	[ 40.79] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000171, 1227367, Fractillus, 93.2, 85, Tank1, 0
+		StartTimer: 51.5, Shattershell (2)
+	[ 48.34] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (1)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 51.5, Shattering Backhand (2)
+	[ 50.98] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+		ShowSpecialWarning: Null Consumption - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Null Consumption
+	[ 69.11] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 51.5, Shockwave Slam (3)
+	[ 90.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000245, 1227367, Fractillus, 87.6, 85, Tank2, 0
+		StartTimer: 51.5, Shattershell (3)
+	[ 98.38] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (2)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 51.5, Shattering Backhand (3)
+	[101.01] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+		ShowSpecialWarning: Null Consumption - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Null Consumption
+	[119.62] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 51.5, Shockwave Slam (4)
+	[141.12] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000002E1, 1227367, Fractillus, 80.5, 87, Tank1, 0
+		StartTimer: 51.5, Shattershell (4)
+	[141.12] SPELL_AURA_APPLIED: [Fractillus->Tank1: Shattershell] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1227373, Shattershell, 0, DEBUFF, 0
+		ShowSpecialWarning: Shattershell - move to Crystal Nexus
+	[148.67] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (3)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 51.5, Shattering Backhand (4)
+	[149.15] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
+		ShowSpecialWarning: Crystal Encasement on you
+		PlaySound: VoicePack/targetyou
+	[151.34] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+		ShowSpecialWarning: Null Consumption - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Null Consumption
+	[169.49] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 51.5, Shockwave Slam (5)
+	[191.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-00000003BB, 1227367, Fractillus, 74.5, 87, Tank2, 0
+		StartTimer: 51.5, Shattershell (5)
+	[191.39] SPELL_AURA_APPLIED: [Fractillus->Tank1: Shattershell] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1227373, Shattershell, 0, DEBUFF, 0
+		ShowSpecialWarning: Shattershell - move to Crystal Nexus
+	[198.92] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (4)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 51.5, Shattering Backhand (5)
+	[199.37] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
+		ShowSpecialWarning: Crystal Encasement on you
+		PlaySound: VoicePack/targetyou
+	[201.53] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+		ShowSpecialWarning: Null Consumption - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Null Consumption
+	[219.70] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 51.5, Shockwave Slam (6)
+	[241.42] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1227367-0000000381, 1227367, Fractillus, 69, 87, Tank1, 0
+		StartTimer: 51.5, Shattershell (6)
+	[241.44] SPELL_AURA_APPLIED: [Fractillus->Tank1: Shattershell] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1227373, Shattershell, 0, DEBUFF, 0
+		ShowSpecialWarning: Shattershell - move to Crystal Nexus
+	[248.95] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
+		ShowSpecialWarning: Shattering Backhand! (5)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 51.5, Shattering Backhand (6)
+	[249.45] SPELL_AURA_APPLIED: [->Tank1: Crystal Encasement] "", nil, 0x0, Player-1-00000018, Tank1, 0x511, 1227378, Crystal Encasement, 0, DEBUFF, 0
+		ShowSpecialWarning: Crystal Encasement on you
+		PlaySound: VoicePack/targetyou
+	[251.56] SPELL_AURA_APPLIED: [Fractillus->Tank1: Null Consumption] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, Player-1-00000018, Tank1, 0x511, 1247424, Null Consumption, 0, DEBUFF, 0
+		ShowSpecialWarning: Null Consumption - move away from others
+		PlaySound: VoicePack/runout
+		ShowYell: Null Consumption
+	[269.73] SPELL_CAST_START: [Fractillus: Shockwave Slam] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1231871, Shockwave Slam, 0, 0
+		StartTimer: 51.5, Shockwave Slam (7)
+	[290.36] SPELL_CAST_START: [Fractillus: Enraged Shattering] Creature-0-1-2810-1-237861-0000000001, Fractillus, 0xa48, "", nil, 0x0, 1225673, Enraged Shattering, 0, 0
+		ShowSpecialWarning: Enraged Shattering!
+		PlaySound: VoicePack/stilldanger
+	[303.86] ENCOUNTER_END: 3133, Fractillus, 16, 20, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1247424

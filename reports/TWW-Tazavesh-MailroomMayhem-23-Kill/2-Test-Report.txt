@@ -1,0 +1,132 @@
+Test: TWW/Tazavesh/MailroomMayhem/23/Kill
+Mod:  DBM-Party-Shadowlands/2436
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 346329 (Spilled Liquids)
+	Unused event registration: SPELL_AURA_APPLIED 346403 (Unstable Goods)
+	Unused event registration: SPELL_AURA_APPLIED 356374 (Unstable Goods)
+	Unused event registration: SPELL_AURA_APPLIED 369133 (Unstable Goods)
+	Unused event registration: SPELL_AURA_REMOVED 346962 (Money Order)
+	Unused event registration: SPELL_CAST_START 346293 (Fan Mail)
+	SpecialWarning for spell ID 346293 (Fan Mail) is triggered by event SPELL_CAST_START 346742 (Fan Mail)
+	Timer for spell ID 346293 (Fan Mail) is triggered by event SPELL_CAST_START 346742 (Fan Mail)
+
+Unused objects:
+	[Announce] Alchemical Residue on >%s<, type=target, spellId=346844
+	[Announce] Unstable Goods on >%s<, type=target, spellId=369133
+	[Special Warning] %s damage - move away, type=gtfo, spellId=346329
+	[Yell] %d, type=shortfade, spellId=346962
+	[Yell] Money Order on PlayerName, type=yell, spellId=346962
+
+Timers:
+	Hazardous Liquids (%s), time=42.50, type=cdcount, spellId=346286, triggerDeltas = 0.00, 6.06, 42.51, 43.72
+		[  0.00] ENCOUNTER_START: 2424, Mailroom Mayhem, 23, 5, 0
+		[  6.06] SPELL_CAST_START: [P.O.S.T. Master: Hazardous Liquids] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346286, Hazardous Liquids, 0, 0
+			 Triggered 3x, delta times: 6.06, 42.51, 43.72
+	Fan Mail (%s), time=42.50, type=cdcount, spellId=346293, triggerDeltas = 0.00, 15.77, 42.51, 43.79
+		[  0.00] ENCOUNTER_START: 2424, Mailroom Mayhem, 23, 5, 0
+		[ 15.77] SPELL_CAST_START: [P.O.S.T. Master: Fan Mail] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346742, Fan Mail, 0, 0
+			 Triggered 3x, delta times: 15.77, 42.51, 43.79
+	Unstable Goods (%s), time=42.50, type=cdcount, spellId=346947, triggerDeltas = 0.00, 35.20, 43.71, 43.83
+		[  0.00] ENCOUNTER_START: 2424, Mailroom Mayhem, 23, 5, 0
+		[ 35.20] SPELL_CAST_START: [P.O.S.T. Master: Unstable Goods] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346947, Unstable Goods, 0, 0
+			 Triggered 3x, delta times: 35.20, 43.71, 43.83
+	Money Order (%s), time=42.50, type=cdcount, spellId=346962, triggerDeltas = 0.00, 23.04, 42.52, 43.82
+		[  0.00] ENCOUNTER_START: 2424, Mailroom Mayhem, 23, 5, 0
+		[ 23.04] SPELL_CAST_SUCCESS: [P.O.S.T. Master->Healer1: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000004, Healer1, 0x512, 346962, Money Order, 0, 0
+			 Triggered 2x, delta times: 23.04, 42.52
+		[109.38] SPELL_CAST_SUCCESS: [P.O.S.T. Master->Dps2: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000003, Dps2, 0x512, 346962, Money Order, 0, 0
+
+Announces:
+	Hazardous Liquids, type=spell, spellId=346286, triggerDeltas = 6.06, 42.51, 43.72
+		[  6.06] SPELL_CAST_START: [P.O.S.T. Master: Hazardous Liquids] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346286, Hazardous Liquids, 0, 0
+			 Triggered 3x, delta times: 6.06, 42.51, 43.72
+
+Special warnings:
+	Fan Mail! (%s), type=count, spellId=346293, triggerDeltas = 15.77, 42.51, 43.79
+		[ 15.77] SPELL_CAST_START: [P.O.S.T. Master: Fan Mail] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346742, Fan Mail, 0, 0
+			 Triggered 3x, delta times: 15.77, 42.51, 43.79
+	Unstable Goods! (%s), type=count, spellId=346947, triggerDeltas = 35.20, 43.71, 43.83
+		[ 35.20] SPELL_CAST_START: [P.O.S.T. Master: Unstable Goods] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346947, Unstable Goods, 0, 0
+			 Triggered 3x, delta times: 35.20, 43.71, 43.83
+	Money Order - move to >%s<, type=moveto, spellId=346962, triggerDeltas = 23.04, 42.52, 43.83
+		[ 23.04] SPELL_AURA_APPLIED: [P.O.S.T. Master->Healer1: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000004, Healer1, 0x512, 346962, Money Order, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 23.04, 42.52
+		[109.39] SPELL_AURA_APPLIED: [P.O.S.T. Master->Dps2: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000003, Dps2, 0x512, 346962, Money Order, 0, DEBUFF, 0
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/aesoon
+		[ 15.77] SPELL_CAST_START: [P.O.S.T. Master: Fan Mail] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346742, Fan Mail, 0, 0
+			 Triggered 3x, delta times: 15.77, 42.51, 43.79
+	VoicePack/specialsoon
+		[ 35.20] SPELL_CAST_START: [P.O.S.T. Master: Unstable Goods] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346947, Unstable Goods, 0, 0
+			 Triggered 3x, delta times: 35.20, 43.71, 43.83
+	VoicePack/gathershare
+		[ 23.04] SPELL_AURA_APPLIED: [P.O.S.T. Master->Healer1: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000004, Healer1, 0x512, 346962, Money Order, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 23.04, 42.52
+		[109.39] SPELL_AURA_APPLIED: [P.O.S.T. Master->Dps2: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000003, Dps2, 0x512, 346962, Money Order, 0, DEBUFF, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 2424, Mailroom Mayhem, 23, 5, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 346947 346286 346742 346293, SPELL_CAST_SUCCESS 346962, SPELL_AURA_APPLIED 346844 346329 346962 346403 356374 369133, SPELL_AURA_REMOVED 346962
+		StartTimer: 6.1, Hazardous Liquids (1)
+		StartTimer: 15.8, Fan Mail (1)
+		StartTimer: 23.0, Money Order (1)
+		StartTimer: 35.2, Unstable Goods (1)
+	[  6.06] SPELL_CAST_START: [P.O.S.T. Master: Hazardous Liquids] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346286, Hazardous Liquids, 0, 0
+		ShowAnnounce: Hazardous Liquids
+		StartTimer: 42.5, Hazardous Liquids (2)
+	[ 15.77] SPELL_CAST_START: [P.O.S.T. Master: Fan Mail] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346742, Fan Mail, 0, 0
+		ShowSpecialWarning: Fan Mail! (1)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 42.5, Fan Mail (2)
+	[ 23.04] SPELL_CAST_SUCCESS: [P.O.S.T. Master->Healer1: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000004, Healer1, 0x512, 346962, Money Order, 0, 0
+		StartTimer: 42.5, Money Order (2)
+	[ 23.04] SPELL_AURA_APPLIED: [P.O.S.T. Master->Healer1: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000004, Healer1, 0x512, 346962, Money Order, 0, DEBUFF, 0
+		ShowSpecialWarning: Money Order - move to Healer1
+		PlaySound: VoicePack/gathershare
+	[ 35.20] SPELL_CAST_START: [P.O.S.T. Master: Unstable Goods] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346947, Unstable Goods, 0, 0
+		ShowSpecialWarning: Unstable Goods! (1)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 42.5, Unstable Goods (2)
+	[ 48.57] SPELL_CAST_START: [P.O.S.T. Master: Hazardous Liquids] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346286, Hazardous Liquids, 0, 0
+		ShowAnnounce: Hazardous Liquids
+		StartTimer: 42.5, Hazardous Liquids (3)
+	[ 58.28] SPELL_CAST_START: [P.O.S.T. Master: Fan Mail] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346742, Fan Mail, 0, 0
+		ShowSpecialWarning: Fan Mail! (2)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 42.5, Fan Mail (3)
+	[ 65.56] SPELL_CAST_SUCCESS: [P.O.S.T. Master->Healer1: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000004, Healer1, 0x512, 346962, Money Order, 0, 0
+		StartTimer: 42.5, Money Order (3)
+	[ 65.56] SPELL_AURA_APPLIED: [P.O.S.T. Master->Healer1: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000004, Healer1, 0x512, 346962, Money Order, 0, DEBUFF, 0
+		ShowSpecialWarning: Money Order - move to Healer1
+		PlaySound: VoicePack/gathershare
+	[ 78.91] SPELL_CAST_START: [P.O.S.T. Master: Unstable Goods] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346947, Unstable Goods, 0, 0
+		ShowSpecialWarning: Unstable Goods! (2)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 42.5, Unstable Goods (3)
+	[ 92.29] SPELL_CAST_START: [P.O.S.T. Master: Hazardous Liquids] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346286, Hazardous Liquids, 0, 0
+		ShowAnnounce: Hazardous Liquids
+		StartTimer: 42.5, Hazardous Liquids (4)
+	[102.07] SPELL_CAST_START: [P.O.S.T. Master: Fan Mail] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346742, Fan Mail, 0, 0
+		ShowSpecialWarning: Fan Mail! (3)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 42.5, Fan Mail (4)
+	[109.38] SPELL_CAST_SUCCESS: [P.O.S.T. Master->Dps2: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000003, Dps2, 0x512, 346962, Money Order, 0, 0
+		StartTimer: 42.5, Money Order (4)
+	[109.39] SPELL_AURA_APPLIED: [P.O.S.T. Master->Dps2: Money Order] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, Player-1-00000003, Dps2, 0x512, 346962, Money Order, 0, DEBUFF, 0
+		ShowSpecialWarning: Money Order - move to Dps2
+		PlaySound: VoicePack/gathershare
+	[122.74] SPELL_CAST_START: [P.O.S.T. Master: Unstable Goods] Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, "", nil, 0x0, 346947, Unstable Goods, 0, 0
+		ShowSpecialWarning: Unstable Goods! (3)
+		PlaySound: VoicePack/specialsoon
+		StartTimer: 42.5, Unstable Goods (4)
+	[128.32] UNIT_DIED: [->P.O.S.T. Master] "", nil, 0x0, Creature-0-1-2441-1-175646-0000000001, P.O.S.T. Master, 0xa48, -1, false, 0, 0
+		EndCombat: Main CID Down
