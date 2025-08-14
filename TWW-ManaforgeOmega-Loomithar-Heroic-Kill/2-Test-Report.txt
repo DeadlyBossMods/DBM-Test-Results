@@ -9,7 +9,6 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1238502 (Woven Ward)
 	Unused event registration: SPELL_AURA_REMOVED 1226311 (Infusion Tether)
 	Unused event registration: SPELL_AURA_REMOVED 1238502 (Woven Ward)
-	SpecialWarning for spell ID 1227782 (Arcane Outrage) is triggered by event SPELL_AURA_APPLIED 1227784 (Arcane Outrage)
 	Timer for spell ID 1237212 (Piercing Strand) is triggered by event SPELL_CAST_START 1227263 (Piercing Strand)
 
 Unused objects:
@@ -65,6 +64,9 @@ Announces:
 		[107.35] Scheduled at 107.05 by SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000014, Dps13, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		[151.33] Scheduled at 151.03 by SPELL_AURA_APPLIED: [Loom'ithar->Dps23: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000028, Dps23, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		[192.38] Scheduled at 192.08 by SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000005, Dps5, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+	Arcane Outrage (%s), type=count, spellId=1227782, triggerDeltas = 223.41, 19.98, 20.07, 19.99, 20.06, 20.01
+		[223.41] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+			 Triggered 6x, delta times: 223.41, 19.98, 20.07, 19.99, 20.06, 20.01
 
 Special warnings:
 	Overinfusion Burst - dodge attack, type=dodge, spellId=1226395, triggerDeltas = 75.98, 85.02
@@ -73,9 +75,6 @@ Special warnings:
 	Writhing Wave! (%s), type=count, spellId=1227226, triggerDeltas = 216.42, 19.97, 20.07, 19.99, 20.01, 20.03
 		[216.42] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 			 Triggered 6x, delta times: 216.42, 19.97, 20.07, 19.99, 20.01, 20.03
-	Arcane Outrage on you, type=you, spellId=1227782, triggerDeltas = 225.47, 19.94, 20.11, 19.98, 20.02, 20.05
-		[225.47] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1227784, Arcane Outrage, 0, DEBUFF, 0
-			 Triggered 6x, delta times: 225.47, 19.94, 20.11, 19.98, 20.02, 20.05
 	Unbound Rage!, type=spell, spellId=1228059, triggerDeltas = 200.38
 		[200.38] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-000000042C, 1228059, Loom'ithar, 49.8, 39, Tank2, 0
 	Lair Weaving (%s) - dodge attack, type=dodgecount, spellId=1237272, triggerDeltas = 0.47, 43.56, 41.47, 43.50, 41.55
@@ -107,7 +106,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226395 1237272, SPELL_AURA_APPLIED 1226311 1238502 1237212 1228070 1227784 1227163, SPELL_AURA_REMOVED 1226311 1238502, CHAT_MSG_RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226395 1237272, SPELL_AURA_APPLIED 1226311 1238502 1237212 1228070 1227163, SPELL_AURA_REMOVED 1226311 1238502, CHAT_MSG_RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 9.5, Piercing Strand (1)
 		StartTimer: 22.0, Infusion Tether (1)
 		StartTimer: 76.0, Overinfusion Burst (1)
@@ -212,49 +211,43 @@ Event trace:
 		StartTimer: 20.0, Writhing Wave (2)
 		PlaySound: VoicePack/shareone
 	[223.41] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		ShowAnnounce: Arcane Outrage (1)
 		StartTimer: 20.0, Arcane Outrage (2)
-	[225.47] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1227784, Arcane Outrage, 0, DEBUFF, 0
-		ShowSpecialWarning: Arcane Outrage on you
 	[236.39] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (2)
 		StartTimer: 20.0, Writhing Wave (3)
 		PlaySound: VoicePack/sharetwo
 	[243.39] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		ShowAnnounce: Arcane Outrage (2)
 		StartTimer: 20.0, Arcane Outrage (3)
-	[245.41] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1227784, Arcane Outrage, 0, DEBUFF, 0
-		ShowSpecialWarning: Arcane Outrage on you
 	[256.46] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (3)
 		StartTimer: 20.0, Writhing Wave (4)
 		PlaySound: VoicePack/shareone
 	[263.46] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		ShowAnnounce: Arcane Outrage (3)
 		StartTimer: 20.0, Arcane Outrage (4)
-	[265.52] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1227784, Arcane Outrage, 0, DEBUFF, 0
-		ShowSpecialWarning: Arcane Outrage on you
 	[276.45] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (4)
 		StartTimer: 20.0, Writhing Wave (5)
 		PlaySound: VoicePack/sharetwo
 	[283.45] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		ShowAnnounce: Arcane Outrage (4)
 		StartTimer: 20.0, Arcane Outrage (5)
-	[285.50] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1227784, Arcane Outrage, 0, DEBUFF, 0
-		ShowSpecialWarning: Arcane Outrage on you
 	[296.46] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (5)
 		StartTimer: 20.0, Writhing Wave (6)
 		PlaySound: VoicePack/shareone
 	[303.51] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		ShowAnnounce: Arcane Outrage (5)
 		StartTimer: 20.0, Arcane Outrage (6)
-	[305.52] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1227784, Arcane Outrage, 0, DEBUFF, 0
-		ShowSpecialWarning: Arcane Outrage on you
 	[316.49] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (6)
 		StartTimer: 20.0, Writhing Wave (7)
 		PlaySound: VoicePack/sharetwo
 	[323.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
+		ShowAnnounce: Arcane Outrage (6)
 		StartTimer: 20.0, Arcane Outrage (7)
-	[325.57] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1227784, Arcane Outrage, 0, DEBUFF, 0
-		ShowSpecialWarning: Arcane Outrage on you
 	[335.59] ENCOUNTER_END: 3131, Loom'ithar, 15, 30, 1, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
