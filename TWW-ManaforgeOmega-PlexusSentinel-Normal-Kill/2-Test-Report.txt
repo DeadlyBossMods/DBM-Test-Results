@@ -7,6 +7,7 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1219607 (Eradicating Salvo)
 	Unused event registration: SPELL_AURA_REMOVED 1220982 (Protocol: Purge)
 	Unused event registration: SPELL_CAST_START 1220555 (Protocol: Purge)
+	Unused event registration: SPELL_CAST_START 1234733 (Cleanse the Chamber)
 	Unused event registration: SPELL_PERIODIC_MISSED 1219354 (Potent Mana Residue)
 	SpecialWarning for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_APPLIED 1219439 (Obliteration Arcanocannon)
 	Timer for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
@@ -23,6 +24,7 @@ Findings:
 	Timer for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
 
 Unused objects:
+	[Announce] Cleanse the Chamber, type=spell, spellId=1234733
 	[Special Warning] Obliteration Arcanocannon on >%s< - taunt now, type=taunt, spellId=1219263
 	[Special Warning] Manifest Matrices - move away from others, type=moveaway, spellId=1219450
 	[Special Warning] Eradicating Salvo (%s) (Position: %s) on you, type=youposcount, spellId=1219531
@@ -102,7 +104,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 14, 29, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1219450 1219263 1219531 1220489 1220553 1220555, SPELL_AURA_APPLIED 1219459 1219439 1219607, SPELL_AURA_REMOVED 1219459 1219439 1219607 1220618 1220981 1220982, SPELL_PERIODIC_DAMAGE 1219354, SPELL_PERIODIC_MISSED 1219354
+		RegisterEvents: Regular, SPELL_CAST_START 1219450 1219263 1219531 1220489 1220553 1220555 1234733, SPELL_AURA_APPLIED 1219459 1219439 1219607, SPELL_AURA_REMOVED 1219459 1219439 1219607 1220618 1220981 1220982, SPELL_PERIODIC_DAMAGE 1219354, SPELL_PERIODIC_MISSED 1219354
 		StartTimer: 10.6, Manifest Matrices (1)
 		StartTimer: 20.9, Obliteration Arcanocannon (1)
 		StartTimer: 30.0, Eradicating Salvo (1)
