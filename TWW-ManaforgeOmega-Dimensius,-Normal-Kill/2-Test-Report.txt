@@ -32,6 +32,7 @@ Findings:
 	Timer for spell ID 1233539 (Devour) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
 	Timer for spell ID 1234044 (Darkened Sky) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
 	Timer for spell ID 1234263 (Cosmic Collapse) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
+	Timer for spell ID 1235114 (Soaring Reshii) is triggered by event SPELL_CAST_START 1234898 (Event Horizon)
 	Timer for spell ID 1237319 (Gamma Burst) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1237694 (Mass Ejection) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1237695 (Stardust Nova) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
@@ -85,6 +86,8 @@ Timers:
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
 		[386.21] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
 			 Triggered 4x, delta times: 386.21, 33.31, 33.34, 33.33
+	Flight, time=35.20, type=next, spellId=1235114, triggerDeltas = 129.67
+		[129.67] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
 	Gamma Burst (%s), time=35.00, type=cdcount, spellId=1237319, triggerDeltas = 170.29, 35.81, 48.98, 39.18
 		[170.29] SPELL_AURA_REMOVED: [Artoshion->Artoshion: Eclipse] Creature-0-1-2810-1-245255-0000000002, Artoshion, 0xa48, Creature-0-1-2810-1-245255-0000000002, Artoshion, 0xa48, 1237690, Eclipse, 0, BUFF, 0
 		[206.10] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000003B7, 1237319, Dimensius, 100, 91, ??, 0
@@ -157,7 +160,7 @@ Announces:
 	Devour ended, type=ends, spellId=1233539, triggerDeltas = 375.44, 100.00
 		[375.44] SPELL_AURA_REMOVED: [Dimensius->Dimensius: Devour] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1233539, Devour, 0, BUFF, 0
 			 Triggered 2x, delta times: 375.44, 100.00
-	Soaring Reshii on YOU, type=you, spellId=1235114, triggerDeltas = 143.49, 81.43
+	Flight on YOU, type=you, spellId=1235114, triggerDeltas = 143.49, 81.43
 		[143.49] SPELL_AURA_APPLIED: [Tank1->Tank1: Soaring Reshii] Player-1-00000004, Tank1, 0x511, Player-1-00000004, Tank1, 0x511, 1235114, Soaring Reshii, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 143.49, 81.43
 	Airborne faded, type=fades, spellId=1243609, triggerDeltas = 71.45
@@ -402,8 +405,9 @@ Event trace:
 	[129.67] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
 		ShowAnnounce: Stage 1.5
 		PlaySound: VoicePack/phasechange
+		StartTimer: 13.8, Flight
 	[143.49] SPELL_AURA_APPLIED: [Tank1->Tank1: Soaring Reshii] Player-1-00000004, Tank1, 0x511, Player-1-00000004, Tank1, 0x511, 1235114, Soaring Reshii, 0, DEBUFF, 0
-		ShowAnnounce: Soaring Reshii on YOU
+		ShowAnnounce: Flight on YOU
 	[170.29] SPELL_AURA_REMOVED: [Artoshion->Artoshion: Eclipse] Creature-0-1-2810-1-245255-0000000002, Artoshion, 0xa48, Creature-0-1-2810-1-245255-0000000002, Artoshion, 0xa48, 1237690, Eclipse, 0, BUFF, 0
 		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
@@ -441,7 +445,7 @@ Event trace:
 		StopTimer: Timer1238765cdcount\t2
 		StopTimer: Timer1237694cdcount\t3
 	[224.92] SPELL_AURA_APPLIED: [Tank1->Tank1: Soaring Reshii] Player-1-00000004, Tank1, 0x511, Player-1-00000004, Tank1, 0x511, 1235114, Soaring Reshii, 0, DEBUFF, 0
-		ShowAnnounce: Soaring Reshii on YOU
+		ShowAnnounce: Flight on YOU
 	[255.08] SPELL_AURA_REMOVED: [Pargoth->Pargoth: Eclipse] Creature-0-1-2810-1-245222-0000000002, Pargoth, 0xa48, Creature-0-1-2810-1-245222-0000000002, Pargoth, 0xa48, 1237690, Eclipse, 0, BUFF, 0
 		ShowAnnounce: Stage 2
 		PlaySound: VoicePack/ptwo
