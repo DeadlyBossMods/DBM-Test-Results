@@ -11,6 +11,16 @@ Findings:
 	Unused event registration: SPELL_PERIODIC_DAMAGE 1243771 (Arcane Ichor)
 	Unused event registration: SPELL_PERIODIC_MISSED 1243771 (Arcane Ichor)
 	Timer for spell ID 1237212 (Piercing Strand) is triggered by event SPELL_CAST_START 1227263 (Piercing Strand)
+	Timer Infusion Tether (%s), time=97.30, type=cdcount, spellId=1226311 (time=44.00, variance=0.00) got refreshed early with 2.97s remaining
+		Refreshed by: [106.94] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+	Timer Infusion Tether (%s), time=97.30, type=cdcount, spellId=1226311 (time=44.00, variance=0.00) got refreshed early with 3.00s remaining
+		Refreshed by: [191.95] SPELL_AURA_APPLIED: [Loom'ithar->Healer1: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000009, Healer1, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+	Timer Infusion Tether (%s), time=97.30, type=cdcount, spellId=1226311 (time=44.00, variance=0.00) got refreshed early with 3.00s remaining
+		Refreshed by: [276.93] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+	Timer Infusion Tether (%s), time=97.30, type=cdcount, spellId=1226311 (time=44.00, variance=0.00) got refreshed early with 3.00s remaining
+		Refreshed by: [361.96] SPELL_AURA_APPLIED: [Loom'ithar->Dps4: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000005, Dps4, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
+	Timer Infusion Tether (%s), time=97.30, type=cdcount, spellId=1226311 (time=44.00, variance=0.00) got refreshed early with 3.00s remaining
+		Refreshed by: [446.98] SPELL_AURA_APPLIED: [Loom'ithar->Dps5: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000006, Dps5, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 
 Unused objects:
 	[Announce] Infusion Tether faded, type=fades, spellId=1226311
@@ -173,7 +183,7 @@ Event trace:
 	[ 65.93] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Healer3, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 65.93, 65.93, 65.93
-		StartTimer: 41.0, Infusion Tether (3)
+		StartTimer: 44.0, Infusion Tether (3)
 	[ 65.93] SPELL_AURA_APPLIED: [Loom'ithar->Dps9: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000012, Dps9, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		ScheduleTask: announce1226311target:CombinedShow("Dps9") at 66.23 (+0.30)
 			ShowAnnounce: Infusion Tether on Healer3, Dps13, Healer1, Dps9
@@ -221,7 +231,7 @@ Event trace:
 	[150.95] SPELL_AURA_APPLIED: [Loom'ithar->Dps13: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000017, Dps13, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 150.95, 150.95, 150.95
-		StartTimer: 41.0, Infusion Tether (5)
+		StartTimer: 44.0, Infusion Tether (5)
 	[150.95] SPELL_AURA_APPLIED: [Loom'ithar->Healer2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000010, Healer2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		ScheduleTask: announce1226311target:CombinedShow("Healer2") at 151.25 (+0.30)
 			ShowAnnounce: Infusion Tether on Dps13, Healer3, Dps9, Healer2
@@ -269,7 +279,7 @@ Event trace:
 	[235.93] SPELL_AURA_APPLIED: [Loom'ithar->Dps7: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000008, Dps7, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 235.93, 235.93, 235.93
-		StartTimer: 41.0, Infusion Tether (7)
+		StartTimer: 44.0, Infusion Tether (7)
 	[235.93] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		ScheduleTask: announce1226311target:CombinedShow("Dps2") at 236.23 (+0.30)
 			ShowAnnounce: Infusion Tether on Dps7, Healer3, Tank1, Dps2
@@ -317,7 +327,7 @@ Event trace:
 	[320.94] SPELL_AURA_APPLIED: [Loom'ithar->Dps2: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000003, Dps2, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 320.94, 320.95, 320.98
-		StartTimer: 41.0, Infusion Tether (9)
+		StartTimer: 44.0, Infusion Tether (9)
 	[320.98] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Healer3, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		ScheduleTask: announce1226311target:CombinedShow("Healer3") at 321.28 (+0.30)
 			ShowAnnounce: Infusion Tether on Dps2, Healer1, Dps5, Healer3
@@ -365,7 +375,7 @@ Event trace:
 	[405.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps6: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000007, Dps6, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 405.97, 405.97, 405.97
-		StartTimer: 41.0, Infusion Tether (11)
+		StartTimer: 44.0, Infusion Tether (11)
 	[405.97] SPELL_AURA_APPLIED: [Loom'ithar->Dps3: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000004, Dps3, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		ScheduleTask: announce1226311target:CombinedShow("Dps3") at 406.27 (+0.30)
 			ShowAnnounce: Infusion Tether on Dps6, Tank1, Dps2, Dps3
@@ -413,7 +423,7 @@ Event trace:
 	[490.97] SPELL_AURA_APPLIED: [Loom'ithar->Healer3: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000021, Healer3, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		AntiSpam: 1
 			Filtered: 3x SPELL_AURA_APPLIED at 490.97, 491.01, 491.01
-		StartTimer: 41.0, Infusion Tether (13)
+		StartTimer: 44.0, Infusion Tether (13)
 	[491.01] SPELL_AURA_APPLIED: [Loom'ithar->Tank1: Infusion Tether] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000015, Tank1, 0x512, 1226311, Infusion Tether, 0, DEBUFF, 0
 		ScheduleTask: announce1226311target:CombinedShow("Tank1") at 491.31 (+0.30)
 			ShowAnnounce: Infusion Tether on Healer3, Dps2, Dps3, Tank1
