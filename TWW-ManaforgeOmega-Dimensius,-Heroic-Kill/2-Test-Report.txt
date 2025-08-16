@@ -39,8 +39,6 @@ Findings:
 	Timer for spell ID 1237695 (Stardust Nova) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1238765 (Extinction) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1239262 (Conqueror's Cross) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
-	Timer Supernova (%s), time=97.30, type=cdcount, spellId=1232973 (time=33.30, variance=0.00) got refreshed early with 18.90s remaining
-		Refreshed by: [495.02] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
 
 Unused objects:
 	[Announce] Crushing Gravity faded, type=fades, spellId=1234243
@@ -78,10 +76,10 @@ Timers:
 			 Triggered 3x, delta times: 35.24, 43.56, 50.56
 	Stars, time=97.30, type=cd, spellId=1231716, triggerDeltas = 424.24
 		[424.24] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
-	Supernova (%s), time=97.30, type=cdcount, spellId=1232973, triggerDeltas = 424.24, 56.35, 14.43
+	Supernova (%s), time=97.30, type=cdcount, spellId=1232973, triggerDeltas = 424.24, 56.35, 14.43, 33.32, 33.38, 18.89, 14.41, 33.33
 		[424.24] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
 		[480.59] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-			 Triggered 2x, delta times: 480.59, 14.43
+			 Triggered 7x, delta times: 480.59, 14.43, 33.32, 33.38, 18.89, 14.41, 33.33
 	Devour (%s), time=97.30, type=cdcount, spellId=1233539, triggerDeltas = 424.24, 47.45
 		[424.24] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
 		[471.69] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
@@ -142,8 +140,12 @@ Timers:
 		[ 41.16] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000594, 1243690, Dimensius, 69.6, 25, ??, 0
 		[ 88.18] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000004AE, 1243690, Dimensius, 49, 80, Tank1, 0
 		[135.26] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000005B9, 1243690, Dimensius, 25.1, 25, ??, 0
-	Voidgrasp (%s), time=97.30, type=cdcount, spellId=1250055, triggerDeltas = 485.02
+	Voidgrasp (%s), time=97.30, type=cdcount, spellId=1250055, triggerDeltas = 485.02, 33.32, 33.34, 33.35, 33.34
 		[485.02] SPELL_AURA_APPLIED: [Dimensius->Healer1: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000010, Healer1, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
+		[518.34] SPELL_AURA_APPLIED: [Dimensius->Dps5: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000005, Dps5, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
+		[551.68] SPELL_AURA_APPLIED: [Dimensius->Dps11: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000013, Dps11, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
+		[585.03] SPELL_AURA_APPLIED: [Dimensius->Dps7: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000007, Dps7, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
+		[618.37] SPELL_AURA_APPLIED: [Dimensius->Dps13: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000015, Dps13, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 
 Announces:
 	%s, type=stagechange, spellId=<none>, triggerDeltas = 183.82, 38.40, 102.86, 99.16
@@ -620,7 +622,7 @@ Event trace:
 		PlaySound: VoicePack/pthree
 		StartTimer: 16.6, Stars
 		StartTimer: 47.5, Devour (1)
-		StartTimer: 29.7, Rings (1)
+		StartTimer: 29.5, Rings (1)
 		StartTimer: 65.0, Collapse (1)
 		StartTimer: 56.1, Supernova (1)
 	[440.76] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
@@ -642,21 +644,21 @@ Event trace:
 	[478.70] SPELL_AURA_REMOVED: [Dimensius->Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1233539, Devour, 0, BUFF, 0
 		ShowAnnounce: Devour ended
 	[480.59] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-		ShowSpecialWarning: Supernova - run away (6)
+		ShowSpecialWarning: Supernova - run away (1)
 		PlaySound: VoicePack/runout
-		StartTimer: 33.3, Supernova (7)
+		StartTimer: 14.4, Supernova (2)
 	[485.02] SPELL_AURA_APPLIED: [Dimensius->Healer1: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000010, Healer1, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 485.02, 485.02, 485.02, 485.02, 485.03
-		ShowSpecialWarning: Voidgrasp (5) on you
+		ShowSpecialWarning: Voidgrasp (1) on you
 		PlaySound: VoicePack/runout
-		StartTimer: 33.3, Voidgrasp (6)
+		StartTimer: 33.3, Voidgrasp (2)
 	[489.48] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
 		StartTimer: 33.3, Collapse (2)
 	[495.02] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-		ShowSpecialWarning: Supernova - run away (7)
+		ShowSpecialWarning: Supernova - run away (2)
 		PlaySound: VoicePack/runout
-		StartTimer: 33.3, Supernova (8)
+		StartTimer: 33.3, Supernova (3)
 	[505.17] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 312, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Rings (2) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -664,13 +666,15 @@ Event trace:
 	[518.34] SPELL_AURA_APPLIED: [Dimensius->Dps5: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000005, Dps5, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 518.34, 518.34, 518.34, 518.34, 518.34
-		ShowSpecialWarning: Voidgrasp (6) on you
+		ShowSpecialWarning: Voidgrasp (2) on you
 		PlaySound: VoicePack/runout
+		StartTimer: 33.3, Voidgrasp (3)
 	[522.80] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
 		StartTimer: 33.3, Collapse (3)
 	[528.34] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-		ShowSpecialWarning: Supernova - run away (8)
+		ShowSpecialWarning: Supernova - run away (3)
 		PlaySound: VoicePack/runout
+		StartTimer: 33.3, Supernova (4)
 	[538.55] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 317, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Rings (3) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -678,13 +682,15 @@ Event trace:
 	[551.68] SPELL_AURA_APPLIED: [Dimensius->Dps11: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000013, Dps11, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 551.68, 551.68, 551.68, 551.68, 551.68
-		ShowSpecialWarning: Voidgrasp (7) on you
+		ShowSpecialWarning: Voidgrasp (3) on you
 		PlaySound: VoicePack/runout
+		StartTimer: 33.3, Voidgrasp (4)
 	[556.15] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
 		StartTimer: 33.3, Collapse (4)
 	[561.72] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-		ShowSpecialWarning: Supernova - run away (9)
+		ShowSpecialWarning: Supernova - run away (4)
 		PlaySound: VoicePack/runout
+		StartTimer: 18.9, Supernova (5)
 	[571.68] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
 		ShowSpecialWarning: Devour - move to Gravity Well
 		PlaySound: VoicePack/findshelter
@@ -696,18 +702,21 @@ Event trace:
 	[578.69] SPELL_AURA_REMOVED: [Dimensius->Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1233539, Devour, 0, BUFF, 0
 		ShowAnnounce: Devour ended
 	[580.61] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-		ShowSpecialWarning: Supernova - run away (10)
+		ShowSpecialWarning: Supernova - run away (5)
 		PlaySound: VoicePack/runout
+		StartTimer: 14.5, Supernova (6)
 	[585.03] SPELL_AURA_APPLIED: [Dimensius->Dps7: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000007, Dps7, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 585.03, 585.03, 585.03, 585.03, 585.03
-		ShowSpecialWarning: Voidgrasp (8) on you
+		ShowSpecialWarning: Voidgrasp (4) on you
 		PlaySound: VoicePack/runout
+		StartTimer: 33.3, Voidgrasp (5)
 	[589.46] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
 		StartTimer: 33.3, Collapse (5)
 	[595.02] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-		ShowSpecialWarning: Supernova - run away (11)
+		ShowSpecialWarning: Supernova - run away (6)
 		PlaySound: VoicePack/runout
+		StartTimer: 33.3, Supernova (7)
 	[605.22] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 333, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Rings (4) - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -715,20 +724,22 @@ Event trace:
 	[618.37] SPELL_AURA_APPLIED: [Dimensius->Dps13: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000015, Dps13, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 618.37, 618.37, 618.37, 618.37, 618.37
-		ShowSpecialWarning: Voidgrasp (9) on you
+		ShowSpecialWarning: Voidgrasp (5) on you
 		PlaySound: VoicePack/runout
+		StartTimer: 33.3, Voidgrasp (6)
 	[622.79] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
 		StartTimer: 33.3, Collapse (6)
 	[628.35] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
-		ShowSpecialWarning: Supernova - run away (12)
+		ShowSpecialWarning: Supernova - run away (7)
 		PlaySound: VoicePack/runout
+		StartTimer: 33.3, Supernova (8)
 	[638.57] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 340, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Rings (5) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[651.72] SPELL_AURA_APPLIED: [Dimensius->Dps4: Voidgrasp] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000004, Dps4, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 651.72, 651.72, 651.72, 651.72, 651.72
-		ShowSpecialWarning: Voidgrasp (10) on you
+		ShowSpecialWarning: Voidgrasp (6) on you
 		PlaySound: VoicePack/runout
 	[676.02] ENCOUNTER_END: 3135, Dimensius, the All-Devouring, 15, 30, 1, 0
 		EndCombat: ENCOUNTER_END
