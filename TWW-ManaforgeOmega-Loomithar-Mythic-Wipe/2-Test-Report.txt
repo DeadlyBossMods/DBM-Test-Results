@@ -8,6 +8,8 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1238502 (Woven Ward)
 	Unused event registration: SPELL_AURA_REMOVED 1226311 (Infusion Tether)
 	Unused event registration: SPELL_AURA_REMOVED 1238502 (Woven Ward)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1243771 (Arcane Ichor)
+	Unused event registration: SPELL_PERIODIC_MISSED 1243771 (Arcane Ichor)
 	Timer for spell ID 1237212 (Piercing Strand) is triggered by event SPELL_CAST_START 1227263 (Piercing Strand)
 
 Unused objects:
@@ -16,6 +18,7 @@ Unused objects:
 	[Special Warning] Writhing Wave on >%s< - taunt now, type=taunt, spellId=1227226
 	[Special Warning] Piercing Strand - defensive, type=defensive, spellId=1237212
 	[Special Warning] Piercing Strand on >%s< - taunt now, type=taunt, spellId=1237212
+	[Special Warning] %s damage - move away, type=gtfo, spellId=1243771
 	[Yell] Infusion Tether, type=shortyell, spellId=1226311
 
 Timers:
@@ -125,7 +128,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 16, 20, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226395 1237272, SPELL_AURA_APPLIED 1226311 1238502 1237212 1228070 1227163, SPELL_AURA_REMOVED 1226311 1238502, CHAT_MSG_RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226395 1237272, SPELL_AURA_APPLIED 1226311 1238502 1237212 1228070 1227163, SPELL_AURA_REMOVED 1226311 1238502, SPELL_PERIODIC_DAMAGE 1243771, SPELL_PERIODIC_MISSED 1243771, CHAT_MSG_RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 12.4, Piercing Strand (1)
 		StartTimer: 22.0, Infusion Tether (1)
 		StartTimer: 76.0, Overinfusion Burst (1)

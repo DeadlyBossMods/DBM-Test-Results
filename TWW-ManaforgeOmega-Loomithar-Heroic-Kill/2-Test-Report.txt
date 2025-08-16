@@ -9,6 +9,7 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1238502 (Woven Ward)
 	Unused event registration: SPELL_AURA_REMOVED 1226311 (Infusion Tether)
 	Unused event registration: SPELL_AURA_REMOVED 1238502 (Woven Ward)
+	Unused event registration: SPELL_PERIODIC_MISSED 1243771 (Arcane Ichor)
 	Timer for spell ID 1237212 (Piercing Strand) is triggered by event SPELL_CAST_START 1227263 (Piercing Strand)
 
 Unused objects:
@@ -80,6 +81,9 @@ Special warnings:
 	Lair Weaving (%s) - dodge attack, type=dodgecount, spellId=1237272, triggerDeltas = 0.47, 43.56, 41.47, 43.50, 41.55
 		[  0.47] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 			 Triggered 5x, delta times: 0.47, 43.56, 41.47, 43.50, 41.55
+	%s damage - move away, type=gtfo, spellId=1243771, triggerDeltas = 280.35, 26.90, 9.96
+		[280.35] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank1: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1243771, Arcane Ichor, 0, 0
+			 Triggered 3x, delta times: 280.35, 26.90, 9.96
 
 Yells:
 	None
@@ -88,12 +92,15 @@ Voice pack sounds:
 	VoicePack/specialsoon
 		[  0.47] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 			 Triggered 5x, delta times: 0.47, 43.56, 41.47, 43.50, 41.55
-	VoicePack/shareone
-		[216.42] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
-			 Triggered 3x, delta times: 216.42, 40.04, 40.00
 	VoicePack/sharetwo
 		[236.39] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 			 Triggered 3x, delta times: 236.39, 40.06, 40.04
+	VoicePack/shareone
+		[216.42] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
+			 Triggered 3x, delta times: 216.42, 40.04, 40.00
+	VoicePack/watchfeet
+		[280.35] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank1: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1243771, Arcane Ichor, 0, 0
+			 Triggered 3x, delta times: 280.35, 26.90, 9.96
 	VoicePack/watchstep
 		[ 75.98] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
 			 Triggered 2x, delta times: 75.98, 85.02
@@ -106,7 +113,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3131, Loom'ithar, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226395 1237272, SPELL_AURA_APPLIED 1226311 1238502 1237212 1228070 1227163, SPELL_AURA_REMOVED 1226311 1238502, CHAT_MSG_RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1227263 1227782 1227226, SPELL_CAST_SUCCESS 1226395 1237272, SPELL_AURA_APPLIED 1226311 1238502 1237212 1228070 1227163, SPELL_AURA_REMOVED 1226311 1238502, SPELL_PERIODIC_DAMAGE 1243771, SPELL_PERIODIC_MISSED 1243771, CHAT_MSG_RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 9.5, Piercing Strand (1)
 		StartTimer: 22.0, Infusion Tether (1)
 		StartTimer: 76.0, Overinfusion Burst (1)
@@ -231,6 +238,11 @@ Event trace:
 		ShowSpecialWarning: Writhing Wave! (4)
 		StartTimer: 20.0, Writhing Wave (5)
 		PlaySound: VoicePack/sharetwo
+	[280.35] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank1: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1243771, Arcane Ichor, 0, 0
+		AntiSpam: 3
+			Filtered: 1x SPELL_PERIODIC_DAMAGE at 281.35
+		ShowSpecialWarning: Arcane Ichor damage - move away
+		PlaySound: VoicePack/watchfeet
 	[283.45] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
 		ShowAnnounce: Arcane Outrage (4)
 		StartTimer: 20.0, Arcane Outrage (5)
@@ -241,10 +253,18 @@ Event trace:
 	[303.51] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
 		ShowAnnounce: Arcane Outrage (5)
 		StartTimer: 20.0, Arcane Outrage (6)
+	[307.25] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank1: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1243771, Arcane Ichor, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Arcane Ichor damage - move away
+		PlaySound: VoicePack/watchfeet
 	[316.49] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
 		ShowSpecialWarning: Writhing Wave! (6)
 		StartTimer: 20.0, Writhing Wave (7)
 		PlaySound: VoicePack/sharetwo
+	[317.21] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank1: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1243771, Arcane Ichor, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Arcane Ichor damage - move away
+		PlaySound: VoicePack/watchfeet
 	[323.52] SPELL_CAST_START: [Loom'ithar: Arcane Outrage] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1227782, Arcane Outrage, 0, 0
 		ShowAnnounce: Arcane Outrage (6)
 		StartTimer: 20.0, Arcane Outrage (7)
