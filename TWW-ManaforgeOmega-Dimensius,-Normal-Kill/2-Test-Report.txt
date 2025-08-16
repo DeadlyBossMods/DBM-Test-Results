@@ -39,6 +39,8 @@ Findings:
 	Timer for spell ID 1237695 (Stardust Nova) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1238765 (Extinction) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Timer for spell ID 1239262 (Conqueror's Cross) is triggered by event SPELL_AURA_REMOVED 1237690 (Eclipse)
+	Timer Rings (%s), time=97.30, type=cdcount, spellId=1234044 (time=33.30, variance=0.00) got refreshed early with 0.20s remaining
+		Refreshed by: [435.05] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4898, nil, 0, false, false, false, false, 0
 
 Unused objects:
 	[Announce] Crushing Gravity faded, type=fades, spellId=1234243
@@ -75,7 +77,7 @@ Timers:
 		[ 37.47] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
 			 Triggered 2x, delta times: 37.47, 46.28
 		[129.67] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
-	Stars (%s), time=97.30, type=cdcount, spellId=1231716, triggerDeltas = 320.91
+	Stars, time=97.30, type=cd, spellId=1231716, triggerDeltas = 320.91
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
 	Supernova (%s), time=97.30, type=cdcount, spellId=1232973, triggerDeltas = 320.91, 56.38, 14.45, 33.33, 33.35, 18.87
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
@@ -84,10 +86,11 @@ Timers:
 	Devour (%s), time=97.30, type=cdcount, spellId=1233539, triggerDeltas = 320.91, 47.50
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
 		[368.41] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
-	Rings (%s), time=97.30, type=cdcount, spellId=1234044, triggerDeltas = 320.91, 80.84, 33.30
+	Rings (%s), time=97.30, type=cdcount, spellId=1234044, triggerDeltas = 320.91, 29.91, 51.12, 33.11
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
-		[401.75] SPELL_CAST_START: [Dimensius: Darkened Sky] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234044, Darkened Sky, 0, 0
-			 Triggered 2x, delta times: 401.75, 33.30
+		[350.82] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4880, nil, 0, false, false, false, false, 0
+		[401.94] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4890, nil, 0, false, false, false, false, 0
+		[435.05] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4898, nil, 0, false, false, false, false, 0
 	Collapse (%s), time=97.30, type=cdcount, spellId=1234263, triggerDeltas = 320.91, 65.30, 33.31, 33.34, 33.33
 		[320.91] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
 		[386.21] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
@@ -204,9 +207,10 @@ Special warnings:
 			 Triggered 2x, delta times: 368.41, 100.01
 		[370.91] Scheduled at 368.41 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
 		[470.92] Scheduled at 468.42 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
-	Rings (%s) - dodge attack, type=dodgecount, spellId=1234044, triggerDeltas = 401.75, 33.30
-		[401.75] SPELL_CAST_START: [Dimensius: Darkened Sky] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234044, Darkened Sky, 0, 0
-			 Triggered 2x, delta times: 401.75, 33.30
+	Rings (%s) - dodge attack, type=dodgecount, spellId=1234044, triggerDeltas = 350.82, 51.12, 33.11
+		[350.82] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4880, nil, 0, false, false, false, false, 0
+		[401.94] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4890, nil, 0, false, false, false, false, 0
+		[435.05] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4898, nil, 0, false, false, false, false, 0
 	Gamma Burst! (%s), type=count, spellId=1237319, triggerDeltas = 206.10, 88.16
 		[206.10] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000003B7, 1237319, Dimensius, 100, 91, ??, 0
 		[294.26] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000001B8, 1237319, Dimensius, 100, 91, ??, 0
@@ -263,8 +267,9 @@ Voice pack sounds:
 	VoicePack/watchstep
 		[275.47] SPELL_CAST_START: [Pargoth: Stardust Nova] Creature-0-1-2810-1-245222-0000000002, Pargoth, 0xa48, "", nil, 0x0, 1237695, Stardust Nova, 0, 0
 		[337.41] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
-		[401.75] SPELL_CAST_START: [Dimensius: Darkened Sky] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234044, Darkened Sky, 0, 0
-			 Triggered 2x, delta times: 401.75, 33.30
+		[350.82] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4880, nil, 0, false, false, false, false, 0
+		[401.94] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4890, nil, 0, false, false, false, false, 0
+		[435.05] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4898, nil, 0, false, false, false, false, 0
 	VoicePack/carefly
 		[ 24.97] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
 			 Triggered 3x, delta times: 24.97, 50.01, 49.99
@@ -298,7 +303,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1230087 1248240 1229038 1230979 1238765 1237319 1237694 1249423 1239262 1237695 1233539 1234044 1234263 1232973 1234898, SPELL_CAST_SUCCESS 1234242 1231716 1246541, SPELL_AURA_APPLIED 1231005 1228206 1228207 1230168 1229674 1243699 1243577 1243609 1235114 1246930 1234243 1234244 1246145 1245292 1232394 1234266 1250055, SPELL_AURA_APPLIED_DOSE 1228207 1230168 1229674 1246145 1234266, SPELL_AURA_REMOVED 1228207 1229038 1243577 1243609 1234243 1234244 1233539 1237690, SPELL_AURA_REMOVED_DOSE 1228207, SPELL_PERIODIC_DAMAGE 1231002 1237696, SPELL_PERIODIC_MISSED 1231002 1237696, UNIT_DIED, UNIT_SPELLCAST_START boss1 boss2 boss3
+		RegisterEvents: Regular, SPELL_CAST_START 1230087 1248240 1229038 1230979 1238765 1237319 1237694 1249423 1239262 1237695 1233539 1234263 1232973 1234898, SPELL_CAST_SUCCESS 1234242 1231716 1246541, SPELL_AURA_APPLIED 1231005 1228206 1228207 1230168 1229674 1243699 1243577 1243609 1235114 1246930 1234243 1234244 1246145 1245292 1232394 1234266 1250055, SPELL_AURA_APPLIED_DOSE 1228207 1230168 1229674 1246145 1234266, SPELL_AURA_REMOVED 1228207 1229038 1243577 1243609 1234243 1234244 1233539 1237690, SPELL_AURA_REMOVED_DOSE 1228207, SPELL_PERIODIC_DAMAGE 1231002 1237696, SPELL_PERIODIC_MISSED 1231002 1237696, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1 boss2 boss3
 		StartTimer: 25.0, Smash (1)
 		StartTimer: 12.5, Devour (1)
 		StartTimer: 37.5, Dark Matter (1)
@@ -484,14 +489,18 @@ Event trace:
 		ShowAnnounce: Destabilized on Dimensius
 		ShowAnnounce: Stage 3
 		PlaySound: VoicePack/pthree
-		StartTimer: 16.6, Stars (1)
+		StartTimer: 16.6, Stars
 		StartTimer: 47.6, Devour (1)
-		StartTimer: 80.5, Rings (1)
+		StartTimer: 29.7, Rings (1)
 		StartTimer: 65.0, Collapse (1)
 		StartTimer: 56.1, Supernova (1)
 	[337.41] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
 		ShowSpecialWarning: Stars (1) - dodge attack
 		PlaySound: VoicePack/watchstep
+	[350.82] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4880, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 51.2, Rings (2)
 	[368.41] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
 		ShowSpecialWarning: Devour - move to Gravity Well
 		PlaySound: VoicePack/findshelter
@@ -519,10 +528,10 @@ Event trace:
 		ShowSpecialWarning: Supernova - run away (2)
 		PlaySound: VoicePack/runout
 		StartTimer: 33.3, Supernova (3)
-	[401.75] SPELL_CAST_START: [Dimensius: Darkened Sky] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234044, Darkened Sky, 0, 0
-		ShowSpecialWarning: Rings (1) - dodge attack
+	[401.94] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4890, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 33.3, Rings (2)
+		StartTimer: 33.3, Rings (3)
 	[415.07] SPELL_AURA_APPLIED: [Dimensius->Dps19: Voidgrasp] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Player-1-00000020, Dps19, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 415.07, 415.07, 415.07, 415.07, 415.07
@@ -535,10 +544,10 @@ Event trace:
 		ShowSpecialWarning: Supernova - run away (3)
 		PlaySound: VoicePack/runout
 		StartTimer: 33.3, Supernova (4)
-	[435.05] SPELL_CAST_START: [Dimensius: Darkened Sky] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1234044, Darkened Sky, 0, 0
-		ShowSpecialWarning: Rings (2) - dodge attack
+	[435.05] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4898, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 66.3, Rings (3)
+		StartTimer: 66.6, Rings (4)
 	[448.42] SPELL_AURA_APPLIED: [Dimensius->Dps11: Voidgrasp] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Player-1-00000012, Dps11, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 448.42, 448.42, 448.42, 448.42, 448.42
