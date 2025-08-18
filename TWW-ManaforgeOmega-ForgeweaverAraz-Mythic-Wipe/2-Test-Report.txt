@@ -21,6 +21,7 @@ Findings:
 	Timer for spell ID 1228216 (Arcane Obliteration) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1231720 (Invoke Collector) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
+	Timer for spell ID 1232221 (Death Throes) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
 	Timer for spell ID 1248171 (Void Tear) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
@@ -31,7 +32,6 @@ Findings:
 Unused objects:
 	[Special Warning] Astral Harvest on you, type=you, spellId=1228214
 	[Special Warning] Void Harvest on you, type=you, spellId=1243901
-	[Timer] Death Throes (%s), time=97.30, type=cdcount, spellId=1232221
 	[Yell] Silencing Tempest, type=shortyell, spellId=1228188
 	[Yell] %d, type=shortfade, spellId=1228214
 	[Yell] %d, type=shortfade, spellId=1228216
@@ -68,6 +68,8 @@ Timers:
 		[  8.95] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 			 Triggered 2x, delta times: 8.95, 43.99
 		[219.87] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
+	Death Throes (%s), time=97.30, type=cdcount, spellId=1232221, triggerDeltas = 362.14
+		[362.14] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
 	Photon Blast, time=4.00, type=cdnp, spellId=1234328, triggerDeltas = 167.01, 4.02, 3.99, 1.02, 2.98, 1.01, 3.99, 1.00, 3.02, 0.99, 4.00, 3.97, 1.02, 4.02, 4.01, 1.01, 2.97, 1.03, 3.99, 0.97, 95.46, 4.02, 4.01, 0.99, 3.00, 1.00, 3.99, 1.02, 2.99, 1.01, 4.00, 4.00, 0.99, 4.02, 3.98, 1.01, 3.00, 1.00
 		[167.01] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000000D8, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 			 Triggered 38x, delta times: 167.01, 4.02, 3.99, 1.02, 2.98, 1.01, 3.99, 1.00, 3.02, 0.99, 4.00, 3.97, 1.02, 4.02, 4.01, 1.01, 2.97, 1.03, 3.99, 0.97, 95.46, 4.02, 4.01, 0.99, 3.00, 1.00, 3.99, 1.02, 2.99, 1.01, 4.00, 4.00, 0.99, 4.02, 3.98, 1.01, 3.00, 1.00
@@ -433,6 +435,7 @@ Event trace:
 		StartTimer: 27.1, Overwhelming Power (1)
 		StartTimer: 59.1, Silencing Tempest (1)
 		StartTimer: 31.3, Void Harvest (1)
+		StartTimer: 35.1, Death Throes (1)
 	[368.18] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 		ShowAnnounce: Mana Splinter on Forgeweaver Araz
 	[380.17] SPELL_AURA_REMOVED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
