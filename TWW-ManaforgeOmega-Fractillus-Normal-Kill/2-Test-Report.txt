@@ -10,6 +10,8 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1247424 (Null Consumption)
 	Unused event registration: SPELL_CAST_START 1225673 (Enraged Shattering)
 	Timer for spell ID 1233416 (Crystalline Shockwave) is triggered by event SPELL_CAST_SUCCESS 1233411 (Crystalline Shockwave)
+	Timer Crystalline Shockwave (%s), time=23.10, type=varcount, spellId=1233416 (time=7.00, variance=0.00) got refreshed early with 0.97s remaining
+		Refreshed by: [  6.03] SPELL_CAST_SUCCESS: [Fractillus: Crystalline Shockwave] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1233411, Crystalline Shockwave, 0, 0
 
 Unused objects:
 	[Announce] Crystalline Shockwave on >%s<, type=target, spellId=1233416
@@ -24,7 +26,7 @@ Unused objects:
 	[Yell] Null Consumption, type=shortyell, spellId=1247424
 
 Timers:
-	Shattering Backhand (%s), time=39.30, type=cdcount, spellId=1220394, triggerDeltas = 0.00, 48.76, 51.09, 51.07
+	Shattering Backhand (%s), time=39.30, type=varcount, spellId=1220394, triggerDeltas = 0.00, 48.76, 51.09, 51.07
 		[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
 		[ 48.76] SPELL_CAST_START: [Fractillus: Shattering Backhand] Creature-0-1-2810-1-237861-0000000002, Fractillus, 0xa48, "", nil, 0x0, 1220394, Shattering Backhand, 0, 0
 			 Triggered 3x, delta times: 48.76, 51.09, 51.07
@@ -65,7 +67,7 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 3133, Fractillus, 14, 30, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 1220394 1231871 1225673, SPELL_CAST_SUCCESS 1233411, SPELL_AURA_APPLIED 1227378 1227373 1231871 1247424, SPELL_AURA_REMOVED 1247424, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1
-		StartTimer: 6.0, Crystalline Shockwave (1)
+		StartTimer: 7.0, Crystalline Shockwave (1)
 		StartTimer: 18.1, Shockwave Slam (1)
 		StartTimer: 40.8, Shattershell (1)
 		StartTimer: 48.9, Shattering Backhand (1)
