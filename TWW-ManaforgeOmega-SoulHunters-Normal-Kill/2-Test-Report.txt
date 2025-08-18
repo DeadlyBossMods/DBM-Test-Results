@@ -12,6 +12,14 @@ Findings:
 	Unused event registration: SPELL_CAST_START 1245726 (Eradicate)
 	Unused event registration: SPELL_CAST_SUCCESS 1233672 (Infernal Strike)
 	Unused event registration: SPELL_CAST_SUCCESS 1241833 (Fracture)
+	Timer for spell ID 1218103 (Eye Beam) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
+	Timer for spell ID 1227117 (Fel Devastation) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
+	Timer for spell ID 1227355 (Voidstep) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
+	Timer for spell ID 1227809 (The Hunt) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
+	Timer for spell ID 1233863 (Fel Rush) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
+	Timer for spell ID 1241306 (Blade Dance) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
+	Timer for spell ID 1241833 (Fracture) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
+	Timer for spell ID 1242259 (Spirit Bomb) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
 
 Unused objects:
 	[Announce] Infernal Strike, type=spell, spellId=1227113
@@ -26,8 +34,6 @@ Unused objects:
 	[Special Warning] Fracture - defensive, type=defensive, spellId=1241833
 	[Special Warning] Fracture on >%s< - taunt now, type=taunt, spellId=1241833
 	[Special Warning] Eradicate (%s) - dodge attack, type=dodgecount, spellId=1245726
-	[Timer] Fel Devastation, time=97.30, type=next, spellId=1227117
-	[Timer] Fel Rush, time=97.30, type=next, spellId=1233863
 	[Timer] Sigil of Chains (%s), time=31.90, type=nextcount, spellId=1240891
 	[Timer] Eradicate (%s), time=97.30, type=nextcount, spellId=1245726
 	[Timer] Berserk, time=600.00, type=berserk, spellId=<none>
@@ -35,49 +41,65 @@ Unused objects:
 	[Yell] Soak, type=shortyell, spellId=1227809
 
 Timers:
-	Eye Beam (%s), time=31.90, type=nextcount, spellId=1218103, triggerDeltas = 0.00, 19.82, 35.72, 35.70, 59.62, 35.68, 35.70, 62.38
+	Eye Beam (%s), time=31.90, type=nextcount, spellId=1218103, triggerDeltas = 0.00, 19.82, 35.72, 35.70, 51.31, 8.31, 35.68, 35.70, 54.11, 8.27
 		[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
 		[ 19.82] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
 			 Triggered 7x, delta times: 19.82, 35.72, 35.70, 59.62, 35.68, 35.70, 62.38
 		[110.57] SPELL_CAST_START: [Adarus Duskblaze: Metamorphosis] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1232569, Metamorphosis, 0, 0
+		[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[244.36] SPELL_CAST_START: [Velaryn Bloodwrath: Metamorphosis] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1231501, Metamorphosis, 0, 0
+		[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[312.94] UNIT_DIED: [->Velaryn Bloodwrath] "", nil, 0x0, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, -1, false, 0, 0
-	Voidstep (%s), time=97.30, type=nextcount, spellId=1227355, triggerDeltas = 0.00, 33.15, 31.80, 99.14, 31.69, 102.09, 31.71
+	Fel Devastation, time=97.30, type=next, spellId=1227117, triggerDeltas = 276.35
+		[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
+	Voidstep (%s), time=97.30, type=nextcount, spellId=1227355, triggerDeltas = 0.00, 33.15, 31.80, 77.60, 21.54, 31.69, 80.57, 21.52, 31.71
 		[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
 		[ 33.15] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 			 Triggered 6x, delta times: 33.15, 31.80, 99.14, 31.69, 102.09, 31.71
-	The Hunt (%s), time=31.90, type=nextcount, spellId=1227809, triggerDeltas = 0.00, 43.08, 131.01, 133.84
+		[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
+		[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
+	The Hunt (%s), time=31.90, type=nextcount, spellId=1227809, triggerDeltas = 0.00, 43.08, 99.47, 31.54, 102.26, 31.58
 		[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
 		[ 43.08] SPELL_CAST_START: [Velaryn Bloodwrath: The Hunt] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1227809, The Hunt, 0, 0
 			 Triggered 3x, delta times: 43.08, 131.01, 133.84
+		[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
+		[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[312.94] UNIT_DIED: [->Velaryn Bloodwrath] "", nil, 0x0, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, -1, false, 0, 0
 	Collapsing Star, time=97.30, type=next, spellId=1233093, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
-	Blade Dance (%s), time=31.90, type=nextcount, spellId=1241306, triggerDeltas = 0.00, 29.93, 35.72, 37.55, 57.74, 35.73, 37.51, 60.61
+	Fel Rush, time=97.30, type=next, spellId=1233863, triggerDeltas = 142.55
+		[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
+	Blade Dance (%s), time=31.90, type=nextcount, spellId=1241306, triggerDeltas = 0.00, 29.93, 35.72, 37.55, 39.35, 18.39, 35.73, 37.51, 42.17, 18.44
 		[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
 		[ 29.93] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000158, 1241254, Velaryn Bloodwrath, 87.9, 14, Dps12, 0
 		[ 65.65] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-00000002CD, 1241254, Velaryn Bloodwrath, 77.9, 52, Tank1, 0
 		[103.20] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-00000001F7, 1241254, Velaryn Bloodwrath, 68.7, 92, Tank1, 0
 		[110.57] SPELL_CAST_START: [Adarus Duskblaze: Metamorphosis] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1232569, Metamorphosis, 0, 0
+		[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[160.94] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000168, 1241254, Velaryn Bloodwrath, 54.3, 15, Dps12, 0
 		[196.67] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-00000002FE, 1241254, Velaryn Bloodwrath, 44.3, 53, Tank1, 0
 		[234.18] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000204, 1241254, Velaryn Bloodwrath, 30.8, 93, Dps12, 0
 		[244.36] SPELL_CAST_START: [Velaryn Bloodwrath: Metamorphosis] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1231501, Metamorphosis, 0, 0
+		[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[294.79] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000357, 1241254, Velaryn Bloodwrath, 7.4, 16, Tank1, 0
 		[312.94] UNIT_DIED: [->Velaryn Bloodwrath] "", nil, 0x0, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, -1, false, 0, 0
-	Fracture (%s), time=31.90, type=nextcount, spellId=1241833, triggerDeltas = 0.00, 15.09, 35.67, 35.74, 59.58, 35.70, 35.73, 62.38, 35.70
+	Fracture (%s), time=31.90, type=nextcount, spellId=1241833, triggerDeltas = 0.00, 15.09, 35.67, 35.74, 56.05, 3.53, 35.70, 35.73, 58.84, 3.54, 35.70
 		[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
 		[ 15.09] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
 			 Triggered 8x, delta times: 15.09, 35.67, 35.74, 59.58, 35.70, 35.73, 62.38, 35.70
 		[110.57] SPELL_CAST_START: [Adarus Duskblaze: Metamorphosis] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1232569, Metamorphosis, 0, 0
+		[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[244.36] SPELL_CAST_START: [Velaryn Bloodwrath: Metamorphosis] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1231501, Metamorphosis, 0, 0
+		[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[328.83] UNIT_DIED: [->Ilyssa Darksorrow] "", nil, 0x0, Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, -1, false, 0, 0
-	Spirit Bomb (%s), time=31.90, type=nextcount, spellId=1242259, triggerDeltas = 0.00, 32.94, 35.67, 35.73, 59.57, 35.73, 35.71, 62.38
+	Spirit Bomb (%s), time=31.90, type=nextcount, spellId=1242259, triggerDeltas = 0.00, 32.94, 35.67, 35.73, 38.21, 21.36, 35.73, 35.71, 41.00, 21.38
 		[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
 		[ 32.94] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 			 Triggered 7x, delta times: 32.94, 35.67, 35.73, 59.57, 35.73, 35.71, 62.38
 		[110.57] SPELL_CAST_START: [Adarus Duskblaze: Metamorphosis] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1232569, Metamorphosis, 0, 0
+		[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[244.36] SPELL_CAST_START: [Velaryn Bloodwrath: Metamorphosis] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1231501, Metamorphosis, 0, 0
+		[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
 		[328.83] UNIT_DIED: [->Ilyssa Darksorrow] "", nil, 0x0, Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, -1, false, 0, 0
 
 Announces:
@@ -142,67 +164,67 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3122, The Soul Hunters, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1227355 1227809 1218103 1241833 1222337 1242259 1231501 1232568 1232569 1227117 1240891 1245726, SPELL_CAST_SUCCESS 1233672 1241833, SPELL_AURA_APPLIED 1226493 1233093 1233863 1218103, SPELL_AURA_REMOVED 1233093 1233863 1245978, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1 boss2 boss3
+		RegisterEvents: Regular, SPELL_CAST_START 1227355 1227809 1218103 1241833 1222337 1242259 1231501 1232568 1232569 1227117 1240891 1245726, SPELL_CAST_SUCCESS 1233672 1241833, SPELL_AURA_APPLIED 1226493 1233093 1233863 1218103, SPELL_AURA_REMOVED 1233093 1233863 1245978 1242133, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, RAID_BOSS_WHISPER, UNIT_SPELLCAST_SUCCEEDED boss1 boss2 boss3
 		StartTimer: 15.0, Fracture (1)
-		StartTimer: 19.3, Eye Beam (1)
-		StartTimer: 32.7, Voidstep (1)
-		StartTimer: 29.2, Blade Dance (1)
-		StartTimer: 32.0, Spirit Bomb (1)
-		StartTimer: 40.3, The Hunt (1)
-		StartTimer: 108.0, Collapsing Star
+		StartTimer: 19.8, Eye Beam (1)
+		StartTimer: 33.0, Voidstep (1)
+		StartTimer: 29.9, Blade Dance (1)
+		StartTimer: 32.9, Spirit Bomb (1)
+		StartTimer: 43.1, The Hunt (1)
+		StartTimer: 110.3, Collapsing Star
 	[ 15.09] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (1)
+		StartTimer: 35.6, Fracture (1)
 	[ 19.82] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
-		StartTimer: 35.7, Eye Beam (2)
+		StartTimer: 35.6, Eye Beam (2)
 	[ 29.93] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000158, 1241254, Velaryn Bloodwrath, 87.9, 14, Dps12, 0
 		ShowSpecialWarning: Blade Dance (1) - dodge attack
 		PlaySound: VoicePack/whirlwind
-		StartTimer: 35.7, Blade Dance (2)
+		StartTimer: 35.6, Blade Dance (2)
 	[ 32.94] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (1)
 		PlaySound: VoicePack/aesoon
-		StartTimer: 35.7, Spirit Bomb (2)
+		StartTimer: 35.6, Spirit Bomb (2)
 	[ 33.15] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 30.7, Voidstep (2)
+		StartTimer: 31.7, Voidstep (2)
 	[ 43.08] SPELL_CAST_START: [Velaryn Bloodwrath: The Hunt] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1227809, The Hunt, 0, 0
-		StartTimer: 35.7, The Hunt (2)
+		StartTimer: 35.6, The Hunt (2)
 	[ 43.29] CHAT_MSG_RAID_BOSS_EMOTE: Velaryn targets Dps7 with [The Hunt]!, Velaryn Bloodwrath, "", "", Dps7, "", 0, 0, "", 0, 2159, nil, 0, false, false, false, false, 0
 		ShowAnnounce: The Hunt (1) on Dps7
 	[ 50.76] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (2)
+		StartTimer: 35.6, Fracture (2)
 	[ 55.54] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
-		StartTimer: 35.7, Eye Beam (3)
+		StartTimer: 35.6, Eye Beam (3)
 	[ 64.95] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 28.1, Voidstep (3)
+		StartTimer: 28.7, Voidstep (3)
 	[ 65.65] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-00000002CD, 1241254, Velaryn Bloodwrath, 77.9, 52, Tank1, 0
 		ShowSpecialWarning: Blade Dance (2) - dodge attack
 		PlaySound: VoicePack/whirlwind
-		StartTimer: 35.7, Blade Dance (3)
+		StartTimer: 35.6, Blade Dance (3)
 	[ 68.61] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (2)
 		PlaySound: VoicePack/aesoon
-		StartTimer: 35.7, Spirit Bomb (3)
+		StartTimer: 35.6, Spirit Bomb (3)
 	[ 79.02] CHAT_MSG_RAID_BOSS_EMOTE: Velaryn targets Dps17 with [The Hunt]!, Velaryn Bloodwrath, "", "", Dps17, "", 0, 0, "", 0, 2174, nil, 0, false, false, false, false, 0
 		ShowAnnounce: The Hunt (2) on Dps17
 	[ 86.50] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (3)
+		StartTimer: 35.6, Fracture (3)
 	[ 91.24] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
-		StartTimer: 35.7, Eye Beam (4)
+		StartTimer: 35.6, Eye Beam (4)
 	[ 93.71] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (3) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[103.20] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-00000001F7, 1241254, Velaryn Bloodwrath, 68.7, 92, Tank1, 0
 		ShowSpecialWarning: Blade Dance (3) - dodge attack
 		PlaySound: VoicePack/whirlwind
-		StartTimer: 35.7, Blade Dance (4)
+		StartTimer: 35.6, Blade Dance (4)
 	[104.34] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (3)
 		PlaySound: VoicePack/aesoon
-		StartTimer: 35.7, Spirit Bomb (4)
+		StartTimer: 35.6, Spirit Bomb (4)
 	[110.57] SPELL_CAST_START: [Adarus Duskblaze: Metamorphosis] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1232569, Metamorphosis, 0, 0
 		AntiSpam: 1
 			Filtered: 2x SPELL_CAST_START at 111.18, 111.47
@@ -217,59 +239,69 @@ Event trace:
 			PlaySound: VoicePack/helpsoak
 	[142.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Adarus Duskblaze: Collapsing Star] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1233093, Collapsing Star, 0, BUFF, 0
 		ShowAnnounce: Collapsing Star ended
+	[142.55] SPELL_AURA_REMOVED: [Ilyssa Darksorrow->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_AURA_REMOVED at 142.55
+		StartTimer: 21.5, Voidstep (1)
+		StartTimer: 8.0, Eye Beam (1)
+		StartTimer: 18.3, Blade Dance (1)
+		StartTimer: 31.6, The Hunt (1)
+		StartTimer: 3.5, Fracture (1)
+		StartTimer: 21.4, Spirit Bomb (1)
+		StartTimer: 98.8, Fel Rush
 	[146.08] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (1)
+		StartTimer: 35.6, Fracture (1)
 	[150.86] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
-		StartTimer: 35.7, Eye Beam (2)
+		StartTimer: 35.6, Eye Beam (2)
 	[160.94] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000168, 1241254, Velaryn Bloodwrath, 54.3, 15, Dps12, 0
 		ShowSpecialWarning: Blade Dance (1) - dodge attack
 		PlaySound: VoicePack/whirlwind
-		StartTimer: 35.7, Blade Dance (2)
+		StartTimer: 35.6, Blade Dance (2)
 	[163.91] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (1)
 		PlaySound: VoicePack/aesoon
-		StartTimer: 35.7, Spirit Bomb (2)
+		StartTimer: 35.6, Spirit Bomb (2)
 	[164.09] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 30.7, Voidstep (2)
+		StartTimer: 31.7, Voidstep (2)
 	[174.09] SPELL_CAST_START: [Velaryn Bloodwrath: The Hunt] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1227809, The Hunt, 0, 0
-		StartTimer: 35.7, The Hunt (2)
+		StartTimer: 35.6, The Hunt (2)
 	[174.30] CHAT_MSG_RAID_BOSS_EMOTE: Velaryn targets Dps1 with [The Hunt]!, Velaryn Bloodwrath, "", "", Dps1, "", 0, 0, "", 0, 2202, nil, 0, false, false, false, false, 0
 		ShowAnnounce: The Hunt (1) on Dps1
 	[181.78] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (2)
+		StartTimer: 35.6, Fracture (2)
 	[186.54] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
-		StartTimer: 35.7, Eye Beam (3)
+		StartTimer: 35.6, Eye Beam (3)
 	[195.78] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 28.1, Voidstep (3)
+		StartTimer: 28.7, Voidstep (3)
 	[196.67] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-00000002FE, 1241254, Velaryn Bloodwrath, 44.3, 53, Tank1, 0
 		ShowSpecialWarning: Blade Dance (2) - dodge attack
 		PlaySound: VoicePack/whirlwind
-		StartTimer: 35.7, Blade Dance (3)
+		StartTimer: 35.6, Blade Dance (3)
 	[199.64] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (2)
 		PlaySound: VoicePack/aesoon
-		StartTimer: 35.7, Spirit Bomb (3)
+		StartTimer: 35.6, Spirit Bomb (3)
 	[210.07] CHAT_MSG_RAID_BOSS_EMOTE: Velaryn targets Dps21 with [The Hunt]!, Velaryn Bloodwrath, "", "", Dps21, "", 0, 0, "", 0, 2215, nil, 0, false, false, false, false, 0
 		ShowAnnounce: The Hunt (2) on Dps21
 	[217.51] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (3)
+		StartTimer: 35.6, Fracture (3)
 	[222.24] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
-		StartTimer: 35.7, Eye Beam (4)
+		StartTimer: 35.6, Eye Beam (4)
 	[224.52] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (3) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[234.18] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000204, 1241254, Velaryn Bloodwrath, 30.8, 93, Dps12, 0
 		ShowSpecialWarning: Blade Dance (3) - dodge attack
 		PlaySound: VoicePack/whirlwind
-		StartTimer: 35.7, Blade Dance (4)
+		StartTimer: 35.6, Blade Dance (4)
 	[235.35] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (3)
 		PlaySound: VoicePack/aesoon
-		StartTimer: 35.7, Spirit Bomb (4)
+		StartTimer: 35.6, Spirit Bomb (4)
 	[244.36] SPELL_CAST_START: [Velaryn Bloodwrath: Metamorphosis] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1231501, Metamorphosis, 0, 0
 		AntiSpam: 1
 			Filtered: 2x SPELL_CAST_START at 245, 245.29
@@ -282,24 +314,34 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 	[275.68] SPELL_AURA_REMOVED: [Velaryn Bloodwrath->Velaryn Bloodwrath: Fel Rush] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1233863, Fel Rush, 0, BUFF, 0
 		ShowAnnounce: Fel Rush ended
+	[276.35] SPELL_AURA_REMOVED: [Adarus Duskblaze->Velaryn Bloodwrath: Soul Engorgement] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
+		AntiSpam: 2
+			Filtered: 1x SPELL_AURA_REMOVED at 276.35
+		StartTimer: 21.5, Voidstep (1)
+		StartTimer: 8.0, Eye Beam (1)
+		StartTimer: 18.3, Blade Dance (1)
+		StartTimer: 31.6, The Hunt (1)
+		StartTimer: 3.5, Fracture (1)
+		StartTimer: 21.4, Spirit Bomb (1)
+		StartTimer: 101.7, Fel Devastation
 	[279.89] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (1)
+		StartTimer: 35.6, Fracture (1)
 	[284.62] SPELL_CAST_START: [Velaryn Bloodwrath: Eye Beam] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1218103, Eye Beam, 0, 0
-		StartTimer: 35.7, Eye Beam (2)
+		StartTimer: 35.6, Eye Beam (2)
 	[294.79] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000357, 1241254, Velaryn Bloodwrath, 7.4, 16, Tank1, 0
 		ShowSpecialWarning: Blade Dance (1) - dodge attack
 		PlaySound: VoicePack/whirlwind
-		StartTimer: 35.7, Blade Dance (2)
+		StartTimer: 35.6, Blade Dance (2)
 	[297.73] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
 		ShowSpecialWarning: Spirit Bomb! (1)
 		PlaySound: VoicePack/aesoon
-		StartTimer: 35.7, Spirit Bomb (2)
+		StartTimer: 35.6, Spirit Bomb (2)
 	[297.87] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 30.7, Voidstep (2)
+		StartTimer: 31.7, Voidstep (2)
 	[307.93] SPELL_CAST_START: [Velaryn Bloodwrath: The Hunt] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, "", nil, 0x0, 1227809, The Hunt, 0, 0
-		StartTimer: 35.7, The Hunt (2)
+		StartTimer: 35.6, The Hunt (2)
 	[308.09] CHAT_MSG_RAID_BOSS_EMOTE: Velaryn targets Dps10 with [The Hunt]!, Velaryn Bloodwrath, "", "", Dps10, "", 0, 0, "", 0, 2241, nil, 0, false, false, false, false, 0
 		ShowAnnounce: The Hunt (1) on Dps10
 	[312.94] UNIT_DIED: [->Velaryn Bloodwrath] "", nil, 0x0, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, -1, false, 0, 0
@@ -307,15 +349,15 @@ Event trace:
 		StopTimer: Timer1241306nextcount\t2
 		StopTimer: Timer1218103nextcount\t2
 	[315.59] SPELL_CAST_START: [Ilyssa Darksorrow: Fracture] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1241833, Fracture, 0, 0
-		StartTimer: 35.7, Fracture (2)
+		StartTimer: 35.6, Fracture (2)
 	[328.83] UNIT_DIED: [->Ilyssa Darksorrow] "", nil, 0x0, Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, -1, false, 0, 0
 		StopTimer: Timer1241833nextcount\t2
 		StopTimer: Timer1242259nextcount\t2
 	[329.58] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 		ShowSpecialWarning: Voidstep (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 28.1, Voidstep (3)
+		StartTimer: 28.7, Voidstep (3)
 	[330.81] ENCOUNTER_END: 3122, The Soul Hunters, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1233093 1233863 1245978
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1233093 1233863 1245978 1242133
