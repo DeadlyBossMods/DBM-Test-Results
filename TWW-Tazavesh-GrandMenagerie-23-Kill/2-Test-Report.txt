@@ -6,10 +6,9 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 349933 (Flagellation Protocol)
 	Unused event registration: SPELL_AURA_REMOVED 349627 (Gluttony)
 	Unused event registration: SPELL_AURA_REMOVED 349933 (Flagellation Protocol)
-	Timer for spell ID 320200 (Stitchneedle) is triggered by event SPELL_CAST_START 349954 (Purification Protocol)
-	Timer for spell ID 320200 (Stitchneedle) is triggered by event SPELL_CAST_SUCCESS 181089 (Encounter Event)
 	SpecialWarning for spell ID 349663 (Grip of Hunger) is triggered by event SPELL_CAST_START 349797 (Grand Consumption)
 	Timer for spell ID 349934 (Flagellation Protocol) is triggered by event SPELL_CAST_SUCCESS 181089 (Encounter Event)
+	Timer for spell ID 349954 (Purification Protocol) is triggered by event SPELL_CAST_SUCCESS 181089 (Encounter Event)
 	Timer for spell ID 349987 (Venting Protocol) is triggered by event SPELL_CAST_SUCCESS 181089 (Encounter Event)
 	Timer for spell ID 350086 (Whirling Annihilation) is triggered by event SPELL_CAST_SUCCESS 181089 (Encounter Event)
 	Timer for spell ID 350101 (Chains of Damnation) is triggered by event SPELL_CAST_SUCCESS 181089 (Encounter Event)
@@ -26,11 +25,6 @@ Timers:
 		[  4.48] CHAT_MSG_MONSTER_SAY: Are rampaging beasts ruining your day? We have the solution!, Xy'noc, "", "", Tank1, "", 0, 0, "", 0, 157, nil, 0, false, false, false, false, 0
 	, time=23.00, type=next, spellId=<none>, triggerDeltas = 33.61
 		[ 33.61] CHAT_MSG_MONSTER_SAY: Now's my chance! That axe is mine!, Venza Goldfuse, "", "", Tank1, "", 0, 0, "", 0, 164, nil, 0, false, false, false, false, 0
-	Stitchneedle, time=18.20, type=cd, spellId=320200, triggerDeltas = 19.38, 4.85, 24.32, 26.76, 26.93
-		[ 19.38] SPELL_CAST_SUCCESS: [Achillite: Encounter Event] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 181089, Encounter Event, 0, 0
-		[ 24.23] SPELL_CAST_START: [Achillite: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 349954, Purification Protocol, 0, 0
-			 Triggered 4x, delta times: 24.23, 24.32, 26.76, 26.93
-		[117.12] SPELL_AURA_APPLIED: [Achillite->Achillite: Exposed Anima Core] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, 350037, Exposed Anima Core, 0, BUFF, 0
 	Grip of Hunger, time=23.00, type=cd, spellId=349663, triggerDeltas = 0.00, 11.91, 22.24
 		[  0.00] ENCOUNTER_START: 2441, The Grand Menagerie, 23, 5, 0
 		[ 11.91] SPELL_CAST_START: [Alcruux: Grip of Hunger] Creature-0-1-2441-1-176556-0000000001, Alcruux, 0xa48, "", nil, 0x0, 349663, Grip of Hunger, 0, 0
@@ -44,6 +38,11 @@ Timers:
 		[ 19.38] SPELL_CAST_SUCCESS: [Achillite: Encounter Event] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 181089, Encounter Event, 0, 0
 		[ 33.95] SPELL_CAST_START: [Achillite: Flagellation Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 349934, Flagellation Protocol, 0, 0
 			 Triggered 4x, delta times: 33.95, 23.16, 23.07, 25.72
+		[117.12] SPELL_AURA_APPLIED: [Achillite->Achillite: Exposed Anima Core] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, 350037, Exposed Anima Core, 0, BUFF, 0
+	Purification Protocol, time=18.20, type=cd, spellId=349954, triggerDeltas = 19.38, 4.85, 24.32, 26.76, 26.93
+		[ 19.38] SPELL_CAST_SUCCESS: [Achillite: Encounter Event] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 181089, Encounter Event, 0, 0
+		[ 24.23] SPELL_CAST_START: [Achillite: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 349954, Purification Protocol, 0, 0
+			 Triggered 4x, delta times: 24.23, 24.32, 26.76, 26.93
 		[117.12] SPELL_AURA_APPLIED: [Achillite->Achillite: Exposed Anima Core] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, 350037, Exposed Anima Core, 0, BUFF, 0
 	Venting Protocol, time=26.60, type=cd, spellId=349987, triggerDeltas = 19.38, 21.86, 26.80, 26.75
 		[ 19.38] SPELL_CAST_SUCCESS: [Achillite: Encounter Event] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 181089, Encounter Event, 0, 0
@@ -113,7 +112,7 @@ Event trace:
 	[  0.00] ENCOUNTER_START: 2441, The Grand Menagerie, 23, 5, 0
 		StartCombat: ENCOUNTER_START
 		RegisterEvents: Regular, SPELL_CAST_START 349663 349797 349987 349934 349954 350086 350101, SPELL_CAST_SUCCESS 181089, SPELL_AURA_APPLIED 349627 349933 349954 350037, SPELL_AURA_REMOVED 349627 349933, UNIT_DIED, RAID_BOSS_WHISPER, CHAT_MSG_MONSTER_SAY
-		StartTimer: 11.8, Grip of Hunger
+		StartTimer: 11.6, Grip of Hunger
 		StartTimer: 24.2, Grand Consumption
 	[  2.43] SPELL_AURA_APPLIED: [->Tank1: Gluttony] "", nil, 0x0, Player-1-00000005, Tank1, 0x511, 349627, Gluttony, 0, DEBUFF, 0
 		ShowSpecialWarning: Gluttony on you
@@ -126,13 +125,13 @@ Event trace:
 		PlaySound: VoicePack/justrun
 		StartTimer: 23.0, Grip of Hunger
 	[ 19.38] SPELL_CAST_SUCCESS: [Achillite: Encounter Event] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 181089, Encounter Event, 0, 0
-		StartTimer: 4.7, Stitchneedle
-		StartTimer: 14.5, Flagellation Protocol
-		StartTimer: 21.7, Venting Protocol
+		StartTimer: 2.4, Purification Protocol
+		StartTimer: 13.3, Flagellation Protocol
+		StartTimer: 19.5, Venting Protocol
 	[ 23.43] SPELL_AURA_APPLIED: [->Dps1: Gluttony] "", nil, 0x0, Player-1-00000002, Dps1, 0x512, 349627, Gluttony, 0, DEBUFF, 0
 		ShowAnnounce: Gluttony on Dps1
 	[ 24.23] SPELL_CAST_START: [Achillite: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 349954, Purification Protocol, 0, 0
-		StartTimer: 18.2, Stitchneedle
+		StartTimer: 18.2, Purification Protocol
 	[ 24.66] SPELL_CAST_START: [Alcruux: Grand Consumption] Creature-0-1-2441-1-176556-0000000001, Alcruux, 0xa48, "", nil, 0x0, 349797, Grand Consumption, 0, 0
 		ShowSpecialWarning: Grip of Hunger - dodge attack
 		PlaySound: VoicePack/watchorb
@@ -159,7 +158,7 @@ Event trace:
 	[ 44.44] SPELL_AURA_APPLIED: [->Tank2: Gluttony] "", nil, 0x0, Player-1-00000006, Tank2, 0x512, 349627, Gluttony, 0, DEBUFF, 0
 		ShowAnnounce: Gluttony on Tank2
 	[ 48.55] SPELL_CAST_START: [Achillite: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 349954, Purification Protocol, 0, 0
-		StartTimer: 18.2, Stitchneedle
+		StartTimer: 18.2, Purification Protocol
 	[ 50.05] SPELL_AURA_APPLIED: [Achillite->Dps1: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, Player-1-00000002, Dps1, 0x512, 349954, Purification Protocol, 0, DEBUFF, 0
 		UnscheduleTask: specWarn349954dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 25.75
 		ScheduleTask: specWarn349954dispel:ScheduleVoice("helpdispel") at 50.35 (+0.30)
@@ -175,7 +174,7 @@ Event trace:
 		StartTimer: 23.0, Flagellation Protocol
 	[ 59.14] SPELL_CAST_SUCCESS: [Venza Goldfuse: Encounter Event] Creature-0-1-2441-1-176705-0000000002, Venza Goldfuse, 0xa48, "", nil, 0x0, 181089, Encounter Event, 0, 0
 		StartTimer: 4.8, Chains of Damnation (1)
-		StartTimer: 16.9, Whirling Annihilation
+		StartTimer: 15.7, Whirling Annihilation
 	[ 64.02] SPELL_CAST_START: [Venza Goldfuse: Chains of Damnation] Creature-0-1-2441-1-176705-0000000002, Venza Goldfuse, 0xa48, "", nil, 0x0, 350101, Chains of Damnation, 0, 0
 		ShowSpecialWarning: Chains of Damnation - switch targets
 		PlaySound: VoicePack/targetchange
@@ -187,7 +186,7 @@ Event trace:
 		PlaySound: VoicePack/watchorb
 		StartTimer: 26.6, Venting Protocol
 	[ 75.31] SPELL_CAST_START: [Achillite: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 349954, Purification Protocol, 0, 0
-		StartTimer: 18.2, Stitchneedle
+		StartTimer: 18.2, Purification Protocol
 	[ 76.13] SPELL_CAST_START: [Venza Goldfuse: Whirling Annihilation] Creature-0-1-2441-1-176705-0000000002, Venza Goldfuse, 0xa48, "", nil, 0x0, 350086, Whirling Annihilation, 0, 0
 		ShowSpecialWarning: Whirling Annihilation - run away
 		PlaySound: VoicePack/justrun
@@ -215,7 +214,7 @@ Event trace:
 		PlaySound: VoicePack/watchorb
 		StartTimer: 26.6, Venting Protocol
 	[102.24] SPELL_CAST_START: [Achillite: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, "", nil, 0x0, 349954, Purification Protocol, 0, 0
-		StartTimer: 18.2, Stitchneedle
+		StartTimer: 18.2, Purification Protocol
 	[103.76] SPELL_AURA_APPLIED: [Achillite->Dps1: Purification Protocol] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, Player-1-00000002, Dps1, 0x512, 349954, Purification Protocol, 0, DEBUFF, 0
 		UnscheduleTask: specWarn349954dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 76.82
 		ScheduleTask: specWarn349954dispel:ScheduleVoice("helpdispel") at 104.06 (+0.30)
@@ -242,7 +241,7 @@ Event trace:
 	[117.12] SPELL_AURA_APPLIED: [Achillite->Achillite: Exposed Anima Core] Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, Creature-0-1-2441-1-176555-0000000001, Achillite, 0xa48, 350037, Exposed Anima Core, 0, BUFF, 0
 		StopTimer: Timer349987cd
 		StopTimer: Timer349934cd
-		StopTimer: Timer320200cd
+		StopTimer: Timer349954cd
 	[128.47] SPELL_AURA_APPLIED: [->Dps2: Gluttony] "", nil, 0x0, Player-1-00000003, Dps2, 0x512, 349627, Gluttony, 0, DEBUFF, 0
 		ShowAnnounce: Gluttony on Dps2
 	[137.05] SPELL_CAST_START: [Venza Goldfuse: Whirling Annihilation] Creature-0-1-2441-1-176705-0000000002, Venza Goldfuse, 0xa48, "", nil, 0x0, 350086, Whirling Annihilation, 0, 0
