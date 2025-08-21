@@ -22,8 +22,6 @@ Findings:
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1231720 (Invoke Collector) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
-	Timer Void Harvest (%s), time=8.00, type=cdcount, spellId=1243901 (time=96.00, variance=0.00) got refreshed early with 88.00s remaining
-		Refreshed by: [237.88] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000002, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
 
 Unused objects:
 	[Announce] Void Tear (%s), type=count, spellId=1248133
@@ -249,9 +247,9 @@ Event trace:
 	[225.84] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (3)
 	[229.87] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000002, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
-		StartTimer: 96.0, Void Harvest (2)
+		StartTimer: 8.0, Void Harvest (2)
 	[237.88] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000002, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
-		StartTimer: 46.0, Void Harvest (3)
+		StartTimer: 36.0, Void Harvest (3)
 	[245.09] ENCOUNTER_END: 3132, Forgeweaver Araz, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
