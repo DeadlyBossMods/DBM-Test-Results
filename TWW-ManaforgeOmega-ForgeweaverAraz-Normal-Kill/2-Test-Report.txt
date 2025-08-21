@@ -10,11 +10,9 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1233979 (Astral Harvest)
 	Unused event registration: SPELL_AURA_REMOVED 1243873 (Void Harvest)
 	Unused event registration: SPELL_CAST_START 1232221 (Death Throes)
-	Unused event registration: SPELL_CAST_START 1243887 (Void Harvest)
 	Unused event registration: SPELL_CAST_START 1248133 (Void Tear)
 	Unused event registration: UNIT_DIED
 	Unused event registration: UNIT_POWER_UPDATE
-	Unused event registration: UNIT_SPELLCAST_SUCCEEDED
 	Timer for spell ID 1227631 (Arcane Expulsion) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	SpecialWarning for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1228161 (Silencing Tempest)
 	Timer for spell ID 1228188 (Silencing Tempest) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
@@ -23,17 +21,18 @@ Findings:
 	Timer for spell ID 1228216 (Arcane Obliteration) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1231720 (Invoke Collector) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
+	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
+	Timer Void Harvest (%s), time=8.00, type=cdcount, spellId=1243901 (time=96.00, variance=0.00) got refreshed early with 88.00s remaining
+		Refreshed by: [237.88] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000002, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
 
 Unused objects:
 	[Announce] Void Tear (%s), type=count, spellId=1248133
-	[Announce] Stage 2, type=stage, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Special Warning] Astral Harvest on you, type=you, spellId=1228214
 	[Special Warning] Death Throes! (%s), type=count, spellId=1232221
 	[Special Warning] Void Harvest on you, type=you, spellId=1243901
 	[Timer] Death Throes (%s), time=97.30, type=cdcount, spellId=1232221
-	[Timer] Void Harvest (%s), time=8.00, type=cdcount, spellId=1243901
 	[Timer] Void Tear (%s), time=97.30, type=cdcount, spellId=1248171
 	[Yell] Silencing Tempest, type=shortyell, spellId=1228188
 	[Yell] %d, type=shortfade, spellId=1228214
@@ -45,9 +44,12 @@ Timers:
 	Arcane Expulsion (%s), time=97.30, type=cdcount, spellId=1227631, triggerDeltas = 0.00, 172.94
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-	Silencing Tempest (%s), time=97.30, type=cdcount, spellId=1228188, triggerDeltas = 0.00, 172.94
+		[214.55] SPELL_CAST_START: [Forgeweaver Araz: Dark Terminus] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1248009, Dark Terminus, 0, 0
+	Silencing Tempest (%s), time=97.30, type=cdcount, spellId=1228188, triggerDeltas = 0.00, 172.94, 48.91
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
+		[214.55] SPELL_CAST_START: [Forgeweaver Araz: Dark Terminus] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1248009, Dark Terminus, 0, 0
+		[221.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000138, 1233072, Forgeweaver Araz, 10, 31, ??, 0
 	Astral Harvest (%s), time=97.30, type=cdcount, spellId=1228214, triggerDeltas = 0.00, 20.00, 44.01, 8.00, 23.03, 77.90
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[ 20.00] SPELL_CAST_START: [Arcane Collector: Astral Harvest] Creature-0-1-2810-1-240905-0000000080, Arcane Collector, 0xa48, "", nil, 0x0, 1228213, Astral Harvest, 0, 0
@@ -57,11 +59,13 @@ Timers:
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[ 30.98] SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
-	Overwhelming Power (%s), time=44.00, type=cdcount, spellId=1228502, triggerDeltas = 0.00, 4.00, 22.00, 22.00, 22.00, 22.02, 80.92, 18.79, 34.11
+		[214.55] SPELL_CAST_START: [Forgeweaver Araz: Dark Terminus] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1248009, Dark Terminus, 0, 0
+	Overwhelming Power (%s), time=44.00, type=cdcount, spellId=1228502, triggerDeltas = 0.00, 4.00, 22.00, 22.00, 22.00, 22.02, 80.92, 18.79, 30.12, 3.99
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[  4.00] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 			 Triggered 7x, delta times: 4.00, 22.00, 22.00, 22.00, 22.02, 99.71, 34.11
 		[172.94] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
+		[221.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000138, 1233072, Forgeweaver Araz, 10, 31, ??, 0
 	Invoke Collector (%s), time=97.30, type=cdcount, spellId=1231720, triggerDeltas = 0.00, 9.00, 163.94
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		[  9.00] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
@@ -69,6 +73,10 @@ Timers:
 	Photon Blast, time=4.00, type=cdnp, spellId=1234328, triggerDeltas = 137.02, 4.02, 3.99, 1.02, 2.98, 1.02, 4.02, 3.99
 		[137.02] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000080, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 			 Triggered 8x, delta times: 137.02, 4.02, 3.99, 1.02, 2.98, 1.02, 4.02, 3.99
+	Void Harvest (%s), time=8.00, type=cdcount, spellId=1243901, triggerDeltas = 221.85, 8.02, 8.01
+		[221.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000138, 1233072, Forgeweaver Araz, 10, 31, ??, 0
+		[229.87] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000002, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
+			 Triggered 2x, delta times: 229.87, 8.01
 	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
 		[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 
@@ -77,6 +85,8 @@ Announces:
 		[190.98] SPELL_AURA_REMOVED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 	Mana Splinter on >%s<, type=target, spellId=1233415, triggerDeltas = 178.97
 		[178.97] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
+	Stage 2, type=stage, spellId=<none>, triggerDeltas = 221.85
+		[221.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000138, 1233072, Forgeweaver Araz, 10, 31, ??, 0
 
 Special warnings:
 	Arcane Expulsion! (%s), type=count, spellId=1227631, triggerDeltas = 125.01
@@ -99,15 +109,17 @@ Yells:
 	None
 
 Voice pack sounds:
-	VoicePack/watchstep
-		[ 98.00] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
+	VoicePack/ptwo
+		[221.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000138, 1233072, Forgeweaver Araz, 10, 31, ??, 0
+	VoicePack/carefly
+		[125.01] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 	VoicePack/helpsoak
 		[ 31.28] Scheduled at 30.98 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
 		[ 76.29] Scheduled at 75.99 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
-	VoicePack/carefly
-		[125.01] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 	VoicePack/aesoon
 		[162.05] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-0000000002, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+	VoicePack/watchstep
+		[ 98.00] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 	VoicePack/killmob
 		[  9.00] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 			 Triggered 2x, delta times: 9.00, 43.99
@@ -118,7 +130,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 14, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1232221 1230529 1243887 1248133 1234328 1228213 1232590, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1, UNIT_POWER_UPDATE boss1 boss2 boss3 boss4 boss5
+		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1232221 1230529 1243887 1248133 1234328 1228213 1232590 1248009, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1, UNIT_POWER_UPDATE boss1 boss2 boss3 boss4 boss5
 		StartTimer: 4.0, Overwhelming Power (1)
 		StartTimer: 30.9, Arcane Obliteration (1)
 		StartTimer: 97.9, Silencing Tempest (1)
@@ -224,14 +236,28 @@ Event trace:
 		ShowAnnounce: Mana Splinter faded
 	[191.73] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (2)
+	[214.55] SPELL_CAST_START: [Forgeweaver Araz: Dark Terminus] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1248009, Dark Terminus, 0, 0
+		StopTimer: Timer1228216cdcount\t1
+		StopTimer: Timer1228188cdcount\t1
+		StopTimer: Timer1227631cdcount\t2
+	[221.85] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000138, 1233072, Forgeweaver Araz, 10, 31, ??, 0
+		ShowAnnounce: Stage 2
+		PlaySound: VoicePack/ptwo
+		StartTimer: 4.0, Overwhelming Power (1)
+		StartTimer: 33.0, Silencing Tempest (1)
+		StartTimer: 8.0, Void Harvest (1)
 	[225.84] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000002, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (3)
+	[229.87] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000002, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
+		StartTimer: 96.0, Void Harvest (2)
+	[237.88] SPELL_CAST_START: [Dark Singularity: Void Harvest] Creature-0-1-2810-1-243859-0000000002, Dark Singularity, 0xa48, "", nil, 0x0, 1243887, Void Harvest, 0, 0
+		StartTimer: 46.0, Void Harvest (3)
 	[245.09] ENCOUNTER_END: 3132, Forgeweaver Araz, 14, 30, 1, 0
 		EndCombat: ENCOUNTER_END
-		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
 		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
 	Unknown trigger
 		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873
