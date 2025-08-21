@@ -112,6 +112,9 @@ Special warnings:
 	Invoke Collector - switch targets (%s), type=switchcount, spellId=1231720, triggerDeltas = 8.99, 43.98, 44.01
 		[  8.99] SPELL_CAST_START: [Forgeweaver Araz: Invoke Collector] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1231720, Invoke Collector, 0, 0
 			 Triggered 3x, delta times: 8.99, 43.98, 44.01
+	Arcane Convergence!, type=spell, spellId=1232590, triggerDeltas = 172.98, 9.02, 9.00, 127.87, 8.97, 9.03
+		[172.98] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+			 Triggered 6x, delta times: 172.98, 9.02, 9.00, 127.87, 8.97, 9.03
 	Photon Blast - dodge attack, type=dodge, spellId=1234328, triggerDeltas = 157.00, 3.98, 4.03, 0.99, 3.02, 0.99, 3.99, 0.99, 3.02, 0.99, 3.99, 4.00, 1.04, 4.01, 3.98, 1.06, 3.98, 3.99, 1.01, 96.80, 3.99, 4.01, 0.97, 3.02, 0.97, 4.00, 1.02, 2.99, 0.99, 4.02, 3.99, 1.05, 4.00, 4.01, 0.96, 4.00, 3.99, 4.02
 		[157.00] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 			 Triggered 38x, delta times: 157.00, 3.98, 4.03, 0.99, 3.02, 0.99, 3.99, 0.99, 3.02, 0.99, 3.99, 4.00, 1.04, 4.01, 3.98, 1.06, 3.98, 3.99, 1.01, 96.80, 3.99, 4.01, 0.97, 3.02, 0.97, 4.00, 1.02, 2.99, 0.99, 4.02, 3.99, 1.05, 4.00, 4.01, 0.96, 4.00, 3.99, 4.02
@@ -122,13 +125,16 @@ Yells:
 Voice pack sounds:
 	VoicePack/ptwo
 		[358.71] SPELL_CAST_START: [Forgeweaver Araz: Mana Sacrifice] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1230529, Mana Sacrifice, 0, 0
+	VoicePack/carefly
+		[144.96] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
+			 Triggered 2x, delta times: 144.96, 145.85
 	VoicePack/helpsoak
 		[ 31.30] Scheduled at 31.00 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
 		[ 76.29] Scheduled at 75.99 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
 		[257.11] Scheduled at 256.81 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
-	VoicePack/carefly
-		[144.96] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
-			 Triggered 2x, delta times: 144.96, 145.85
+	VoicePack/aesoon
+		[172.98] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+			 Triggered 6x, delta times: 172.98, 9.02, 9.00, 127.87, 8.97, 9.03
 	VoicePack/watchstep
 		[ 63.01] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000003, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 			 Triggered 5x, delta times: 63.01, 44.00, 22.98, 148.88, 113.63
@@ -142,7 +148,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3132, Forgeweaver Araz, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1232221 1230529 1243887 1248133 1234328 1228213, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1, UNIT_POWER_UPDATE boss1 boss2 boss3 boss4 boss5
+		RegisterEvents: Regular, SPELL_CAST_START 1228502 1228216 1228161 1227631 1231720 1232221 1230529 1243887 1248133 1234328 1228213 1232590, SPELL_AURA_APPLIED 1228454 1228188 1233979 1233415 1243873, SPELL_AURA_REMOVED 1228454 1233979 1233415 1243873, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1, UNIT_POWER_UPDATE boss1 boss2 boss3 boss4 boss5
 		StartTimer: 4.0, Overwhelming Power (1)
 		StartTimer: 30.9, Arcane Obliteration (1)
 		StartTimer: 63.0, Silencing Tempest (1)
@@ -238,6 +244,9 @@ Event trace:
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+	[172.98] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+		ShowSpecialWarning: Arcane Convergence!
+		PlaySound: VoicePack/aesoon
 	[174.00] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
@@ -254,6 +263,9 @@ Event trace:
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+	[182.00] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+		ShowSpecialWarning: Arcane Convergence!
+		PlaySound: VoicePack/aesoon
 	[182.99] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
@@ -266,6 +278,9 @@ Event trace:
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+	[191.00] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+		ShowSpecialWarning: Arcane Convergence!
+		PlaySound: VoicePack/aesoon
 	[192.04] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
@@ -339,6 +354,9 @@ Event trace:
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+	[318.87] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+		ShowSpecialWarning: Arcane Convergence!
+		PlaySound: VoicePack/aesoon
 	[319.82] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
@@ -355,6 +373,9 @@ Event trace:
 		StartTimer: 19.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+	[327.84] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-00000001AD, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+		ShowSpecialWarning: Arcane Convergence!
+		PlaySound: VoicePack/aesoon
 	[328.84] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 		StartTimer: 19.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
@@ -367,6 +388,9 @@ Event trace:
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
 		PlaySound: DBM/SpecialWarningSound2
+	[336.87] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-0000000003, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
+		ShowSpecialWarning: Arcane Convergence!
+		PlaySound: VoicePack/aesoon
 	[337.88] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-000000013F, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 		StartTimer: 4.0, Photon Blast
 		ShowSpecialWarning: Photon Blast - dodge attack
