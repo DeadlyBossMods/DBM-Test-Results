@@ -2,8 +2,7 @@ Test: TWW/ManaforgeOmega/Dimensius,/Heroic/Kill
 Mod:  DBM-Raids-WarWithin/2691
 
 Findings:
-	Unused event registration: SPELL_AURA_APPLIED 1228207 (Collective Gravity)
-	Unused event registration: SPELL_AURA_APPLIED 1229674 (Growing Hunger)
+	Unused event registration: INSTANCE_ENCOUNTER_ENGAGE_UNIT
 	Unused event registration: SPELL_AURA_APPLIED 1231005 (Fission)
 	Unused event registration: SPELL_AURA_APPLIED 1234243 (Crushing Gravity)
 	Unused event registration: SPELL_AURA_APPLIED 1234244 (Inverse Gravity)
@@ -12,23 +11,17 @@ Findings:
 	Unused event registration: SPELL_AURA_APPLIED 1246145 (Touch of Oblivion)
 	Unused event registration: SPELL_AURA_APPLIED 1246930 (Stellar Core)
 	Unused event registration: SPELL_AURA_APPLIED 1249425 (Mass Destruction)
-	Unused event registration: SPELL_AURA_APPLIED_DOSE 1228207 (Collective Gravity)
-	Unused event registration: SPELL_AURA_APPLIED_DOSE 1229674 (Growing Hunger)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230168 (Mortal Fragility)
 	Unused event registration: SPELL_AURA_APPLIED_DOSE 1234266 (Cosmic Fragility)
-	Unused event registration: SPELL_AURA_REMOVED 1228207 (Collective Gravity)
 	Unused event registration: SPELL_AURA_REMOVED 1234243 (Crushing Gravity)
 	Unused event registration: SPELL_AURA_REMOVED 1234244 (Inverse Gravity)
-	Unused event registration: SPELL_AURA_REMOVED 1237690 (Eclipse)
 	Unused event registration: SPELL_AURA_REMOVED 1243577 (Reverse Gravity)
 	Unused event registration: SPELL_AURA_REMOVED 1243609 (Airborne)
 	Unused event registration: SPELL_AURA_REMOVED 1249425 (Mass Destruction)
-	Unused event registration: SPELL_AURA_REMOVED_DOSE 1228207 (Collective Gravity)
 	Unused event registration: SPELL_CAST_START 1237319 (Gamma Burst)
 	Unused event registration: SPELL_CAST_START 1248240 (Infinite Possibilities)
 	Unused event registration: SPELL_CAST_START 1249423 (Mass Destruction)
 	Unused event registration: SPELL_CAST_START 1251619 (Starshard Nova)
-	Unused event registration: SPELL_CAST_SUCCESS 1234242 (Gravitational Distortion)
 	Unused event registration: SPELL_CAST_SUCCESS 1246541 (Null Binding)
 	Unused event registration: UNIT_POWER_UPDATE
 	Unused event registration: UNIT_SPELLCAST_SUCCEEDED
@@ -194,9 +187,11 @@ Special warnings:
 	Excess Mass on you, type=you, spellId=1228206, triggerDeltas = 51.14, 87.50
 		[ 51.14] SPELL_AURA_APPLIED: [->Tank1: Excess Mass] "", nil, 0x0, Player-1-00000012, Tank1, 0x511, 1228206, Excess Mass, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 51.14, 87.50
-	Devour - move to >%s<, type=moveto, spellId=1229038, triggerDeltas = 11.74, 94.09
+	Devour - move to >%s<, type=moveto, spellId=1229038, triggerDeltas = 11.74, 2.50, 91.59, 2.50
 		[ 11.74] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
 			 Triggered 2x, delta times: 11.74, 94.09
+		[ 14.24] Scheduled at 11.74 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+		[108.33] Scheduled at 105.83 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
 	Smash! (%s), type=count, spellId=1230087, triggerDeltas = 23.49, 47.05, 47.06, 47.05
 		[ 23.49] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
 			 Triggered 4x, delta times: 23.49, 47.05, 47.06, 47.05
@@ -304,6 +299,8 @@ Voice pack sounds:
 	VoicePack/gather
 		[ 11.74] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
 			 Triggered 2x, delta times: 11.74, 94.09
+		[ 14.24] Scheduled at 11.74 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+		[108.33] Scheduled at 105.83 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
 	VoicePack/findshelter
 		[471.69] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
 			 Triggered 2x, delta times: 471.69, 99.99
@@ -338,7 +335,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1230087 1248240 1229038 1230979 1238765 1237319 1237694 1249423 1239262 1237695 1233539 1234263 1232973 1234898 1251619, SPELL_CAST_SUCCESS 1234242 1231716 1246541, SPELL_AURA_APPLIED 1231005 1228206 1228207 1230168 1229674 1243699 1243577 1243609 1235114 1246930 1234243 1234244 1246145 1245292 1232394 1234266 1250055 1237102 1249425, SPELL_AURA_APPLIED_DOSE 1228207 1230168 1229674 1246145 1234266, SPELL_AURA_REMOVED 1228207 1229038 1243577 1243609 1234243 1234244 1233539 1237690 1249425, SPELL_AURA_REMOVED_DOSE 1228207, SPELL_PERIODIC_DAMAGE 1231002 1237696, SPELL_PERIODIC_MISSED 1231002 1237696, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1 boss2 boss3, UNIT_POWER_UPDATE boss1 boss2 boss3, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1230087 1248240 1229038 1230979 1238765 1237319 1237694 1249423 1239262 1237695 1233539 1234263 1232973 1234898 1251619, SPELL_CAST_SUCCESS 1231716 1246541, SPELL_AURA_APPLIED 1231005 1228206 1230168 1243699 1243577 1243609 1235114 1246930 1234243 1234244 1246145 1245292 1232394 1234266 1250055 1237102 1249425, SPELL_AURA_APPLIED_DOSE 1230168 1246145 1234266, SPELL_AURA_REMOVED 1229038 1243577 1243609 1234243 1234244 1233539 1249425, SPELL_PERIODIC_DAMAGE 1231002 1237696, SPELL_PERIODIC_MISSED 1231002 1237696, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1 boss2 boss3, UNIT_POWER_UPDATE boss1 boss2 boss3, UNIT_SPELLCAST_SUCCEEDED boss1 boss2 boss3, INSTANCE_ENCOUNTER_ENGAGE_UNIT
 		StartTimer: 23.5, Smash (1)
 		StartTimer: 11.7, Devour (1)
 		StartTimer: 35.3, Dark Matter (1)
@@ -352,6 +349,8 @@ Event trace:
 		PlaySound: VoicePack/gather
 		StartTimer: 94.1, Devour (2)
 		ScheduleTask: (anonymous function) at 14.24 (+2.50)
+			ShowSpecialWarning: Devour - move to Collective Gravity
+			PlaySound: VoicePack/gather
 	[ 18.76] SPELL_AURA_REMOVED: [Dimensius->[DNT] Invisible: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-244627-000000000C, [DNT] Invisible, 0xa48, 1229038, Devour, 0, BUFF, 0
 		ShowAnnounce: Devour ended
 	[ 23.49] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
@@ -429,6 +428,8 @@ Event trace:
 		PlaySound: VoicePack/gather
 		StartTimer: 94.1, Devour (3)
 		ScheduleTask: (anonymous function) at 108.33 (+2.50)
+			ShowSpecialWarning: Devour - move to Collective Gravity
+			PlaySound: VoicePack/gather
 	[107.23] SPELL_PERIODIC_MISSED: [Dimensius->Tank1: Dark Energy] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000012, Tank1, 0x511, 1231002, Dark Energy, 0, 0
 		AntiSpam: 4
 		ShowSpecialWarning: Dark Energy damage - move away
@@ -740,4 +741,4 @@ Event trace:
 	[676.02] ENCOUNTER_END: 3135, Dimensius, the All-Devouring, 15, 30, 1, 0
 		EndCombat: ENCOUNTER_END
 	Unknown trigger
-		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1228207 1229038 1243577 1243609 1234243 1234244 1233539 1237690 1249425
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1229038 1243577 1243609 1234243 1234244 1233539 1249425
