@@ -1,0 +1,694 @@
+Test: TWW/ManaforgeOmega/Dimensius,/Mythic/Wipe
+Mod:  DBM-Raids-WarWithin/2691
+
+Findings:
+	Unused event registration: INSTANCE_ENCOUNTER_ENGAGE_UNIT
+	Unused event registration: SPELL_AURA_APPLIED 1231005 (Fission)
+	Unused event registration: SPELL_AURA_APPLIED 1234266 (Cosmic Fragility)
+	Unused event registration: SPELL_AURA_APPLIED 1243609 (Airborne)
+	Unused event registration: SPELL_AURA_APPLIED 1243699 (Spatial Fragment)
+	Unused event registration: SPELL_AURA_APPLIED 1246145 (Touch of Oblivion)
+	Unused event registration: SPELL_AURA_APPLIED 1250055 (Voidgrasp)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1230168 (Mortal Fragility)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1234266 (Cosmic Fragility)
+	Unused event registration: SPELL_AURA_REMOVED 1243577 (Reverse Gravity)
+	Unused event registration: SPELL_AURA_REMOVED 1243609 (Airborne)
+	Unused event registration: SPELL_AURA_REMOVED 1249425 (Mass Destruction)
+	Unused event registration: SPELL_CAST_START 1232973 (Supernova)
+	Unused event registration: SPELL_CAST_START 1237319 (Gamma Burst)
+	Unused event registration: SPELL_CAST_START 1237694 (Mass Ejection)
+	Unused event registration: SPELL_CAST_START 1237695 (Stardust Nova)
+	Unused event registration: SPELL_CAST_START 1248240 (Infinite Possibilities)
+	Unused event registration: SPELL_CAST_START 1249423 (Mass Destruction)
+	Unused event registration: SPELL_CAST_SUCCESS 1246541 (Null Binding)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 1231002 (Dark Energy)
+	Unused event registration: SPELL_PERIODIC_MISSED 1231002 (Dark Energy)
+	Unused event registration: UNIT_POWER_UPDATE
+	SpecialWarning for spell ID 1231002 (Dark Energy) is triggered by event SPELL_PERIODIC_DAMAGE 1237696 (Debris Field)
+	SpecialWarning for spell ID 1231002 (Dark Energy) is triggered by event SPELL_PERIODIC_MISSED 1237696 (Debris Field)
+	Timer for spell ID 1231716 (Extinguish The Stars) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
+	Timer for spell ID 1233539 (Devour) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
+	Timer for spell ID 1234044 (Darkened Sky) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
+	Timer for spell ID 1234242 (Gravitational Distortion) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
+	Timer for spell ID 1234263 (Cosmic Collapse) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
+	Timer for spell ID 1235114 (Soaring Reshii) is triggered by event SPELL_CAST_START 1234898 (Event Horizon)
+	SpecialWarning for spell ID 1249423 (Mass Destruction) is triggered by event SPELL_AURA_APPLIED 1249425 (Mass Destruction)
+	Yell for spell ID 1249423 (Mass Destruction) is triggered by event SPELL_AURA_APPLIED 1249425 (Mass Destruction)
+
+Unused objects:
+	[Announce] Airborne faded, type=fades, spellId=1243609
+	[Announce] Spatial Fragment on >%s<, type=target, spellId=1243699
+	[Special Warning] Excess Mass on you, type=you, spellId=1228206
+	[Special Warning] Mortal Fragility on >%s< - taunt now, type=taunt, spellId=1230168
+	[Special Warning] Supernova - run away (%s), type=runcount, spellId=1232973
+	[Special Warning] Collapse - defensive, type=defensive, spellId=1234263
+	[Special Warning] Cosmic Fragility on >%s< - taunt now, type=taunt, spellId=1234266
+	[Special Warning] Mass Ejection (%s) - dodge attack, type=dodgecount, spellId=1237694
+	[Special Warning] Nova (%s) - dodge attack, type=dodgecount, spellId=1237695
+	[Special Warning] Reverse Gravity (%s) - move away from others, type=moveawaycount, spellId=1243577
+	[Special Warning] Airborne on you, type=you, spellId=1243609
+	[Special Warning] Null Binding on you, type=you, spellId=1246541
+	[Special Warning] Voidgrasp (%s) on you, type=youcount, spellId=1250055
+	[Timer] Supernova (%s), time=97.30, type=cdcount, spellId=1232973
+	[Timer] Eclipse, time=35.20, type=next, spellId=1237690
+	[Timer] Mass Ejection (%s), time=17.60, type=cdcount, spellId=1237694
+	[Timer] Nova (%s), time=35.20, type=cdcount, spellId=1237695
+	[Timer] Infinite Possibilities, time=8.00, type=castpnp, spellId=1248240
+	[Timer] Mass Destruction (%s), time=97.30, type=cdcount, spellId=1249423
+	[Timer] Voidgrasp (%s), time=97.30, type=cdcount, spellId=1250055
+	[Yell] Collapse, type=shortyell, spellId=1234263
+	[Yell] %d, type=shortfade, spellId=1243577
+	[Yell] Reverse Gravity, type=shortyell, spellId=1243577
+	[Yell] %d, type=shortfade, spellId=1249423
+
+Timers:
+	Devour (%s), time=97.30, type=cdcount, spellId=1229038, triggerDeltas = 0.00, 10.48, 84.21
+		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 16, 20, 0
+		[ 10.48] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+			 Triggered 2x, delta times: 10.48, 84.21
+		[177.13] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
+	Smash (%s), time=97.30, type=cdcount, spellId=1230087, triggerDeltas = 0.00, 21.01, 42.11, 42.12
+		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 16, 20, 0
+		[ 21.01] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
+			 Triggered 3x, delta times: 21.01, 42.11, 42.12
+	Dark Matter (%s), time=97.30, type=cdcount, spellId=1230979, triggerDeltas = 0.00, 31.53, 39.00, 45.21
+		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 16, 20, 0
+		[ 31.53] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
+			 Triggered 3x, delta times: 31.53, 39.00, 45.21
+	Stars, time=97.30, type=cd, spellId=1231716, triggerDeltas = 395.67
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+	Devour (%s), time=97.30, type=cdcount, spellId=1233539, triggerDeltas = 395.67, 47.50, 80.00
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+		[443.17] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+			 Triggered 2x, delta times: 443.17, 80.00
+	Rings (%s), time=97.30, type=cdcount, spellId=1234044, triggerDeltas = 395.67, 29.68, 43.00, 30.02, 49.84
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+		[425.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1341, nil, 0, false, false, false, false, 0
+		[468.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1383, nil, 0, false, false, false, false, 0
+		[498.37] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1397, nil, 0, false, false, false, false, 0
+		[548.21] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1476, nil, 0, false, false, false, false, 0
+	Gravitational Distortion (%s), time=97.30, type=cdcount, spellId=1234242, triggerDeltas = 235.23, 31.57, 64.96, 31.58, 32.33
+		[235.23] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000505, 1248483, Dimensius, 100, 53, ??, 0
+		[266.80] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000610, 1248483, Dimensius, 100, 75, ??, 0
+		[271.28] UNIT_DIED: [->Artoshion] "", nil, 0x0, Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, -1, false, 0, 0
+		[331.76] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000630, 1248483, Dimensius, 100, 50, ??, 0
+		[363.34] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000578, 1248483, Dimensius, 100, 75, ??, 0
+		[372.76] UNIT_DIED: [->Pargoth] "", nil, 0x0, Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, -1, false, 0, 0
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+	Collapse (%s), time=97.30, type=cdcount, spellId=1234263, triggerDeltas = 395.67, 57.50, 30.03, 29.95, 30.00
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+		[453.17] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
+			 Triggered 4x, delta times: 453.17, 30.03, 29.95, 30.00
+	Flight, time=35.20, type=next, spellId=1235114, triggerDeltas = 177.13
+		[177.13] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
+	Pushback (%s), time=35.00, type=cdcount, spellId=1237319, triggerDeltas = 243.59, 96.55, 31.57
+		[243.59] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004DA, 1237319, Dimensius, 100, 85, ??, 0
+		[271.28] UNIT_DIED: [->Artoshion] "", nil, 0x0, Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, -1, false, 0, 0
+		[340.14] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-000000037D, 1237319, Dimensius, 100, 82, ??, 0
+		[371.71] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004EC, 1237319, Dimensius, 100, 100, ??, 0
+		[372.76] UNIT_DIED: [->Pargoth] "", nil, 0x0, Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, -1, false, 0, 0
+	Extinction (%s), time=35.20, type=cdcount, spellId=1238765, triggerDeltas = 233.07, 31.57, 64.95, 31.59
+		[233.07] SPELL_CAST_START: [Dimensius: Extinction] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1238765, Extinction, 0, 0
+			 Triggered 4x, delta times: 233.07, 31.57, 64.95, 31.59
+		[271.28] UNIT_DIED: [->Artoshion] "", nil, 0x0, Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, -1, false, 0, 0
+		[372.76] UNIT_DIED: [->Pargoth] "", nil, 0x0, Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, -1, false, 0, 0
+	Adds (%s), time=35.00, type=cdcount, spellId=1239262, triggerDeltas = 222.55, 31.57, 64.95, 31.59
+		[222.55] SPELL_CAST_START: [Artoshion: Conqueror's Cross] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+			 Triggered 2x, delta times: 222.55, 31.57
+		[271.28] UNIT_DIED: [->Artoshion] "", nil, 0x0, Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, -1, false, 0, 0
+		[319.07] SPELL_CAST_START: [Pargoth: Conqueror's Cross] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+			 Triggered 2x, delta times: 319.07, 31.59
+		[372.76] UNIT_DIED: [->Pargoth] "", nil, 0x0, Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, -1, false, 0, 0
+	Reverse Gravity (%s), time=97.30, type=cdcount, spellId=1243577, triggerDeltas = 0.00, 43.11, 42.10, 42.13
+		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 16, 20, 0
+		[ 43.11] SPELL_AURA_APPLIED: [Dimensius->Dps7: Reverse Gravity] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000015, Dps7, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
+		[ 85.21] SPELL_AURA_APPLIED: [Dimensius->Dps6: Reverse Gravity] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000013, Dps6, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
+		[127.34] SPELL_AURA_APPLIED: [Dimensius->Dps9: Reverse Gravity] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000017, Dps9, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
+	Shattered Space (%s), time=97.30, type=cdcount, spellId=1243690, triggerDeltas = 0.00, 36.82, 42.10, 42.11
+		[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 16, 20, 0
+		[ 36.82] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-000000015D, 1243690, Dimensius, 71.4, 25, ??, 0
+		[ 78.92] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000002AE, 1243690, Dimensius, 55, 84, Tank1, 0
+		[121.03] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000303, 1243690, Dimensius, 35.2, 25, ??, 0
+	Nova (%s), time=31.60, type=cdcount, spellId=1251619, triggerDeltas = 322.24, 31.58
+		[322.24] SPELL_CAST_START: [Pargoth: Starshard Nova] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1251619, Starshard Nova, 0, 0
+			 Triggered 2x, delta times: 322.24, 31.58
+		[372.76] UNIT_DIED: [->Pargoth] "", nil, 0x0, Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, -1, false, 0, 0
+
+Announces:
+	%s, type=stagechange, spellId=<none>, triggerDeltas = 177.13, 35.34, 90.30, 92.90
+		[177.13] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
+		[212.47] SPELL_AURA_APPLIED: [Xal'atath->Xal'atath: Worldsoul Consumption] Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, 1237102, Worldsoul Consumption, 0, BUFF, 0
+			 Triggered 2x, delta times: 212.47, 90.30
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+	Excess Mass on >%s<, type=target, spellId=1228206, triggerDeltas = 13.15, 34.81, 35.76, 43.75, 3.24
+		[ 13.15] Scheduled at 11.65 by SPELL_AURA_APPLIED: [->Dps4: Excess Mass] "", nil, 0x0, Player-1-00000009, Dps4, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		[ 47.96] Scheduled at 46.46 by SPELL_AURA_APPLIED: [->Healer1: Excess Mass] "", nil, 0x0, Player-1-00000006, Healer1, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		[ 83.72] Scheduled at 82.22 by SPELL_AURA_APPLIED: [->Dps9: Excess Mass] "", nil, 0x0, Player-1-00000017, Dps9, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		[127.47] Scheduled at 125.97 by SPELL_AURA_APPLIED: [->Healer2: Excess Mass] "", nil, 0x0, Player-1-00000007, Healer2, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		[130.71] Scheduled at 129.21 by SPELL_AURA_APPLIED: [->Dps7: Excess Mass] "", nil, 0x0, Player-1-00000015, Dps7, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+	Devour ended, type=ends, spellId=1229038, triggerDeltas = 17.53, 84.17
+		[ 17.53] SPELL_AURA_REMOVED: [Dimensius->[DNT] Invisible: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-244627-000000000E, [DNT] Invisible, 0xa48, 1229038, Devour, 0, BUFF, 0
+			 Triggered 2x, delta times: 17.53, 84.17
+	Mortal Fragility on YOU, type=you, spellId=1230168, triggerDeltas = 25.05, 84.23
+		[ 25.05] SPELL_AURA_APPLIED: [Dimensius->Tank1: Mortal Fragility] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1230168, Mortal Fragility, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 25.05, 84.23
+	Gravity Well, type=spell, spellId=1232394, triggerDeltas = 449.44, 80.20
+		[449.44] SPELL_AURA_APPLIED: [Dimensius->Tank1: Gravity Well] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1232394, Gravity Well, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 449.44, 80.20
+	Devour ended, type=ends, spellId=1233539, triggerDeltas = 450.17, 80.01
+		[450.17] SPELL_AURA_REMOVED: [Dimensius->Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1233539, Devour, 0, BUFF, 0
+			 Triggered 2x, delta times: 450.17, 80.01
+	Gravitational Distortion (%s), type=count, spellId=1234242, triggerDeltas = 235.23, 31.57, 64.96, 31.58, 91.86, 26.16, 31.87, 25.95, 32.11
+		[235.23] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000505, 1248483, Dimensius, 100, 53, ??, 0
+		[266.80] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000610, 1248483, Dimensius, 100, 75, ??, 0
+		[331.76] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000630, 1248483, Dimensius, 100, 50, ??, 0
+		[363.34] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000578, 1248483, Dimensius, 100, 75, ??, 0
+		[455.20] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000003D3, 1248483, Dimensius, 56, 7, Tank1, 0
+		[481.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000004C9, 1248483, Dimensius, 47.4, 42, Tank5, 0
+		[513.23] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000004B3, 1248483, Dimensius, 34.7, 86, ??, 0
+		[539.18] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-000000038A, 1248483, Dimensius, 28.8, 10, Tank5, 0
+		[571.29] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000002D0, 1248483, Dimensius, 24.4, 56, Tank1, 0
+	Crushing Gravity faded, type=fades, spellId=1234243, triggerDeltas = 240.20, 31.57, 64.98, 149.45, 57.97
+		[240.20] SPELL_AURA_REMOVED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 240.20, 31.57, 64.98
+		[486.20] SPELL_AURA_REMOVED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 486.20, 57.97
+	Inverse Gravity faded, type=fades, spellId=1234244, triggerDeltas = 368.30
+		[368.30] SPELL_AURA_REMOVED: [Dimensius->Tank1: Inverse Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234244, Inverse Gravity, 0, DEBUFF, 0
+	Flight on YOU, type=you, spellId=1235114, triggerDeltas = 190.92, 88.86
+		[190.92] SPELL_AURA_APPLIED: [Tank1->Tank1: Soaring Reshii] Player-1-00000001, Tank1, 0x511, Player-1-00000001, Tank1, 0x511, 1235114, Soaring Reshii, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 190.92, 88.86
+	Destabilized on >%s<, type=target, spellId=1245292, triggerDeltas = 395.67
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+	Touch of Oblivion on >%s< (%d), type=stack, spellId=1246145, triggerDeltas = 233.16
+		[233.16] SPELL_AURA_APPLIED_DOSE: [Artoshion->Tank5: Touch of Oblivion] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000014, Tank5, 0x512, 1246145, Touch of Oblivion, 0, DEBUFF, 4, 0
+	Stellar Core on YOU, type=you, spellId=1246930, triggerDeltas = 214.39, 92.60
+		[214.39] SPELL_AURA_APPLIED: [->Tank1: Stellar Core] "", nil, 0x0, Player-1-00000001, Tank1, 0x511, 1246930, Stellar Core, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 214.39, 92.60
+	Mass Destruction on >%s<, type=target, spellId=1249423, triggerDeltas = 226.69, 15.81, 15.80
+		[226.69] Scheduled at 225.69 by SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+		[242.50] Scheduled at 241.50 by SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+		[258.30] Scheduled at 257.30 by SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+
+Special warnings:
+	Devour - move to >%s<, type=moveto, spellId=1229038, triggerDeltas = 10.48, 2.50, 81.71, 2.50
+		[ 10.48] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+			 Triggered 2x, delta times: 10.48, 84.21
+		[ 12.98] Scheduled at 10.48 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+		[ 97.19] Scheduled at 94.69 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+	Smash! (%s), type=count, spellId=1230087, triggerDeltas = 21.01, 42.11, 42.12, 42.10
+		[ 21.01] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
+			 Triggered 4x, delta times: 21.01, 42.11, 42.12, 42.10
+	Dark Matter (%s) - move away from others, type=moveawaycount, spellId=1230979, triggerDeltas = 31.53, 39.00, 45.21, 38.97
+		[ 31.53] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
+			 Triggered 4x, delta times: 31.53, 39.00, 45.21, 38.97
+	%s damage - move away, type=gtfo, spellId=1231002, triggerDeltas = 328.09, 2.00, 27.78
+		[328.09] SPELL_PERIODIC_DAMAGE: [Pargoth->Tank1: Debris Field] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, Player-1-00000001, Tank1, 0x511, 1237696, Debris Field, 0, 0
+			 Triggered 2x, delta times: 328.09, 2.00
+		[357.87] SPELL_PERIODIC_MISSED: [Pargoth->Tank1: Debris Field] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, Player-1-00000001, Tank1, 0x511, 1237696, Debris Field, 0, 0
+	Stars (%s) - dodge attack, type=dodgecount, spellId=1231716, triggerDeltas = 412.19
+		[412.19] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
+	Devour - move to >%s<, type=moveto, spellId=1233539, triggerDeltas = 443.17, 2.50, 77.50, 2.50, 77.49, 2.50
+		[443.17] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+			 Triggered 3x, delta times: 443.17, 80.00, 79.99
+		[445.67] Scheduled at 443.17 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+		[525.67] Scheduled at 523.17 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+		[605.66] Scheduled at 603.16 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+	Rings (%s) - dodge attack, type=dodgecount, spellId=1234044, triggerDeltas = 425.35, 43.00, 30.02, 49.84, 29.99
+		[425.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1341, nil, 0, false, false, false, false, 0
+		[468.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1383, nil, 0, false, false, false, false, 0
+		[498.37] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1397, nil, 0, false, false, false, false, 0
+		[548.21] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1476, nil, 0, false, false, false, false, 0
+		[578.20] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1495, nil, 0, false, false, false, false, 0
+	Crushing Gravity on you, type=you, spellId=1234243, triggerDeltas = 235.19, 31.57, 64.97, 149.49, 57.94
+		[235.19] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 235.19, 31.57, 64.97
+		[481.22] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 481.22, 57.94
+	Inverse Gravity on you, type=you, spellId=1234244, triggerDeltas = 363.30
+		[363.30] SPELL_AURA_APPLIED: [Dimensius->Tank1: Inverse Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234244, Inverse Gravity, 0, DEBUFF, 0
+	Gamma Burst! (%s), type=count, spellId=1237319, triggerDeltas = 243.59, 96.55, 31.57
+		[243.59] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004DA, 1237319, Dimensius, 100, 85, ??, 0
+		[340.14] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-000000037D, 1237319, Dimensius, 100, 82, ??, 0
+		[371.71] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004EC, 1237319, Dimensius, 100, 100, ??, 0
+	Extinction (%s) - dodge attack, type=dodgecount, spellId=1238765, triggerDeltas = 233.07, 31.57, 64.95, 31.59
+		[233.07] SPELL_CAST_START: [Dimensius: Extinction] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1238765, Extinction, 0, 0
+			 Triggered 4x, delta times: 233.07, 31.57, 64.95, 31.59
+	Adds - switch targets (%s), type=switchcount, spellId=1239262, triggerDeltas = 222.55, 31.57, 64.95, 31.59
+		[222.55] SPELL_CAST_START: [Artoshion: Conqueror's Cross] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+			 Triggered 2x, delta times: 222.55, 31.57
+		[319.07] SPELL_CAST_START: [Pargoth: Conqueror's Cross] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+			 Triggered 2x, delta times: 319.07, 31.59
+	Shattered Space (%s) - dodge attack, type=dodgecount, spellId=1243690, triggerDeltas = 36.82, 42.10, 42.11, 42.11
+		[ 36.82] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-000000015D, 1243690, Dimensius, 71.4, 25, ??, 0
+		[ 78.92] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000002AE, 1243690, Dimensius, 55, 84, Tank1, 0
+		[121.03] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000303, 1243690, Dimensius, 35.2, 25, ??, 0
+		[163.14] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000003CD, 1243690, Dimensius, 8.3, 84, Tank1, 0
+	Mass Destruction (%s) on you, type=youcount, spellId=1249423, triggerDeltas = 225.69, 15.81, 15.80
+		[225.69] SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 225.69, 15.81, 15.80
+	Nova (%s) - dodge attack, type=dodgecount, spellId=1251619, triggerDeltas = 322.24, 31.58
+		[322.24] SPELL_CAST_START: [Pargoth: Starshard Nova] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1251619, Starshard Nova, 0, 0
+			 Triggered 2x, delta times: 322.24, 31.58
+
+Yells:
+	Line, type=shortyell, spellId=1249423
+		[225.69] SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 225.69, 15.81, 15.80
+
+Voice pack sounds:
+	VoicePack/ptwo
+		[212.47] SPELL_AURA_APPLIED: [Xal'atath->Xal'atath: Worldsoul Consumption] Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, 1237102, Worldsoul Consumption, 0, BUFF, 0
+			 Triggered 2x, delta times: 212.47, 90.30
+	VoicePack/watchstep
+		[322.24] SPELL_CAST_START: [Pargoth: Starshard Nova] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1251619, Starshard Nova, 0, 0
+			 Triggered 2x, delta times: 322.24, 31.58
+		[412.19] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
+		[425.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1341, nil, 0, false, false, false, false, 0
+		[468.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1383, nil, 0, false, false, false, false, 0
+		[498.37] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1397, nil, 0, false, false, false, false, 0
+		[548.21] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1476, nil, 0, false, false, false, false, 0
+		[578.20] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1495, nil, 0, false, false, false, false, 0
+	VoicePack/helpsoak
+		[ 40.82] Scheduled at 36.82 by UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-000000015D, 1243690, Dimensius, 71.4, 25, ??, 0
+		[ 82.92] Scheduled at 78.92 by UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000002AE, 1243690, Dimensius, 55, 84, Tank1, 0
+		[125.03] Scheduled at 121.03 by UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000303, 1243690, Dimensius, 35.2, 25, ??, 0
+		[167.14] Scheduled at 163.14 by UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000003CD, 1243690, Dimensius, 8.3, 84, Tank1, 0
+	VoicePack/aesoon
+		[ 36.82] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-000000015D, 1243690, Dimensius, 71.4, 25, ??, 0
+		[ 78.92] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000002AE, 1243690, Dimensius, 55, 84, Tank1, 0
+		[121.03] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000303, 1243690, Dimensius, 35.2, 25, ??, 0
+		[163.14] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000003CD, 1243690, Dimensius, 8.3, 84, Tank1, 0
+		[233.07] SPELL_CAST_START: [Dimensius: Extinction] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1238765, Extinction, 0, 0
+			 Triggered 4x, delta times: 233.07, 31.57, 64.95, 31.59
+		[243.59] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004DA, 1237319, Dimensius, 100, 85, ??, 0
+		[340.14] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-000000037D, 1237319, Dimensius, 100, 82, ??, 0
+		[371.71] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004EC, 1237319, Dimensius, 100, 100, ??, 0
+	VoicePack/phasechange
+		[177.13] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
+	VoicePack/mobsoon
+		[222.55] SPELL_CAST_START: [Artoshion: Conqueror's Cross] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+			 Triggered 2x, delta times: 222.55, 31.57
+		[319.07] SPELL_CAST_START: [Pargoth: Conqueror's Cross] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+			 Triggered 2x, delta times: 319.07, 31.59
+	VoicePack/findshelter
+		[443.17] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+			 Triggered 3x, delta times: 443.17, 80.00, 79.99
+		[445.67] Scheduled at 443.17 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+		[525.67] Scheduled at 523.17 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+		[605.66] Scheduled at 603.16 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+	VoicePack/watchfeet
+		[328.09] SPELL_PERIODIC_DAMAGE: [Pargoth->Tank1: Debris Field] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, Player-1-00000001, Tank1, 0x511, 1237696, Debris Field, 0, 0
+			 Triggered 2x, delta times: 328.09, 2.00
+		[357.87] SPELL_PERIODIC_MISSED: [Pargoth->Tank1: Debris Field] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, Player-1-00000001, Tank1, 0x511, 1237696, Debris Field, 0, 0
+	VoicePack/carefly
+		[ 21.01] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
+			 Triggered 4x, delta times: 21.01, 42.11, 42.12, 42.10
+	VoicePack/gather
+		[ 10.48] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+			 Triggered 2x, delta times: 10.48, 84.21
+		[ 12.98] Scheduled at 10.48 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+		[ 97.19] Scheduled at 94.69 by SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+	VoicePack/scatter
+		[ 31.53] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
+			 Triggered 4x, delta times: 31.53, 39.00, 45.21, 38.97
+		[235.19] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 235.19, 31.57, 64.97
+		[363.30] SPELL_AURA_APPLIED: [Dimensius->Tank1: Inverse Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234244, Inverse Gravity, 0, DEBUFF, 0
+		[481.22] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 481.22, 57.94
+	VoicePack/pthree
+		[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3135, Dimensius, the All-Devouring, 16, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1230087 1248240 1229038 1230979 1238765 1237319 1237694 1249423 1239262 1237695 1233539 1234263 1232973 1234898 1251619, SPELL_CAST_SUCCESS 1231716 1246541, SPELL_AURA_APPLIED 1231005 1228206 1230168 1243699 1243577 1243609 1235114 1246930 1234243 1234244 1246145 1245292 1232394 1234266 1250055 1237102 1249425, SPELL_AURA_APPLIED_DOSE 1230168 1246145 1234266, SPELL_AURA_REMOVED 1229038 1243577 1243609 1234243 1234244 1233539 1249425, SPELL_PERIODIC_DAMAGE 1231002 1237696, SPELL_PERIODIC_MISSED 1231002 1237696, UNIT_DIED, CHAT_MSG_RAID_BOSS_EMOTE, UNIT_SPELLCAST_START boss1 boss2 boss3, UNIT_POWER_UPDATE boss1 boss2 boss3, UNIT_SPELLCAST_SUCCEEDED boss1 boss2 boss3, INSTANCE_ENCOUNTER_ENGAGE_UNIT
+		StartTimer: 21.0, Smash (1)
+		StartTimer: 10.5, Devour (1)
+		StartTimer: 31.6, Dark Matter (1)
+		StartTimer: 36.8, Shattered Space (1)
+		StartTimer: 43.1, Reverse Gravity (1)
+	[ 10.48] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+		ShowSpecialWarning: Devour - move to Collective Gravity
+		PlaySound: VoicePack/gather
+		StartTimer: 84.2, Devour (2)
+		ScheduleTask: (anonymous function) at 12.98 (+2.50)
+			ShowSpecialWarning: Devour - move to Collective Gravity
+			PlaySound: VoicePack/gather
+	[ 11.65] SPELL_AURA_APPLIED: [->Dps4: Excess Mass] "", nil, 0x0, Player-1-00000009, Dps4, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		ScheduleTask: announce1228206target:CombinedShow("Dps4") at 13.15 (+1.50)
+			ShowAnnounce: Excess Mass on Dps3, Tank7, Tank3, Dps6, Dps2, Dps4
+	[ 17.53] SPELL_AURA_REMOVED: [Dimensius->[DNT] Invisible: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-244627-000000000E, [DNT] Invisible, 0xa48, 1229038, Devour, 0, BUFF, 0
+		ShowAnnounce: Devour ended
+	[ 21.01] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
+		ShowSpecialWarning: Smash! (1)
+		PlaySound: VoicePack/carefly
+		StartTimer: 42.1, Smash (2)
+	[ 25.05] SPELL_AURA_APPLIED: [Dimensius->Tank1: Mortal Fragility] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1230168, Mortal Fragility, 0, DEBUFF, 0
+		ShowAnnounce: Mortal Fragility on YOU
+	[ 31.53] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
+		ShowSpecialWarning: Dark Matter (1) - move away from others
+		PlaySound: VoicePack/scatter
+		StartTimer: 39.0, Dark Matter (2)
+	[ 36.82] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-000000015D, 1243690, Dimensius, 71.4, 25, ??, 0
+		ShowSpecialWarning: Shattered Space (1) - dodge attack
+		PlaySound: VoicePack/aesoon
+		ScheduleTask: specWarn1243690dodgecount:ScheduleVoice("helpsoak") at 40.82 (+4.00)
+			PlaySound: VoicePack/helpsoak
+		StartTimer: 42.1, Shattered Space (2)
+	[ 43.11] SPELL_AURA_APPLIED: [Dimensius->Dps7: Reverse Gravity] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000015, Dps7, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
+		AntiSpam: 2
+			Filtered: 5x SPELL_AURA_APPLIED at 43.11, 43.11, 43.13, 43.13, 43.13
+		StartTimer: 42.1, Reverse Gravity (1)
+	[ 46.46] SPELL_AURA_APPLIED: [->Healer1: Excess Mass] "", nil, 0x0, Player-1-00000006, Healer1, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		ScheduleTask: announce1228206target:CombinedShow("Healer1") at 47.96 (+1.50)
+			ShowAnnounce: Excess Mass on Healer2, Healer3, Dps5, Healer1
+	[ 63.12] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
+		ShowSpecialWarning: Smash! (2)
+		PlaySound: VoicePack/carefly
+		StartTimer: 42.1, Smash (3)
+	[ 70.53] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
+		ShowSpecialWarning: Dark Matter (2) - move away from others
+		PlaySound: VoicePack/scatter
+		StartTimer: 45.2, Dark Matter (3)
+	[ 78.92] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000002AE, 1243690, Dimensius, 55, 84, Tank1, 0
+		ShowSpecialWarning: Shattered Space (2) - dodge attack
+		PlaySound: VoicePack/aesoon
+		ScheduleTask: specWarn1243690dodgecount:ScheduleVoice("helpsoak") at 82.92 (+4.00)
+			PlaySound: VoicePack/helpsoak
+		StartTimer: 42.1, Shattered Space (3)
+	[ 82.22] SPELL_AURA_APPLIED: [->Dps9: Excess Mass] "", nil, 0x0, Player-1-00000017, Dps9, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		ScheduleTask: announce1228206target:CombinedShow("Dps9") at 83.72 (+1.50)
+			ShowAnnounce: Excess Mass on Tank2, Tank4, Dps3, Dps9
+	[ 85.21] SPELL_AURA_APPLIED: [Dimensius->Dps6: Reverse Gravity] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000013, Dps6, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
+		AntiSpam: 2
+			Filtered: 5x SPELL_AURA_APPLIED at 85.21, 85.21, 85.21, 85.21, 85.21
+		StartTimer: 42.1, Reverse Gravity (2)
+	[ 94.69] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1229038, Devour, 0, 0
+		ShowSpecialWarning: Devour - move to Collective Gravity
+		PlaySound: VoicePack/gather
+		StartTimer: 84.2, Devour (3)
+		ScheduleTask: (anonymous function) at 97.19 (+2.50)
+			ShowSpecialWarning: Devour - move to Collective Gravity
+			PlaySound: VoicePack/gather
+	[101.70] SPELL_AURA_REMOVED: [Dimensius->[DNT] Invisible: Devour] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-244627-0000000038, [DNT] Invisible, 0xa48, 1229038, Devour, 0, BUFF, 0
+		ShowAnnounce: Devour ended
+	[105.24] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
+		ShowSpecialWarning: Smash! (3)
+		PlaySound: VoicePack/carefly
+		StartTimer: 42.1, Smash (4)
+	[109.28] SPELL_AURA_APPLIED: [Dimensius->Tank1: Mortal Fragility] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1230168, Mortal Fragility, 0, DEBUFF, 0
+		ShowAnnounce: Mortal Fragility on YOU
+	[115.74] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
+		ShowSpecialWarning: Dark Matter (3) - move away from others
+		PlaySound: VoicePack/scatter
+		StartTimer: 39.0, Dark Matter (4)
+	[121.03] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-0000000303, 1243690, Dimensius, 35.2, 25, ??, 0
+		ShowSpecialWarning: Shattered Space (3) - dodge attack
+		PlaySound: VoicePack/aesoon
+		ScheduleTask: specWarn1243690dodgecount:ScheduleVoice("helpsoak") at 125.03 (+4.00)
+			PlaySound: VoicePack/helpsoak
+		StartTimer: 42.1, Shattered Space (4)
+	[125.97] SPELL_AURA_APPLIED: [->Healer2: Excess Mass] "", nil, 0x0, Player-1-00000007, Healer2, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		ScheduleTask: announce1228206target:CombinedShow("Healer2") at 127.47 (+1.50)
+			ShowAnnounce: Excess Mass on Tank2, Dps3, Healer2
+	[127.34] SPELL_AURA_APPLIED: [Dimensius->Dps9: Reverse Gravity] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000017, Dps9, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
+		AntiSpam: 2
+			Filtered: 5x SPELL_AURA_APPLIED at 127.34, 127.34, 127.35, 127.35, 127.35
+		StartTimer: 42.1, Reverse Gravity (3)
+	[129.21] SPELL_AURA_APPLIED: [->Dps7: Excess Mass] "", nil, 0x0, Player-1-00000015, Dps7, 0x512, 1228206, Excess Mass, 0, DEBUFF, 0
+		ScheduleTask: announce1228206target:CombinedShow("Dps7") at 130.71 (+1.50)
+			ShowAnnounce: Excess Mass on Dps7
+	[147.34] SPELL_CAST_START: [Dimensius: Massive Smash] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230087, Massive Smash, 0, 0
+		ShowSpecialWarning: Smash! (4)
+		PlaySound: VoicePack/carefly
+	[154.71] SPELL_CAST_START: [Dimensius: Dark Matter] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1230979, Dark Matter, 0, 0
+		ShowSpecialWarning: Dark Matter (4) - move away from others
+		PlaySound: VoicePack/scatter
+	[163.14] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1243690-00000003CD, 1243690, Dimensius, 8.3, 84, Tank1, 0
+		ShowSpecialWarning: Shattered Space (4) - dodge attack
+		PlaySound: VoicePack/aesoon
+		ScheduleTask: specWarn1243690dodgecount:ScheduleVoice("helpsoak") at 167.14 (+4.00)
+			PlaySound: VoicePack/helpsoak
+	[169.46] SPELL_AURA_APPLIED: [Dimensius->Healer1: Reverse Gravity] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, Player-1-00000006, Healer1, 0x512, 1243577, Reverse Gravity, 0, DEBUFF, 0
+		AntiSpam: 2
+			Filtered: 5x SPELL_AURA_APPLIED at 169.46, 169.46, 169.46, 169.46, 169.46
+	[177.13] SPELL_CAST_START: [Dimensius: Event Horizon] Creature-0-1-2810-1-241517-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234898, Event Horizon, 0, 0
+		ShowAnnounce: Stage 1.5
+		PlaySound: VoicePack/phasechange
+		StopTimer: Timer1229038cdcount\t3
+		StartTimer: 13.8, Flight
+	[190.92] SPELL_AURA_APPLIED: [Tank1->Tank1: Soaring Reshii] Player-1-00000001, Tank1, 0x511, Player-1-00000001, Tank1, 0x511, 1235114, Soaring Reshii, 0, DEBUFF, 0
+		ShowAnnounce: Flight on YOU
+	[212.47] SPELL_AURA_APPLIED: [Xal'atath->Xal'atath: Worldsoul Consumption] Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, 1237102, Worldsoul Consumption, 0, BUFF, 0
+		ShowAnnounce: Stage 2
+		PlaySound: VoicePack/ptwo
+	[214.39] SPELL_AURA_APPLIED: [->Tank1: Stellar Core] "", nil, 0x0, Player-1-00000001, Tank1, 0x511, 1246930, Stellar Core, 0, DEBUFF, 0
+		ShowAnnounce: Stellar Core on YOU
+	[222.55] SPELL_CAST_START: [Artoshion: Conqueror's Cross] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+		ShowSpecialWarning: Adds - switch targets (1)
+		PlaySound: VoicePack/mobsoon
+		StartTimer: 31.5, Adds (2)
+	[225.69] SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+		ScheduleTask: announce1249423target:CombinedShow("PlayerName") at 226.69 (+1.00)
+			ShowAnnounce: Mass Destruction on Tank3, Dps3, Tank4, PlayerName
+		ShowSpecialWarning: Mass Destruction (1) on you
+		PlaySound: DBM/SpecialWarningSound2
+		ShowYell: Line
+	[233.07] SPELL_CAST_START: [Dimensius: Extinction] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1238765, Extinction, 0, 0
+		ShowSpecialWarning: Extinction (1) - dodge attack
+		PlaySound: VoicePack/aesoon
+		StartTimer: 31.5, Extinction (2)
+	[233.16] SPELL_AURA_APPLIED_DOSE: [Artoshion->Tank5: Touch of Oblivion] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000014, Tank5, 0x512, 1246145, Touch of Oblivion, 0, DEBUFF, 4, 0
+		ShowAnnounce: Touch of Oblivion on Tank5 (4)
+	[235.19] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowSpecialWarning: Crushing Gravity on you
+		PlaySound: VoicePack/scatter
+	[235.23] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000505, 1248483, Dimensius, 100, 53, ??, 0
+		AntiSpam: 5
+			Filtered: 46x UNIT_SPELLCAST_SUCCEEDED at 235.23, 235.23, 235.23, 235.23, 235.23, 235.23, 235.23, 235.23, 235.23, 235.23, 235.23, 235.23, 235.32, 235.62, 235.69, 235.95, 236.21, 236.25, 236.25, 236.32, 236.53, 236.64, 236.64, 236.69, 236.83, 237.01, 237.01, 237.2, 237.25, 237.35, 237.39, 237.46, 237.56, 237.64, 237.74, 237.78, 237.85, 237.94, 238.03, 238.03, 238.03, 238.09, 238.22, 238.47, 239.05, 239.05
+		ShowAnnounce: Gravitational Distortion (1)
+		StartTimer: 31.5, Gravitational Distortion (2)
+	[240.20] SPELL_AURA_REMOVED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowAnnounce: Crushing Gravity faded
+	[241.50] SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+		ScheduleTask: announce1249423target:CombinedShow("PlayerName") at 242.50 (+1.00)
+			ShowAnnounce: Mass Destruction on Dps9, Healer1, Dps7, PlayerName
+		ShowSpecialWarning: Mass Destruction (2) on you
+		PlaySound: DBM/SpecialWarningSound2
+		ShowYell: Line
+	[243.59] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004DA, 1237319, Dimensius, 100, 85, ??, 0
+		ShowSpecialWarning: Gamma Burst! (1)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 31.5, Pushback (2)
+	[254.12] SPELL_CAST_START: [Artoshion: Conqueror's Cross] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+		ShowSpecialWarning: Adds - switch targets (2)
+		PlaySound: VoicePack/mobsoon
+		StartTimer: 31.5, Adds (3)
+	[257.30] SPELL_AURA_APPLIED: [Artoshion->Tank1: Mass Destruction] Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, Player-1-00000001, Tank1, 0x511, 1249425, Mass Destruction, 0, DEBUFF, 0
+		ScheduleTask: announce1249423target:CombinedShow("PlayerName") at 258.30 (+1.00)
+			ShowAnnounce: Mass Destruction on Dps10, Tank2, Dps5, PlayerName
+		ShowSpecialWarning: Mass Destruction (3) on you
+		PlaySound: DBM/SpecialWarningSound2
+		ShowYell: Line
+	[264.64] SPELL_CAST_START: [Dimensius: Extinction] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1238765, Extinction, 0, 0
+		ShowSpecialWarning: Extinction (2) - dodge attack
+		PlaySound: VoicePack/aesoon
+		StartTimer: 31.5, Extinction (3)
+	[266.76] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowSpecialWarning: Crushing Gravity on you
+		PlaySound: VoicePack/scatter
+	[266.80] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000610, 1248483, Dimensius, 100, 75, ??, 0
+		AntiSpam: 5
+			Filtered: 37x UNIT_SPELLCAST_SUCCEEDED at 266.8, 266.8, 266.8, 266.84, 266.84, 266.84, 266.84, 266.84, 266.84, 266.84, 266.84, 266.84, 266.84, 266.92, 267.03, 267.19, 267.25, 267.52, 267.62, 267.62, 267.62, 267.65, 267.65, 267.65, 267.65, 267.67, 267.67, 267.82, 267.84, 267.9, 267.9, 267.9, 268.01, 268.3, 270.78, 271.1, 271.44
+		ShowAnnounce: Gravitational Distortion (2)
+		StartTimer: 31.5, Gravitational Distortion (3)
+	[271.28] UNIT_DIED: [->Artoshion] "", nil, 0x0, Creature-0-1-2810-1-245255-0000000001, Artoshion, 0xa48, -1, false, 0, 0
+		StopTimer: Timer1239262cdcount\t3
+		StopTimer: Timer1237319cdcount\t2
+		StopTimer: Timer1238765cdcount\t3
+		StopTimer: Timer1234242cdcount\t3
+	[271.77] SPELL_AURA_REMOVED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowAnnounce: Crushing Gravity faded
+	[279.78] SPELL_AURA_APPLIED: [Tank1->Tank1: Soaring Reshii] Player-1-00000001, Tank1, 0x511, Player-1-00000001, Tank1, 0x511, 1235114, Soaring Reshii, 0, DEBUFF, 0
+		ShowAnnounce: Flight on YOU
+	[302.77] SPELL_AURA_APPLIED: [Xal'atath->Xal'atath: Worldsoul Consumption] Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, Creature-0-1-2810-1-244534-0000000001, Xal'atath, 0xa48, 1237102, Worldsoul Consumption, 0, BUFF, 0
+		ShowAnnounce: Stage 2
+		PlaySound: VoicePack/ptwo
+	[306.99] SPELL_AURA_APPLIED: [->Tank1: Stellar Core] "", nil, 0x0, Player-1-00000001, Tank1, 0x511, 1246930, Stellar Core, 0, DEBUFF, 0
+		ShowAnnounce: Stellar Core on YOU
+	[319.07] SPELL_CAST_START: [Pargoth: Conqueror's Cross] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+		ShowSpecialWarning: Adds - switch targets (1)
+		PlaySound: VoicePack/mobsoon
+		StartTimer: 31.5, Adds (2)
+	[322.24] SPELL_CAST_START: [Pargoth: Starshard Nova] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1251619, Starshard Nova, 0, 0
+		ShowSpecialWarning: Nova (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 31.5, Nova (2)
+	[328.09] SPELL_PERIODIC_DAMAGE: [Pargoth->Tank1: Debris Field] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, Player-1-00000001, Tank1, 0x511, 1237696, Debris Field, 0, 0
+		AntiSpam: 4
+		ShowSpecialWarning: Debris Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[329.59] SPELL_CAST_START: [Dimensius: Extinction] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1238765, Extinction, 0, 0
+		ShowSpecialWarning: Extinction (1) - dodge attack
+		PlaySound: VoicePack/aesoon
+		StartTimer: 31.5, Extinction (2)
+	[330.09] SPELL_PERIODIC_DAMAGE: [Pargoth->Tank1: Debris Field] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, Player-1-00000001, Tank1, 0x511, 1237696, Debris Field, 0, 0
+		AntiSpam: 4
+		ShowSpecialWarning: Debris Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[331.73] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowSpecialWarning: Crushing Gravity on you
+		PlaySound: VoicePack/scatter
+	[331.76] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000630, 1248483, Dimensius, 100, 50, ??, 0
+		AntiSpam: 5
+			Filtered: 65x UNIT_SPELLCAST_SUCCEEDED at 331.76, 331.76, 331.76, 331.76, 331.76, 331.76, 331.76, 331.76, 331.76, 331.76, 331.83, 331.83, 331.83, 332.01, 332.19, 332.24, 332.4, 332.4, 332.43, 332.43, 332.43, 332.5, 332.5, 332.56, 332.56, 332.64, 332.64, 332.64, 332.78, 332.78, 332.79, 332.91, 333.03, 333.03, 333.03, 333.06, 333.06, 333.11, 333.11, 333.17, 333.17, 333.22, 333.22, 333.24, 333.32, 333.55, 333.57, 333.67, 333.67, 333.73, 333.76, 333.87, 333.89, 334.06, 334.13, 334.26, 334.28, 334.29, 334.3, 334.4, 334.48, 334.74, 334.91, 335.41, 335.44
+		ShowAnnounce: Gravitational Distortion (1)
+		StartTimer: 31.5, Gravitational Distortion (2)
+	[336.75] SPELL_AURA_REMOVED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowAnnounce: Crushing Gravity faded
+	[340.14] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-000000037D, 1237319, Dimensius, 100, 82, ??, 0
+		ShowSpecialWarning: Gamma Burst! (1)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 31.5, Pushback (2)
+	[350.66] SPELL_CAST_START: [Pargoth: Conqueror's Cross] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1239262, Conqueror's Cross, 0, 0
+		ShowSpecialWarning: Adds - switch targets (2)
+		PlaySound: VoicePack/mobsoon
+		StartTimer: 31.5, Adds (3)
+	[353.82] SPELL_CAST_START: [Pargoth: Starshard Nova] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, "", nil, 0x0, 1251619, Starshard Nova, 0, 0
+		ShowSpecialWarning: Nova (2) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 31.5, Nova (3)
+	[357.87] SPELL_PERIODIC_MISSED: [Pargoth->Tank1: Debris Field] Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, Player-1-00000001, Tank1, 0x511, 1237696, Debris Field, 0, 0
+		AntiSpam: 4
+		ShowSpecialWarning: Debris Field damage - move away
+		PlaySound: VoicePack/watchfeet
+	[361.18] SPELL_CAST_START: [Dimensius: Extinction] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1238765, Extinction, 0, 0
+		ShowSpecialWarning: Extinction (2) - dodge attack
+		PlaySound: VoicePack/aesoon
+		StartTimer: 31.5, Extinction (3)
+	[363.30] SPELL_AURA_APPLIED: [Dimensius->Tank1: Inverse Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234244, Inverse Gravity, 0, DEBUFF, 0
+		ShowSpecialWarning: Inverse Gravity on you
+		PlaySound: VoicePack/scatter
+	[363.34] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-0000000578, 1248483, Dimensius, 100, 75, ??, 0
+		AntiSpam: 5
+			Filtered: 43x UNIT_SPELLCAST_SUCCEEDED at 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 363.34, 364.69, 365.06, 365.17, 365.28, 365.28, 365.28, 365.57, 365.57, 365.74, 365.74, 365.79, 365.88, 365.88, 365.88, 365.99, 366.28, 366.36, 366.49, 366.78, 366.9, 367.49, 367.49, 367.68, 368.19
+		ShowAnnounce: Gravitational Distortion (2)
+		StartTimer: 31.5, Gravitational Distortion (3)
+	[368.30] SPELL_AURA_REMOVED: [Dimensius->Tank1: Inverse Gravity] Creature-0-1-2810-1-234478-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234244, Inverse Gravity, 0, DEBUFF, 0
+		ShowAnnounce: Inverse Gravity faded
+	[371.71] UNIT_SPELLCAST_START: boss1, Cast-3-1-2810-2-1237319-00000004EC, 1237319, Dimensius, 100, 100, ??, 0
+		ShowSpecialWarning: Gamma Burst! (2)
+		PlaySound: VoicePack/aesoon
+		StartTimer: 31.5, Pushback (3)
+	[372.76] UNIT_DIED: [->Pargoth] "", nil, 0x0, Creature-0-1-2810-1-245222-0000000001, Pargoth, 0xa48, -1, false, 0, 0
+		StopTimer: Timer1239262cdcount\t3
+		StopTimer: Timer1237319cdcount\t3
+		StopTimer: Timer1238765cdcount\t3
+		StopTimer: Timer1251619cdcount\t3
+		StopTimer: Timer1234242cdcount\t3
+	[395.67] SPELL_AURA_APPLIED: [Dimensius->Dimensius: Destabilized] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1245292, Destabilized, 0, DEBUFF, 0
+		ShowAnnounce: Destabilized on Dimensius
+		ShowAnnounce: Stage 3
+		PlaySound: VoicePack/pthree
+		StartTimer: 16.5, Stars
+		StartTimer: 47.6, Devour (1)
+		StartTimer: 29.5, Rings (1)
+		StartTimer: 57.4, Collapse (1)
+		StartTimer: 59.5, Gravitational Distortion (1)
+	[412.19] SPELL_CAST_SUCCESS: [Dimensius: Extinguish The Stars] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1231716, Extinguish The Stars, 0, 0
+		ShowSpecialWarning: Stars (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[425.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1341, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (1) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 43.0, Rings (2)
+	[443.17] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+		ShowSpecialWarning: Devour - move to Gravity Well
+		PlaySound: VoicePack/findshelter
+		StartTimer: 80.0, Devour (2)
+		ScheduleTask: (anonymous function) at 445.67 (+2.50)
+			ShowSpecialWarning: Devour - move to Gravity Well
+			PlaySound: VoicePack/findshelter
+	[449.44] SPELL_AURA_APPLIED: [Dimensius->Tank1: Gravity Well] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1232394, Gravity Well, 0, DEBUFF, 0
+		ShowAnnounce: Gravity Well
+	[450.17] SPELL_AURA_REMOVED: [Dimensius->Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1233539, Devour, 0, BUFF, 0
+		ShowAnnounce: Devour ended
+	[453.17] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
+		StartTimer: 30.0, Collapse (2)
+	[455.20] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000003D3, 1248483, Dimensius, 56, 7, Tank1, 0
+		AntiSpam: 5
+			Filtered: 32x UNIT_SPELLCAST_SUCCEEDED at 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.2, 455.21, 455.21, 455.21, 455.55, 455.76, 457.87, 458.08, 458.19, 458.19, 458.25, 458.25, 458.47, 458.98, 459.43, 459.56, 459.65, 459.65, 459.86, 460.01
+		ShowAnnounce: Gravitational Distortion (1)
+	[468.35] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1383, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (2) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 30.0, Rings (3)
+	[481.22] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowSpecialWarning: Crushing Gravity on you
+		PlaySound: VoicePack/scatter
+	[481.36] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000004C9, 1248483, Dimensius, 47.4, 42, Tank5, 0
+		AntiSpam: 5
+			Filtered: 38x UNIT_SPELLCAST_SUCCEEDED at 481.37, 481.37, 481.37, 481.37, 481.37, 481.38, 481.38, 481.4, 481.43, 481.43, 481.43, 481.43, 481.44, 481.44, 481.45, 481.45, 481.72, 481.86, 482.28, 482.31, 482.33, 482.33, 482.33, 482.83, 482.99, 482.99, 483.32, 483.32, 484.03, 484.06, 484.43, 484.69, 484.69, 485.06, 485.11, 485.2, 485.35, 486.08
+		ShowAnnounce: Gravitational Distortion (2)
+	[483.20] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
+		StartTimer: 30.0, Collapse (3)
+	[486.20] SPELL_AURA_REMOVED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowAnnounce: Crushing Gravity faded
+	[498.37] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1397, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (3) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 50.0, Rings (4)
+	[513.15] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
+		StartTimer: 30.0, Collapse (4)
+	[513.23] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000004B3, 1248483, Dimensius, 34.7, 86, ??, 0
+		AntiSpam: 5
+			Filtered: 34x UNIT_SPELLCAST_SUCCEEDED at 513.23, 513.27, 513.27, 513.27, 513.27, 513.27, 513.31, 513.31, 513.32, 513.33, 513.33, 513.35, 513.4, 513.56, 513.59, 514.14, 514.18, 514.23, 514.3, 514.45, 514.45, 514.45, 514.6, 514.65, 515.06, 515.57, 515.72, 515.75, 515.9, 515.9, 515.9, 516.25, 516.72, 516.75
+		ShowAnnounce: Gravitational Distortion (3)
+	[523.17] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+		ShowSpecialWarning: Devour - move to Gravity Well
+		PlaySound: VoicePack/findshelter
+		StartTimer: 80.0, Devour (3)
+		ScheduleTask: (anonymous function) at 525.67 (+2.50)
+			ShowSpecialWarning: Devour - move to Gravity Well
+			PlaySound: VoicePack/findshelter
+	[529.64] SPELL_AURA_APPLIED: [Dimensius->Tank1: Gravity Well] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1232394, Gravity Well, 0, DEBUFF, 0
+		ShowAnnounce: Gravity Well
+	[530.18] SPELL_AURA_REMOVED: [Dimensius->Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, 1233539, Devour, 0, BUFF, 0
+		ShowAnnounce: Devour ended
+	[539.16] SPELL_AURA_APPLIED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowSpecialWarning: Crushing Gravity on you
+		PlaySound: VoicePack/scatter
+	[539.18] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-000000038A, 1248483, Dimensius, 28.8, 10, Tank5, 0
+		AntiSpam: 5
+			Filtered: 18x UNIT_SPELLCAST_SUCCEEDED at 539.18, 539.19, 539.19, 539.21, 539.21, 539.21, 539.21, 539.21, 541.01, 541.46, 541.51, 542.24, 542.37, 542.37, 542.6, 542.77, 542.87, 543.05
+		ShowAnnounce: Gravitational Distortion (4)
+	[543.15] SPELL_CAST_START: [Dimensius: Cosmic Collapse] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1234263, Cosmic Collapse, 0, 0
+		StartTimer: 30.0, Collapse (5)
+	[544.17] SPELL_AURA_REMOVED: [Dimensius->Tank1: Crushing Gravity] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, Player-1-00000001, Tank1, 0x511, 1234243, Crushing Gravity, 0, DEBUFF, 0
+		ShowAnnounce: Crushing Gravity faded
+	[548.21] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1476, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (4) - dodge attack
+		PlaySound: VoicePack/watchstep
+		StartTimer: 30.0, Rings (5)
+	[571.29] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1248483-00000002D0, 1248483, Dimensius, 24.4, 56, Tank1, 0
+		AntiSpam: 5
+			Filtered: 10x UNIT_SPELLCAST_SUCCEEDED at 571.29, 571.29, 571.29, 571.29, 571.29, 571.29, 572.82, 573.64, 574.31, 575.05
+		ShowAnnounce: Gravitational Distortion (5)
+	[578.20] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 1495, nil, 0, false, false, false, false, 0
+		ShowSpecialWarning: Rings (5) - dodge attack
+		PlaySound: VoicePack/watchstep
+	[603.16] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000001, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
+		ShowSpecialWarning: Devour - move to Gravity Well
+		PlaySound: VoicePack/findshelter
+		ScheduleTask: (anonymous function) at 605.66 (+2.50)
+			ShowSpecialWarning: Devour - move to Gravity Well
+			PlaySound: VoicePack/findshelter
+	[608.26] ENCOUNTER_END: 3135, Dimensius, the All-Devouring, 16, 20, 0, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1229038 1243577 1243609 1234243 1234244 1233539 1249425
