@@ -105,9 +105,11 @@ Timers:
 	Self-Destruct, time=64.00, type=cd, spellId=1230302, triggerDeltas = 157.98
 		[157.98] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
 		[208.90] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000A1, Manaforged Titan, 0xa48, -1, false, 0, 0
-	Dread Mortar, time=24.30, type=cdnp, spellId=1232399, triggerDeltas = 181.28, 0.80, 24.31
+	Dread Mortar, time=24.30, type=cd, spellId=1232399, triggerDeltas = 181.28, 0.80, 24.31
 		[181.28] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-0000000042, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
 			 Triggered 3x, delta times: 181.28, 0.80, 24.31
+		[202.69] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-0000000042, Manaforged Titan, 0xa48, -1, false, 0, 0
+			 Triggered 2x, delta times: 202.69, 6.21
 	Cosmic Maw (%s), time=97.30, type=cdcount, spellId=1234529, triggerDeltas = 119.48, 97.72
 		[119.48] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
 		[217.20] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-000000002E, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-000000002E, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
@@ -375,6 +377,8 @@ Event trace:
 	[197.89] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-000000003F, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (4)
 		PlaySound: VoicePack/kick4r
+	[202.69] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-0000000042, Manaforged Titan, 0xa48, -1, false, 0, 0
+		StopTimer: Timer1232399cd\tCreature-0-1-2810-1-241800-0000000042
 	[203.99] SPELL_CAST_START: [Nexus-Prince Ky'vor: Netherblast] Creature-0-1-2810-1-241803-000000003F, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Ky'vor! (5)
 		PlaySound: VoicePack/kick5r
@@ -387,6 +391,7 @@ Event trace:
 		PlaySound: VoicePack/kick5r
 	[208.90] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000A1, Manaforged Titan, 0xa48, -1, false, 0, 0
 		StopTimer: Timer1230302cd
+		StopTimer: Timer1232399cd\tCreature-0-1-2810-1-241800-00000000A1
 	[209.22] SPELL_CAST_START: [Nexus-Prince Ky'vor: Nexus Beams] Creature-0-1-2810-1-241803-000000003F, Nexus-Prince Ky'vor, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
 		ShowSpecialWarning: Beams - dodge attack
 		PlaySound: VoicePack/watchstep

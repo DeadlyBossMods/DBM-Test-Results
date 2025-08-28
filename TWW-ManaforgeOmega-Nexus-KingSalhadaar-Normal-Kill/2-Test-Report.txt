@@ -101,9 +101,11 @@ Timers:
 	Self-Destruct, time=64.00, type=cd, spellId=1230302, triggerDeltas = 158.04
 		[158.04] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
 		[217.31] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-0000000057, Manaforged Titan, 0xa48, -1, false, 0, 0
-	Dread Mortar, time=24.30, type=cdnp, spellId=1232399, triggerDeltas = 173.68, 3.24, 21.12, 3.25
+	Dread Mortar, time=24.30, type=cd, spellId=1232399, triggerDeltas = 173.68, 3.24, 21.12, 3.25
 		[173.68] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-0000000057, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
 			 Triggered 4x, delta times: 173.68, 3.24, 21.12, 3.25
+		[209.03] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000A0, Manaforged Titan, 0xa48, -1, false, 0, 0
+			 Triggered 2x, delta times: 209.03, 8.28
 	Cosmic Maw (%s), time=97.30, type=cdcount, spellId=1234529, triggerDeltas = 119.54, 89.50
 		[119.54] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
 		[209.04] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000043, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000043, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
@@ -309,6 +311,8 @@ Event trace:
 		ShowSpecialWarning: Dread Mortar - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 24.3, Dread Mortar
+	[209.03] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000A0, Manaforged Titan, 0xa48, -1, false, 0, 0
+		StopTimer: Timer1232399cd\tCreature-0-1-2810-1-241800-00000000A0
 	[209.04] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000043, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000043, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
 		StartTimer: 23.9, Netherbreaker (2)
 		StartTimer: 30.9, Void Claws (2)
@@ -320,6 +324,7 @@ Event trace:
 		StartTimer: 10.0, Self-Destruct
 	[217.31] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-0000000057, Manaforged Titan, 0xa48, -1, false, 0, 0
 		StopTimer: Timer1230302cd
+		StopTimer: Timer1232399cd\tCreature-0-1-2810-1-241800-0000000057
 	[248.03] SPELL_CAST_START: [The Royal Voidwing: Dimension Breath] Vehicle-0-1-2810-1-233823-0000000043, The Royal Voidwing, 0xa48, "", nil, 0x0, 1228163, Dimension Breath, 0, 0
 		ShowSpecialWarning: Dimension Breath! (2)
 		PlaySound: VoicePack/breathsoon

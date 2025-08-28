@@ -111,9 +111,11 @@ Timers:
 	Self-Destruct, time=64.00, type=cd, spellId=1230302, triggerDeltas = 157.92
 		[157.92] SPELL_CAST_START: [Nexus-King Salhadaar: Rally the Shadowguard] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1228065, Rally the Shadowguard, 0, 0
 		[216.53] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000DF, Manaforged Titan, 0xa48, -1, false, 0, 0
-	Dread Mortar, time=24.30, type=cdnp, spellId=1232399, triggerDeltas = 173.62, 0.42, 23.96, 0.41
+	Dread Mortar, time=24.30, type=cd, spellId=1232399, triggerDeltas = 173.62, 0.42, 23.96, 0.41
 		[173.62] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-000000004C, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
 			 Triggered 4x, delta times: 173.62, 0.42, 23.96, 0.41
+		[212.51] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-000000004C, Manaforged Titan, 0xa48, -1, false, 0, 0
+			 Triggered 2x, delta times: 212.51, 4.02
 	Cosmic Maw (%s), time=97.30, type=cdcount, spellId=1234529, triggerDeltas = 119.45, 93.05
 		[119.45] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
 		[212.50] SPELL_AURA_REMOVED: [The Royal Voidwing->The Royal Voidwing: Royal Ward] Vehicle-0-1-2810-1-233823-0000000038, The Royal Voidwing, 0xa48, Vehicle-0-1-2810-1-233823-0000000038, The Royal Voidwing, 0xa48, 1228284, Royal Ward, 0, BUFF, 0
@@ -368,11 +370,14 @@ Event trace:
 		StartTimer: 27.3, Void Claws (2)
 		StartTimer: 29.3, Cosmic Maw (2)
 		StartTimer: 35.3, Dimension Breath (2)
+	[212.51] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-000000004C, Manaforged Titan, 0xa48, -1, false, 0, 0
+		StopTimer: Timer1232399cd\tCreature-0-1-2810-1-241800-000000004C
 	[212.97] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000049, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (6)
 		PlaySound: VoicePack/kickcast
 	[216.53] UNIT_DIED: [->Manaforged Titan] "", nil, 0x0, Creature-0-1-2810-1-241800-00000000DF, Manaforged Titan, 0xa48, -1, false, 0, 0
 		StopTimer: Timer1230302cd
+		StopTimer: Timer1232399cd\tCreature-0-1-2810-1-241800-00000000DF
 	[219.07] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000049, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (7)
 		PlaySound: VoicePack/kickcast
