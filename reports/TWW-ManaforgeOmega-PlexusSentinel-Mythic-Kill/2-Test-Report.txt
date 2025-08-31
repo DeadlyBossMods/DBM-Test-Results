@@ -1,0 +1,311 @@
+Test: TWW/ManaforgeOmega/PlexusSentinel/Mythic/Kill
+Mod:  DBM-Raids-WarWithin/2684
+
+Findings:
+	Unused event registration: SPELL_AURA_REMOVED 1219439 (Obliteration Arcanocannon)
+	Unused event registration: SPELL_AURA_REMOVED 1219459 (Manifest Matrices)
+	Unused event registration: SPELL_AURA_REMOVED 1219607 (Eradicating Salvo)
+	Unused event registration: SPELL_PERIODIC_MISSED 1219354 (Potent Mana Residue)
+	SpecialWarning for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_APPLIED 1219439 (Obliteration Arcanocannon)
+	Timer for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
+	Timer for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_REMOVED 1220982 (Protocol: Purge)
+	Yell for spell ID 1219263 (Obliteration Arcanocannon) is triggered by event SPELL_AURA_APPLIED 1219439 (Obliteration Arcanocannon)
+	Timer for spell ID 1219450 (Manifest Matrices) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1219450 (Manifest Matrices) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
+	Timer for spell ID 1219450 (Manifest Matrices) is triggered by event SPELL_AURA_REMOVED 1220982 (Protocol: Purge)
+	SpecialWarning for spell ID 1219607 (Eradicating Salvo) is triggered by event SPELL_PERIODIC_DAMAGE 1219354 (Potent Mana Residue)
+	Timer for spell ID 1219607 (Eradicating Salvo) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1219607 (Eradicating Salvo) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
+	Timer for spell ID 1219607 (Eradicating Salvo) is triggered by event SPELL_AURA_REMOVED 1220982 (Protocol: Purge)
+	Timer for spell ID 1219607 (Eradicating Salvo) is triggered by event SPELL_CAST_START 1219531 (Eradicating Salvo)
+	SpecialWarning for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_CAST_START 1220553 (Protocol: Purge)
+	SpecialWarning for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_CAST_START 1220555 (Protocol: Purge)
+	Timer for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1220489 (Protocol: Purge) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
+	Timer for spell ID 1234733 (Cleanse the Chamber) is triggered by event SPELL_AURA_REMOVED 1220618 (Protocol: Purge)
+	Timer for spell ID 1234733 (Cleanse the Chamber) is triggered by event SPELL_AURA_REMOVED 1220981 (Protocol: Purge)
+	Timer for spell ID 1234733 (Cleanse the Chamber) is triggered by event SPELL_AURA_REMOVED 1220982 (Protocol: Purge)
+	Timer Manifest Matrices (%s), time=38.90, type=varcount, spellId=1219450 (time=5.40, variance=0.00) got refreshed early with 0.53s remaining
+		Refreshed by: [405.22] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+
+Unused objects:
+	[Special Warning] Obliteration Arcanocannon on >%s< - taunt now, type=taunt, spellId=1219263
+	[Special Warning] Manifest Matrices - move away from others, type=moveaway, spellId=1219450
+	[Special Warning] Eradicating Salvo (%s) (Position: %s) on you, type=youposcount, spellId=1219531
+	[Yell] %d, type=shortfade, spellId=1219263
+	[Yell] %d, type=shortfade, spellId=1219450
+	[Yell] Manifest Matrices, type=shortyell, spellId=1219450
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1219607
+	[Yell] Soak, type=shortposition, spellId=1219607
+
+Timers:
+	Obliteration Arcanocannon (%s), time=36.50, type=varcount, spellId=1219263, triggerDeltas = 0.00, 22.26, 86.46, 14.02, 29.18, 104.80, 13.33, 29.18, 101.12, 13.40
+		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 16, 20, 0
+		[ 22.26] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+			 Triggered 6x, delta times: 22.26, 100.48, 29.18, 118.13, 29.18, 114.52
+		[108.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[256.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
+		[400.35] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220982, Protocol: Purge, 0, BUFF, 0
+	Manifest Matrices (%s), time=38.90, type=varcount, spellId=1219450, triggerDeltas = 0.00, 9.35, 99.37, 5.50, 26.76, 26.80, 88.94, 4.80, 26.79, 27.99, 84.05, 4.87
+		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 16, 20, 0
+		[  9.35] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+			 Triggered 8x, delta times: 9.35, 104.87, 26.76, 26.80, 93.74, 26.79, 27.99, 88.92
+		[108.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[256.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
+		[400.35] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220982, Protocol: Purge, 0, BUFF, 0
+	Eradicating Salvo (%s), time=36.50, type=varcount, spellId=1219607, triggerDeltas = 0.00, 108.72, 20.10, 31.69, 96.21, 19.39, 31.64, 92.60
+		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 16, 20, 0
+		[108.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[128.82] SPELL_CAST_START: [Plexus Sentinel: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219531, Eradicating Salvo, 0, 0
+			 Triggered 4x, delta times: 128.82, 31.69, 115.60, 31.64
+		[256.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
+		[400.35] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220982, Protocol: Purge, 0, BUFF, 0
+	Protocol: Purge (%s), time=97.30, type=cdcount, spellId=1220489, triggerDeltas = 0.00, 108.72, 148.00
+		[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 16, 20, 0
+		[108.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[256.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
+	Cleanse the Chamber (%s), time=97.30, type=cdcount, spellId=1234733, triggerDeltas = 108.72, 148.00, 143.63
+		[108.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		[256.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
+		[400.35] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220982, Protocol: Purge, 0, BUFF, 0
+
+Announces:
+	Manifest Matrices on >%s<, type=target, spellId=1219450, triggerDeltas = 12.04, 28.19, 76.64, 27.00, 26.86, 22.96, 70.60, 26.49, 0.43, 27.60, 0.47, 30.40, 58.17, 0.42
+		[ 12.04] Scheduled at 11.74 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000005, Tank4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[ 40.23] Scheduled at 39.93 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000001, Tank1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[116.87] Scheduled at 116.57 by SPELL_AURA_APPLIED: [Plexus Sentinel->Healer1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000008, Healer1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[143.87] Scheduled at 143.57 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000005, Tank4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[170.73] Scheduled at 170.43 by SPELL_AURA_APPLIED: [Plexus Sentinel->Healer1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000008, Healer1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[193.69] Scheduled at 193.39 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank11: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000019, Tank11, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[264.29] Scheduled at 263.99 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000001, Tank1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[290.78] Scheduled at 290.48 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[291.21] Scheduled at 290.91 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000005, Tank4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[318.81] Scheduled at 318.51 by SPELL_AURA_APPLIED: [Plexus Sentinel->Dps4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000012, Dps4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[319.28] Scheduled at 318.98 by SPELL_AURA_APPLIED: [Plexus Sentinel->Healer4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000015, Healer4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[349.68] Scheduled at 349.38 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[407.85] Scheduled at 407.55 by SPELL_AURA_APPLIED: [Plexus Sentinel->Healer4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000015, Healer4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		[408.27] Scheduled at 407.97 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+	Eradicating Salvo (%s) on >%s<, type=targetcount, spellId=1219607, triggerDeltas = 41.05, 88.10, 31.66, 34.04, 81.56, 31.66, 31.69
+		[ 41.05] Scheduled at 40.75 by SPELL_AURA_APPLIED: [Plexus Sentinel->Healer2: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000009, Healer2, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		[129.15] Scheduled at 128.85 by SPELL_AURA_APPLIED: [Plexus Sentinel->Dps1: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000004, Dps1, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		[160.81] Scheduled at 160.51 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank7: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000014, Tank7, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		[194.85] Scheduled at 194.55 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		[276.41] Scheduled at 276.11 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank5: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000007, Tank5, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		[308.07] Scheduled at 307.77 by SPELL_AURA_APPLIED: [Plexus Sentinel->Tank6: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000013, Tank6, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		[339.76] Scheduled at 339.46 by SPELL_AURA_APPLIED: [Plexus Sentinel->Dps3: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000011, Dps3, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+	Cleanse the Chamber, type=spell, spellId=1234733, triggerDeltas = 0.02, 136.10, 148.54
+		[  0.02] SPELL_CAST_START: [Plexus Sentinel: Cleanse the Chamber] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1234733, Cleanse the Chamber, 0, 0
+			 Triggered 3x, delta times: 0.02, 136.10, 148.54
+
+Special warnings:
+	Obliteration Arcanocannon (%s) on you, type=youcount, spellId=1219263, triggerDeltas = 22.26, 100.49, 57.21, 90.10, 57.20, 86.51
+		[ 22.26] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 22.26, 100.49, 57.21, 90.10, 57.20, 86.51
+	%s damage - move away, type=gtfo, spellId=1219607, triggerDeltas = 185.83, 148.24, 2.00
+		[185.83] SPELL_PERIODIC_DAMAGE: [Plexus Sentinel->Tank2: Potent Mana Residue] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219354, Potent Mana Residue, 0, 0
+			 Triggered 3x, delta times: 185.83, 148.24, 2.00
+	Protocol: Purge! (%s), type=count, spellId=1220489, triggerDeltas = 60.57, 141.29, 148.16
+		[ 60.57] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220489, Protocol: Purge, 0, 0
+		[201.86] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220553, Protocol: Purge, 0, 0
+		[350.02] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220555, Protocol: Purge, 0, 0
+
+Yells:
+	Obliteration Arcanocannon, type=shortyell, spellId=1219263
+		[ 22.26] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 22.26, 100.49, 57.21, 90.10, 57.20, 86.51
+
+Voice pack sounds:
+	VoicePack/findshelter
+		[ 60.57] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220489, Protocol: Purge, 0, 0
+		[201.86] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220553, Protocol: Purge, 0, 0
+		[350.02] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220555, Protocol: Purge, 0, 0
+	VoicePack/watchfeet
+		[185.83] SPELL_PERIODIC_DAMAGE: [Plexus Sentinel->Tank2: Potent Mana Residue] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219354, Potent Mana Residue, 0, 0
+			 Triggered 3x, delta times: 185.83, 148.24, 2.00
+	VoicePack/runout
+		[ 22.26] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+			 Triggered 6x, delta times: 22.26, 100.49, 57.21, 90.10, 57.20, 86.51
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3129, Plexus Sentinel, 16, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1219450 1219263 1219531 1220489 1220553 1220555 1234733, SPELL_AURA_APPLIED 1219459 1219439 1219607, SPELL_AURA_REMOVED 1219459 1219439 1219607 1220618 1220981 1220982, SPELL_PERIODIC_DAMAGE 1219354, SPELL_PERIODIC_MISSED 1219354
+		StartTimer: 9.5, Manifest Matrices (1)
+		StartTimer: 21.7, Obliteration Arcanocannon (1)
+		StartTimer: 41.0, Eradicating Salvo (1)
+		StartTimer: 60.8, Protocol: Purge (1)
+	[  0.02] SPELL_CAST_START: [Plexus Sentinel: Cleanse the Chamber] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1234733, Cleanse the Chamber, 0, 0
+		ShowAnnounce: Cleanse the Chamber
+	[  9.35] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 28.1, Manifest Matrices (2)
+	[ 11.74] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000005, Tank4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank4") at 12.04 (+0.30)
+			ShowAnnounce: Manifest Matrices on Dps2, Healer2, Healer4, Tank4
+	[ 22.26] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+		StartTimer: 30.4, Obliteration Arcanocannon (2)
+	[ 22.26] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+		ShowSpecialWarning: Obliteration Arcanocannon (1) on you
+		PlaySound: VoicePack/runout
+		ShowYell: Obliteration Arcanocannon
+	[ 39.93] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000001, Tank1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank1") at 40.23 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank9, Dps3, Healer3, Tank1
+	[ 40.75] SPELL_AURA_APPLIED: [Plexus Sentinel->Healer2: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000009, Healer2, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		ScheduleTask: announce1219607targetcount:CombinedShow(1.0, "Healer2") at 41.05 (+0.30)
+			ShowAnnounce: Eradicating Salvo (1) on Healer2
+	[ 60.57] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220489, Protocol: Purge, 0, 0
+		ShowSpecialWarning: Protocol: Purge! (1)
+		PlaySound: VoicePack/findshelter
+	[108.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220618, Protocol: Purge, 0, BUFF, 0
+		StartTimer: 5.8, Manifest Matrices (1)
+		StartTimer: 14.3, Obliteration Arcanocannon (1)
+		StartTimer: 21.6, Eradicating Salvo (1)
+		StartTimer: 94.0, Protocol: Purge (2)
+		StartTimer: 32.5, Cleanse the Chamber (1)
+	[114.22] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 26.8, Manifest Matrices (2)
+	[116.57] SPELL_AURA_APPLIED: [Plexus Sentinel->Healer1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000008, Healer1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Healer1") at 116.87 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank12, Healer3, Dps3, Healer1
+	[122.74] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+		StartTimer: 29.2, Obliteration Arcanocannon (2)
+	[122.75] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+		ShowSpecialWarning: Obliteration Arcanocannon (1) on you
+		PlaySound: VoicePack/runout
+		ShowYell: Obliteration Arcanocannon
+	[128.82] SPELL_CAST_START: [Plexus Sentinel: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219531, Eradicating Salvo, 0, 0
+		StartTimer: 35.0, Eradicating Salvo (2)
+	[128.85] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps1: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000004, Dps1, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		ScheduleTask: announce1219607targetcount:CombinedShow(1.0, "Dps1") at 129.15 (+0.30)
+			ShowAnnounce: Eradicating Salvo (1) on Dps1
+	[136.12] SPELL_CAST_START: [Plexus Sentinel: Cleanse the Chamber] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1234733, Cleanse the Chamber, 0, 0
+		ShowAnnounce: Cleanse the Chamber
+	[140.98] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 28.0, Manifest Matrices (3)
+	[143.57] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000005, Tank4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank4") at 143.87 (+0.30)
+			ShowAnnounce: Manifest Matrices on Healer4, Tank8, Tank1, Tank4
+	[151.92] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+		StartTimer: 29.3, Obliteration Arcanocannon (3)
+	[160.51] SPELL_CAST_START: [Plexus Sentinel: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219531, Eradicating Salvo, 0, 0
+		StartTimer: 35.0, Eradicating Salvo (3)
+	[160.51] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank7: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000014, Tank7, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		ScheduleTask: announce1219607targetcount:CombinedShow(2.0, "Tank7") at 160.81 (+0.30)
+			ShowAnnounce: Eradicating Salvo (2) on Tank7
+	[167.78] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 26.8, Manifest Matrices (4)
+	[170.43] SPELL_AURA_APPLIED: [Plexus Sentinel->Healer1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000008, Healer1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Healer1") at 170.73 (+0.30)
+			ShowAnnounce: Manifest Matrices on Healer2, Healer3, Tank12, Healer1
+	[179.96] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+		ShowSpecialWarning: Obliteration Arcanocannon (3) on you
+		PlaySound: VoicePack/runout
+		ShowYell: Obliteration Arcanocannon
+	[185.83] SPELL_PERIODIC_DAMAGE: [Plexus Sentinel->Tank2: Potent Mana Residue] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219354, Potent Mana Residue, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Potent Mana Residue damage - move away
+		PlaySound: VoicePack/watchfeet
+	[193.39] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank11: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000019, Tank11, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank11") at 193.69 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank5, Tank3, Tank4, Tank11
+	[194.55] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		ScheduleTask: announce1219607targetcount:CombinedShow(3.0, "Tank8") at 194.85 (+0.30)
+			ShowAnnounce: Eradicating Salvo (3) on Tank8
+	[201.86] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220553, Protocol: Purge, 0, 0
+		ShowSpecialWarning: Protocol: Purge! (2)
+		PlaySound: VoicePack/findshelter
+	[256.72] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220981, Protocol: Purge, 0, BUFF, 0
+		StartTimer: 5.8, Manifest Matrices (1)
+		StartTimer: 14.3, Obliteration Arcanocannon (1)
+		StartTimer: 21.6, Eradicating Salvo (1)
+		StartTimer: 94.0, Protocol: Purge (3)
+		StartTimer: 27.3, Cleanse the Chamber (1)
+	[261.52] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 26.8, Manifest Matrices (2)
+	[263.99] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank1: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000001, Tank1, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank1") at 264.29 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank7, Tank11, Tank3, Tank1
+	[270.05] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+		StartTimer: 29.2, Obliteration Arcanocannon (2)
+	[270.06] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+		ShowSpecialWarning: Obliteration Arcanocannon (1) on you
+		PlaySound: VoicePack/runout
+		ShowYell: Obliteration Arcanocannon
+	[276.11] SPELL_CAST_START: [Plexus Sentinel: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219531, Eradicating Salvo, 0, 0
+		StartTimer: 35.0, Eradicating Salvo (2)
+	[276.11] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank5: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000007, Tank5, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		ScheduleTask: announce1219607targetcount:CombinedShow(1.0, "Tank5") at 276.41 (+0.30)
+			ShowAnnounce: Eradicating Salvo (1) on Tank5
+	[284.66] SPELL_CAST_START: [Plexus Sentinel: Cleanse the Chamber] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1234733, Cleanse the Chamber, 0, 0
+		ShowAnnounce: Cleanse the Chamber
+	[288.31] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 28.0, Manifest Matrices (3)
+	[290.48] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank8") at 290.78 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank8
+	[290.91] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000005, Tank4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank4") at 291.21 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank12, Healer3, Tank4
+	[299.23] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+		StartTimer: 29.3, Obliteration Arcanocannon (3)
+	[307.75] SPELL_CAST_START: [Plexus Sentinel: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219531, Eradicating Salvo, 0, 0
+		StartTimer: 35.0, Eradicating Salvo (3)
+	[307.77] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank6: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000013, Tank6, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		ScheduleTask: announce1219607targetcount:CombinedShow(2.0, "Tank6") at 308.07 (+0.30)
+			ShowAnnounce: Eradicating Salvo (2) on Tank6
+	[316.30] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 26.8, Manifest Matrices (4)
+	[318.51] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000012, Dps4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Dps4") at 318.81 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank5, Dps4
+	[318.98] SPELL_AURA_APPLIED: [Plexus Sentinel->Healer4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000015, Healer4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Healer4") at 319.28 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank6, Healer4
+	[327.26] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+		ShowSpecialWarning: Obliteration Arcanocannon (3) on you
+		PlaySound: VoicePack/runout
+		ShowYell: Obliteration Arcanocannon
+	[334.07] SPELL_PERIODIC_DAMAGE: [Plexus Sentinel->Tank2: Potent Mana Residue] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219354, Potent Mana Residue, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Potent Mana Residue damage - move away
+		PlaySound: VoicePack/watchfeet
+	[336.07] SPELL_PERIODIC_DAMAGE: [Plexus Sentinel->Tank2: Potent Mana Residue] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219354, Potent Mana Residue, 0, 0
+		AntiSpam: 3
+		ShowSpecialWarning: Potent Mana Residue damage - move away
+		PlaySound: VoicePack/watchfeet
+	[339.46] SPELL_AURA_APPLIED: [Plexus Sentinel->Dps3: Eradicating Salvo] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000011, Dps3, 0x512, 1219607, Eradicating Salvo, 0, DEBUFF, 0
+		ScheduleTask: announce1219607targetcount:CombinedShow(3.0, "Dps3") at 339.76 (+0.30)
+			ShowAnnounce: Eradicating Salvo (3) on Dps3
+	[349.38] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank8") at 349.68 (+0.30)
+			ShowAnnounce: Manifest Matrices on Dps2, Tank9, Tank3, Tank8
+	[350.02] SPELL_CAST_START: [Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1220555, Protocol: Purge, 0, 0
+		ShowSpecialWarning: Protocol: Purge! (3)
+		PlaySound: VoicePack/findshelter
+	[400.35] SPELL_AURA_REMOVED: [Plexus Sentinel->Plexus Sentinel: Protocol: Purge] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, 1220982, Protocol: Purge, 0, BUFF, 0
+		StartTimer: 5.4, Manifest Matrices (1)
+		StartTimer: 13.3, Obliteration Arcanocannon (1)
+		StartTimer: 21.2, Eradicating Salvo (1)
+		StartTimer: 65.3, Cleanse the Chamber (1)
+	[405.22] SPELL_CAST_START: [Plexus Sentinel: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219450, Manifest Matrices, 0, 0
+		StartTimer: 23.1, Manifest Matrices (2)
+	[407.55] SPELL_AURA_APPLIED: [Plexus Sentinel->Healer4: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000015, Healer4, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Healer4") at 407.85 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank5, Dps3, Healer4
+	[407.97] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank8: Manifest Matrices] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000016, Tank8, 0x512, 1219459, Manifest Matrices, 0, DEBUFF, 0
+		ScheduleTask: announce1219450target:CombinedShow("Tank8") at 408.27 (+0.30)
+			ShowAnnounce: Manifest Matrices on Tank8
+	[413.75] SPELL_CAST_START: [Plexus Sentinel: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, "", nil, 0x0, 1219263, Obliteration Arcanocannon, 0, 0
+		StartTimer: 29.1, Obliteration Arcanocannon (2)
+	[413.77] SPELL_AURA_APPLIED: [Plexus Sentinel->Tank2: Obliteration Arcanocannon] Creature-0-1-2810-1-233814-0000000002, Plexus Sentinel, 0xa48, Player-1-00000002, Tank2, 0x511, 1219439, Obliteration Arcanocannon, 0, DEBUFF, 0
+		ShowSpecialWarning: Obliteration Arcanocannon (1) on you
+		PlaySound: VoicePack/runout
+		ShowYell: Obliteration Arcanocannon
+	[418.67] ENCOUNTER_END: 3129, Plexus Sentinel, 16, 20, 1, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1219459 1219439 1219607 1220618 1220981 1220982
