@@ -34,6 +34,10 @@ Findings:
 	Timer for spell ID 1234263 (Cosmic Collapse) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
 	Timer for spell ID 1235114 (Soaring Reshii) is triggered by event SPELL_CAST_START 1234898 (Event Horizon)
 	Timer for spell ID 1250055 (Voidgrasp) is triggered by event SPELL_AURA_APPLIED 1245292 (Destabilized)
+	Timer Rings (%s), time=97.30, type=cdcount, spellId=1234044 (time=66.60, variance=0.00) got refreshed early with 33.53s remaining
+		Refreshed by: [435.05] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4898, nil, 0, false, false, false, false, 0
+	Timer Rings (%s), time=97.30, type=cdcount, spellId=1234044 (time=80.70, variance=0.00) got refreshed early with 50.83s remaining
+		Refreshed by: [350.82] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4880, nil, 0, false, false, false, false, 0
 
 Unused objects:
 	[Announce] Gravitational Distortion (%s), type=count, spellId=1234242
@@ -478,8 +482,8 @@ Event trace:
 		ShowAnnounce: Stage 3
 		PlaySound: VoicePack/pthree
 		StartTimer: 16.5, Stars
-		StartTimer: 47.6, Devour (1)
-		StartTimer: 29.7, Rings (1)
+		StartTimer: 47.4, Devour (1)
+		StartTimer: 80.7, Rings (1)
 		StartTimer: 65.0, Collapse (1)
 		StartTimer: 60.0, Voidgrasp (1)
 		StartTimer: 56.1, Supernova (1)
@@ -489,7 +493,7 @@ Event trace:
 	[350.82] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4880, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Rings (1) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 51.2, Rings (2)
+		StartTimer: 33.1, Rings (2)
 	[368.41] SPELL_CAST_START: [Dimensius: Devour] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1233539, Devour, 0, 0
 		ShowSpecialWarning: Devour - move to Gravity Well
 		PlaySound: VoicePack/findshelter
@@ -520,7 +524,7 @@ Event trace:
 	[401.94] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4890, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Rings (2) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 33.1, Rings (3)
+		StartTimer: 66.6, Rings (3)
 	[415.07] SPELL_AURA_APPLIED: [Dimensius->Dps19: Voidgrasp] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Player-1-00000020, Dps19, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 415.07, 415.07, 415.07, 415.07, 415.07
@@ -536,7 +540,7 @@ Event trace:
 	[435.05] CHAT_MSG_RAID_BOSS_EMOTE: %s casts [Darkened Sky]!, Dimensius, "", "", Dimensius, "", 0, 0, "", 0, 4898, nil, 0, false, false, false, false, 0
 		ShowSpecialWarning: Rings (3) - dodge attack
 		PlaySound: VoicePack/watchstep
-		StartTimer: 66.6, Rings (4)
+		StartTimer: 33.1, Rings (4)
 	[448.42] SPELL_AURA_APPLIED: [Dimensius->Dps11: Voidgrasp] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Player-1-00000012, Dps11, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 448.42, 448.42, 448.42, 448.42, 448.42
@@ -562,7 +566,7 @@ Event trace:
 	[477.29] SPELL_CAST_START: [Dimensius: Supernova] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, "", nil, 0x0, 1232973, Supernova, 0, 0
 		ShowSpecialWarning: Supernova - run away (5)
 		PlaySound: VoicePack/runout
-		StartTimer: 14.5, Supernova (6)
+		StartTimer: 14.4, Supernova (6)
 	[481.73] SPELL_AURA_APPLIED: [Dimensius->Dps17: Voidgrasp] Creature-0-1-2810-1-233824-0000000002, Dimensius, 0xa48, Player-1-00000018, Dps17, 0x512, 1250055, Voidgrasp, 0, DEBUFF, 0
 		AntiSpam: 3
 			Filtered: 5x SPELL_AURA_APPLIED at 481.73, 481.73, 481.73, 481.73, 481.73
