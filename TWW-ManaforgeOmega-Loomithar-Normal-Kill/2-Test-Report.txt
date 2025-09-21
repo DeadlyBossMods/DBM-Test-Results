@@ -65,7 +65,7 @@ Announces:
 			 Triggered 3x, delta times: 149.74, 20.01, 20.05
 
 Special warnings:
-	Overinfusion Burst - dodge attack, type=dodge, spellId=1226395, triggerDeltas = 76.01
+	Overinfusion Burst - run away (%s), type=runcount, spellId=1226395, triggerDeltas = 76.01
 		[ 76.01] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000002, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
 	Soak! (%s), type=count, spellId=1227226, triggerDeltas = 142.77, 20.00, 20.01, 19.98
 		[142.77] SPELL_CAST_START: [Loom'ithar: Writhing Wave] Vehicle-0-1-2810-1-233815-0000000002, Loom'ithar, 0xa48, "", nil, 0x0, 1227226, Writhing Wave, 0, 0
@@ -93,7 +93,7 @@ Voice pack sounds:
 	VoicePack/watchfeet
 		[163.05] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank1: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000002, Loom'ithar, 0xa48, Player-1-00000013, Tank1, 0x511, 1243771, Arcane Ichor, 0, 0
 			 Triggered 2x, delta times: 163.05, 2.01
-	VoicePack/watchstep
+	VoicePack/justrun
 		[ 76.01] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000002, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
 	VoicePack/carefly
 		[126.69] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1228059-0000000100, 1228059, Loom'ithar, 50, 54, Tank1, 0
@@ -136,8 +136,8 @@ Event trace:
 		ScheduleTask: announce1226311target:CombinedShow("Dps16") at 66.33 (+0.30)
 			ShowAnnounce: Infusion Tether on Dps18, Dps8, Dps27, Dps16
 	[ 76.01] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000002, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
-		ShowSpecialWarning: Overinfusion Burst - dodge attack
-		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Overinfusion Burst - run away (1)
+		PlaySound: VoicePack/justrun
 		StartTimer: 85.0, Overinfusion Burst (2)
 	[ 94.52] SPELL_CAST_START: [Loom'ithar: Piercing Strand] Vehicle-0-1-2810-1-233815-0000000002, Loom'ithar, 0xa48, "", nil, 0x0, 1227263, Piercing Strand, 0, 0
 		StartTimer: 7.0, Piercing Strand (6)

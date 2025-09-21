@@ -91,7 +91,7 @@ Announces:
 			 Triggered 7x, delta times: 5.31, 35.08, 50.04, 34.97, 50.00, 35.05, 49.86
 
 Special warnings:
-	Overinfusion Burst - dodge attack, type=dodge, spellId=1226395, triggerDeltas = 75.97, 85.07, 84.99
+	Overinfusion Burst - run away (%s), type=runcount, spellId=1226395, triggerDeltas = 75.97, 85.07, 84.99
 		[ 75.97] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
 			 Triggered 3x, delta times: 75.97, 85.07, 84.99
 	Soak! (%s), type=count, spellId=1227226, triggerDeltas = 300.70, 20.01, 20.00, 20.00, 20.04, 19.99, 20.02, 20.01, 20.02, 19.99
@@ -122,7 +122,7 @@ Voice pack sounds:
 	VoicePack/watchfeet
 		[434.94] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank2: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, Player-1-00000002, Tank2, 0x511, 1243771, Arcane Ichor, 0, 0
 			 Triggered 5x, delta times: 434.94, 36.58, 6.29, 2.08, 2.03
-	VoicePack/watchstep
+	VoicePack/justrun
 		[ 75.97] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
 			 Triggered 3x, delta times: 75.97, 85.07, 84.99
 	VoicePack/carefly
@@ -249,8 +249,8 @@ Event trace:
 		ScheduleTask: announce1226311target:CombinedShow("Healer4") at 66.29 (+0.30)
 			ShowAnnounce: Infusion Tether on Tank5, Tank10, Healer1, Healer4
 	[ 75.97] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
-		ShowSpecialWarning: Overinfusion Burst - dodge attack
-		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Overinfusion Burst - run away (1)
+		PlaySound: VoicePack/justrun
 		StartTimer: 85.0, Overinfusion Burst (2)
 	[ 85.49] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 		ShowSpecialWarning: Webs! (5)
@@ -299,8 +299,8 @@ Event trace:
 		ScheduleTask: announce1226311target:CombinedShow("Tank3") at 151.35 (+0.30)
 			ShowAnnounce: Infusion Tether on Tank6, Tank7, Tank9, Tank3
 	[161.04] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
-		ShowSpecialWarning: Overinfusion Burst - dodge attack
-		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Overinfusion Burst - run away (2)
+		PlaySound: VoicePack/justrun
 		StartTimer: 85.0, Overinfusion Burst (3)
 	[170.51] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 		ShowSpecialWarning: Webs! (9)
@@ -349,8 +349,8 @@ Event trace:
 		ScheduleTask: announce1226311target:CombinedShow("Tank1") at 236.33 (+0.30)
 			ShowAnnounce: Infusion Tether on Tank10, Tank8, Tank5, Tank1
 	[246.03] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
-		ShowSpecialWarning: Overinfusion Burst - dodge attack
-		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Overinfusion Burst - run away (3)
+		PlaySound: VoicePack/justrun
 		StartTimer: 85.0, Overinfusion Burst (4)
 	[255.54] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000001, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 		ShowSpecialWarning: Webs! (13)

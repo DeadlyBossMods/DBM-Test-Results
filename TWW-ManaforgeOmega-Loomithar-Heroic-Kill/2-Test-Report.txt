@@ -72,7 +72,7 @@ Announces:
 			 Triggered 6x, delta times: 223.41, 19.98, 20.07, 19.99, 20.06, 20.01
 
 Special warnings:
-	Overinfusion Burst - dodge attack, type=dodge, spellId=1226395, triggerDeltas = 75.98, 85.02
+	Overinfusion Burst - run away (%s), type=runcount, spellId=1226395, triggerDeltas = 75.98, 85.02
 		[ 75.98] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
 			 Triggered 2x, delta times: 75.98, 85.02
 	Soak! (%s), type=count, spellId=1227226, triggerDeltas = 216.42, 19.97, 20.07, 19.99, 20.01, 20.03
@@ -103,7 +103,7 @@ Voice pack sounds:
 	VoicePack/watchfeet
 		[280.35] SPELL_PERIODIC_DAMAGE: [Loom'ithar->Tank1: Arcane Ichor] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, Player-1-00000011, Tank1, 0x511, 1243771, Arcane Ichor, 0, 0
 			 Triggered 3x, delta times: 280.35, 26.90, 9.96
-	VoicePack/watchstep
+	VoicePack/justrun
 		[ 75.98] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
 			 Triggered 2x, delta times: 75.98, 85.02
 	VoicePack/carefly
@@ -150,8 +150,8 @@ Event trace:
 		ScheduleTask: announce1226311target:CombinedShow("Dps3") at 66.36 (+0.30)
 			ShowAnnounce: Infusion Tether on Dps5, Dps19, Dps10, Dps3
 	[ 75.98] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
-		ShowSpecialWarning: Overinfusion Burst - dodge attack
-		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Overinfusion Burst - run away (1)
+		PlaySound: VoicePack/justrun
 		StartTimer: 85.0, Overinfusion Burst (2)
 	[ 85.50] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 		ShowSpecialWarning: Webs! (3)
@@ -184,8 +184,8 @@ Event trace:
 		ScheduleTask: announce1226311target:CombinedShow("Dps23") at 151.33 (+0.30)
 			ShowAnnounce: Infusion Tether on Dps25, Dps2, Dps8, Dps23
 	[161.00] SPELL_CAST_SUCCESS: [Loom'ithar: Overinfusion Burst] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1226395, Overinfusion Burst, 0, 0
-		ShowSpecialWarning: Overinfusion Burst - dodge attack
-		PlaySound: VoicePack/watchstep
+		ShowSpecialWarning: Overinfusion Burst - run away (2)
+		PlaySound: VoicePack/justrun
 		StartTimer: 85.0, Overinfusion Burst (3)
 	[170.55] SPELL_CAST_SUCCESS: [Loom'ithar: Lair Weaving] Vehicle-0-1-2810-1-233815-0000000003, Loom'ithar, 0xa48, "", nil, 0x0, 1237272, Lair Weaving, 0, 0
 		ShowSpecialWarning: Webs! (5)
