@@ -13,7 +13,6 @@ Findings:
 	Unused event registration: SPELL_AURA_REMOVED 1227549 (Banishment)
 	Unused event registration: SPELL_AURA_REMOVED 1237105 (Twilight Barrier)
 	Unused event registration: SPELL_AURA_REMOVED_DOSE 1224737 (Oath-Bound)
-	Unused event registration: SPELL_CAST_START 1228053 (Reap)
 	Unused event registration: SPELL_CAST_START 1228115 (Netherbreaker)
 	Unused event registration: SPELL_CAST_START 1234529 (Cosmic Maw)
 	Unused event registration: SPELL_CAST_START 1234904 (Command: Behead)
@@ -51,7 +50,6 @@ Unused objects:
 	[Special Warning] Cosmic Maw on >%s< - taunt now, type=taunt, spellId=1234529
 	[Special Warning] Vengeful Oath! (%s), type=count, spellId=1238975
 	[Timer] Dragon's Call (%s), time=40.00, type=cdcount, spellId=1225099
-	[Timer] Reap, time=12.20, type=cdnp, spellId=1228053
 	[Timer] Twilight Massacre, time=99.00, type=cd, spellId=1237106
 	[Timer] Twilight Massacre, time=99.00, type=cdpnp, spellId=1237106
 	[Timer] Vengeful Oath (%s), time=40.00, type=cdcount, spellId=1238975
@@ -90,6 +88,9 @@ Timers:
 			 Triggered 3x, delta times: 30.48, 15.94, 24.05
 	Knockback, time=6.20, type=cast, spellId=1227734, triggerDeltas = 119.45
 		[119.45] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
+	Reap, time=12.20, type=cdnp, spellId=1228053, triggerDeltas = 173.62, 0.00, 0.01, 0.00, 0.41, 0.00, 0.00, 0.00, 12.19, 0.00, 0.00, 0.01, 0.61, 0.00, 0.00, 0.05, 11.52, 0.00, 0.00, 0.00, 0.80, 0.00, 0.00, 0.00, 11.35, 0.00, 0.00, 0.00
+		[173.62] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000004B, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+			 Triggered 28x, delta times: 173.62, 0.00, 0.01, 0.00, 0.41, 0.00, 0.00, 0.00, 12.19, 0.00, 0.00, 0.01, 0.61, 0.00, 0.00, 0.05, 11.52, 0.00, 0.00, 0.00, 0.80, 0.00, 0.00, 0.00, 11.35, 0.00, 0.00, 0.00
 	Rally the Shadowguard, time=10.00, type=next, spellId=1228065, triggerDeltas = 119.45
 		[119.45] SPELL_CAST_START: [Nexus-King Salhadaar: Coalesce Voidwing] Creature-0-1-2810-1-237763-0000000001, Nexus-King Salhadaar, 0xa48, "", nil, 0x0, 1227734, Coalesce Voidwing, 0, 0
 	Beams, time=20.60, type=cdnp, spellId=1228075, triggerDeltas = 181.33, 0.82, 19.92, 0.82
@@ -222,7 +223,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 3134, Nexus-King Salhadaar, 15, 30, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 1224787 1224812 1227529 1224906 1225010 1225016 1228065 1230302 1232399 1228075 1230263 1227734 1228115 1228163 1234529 1228265 1225319 1234904 1228053 1237106, SPELL_CAST_SUCCESS 1234904 1226442, SPELL_AURA_APPLIED 1224737 1224767 1224776 1227549 1237105 1234529 1226413, SPELL_AURA_APPLIED_DOSE 1224737 1226413, SPELL_AURA_REMOVED 1224737 1227549 1237105 1228284 1228265, SPELL_AURA_REMOVED_DOSE 1224737, SPELL_PERIODIC_DAMAGE 1231097, SPELL_PERIODIC_MISSED 1231097, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1
+		RegisterEvents: Regular, SPELL_CAST_START 1224787 1224812 1227529 1224906 1225010 1225016 1228065 1230302 1232399 1228075 1230263 1227734 1228115 1228163 1234529 1228265 1225319 1234904 1237106, SPELL_CAST_SUCCESS 1234904 1226442 1228053, SPELL_AURA_APPLIED 1224737 1224767 1224776 1227549 1237105 1234529 1226413, SPELL_AURA_APPLIED_DOSE 1224737 1226413, SPELL_AURA_REMOVED 1224737 1227549 1237105 1228284 1228265, SPELL_AURA_REMOVED_DOSE 1224737, SPELL_PERIODIC_DAMAGE 1231097, SPELL_PERIODIC_MISSED 1231097, UNIT_DIED, UNIT_SPELLCAST_SUCCEEDED boss1
 		StartTimer: 13.4, Tank Combo (1)
 		StartTimer: 30.0, Banishment (1)
 		StartTimer: 115.0, Invoke the Oath
@@ -318,10 +319,26 @@ Event trace:
 		ShowSpecialWarning: Dread Mortar - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 24.3, Dread Mortar
+	[173.62] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000004B, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[173.62] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-00000000DE, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[173.63] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000102, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[173.63] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000116, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
 	[174.04] SPELL_CAST_START: [Manaforged Titan: Dread Mortar] Creature-0-1-2810-1-241800-00000000DF, Manaforged Titan, 0xa48, "", nil, 0x0, 1232399, Dread Mortar, 0, 0
 		ShowSpecialWarning: Dread Mortar - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 24.3, Dread Mortar
+	[174.04] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000119, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[174.04] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000011D, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[174.04] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000120, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[174.04] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000124, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
 	[176.45] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000049, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (3)
 		PlaySound: VoicePack/kick3r
@@ -333,6 +350,22 @@ Event trace:
 		ShowSpecialWarning: Beams - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 20.6, Beams
+	[186.23] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000119, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[186.23] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000011D, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[186.23] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000120, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[186.24] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000124, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[186.85] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000004B, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[186.85] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000116, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[186.85] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000102, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[186.90] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-00000000DE, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
 	[192.33] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000049, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (4)
 		PlaySound: VoicePack/kick4r
@@ -347,9 +380,25 @@ Event trace:
 		ShowSpecialWarning: Dread Mortar - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 24.3, Dread Mortar
+	[198.42] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000119, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[198.42] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000011D, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[198.42] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000120, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[198.42] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000124, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
 	[198.42] SPELL_CAST_START: [Nexus-Prince Xevvos: Netherblast] Creature-0-1-2810-1-241798-0000000049, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1230263, Netherblast, 0, 0
 		ShowSpecialWarning: Netherblast - interrupt Nexus-Prince Xevvos! (5)
 		PlaySound: VoicePack/kick5r
+	[199.22] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000004B, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[199.22] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-00000000DE, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[199.22] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000102, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[199.22] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000116, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
 	[202.07] SPELL_CAST_START: [Nexus-Prince Xevvos: Nexus Beams] Creature-0-1-2810-1-241798-0000000049, Nexus-Prince Xevvos, 0xa48, "", nil, 0x0, 1228075, Nexus Beams, 0, 0
 		ShowSpecialWarning: Beams - dodge attack
 		PlaySound: VoicePack/watchstep
@@ -358,6 +407,14 @@ Event trace:
 		ShowSpecialWarning: Beams - dodge attack
 		PlaySound: VoicePack/watchstep
 		StartTimer: 20.6, Beams
+	[210.57] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000119, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[210.57] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-000000011D, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[210.57] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000120, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
+	[210.57] SPELL_CAST_SUCCESS: [Shadowguard Reaper: Reap] Creature-0-1-2810-1-241801-0000000124, Shadowguard Reaper, 0xa48, "", nil, 0x0, 1228053, Reap, 0, 0
+		StartTimer: 12.2, Reap
 	[211.94] SPELL_CAST_START: [Manaforged Titan: Self-Destruct] Creature-0-1-2810-1-241800-000000004C, Manaforged Titan, 0xa48, "", nil, 0x0, 1230302, Self-Destruct, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_CAST_START at 211.94
