@@ -20,15 +20,16 @@ Findings:
 	Timer for spell ID 1228502 (Overwhelming Power) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1231720 (Invoke Collector) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1243901 (Void Harvest) is triggered by event SPELL_CAST_START 1243887 (Void Harvest)
+	Announce for spell ID 1248171 (Void Tear) is triggered by event SPELL_CAST_START 1248133 (Void Tear)
 	Timer for spell ID 1248171 (Void Tear) is triggered by event SPELL_CAST_START 1230529 (Mana Sacrifice)
 	Timer for spell ID 1248171 (Void Tear) is triggered by event SPELL_CAST_START 1248133 (Void Tear)
 	Timer Adds (%s), time=97.30, type=cdcount, spellId=1228214 (time=28.90, variance=0.00) got refreshed early with 0.37s remaining
 		Refreshed by: [113.50] SPELL_CAST_START: [Arcane Collector: Astral Harvest] Creature-0-1-2810-1-240905-00000000D8, Arcane Collector, 0xa48, "", nil, 0x0, 1228213, Astral Harvest, 0, 0
 
 Unused objects:
-	[Announce] Void Tear (%s), type=count, spellId=1248133
 	[Special Warning] Astral Harvest on you, type=you, spellId=1228214
 	[Special Warning] Void Harvest on you, type=you, spellId=1243901
+	[Special Warning] Void Tear! (%s), type=count, spellId=1248171
 	[Yell] Pools, type=shortyell, spellId=1228188
 	[Yell] Orbs, type=shortfade, spellId=1228214
 	[Yell] %d, type=shortfade, spellId=1228216
@@ -89,6 +90,9 @@ Announces:
 	Mana Splinter on >%s<, type=target, spellId=1233415, triggerDeltas = 225.87, 142.31
 		[225.87] SPELL_AURA_APPLIED: [Forgeweaver Araz->Forgeweaver Araz: Mana Splinter] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, 1233415, Mana Splinter, 0, BUFF, 0
 			 Triggered 2x, delta times: 225.87, 142.31
+	Void Tear (%s), type=count, spellId=1248171, triggerDeltas = 21.46, 46.01, 15.49, 28.53, 15.57, 15.01, 114.47, 14.99, 14.47
+		[ 21.46] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000010, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
+			 Triggered 9x, delta times: 21.46, 46.01, 15.49, 28.53, 15.57, 15.01, 114.47, 14.99, 14.47
 	Stage 2, type=stage, spellId=<none>, triggerDeltas = 385.24
 		[385.24] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000123, 1233072, Forgeweaver Araz, 33.4, 0, ??, 0
 	Berserk in %s %s, type=nil, spellId=<none>, triggerDeltas = 300.00
@@ -119,34 +123,28 @@ Special warnings:
 	Photon Blast - dodge attack, type=dodge, spellId=1234328, triggerDeltas = 167.01, 4.02, 3.99, 4.00, 5.00, 4.02, 4.99, 3.97, 5.04, 4.01, 3.98, 5.02, 96.43, 4.02, 4.01, 3.99, 4.99, 4.01, 5.01, 4.00, 5.01, 3.98, 4.01
 		[167.01] SPELL_CAST_START: [Arcane Collector: Photon Blast] Creature-0-1-2810-1-240905-00000000D8, Arcane Collector, 0xa48, "", nil, 0x0, 1234328, Photon Blast, 0, 0
 			 Triggered 23x, delta times: 167.01, 4.02, 3.99, 4.00, 5.00, 4.02, 4.99, 3.97, 5.04, 4.01, 3.98, 5.02, 96.43, 4.02, 4.01, 3.99, 4.99, 4.01, 5.01, 4.00, 5.01, 3.98, 4.01
-	Void Tear! (%s), type=count, spellId=1248133, triggerDeltas = 21.46, 46.01, 15.49, 28.53, 15.57, 15.01, 114.47, 14.99, 14.47
-		[ 21.46] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000010, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-			 Triggered 9x, delta times: 21.46, 46.01, 15.49, 28.53, 15.57, 15.01, 114.47, 14.99, 14.47
 
 Yells:
 	None
 
 Voice pack sounds:
-	VoicePack/specialsoon
-		[397.27] SPELL_CAST_START: [Forgeweaver Araz: Death Throes] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1232221, Death Throes, 0, 0
-			 Triggered 2x, delta times: 397.27, 43.98
-	VoicePack/moveboss
-		[ 21.46] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000010, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-			 Triggered 9x, delta times: 21.46, 46.01, 15.49, 28.53, 15.57, 15.01, 114.47, 14.99, 14.47
+	VoicePack/carefly
+		[154.99] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
+			 Triggered 2x, delta times: 154.99, 144.49
 	VoicePack/aesoon
 		[183.02] SPELL_CAST_START: [Arcane Collector: Arcane Convergence] Creature-0-1-2810-1-240905-00000000D8, Arcane Collector, 0xa48, "", nil, 0x0, 1232590, Arcane Convergence, 0, 0
 			 Triggered 7x, delta times: 183.02, 9.01, 8.97, 13.06, 113.44, 9.00, 9.00
 	VoicePack/sharetwo
 		[ 76.26] Scheduled at 75.96 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
-	VoicePack/carefly
-		[154.99] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
-			 Triggered 2x, delta times: 154.99, 144.49
-	VoicePack/watchstep
-		[ 62.94] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
-			 Triggered 5x, delta times: 62.94, 44.04, 22.99, 157.51, 133.77
 	VoicePack/shareone
 		[ 31.27] Scheduled at 30.97 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
 		[265.78] Scheduled at 265.48 by SPELL_CAST_START: [Forgeweaver Araz: Arcane Obliteration] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228216, Arcane Obliteration, 0, 0
+	VoicePack/watchstep
+		[ 62.94] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
+			 Triggered 5x, delta times: 62.94, 44.04, 22.99, 157.51, 133.77
+	VoicePack/specialsoon
+		[397.27] SPELL_CAST_START: [Forgeweaver Araz: Death Throes] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1232221, Death Throes, 0, 0
+			 Triggered 2x, delta times: 397.27, 43.98
 	VoicePack/ptwo
 		[385.24] UNIT_SPELLCAST_SUCCEEDED: boss1, Cast-3-1-2810-2-1233072-0000000123, 1233072, Forgeweaver Araz, 33.4, 0, ??, 0
 	VoicePack/killmob
@@ -185,8 +183,7 @@ Event trace:
 		PlaySound: VoicePack/killmob
 		StartTimer: 44.0, Invoke Collector (2)
 	[ 21.46] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000010, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (1)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (1)
 		StartTimer: 46.0, Void Tear (2)
 	[ 23.47] SPELL_CAST_START: [Arcane Collector: Astral Harvest] Creature-0-1-2810-1-240905-00000000D8, Arcane Collector, 0xa48, "", nil, 0x0, 1228213, Astral Harvest, 0, 0
 		StartTimer: 46.0, Adds (2)
@@ -208,8 +205,7 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 		StartTimer: 44.0, Pools (2)
 	[ 67.47] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000022, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (2)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (2)
 		StartTimer: 14.4, Void Tear (3)
 	[ 69.44] SPELL_CAST_START: [Arcane Collector: Astral Harvest] Creature-0-1-2810-1-240905-00000000D8, Arcane Collector, 0xa48, "", nil, 0x0, 1228213, Astral Harvest, 0, 0
 		StartTimer: 15.5, Adds (3)
@@ -220,8 +216,7 @@ Event trace:
 			ShowSpecialWarning: Soak! (2)
 			PlaySound: VoicePack/sharetwo
 	[ 82.96] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-000000002A, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (3)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (3)
 		StartTimer: 28.5, Void Tear (4)
 	[ 84.98] SPELL_CAST_START: [Arcane Collector: Astral Harvest] Creature-0-1-2810-1-240905-0000000100, Arcane Collector, 0xa48, "", nil, 0x0, 1228213, Astral Harvest, 0, 0
 		StartTimer: 28.9, Adds (4)
@@ -235,14 +230,12 @@ Event trace:
 		PlaySound: VoicePack/watchstep
 		StartTimer: 23.0, Pools (3)
 	[111.49] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000039, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (4)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (4)
 		StartTimer: 14.4, Void Tear (5)
 	[113.50] SPELL_CAST_START: [Arcane Collector: Astral Harvest] Creature-0-1-2810-1-240905-00000000D8, Arcane Collector, 0xa48, "", nil, 0x0, 1228213, Astral Harvest, 0, 0
 		StartTimer: 14.5, Adds (5)
 	[127.06] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000042, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (5)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (5)
 		StartTimer: 15.0, Void Tear (6)
 	[129.03] SPELL_CAST_START: [Arcane Collector: Astral Harvest] Creature-0-1-2810-1-240905-0000000100, Arcane Collector, 0xa48, "", nil, 0x0, 1228213, Astral Harvest, 0, 0
 		StartTimer: 15.5, Adds (6)
@@ -250,8 +243,7 @@ Event trace:
 		ShowSpecialWarning: Pools (3) - dodge attack
 		PlaySound: VoicePack/watchstep
 	[142.07] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-000000004B, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (6)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (6)
 	[154.99] SPELL_CAST_START: [Forgeweaver Araz: Arcane Expulsion] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1227631, Arcane Expulsion, 0, 0
 		ShowSpecialWarning: Knockback! (1)
 		PlaySound: VoicePack/carefly
@@ -366,8 +358,7 @@ Event trace:
 	[238.48] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (2)
 	[256.54] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000076, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (1)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (1)
 		StartTimer: 15.0, Void Tear (2)
 	[260.46] SPELL_CAST_START: [Forgeweaver Araz: Overwhelming Power] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228502, Overwhelming Power, 0, 0
 		StartTimer: 22.0, Overwhelming Power (3)
@@ -376,12 +367,10 @@ Event trace:
 			ShowSpecialWarning: Soak! (1)
 			PlaySound: VoicePack/shareone
 	[271.53] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000081, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (2)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (2)
 		StartTimer: 14.4, Void Tear (3)
 	[286.00] SPELL_CAST_START: [Void Tear: Void Tear] Creature-0-1-2810-1-243108-0000000089, Void Tear, 0xa48, "", nil, 0x0, 1248133, Void Tear, 0, 0
-		ShowSpecialWarning: Void Tear! (3)
-		PlaySound: VoicePack/moveboss
+		ShowAnnounce: Void Tear (3)
 	[287.48] SPELL_CAST_START: [Forgeweaver Araz: Silencing Tempest] Creature-0-1-2810-1-233817-0000000001, Forgeweaver Araz, 0xa48, "", nil, 0x0, 1228161, Silencing Tempest, 0, 0
 		ShowSpecialWarning: Pools (1) - dodge attack
 		PlaySound: VoicePack/watchstep
