@@ -6,10 +6,14 @@ Findings:
 	Unused event registration: SPELL_CAST_START 347151 (Hook Swipe)
 	Unused event registration: SPELL_CAST_START 350517 (Double Time)
 	SpecialWarning for spell ID 347149 (Infinite Breath) is triggered by event SPELL_AURA_APPLIED 350134 (Infinite Breath)
+	SpecialWarning for spell ID 347149 (Infinite Breath) is triggered by event SPELL_AURA_REMOVED 350134 (Infinite Breath)
 	Timer for spell ID 347149 (Infinite Breath) is triggered by event SPELL_AURA_APPLIED 350134 (Infinite Breath)
 
 Unused objects:
+	[Announce] Time Bomb on >%s<, type=target, spellId=1240097
+	[Announce] Infinite Breath (%s) on >%s<, type=targetcount, spellId=347149
 	[Announce] Hook'd! on >%s<, type=target, spellId=354334
+	[Special Warning] Time Bomb on >%s< - dispel now, type=dispel, spellId=1240097
 	[Special Warning] Anchor Shot on you, type=you, spellId=352345
 
 Timers:
@@ -39,6 +43,9 @@ Special warnings:
 	Infinite Breath! (%s), type=count, spellId=347149, triggerDeltas = 11.99, 15.02, 14.98, 15.02, 15.01, 14.97, 15.00, 15.03, 15.01
 		[ 11.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 			 Triggered 9x, delta times: 11.99, 15.02, 14.98, 15.02, 15.01, 14.97, 15.00, 15.03, 15.01
+	Infinite Breath (%s) - dodge attack, type=dodgecount, spellId=347149, triggerDeltas = 15.99, 15.03, 14.98, 15.01, 15.02, 14.96, 15.01, 15.02, 15.02
+		[ 15.99] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+			 Triggered 9x, delta times: 15.99, 15.03, 14.98, 15.01, 15.02, 14.96, 15.01, 15.02, 15.02
 	%s damage - move away, type=gtfo, spellId=358947, triggerDeltas = 30.22, 14.82, 20.50
 		[ 30.22] SPELL_PERIODIC_DAMAGE: [Hourglass Cannon->Tank2: Burning Tar] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000005, Tank2, 0x511, 358947, Burning Tar, 0, 0
 			 Triggered 2x, delta times: 30.22, 35.32
@@ -48,13 +55,16 @@ Yells:
 	None
 
 Voice pack sounds:
-	VoicePack/breathsoon
-		[ 11.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
-			 Triggered 9x, delta times: 11.99, 15.02, 14.98, 15.02, 15.01, 14.97, 15.00, 15.03, 15.01
 	VoicePack/watchfeet
 		[ 30.22] SPELL_PERIODIC_DAMAGE: [Hourglass Cannon->Tank2: Burning Tar] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000005, Tank2, 0x511, 358947, Burning Tar, 0, 0
 			 Triggered 2x, delta times: 30.22, 35.32
 		[ 45.04] SPELL_PERIODIC_MISSED: [Hourglass Cannon->Tank2: Burning Tar] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000005, Tank2, 0x511, 358947, Burning Tar, 0, 0
+	VoicePack/breathsoon
+		[ 15.99] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+			 Triggered 9x, delta times: 15.99, 15.03, 14.98, 15.01, 15.02, 14.96, 15.01, 15.02, 15.02
+	VoicePack/bait
+		[ 11.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+			 Triggered 9x, delta times: 11.99, 15.02, 14.98, 15.02, 15.01, 14.97, 15.00, 15.03, 15.01
 
 Icons:
 	None
@@ -62,78 +72,153 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 2419, Timecap'n Hooktail, 23, 5, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 350517 347151, SPELL_CAST_SUCCESS 352345, SPELL_AURA_APPLIED 354334 350134, SPELL_PERIODIC_DAMAGE 358947, SPELL_PERIODIC_MISSED 358947
+		RegisterEvents: Regular, SPELL_CAST_START 350517 347151, SPELL_CAST_SUCCESS 352345, SPELL_AURA_APPLIED 354334 350134 1240097, SPELL_AURA_REMOVED 350134, SPELL_PERIODIC_DAMAGE 358947, SPELL_PERIODIC_MISSED 358947
 		StartTimer: 12.0, Infinite Breath
 		StartTimer: 15.0, Anchor Shot
 	[ 11.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (1)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
 	[ 14.99] SPELL_CAST_SUCCESS: [Hourglass Cannon->Tank1: Anchor Shot] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000003, Tank1, 0x512, 352345, Anchor Shot, 0, 0
 		ShowAnnounce: Anchor Shot on Tank1
 		StartTimer: 20.0, Anchor Shot
+	[ 15.99] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (1) - dodge attack
+		PlaySound: VoicePack/breathsoon
+	[ 22.01] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 1240097, Time Bomb, 0, DEBUFF, 0
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 22.51 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 22.01
+	[ 22.01] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000003, Tank1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 22.01
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 22.51 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 50.08
 	[ 27.01] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (2)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
 	[ 30.22] SPELL_PERIODIC_DAMAGE: [Hourglass Cannon->Tank2: Burning Tar] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000005, Tank2, 0x511, 358947, Burning Tar, 0, 0
 		AntiSpam: 1
 		ShowSpecialWarning: Burning Tar damage - move away
 		PlaySound: VoicePack/watchfeet
+	[ 31.02] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (2) - dodge attack
+		PlaySound: VoicePack/breathsoon
 	[ 35.01] SPELL_CAST_SUCCESS: [Hourglass Cannon->Tank1: Anchor Shot] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000003, Tank1, 0x512, 352345, Anchor Shot, 0, 0
 		ShowAnnounce: Anchor Shot on Tank1
 		StartTimer: 20.0, Anchor Shot
 	[ 41.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (3)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
 	[ 45.04] SPELL_PERIODIC_MISSED: [Hourglass Cannon->Tank2: Burning Tar] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000005, Tank2, 0x511, 358947, Burning Tar, 0, 0
 		AntiSpam: 1
 			Filtered: 1x SPELL_PERIODIC_DAMAGE at 46.54
 		ShowSpecialWarning: Burning Tar damage - move away
 		PlaySound: VoicePack/watchfeet
+	[ 46.00] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (3) - dodge attack
+		PlaySound: VoicePack/breathsoon
+	[ 50.08] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Healer1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000004, Healer1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 22.01
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 50.58 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 50.09
+	[ 50.09] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Dps1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000002, Dps1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 50.08
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 50.59 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 71.99
 	[ 55.01] SPELL_CAST_SUCCESS: [Hourglass Cannon->Dps1: Anchor Shot] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000002, Dps1, 0x512, 352345, Anchor Shot, 0, 0
 		ShowAnnounce: Anchor Shot on Dps1
 		StartTimer: 14.0, Anchor Shot
 	[ 57.01] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (4)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
+	[ 61.01] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (4) - dodge attack
+		PlaySound: VoicePack/breathsoon
 	[ 65.54] SPELL_PERIODIC_DAMAGE: [Hourglass Cannon->Tank2: Burning Tar] Creature-0-1-2441-1-176178-0000000013, Hourglass Cannon, 0xa48, Player-1-00000005, Tank2, 0x511, 358947, Burning Tar, 0, 0
 		AntiSpam: 1
 		ShowSpecialWarning: Burning Tar damage - move away
 		PlaySound: VoicePack/watchfeet
+	[ 71.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000003, Tank1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 50.09
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 72.49 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 71.99
+	[ 71.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 71.99
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 72.49 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 96.99
 	[ 72.02] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (5)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
 	[ 75.00] SPELL_CAST_SUCCESS: [Hourglass Cannon->Dps2: Anchor Shot] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000006, Dps2, 0x512, 352345, Anchor Shot, 0, 0
 		ShowAnnounce: Anchor Shot on Dps2
 		StartTimer: 20.0, Anchor Shot
+	[ 76.03] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (5) - dodge attack
+		PlaySound: VoicePack/breathsoon
 	[ 86.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (6)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
+	[ 90.99] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (6) - dodge attack
+		PlaySound: VoicePack/breathsoon
 	[ 94.99] SPELL_CAST_SUCCESS: [Hourglass Cannon->Healer1: Anchor Shot] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000004, Healer1, 0x512, 352345, Anchor Shot, 0, 0
 		ShowAnnounce: Anchor Shot on Healer1
 		StartTimer: 20.0, Anchor Shot
+	[ 96.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Healer1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000004, Healer1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 71.99
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 97.49 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 96.99
+	[ 96.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Dps2: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000006, Dps2, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 96.99
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 97.49 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 111.99
 	[101.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (7)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
+	[106.00] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (7) - dodge attack
+		PlaySound: VoicePack/breathsoon
+	[111.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Dps1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000002, Dps1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 96.99
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 112.49 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 111.99
+	[111.99] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000003, Tank1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 111.99
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 112.49 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 132.04
 	[115.04] SPELL_CAST_SUCCESS: [Hourglass Cannon->Dps2: Anchor Shot] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000006, Dps2, 0x512, 352345, Anchor Shot, 0, 0
 		ShowAnnounce: Anchor Shot on Dps2
 		StartTimer: 14.0, Anchor Shot
 	[117.02] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (8)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
+	[121.02] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (8) - dodge attack
+		PlaySound: VoicePack/breathsoon
 	[132.03] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
 		ShowSpecialWarning: Infinite Breath! (9)
-		PlaySound: VoicePack/breathsoon
+		PlaySound: VoicePack/bait
 		StartTimer: 15.0, Infinite Breath
+	[132.04] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Healer1: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000004, Healer1, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 111.99
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 132.54 (+0.50)
+			Unscheduled by SPELL_AURA_APPLIED at 132.04
+	[132.04] SPELL_AURA_APPLIED: [Timecap'n Hooktail->Dps2: Time Bomb] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000006, Dps2, 0x512, 1240097, Time Bomb, 0, DEBUFF, 0
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 132.04
+		ScheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") at 132.54 (+0.50)
+			Unscheduled by UNIT_DIED at 138.09
 	[135.02] SPELL_CAST_SUCCESS: [Hourglass Cannon->Tank1: Anchor Shot] Creature-0-1-2441-1-176178-0000000001, Hourglass Cannon, 0xa48, Player-1-00000003, Tank1, 0x512, 352345, Anchor Shot, 0, 0
 		ShowAnnounce: Anchor Shot on Tank1
 		StartTimer: 20.0, Anchor Shot
+	[136.04] SPELL_AURA_REMOVED: [Timecap'n Hooktail->Tank2: Infinite Breath] Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, Player-1-00000005, Tank2, 0x511, 350134, Infinite Breath, 0, DEBUFF, 0
+		ShowSpecialWarning: Infinite Breath (9) - dodge attack
+		PlaySound: VoicePack/breathsoon
 	[138.09] UNIT_DIED: [->Timecap'n Hooktail] "", nil, 0x0, Vehicle-0-1-2441-1-175546-0000000002, Timecap'n Hooktail, 0xa48, -1, false, 0, 0
 		EndCombat: Main CID Down
+		UnscheduleTask: specWarn1240097dispel:ScheduleVoice("helpdispel") scheduled by ScheduleTask at 132.04
