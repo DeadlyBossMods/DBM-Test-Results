@@ -18,8 +18,8 @@ Findings:
 		Refreshed by: [ 66.66] SPELL_CAST_SUCCESS: [Zo'phex: Impound Contraband] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 346006, Impound Contraband, 0, 0
 	Timer Impound Contraband, time=35.80, type=var, spellId=345770 (time=21.00, variance=0.00) got refreshed early with 0.37s remaining
 		Refreshed by: [113.95] SPELL_CAST_SUCCESS: [Zo'phex: Impound Contraband] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 346006, Impound Contraband, 0, 0
-	Timer Interrogation, time=40.10, type=cd, spellId=348350 (time=39.80, variance=0.00) got refreshed early with 6.97s remaining
-		Refreshed by: [ 32.82] SPELL_CAST_START: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
+	Timer Interrogation, time=40.10, type=cd, spellId=348350 (time=39.80, variance=0.00) got refreshed early with 5.47s remaining
+		Refreshed by: [ 34.32] SPELL_CAST_SUCCESS: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
 
 Unused objects:
 	[Announce] Impound Contraband ended, type=ends, spellId=345770
@@ -52,10 +52,10 @@ Timers:
 			 Triggered 2x, delta times: 39.34, 46.17
 		[ 45.76] SPELL_AURA_REMOVED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 45.76, 47.55
-	Interrogation, time=40.10, type=cd, spellId=348350, triggerDeltas = 0.00, 32.82, 12.94, 33.23, 14.32, 32.99
+	Interrogation, time=40.10, type=cd, spellId=348350, triggerDeltas = 0.00, 34.32, 11.44, 34.75, 12.80, 34.49
 		[  0.00] ENCOUNTER_START: 2425, Zo'phex the Sentinel, 23, 5, 0
-		[ 32.82] SPELL_CAST_START: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
-			 Triggered 3x, delta times: 32.82, 46.17, 47.31
+		[ 34.32] SPELL_CAST_SUCCESS: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
+			 Triggered 3x, delta times: 34.32, 46.19, 47.29
 		[ 39.34] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
 			 Triggered 2x, delta times: 39.34, 46.17
 		[ 45.76] SPELL_AURA_REMOVED: [Zo'phex->Dps2: Containment Cell] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 345990, Containment Cell, 0, DEBUFF, 0
@@ -100,7 +100,7 @@ Icons:
 Event trace:
 	[  0.00] ENCOUNTER_START: 2425, Zo'phex the Sentinel, 23, 5, 0
 		StartCombat: ENCOUNTER_START
-		RegisterEvents: Regular, SPELL_CAST_START 346204 1236348 348350, SPELL_CAST_SUCCESS 346006, SPELL_AURA_APPLIED 347949 348128 345770 345990, SPELL_AURA_REMOVED 345770 345990, SPELL_PERIODIC_DAMAGE 348366, SPELL_PERIODIC_MISSED 348366
+		RegisterEvents: Regular, SPELL_CAST_START 346204 1236348, SPELL_CAST_SUCCESS 346006 348350, SPELL_AURA_APPLIED 347949 348128 345770 345990, SPELL_AURA_REMOVED 345770 345990, SPELL_PERIODIC_DAMAGE 348366, SPELL_PERIODIC_MISSED 348366
 		StartTimer: 7.2, Armed Security
 		StartTimer: 12.1, Charged Slash
 		StartTimer: 18.1, Impound Contraband
@@ -120,8 +120,8 @@ Event trace:
 		StartTimer: 35.8, Impound Contraband
 	[ 30.67] SPELL_AURA_APPLIED: [Zo'phex->Zo'phex: Fully Armed] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, 348128, Fully Armed, 0, BUFF, 0
 		ShowAnnounce: Fully Armed
-	[ 32.82] SPELL_CAST_START: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
-		StartTimer: 40.1, Interrogation
+	[ 34.32] SPELL_CAST_SUCCESS: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
+		StartTimer: 38.6, Interrogation
 	[ 34.34] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 347949, Interrogation, 0, DEBUFF, 0
 		ShowSpecialWarning: Interrogation - switch targets (Dps2)
 		PlaySound: VoicePack/targetchange
@@ -146,8 +146,8 @@ Event trace:
 		StartTimer: 35.8, Impound Contraband
 	[ 76.86] SPELL_AURA_APPLIED: [Zo'phex->Zo'phex: Fully Armed] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, 348128, Fully Armed, 0, BUFF, 0
 		ShowAnnounce: Fully Armed
-	[ 78.99] SPELL_CAST_START: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
-		StartTimer: 40.1, Interrogation
+	[ 80.51] SPELL_CAST_SUCCESS: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
+		StartTimer: 38.6, Interrogation
 	[ 80.51] SPELL_AURA_APPLIED: [Zo'phex->Dps2: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000003, Dps2, 0x512, 347949, Interrogation, 0, DEBUFF, 0
 		ShowSpecialWarning: Interrogation - switch targets (Dps2)
 		PlaySound: VoicePack/targetchange
@@ -172,8 +172,8 @@ Event trace:
 		StartTimer: 35.8, Impound Contraband
 	[124.15] SPELL_AURA_APPLIED: [Zo'phex->Zo'phex: Fully Armed] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, 348128, Fully Armed, 0, BUFF, 0
 		ShowAnnounce: Fully Armed
-	[126.30] SPELL_CAST_START: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
-		StartTimer: 40.1, Interrogation
+	[127.80] SPELL_CAST_SUCCESS: [Zo'phex: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, "", nil, 0x0, 348350, Interrogation, 0, 0
+		StartTimer: 38.6, Interrogation
 	[127.80] SPELL_AURA_APPLIED: [Zo'phex->Dps1: Interrogation] Vehicle-0-1-2441-1-175616-0000000001, Zo'phex, 0xa48, Player-1-00000002, Dps1, 0x512, 347949, Interrogation, 0, DEBUFF, 0
 		ShowSpecialWarning: Interrogation - switch targets (Dps1)
 		PlaySound: VoicePack/targetchange
