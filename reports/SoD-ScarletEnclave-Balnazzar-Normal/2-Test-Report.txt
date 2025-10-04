@@ -1,0 +1,517 @@
+Test: SoD/ScarletEnclave/Balnazzar/Normal
+Mod:  DBM-Raids-Vanilla/Balnazzar
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1231777 (Suppressing Darkness)
+	Unused event registration: SPELL_AURA_APPLIED 1231836 (Carrion Swarm)
+	Unused event registration: SPELL_MISSED 1231645 (Prey on the Weak)
+	Unused event registration: UNIT_HEALTH
+	Timer for spell ID 1397 (Fear) is triggered by event SPELL_CAST_START 1231885 (Screeching Fear)
+	SpecialWarning for spell ID 1231636 (Prey on the Weak) is triggered by event SPELL_DAMAGE 1231645 (Prey on the Weak)
+
+Unused objects:
+	[Announce] Stage 2 soon, type=prestage, spellId=<none>
+	[Announce] Stage 3 soon, type=prestage, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Special Warning] Circle of Domination - move away, type=move, spellId=1231844
+
+Timers:
+	Prey on the Weak: %s, time=6.00, type=target, spellId=1231645, triggerDeltas = 15.14, 6.10, 6.00, 6.00, 6.00, 6.00, 6.00, 0.36, 6.10, 6.00, 6.00, 6.00, 6.00, 6.00, 90.17, 5.28, 6.10, 6.00, 6.00, 0.77, 6.10, 6.00, 6.00, 6.00
+		[ 15.14] SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-0000000015, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+			 Triggered 5x, delta times: 15.14, 36.46, 126.27, 5.28, 18.87
+		[ 21.24] Scheduled at 15.14 by SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-0000000015, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+			 Triggered 6x, delta times: 21.24, 6.00, 6.00, 6.00, 6.00, 6.00
+		[ 57.70] Scheduled at 51.60 by SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-00000000DC, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+			 Triggered 6x, delta times: 57.70, 6.00, 6.00, 6.00, 6.00, 6.00
+		[189.25] Scheduled at 183.15 by SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-00000000A2, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+			 Triggered 3x, delta times: 189.25, 6.00, 6.00
+		[208.12] Scheduled at 202.02 by SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-00000000B3, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+			 Triggered 4x, delta times: 208.12, 6.00, 6.00, 6.00
+	Circle of Domination, time=10.00, type=next, spellId=1231844, triggerDeltas = 68.83, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 9.98, 10.03, 24.26, 18.22, 19.44
+		[ 68.83] SPELL_AURA_APPLIED: [Balnazzar->Dps9: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000012, Dps9, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[ 78.83] SPELL_AURA_APPLIED: [Balnazzar->Dps6: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000009, Dps6, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 78.83, 112.49
+		[ 88.83] SPELL_AURA_APPLIED: [Balnazzar->Dps19: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000024, Dps19, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 88.83, 49.98, 10.03
+		[ 98.83] SPELL_AURA_APPLIED: [Balnazzar->Dps7: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000010, Dps7, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[108.83] SPELL_AURA_APPLIED: [Balnazzar->Dps18: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000023, Dps18, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[118.83] SPELL_AURA_APPLIED: [Balnazzar->Dps10: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000013, Dps10, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 118.83, 91.93
+		[128.83] SPELL_AURA_APPLIED: [Balnazzar->Dps15: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000019, Dps15, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[173.10] SPELL_AURA_APPLIED: [Balnazzar->Dps17: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231844, Circle of Domination, 0, DEBUFF, 0
+	Screeching Fear, time=11.40, type=nextnp, spellId=1231885, triggerDeltas = 21.37, 11.66, 9.72, 1.62, 9.42, 1.98, 9.73, 0.00, 10.11, 4.84, 9.72, 6.48, 9.73, 4.48, 11.74, 3.22, 10.96, 3.65, 9.71, 6.09, 11.36, 9.73, 0.00, 11.73, 11.32, 3.27, 6.08, 3.64, 8.08, 2.81
+		[ 21.37] Scheduled at 18.77 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 33.03] Scheduled at 30.43 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 42.75] Scheduled at 40.15 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 44.37] Scheduled at 41.77 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 53.79] Scheduled at 51.19 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 55.77] Scheduled at 53.17 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 65.50] Scheduled at 62.90 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+			 Triggered 2x, delta times: 65.50, 0.00
+		[ 75.61] Scheduled at 73.01 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 80.45] Scheduled at 77.85 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000004C, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 90.17] Scheduled at 87.57 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000004C, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[ 96.65] Scheduled at 94.05 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000058, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[106.38] Scheduled at 103.78 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000058, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[110.86] Scheduled at 108.26 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000064, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[122.60] Scheduled at 120.00 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000064, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[125.82] Scheduled at 123.22 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000006D, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[136.78] Scheduled at 134.18 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000006D, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[140.43] Scheduled at 137.83 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000007A, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[150.14] Scheduled at 147.54 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000007A, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[156.23] Scheduled at 153.63 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000084, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[167.59] Scheduled at 164.99 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000084, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[177.32] Scheduled at 174.72 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000084, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+			 Triggered 2x, delta times: 177.32, 0.00
+		[189.05] Scheduled at 186.45 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[200.37] Scheduled at 197.77 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[203.64] Scheduled at 201.04 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-00000000AE, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[209.72] Scheduled at 207.12 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[213.36] Scheduled at 210.76 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-00000000AE, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[221.44] Scheduled at 218.84 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		[224.25] Scheduled at 221.65 by SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-00000000AE, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+	Fear, time=2.50, type=castpnp, spellId=1397, triggerDeltas = 18.77, 11.66, 9.72, 1.62, 9.42, 1.98, 9.73, 0.00, 10.11, 4.84, 9.72, 6.48, 9.73, 4.48, 11.74, 3.22, 10.96, 3.65, 9.71, 6.09, 11.36, 9.73, 0.00, 11.73, 11.32, 3.27, 6.08, 3.64, 8.08, 2.81, 4.89
+		[ 18.77] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+			 Triggered 31x, delta times: 18.77, 11.66, 9.72, 1.62, 9.42, 1.98, 9.73, 0.00, 10.11, 4.84, 9.72, 6.48, 9.73, 4.48, 11.74, 3.22, 10.96, 3.65, 9.71, 6.09, 11.36, 9.73, 0.00, 11.73, 11.32, 3.27, 6.08, 3.64, 8.08, 2.81, 4.89
+	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[  0.00] ENCOUNTER_START: 3185, Balnazzar, 9, 40, 0
+
+Announces:
+	Circle of Domination on >%s<, type=target, spellId=1231844, triggerDeltas = 68.93, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 9.98, 10.03, 24.26, 18.22, 19.44
+		[ 68.93] Scheduled at 68.83 by SPELL_AURA_APPLIED: [Balnazzar->Dps9: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000012, Dps9, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[ 78.93] Scheduled at 78.83 by SPELL_AURA_APPLIED: [Balnazzar->Dps6: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000009, Dps6, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[ 88.93] Scheduled at 88.83 by SPELL_AURA_APPLIED: [Balnazzar->Dps19: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000024, Dps19, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[ 98.93] Scheduled at 98.83 by SPELL_AURA_APPLIED: [Balnazzar->Dps7: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000010, Dps7, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[108.93] Scheduled at 108.83 by SPELL_AURA_APPLIED: [Balnazzar->Dps18: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000023, Dps18, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[118.93] Scheduled at 118.83 by SPELL_AURA_APPLIED: [Balnazzar->Dps10: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000013, Dps10, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[128.93] Scheduled at 128.83 by SPELL_AURA_APPLIED: [Balnazzar->Dps15: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000019, Dps15, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[138.91] Scheduled at 138.81 by SPELL_AURA_APPLIED: [Balnazzar->Dps19: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000024, Dps19, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[148.94] Scheduled at 148.84 by SPELL_AURA_APPLIED: [Balnazzar->Dps19: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000024, Dps19, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[173.20] Scheduled at 173.10 by SPELL_AURA_APPLIED: [Balnazzar->Dps17: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[191.42] Scheduled at 191.32 by SPELL_AURA_APPLIED: [Balnazzar->Dps6: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000009, Dps6, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		[210.86] Scheduled at 210.76 by SPELL_AURA_APPLIED: [Balnazzar->Dps10: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000013, Dps10, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+
+Special warnings:
+	Prey on the Weak - move to >%s<, type=moveto, spellId=1231636, triggerDeltas = 15.14, 36.46, 126.27, 24.15
+		[ 15.14] SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-0000000015, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+			 Triggered 4x, delta times: 15.14, 36.46, 126.27, 24.15
+	Carrion Swarm on you, type=you, spellId=1231836, triggerDeltas = 10.27, 16.50, 35.66, 27.04, 16.05, 13.99, 8.34, 8.20, 13.96, 18.42, 39.13, 13.42
+		[ 10.27] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+			 Triggered 12x, delta times: 10.27, 16.50, 35.66, 27.04, 16.05, 13.99, 8.34, 8.20, 13.96, 18.42, 39.13, 13.42
+	Circle of Domination - move away, type=move, spellId=1231844, triggerDeltas = 173.10
+		[173.10] SPELL_AURA_APPLIED: [Balnazzar->Dps17: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231844, Circle of Domination, 0, DEBUFF, 0
+	Screeching Fear - interrupt >%s<!, type=interrupt, spellId=1231885, triggerDeltas = 18.77, 11.66, 9.72, 1.62, 9.42, 1.98, 9.73, 0.00, 10.11, 4.84, 9.72, 6.48, 9.73, 4.48, 11.74, 3.22, 10.96, 3.65, 9.71, 6.09, 11.36, 9.73, 0.00, 11.73, 11.32, 3.27, 6.08, 3.64, 8.08, 2.81, 4.89
+		[ 18.77] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+			 Triggered 31x, delta times: 18.77, 11.66, 9.72, 1.62, 9.42, 1.98, 9.73, 0.00, 10.11, 4.84, 9.72, 6.48, 9.73, 4.48, 11.74, 3.22, 10.96, 3.65, 9.71, 6.09, 11.36, 9.73, 0.00, 11.73, 11.32, 3.27, 6.08, 3.64, 8.08, 2.81, 4.89
+
+Yells:
+	Circle of Domination on PlayerName, type=yell, spellId=1231844
+		[173.10] SPELL_AURA_APPLIED: [Balnazzar->Dps17: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231844, Circle of Domination, 0, DEBUFF, 0
+
+Voice pack sounds:
+	VoicePack/scatter
+		[ 10.27] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+			 Triggered 12x, delta times: 10.27, 16.50, 35.66, 27.04, 16.05, 13.99, 8.34, 8.20, 13.96, 18.42, 39.13, 13.42
+	VoicePack/targetyou
+		[173.10] SPELL_AURA_APPLIED: [Balnazzar->Dps17: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231844, Circle of Domination, 0, DEBUFF, 0
+	VoicePack/kickcast
+		[ 18.77] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+			 Triggered 31x, delta times: 18.77, 11.66, 9.72, 1.62, 9.42, 1.98, 9.73, 0.00, 10.11, 4.84, 9.72, 6.48, 9.73, 4.48, 11.74, 3.22, 10.96, 3.65, 9.71, 6.09, 11.36, 9.73, 0.00, 11.73, 11.32, 3.27, 6.08, 3.64, 8.08, 2.81, 4.89
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3185, Balnazzar, 9, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1231844 1231836 1231777, SPELL_AURA_APPLIED_DOSE 1231836, SPELL_DAMAGE 1231645, SPELL_MISSED 1231645, SPELL_CAST_START 1231885, UNIT_HEALTH boss1 boss2 boss3 boss4 boss5 target focus
+		StartTimer: 600.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
+			Unscheduled by ENCOUNTER_END at 228.60
+		ScheduleTask: announce:Schedule(3.0, "min") at 420.00 (+420.00)
+			Unscheduled by ENCOUNTER_END at 228.60
+		ScheduleTask: announce:Schedule(1.0, "min") at 540.00 (+540.00)
+			Unscheduled by ENCOUNTER_END at 228.60
+		ScheduleTask: announce:Schedule(30.0, "sec") at 570.00 (+570.00)
+			Unscheduled by ENCOUNTER_END at 228.60
+		ScheduleTask: announce:Schedule(10.0, "sec") at 590.00 (+590.00)
+			Unscheduled by ENCOUNTER_END at 228.60
+	[ 10.27] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 3x SPELL_AURA_APPLIED_DOSE at 11.84, 13.98, 15.72
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[ 15.14] SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-0000000015, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+		StartTimer: 6.0, Prey on the Weak: Tick
+		ScheduleTask: mod:PreyLoop(1.0) at 21.24 (+6.10)
+			StartTimer: 5.9, Prey on the Weak: Tick
+			ScheduleTask: mod:PreyLoop(2.0) at 27.24 (+6.00)
+				StartTimer: 5.9, Prey on the Weak: Tick
+				ScheduleTask: mod:PreyLoop(3.0) at 33.24 (+6.00)
+					StartTimer: 5.9, Prey on the Weak: Tick
+					ScheduleTask: mod:PreyLoop(4.0) at 39.24 (+6.00)
+						StartTimer: 5.9, Prey on the Weak: Tick
+						ScheduleTask: mod:PreyLoop(5.0) at 45.24 (+6.00)
+							StartTimer: 5.9, Prey on the Weak: Tick
+							ScheduleTask: mod:PreyLoop(6.0) at 51.24 (+6.00)
+								StartTimer: 5.9, Prey on the Weak: Tick
+								ScheduleTask: mod:PreyLoop(7.0) at 57.24 (+6.00)
+									Unscheduled by SPELL_DAMAGE at 51.60
+		AntiSpam: Prey
+		ShowSpecialWarning: Prey on the Weak - move to another player
+	[ 18.77] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000014") at 21.37 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 26.77] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[ 30.43] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000014") at 33.03 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 40.15] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000028") at 42.75 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 41.77] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000014") at 44.37 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 51.19] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000028") at 53.79 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 51.60] SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-00000000DC, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+		UnscheduleTask: mod:PreyLoop(7.0) scheduled by ScheduleTask at 51.24
+		StopTimer: Timer1231645target\tTick
+		StartTimer: 6.0, Prey on the Weak: Tick
+		ScheduleTask: mod:PreyLoop(1.0) at 57.70 (+6.10)
+			StartTimer: 5.9, Prey on the Weak: Tick
+			ScheduleTask: mod:PreyLoop(2.0) at 63.70 (+6.00)
+				StartTimer: 5.9, Prey on the Weak: Tick
+				ScheduleTask: mod:PreyLoop(3.0) at 69.70 (+6.00)
+					StartTimer: 5.9, Prey on the Weak: Tick
+					ScheduleTask: mod:PreyLoop(4.0) at 75.70 (+6.00)
+						StartTimer: 5.9, Prey on the Weak: Tick
+						ScheduleTask: mod:PreyLoop(5.0) at 81.70 (+6.00)
+							StartTimer: 5.9, Prey on the Weak: Tick
+							ScheduleTask: mod:PreyLoop(6.0) at 87.70 (+6.00)
+								StartTimer: 5.9, Prey on the Weak: Tick
+								ScheduleTask: mod:PreyLoop(7.0) at 93.70 (+6.00)
+		AntiSpam: Prey
+		ShowSpecialWarning: Prey on the Weak - move to another player
+	[ 53.17] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000014") at 55.77 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 62.43] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 7x SPELL_AURA_APPLIED_DOSE at 63.1, 63.44, 63.46, 64.58, 64.75, 66.1, 69.49
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[ 62.90] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000028") at 65.50 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 62.90] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000014, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000014") at 65.50 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 68.83] SPELL_AURA_APPLIED: [Balnazzar->Dps9: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000012, Dps9, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps9") at 68.93 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps9
+	[ 73.01] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000028, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000028") at 75.61 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 77.85] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000004C, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-000000004C") at 80.45 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 78.83] SPELL_AURA_APPLIED: [Balnazzar->Dps6: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000009, Dps6, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps6") at 78.93 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps6
+	[ 87.57] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000004C, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-000000004C") at 90.17 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 88.83] SPELL_AURA_APPLIED: [Balnazzar->Dps19: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000024, Dps19, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps19") at 88.93 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps19
+	[ 89.47] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 5x SPELL_AURA_APPLIED_DOSE at 89.47, 89.47, 89.47, 91.37, 95.28
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[ 94.05] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000058, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000058") at 96.65 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[ 98.83] SPELL_AURA_APPLIED: [Balnazzar->Dps7: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000010, Dps7, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps7") at 98.93 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps7
+	[103.78] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000058, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000058") at 106.38 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[105.52] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 1x SPELL_AURA_APPLIED_DOSE at 107.26
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[108.26] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000064, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000064") at 110.86 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[108.83] SPELL_AURA_APPLIED: [Balnazzar->Dps18: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000023, Dps18, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps18") at 108.93 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps18
+	[118.83] SPELL_AURA_APPLIED: [Balnazzar->Dps10: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000013, Dps10, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps10") at 118.93 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps10
+	[119.51] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 3x SPELL_AURA_APPLIED_DOSE at 122.27, 123.22, 125.61
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[120.00] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000064, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000064") at 122.60 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[123.22] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000006D, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-000000006D") at 125.82 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[127.85] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 3, 0
+		AntiSpam: Carrion
+			Filtered: 1x SPELL_AURA_APPLIED_DOSE at 130.23
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[128.83] SPELL_AURA_APPLIED: [Balnazzar->Dps15: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000019, Dps15, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps15") at 128.93 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps15
+	[134.18] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000006D, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-000000006D") at 136.78 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[136.05] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 3x SPELL_AURA_APPLIED_DOSE at 141.38, 141.5, 142.9
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[137.83] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000007A, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-000000007A") at 140.43 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[138.81] SPELL_AURA_APPLIED: [Balnazzar->Dps19: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000024, Dps19, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps19") at 138.91 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps19
+	[147.54] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-000000007A, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-000000007A") at 150.14 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[148.84] SPELL_AURA_APPLIED: [Balnazzar->Dps19: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000024, Dps19, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps19") at 148.94 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps19
+	[150.01] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 3x SPELL_AURA_APPLIED_DOSE at 150.26, 150.91, 151.91
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[153.63] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000084, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000084") at 156.23 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[164.99] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000084, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000084") at 167.59 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[168.43] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 3x SPELL_AURA_APPLIED_DOSE at 169.33, 172.4, 173.76
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[173.10] SPELL_AURA_APPLIED: [Balnazzar->Dps17: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231844, Circle of Domination, 0, DEBUFF, 0
+		AntiSpam: MCYou
+		ShowSpecialWarning: Circle of Domination - move away
+		PlaySound: VoicePack/targetyou
+		ShowYell: Circle of Domination on PlayerName
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("PlayerName") at 173.20 (+0.10)
+			ShowAnnounce: Circle of Domination on PlayerName
+	[174.72] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000097") at 177.32 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[174.72] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000084, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000084") at 177.32 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[177.87] SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-0000000108, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+		StartTimer: 6.0, Prey on the Weak: Tick
+		ScheduleTask: mod:PreyLoop(1.0) at 183.97 (+6.10)
+			Unscheduled by SPELL_DAMAGE at 183.15
+		AntiSpam: Prey
+			Filtered: 1x SPELL_DAMAGE at 183.15
+		ShowSpecialWarning: Prey on the Weak - move to another player
+	[183.15] SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-00000000A2, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+		UnscheduleTask: mod:PreyLoop(1.0) scheduled by ScheduleTask at 177.87
+		StopTimer: Timer1231645target\tTick
+		StartTimer: 6.0, Prey on the Weak: Tick
+		ScheduleTask: mod:PreyLoop(1.0) at 189.25 (+6.10)
+			StartTimer: 5.9, Prey on the Weak: Tick
+			ScheduleTask: mod:PreyLoop(2.0) at 195.25 (+6.00)
+				StartTimer: 5.9, Prey on the Weak: Tick
+				ScheduleTask: mod:PreyLoop(3.0) at 201.25 (+6.00)
+					StartTimer: 5.9, Prey on the Weak: Tick
+					ScheduleTask: mod:PreyLoop(4.0) at 207.25 (+6.00)
+						Unscheduled by SPELL_DAMAGE at 202.02
+	[186.45] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000097") at 189.05 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[191.32] SPELL_AURA_APPLIED: [Balnazzar->Dps6: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000009, Dps6, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps6") at 191.42 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps6
+	[197.77] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000097") at 200.37 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[201.04] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-00000000AE, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-00000000AE") at 203.64 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[202.02] SPELL_DAMAGE: [Shade of Balnazzar->Dps17: Prey on the Weak] Creature-0-1-2856-1-243100-00000000B3, Shade of Balnazzar, 0xa48, Player-1-00000022, Dps17, 0x511, 1231645, Prey on the Weak, 0, 0
+		UnscheduleTask: mod:PreyLoop(4.0) scheduled by ScheduleTask at 201.25
+		StopTimer: Timer1231645target\tTick
+		StartTimer: 6.0, Prey on the Weak: Tick
+		ScheduleTask: mod:PreyLoop(1.0) at 208.12 (+6.10)
+			StartTimer: 5.9, Prey on the Weak: Tick
+			ScheduleTask: mod:PreyLoop(2.0) at 214.12 (+6.00)
+				StartTimer: 5.9, Prey on the Weak: Tick
+				ScheduleTask: mod:PreyLoop(3.0) at 220.12 (+6.00)
+					StartTimer: 5.9, Prey on the Weak: Tick
+					ScheduleTask: mod:PreyLoop(4.0) at 226.12 (+6.00)
+						StartTimer: 5.9, Prey on the Weak: Tick
+						ScheduleTask: mod:PreyLoop(5.0) at 232.12 (+6.00)
+							Unscheduled by ENCOUNTER_END at 228.60
+		AntiSpam: Prey
+		ShowSpecialWarning: Prey on the Weak - move to another player
+	[207.12] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000097") at 209.72 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[207.56] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 2x SPELL_AURA_APPLIED_DOSE at 207.78, 207.99
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[210.76] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-00000000AE, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-00000000AE") at 213.36 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[210.76] SPELL_AURA_APPLIED: [Balnazzar->Dps10: Circle of Domination] Creature-0-1-2856-1-240811-0000000001, Balnazzar, 0xa48, Player-1-00000013, Dps10, 0x512, 1231844, Circle of Domination, 0, DEBUFF, 0
+		StartTimer: 10.0, Circle of Domination
+		ScheduleTask: announce1231844target:CombinedShow("Dps10") at 210.86 (+0.10)
+			ShowAnnounce: Circle of Domination on Dps10
+	[218.84] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-0000000097, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-0000000097") at 221.44 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[220.98] SPELL_AURA_APPLIED_DOSE: [->Dps17: Carrion Swarm] "", nil, 0x0, Player-1-00000022, Dps17, 0x511, 1231836, Carrion Swarm, 0, DEBUFF, 2, 0
+		AntiSpam: Carrion
+			Filtered: 3x SPELL_AURA_APPLIED_DOSE at 225.17, 225.51, 225.97
+		ShowSpecialWarning: Carrion Swarm on you
+		PlaySound: VoicePack/scatter
+	[221.65] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-00000000AE, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-00000000AE") at 224.25 (+2.60)
+			StartTimer: 8.8, Screeching Fear
+	[226.54] SPELL_CAST_START: [Screeching Terror: Screeching Fear] Creature-0-1-2856-1-243007-00000000BE, Screeching Terror, 0xa48, "", nil, 0x0, 1231885, Screeching Fear, 0, 0
+		ShowSpecialWarning: Screeching Fear - interrupt Screeching Terror!
+		PlaySound: VoicePack/kickcast
+		StartTimer: 2.5, Fear
+		ScheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-00000000BE") at 229.14 (+2.60)
+			Unscheduled by ENCOUNTER_END at 228.60
+	[228.60] ENCOUNTER_END: 3185, Balnazzar, 9, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: mod:PreyLoop(5.0) scheduled by ScheduleTask at 226.12
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: timer1231885nextnp:Schedule(-2.6, "Creature-0-1-2856-1-243007-00000000BE") scheduled by ScheduleTask at 226.54
