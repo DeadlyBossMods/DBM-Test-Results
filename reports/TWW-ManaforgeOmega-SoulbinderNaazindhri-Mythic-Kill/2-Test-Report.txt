@@ -1,0 +1,334 @@
+Test: TWW/ManaforgeOmega/SoulbinderNaazindhri/Mythic/Kill
+Mod:  DBM-Raids-WarWithin/2685
+
+Findings:
+	Unused event registration: SPELL_AURA_APPLIED 1227049 (Voidblade Ambush)
+	Unused event registration: SPELL_AURA_APPLIED 1237607 (Mystic Lash)
+	Unused event registration: SPELL_AURA_APPLIED 1248464 (Mystic Lash)
+	Unused event registration: SPELL_AURA_APPLIED_DOSE 1248464 (Mystic Lash)
+	Unused event registration: SPELL_AURA_REMOVED 1225626 (Soulfire Convergence)
+	Unused event registration: SPELL_AURA_REMOVED 1227049 (Voidblade Ambush)
+	Unused event registration: SPELL_AURA_REMOVED 1227276 (Soulfray Annihilation)
+	Unused event registration: SPELL_CAST_START 1223859 (Arcane Expulsion)
+	Unused event registration: SPELL_CAST_START 1227052 (Void Burst)
+	Unused event registration: SPELL_CAST_SUCCESS 1227848 (Essence Implosion)
+	Unused event registration: UNIT_DIED
+	SpecialWarning for spell ID 1223859 (Arcane Expulsion) is triggered by event SPELL_CAST_START 1242088 (Arcane Expulsion)
+	Timer for spell ID 1223859 (Arcane Expulsion) is triggered by event SPELL_CAST_START 1242088 (Arcane Expulsion)
+	Announce for spell ID 1225616 (Soulfire Convergence) is triggered by event SPELL_AURA_APPLIED 1225626 (Soulfire Convergence)
+	Announce for spell ID 1241100 (Mystic Lash) is triggered by event SPELL_AURA_APPLIED_DOSE 1237607 (Mystic Lash)
+
+Unused objects:
+	[Special Warning] Orbs on you, type=you, spellId=1225616
+	[Special Warning] Voidblade Ambush - move away from others, type=moveaway, spellId=1227048
+	[Special Warning] Void Burst - interrupt >%s<! (%d), type=interruptcount, spellId=1227052
+	[Special Warning] Line (%s) on you, type=youcount, spellId=1227276
+	[Special Warning] Mystic Lash on >%s< - taunt now, type=taunt, spellId=1241100
+	[Yell] %d, type=shortfade, spellId=1225616
+	[Yell] Orbs, type=shortyell, spellId=1225616
+	[Yell] %d, type=shortfade, spellId=1227048
+	[Yell] Voidblade Ambush, type=shortyell, spellId=1227048
+	[Yell] {rt%2$d}%1$d, type=iconfade, spellId=1227276
+	[Yell] {rt%1$d}Soulfray Annihilation, type=shortposition, spellId=1227276
+
+Timers:
+	Knockback (%s), time=97.30, type=nextcount, spellId=1223859, triggerDeltas = 0.00, 41.01, 37.98, 66.99, 45.13, 37.97, 67.02, 45.05, 38.01
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 16, 20, 0
+		[ 41.01] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+			 Triggered 8x, delta times: 41.01, 37.98, 66.99, 45.13, 37.97, 67.02, 45.05, 38.01
+	Adds (%s), time=150.00, type=nextcount, spellId=1225582, triggerDeltas = 0.00, 12.97, 150.10, 150.08
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 16, 20, 0
+		[ 12.97] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
+			 Triggered 3x, delta times: 12.97, 150.10, 150.08
+	Orbs (%s), time=97.30, type=nextcount, spellId=1225616, triggerDeltas = 0.00, 16.03, 36.96, 38.06, 75.08, 37.00, 37.96, 75.14, 37.01
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 16, 20, 0
+		[ 16.03] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+			 Triggered 8x, delta times: 16.03, 36.96, 38.06, 75.08, 37.00, 37.96, 75.14, 37.01
+	Voidblade Ambush, time=12.10, type=cdnp, spellId=1227048, triggerDeltas = 122.29, 1.34, 11.38, 0.81
+		[122.29] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000003A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+			 Triggered 4x, delta times: 122.29, 1.34, 11.38, 0.81
+	Lines (%s), time=97.30, type=nextcount, spellId=1227276, triggerDeltas = 0.00, 25.98, 37.01, 36.97, 76.12, 37.00, 37.00, 76.10, 36.99
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 16, 20, 0
+		[ 25.98] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+			 Triggered 8x, delta times: 25.98, 37.01, 36.97, 76.12, 37.00, 37.00, 76.10, 36.99
+	Mystic Lash (%s), time=97.30, type=nextcount, spellId=1241100, triggerDeltas = 0.00, 5.00, 40.97, 38.00, 40.02, 31.09, 40.99, 38.00, 40.02, 31.07, 40.99
+		[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 16, 20, 0
+		[  5.00] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+			 Triggered 10x, delta times: 5.00, 40.97, 38.00, 40.02, 31.09, 40.99, 38.00, 40.02, 31.07, 40.99
+
+Announces:
+	Soul Calling (%s), type=count, spellId=1225582, triggerDeltas = 12.97, 150.10, 150.08
+		[ 12.97] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
+			 Triggered 3x, delta times: 12.97, 150.10, 150.08
+	Soulfire Convergence on >%s<, type=target, spellId=1225616, triggerDeltas = 19.54, 1.02, 1.01, 0.98, 33.96, 1.03, 0.99, 0.98, 35.06, 1.00, 0.99, 1.02, 72.06, 0.99, 1.00, 1.00, 34.02, 1.00, 1.02, 1.00, 34.94, 1.00, 1.01, 0.99, 72.14, 1.00, 0.99, 1.00, 34.04, 0.98, 1.00, 1.00
+		[ 19.54] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank9: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000016, Tank9, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 19.54, 300.21
+		[ 20.56] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000017, Dps4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 20.56, 152.07, 73.99
+		[ 21.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 5x, delta times: 21.57, 34.94, 115.12, 37.04, 36.94
+		[ 22.55] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000007, Healer1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		[ 57.54] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000009, Healer3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		[ 58.53] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Dps1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 2x, delta times: 58.53, 148.12
+		[ 59.51] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Tank2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 59.51, 110.13, 40.03
+		[ 94.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank6: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000010, Tank6, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 94.57, 113.08, 36.96
+		[ 95.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000004, Tank3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 95.57, 152.04, 110.15
+		[ 96.56] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank7: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000012, Tank7, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		[ 97.58] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank8: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Tank8, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+			 Triggered 3x, delta times: 97.58, 223.17, 36.03
+		[170.63] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000014, Dps3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		[321.74] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000005, Tank4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		[322.74] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank5: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000006, Tank5, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		[358.76] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000015, Healer4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		[359.76] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank12: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank12, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+	Lines (%s) on >%s<, type=targetcount, spellId=1227276, triggerDeltas = 26.28, 37.01, 36.98, 76.13, 36.99, 37.01, 76.08, 36.99
+		[ 26.28] Scheduled at 25.98 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000011, Dps2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		[ 63.29] Scheduled at 62.99 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank9: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000016, Tank9, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		[100.27] Scheduled at 99.97 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000007, Healer1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		[176.40] Scheduled at 176.10 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000011, Dps2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		[213.39] Scheduled at 213.09 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000007, Healer1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		[250.40] Scheduled at 250.10 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank8: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Tank8, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		[326.48] Scheduled at 326.18 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		[363.47] Scheduled at 363.17 by SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Tank2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+	Mystic Lash on >%s< (%d), type=stack, spellId=1241100, triggerDeltas = 12.03, 76.96, 73.13, 78.96, 71.09
+		[ 12.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000001, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
+			 Triggered 5x, delta times: 12.03, 76.96, 73.13, 78.96, 71.09
+
+Special warnings:
+	Knockback! (%s), type=count, spellId=1223859, triggerDeltas = 41.01, 37.98, 66.99, 45.13, 37.97, 67.02, 45.05, 38.01
+		[ 41.01] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+			 Triggered 8x, delta times: 41.01, 37.98, 66.99, 45.13, 37.97, 67.02, 45.05, 38.01
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/carefly
+		[ 41.01] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+			 Triggered 8x, delta times: 41.01, 37.98, 66.99, 45.13, 37.97, 67.02, 45.05, 38.01
+	VoicePack/mobsoon
+		[ 12.97] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
+			 Triggered 3x, delta times: 12.97, 150.10, 150.08
+
+Icons:
+	None
+
+Event trace:
+	[  0.00] ENCOUNTER_START: 3130, Soulbinder Naazindhri, 16, 20, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 1225582 1227052 1241100 1223859 1242088 1225616, SPELL_CAST_SUCCESS 1227848 1227276 1227048, SPELL_AURA_APPLIED 1227049 1227049 1227276 1237607 1225626 1248464, SPELL_AURA_APPLIED_DOSE 1237607 1248464, SPELL_AURA_REMOVED 1227049 1227276 1225626, UNIT_DIED
+		StartTimer: 5.0, Mystic Lash (1)
+		StartTimer: 13.0, Adds (1)
+		StartTimer: 16.0, Orbs (1)
+		StartTimer: 26.0, Lines (1)
+		StartTimer: 41.0, Knockback (1)
+	[  5.00] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 41.0, Mystic Lash (2)
+	[ 12.03] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000001, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
+		ShowAnnounce: Mystic Lash on PlayerName (6)
+	[ 12.97] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
+		ShowAnnounce: Soul Calling (1)
+		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Adds (2)
+	[ 16.03] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 36.6, Orbs (2)
+	[ 19.54] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank9: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000016, Tank9, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank9
+	[ 20.56] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000017, Dps4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Dps4
+	[ 21.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer2
+	[ 22.55] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000007, Healer1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer1
+	[ 25.98] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 37.0, Lines (2)
+	[ 25.98] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000011, Dps2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(1.0, "Dps2") at 26.28 (+0.30)
+			ShowAnnounce: Lines (1) on Tank11, Dps2
+	[ 41.01] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (1)
+		PlaySound: VoicePack/carefly
+		StartTimer: 38.0, Knockback (2)
+	[ 45.97] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 37.5, Mystic Lash (3)
+	[ 52.99] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 38.0, Orbs (3)
+	[ 56.51] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer2
+	[ 57.54] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000009, Healer3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer3
+	[ 58.53] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Dps1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Dps1
+	[ 59.51] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Tank2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank2
+	[ 62.99] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 37.0, Lines (3)
+	[ 62.99] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank9: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000016, Tank9, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(2.0, "Tank9") at 63.29 (+0.30)
+			ShowAnnounce: Lines (2) on Tank12, Tank9
+	[ 78.99] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (2)
+		PlaySound: VoicePack/carefly
+		StartTimer: 67.0, Knockback (3)
+	[ 83.97] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 40.0, Mystic Lash (4)
+	[ 88.99] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000001, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 12, 0
+		ShowAnnounce: Mystic Lash on PlayerName (12)
+	[ 91.05] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 75.0, Orbs (4)
+	[ 94.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank6: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000010, Tank6, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank6
+	[ 95.57] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000004, Tank3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank3
+	[ 96.56] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank7: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000012, Tank7, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank7
+	[ 97.58] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank8: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Tank8, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank8
+	[ 99.96] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 76.0, Lines (4)
+	[ 99.97] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000007, Healer1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(3.0, "Healer1") at 100.27 (+0.30)
+			ShowAnnounce: Lines (3) on Tank6, Healer1
+	[122.29] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000003A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[123.63] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000DA, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[123.99] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 31.0, Mystic Lash (5)
+	[135.01] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-000000003A, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[135.82] SPELL_CAST_SUCCESS: [Shadowguard Assassin: Voidblade Ambush] Creature-0-1-2810-1-237897-00000000DA, Shadowguard Assassin, 0xa48, "", nil, 0x0, 1227048, Voidblade Ambush, 0, 0
+		StartTimer: 12.1, Voidblade Ambush
+	[145.98] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (3)
+		PlaySound: VoicePack/carefly
+		StartTimer: 44.9, Knockback (4)
+	[155.08] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 41.0, Mystic Lash (6)
+	[162.12] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000001, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
+		ShowAnnounce: Mystic Lash on PlayerName (6)
+	[163.07] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
+		ShowAnnounce: Soul Calling (2)
+		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Adds (3)
+	[166.13] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 36.6, Orbs (5)
+	[169.64] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Tank2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank2
+	[170.63] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000014, Dps3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Dps3
+	[171.63] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer2
+	[172.63] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000017, Dps4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Dps4
+	[176.08] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 37.0, Lines (5)
+	[176.10] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000011, Dps2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(4.0, "Dps2") at 176.40 (+0.30)
+			ShowAnnounce: Lines (4) on Tank9, Dps2
+	[191.11] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (4)
+		PlaySound: VoicePack/carefly
+		StartTimer: 38.0, Knockback (5)
+	[196.07] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 37.5, Mystic Lash (7)
+	[203.13] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 38.0, Orbs (6)
+	[206.65] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps1: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000003, Dps1, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Dps1
+	[207.65] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank6: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000010, Tank6, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank6
+	[208.67] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer2
+	[209.67] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Tank2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank2
+	[213.08] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 37.0, Lines (6)
+	[213.09] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer1: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000007, Healer1, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(5.0, "Healer1") at 213.39 (+0.30)
+			ShowAnnounce: Lines (5) on Healer4, Healer1
+	[229.08] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (5)
+		PlaySound: VoicePack/carefly
+		StartTimer: 67.0, Knockback (6)
+	[234.07] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 40.0, Mystic Lash (8)
+	[241.08] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000001, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
+		ShowAnnounce: Mystic Lash on PlayerName (6)
+	[241.09] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 75.0, Orbs (7)
+	[244.61] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank6: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000010, Tank6, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank6
+	[245.61] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer2
+	[246.62] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Dps4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000017, Dps4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Dps4
+	[247.61] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000004, Tank3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank3
+	[250.08] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 76.0, Lines (7)
+	[250.10] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank8: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Tank8, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(6.0, "Tank8") at 250.40 (+0.30)
+			ShowAnnounce: Lines (6) on Tank11, Tank8
+	[274.09] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 31.0, Mystic Lash (9)
+	[296.10] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (6)
+		PlaySound: VoicePack/carefly
+		StartTimer: 44.9, Knockback (7)
+	[305.16] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 41.0, Mystic Lash (10)
+	[312.17] SPELL_AURA_APPLIED_DOSE: [Soulbinder Naazindhri->Tank1: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000001, Tank1, 0x511, 1237607, Mystic Lash, 0, DEBUFF, 6, 0
+		ShowAnnounce: Mystic Lash on PlayerName (6)
+	[313.15] SPELL_CAST_START: [Soulbinder Naazindhri: Soul Calling] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225582, Soul Calling, 0, 0
+		ShowAnnounce: Soul Calling (3)
+		PlaySound: VoicePack/mobsoon
+		StartTimer: 150.0, Adds (4)
+	[316.23] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 36.6, Orbs (8)
+	[319.75] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank9: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000016, Tank9, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank9
+	[320.75] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank8: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Tank8, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank8
+	[321.74] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000005, Tank4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank4
+	[322.74] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank5: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000006, Tank5, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank5
+	[326.18] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 37.0, Lines (8)
+	[326.18] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000008, Healer2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(7.0, "Healer2") at 326.48 (+0.30)
+			ShowAnnounce: Lines (7) on Tank6, Healer2
+	[341.15] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (7)
+		PlaySound: VoicePack/carefly
+		StartTimer: 38.0, Knockback (8)
+	[346.15] SPELL_CAST_START: [Soulbinder Naazindhri: Mystic Lash] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1241100, Mystic Lash, 0, 0
+		StartTimer: 37.5, Mystic Lash (11)
+	[353.24] SPELL_CAST_START: [Soulbinder Naazindhri: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1225616, Soulfire Convergence, 0, 0
+		StartTimer: 38.0, Orbs (9)
+	[356.78] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank8: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000013, Tank8, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank8
+	[357.76] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank3: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000004, Tank3, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank3
+	[358.76] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Healer4: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000015, Healer4, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Healer4
+	[359.76] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank12: Soulfire Convergence] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000020, Tank12, 0x512, 1225626, Soulfire Convergence, 0, DEBUFF, 0
+		ShowAnnounce: Soulfire Convergence on Tank12
+	[363.17] SPELL_CAST_SUCCESS: [Soulbinder Naazindhri: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1227276, Soulfray Annihilation, 0, 0
+		StartTimer: 37.0, Lines (9)
+	[363.17] SPELL_AURA_APPLIED: [Soulbinder Naazindhri->Tank2: Soulfray Annihilation] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, Player-1-00000002, Tank2, 0x512, 1227276, Soulfray Annihilation, 0, DEBUFF, 0
+		ScheduleTask: announce1227276targetcount:CombinedShow(8.0, "Tank2") at 363.47 (+0.30)
+			ShowAnnounce: Lines (8) on Tank5, Tank2
+	[379.16] SPELL_CAST_START: [Soulbinder Naazindhri: Arcane Expulsion] Creature-0-1-2810-1-233816-0000000003, Soulbinder Naazindhri, 0xa48, "", nil, 0x0, 1242088, Arcane Expulsion, 0, 0
+		ShowSpecialWarning: Knockback! (8)
+		PlaySound: VoicePack/carefly
+		StartTimer: 67.0, Knockback (9)
+	[383.07] ENCOUNTER_END: 3130, Soulbinder Naazindhri, 16, 20, 1, 0
+		EndCombat: ENCOUNTER_END
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 1227049 1227276 1225626
