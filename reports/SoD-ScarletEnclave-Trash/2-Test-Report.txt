@@ -1,0 +1,73 @@
+Test: SoD/ScarletEnclave/Trash
+Mod:  DBM-Raids-Vanilla/SE_Trash
+
+Findings:
+	Unused event registration: DAMAGE_SHIELD
+	Unused event registration: DAMAGE_SHIELD_MISSED
+	Unused event registration: GOSSIP_SHOW
+	Unused event registration: SPELL_AURA_REMOVED 1232703 (Retribution Aura)
+	Unused event registration: SPELL_CAST_SUCCESS 1227435 (Sleep)
+	Unused event registration: SPELL_DAMAGE 1232703 (Retribution Aura)
+	Unused event registration: SPELL_MISSED 1232703 (Retribution Aura)
+	Unused event registration: SPELL_PERIODIC_DAMAGE 28547 (Chill)
+	Unused event registration: UNIT_ENTERING_VEHICLE
+	Unused event registration: UNIT_SPELLCAST_START
+	SpecialWarning for spell ID 28547 (Chill) is triggered by event SPELL_AURA_APPLIED 1233069 (Divine Consecration)
+	SpecialWarning for spell ID 28547 (Chill) is triggered by event SPELL_PERIODIC_DAMAGE 1233069 (Divine Consecration)
+
+Unused objects:
+	[Special Warning] Whirlwind - dodge attack, type=dodge, spellId=1232678
+	[Timer] %s, time=0.00, type=intermission, spellId=<none>
+	[Timer] Intermission, time=48.20, type=intermission, spellId=1227435
+	[Timer] Whirlwind, time=6.00, type=castpnp, spellId=1232678
+
+Timers:
+	None
+
+Announces:
+	None
+
+Special warnings:
+	Retribution Aura on >%s< - stop attacking, type=reflect, spellId=1232703, triggerDeltas = 6.39
+		[ 6.39] SPELL_AURA_APPLIED: [Scarlet Paladin->Scarlet Paladin: Retribution Aura] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, 1232703, Retribution Aura, 0, BUFF, 0
+	%s damage - move away, type=gtfo, spellId=28547, triggerDeltas = 7.33, 3.01, 4.05
+		[ 7.33] SPELL_AURA_APPLIED: [Scarlet Paladin->Dps10: Divine Consecration] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Player-1-00000011, Dps10, 0x511, 1233069, Divine Consecration, 0, DEBUFF, 0
+		[10.34] SPELL_PERIODIC_DAMAGE: [Scarlet Paladin->Dps10: Divine Consecration] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Player-1-00000011, Dps10, 0x511, 1233069, Divine Consecration, 0, 0
+		[14.39] SPELL_AURA_APPLIED: [Blizzard->Dps10: Chill] Creature-0-1-2856-1-244527-0000000006, Blizzard, 0xa48, Player-1-00000011, Dps10, 0x511, 28547, Chill, 0, DEBUFF, 0
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/stopattack
+		[ 6.39] SPELL_AURA_APPLIED: [Scarlet Paladin->Scarlet Paladin: Retribution Aura] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, 1232703, Retribution Aura, 0, BUFF, 0
+	VoicePack/watchfeet
+		[ 7.33] SPELL_AURA_APPLIED: [Scarlet Paladin->Dps10: Divine Consecration] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Player-1-00000011, Dps10, 0x511, 1233069, Divine Consecration, 0, DEBUFF, 0
+		[10.34] SPELL_PERIODIC_DAMAGE: [Scarlet Paladin->Dps10: Divine Consecration] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Player-1-00000011, Dps10, 0x511, 1233069, Divine Consecration, 0, 0
+		[14.39] SPELL_AURA_APPLIED: [Blizzard->Dps10: Chill] Creature-0-1-2856-1-244527-0000000006, Blizzard, 0xa48, Player-1-00000011, Dps10, 0x511, 28547, Chill, 0, DEBUFF, 0
+
+Icons:
+	None
+
+Event trace:
+	[ 0.00] ADDON_LOADED: DBM-Raids-Vanilla, 0
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1232703 28547 1233069, SPELL_AURA_REMOVED 1232703, SPELL_CAST_SUCCESS 1227435, SPELL_DAMAGE 1232703, SPELL_MISSED 1232703, DAMAGE_SHIELD 1232703, DAMAGE_SHIELD_MISSED 1232703, GOSSIP_SHOW, UNIT_ENTERING_VEHICLE player, UNIT_SPELLCAST_START_UNFILTERED, SPELL_PERIODIC_DAMAGE 28547 1233069
+	[ 6.39] SPELL_AURA_APPLIED: [Scarlet Paladin->Scarlet Paladin: Retribution Aura] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, 1232703, Retribution Aura, 0, BUFF, 0
+		AntiSpam: Shield
+		ShowSpecialWarning: Retribution Aura on Scarlet Paladin - stop attacking
+		PlaySound: VoicePack/stopattack
+	[ 7.33] SPELL_AURA_APPLIED: [Scarlet Paladin->Dps10: Divine Consecration] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Player-1-00000011, Dps10, 0x511, 1233069, Divine Consecration, 0, DEBUFF, 0
+		AntiSpam: GTFO on Divine Consecration
+			Filtered: 1x SPELL_AURA_APPLIED at 7.74
+			Filtered: 2x SPELL_PERIODIC_DAMAGE at 8.74, 9.34
+		ShowSpecialWarning: Divine Consecration damage - move away
+		PlaySound: VoicePack/watchfeet
+	[10.34] SPELL_PERIODIC_DAMAGE: [Scarlet Paladin->Dps10: Divine Consecration] Creature-0-1-2856-1-240802-000000001C, Scarlet Paladin, 0xa48, Player-1-00000011, Dps10, 0x511, 1233069, Divine Consecration, 0, 0
+		AntiSpam: GTFO on Divine Consecration
+			Filtered: 2x SPELL_PERIODIC_DAMAGE at 10.74, 11.33
+		ShowSpecialWarning: Divine Consecration damage - move away
+		PlaySound: VoicePack/watchfeet
+	[14.39] SPELL_AURA_APPLIED: [Blizzard->Dps10: Chill] Creature-0-1-2856-1-244527-0000000006, Blizzard, 0xa48, Player-1-00000011, Dps10, 0x511, 28547, Chill, 0, DEBUFF, 0
+		AntiSpam: GTFO on Chill
+		ShowSpecialWarning: Chill damage - move away
+		PlaySound: VoicePack/watchfeet
