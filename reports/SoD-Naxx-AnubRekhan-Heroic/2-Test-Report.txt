@@ -1,0 +1,64 @@
+Test: SoD/Naxx/AnubRekhan/Heroic
+Mod:  DBM-Raids-Vanilla/AnubRekhanVanilla
+
+Findings:
+	Unused event registration: SPELL_AURA_REMOVED 28785 (Locust Swarm)
+	Unused event registration: SPELL_CAST_START 28785 (Locust Swarm)
+
+Unused objects:
+	[Announce] Impale on >%s<, type=target, spellId=28783
+	[Announce] Locust Swarm faded, type=fades, spellId=28785
+	[Announce] Locust Swarm soon, type=soon, spellId=28785
+	[Special Warning] Locust Swarm!, type=spell, spellId=28785
+	[Timer] Locust Swarm ends, time=23.00, type=active, spellId=28785
+	[Yell] Impale on PlayerName, type=yell, spellId=28783
+
+Timers:
+	Locust Swarm, time=80.00, type=cd, spellId=28785, triggerDeltas = 0.00
+		[ 0.00] ENCOUNTER_START: 1107, Anub'Rekhan, 186, 40, 0
+
+Announces:
+	None
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[ 0.00] ENCOUNTER_START: 1107, Anub'Rekhan, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_START 28785 28783, SPELL_AURA_REMOVED 28785
+		StartTimer: 80.0, Locust Swarm
+		ScheduleTask: announce28785soon:Schedule() at 75.00 (+75.00)
+			Unscheduled by ENCOUNTER_END at 51.07
+	[15.91] SPELL_CAST_START: [Anub'Rekhan: Impale] Creature-0-1-533-1-15956-0000000001, Anub'Rekhan, 0xa48, "", nil, 0x0, 28783, Impale, 0, 0
+		ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 16.01 (+0.10)
+			ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 16.11 (+0.10)
+				ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 16.21 (+0.10)
+					ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 16.31 (+0.10)
+						ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 16.41 (+0.10)
+	[30.85] SPELL_CAST_START: [Anub'Rekhan: Impale] Creature-0-1-533-1-15956-0000000001, Anub'Rekhan, 0xa48, "", nil, 0x0, 28783, Impale, 0, 0
+		ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 30.95 (+0.10)
+			ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 31.05 (+0.10)
+				ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 31.15 (+0.10)
+					ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 31.25 (+0.10)
+						ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 31.35 (+0.10)
+	[48.24] SPELL_CAST_START: [Anub'Rekhan: Impale] Creature-0-1-533-1-15956-0000000001, Anub'Rekhan, 0xa48, "", nil, 0x0, 28783, Impale, 0, 0
+		ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 48.34 (+0.10)
+			ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 48.44 (+0.10)
+				ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 48.54 (+0.10)
+					ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 48.64 (+0.10)
+						ScheduleTask: mod:BossTargetScanner("Creature-0-1-533-1-15956-0000000001", "ImpaleTarget", 0.1, 6.0) at 48.74 (+0.10)
+	[51.07] ENCOUNTER_END: 1107, Anub'Rekhan, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce28785soon:Schedule() scheduled by ScheduleTask at 0.00
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 28785
