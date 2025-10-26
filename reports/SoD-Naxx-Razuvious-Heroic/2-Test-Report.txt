@@ -1,0 +1,82 @@
+Test: SoD/Naxx/Razuvious/Heroic
+Mod:  DBM-Raids-Vanilla/RazuviousVanilla
+
+Findings:
+	Unused event registration: UNIT_DIED
+
+Unused objects:
+	None
+
+Timers:
+	Taunt, time=60.00, type=cd, spellId=29060, triggerDeltas = 36.90, 26.45
+		[36.90] SPELL_CAST_SUCCESS: [Deathknight Understudy->Instructor Razuvious: Taunt] Creature-0-1-533-1-16803-0000000040, Deathknight Understudy, 0x1112, Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, 29060, Taunt, 0, 0
+			 Triggered 2x, delta times: 36.90, 26.45
+	Shield Wall fades, time=20.00, type=fades, spellId=29061, triggerDeltas = 36.60, 27.81
+		[36.60] SPELL_CAST_SUCCESS: [Deathknight Understudy: Shield Wall] Creature-0-1-533-1-16803-0000000040, Deathknight Understudy, 0x1112, "", nil, 0x0, 29061, Shield Wall, 0, 0
+			 Triggered 2x, delta times: 36.60, 27.81
+	Disrupting Shout, time=25.80, type=var, spellId=29107, triggerDeltas = 0.00, 25.87, 25.94, 25.93
+		[ 0.00] ENCOUNTER_START: 1113, Instructor Razuvious, 186, 40, 0
+		[25.87] SPELL_CAST_SUCCESS: [Instructor Razuvious: Disrupting Shout] Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, "", nil, 0x0, 29107, Disrupting Shout, 0, 0
+			 Triggered 3x, delta times: 25.87, 25.94, 25.93
+
+Announces:
+	Disrupting Shout soon, type=soon, spellId=29107, triggerDeltas = 19.00, 26.87, 25.94
+		[19.00] Scheduled at 0.00 by ENCOUNTER_START: 1113, Instructor Razuvious, 186, 40, 0
+		[45.87] Scheduled at 25.87 by SPELL_CAST_SUCCESS: [Instructor Razuvious: Disrupting Shout] Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, "", nil, 0x0, 29107, Disrupting Shout, 0, 0
+		[71.81] Scheduled at 51.81 by SPELL_CAST_SUCCESS: [Instructor Razuvious: Disrupting Shout] Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, "", nil, 0x0, 29107, Disrupting Shout, 0, 0
+	Disrupting Shout, type=spell, spellId=29107, triggerDeltas = 25.87, 25.94, 25.93
+		[25.87] SPELL_CAST_SUCCESS: [Instructor Razuvious: Disrupting Shout] Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, "", nil, 0x0, 29107, Disrupting Shout, 0, 0
+			 Triggered 3x, delta times: 25.87, 25.94, 25.93
+	Shield Wall ends in 5 seconds, type=nil, spellId=<none>, triggerDeltas = 51.60
+		[51.60] Scheduled at 36.60 by SPELL_CAST_SUCCESS: [Deathknight Understudy: Shield Wall] Creature-0-1-533-1-16803-0000000040, Deathknight Understudy, 0x1112, "", nil, 0x0, 29061, Shield Wall, 0, 0
+
+Special warnings:
+	None
+
+Yells:
+	None
+
+Voice pack sounds:
+	None
+
+Icons:
+	None
+
+Event trace:
+	[ 0.00] ENCOUNTER_START: 1113, Instructor Razuvious, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_SUCCESS 29107 29060 29061, UNIT_DIED
+		StartTimer: 26.3, Disrupting Shout
+		ScheduleTask: announce29107soon:Schedule() at 19.00 (+19.00)
+			ShowAnnounce: Disrupting Shout soon
+	[25.87] SPELL_CAST_SUCCESS: [Instructor Razuvious: Disrupting Shout] Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, "", nil, 0x0, 29107, Disrupting Shout, 0, 0
+		StartTimer: 26.3, Disrupting Shout
+		ShowAnnounce: Disrupting Shout
+		ScheduleTask: announce29107soon:Schedule() at 45.87 (+20.00)
+			ShowAnnounce: Disrupting Shout soon
+	[36.60] SPELL_CAST_SUCCESS: [Deathknight Understudy: Shield Wall] Creature-0-1-533-1-16803-0000000040, Deathknight Understudy, 0x1112, "", nil, 0x0, 29061, Shield Wall, 0, 0
+		StartTimer: 20.0, Shield Wall fades
+		ScheduleTask: announce:Schedule() at 51.60 (+15.00)
+			ShowAnnounce: Shield Wall ends in 5 seconds
+	[36.90] SPELL_CAST_SUCCESS: [Deathknight Understudy->Instructor Razuvious: Taunt] Creature-0-1-533-1-16803-0000000040, Deathknight Understudy, 0x1112, Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, 29060, Taunt, 0, 0
+		StartTimer: 60.0, Taunt
+	[51.81] SPELL_CAST_SUCCESS: [Instructor Razuvious: Disrupting Shout] Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, "", nil, 0x0, 29107, Disrupting Shout, 0, 0
+		StartTimer: 26.3, Disrupting Shout
+		ShowAnnounce: Disrupting Shout
+		ScheduleTask: announce29107soon:Schedule() at 71.81 (+20.00)
+			ShowAnnounce: Disrupting Shout soon
+	[63.35] SPELL_CAST_SUCCESS: [Deathknight Understudy->Instructor Razuvious: Taunt] Creature-0-1-533-1-16803-0000000001, Deathknight Understudy, 0x1112, Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, 29060, Taunt, 0, 0
+		StartTimer: 60.0, Taunt
+	[64.41] SPELL_CAST_SUCCESS: [Deathknight Understudy: Shield Wall] Creature-0-1-533-1-16803-0000000001, Deathknight Understudy, 0x1112, "", nil, 0x0, 29061, Shield Wall, 0, 0
+		StartTimer: 20.0, Shield Wall fades
+		ScheduleTask: announce:Schedule() at 79.41 (+15.00)
+			Unscheduled by ENCOUNTER_END at 79.13
+	[77.74] SPELL_CAST_SUCCESS: [Instructor Razuvious: Disrupting Shout] Creature-0-1-533-1-16061-0000000001, Instructor Razuvious, 0xa48, "", nil, 0x0, 29107, Disrupting Shout, 0, 0
+		StartTimer: 26.3, Disrupting Shout
+		ShowAnnounce: Disrupting Shout
+		ScheduleTask: announce29107soon:Schedule() at 97.74 (+20.00)
+			Unscheduled by ENCOUNTER_END at 79.13
+	[79.13] ENCOUNTER_END: 1113, Instructor Razuvious, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce29107soon:Schedule() scheduled by ScheduleTask at 77.74
+		UnscheduleTask: announce:Schedule() scheduled by ScheduleTask at 64.41
