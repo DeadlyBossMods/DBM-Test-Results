@@ -21,6 +21,7 @@ Findings:
 	Timer for spell ID 1242259 (Spirit Bomb) is triggered by event SPELL_AURA_REMOVED 1242133 (Soul Engorgement)
 
 Unused objects:
+	[Announce] Eradicate (%s), type=count, spellId=1245726
 	[Announce] Berserk in %s %s, type=nil, spellId=<none>
 	[Special Warning] Eye Beam - defensive, type=defensive, spellId=1218103
 	[Special Warning] Eye Beam on >%s< - taunt now, type=taunt, spellId=1218103
@@ -160,6 +161,9 @@ Yells:
 	None
 
 Voice pack sounds:
+	VoicePack/aesoon
+		[ 32.48] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
+			 Triggered 10x, delta times: 32.48, 34.87, 34.87, 58.83, 34.88, 34.91, 61.58, 34.87, 34.89, 61.67
 	VoicePack/farfromline
 		[ 29.54] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000296, 1241254, Velaryn Bloodwrath, 88.8, 15, Tank4, 0
 		[ 64.46] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000222, 1241254, Velaryn Bloodwrath, 82.1, 52, Tank1, 0
@@ -171,17 +175,12 @@ Voice pack sounds:
 		[324.39] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-00000001E4, 1241254, Velaryn Bloodwrath, 24.9, 54, Tank1, 0
 		[361.03] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000311, 1241254, Velaryn Bloodwrath, 17.4, 92, Tank4, 0
 		[420.92] UNIT_SPELLCAST_SUCCEEDED: boss2, Cast-3-1-2810-2-1241254-0000000397, 1241254, Velaryn Bloodwrath, 1.5, 24, Tank1, 0
-	VoicePack/runtoedge
+	VoicePack/helpsoak
 		[114.89] SPELL_AURA_APPLIED: [Adarus Duskblaze->Adarus Duskblaze: Collapsing Star] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1233093, Collapsing Star, 0, BUFF, 0
-	VoicePack/aesoon
-		[ 32.48] SPELL_CAST_START: [Ilyssa Darksorrow: Spirit Bomb] Creature-0-1-2810-1-237662-0000000001, Ilyssa Darksorrow, 0xa48, "", nil, 0x0, 1242259, Spirit Bomb, 0, 0
-			 Triggered 10x, delta times: 32.48, 34.87, 34.87, 58.83, 34.88, 34.91, 61.58, 34.87, 34.89, 61.67
 	VoicePack/watchstep
 		[ 32.60] SPELL_CAST_START: [Adarus Duskblaze: Voidstep] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, "", nil, 0x0, 1227355, Voidstep, 0, 0
 			 Triggered 10x, delta times: 32.60, 30.98, 28.09, 69.48, 30.91, 28.08, 72.41, 30.95, 28.10, 72.38
 		[246.66] SPELL_AURA_APPLIED: [Velaryn Bloodwrath->Velaryn Bloodwrath: Fel Rush] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, 1233863, Fel Rush, 0, BUFF, 0
-	VoicePack/helpsoak
-		[116.89] Scheduled at 114.89 by SPELL_AURA_APPLIED: [Adarus Duskblaze->Adarus Duskblaze: Collapsing Star] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1233093, Collapsing Star, 0, BUFF, 0
 
 Icons:
 	None
@@ -259,9 +258,7 @@ Event trace:
 		StopTimer: Timer1242259nextcount\t4
 	[114.89] SPELL_AURA_APPLIED: [Adarus Duskblaze->Adarus Duskblaze: Collapsing Star] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1233093, Collapsing Star, 0, BUFF, 0
 		ShowSpecialWarning: Collapsing Star!
-		PlaySound: VoicePack/runtoedge
-		ScheduleTask: specWarn1233093spell:ScheduleVoice("helpsoak") at 116.89 (+2.00)
-			PlaySound: VoicePack/helpsoak
+		PlaySound: VoicePack/helpsoak
 	[139.89] SPELL_AURA_REMOVED: [Adarus Duskblaze->Adarus Duskblaze: Collapsing Star] Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1233093, Collapsing Star, 0, BUFF, 0
 		ShowAnnounce: Collapsing Star ended
 	[140.07] SPELL_AURA_REMOVED: [Velaryn Bloodwrath->Adarus Duskblaze: Soul Engorgement] Creature-0-1-2810-1-237660-0000000001, Velaryn Bloodwrath, 0xa48, Creature-0-1-2810-1-237661-0000000001, Adarus Duskblaze, 0xa48, 1242133, Soul Engorgement, 0, BUFF, 0
