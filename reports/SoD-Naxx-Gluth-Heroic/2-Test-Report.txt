@@ -1,0 +1,135 @@
+Test: SoD/Naxx/Gluth/Heroic
+Mod:  DBM-Raids-Vanilla/GluthVanilla
+
+Findings:
+	Unused event registration: SPELL_DAMAGE 28375 (Decimate)
+	SpecialWarning for spell ID 19451 (Frenzy) is triggered by event SPELL_AURA_APPLIED 28371 (Frenzy)
+	Timer for spell ID 19451 (Frenzy) is triggered by event SPELL_AURA_APPLIED 28371 (Frenzy)
+	Timer Terrifying Roar, time=22.50, type=var, spellId=29685 (time=19.40, variance=0.00) got refreshed early with 1.60s remaining
+		Refreshed by: [17.78] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
+
+Unused objects:
+	[Announce] Frenzy on >%s<, type=target, spellId=19451
+	[Announce] Decimate, type=spell, spellId=28374
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+
+Timers:
+	Frenzy ends, time=8.00, type=active, spellId=19451, triggerDeltas = 9.71, 9.71, 9.71, 9.70, 9.73, 9.70, 9.72, 9.70
+		[ 9.71] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+			 Triggered 8x, delta times: 9.71, 9.71, 9.71, 9.70, 9.73, 9.70, 9.72, 9.70
+		[11.86] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+			 Triggered 8x, delta times: 11.86, 11.07, 9.46, 10.25, 10.10, 9.91, 10.95, 10.61
+	Terrifying Roar, time=22.50, type=var, spellId=29685, triggerDeltas = 0.00, 17.78, 22.69, 19.41, 21.04
+		[ 0.00] ENCOUNTER_START: 1108, Gluth, 186, 40, 0
+		[17.78] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
+			 Triggered 4x, delta times: 17.78, 22.69, 19.41, 21.04
+	Berserk, time=420.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[ 0.00] ENCOUNTER_START: 1108, Gluth, 186, 40, 0
+
+Announces:
+	Terrifying Roar, type=spell, spellId=29685, triggerDeltas = 17.78, 22.69, 19.41, 21.04
+		[17.78] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
+			 Triggered 4x, delta times: 17.78, 22.69, 19.41, 21.04
+
+Special warnings:
+	Frenzy on >%s< - dispel now, type=dispel, spellId=19451, triggerDeltas = 9.71, 9.71, 9.71, 9.70, 9.73, 9.70, 9.72, 9.70
+		[ 9.71] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+			 Triggered 8x, delta times: 9.71, 9.71, 9.71, 9.70, 9.73, 9.70, 9.72, 9.70
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/enrage
+		[ 9.71] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+			 Triggered 8x, delta times: 9.71, 9.71, 9.71, 9.70, 9.73, 9.70, 9.72, 9.70
+
+Icons:
+	None
+
+Event trace:
+	[ 0.00] ENCOUNTER_START: 1108, Gluth, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_CAST_SUCCESS 29685, SPELL_AURA_APPLIED 28371, SPELL_AURA_REMOVED 28371, SPELL_DAMAGE 28375
+		StartTimer: 19.4, Terrifying Roar
+		StartTimer: 420.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 120.00 (+120.00)
+			Unscheduled by ENCOUNTER_END at 84.26
+		ScheduleTask: announce:Schedule(3.0, "min") at 240.00 (+240.00)
+			Unscheduled by ENCOUNTER_END at 84.26
+		ScheduleTask: announce:Schedule(1.0, "min") at 360.00 (+360.00)
+			Unscheduled by ENCOUNTER_END at 84.26
+		ScheduleTask: announce:Schedule(30.0, "sec") at 390.00 (+390.00)
+			Unscheduled by ENCOUNTER_END at 84.26
+		ScheduleTask: announce:Schedule(10.0, "sec") at 410.00 (+410.00)
+			Unscheduled by ENCOUNTER_END at 84.26
+	[ 9.71] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[11.86] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[17.78] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
+		ShowAnnounce: Terrifying Roar
+		StartTimer: 22.5, Terrifying Roar
+	[19.42] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[22.93] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[29.13] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[32.39] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[38.83] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[40.47] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
+		ShowAnnounce: Terrifying Roar
+		StartTimer: 22.5, Terrifying Roar
+	[42.64] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[48.56] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[52.74] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[58.26] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[59.88] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
+		ShowAnnounce: Terrifying Roar
+		StartTimer: 22.5, Terrifying Roar
+	[62.65] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[67.98] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[73.60] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[77.68] SPELL_AURA_APPLIED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		ShowSpecialWarning: Frenzy on Gluth - dispel now
+		PlaySound: VoicePack/enrage
+		StartTimer: 8.0, Frenzy ends
+	[80.92] SPELL_CAST_SUCCESS: [Gluth: Terrifying Roar] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, "", nil, 0x0, 29685, Terrifying Roar, 0, 0
+		ShowAnnounce: Terrifying Roar
+		StartTimer: 22.5, Terrifying Roar
+	[84.21] SPELL_AURA_REMOVED: [Gluth->Gluth: Frenzy] Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, Creature-0-1-533-1-15932-0000000001, Gluth, 0xa48, 28371, Frenzy, 0, BUFF, 0
+		StopTimer: Timer19451active
+	[84.26] ENCOUNTER_END: 1108, Gluth, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
+	Unknown trigger
+		UnregisterEvents: Regular, SPELL_AURA_REMOVED 28371
