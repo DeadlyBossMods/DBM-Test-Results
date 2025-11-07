@@ -1,0 +1,112 @@
+Test: SoD/ScarletEnclave/Beatrix/Synthetic
+Mod:  DBM-Raids-Vanilla/Beatrix
+
+Findings:
+	Unused event registration: NAME_PLATE_UNIT_ADDED
+	Unused event registration: SPELL_AURA_APPLIED 1232389 (Unwavering Blade)
+	Unused event registration: SPELL_AURA_APPLIED 1232390 (Rose's Thorn)
+	Unused event registration: SPELL_AURA_APPLIED 1236162 (Holy Fire)
+	Unused event registration: SPELL_AURA_APPLIED 1236174 (Polymorph)
+	Unused event registration: SPELL_AURA_APPLIED 1236182 (Crusader Strike)
+	Unused event registration: SPELL_AURA_REFRESH 1232389 (Unwavering Blade)
+	Timer Stampede, time=30.00, type=cast, spellId=1232690 (time=36.00, variance=0.00) got refreshed early with 2.00s remaining
+		Refreshed by: [35.00] CHAT_MSG_MONSTER_YELL: Understood! Ready your lances!, Knight-Captain Fratley, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+
+Unused objects:
+	[Announce] Unwavering Blade on >%s<, type=target, spellId=1232389
+	[Announce] Rose's Thorn on >%s<, type=target, spellId=1232390
+	[Announce] Holy Fire on >%s<, type=target, spellId=1236162
+	[Announce] Polymorph, type=spell, spellId=1236174
+	[Announce] Crusader Strike on >%s<, type=target, spellId=1236182
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Announce] Berserk in %s %s, type=nil, spellId=<none>
+	[Special Warning] Rose's Thorn!, type=spell, spellId=1232390
+
+Timers:
+	Meteor, time=19.20, type=cast, spellId=1231946, triggerDeltas = 50.00
+		[50.00] CHAT_MSG_MONSTER_YELL: Arcanist, reduce them to ashes!, High Commander Beatrix, "", "", High Commander Beatrix, "", 0, 0, "", 0, 2242, nil, 0, false, false, false, false, 0
+	Stampede, time=30.00, type=cast, spellId=1232690, triggerDeltas = 1.00, 34.00
+		[ 1.00] CHAT_MSG_MONSTER_YELL: Shield Warden, break their ranks!, High Commander Beatrix, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+		[35.00] CHAT_MSG_MONSTER_YELL: Understood! Ready your lances!, Knight-Captain Fratley, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+	Cannon, time=15.00, type=cast, spellId=24933, triggerDeltas = 10.00
+		[10.00] CHAT_MSG_MONSTER_YELL: At once, Beatrix!, Cannon Mistress Lind, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+	Berserk, time=600.00, type=berserk, spellId=<none>, triggerDeltas = 0.00
+		[ 0.00] ENCOUNTER_START: 3187, Beatrix, 186, 40, 0
+	Combat starts, time=185.00, type=combat, spellId=<none>, triggerDeltas = 0.00
+		[ 0.00] ENCOUNTER_START: 3187, Beatrix, 186, 40, 0
+
+Announces:
+	Stampede soon, type=soon, spellId=1232690, triggerDeltas = 1.00, 34.00
+		[ 1.00] CHAT_MSG_MONSTER_YELL: Shield Warden, break their ranks!, High Commander Beatrix, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+		[35.00] CHAT_MSG_MONSTER_YELL: Understood! Ready your lances!, Knight-Captain Fratley, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+
+Special warnings:
+	Meteor - soak it, type=soak, spellId=1231946, triggerDeltas = 50.00
+		[50.00] CHAT_MSG_MONSTER_YELL: Arcanist, reduce them to ashes!, High Commander Beatrix, "", "", High Commander Beatrix, "", 0, 0, "", 0, 2242, nil, 0, false, false, false, false, 0
+	Stampede - dodge from %s, type=dodgeloc, spellId=1232690, triggerDeltas = 7.00, 34.00
+		[ 7.00] Scheduled at 1.00 by CHAT_MSG_MONSTER_YELL: Shield Warden, break their ranks!, High Commander Beatrix, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+		[41.00] Scheduled at 35.00 by CHAT_MSG_MONSTER_YELL: Understood! Ready your lances!, Knight-Captain Fratley, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+	Cannon - dodge attack, type=dodge, spellId=24933, triggerDeltas = 10.00
+		[10.00] CHAT_MSG_MONSTER_YELL: At once, Beatrix!, Cannon Mistress Lind, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+
+Yells:
+	None
+
+Voice pack sounds:
+	VoicePack/helpsoak
+		[50.00] CHAT_MSG_MONSTER_YELL: Arcanist, reduce them to ashes!, High Commander Beatrix, "", "", High Commander Beatrix, "", 0, 0, "", 0, 2242, nil, 0, false, false, false, false, 0
+	VoicePack/watchstep
+		[ 7.00] Scheduled at 1.00 by CHAT_MSG_MONSTER_YELL: Shield Warden, break their ranks!, High Commander Beatrix, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+		[41.00] Scheduled at 35.00 by CHAT_MSG_MONSTER_YELL: Understood! Ready your lances!, Knight-Captain Fratley, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+
+Icons:
+	None
+
+Event trace:
+	[ 0.00] ENCOUNTER_START: 3187, Beatrix, 186, 40, 0
+		StartCombat: ENCOUNTER_START
+		RegisterEvents: Regular, SPELL_AURA_APPLIED 1236174 1232389 1236162 1236182 1232390, SPELL_AURA_REFRESH 1232389, CHAT_MSG_MONSTER_YELL, NAME_PLATE_UNIT_ADDED
+		StartTimer: 120.0, Combat starts
+		StartTimer: 600.0, Berserk
+		ScheduleTask: announce:Schedule(5.0, "min") at 300.00 (+300.00)
+			Unscheduled by ENCOUNTER_END at 60.00
+		ScheduleTask: announce:Schedule(3.0, "min") at 420.00 (+420.00)
+			Unscheduled by ENCOUNTER_END at 60.00
+		ScheduleTask: announce:Schedule(1.0, "min") at 540.00 (+540.00)
+			Unscheduled by ENCOUNTER_END at 60.00
+		ScheduleTask: announce:Schedule(30.0, "sec") at 570.00 (+570.00)
+			Unscheduled by ENCOUNTER_END at 60.00
+		ScheduleTask: announce:Schedule(10.0, "sec") at 590.00 (+590.00)
+			Unscheduled by ENCOUNTER_END at 60.00
+	[ 1.00] CHAT_MSG_MONSTER_YELL: Shield Warden, break their ranks!, High Commander Beatrix, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+		AntiSpam: Froggers
+		StartTimer: 36.0, Stampede
+		ShowAnnounce: Stampede soon
+		ScheduleTask: specWarn1232690dodgeloc:Schedule("Footmen") at 7.00 (+6.00)
+			ShowSpecialWarning: Stampede - dodge from Footmen
+		ScheduleTask: specWarn1232690dodgeloc:ScheduleVoice("watchstep") at 7.00 (+6.00)
+			PlaySound: VoicePack/watchstep
+	[10.00] CHAT_MSG_MONSTER_YELL: At once, Beatrix!, Cannon Mistress Lind, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+		AntiSpam: Cannons
+		StartTimer: 15.0, Cannon
+		ShowSpecialWarning: Cannon - dodge attack
+	[35.00] CHAT_MSG_MONSTER_YELL: Understood! Ready your lances!, Knight-Captain Fratley, "", "", "", "", 0, 0, "", 0, 2557, nil, 0, false, false, false, false, 0
+		AntiSpam: Froggers
+		StartTimer: 20.0, Stampede
+		ShowAnnounce: Stampede soon
+		ScheduleTask: specWarn1232690dodgeloc:Schedule("Horses") at 41.00 (+6.00)
+			ShowSpecialWarning: Stampede - dodge from Horses
+		ScheduleTask: specWarn1232690dodgeloc:ScheduleVoice("watchstep") at 41.00 (+6.00)
+			PlaySound: VoicePack/watchstep
+	[50.00] CHAT_MSG_MONSTER_YELL: Arcanist, reduce them to ashes!, High Commander Beatrix, "", "", High Commander Beatrix, "", 0, 0, "", 0, 2242, nil, 0, false, false, false, false, 0
+		AntiSpam: Meteor
+		StartTimer: 19.2, Meteor
+		ShowSpecialWarning: Meteor - soak it
+		PlaySound: VoicePack/helpsoak
+	[60.00] ENCOUNTER_END: 3187, Beatrix, 186, 40, 1, 0
+		EndCombat: ENCOUNTER_END
+		UnscheduleTask: announce:Schedule(10.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(30.0, "sec") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(1.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(3.0, "min") scheduled by ScheduleTask at 0.00
+		UnscheduleTask: announce:Schedule(5.0, "min") scheduled by ScheduleTask at 0.00
